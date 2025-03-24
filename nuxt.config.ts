@@ -49,4 +49,8 @@ export default defineNuxtConfig({
       { path: "~/registry/components", global: true },
     ],
   },
+
+  icon: {
+    cssLayer: "icon",
+  },
 });
