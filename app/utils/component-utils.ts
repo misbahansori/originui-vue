@@ -1,9 +1,5 @@
 import { categories } from "~/config/components";
-import {
-  type ComponentInfo,
-  getAllComponents,
-  getComponentsByNames as getRegistryComponentsByNames,
-} from "./registry-utils";
+import { getAllComponents } from "./registry-utils";
 
 export interface RegistryItem {
   name: string;
