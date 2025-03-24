@@ -1,11 +1,7 @@
 <script setup lang="ts">
-import type { RegistryItem } from "~/utils/component-utils";
-
-interface Props {
+defineProps<{
   component: RegistryItem;
-}
-
-const props = defineProps<Props>();
+}>();
 </script>
 
 <template>

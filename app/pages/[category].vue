@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
 import { categories } from "~/config/components";
-import { getComponentsByNames } from "~/utils/component-utils";
 
 const route = useRoute();
 const categorySlug = route.params.category as string;

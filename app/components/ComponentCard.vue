@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import type { RegistryItem } from "~/utils/component-utils";
-import { cn } from "~/utils/utils";
-
 interface Props {
   component: RegistryItem;
   isSearchPage?: boolean;
