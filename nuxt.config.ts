@@ -35,4 +35,11 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+
+  fonts: {
+    families: [
+      { name: "Inter", provider: "google", global: true },
+      { name: "Outfit", provider: "google", global: true },
+    ],
+  },
 });

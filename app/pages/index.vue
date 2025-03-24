@@ -1,22 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import CategoryCard from "~/components/CategoryCard.vue";
-import SearchButton from "~/components/SearchButton.vue";
-import SubscribeBottom from "~/components/SubscribeBottom.vue";
 import { categories } from "../../config/components";
-
-// Type definitions
-interface CategoryCardProps {
-  slug: string;
-  name: string;
-  componentsCount?: number;
-  isNew?: boolean;
-}
-
-interface ImageComponentProps {
-  imageBasePath: string;
-  alt: string;
-}
 
 const sortedCategories = computed(() => {
   return [...categories].sort((a, b) => {
