@@ -42,4 +42,11 @@ export default defineNuxtConfig({
       { name: "Outfit", provider: "google", global: true },
     ],
   },
+
+  components: {
+    dirs: [
+      { path: "~/components" },
+      { path: "~/registry/components", global: true },
+    ],
+  },
 });

@@ -11,8 +11,7 @@ const props = defineProps<Props>();
 <template>
   <div class="flex size-full min-h-[220px] items-center justify-center">
     <div class="text-muted-foreground">
-      <!-- Placeholder for actual component that would be loaded dynamically -->
-      Component: {{ props.component.name }}
+      <component :is="component.name" />
     </div>
   </div>
 </template>
