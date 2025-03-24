@@ -4,10 +4,10 @@ import type { HTMLAttributes } from "vue";
 import { cn } from "~/utils/utils";
 
 const props = defineProps<{
-  type?: "text" | "search" | "file";
   defaultValue?: string | number;
   modelValue?: string | number;
   class?: HTMLAttributes["class"];
+  type?: HTMLInputElement["type"];
 }>();
 
 const emits = defineEmits<{

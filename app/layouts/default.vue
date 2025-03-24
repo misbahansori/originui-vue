@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import { useHead } from "#app";
-import Footer from "~/components/Footer.vue";
-import Header from "~/components/Header.vue";
-import Toaster from "~/components/Toaster.vue";
-
 // Font setup would be handled in nuxt.config.ts for Nuxt 3
 
 useHead({

@@ -5,14 +5,11 @@ import { categories } from "~/config/components";
 const route = useRoute();
 const categorySlug = route.params.category as string;
 
-// Get category by slug
-const getCategory = (slug: string) => {
-  return categories.find((category) => category.slug === slug);
-};
+const getCategory = (slug: string) =>
+  categories.find((category) => category.slug === slug);
 
 const category = getCategory(categorySlug);
 
-// Handle 404 if category not found
 if (!category) {
   throw createError({
     statusCode: 404,
@@ -20,20 +17,30 @@ if (!category) {
   });
 }
 
-// Get components for this category
 const components = getComponentsByNames(
   category.components.map((item) => item.name),
 );
 
-// Set page metadata
-useHead({
+// useHead({
+//   title: `${category.name} components built with Vue and Tailwind CSS - Origin UI`,
+//   meta: [
+//     {
+//       name: "description",
+//       content: `A collection of beautiful and accessible ${category.name.toLowerCase()} components built with Vue and Tailwind CSS.`,
+//     },
+//   ],
+// });
+useSeoMeta({
   title: `${category.name} components built with Vue and Tailwind CSS - Origin UI`,
-  meta: [
-    {
-      name: "description",
-      content: `A collection of beautiful and accessible ${category.name.toLowerCase()} components built with Vue and Tailwind CSS.`,
-    },
-  ],
+  description: `A collection of beautiful and accessible ${category.name.toLowerCase()} components built with Vue and Tailwind CSS.`,
+  ogTitle: `${category.name} components built with Vue and Tailwind CSS - Origin UI`,
+  ogDescription: `A collection of beautiful and accessible ${category.name.toLowerCase()} components built with Vue and Tailwind CSS.`,
+  ogImage: `${category.name} components built with Vue and Tailwind CSS - Origin UI`,
+  ogUrl: `${category.name} components built with Vue and Tailwind CSS - Origin UI`,
+  twitterTitle: `${category.name} components built with Vue and Tailwind CSS - Origin UI`,
+  twitterDescription: `A collection of beautiful and accessible ${category.name.toLowerCase()} components built with Vue and Tailwind CSS.`,
+  twitterImage: `${category.name} components built with Vue and Tailwind CSS - Origin UI`,
+  twitterCard: "summary_large_image",
 });
 </script>
 
@@ -51,7 +58,8 @@ useHead({
         :key="component.name"
         :component="component"
       >
-        <ComponentLoader :component="component" />
+        <component :is="component.name" />
+
         <ComponentDetails :component="component" />
       </ComponentCard>
     </PageGrid>
