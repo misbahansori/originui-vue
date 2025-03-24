@@ -1,63 +1,73 @@
 <script setup lang="ts" generic="T extends z.ZodAny">
-import type { Config, ConfigItem } from './interface'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/registry/default/ui/accordion'
-import { Button } from '@/registry/default/ui/button'
-import { FormItem, FormMessage } from '@/registry/default/ui/form'
-import { Separator } from '@/registry/default/ui/separator'
-import { PlusIcon, TrashIcon } from 'lucide-vue-next'
-import { FieldArray, FieldContextKey, useField } from 'vee-validate'
-import { computed, provide } from 'vue'
-import * as z from 'zod'
-import AutoFormField from './AutoFormField.vue'
-import AutoFormLabel from './AutoFormLabel.vue'
-import { beautifyObjectName, getBaseType } from './utils'
+import { PlusIcon, TrashIcon } from "lucide-vue-next";
+import { FieldArray, FieldContextKey, useField } from "vee-validate";
+import { computed, provide } from "vue";
+import * as z from "zod";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "~/registry/components/ui/accordion";
+import { Button } from "~/registry/components/ui/button";
+import { FormItem, FormMessage } from "~/registry/components/ui/form";
+import { Separator } from "~/registry/components/ui/separator";
+import AutoFormField from "./AutoFormField.vue";
+import AutoFormLabel from "./AutoFormLabel.vue";
+import type { Config, ConfigItem } from "./interface";
+import { beautifyObjectName, getBaseType } from "./utils";
 
 const props = defineProps<{
-  fieldName: string
-  required?: boolean
-  config?: Config<T>
-  schema?: z.ZodArray<T>
-  disabled?: boolean
-}>()
+  fieldName: string;
+  required?: boolean;
+  config?: Config<T>;
+  schema?: z.ZodArray<T>;
+  disabled?: boolean;
+}>();
 
 function isZodArray(
   item: z.ZodArray<any> | z.ZodDefault<any>,
 ): item is z.ZodArray<any> {
-  return item instanceof z.ZodArray
+  return item instanceof z.ZodArray;
 }
 
 function isZodDefault(
   item: z.ZodArray<any> | z.ZodDefault<any>,
 ): item is z.ZodDefault<any> {
-  return item instanceof z.ZodDefault
+  return item instanceof z.ZodDefault;
 }
 
 const itemShape = computed(() => {
-  if (!props.schema)
-    return
+  if (!props.schema) return;
 
   const schema: z.ZodAny = isZodArray(props.schema)
     ? props.schema._def.type
     : isZodDefault(props.schema)
-    // @ts-expect-error missing schema
-      ? props.schema._def.innerType._def.type
-      : null
+      ? // @ts-expect-error missing schema
+        props.schema._def.innerType._def.type
+      : null;
 
   return {
     type: getBaseType(schema),
     schema,
-  }
-})
+  };
+});
 
-const fieldContext = useField(props.fieldName)
+const fieldContext = useField(props.fieldName);
 // @ts-expect-error ignore missing `id`
-provide(FieldContextKey, fieldContext)
+provide(FieldContextKey, fieldContext);
 </script>
 
 <template>
   <FieldArray v-slot="{ fields, remove, push }" as="section" :name="fieldName">
     <slot v-bind="props">
-      <Accordion type="multiple" class="w-full" collapsible :disabled="disabled" as-child>
+      <Accordion
+        type="multiple"
+        class="w-full"
+        collapsible
+        :disabled="disabled"
+        as-child
+      >
         <FormItem>
           <AccordionItem :value="fieldName" class="border-none">
             <AccordionTrigger>

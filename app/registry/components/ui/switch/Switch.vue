@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { cn } from '@/lib/utils'
 import {
-  SwitchRoot,
-  type SwitchRootEmits,
-  type SwitchRootProps,
-  SwitchThumb,
-  useForwardPropsEmits,
-} from 'reka-ui'
-import { computed, type HTMLAttributes } from 'vue'
+    SwitchRoot,
+    type SwitchRootEmits,
+    type SwitchRootProps,
+    SwitchThumb,
+    useForwardPropsEmits,
+} from 'reka-ui';
+import { computed, type HTMLAttributes } from 'vue';
+import { cn } from '~/utils/utils';
 
 const props = defineProps<SwitchRootProps & { class?: HTMLAttributes['class'] }>()
 

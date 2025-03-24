@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { ListboxItemEmits, ListboxItemProps } from 'reka-ui'
-import { cn } from '@/lib/utils'
 import { useCurrentElement } from '@vueuse/core'
+import type { ListboxItemEmits, ListboxItemProps } from 'reka-ui'
 import { ListboxItem, useForwardPropsEmits, useId } from 'reka-ui'
 import { computed, type HTMLAttributes, onMounted, onUnmounted, ref } from 'vue'
+import { cn } from '~/utils/utils'
 import { useCommand, useCommandGroup } from '.'
 
 const props = defineProps<ListboxItemProps & { class?: HTMLAttributes['class'] }>()

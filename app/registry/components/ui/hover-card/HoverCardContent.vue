@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { cn } from '@/lib/utils'
 import {
-  HoverCardContent,
-  type HoverCardContentProps,
-  HoverCardPortal,
-  useForwardProps,
-} from 'reka-ui'
-import { computed, type HTMLAttributes } from 'vue'
+    HoverCardContent,
+    type HoverCardContentProps,
+    HoverCardPortal,
+    useForwardProps,
+} from 'reka-ui';
+import { computed, type HTMLAttributes } from 'vue';
+import { cn } from '~/utils/utils';
 
 const props = withDefaults(
   defineProps<HoverCardContentProps & { class?: HTMLAttributes['class'] }>(),

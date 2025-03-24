@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { cn } from '@/lib/utils'
-import { RangeCalendarHeading, type RangeCalendarHeadingProps, useForwardProps } from 'reka-ui'
-import { computed, type HTMLAttributes } from 'vue'
+import { RangeCalendarHeading, type RangeCalendarHeadingProps, useForwardProps } from 'reka-ui';
+import { computed, type HTMLAttributes } from 'vue';
+import { cn } from '~/utils/utils';
 
 const props = defineProps<RangeCalendarHeadingProps & { class?: HTMLAttributes['class'] }>()
 

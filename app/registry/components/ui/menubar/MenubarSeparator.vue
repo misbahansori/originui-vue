@@ -1,19 +1,28 @@
 <script setup lang="ts">
-import { cn } from '@/lib/utils'
-import { MenubarSeparator, type MenubarSeparatorProps, useForwardProps } from 'reka-ui'
-import { computed, type HTMLAttributes } from 'vue'
+import {
+  MenubarSeparator,
+  type MenubarSeparatorProps,
+  useForwardProps,
+} from "reka-ui";
+import { computed, type HTMLAttributes } from "vue";
+import { cn } from "~/utils/utils";
 
-const props = defineProps<MenubarSeparatorProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  MenubarSeparatorProps & { class?: HTMLAttributes["class"] }
+>();
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+  const { class: _, ...delegated } = props;
 
-  return delegated
-})
+  return delegated;
+});
 
-const forwardedProps = useForwardProps(delegatedProps)
+const forwardedProps = useForwardProps(delegatedProps);
 </script>
 
 <template>
-  <MenubarSeparator :class=" cn('-mx-1 my-1 h-px bg-muted', props.class)" v-bind="forwardedProps" />
+  <MenubarSeparator
+    :class="cn('bg-muted -mx-1 my-1 h-px', props.class)"
+    v-bind="forwardedProps"
+  />
 </template>

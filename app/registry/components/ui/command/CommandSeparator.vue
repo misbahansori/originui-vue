@@ -1,22 +1,24 @@
 <script setup lang="ts">
-import type { SeparatorProps } from 'reka-ui'
-import { cn } from '@/lib/utils'
-import { Separator } from 'reka-ui'
-import { computed, type HTMLAttributes } from 'vue'
+import type { SeparatorProps } from "reka-ui";
+import { Separator } from "reka-ui";
+import { computed, type HTMLAttributes } from "vue";
+import { cn } from "~/utils/utils";
 
-const props = defineProps<SeparatorProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  SeparatorProps & { class?: HTMLAttributes["class"] }
+>();
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+  const { class: _, ...delegated } = props;
 
-  return delegated
-})
+  return delegated;
+});
 </script>
 
 <template>
   <Separator
     v-bind="delegatedProps"
-    :class="cn('-mx-1 h-px bg-border', props.class)"
+    :class="cn('bg-border -mx-1 h-px', props.class)"
   >
     <slot />
   </Separator>

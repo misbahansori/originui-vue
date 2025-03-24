@@ -1,29 +1,35 @@
 <script setup lang="ts">
-import type { FieldProps } from './interface'
-import { Button } from '@/registry/default/ui/button'
-import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/registry/default/ui/form'
-import { Input } from '@/registry/default/ui/input'
-import { TrashIcon } from 'lucide-vue-next'
-import { ref } from 'vue'
-import AutoFormLabel from './AutoFormLabel.vue'
-import { beautifyObjectName } from './utils'
+import { TrashIcon } from "lucide-vue-next";
+import { ref } from "vue";
+import { Button } from "~/registry/components/ui/button";
+import {
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "~/registry/components/ui/form";
+import { Input } from "~/registry/components/ui/input";
+import AutoFormLabel from "./AutoFormLabel.vue";
+import type { FieldProps } from "./interface";
+import { beautifyObjectName } from "./utils";
 
-defineProps<FieldProps>()
+defineProps<FieldProps>();
 
-const inputFile = ref<File>()
+const inputFile = ref<File>();
 async function parseFileAsString(file: File | undefined): Promise<string> {
   return new Promise((resolve, reject) => {
     if (file) {
-      const reader = new FileReader()
+      const reader = new FileReader();
       reader.onloadend = () => {
-        resolve(reader.result as string)
-      }
+        resolve(reader.result as string);
+      };
       reader.onerror = (err) => {
-        reject(err)
-      }
-      reader.readAsDataURL(file)
+        reject(err);
+      };
+      reader.readAsDataURL(file);
     }
-  })
+  });
 }
 </script>
 
@@ -40,14 +46,19 @@ async function parseFileAsString(file: File | undefined): Promise<string> {
             type="file"
             v-bind="{ ...config?.inputProps }"
             :disabled="config?.inputProps?.disabled ?? disabled"
-            @change="async (ev: InputEvent) => {
-              const file = (ev.target as HTMLInputElement).files?.[0]
-              inputFile = file
-              const parsed = await parseFileAsString(file)
-              slotProps.componentField.onInput(parsed)
-            }"
+            @change="
+              async (ev: InputEvent) => {
+                const file = (ev.target as HTMLInputElement).files?.[0];
+                inputFile = file;
+                const parsed = await parseFileAsString(file);
+                slotProps.componentField.onInput(parsed);
+              }
+            "
           />
-          <div v-else class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-transparent pl-3 pr-1 py-1 text-sm shadow-sm transition-colors">
+          <div
+            v-else
+            class="border-input flex h-10 w-full items-center justify-between rounded-md border bg-transparent py-1 pr-1 pl-3 text-sm shadow-sm transition-colors"
+          >
             <p>{{ inputFile?.name }}</p>
             <Button
               :size="'icon'"
@@ -55,10 +66,12 @@ async function parseFileAsString(file: File | undefined): Promise<string> {
               class="h-[26px] w-[26px]"
               aria-label="Remove file"
               type="button"
-              @click="() => {
-                inputFile = undefined
-                slotProps.componentField.onInput(undefined)
-              }"
+              @click="
+                () => {
+                  inputFile = undefined;
+                  slotProps.componentField.onInput(undefined);
+                }
+              "
             >
               <TrashIcon :size="16" />
             </Button>

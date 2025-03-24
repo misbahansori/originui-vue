@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import type { StepperSeparatorProps } from 'reka-ui'
-import { cn } from '@/lib/utils'
-import { StepperSeparator, useForwardProps } from 'reka-ui'
+import type { StepperSeparatorProps } from 'reka-ui';
+import { StepperSeparator, useForwardProps } from 'reka-ui';
+import { cn } from '~/utils/utils';
 
-import { computed, type HTMLAttributes } from 'vue'
+import { computed, type HTMLAttributes } from 'vue';
 
 const props = defineProps<StepperSeparatorProps & { class?: HTMLAttributes['class'] }>()
 

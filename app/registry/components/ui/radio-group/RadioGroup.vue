@@ -1,25 +1,29 @@
 <script setup lang="ts">
-import { cn } from '@/lib/utils'
-import { RadioGroupRoot, type RadioGroupRootEmits, type RadioGroupRootProps, useForwardPropsEmits } from 'reka-ui'
-import { computed, type HTMLAttributes } from 'vue'
+import {
+  RadioGroupRoot,
+  type RadioGroupRootEmits,
+  type RadioGroupRootProps,
+  useForwardPropsEmits,
+} from "reka-ui";
+import { computed, type HTMLAttributes } from "vue";
+import { cn } from "~/utils/utils";
 
-const props = defineProps<RadioGroupRootProps & { class?: HTMLAttributes['class'] }>()
-const emits = defineEmits<RadioGroupRootEmits>()
+const props = defineProps<
+  RadioGroupRootProps & { class?: HTMLAttributes["class"] }
+>();
+const emits = defineEmits<RadioGroupRootEmits>();
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+  const { class: _, ...delegated } = props;
 
-  return delegated
-})
+  return delegated;
+});
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
-  <RadioGroupRoot
-    :class="cn('grid gap-2', props.class)"
-    v-bind="forwarded"
-  >
+  <RadioGroupRoot :class="cn('grid gap-2', props.class)" v-bind="forwarded">
     <slot />
   </RadioGroupRoot>
 </template>

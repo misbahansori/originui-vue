@@ -1,24 +1,26 @@
 <script setup lang="ts">
-import { cn } from '@/lib/utils'
-import { Check } from 'lucide-vue-next'
+import { Check } from "lucide-vue-next";
 import {
   SelectItem,
   SelectItemIndicator,
   type SelectItemProps,
   SelectItemText,
   useForwardProps,
-} from 'reka-ui'
-import { computed, type HTMLAttributes } from 'vue'
+} from "reka-ui";
+import { computed, type HTMLAttributes } from "vue";
+import { cn } from "~/utils/utils";
 
-const props = defineProps<SelectItemProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  SelectItemProps & { class?: HTMLAttributes["class"] }
+>();
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+  const { class: _, ...delegated } = props;
 
-  return delegated
-})
+  return delegated;
+});
 
-const forwardedProps = useForwardProps(delegatedProps)
+const forwardedProps = useForwardProps(delegatedProps);
 </script>
 
 <template>
@@ -26,7 +28,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     v-bind="forwardedProps"
     :class="
       cn(
-        'relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+        'focus:bg-accent focus:text-accent-foreground relative flex w-full cursor-default items-center rounded-sm py-1.5 pr-2 pl-8 text-sm outline-none select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
         props.class,
       )
     "
