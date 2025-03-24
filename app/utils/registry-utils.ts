@@ -1,3 +1,4 @@
+import type { RegistryTag } from "~/config/registry-tags";
 import registry from "../registry.json";
 
 // Define registry interfaces
@@ -34,16 +35,6 @@ export interface Registry {
   homepage?: string;
   items: ComponentInfo[];
 }
-
-// Define registry tag type
-export type RegistryTag =
-  | "new"
-  | "layout"
-  | "navigation"
-  | "feedback"
-  | "data-display"
-  | "inputs"
-  | "advanced";
 
 // Export the registry interface for access in other files
 export function getRegistry(): Registry {

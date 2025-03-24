@@ -13,7 +13,7 @@ const props = defineProps<Props>();
     <div
       :class="
         cn(
-          'grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4',
+          '-m-px grid grid-cols-12 *:px-1 *:py-12 *:not-first:-ms-px *:not-first:-mt-px sm:*:px-8 xl:*:px-12',
           props.class,
         )
       "
