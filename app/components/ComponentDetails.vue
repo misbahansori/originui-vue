@@ -29,7 +29,9 @@ defineProps<{
         <DialogHeader>
           <DialogTitle class="text-left">Code</DialogTitle>
           <div class="space-y-4">
-            <p class="text-lg font-semibold tracking-tight">Code</p>
+            <p class="text-lg font-semibold tracking-tight">
+              {{ component.name }}
+            </p>
           </div>
         </DialogHeader>
       </DialogContent>
