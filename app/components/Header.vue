@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { buttonVariants } from "~/registry/components/ui/button";
+
 // Define links array like in the React component
 const links = [
   { text: "Layouts", href: "/layouts", isNew: true },
@@ -72,7 +74,12 @@ function checkIfMobile() {
         </template>
         <div class="flex items-center gap-1">
           <a
-            class="text-muted-foreground hover:text-foreground/80 focus-visible:border-ring focus-visible:ring-ring/50 inline-flex size-9 items-center justify-center rounded outline-none focus-visible:ring-[3px]"
+            :class="
+              cn(
+                buttonVariants({ variant: 'ghost', size: 'icon' }),
+                'text-muted-foreground hover:text-foreground/80',
+              )
+            "
             href="https://x.com/origin_ui"
             target="_blank"
             rel="noopener noreferrer"
@@ -92,7 +99,12 @@ function checkIfMobile() {
             </svg>
           </a>
           <a
-            class="text-muted-foreground hover:text-foreground/80 focus-visible:border-ring focus-visible:ring-ring/50 inline-flex size-9 items-center justify-center rounded outline-none focus-visible:ring-[3px]"
+            :class="
+              cn(
+                buttonVariants({ variant: 'ghost', size: 'icon' }),
+                'text-muted-foreground hover:text-foreground/80',
+              )
+            "
             href="https://github.com/origin-space/originui"
             target="_blank"
             rel="noopener noreferrer"
@@ -116,7 +128,7 @@ function checkIfMobile() {
           <!-- Mobile Menu -->
           <DropdownMenu v-if="isMobile">
             <DropdownMenuTrigger as-child>
-              <Button variant="outline" size="icon" class="size-9">
+              <Button variant="ghost" size="icon" class="size-9">
                 <span class="sr-only">Menu</span>
                 <!-- Hamburger Menu Icon -->
                 <svg

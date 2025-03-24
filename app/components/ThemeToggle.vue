@@ -22,13 +22,12 @@ const smartToggle = () => {
 </script>
 
 <template>
-  <Button variant="outline" size="icon" class="size-9" @click="smartToggle">
-    <span class="sr-only">Toggle theme</span>
+  <Button variant="ghost" size="icon" class="size-9" @click="smartToggle">
     <!-- Sun icon for light mode -->
     <Icon
       v-if="colorMode.value === 'light'"
       name="ri:sun-line"
-      class="size-5 dark:hidden"
+      class="text-muted-foreground hover:text-foreground/80 size-5 dark:hidden"
       :size="20"
       aria-hidden="true"
     />
@@ -36,9 +35,10 @@ const smartToggle = () => {
     <Icon
       v-else-if="colorMode.value === 'dark'"
       name="ri:moon-clear-line"
-      class="hidden size-5 dark:block"
+      class="text-muted-foreground hover:text-foreground/80 hidden size-5 dark:block"
       :size="20"
       aria-hidden="true"
     />
+    <span class="sr-only">Toggle theme</span>
   </Button>
 </template>
