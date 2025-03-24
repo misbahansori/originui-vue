@@ -1,0 +1,58 @@
+<script setup lang="ts">
+// TODO: This component uses a third-party library (use-mask-input)
+// We need to find an equivalent Vue library or implement custom functionality
+import { ref } from "vue";
+
+const inputValue = ref("");
+
+function applyMask(e: Event) {
+  const target = e.target as HTMLInputElement;
+  const value = target.value;
+
+  let maskedValue = "";
+  const pattern = "99:99:99"; // Mask pattern: 9 = digit
+  let valueIndex = 0;
+
+  for (let i = 0; i < pattern.length && valueIndex < value.length; i++) {
+    const patternChar = pattern[i];
+
+    if (patternChar === ":") {
+      maskedValue += ":";
+    } else {
+      const valueChar = value[valueIndex] || "";
+      valueIndex++;
+
+      if (patternChar === "9" && /[0-9]/.test(valueChar)) {
+        maskedValue += valueChar;
+      } else {
+        // If character doesn't match pattern, don't advance
+        valueIndex--;
+      }
+    }
+  }
+
+  inputValue.value = maskedValue;
+}
+</script>
+
+<template>
+  <div class="*:not-first:mt-2">
+    <Label for="timestamp-input">Timestamp</Label>
+    <Input
+      id="timestamp-input"
+      placeholder="00:00:00"
+      type="text"
+      v-model="inputValue"
+      @input="applyMask"
+      maxlength="8"
+    />
+    <p
+      class="text-muted-foreground mt-2 text-xs"
+      role="region"
+      aria-live="polite"
+    >
+      <!-- TODO: This original component used use-mask-input -->
+      Built with custom Vue mask implementation
+    </p>
+  </div>
+</template>
