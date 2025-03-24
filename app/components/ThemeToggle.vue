@@ -1,28 +1,13 @@
 <script setup lang="ts">
-// Use the built-in Nuxt color mode composable
 const colorMode = useColorMode();
 
-// Smart toggle between light, dark, and system modes
-const smartToggle = () => {
-  // Get system preference
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  // Smart toggle logic similar to React implementation
-  if (colorMode.preference === "system") {
-    colorMode.preference = prefersDark ? "light" : "dark";
-  } else if (
-    (colorMode.preference === "light" && !prefersDark) ||
-    (colorMode.preference === "dark" && prefersDark)
-  ) {
-    colorMode.preference = colorMode.preference === "light" ? "dark" : "light";
-  } else {
-    colorMode.preference = "system";
-  }
+const toggle = () => {
+  colorMode.preference = colorMode.preference === "light" ? "dark" : "light";
 };
 </script>
 
 <template>
-  <Button variant="ghost" size="icon" class="size-9" @click="smartToggle">
+  <Button variant="ghost" size="icon" class="size-9" @click="toggle">
     <!-- Sun icon for light mode -->
     <Icon
       v-if="colorMode.value === 'light'"
