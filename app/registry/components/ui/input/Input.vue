@@ -35,5 +35,6 @@ const modelValue = useVModel(props, "modelValue", emits, {
         props.class,
       )
     "
+    :type="type"
   />
 </template>
