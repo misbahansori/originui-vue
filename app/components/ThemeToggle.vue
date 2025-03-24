@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { Button } from "~/components/ui/button";
-
 // Use the built-in Nuxt color mode composable
 const colorMode = useColorMode();
 

@@ -30,8 +30,10 @@
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.8.2",
+    "vaul-vue": "^0.4.1",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "vue-sonner": "^1.3.0"
   },
   "packageManager": "pnpm@10.6.5",
   "devDependencies": {

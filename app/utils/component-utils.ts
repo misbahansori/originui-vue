@@ -55,16 +55,6 @@ export function populateRegistry() {
 // Initialize the registry
 populateRegistry();
 
-// Get all component names in the registry
-export function getAllComponentNames(): string[] {
-  return Object.keys(registry);
-}
-
-// Get a component by name
-export function getComponentByName(name: string): RegistryItem | undefined {
-  return registry[name];
-}
-
 // Get components by an array of names
 export function getComponentsByNames(names: string[]): RegistryItem[] {
   return names.map((name) => {

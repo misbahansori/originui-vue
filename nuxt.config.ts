@@ -20,7 +20,7 @@ export default defineNuxtConfig({
 
   shadcn: {
     prefix: "",
-    componentDir: "./app/components/ui",
+    componentDir: "./app/registry/components/ui",
   },
 
   colorMode: {

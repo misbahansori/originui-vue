@@ -1,14 +1,4 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
-import ThemeToggle from "~/components/ThemeToggle.vue";
-import { Button } from "~/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "~/components/ui/dropdown-menu";
-
 // Define links array like in the React component
 const links = [
   { text: "Layouts", href: "/layouts", isNew: true },

@@ -48,11 +48,6 @@ export function getComponentByName(name: string): ComponentInfo | undefined {
   );
 }
 
-// Get component names
-export function getAllComponentNames(): string[] {
-  return (registry as Registry).items.map((item: ComponentInfo) => item.name);
-}
-
 // Get all components from the registry
 export function getAllComponents(): ComponentInfo[] {
   return (registry as Registry).items;
