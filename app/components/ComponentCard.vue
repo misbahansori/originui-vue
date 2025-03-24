@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import type { RegistryItem } from "~/utils/component-utils";
 import { cn } from "~/utils/utils";
 
@@ -9,19 +10,54 @@ interface Props {
 }
 
 const props = defineProps<Props>();
+
+// Function to get column span classes
+const getColSpanClasses = (includeStart = false) => {
+  const baseClasses =
+    props.component.meta?.colSpan === 2
+      ? "col-span-12 sm:col-span-6 lg:col-span-6"
+      : props.component.meta?.colSpan === 3
+        ? "col-span-12 sm:col-span-12 lg:col-span-12"
+        : "col-span-12 sm:col-span-6 lg:col-span-4";
+
+  const startClasses =
+    includeStart && props.component.meta?.colSpan !== 3
+      ? props.component.meta?.colSpan === 2
+        ? "sm:col-start-4 lg:col-start-4"
+        : "sm:col-start-4 lg:col-start-5"
+      : "";
+
+  return cn(baseClasses, startClasses);
+};
+
+// Get style classes based on component metadata
+const styleClasses = computed(() => {
+  return props.component.meta?.style === 1
+    ? "flex justify-center items-center"
+    : props.component.meta?.style === 2
+      ? "text-center"
+      : "";
+});
 </script>
 
 <template>
   <div
     :class="
       cn(
-        'group bg-card text-card-foreground relative flex flex-col overflow-hidden rounded-lg border shadow',
-        props.class,
+        'group/item relative border has-[[data-comp-loading=true]]:border-none',
+        props.isSearchPage
+          ? 'col-span-12 grid grid-cols-12'
+          : cn(getColSpanClasses(), styleClasses),
       )
     "
   >
-    <div class="p-2">
+    <template v-if="props.isSearchPage">
+      <div :class="cn(getColSpanClasses(true), styleClasses)">
+        <slot></slot>
+      </div>
+    </template>
+    <template v-else>
       <slot></slot>
-    </div>
+    </template>
   </div>
 </template>
