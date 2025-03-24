@@ -23,6 +23,13 @@ export default defineNuxtConfig({
     componentDir: "./app/components/ui",
   },
 
+  colorMode: {
+    classSuffix: "",
+    classPrefix: "",
+    fallback: "light",
+    storageKey: "nuxt-color-mode",
+  },
+
   css: ["~/assets/css/tailwind.css"],
 
   vite: {
