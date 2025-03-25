@@ -44,7 +44,7 @@
         <ul class="mt-3 space-y-2">
           <li>
             <a
-              href="https://github.com/originui/originui"
+              href="https://github.com/misbahansori/originui-vue"
               class="text-muted-foreground hover:text-foreground text-sm"
             >
               GitHub
