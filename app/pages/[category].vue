@@ -21,6 +21,34 @@ const components = getComponentsByNames(
   category.components.map((item) => item.name),
 );
 
+const glob = import.meta.glob(
+  ["~/registry/components/**/*.vue", "!~/registry/components/ui"],
+  {
+    query: "?raw",
+    import: "default",
+  },
+);
+
+const componentNames = components.map((item) => item.name);
+
+const rawComponents = Object.entries(glob)
+  .map(([key, resolver]) => {
+    const fullPath = key
+      .replace("/registry/components/", "")
+      .replace(/\.vue$/, "");
+    const path = fullPath.split("/").at(0) ?? "";
+    const name = fullPath.split("/").at(-1) ?? "";
+    return { name, path, resolver: resolver as () => Promise<unknown> };
+  })
+  .filter(({ name }) => componentNames.includes(name));
+
+const componentsWithRawCode = components.map((component) => {
+  const rawComponent = rawComponents.find(
+    (item) => item.name === component.name,
+  );
+  return { ...component, resolver: rawComponent?.resolver };
+});
+
 useSeoMeta({
   title: `${category.name} components built with Vue and Tailwind CSS - Origin UI`,
   description: `A collection of beautiful and accessible ${category.name.toLowerCase()} components built with Vue and Tailwind CSS.`,
@@ -46,7 +74,7 @@ useSeoMeta({
 
     <PageGrid>
       <ComponentCard
-        v-for="component in components"
+        v-for="component in componentsWithRawCode"
         :key="component.name"
         :component="component"
       >

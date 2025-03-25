@@ -1,7 +1,11 @@
 <script setup lang="ts">
-defineProps<{
-  component: RegistryItem;
+const props = defineProps<{
+  component: RegistryItem & { resolver: (() => Promise<unknown>) | undefined };
 }>();
+
+const rawCode = (await props.component.resolver?.()) as string;
+
+console.log(rawCode);
 </script>
 
 <template>
@@ -28,12 +32,8 @@ defineProps<{
       <DialogContent class="sm:max-w-[600px]">
         <DialogHeader>
           <DialogTitle class="text-left">Code</DialogTitle>
-          <div class="space-y-4">
-            <p class="text-lg font-semibold tracking-tight">
-              {{ component.name }}
-            </p>
-          </div>
         </DialogHeader>
+        <CodeBlock :code="rawCode" lang="vue" />
       </DialogContent>
     </Dialog>
   </div>
