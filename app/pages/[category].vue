@@ -21,15 +21,6 @@ const components = getComponentsByNames(
   category.components.map((item) => item.name),
 );
 
-// useHead({
-//   title: `${category.name} components built with Vue and Tailwind CSS - Origin UI`,
-//   meta: [
-//     {
-//       name: "description",
-//       content: `A collection of beautiful and accessible ${category.name.toLowerCase()} components built with Vue and Tailwind CSS.`,
-//     },
-//   ],
-// });
 useSeoMeta({
   title: `${category.name} components built with Vue and Tailwind CSS - Origin UI`,
   description: `A collection of beautiful and accessible ${category.name.toLowerCase()} components built with Vue and Tailwind CSS.`,
@@ -58,7 +49,7 @@ useSeoMeta({
         :key="component.name"
         :component="component"
       >
-        <component :is="component.name" />
+        <component :is="component.name" hydrate-on-visible />
 
         <ComponentDetails :component="component" />
       </ComponentCard>
