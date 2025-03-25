@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { buttonVariants } from "~/registry/components/ui/button";
 
-// Define links array like in the React component
 const links = [
   { text: "Layouts", href: "/layouts", isNew: true },
   // { text: "Colors", href: "/colors" },
   { text: "Easing Classes", href: "/easings" },
 ];
 
-// Mobile detection
 const isMobile = ref(false);
 
 onMounted(() => {

@@ -7,7 +7,6 @@ interface Props {
 
 const props = defineProps<Props>();
 
-// Function to get column span classes
 const getColSpanClasses = (includeStart = false) => {
   const baseClasses =
     props.component.meta?.colSpan === 2
@@ -26,7 +25,6 @@ const getColSpanClasses = (includeStart = false) => {
   return cn(baseClasses, startClasses);
 };
 
-// Get style classes based on component metadata
 const styleClasses = computed(() => {
   return props.component.meta?.style === 1
     ? "flex justify-center items-center"

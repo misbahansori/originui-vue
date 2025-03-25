@@ -1,7 +1,4 @@
 <script setup lang="ts">
-// Import what we need
-import { computed } from "vue";
-
 const props = defineProps<{
   slug: string;
   name: string;
@@ -9,7 +6,6 @@ const props = defineProps<{
   isNew?: boolean;
 }>();
 
-// Computed properties
 const href = computed(() => `/${props.slug}`);
 const imageBasePath = computed(() => `/thumbs/${props.slug}`);
 const alt = computed(() => `${props.name} components`);

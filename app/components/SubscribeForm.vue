@@ -23,13 +23,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-export function SubscribeBottom() {
-  return {
-    render() {
-      return {}; // This is just a reference to the component
-    },
-  };
-}
-</script>

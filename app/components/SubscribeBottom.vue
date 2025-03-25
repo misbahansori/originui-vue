@@ -2,7 +2,6 @@
 import { computed, ref } from "vue";
 import { cn } from "~/utils/utils";
 
-// Define form state types
 type FormStatus = "idle" | "loading" | "success" | "error";
 
 interface FormState {
@@ -11,7 +10,6 @@ interface FormState {
   message: string;
 }
 
-// Initial form state
 const formState = ref<FormState>({
   email: "",
   status: "idle",
@@ -20,11 +18,9 @@ const formState = ref<FormState>({
 
 const isLoading = computed(() => formState.value.status === "loading");
 
-// Generate unique IDs for SVG filters
 const illustrationId1 = `illustration-${Math.random().toString(36).substring(2, 9)}`;
 const illustrationId2 = `illustration-${Math.random().toString(36).substring(2, 9)}`;
 
-// Handle form submission
 const handleSubmit = async (e: Event) => {
   e.preventDefault();
   formState.value = { ...formState.value, status: "loading", message: "" };
@@ -61,7 +57,6 @@ const handleSubmit = async (e: Event) => {
   <div
     class="dark relative overflow-hidden rounded-xl bg-zinc-900 px-4 py-14 sm:px-8"
   >
-    <!-- Background illustrations -->
     <svg
       class="absolute top-0 left-0 -translate-x-1/2"
       xmlns="http://www.w3.org/2000/svg"
