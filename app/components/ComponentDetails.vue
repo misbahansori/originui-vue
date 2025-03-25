@@ -22,19 +22,17 @@ onMounted(async () => {
     <Dialog>
       <TooltipProvider :delayDuration="0">
         <Tooltip>
-          <TooltipTrigger asChild>
-            <span>
-              <DialogTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  class="text-muted-foreground/80 hover:text-foreground transition-none hover:bg-transparent disabled:opacity-100 lg:opacity-0 lg:group-focus-within/item:opacity-100 lg:group-hover/item:opacity-100"
-                >
-                  <Icon name="lucide:code" size="16" aria-hidden="true" />
-                </Button>
-              </DialogTrigger>
-            </span>
-          </TooltipTrigger>
+          <DialogTrigger asChild>
+            <TooltipTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                class="text-muted-foreground/80 hover:text-foreground transition-none hover:bg-transparent disabled:opacity-100 lg:opacity-0 lg:group-focus-within/item:opacity-100 lg:group-hover/item:opacity-100"
+              >
+                <Icon name="lucide:code" size="16" aria-hidden="true" />
+              </Button>
+            </TooltipTrigger>
+          </DialogTrigger>
           <TooltipContent class="px-2 py-1 text-xs">View code</TooltipContent>
         </Tooltip>
       </TooltipProvider>
