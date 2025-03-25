@@ -6,16 +6,16 @@ import {
   NumberFieldRoot,
 } from "reka-ui";
 
+const id = useId();
 const value = ref(99);
 </script>
 
 <template>
   <div>
     <div class="*:not-first:mt-2">
-      <Label class="text-foreground text-sm font-medium">
-        Number input with chevrons
-      </Label>
+      <Label :for="id">Number input with chevrons</Label>
       <NumberFieldRoot
+        :id="id"
         :min="0"
         v-model="value"
         :formatOptions="{

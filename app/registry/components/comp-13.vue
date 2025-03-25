@@ -1,8 +1,12 @@
+<script setup lang="ts">
+const id = useId();
+</script>
+
 <template>
   <div class="*:not-first:mt-2">
-    <Label>Input with inline add-ons</Label>
+    <Label :for="id">Input with inline add-ons</Label>
     <div class="relative">
-      <Input class="peer ps-6 pe-12" placeholder="0.00" type="text" />
+      <Input :id="id" class="peer ps-6 pe-12" placeholder="0.00" type="text" />
       <span
         class="text-muted-foreground pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-sm peer-disabled:opacity-50"
       >

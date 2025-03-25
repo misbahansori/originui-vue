@@ -1,8 +1,12 @@
+<script setup lang="ts">
+const id = useId();
+</script>
+
 <template>
   <div class="*:not-first:mt-2">
-    <Label>Search input with &lt;kbd&gt;</Label>
+    <Label :for="id">Search input with &lt;kbd&gt;</Label>
     <div class="relative">
-      <Input class="pe-11" placeholder="Search..." type="search" />
+      <Input :id="id" class="pe-11" placeholder="Search..." type="search" />
       <div
         class="text-muted-foreground pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-2"
       >

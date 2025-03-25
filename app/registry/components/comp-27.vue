@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const id = useId();
 const inputValue = ref("");
 const isLoading = ref(false);
 let timer: ReturnType<typeof setTimeout> | null = null;
@@ -17,9 +18,10 @@ watchEffect(() => {
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label>Search input with loader</Label>
+    <Label :for="id">Search input with loader</Label>
     <div class="relative">
       <Input
+        :id="id"
         class="peer ps-9 pe-9"
         placeholder="Search..."
         type="search"

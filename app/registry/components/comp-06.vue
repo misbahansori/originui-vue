@@ -1,7 +1,12 @@
+<script setup lang="ts">
+const id = useId();
+</script>
+
 <template>
   <div class="*:not-first:mt-2">
-    <Label>Input with error</Label>
+    <Label :for="id">Input with error</Label>
     <Input
+      :id="id"
       class="peer"
       placeholder="Email"
       type="email"

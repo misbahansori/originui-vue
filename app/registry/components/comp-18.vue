@@ -1,8 +1,13 @@
+<script setup lang="ts">
+const id = useId();
+</script>
+
 <template>
   <div class="*:not-first:mt-2">
-    <Label>Input with end select</Label>
+    <Label :for="id">Input with end select</Label>
     <div class="flex rounded-md shadow-xs">
       <Input
+        :id="id"
         class="-me-px rounded-e-none shadow-none focus-visible:z-10"
         placeholder="google"
         type="text"

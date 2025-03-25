@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const id = useId();
 const isVisible = ref(false);
 
 const toggleVisibility = () => {
@@ -8,9 +9,10 @@ const toggleVisibility = () => {
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label>Show/hide password input</Label>
+    <Label :for="id">Show/hide password input</Label>
     <div class="relative">
       <Input
+        :id="id"
         class="pe-9"
         placeholder="Password"
         :type="isVisible ? 'text' : 'password'"

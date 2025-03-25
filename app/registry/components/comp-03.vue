@@ -4,8 +4,8 @@ const id = useId();
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label>Input with helper text</Label>
-    <Input placeholder="Email" type="email" />
+    <Label :for="id">Input with helper text</Label>
+    <Input :id="id" placeholder="Email" type="email" />
     <p
       class="text-muted-foreground mt-2 text-xs"
       role="region"

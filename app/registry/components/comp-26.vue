@@ -1,8 +1,17 @@
+<script setup lang="ts">
+const id = useId();
+</script>
+
 <template>
   <div class="*:not-first:mt-2">
-    <Label>Search input with icon and button</Label>
+    <Label :for="id">Search input with icon and button</Label>
     <div class="relative">
-      <Input class="peer ps-9 pe-9" placeholder="Search..." type="search" />
+      <Input
+        :id="id"
+        class="peer ps-9 pe-9"
+        placeholder="Search..."
+        type="search"
+      />
       <div
         class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50"
       >

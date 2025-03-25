@@ -6,16 +6,16 @@ import {
   NumberFieldRoot,
 } from "reka-ui";
 
+const id = useId();
 const value = ref(2048);
 </script>
 
 <template>
   <div>
     <div class="*:not-first:mt-2">
-      <Label class="text-foreground text-sm font-medium">
-        Number input with plus/minus buttons
-      </Label>
+      <Label :for="id">Number input with plus/minus buttons</Label>
       <NumberFieldRoot
+        :id="id"
         :min="0"
         v-model="value"
         class="border-input data-focus-within:border-ring data-focus-within:ring-ring/50 data-focus-within:has-aria-invalid:ring-destructive/20 dark:data-focus-within:has-aria-invalid:ring-destructive/40 data-focus-within:has-aria-invalid:border-destructive relative inline-flex h-9 w-full items-center overflow-hidden rounded-md border text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none data-disabled:opacity-50 data-focus-within:ring-[3px]"

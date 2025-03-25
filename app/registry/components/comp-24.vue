@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const id = useId();
 const inputValue = ref("Click to clear");
 const inputRef = ref<HTMLInputElement | null>(null);
 
@@ -10,9 +11,10 @@ const handleClearInput = () => {
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label>Input with clear button</Label>
+    <Label :for="id">Input with clear button</Label>
     <div class="relative">
       <Input
+        :id="id"
         ref="inputRef"
         class="pe-9"
         placeholder="Type something..."

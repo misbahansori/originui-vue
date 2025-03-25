@@ -1,8 +1,13 @@
+<script setup lang="ts">
+const id = useId();
+</script>
+
 <template>
   <div class="*:not-first:mt-2">
-    <Label>Input with end add-on</Label>
+    <Label :for="id">Input with end add-on</Label>
     <div class="flex rounded-md shadow-xs">
       <Input
+        :id="id"
         class="-me-px rounded-e-none shadow-none"
         placeholder="google"
         type="text"
