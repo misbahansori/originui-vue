@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { useSliderWithInput } from "~/composables/useSliderWithInput";
 import { cn } from "~/utils/utils";
-import { useSliderWithInput } from "../../../composables/useSliderWithInput";
 
 const minValue = 0;
 const maxValue = 2;
