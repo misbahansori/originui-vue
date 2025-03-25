@@ -1,0 +1,12 @@
+<script setup lang="ts">
+import { ref } from "vue";
+
+const value = ref([25]);
+</script>
+
+<template>
+  <div class="*:not-first:mt-4">
+    <Label>Simple slider</Label>
+    <Slider v-model="value" aria-label="Simple slider" />
+  </div>
+</template>

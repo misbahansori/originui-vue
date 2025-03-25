@@ -23,6 +23,7 @@ const props = defineProps<SelectNativeProps>();
           props.class,
         )
       "
+      :multiple="props.multiple"
       v-bind="$attrs"
     >
       <slot />
