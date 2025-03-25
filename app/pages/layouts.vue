@@ -42,15 +42,20 @@ const cards = [
   },
 ];
 
-useHead({
+useSeoMeta({
   title: "UI Layouts built with Tailwind CSS and Vue - Origin UI",
-  meta: [
-    {
-      name: "description",
-      content:
-        "Beautiful UI layouts built with Tailwind CSS and Vue to help you get started with your next project.",
-    },
-  ],
+  description:
+    "Beautiful UI layouts built with Tailwind CSS and Vue to help you get started with your next project.",
+  ogTitle: "UI Layouts built with Tailwind CSS and Vue - Origin UI",
+  ogDescription:
+    "Beautiful UI layouts built with Tailwind CSS and Vue to help you get started with your next project.",
+  ogImage: "https://originui-vue.com/opengraph-image.jpg",
+  ogUrl: "https://originui-vue.com/layouts",
+  twitterTitle: "UI Layouts built with Tailwind CSS and Vue - Origin UI",
+  twitterDescription:
+    "Beautiful UI layouts built with Tailwind CSS and Vue to help you get started with your next project.",
+  twitterImage: "https://originui-vue.com/opengraph-image.jpg",
+  twitterCard: "summary_large_image",
 });
 </script>
 

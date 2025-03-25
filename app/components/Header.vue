@@ -4,7 +4,11 @@ import { buttonVariants } from "~/registry/components/ui/button";
 const links = [
   { text: "Layouts", href: "/layouts", isNew: true },
   // { text: "Colors", href: "/colors" },
-  { text: "Easing Classes", href: "/easings" },
+  {
+    text: "Easing Classes",
+    href: "https://originui.com/easings",
+    external: true,
+  },
 ];
 
 const isMobile = ref(false);
@@ -55,6 +59,8 @@ function checkIfMobile() {
               :key="link.href"
               :to="link.href"
               class="text-muted-foreground hover:text-foreground/80 relative"
+              :target="link.external ? '_blank' : '_self'"
+              :external="link.external ?? false"
             >
               {{ link.text }}
               <span
