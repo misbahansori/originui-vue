@@ -1,23 +1,18 @@
 <script setup lang="ts">
 const inputValue = ref("");
 const isLoading = ref(false);
+let timer: ReturnType<typeof setTimeout> | null = null;
 
-watch(
-  inputValue,
-  (newValue) => {
-    if (newValue) {
-      isLoading.value = true;
-      const timer = setTimeout(() => {
-        isLoading.value = false;
-      }, 500);
-
-      onBeforeUnmount(() => clearTimeout(timer));
-    } else {
+watchEffect(() => {
+  if (inputValue.value) {
+    isLoading.value = true;
+    timer = setTimeout(() => {
       isLoading.value = false;
-    }
-  },
-  { immediate: true },
-);
+    }, 500);
+  }
+
+  return () => timer && clearTimeout(timer);
+});
 </script>
 
 <template>
