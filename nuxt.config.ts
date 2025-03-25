@@ -2,6 +2,14 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  site: {
+    url: "https://originui-vue.com",
+    name: "Originui Vue",
+    description:
+      "An open-source collection of copy-and-paste components for quickly building application UIs.",
+    defaultLocale: "en",
+  },
+
   devtools: { enabled: true },
 
   modules: [
@@ -11,6 +19,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/color-mode",
     "nuxt-umami",
+    "@nuxtjs/seo",
   ],
 
   future: {
