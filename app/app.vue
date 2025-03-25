@@ -1,7 +1,5 @@
 <template>
-  <TooltipProvider>
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-  </TooltipProvider>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
