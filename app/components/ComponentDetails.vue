@@ -39,10 +39,13 @@ html.value = await codeToHtml(code ?? "", {
         <DialogHeader>
           <DialogTitle class="text-left">Code</DialogTitle>
         </DialogHeader>
-        <div
-          v-html="html"
-          class="[&_code]:font-mono [&_code]:text-[13px] [&_pre]:max-h-[450px] [&_pre]:overflow-auto [&_pre]:rounded-md [&_pre]:bg-zinc-950! [&_pre]:p-4 [&_pre]:leading-snug dark:[&_pre]:bg-zinc-900!"
-        ></div>
+        <div class="relative">
+          <div
+            v-html="html"
+            class="[&_code]:font-mono [&_code]:text-[13px] [&_pre]:max-h-[450px] [&_pre]:overflow-auto [&_pre]:rounded-md [&_pre]:bg-zinc-950! [&_pre]:p-4 [&_pre]:leading-snug dark:[&_pre]:bg-zinc-900!"
+          ></div>
+          <CopyButton :text="code" />
+        </div>
       </DialogContent>
     </Dialog>
   </div>
