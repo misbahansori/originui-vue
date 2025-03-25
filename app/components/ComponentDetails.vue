@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { DevOnly } from "#components";
 import { codeToHtml } from "shiki";
 
 const props = defineProps<{
