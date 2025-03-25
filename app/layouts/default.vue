@@ -1,27 +1,5 @@
 <script setup lang="ts">
-// Font setup would be handled in nuxt.config.ts for Nuxt 3
-
 useHead({
-  title: "Origin UI - Beautiful UI components built with Tailwind CSS and Vue",
-  meta: [
-    {
-      name: "description",
-      content:
-        "An extensive collection of copy-and-paste components for quickly building app UIs. Free, open-source, and ready to drop into your projects.",
-    },
-    {
-      name: "viewport",
-      content:
-        "width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover",
-    },
-  ],
-  script: [
-    {
-      src: "https://plausible.cruip.com/js/script.js",
-      "data-domain": "originui.com",
-      defer: true,
-    },
-  ],
   bodyAttrs: {
     class:
       "font-sans tracking-[-0.25px] antialiased has-not-data-home:before:absolute has-not-data-home:before:inset-x-0 has-not-data-home:before:h-100 has-not-data-home:before:bg-linear-to-b has-not-data-home:before:from-zinc-100 has-data-home:bg-zinc-50 dark:has-not-data-home:before:hidden dark:has-data-home:bg-zinc-950",

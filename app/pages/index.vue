@@ -8,6 +8,24 @@ const sortedCategories = computed(() => {
     return 0;
   });
 });
+
+useSeoMeta({
+  title: "Origin UI - Beautiful UI components built with Tailwind CSS and Vue",
+  description:
+    "An open-source collection of copy-and-paste components for quickly building application UIs.",
+  ogTitle:
+    "Origin UI - Beautiful UI components built with Tailwind CSS and Vue",
+  ogDescription:
+    "An open-source collection of copy-and-paste components for quickly building application UIs.",
+  ogImage: "https://originui-vue.vercel.app/opengraph-image.jpg",
+  ogUrl: "https://originui-vue.vercel.app",
+  twitterTitle:
+    "Origin UI - Beautiful UI components built with Tailwind CSS and Vue",
+  twitterDescription:
+    "An open-source collection of copy-and-paste components for quickly building application UIs.",
+  twitterImage: "https://originui-vue.vercel.app/opengraph-image.jpg",
+  twitterCard: "summary_large_image",
+});
 </script>
 
 <template>
