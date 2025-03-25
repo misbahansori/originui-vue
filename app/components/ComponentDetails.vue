@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { DevOnly } from "#components";
 import { codeToHtml } from "shiki";
 
 const props = defineProps<{
@@ -18,7 +19,14 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="absolute top-2 right-2 flex gap-2 peer-data-comp-loading:hidden">
+  <div
+    class="absolute inset-x-2 top-2 flex items-center justify-between gap-2 peer-data-comp-loading:hidden"
+  >
+    <div class="ps-10">
+      <DevOnly>
+        <span class="text-muted-foreground text-sm">{{ component.name }}</span>
+      </DevOnly>
+    </div>
     <Dialog>
       <TooltipProvider :delayDuration="0">
         <Tooltip>
@@ -49,6 +57,11 @@ onMounted(async () => {
             <CopyButton :text="code" />
           </div>
         </div>
+        <DevOnly>
+          <div class="text-muted-foreground text-sm">
+            {{ component.name }}
+          </div>
+        </DevOnly>
       </DialogContent>
     </Dialog>
   </div>
