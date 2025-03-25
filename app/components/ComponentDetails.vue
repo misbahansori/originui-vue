@@ -6,11 +6,14 @@ const props = defineProps<{
 }>();
 
 const html = shallowRef("");
+const code = shallowRef("");
 
-const code = (await props.component.resolver?.()) as string;
-html.value = await codeToHtml(code ?? "", {
-  lang: "vue",
-  theme: "github-dark",
+onMounted(async () => {
+  code.value = (await props.component.resolver?.()) as string;
+  html.value = await codeToHtml(code.value ?? "", {
+    lang: "vue",
+    theme: "github-dark",
+  });
 });
 </script>
 

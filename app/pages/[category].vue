@@ -80,7 +80,7 @@ useSeoMeta({
       >
         <component :is="component.name" hydrate-on-visible />
 
-        <ComponentDetails :component="component" />
+        <ComponentDetails :component="component" hydrate-on-visible />
       </ComponentCard>
     </PageGrid>
 
