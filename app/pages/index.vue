@@ -30,20 +30,22 @@ useSeoMeta({
 
 <template>
   <div data-home>
-    <div class="mb-8 w-full border-l-4 border-yellow-500 bg-yellow-100 p-4">
-      <div class="flex">
-        <div class="flex-shrink-0">
-          <Icon name="lucide:alert-triangle" class="h-5 w-5 text-yellow-500" />
-        </div>
-        <div class="ml-3">
-          <p class="text-sm text-yellow-700">
-            <strong>Work in Progress:</strong>
-            This project is still under development. Contributions are greatly
-            appreciated!
-          </p>
-        </div>
+    <div class="mb-8 rounded-md border bg-amber-500/10 px-4 py-3">
+      <div class="flex items-center gap-3">
+        <Icon
+          name="lucide:triangle-alert"
+          class="mt-0.5 shrink-0 text-amber-500"
+          :size="20"
+          aria-hidden="true"
+        />
+        <p class="text-foreground/90 text-sm">
+          <strong>Work in Progress:</strong>
+          This project is still under development. Contributions are greatly
+          appreciated!
+        </p>
       </div>
     </div>
+
     <div class="max-w-3xl max-sm:text-center">
       <h1
         class="font-heading text-foreground mb-4 text-4xl/[1.1] font-bold tracking-tight md:text-5xl/[1.1]"
