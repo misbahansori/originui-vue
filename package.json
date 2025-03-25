@@ -27,6 +27,7 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "reka-ui": "^2.0.2",
     "shadcn-nuxt": "^1.0.2",
+    "shiki": "^3.2.1",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.8.2",

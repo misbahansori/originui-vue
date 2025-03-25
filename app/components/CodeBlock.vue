@@ -1,13 +1,17 @@
 <script setup lang="ts">
+import { codeToHtml } from "shiki";
+
 const props = defineProps<{
-  code: string;
+  resolver: (() => Promise<string>) | undefined;
 }>();
+
+const html = ref("");
+
+const code = await props.resolver?.();
+html.value = await codeToHtml(code ?? "", {
+  lang: "vue",
+  theme: "github-dark",
+});
 </script>
 
-<template>
-  <div
-    class="[&_code]:font-mono [&_code]:text-[13px] [&_pre]:max-h-[450px] [&_pre]:overflow-auto [&_pre]:rounded-md [&_pre]:bg-zinc-950! [&_pre]:p-4 [&_pre]:leading-snug dark:[&_pre]:bg-zinc-900!"
-  >
-    <pre>{{ code }}</pre>
-  </div>
-</template>
+<template></template>

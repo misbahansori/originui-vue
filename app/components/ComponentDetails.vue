@@ -1,11 +1,17 @@
 <script setup lang="ts">
+import { codeToHtml } from "shiki";
+
 const props = defineProps<{
   component: RegistryItem & { resolver: (() => Promise<unknown>) | undefined };
 }>();
 
-const rawCode = (await props.component.resolver?.()) as string;
+const html = shallowRef("");
 
-console.log(rawCode);
+const code = (await props.component.resolver?.()) as string;
+html.value = await codeToHtml(code ?? "", {
+  lang: "vue",
+  theme: "github-dark",
+});
 </script>
 
 <template>
@@ -33,7 +39,10 @@ console.log(rawCode);
         <DialogHeader>
           <DialogTitle class="text-left">Code</DialogTitle>
         </DialogHeader>
-        <CodeBlock :code="rawCode" lang="vue" />
+        <div
+          v-html="html"
+          class="[&_code]:font-mono [&_code]:text-[13px] [&_pre]:max-h-[450px] [&_pre]:overflow-auto [&_pre]:rounded-md [&_pre]:bg-zinc-950! [&_pre]:p-4 [&_pre]:leading-snug dark:[&_pre]:bg-zinc-900!"
+        ></div>
       </DialogContent>
     </Dialog>
   </div>
