@@ -4,7 +4,8 @@
       <div>
         <h3 class="text-lg font-semibold">Origin UI</h3>
         <p class="text-muted-foreground mt-2 text-sm">
-          Beautiful UI components built with Tailwind CSS and Vue.
+          Beautiful UI components built with Tailwind CSS and
+          <span class="text-[#41B883]">Vue</span>
         </p>
       </div>
 

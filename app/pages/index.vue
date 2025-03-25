@@ -16,7 +16,8 @@ const sortedCategories = computed(() => {
       <h1
         class="font-heading text-foreground mb-4 text-4xl/[1.1] font-bold tracking-tight md:text-5xl/[1.1]"
       >
-        Beautiful UI components built with Tailwind CSS and Vue.
+        Beautiful UI components built with Tailwind CSS and
+        <span class="text-[#41B883]">Vue</span>
       </h1>
       <p class="text-muted-foreground mb-8 text-lg">
         An open-source collection of copy-and-paste components for quickly
