@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const id = useId();
 const inputValue = ref("");
 const maxLength = 8;
 
@@ -7,8 +8,8 @@ const charactersLeft = computed(() => maxLength - inputValue.value.length);
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label>Input with characters left</Label>
-    <Input v-model="inputValue" type="text" :maxlength="maxLength" />
+    <Label :for="id">Input with characters left</Label>
+    <Input :id="id" v-model="inputValue" type="text" :maxlength="maxLength" />
     <p
       class="text-muted-foreground mt-2 text-xs"
       role="status"

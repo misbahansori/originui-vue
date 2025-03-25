@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const id = useId();
 const inputValue = ref("");
 const maxLength = 50;
 
@@ -7,9 +8,10 @@ const characterCount = computed(() => inputValue.value.length);
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label>Input with character limit</Label>
+    <Label :for="id">Input with character limit</Label>
     <div class="relative">
       <Input
+        :id="id"
         v-model="inputValue"
         class="peer pe-14"
         type="text"

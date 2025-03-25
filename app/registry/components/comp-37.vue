@@ -1,16 +1,18 @@
 <script setup lang="ts">
-// TODO: This component uses React Aria Components (TimeField, DateInput)
-// We need to find an equivalent Vue library or implement custom functionality
+const id = useId();
 const time = ref("");
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label class="text-foreground text-sm font-medium">Time input</Label>
+    <Label :for="id" class="text-foreground text-sm font-medium">
+      Time input
+    </Label>
     <div
       class="border-input bg-background text-foreground focus-within:border-ring focus-within:ring-ring/50 flex h-9 items-center rounded-md border px-3 shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px]"
     >
       <input
+        :id="id"
         v-model="time"
         type="time"
         class="w-full bg-transparent text-sm focus:outline-none"
@@ -21,8 +23,7 @@ const time = ref("");
       role="region"
       aria-live="polite"
     >
-      <!-- TODO: This original component used React Aria TimeField -->
-      Built with native Vue time input
+      Built with native time input
     </p>
   </div>
 </template>

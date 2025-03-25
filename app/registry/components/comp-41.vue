@@ -1,7 +1,6 @@
 <script setup lang="ts">
-// TODO: This component uses React Aria Components (DatePicker, Calendar, DateInput)
-// We need to find an equivalent Vue library or implement custom functionality
-const selectedDate = ref(new Date());
+const id = useId();
+const date = ref(new Date());
 const isCalendarOpen = ref(false);
 
 const toggleCalendar = () => {
@@ -11,32 +10,24 @@ const toggleCalendar = () => {
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label class="text-foreground text-sm font-medium">Date picker</Label>
-    <div class="flex">
-      <div class="relative w-full">
+    <Label :for="id" class="text-foreground text-sm font-medium">
+      Date picker
+    </Label>
+    <div class="relative">
+      <div
+        class="border-input bg-background text-foreground focus-within:border-ring focus-within:ring-ring/50 flex h-9 items-center rounded-md border px-3 shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px]"
+      >
         <input
-          v-model="selectedDate"
+          :id="id"
+          v-model="date"
           type="date"
-          class="border-input bg-background text-foreground focus-visible:border-ring focus-visible:ring-ring/50 flex h-9 w-full rounded-md border px-3 pe-9 shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px]"
+          class="w-full bg-transparent pe-6 text-sm focus:outline-none"
         />
-        <button
-          @click="toggleCalendar"
-          class="text-muted-foreground/80 hover:text-foreground data-focus-visible:border-ring data-focus-visible:ring-ring/50 absolute top-0 right-0 z-10 flex h-9 w-9 items-center justify-center rounded-e-md transition-[color,box-shadow] outline-none data-focus-visible:ring-[3px]"
-        >
-          <Icon name="lucide:calendar" :size="16" />
-        </button>
       </div>
-    </div>
-    <!-- Simplified calendar display -->
-    <div
-      v-if="isCalendarOpen"
-      class="bg-background text-popover-foreground z-50 mt-1 rounded-lg border p-2 shadow-lg"
-    >
-      <!-- Simplified calendar placeholder -->
-      <div class="p-2 text-center">
-        <span class="text-muted-foreground text-sm">
-          Calendar would render here
-        </span>
+      <div
+        class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 end-0 z-10 flex items-center justify-center pe-3"
+      >
+        <Icon name="lucide:clock" :size="16" aria-hidden="true" />
       </div>
     </div>
     <p
@@ -44,8 +35,7 @@ const toggleCalendar = () => {
       role="region"
       aria-live="polite"
     >
-      <!-- TODO: This original component used React Aria DatePicker -->
-      Built with native Vue date input
+      Built with native date input
     </p>
   </div>
 </template>
