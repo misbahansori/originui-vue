@@ -12,34 +12,34 @@
       </p>
       <p class="text-muted-foreground text-sm">
         Ported to Vue by
-        <NuuxtLink
+        <NuxtLink
           class="text-foreground decoration-border font-medium underline underline-offset-4 hover:no-underline"
-          to="https://x.com/misbanansori"
+          to="https://x.com/MisbahAnsori24"
           target="_blank"
           rel="noopener noreferrer"
         >
           Misbah Ansori
-        </NuuxtLink>
+        </NuxtLink>
       </p>
       <p class="text-muted-foreground text-sm">
         A project by
-        <NuuxtLink
+        <NuxtLink
           class="text-foreground decoration-border font-medium underline underline-offset-4 hover:no-underline"
           to="https://x.com/pacovitiello"
           target="_blank"
           rel="noopener noreferrer"
         >
           Pasquale
-        </NuuxtLink>
+        </NuxtLink>
         and
-        <NuuxtLink
+        <NuxtLink
           class="text-foreground decoration-border font-medium underline underline-offset-4 hover:no-underline"
           to="https://x.com/DavidePacilio"
           target="_blank"
           rel="noopener noreferrer"
         >
           Davide
-        </NuuxtLink>
+        </NuxtLink>
         .
       </p>
     </div>
