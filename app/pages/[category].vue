@@ -29,24 +29,10 @@ const glob = import.meta.glob(
   },
 );
 
-const componentNames = components.map((item) => item.name);
-
-const rawComponents = Object.entries(glob)
-  .map(([key, resolver]) => {
-    const fullPath = key
-      .replace("/registry/components/", "")
-      .replace(/\.vue$/, "");
-    const path = fullPath.split("/").at(0) ?? "";
-    const name = fullPath.split("/").at(-1) ?? "";
-    return { name, path, resolver: resolver as () => Promise<unknown> };
-  })
-  .filter(({ name }) => componentNames.includes(name));
-
 const componentsWithRawCode = components.map((component) => {
-  const rawComponent = rawComponents.find(
-    (item) => item.name === component.name,
-  );
-  return { ...component, resolver: rawComponent?.resolver };
+  const resolver = glob[`/registry/components/${component.name}.vue`];
+
+  return { ...component, resolver: resolver as () => Promise<unknown> };
 });
 
 useSeoMeta({
@@ -78,9 +64,9 @@ useSeoMeta({
         :key="component.name"
         :component="component"
       >
-        <component :is="component.name" hydrate-on-visible />
+        <ComponentLoader :component="component" />
 
-        <ComponentDetails :component="component" hydrate-on-visible />
+        <ComponentDetails :component="component" />
       </ComponentCard>
     </PageGrid>
 
