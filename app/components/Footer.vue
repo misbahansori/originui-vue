@@ -1,99 +1,47 @@
 <template>
-  <footer class="border-t py-8">
-    <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
-      <div>
-        <h3 class="text-lg font-semibold">Origin UI</h3>
-        <p class="text-muted-foreground mt-2 text-sm">
-          Beautiful UI components built with Tailwind CSS and
-          <span class="text-[#41B883]">Vue</span>
-        </p>
-      </div>
-
-      <div>
-        <h4 class="font-medium">Resources</h4>
-        <ul class="mt-3 space-y-2">
-          <li>
-            <NuxtLink
-              to="/docs"
-              class="text-muted-foreground hover:text-foreground text-sm"
-            >
-              Documentation
-            </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink
-              to="/components"
-              class="text-muted-foreground hover:text-foreground text-sm"
-            >
-              Components
-            </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink
-              to="/examples"
-              class="text-muted-foreground hover:text-foreground text-sm"
-            >
-              Examples
-            </NuxtLink>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="font-medium">Community</h4>
-        <ul class="mt-3 space-y-2">
-          <li>
-            <a
-              href="https://github.com/misbahansori/originui-vue"
-              class="text-muted-foreground hover:text-foreground text-sm"
-            >
-              GitHub
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://twitter.com/originui"
-              class="text-muted-foreground hover:text-foreground text-sm"
-            >
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://discord.gg/originui"
-              class="text-muted-foreground hover:text-foreground text-sm"
-            >
-              Discord
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="font-medium">Legal</h4>
-        <ul class="mt-3 space-y-2">
-          <li>
-            <NuxtLink
-              to="/privacy"
-              class="text-muted-foreground hover:text-foreground text-sm"
-            >
-              Privacy
-            </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink
-              to="/terms"
-              class="text-muted-foreground hover:text-foreground text-sm"
-            >
-              Terms
-            </NuxtLink>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="text-muted-foreground mt-12 border-t pt-6 text-center text-sm">
-      <p>© {{ new Date().getFullYear() }} Origin UI. All rights reserved.</p>
+  <footer
+    class="before:bg-[linear-gradient(to_right,--theme(--color-border/.3),--theme(--color-border)_200px,--theme(--color-border)_calc(100%-200px),--theme(--color-border/.3))] relative mt-16 py-8 before:absolute before:-inset-x-32 before:top-0 before:h-px md:mt-20"
+  >
+    <div
+      class="before:bg-ring/50 after:bg-ring/50 before:absolute before:-top-px before:-left-12 before:z-10 before:-ml-px before:size-[3px] after:absolute after:-top-px after:-right-12 after:z-10 after:-mr-px after:size-[3px]"
+      aria-hidden="true"
+    ></div>
+    <div class="flex justify-between gap-2 max-sm:flex-col max-sm:text-center">
+      <p class="text-muted-foreground text-sm">
+        &copy; {{ new Date().getFullYear() }} Origin UI
+      </p>
+      <p class="text-muted-foreground text-sm">
+        Ported to Vue by
+        <NuuxtLink
+          class="text-foreground decoration-border font-medium underline underline-offset-4 hover:no-underline"
+          to="https://x.com/misbanansori"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Misbah Ansori
+        </NuuxtLink>
+      </p>
+      <p class="text-muted-foreground text-sm">
+        A project by
+        <NuuxtLink
+          class="text-foreground decoration-border font-medium underline underline-offset-4 hover:no-underline"
+          to="https://x.com/pacovitiello"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Pasquale
+        </NuuxtLink>
+        and
+        <NuuxtLink
+          class="text-foreground decoration-border font-medium underline underline-offset-4 hover:no-underline"
+          to="https://x.com/DavidePacilio"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Davide
+        </NuuxtLink>
+        .
+      </p>
     </div>
   </footer>
 </template>
