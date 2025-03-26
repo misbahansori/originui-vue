@@ -1,20 +1,20 @@
 <script setup lang="ts">
-const id = useId();
+const inputId = useId();
 const value = ref(["", "", "", "", ""]);
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id" class="text-foreground text-sm font-medium">
+    <Label :for="inputId" class="text-foreground text-sm font-medium">
       OTP input single
     </Label>
-    <PinInput id="pin-input" v-model="value" placeholder="○">
+    <PinInput :id="inputId" v-model="value">
       <PinInputGroup>
         <PinInputInput
           v-for="(id, index) in 5"
           :key="id"
           :index="index"
-          class="size-9"
+          class="focus:border-ring focus:ring-ring/50 size-9 font-medium shadow-xs transition-[color,box-shadow] focus:ring-[3px]"
         />
       </PinInputGroup>
     </PinInput>
