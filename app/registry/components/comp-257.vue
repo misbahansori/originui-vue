@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 const value = ref([3]);
 const emojis = ["😡", "🙁", "😐", "🙂", "😍"];
 const labels = ["Awful", "Poor", "Okay", "Good", "Amazing"];

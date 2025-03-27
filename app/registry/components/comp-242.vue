@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 const value = ref([25]);
 </script>
 
@@ -11,7 +9,7 @@ const value = ref([25]);
       v-model="value"
       :max="100"
       :step="10"
-      class="[&>:last-child>span]:rounded"
+      class="[&>:last-child]:rounded"
       aria-label="Slider with square thumb"
     />
   </div>

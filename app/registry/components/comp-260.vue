@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 const min_price = 5;
 const max_price = 1240;
 const value = ref([min_price, max_price]);

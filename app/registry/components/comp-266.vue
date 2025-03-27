@@ -18,7 +18,7 @@ const values = reactive({
           :min="-5"
           :max="5"
           orientation="vertical"
-          class="[&>:last-child>span]:h-6 [&>:last-child>span]:w-4 [&>:last-child>span]:rounded"
+          class="[&>:last-child]:h-6 [&>:last-child]:w-4 [&>:last-child]:rounded"
           aria-label="60 Hz"
           show-tooltip
         />
@@ -32,7 +32,7 @@ const values = reactive({
           :min="-5"
           :max="5"
           orientation="vertical"
-          class="[&>:last-child>span]:h-6 [&>:last-child>span]:w-4 [&>:last-child>span]:rounded"
+          class="[&>:last-child]:h-6 [&>:last-child]:w-4 [&>:last-child]:rounded"
           aria-label="250 Hz"
           show-tooltip
         />
@@ -46,7 +46,7 @@ const values = reactive({
           :min="-5"
           :max="5"
           orientation="vertical"
-          class="[&>:last-child>span]:h-6 [&>:last-child>span]:w-4 [&>:last-child>span]:rounded"
+          class="[&>:last-child]:h-6 [&>:last-child]:w-4 [&>:last-child]:rounded"
           aria-label="1k"
           show-tooltip
         />
@@ -60,7 +60,7 @@ const values = reactive({
           :min="-5"
           :max="5"
           orientation="vertical"
-          class="[&>:last-child>span]:h-6 [&>:last-child>span]:w-4 [&>:last-child>span]:rounded"
+          class="[&>:last-child]:h-6 [&>:last-child]:w-4 [&>:last-child]:rounded"
           aria-label="4k"
           show-tooltip
         />
@@ -74,7 +74,7 @@ const values = reactive({
           :min="-5"
           :max="5"
           orientation="vertical"
-          class="[&>:last-child>span]:h-6 [&>:last-child>span]:w-4 [&>:last-child>span]:rounded"
+          class="[&>:last-child]:h-6 [&>:last-child]:w-4 [&>:last-child]:rounded"
           aria-label="16k"
           show-tooltip
         />

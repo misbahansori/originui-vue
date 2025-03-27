@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 // TODO: This is a simplified version without the full implementation of useSliderWithInput
 const minValue = 0;
 const maxValue = 100;

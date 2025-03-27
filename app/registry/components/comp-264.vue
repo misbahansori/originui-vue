@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 // TODO: This is a simplified version without the full useSliderWithInput implementation
 
 // X, Y, Z slider values
@@ -46,7 +44,7 @@ function updateZInput() {
       <div class="flex items-center gap-2">
         <Label class="text-muted-foreground text-xs">X</Label>
         <Slider
-          class="grow [&>:last-child>span]:rounded"
+          class="grow [&>:last-child]:rounded"
           v-model="xValue"
           :min="-10"
           :max="10"
@@ -64,7 +62,7 @@ function updateZInput() {
       <div class="flex items-center gap-2">
         <Label class="text-muted-foreground text-xs">Y</Label>
         <Slider
-          class="grow [&>:last-child>span]:rounded"
+          class="grow [&>:last-child]:rounded"
           v-model="yValue"
           :min="-10"
           :max="10"
@@ -82,7 +80,7 @@ function updateZInput() {
       <div class="flex items-center gap-2">
         <Label class="text-muted-foreground text-xs">Z</Label>
         <Slider
-          class="grow [&>:last-child>span]:rounded"
+          class="grow [&>:last-child]:rounded"
           v-model="zValue"
           :min="-10"
           :max="10"

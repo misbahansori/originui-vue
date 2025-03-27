@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 const previewUrl = ref<string | null>(null);
 const fileName = ref<string | null>(null);
 const fileInput = ref<HTMLInputElement | null>(null);

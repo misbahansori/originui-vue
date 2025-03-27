@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useCountdown } from "@vueuse/core";
-import { ref } from "vue";
+
 
 interface TimeLeft {
   days: number;

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 const bookmarked = ref(false);
 
 function toggleBookmark() {

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 const formId = "payment-form";
 const isDefaultPayment = ref(false);
 const cardName = ref("");

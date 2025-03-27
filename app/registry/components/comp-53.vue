@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 const inputValue = ref("pnpm install origin-ui");
 const copied = ref(false);
 const inputRef = ref<HTMLInputElement | null>(null);

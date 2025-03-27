@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 const id = useId();
 const emails = ref(["mark@yourcompany.com", "jane@yourcompany.com", ""]);
 

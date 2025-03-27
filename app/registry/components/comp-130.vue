@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 const theme = ref("light");
 
 function toggleTheme() {

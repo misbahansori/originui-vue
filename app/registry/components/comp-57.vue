@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // TODO: This component uses a third-party library (emblor)
 // We need to find an equivalent Vue library or implement custom functionality
-import { ref } from "vue";
 
 interface Tag {
   id: string;

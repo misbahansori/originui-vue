@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // TODO: This component uses a third-party library (react-payment-inputs)
 // We need to find an equivalent Vue library or implement custom functionality
-import { ref } from "vue";
 
 const cvcCode = ref("");
 

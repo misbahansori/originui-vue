@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 const inputValue = ref("This is a read-only input");
 </script>
 

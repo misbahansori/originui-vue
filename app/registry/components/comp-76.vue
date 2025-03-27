@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 const textValue = ref("This is a read-only textarea");
 </script>
 

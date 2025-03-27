@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // TODO: This component uses a third-party library (use-mask-input)
 // We need to find an equivalent Vue library or implement custom functionality
-import { ref } from "vue";
 
 const inputValue = ref("");
 

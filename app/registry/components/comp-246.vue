@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import { cn } from "~/utils/utils";
 
 const value = ref([5]);
