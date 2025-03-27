@@ -10,7 +10,7 @@
         />
       </Button>
     </DropdownMenuTrigger>
-    <DropdownMenuContent class="min-w-(--radix-dropdown-menu-trigger-width)">
+    <DropdownMenuContent class="min-w-(--reka-dropdown-menu-trigger-width)">
       <DropdownMenuItem>Option 1</DropdownMenuItem>
       <DropdownMenuItem>Option 2</DropdownMenuItem>
       <DropdownMenuItem>Option 3</DropdownMenuItem>
