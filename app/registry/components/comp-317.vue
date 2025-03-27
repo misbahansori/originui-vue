@@ -97,13 +97,13 @@
               </div>
             </div>
           </DialogDescription>
+          <DialogFooter class="px-6 pb-6 sm:justify-start">
+            <DialogClose asChild>
+              <Button type="button">Okay</Button>
+            </DialogClose>
+          </DialogFooter>
         </div>
       </DialogHeader>
-      <DialogFooter class="px-6 pb-6">
-        <DialogClose asChild>
-          <Button>Close</Button>
-        </DialogClose>
-      </DialogFooter>
     </DialogContent>
   </Dialog>
 </template>

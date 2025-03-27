@@ -136,9 +136,18 @@ const handleScroll = () => {
           </DialogDescription>
         </div>
       </DialogHeader>
-      <DialogFooter class="bg-background sticky bottom-0 border-t px-6 py-4">
+      <DialogFooter class="bg-background border-t px-6 py-4 sm:items-center">
+        <span
+          v-if="!hasReadToBottom"
+          class="text-muted-foreground grow text-xs max-sm:text-center"
+        >
+          Read all terms before accepting.
+        </span>
         <DialogClose asChild>
-          <Button :disabled="!hasReadToBottom">Accept</Button>
+          <Button variant="outline" type="button">Cancel</Button>
+        </DialogClose>
+        <DialogClose asChild>
+          <Button type="button" :disabled="!hasReadToBottom">I agree</Button>
         </DialogClose>
       </DialogFooter>
     </DialogContent>
