@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { ref, useId, watch } from "vue";
-
 const checkboxId = useId();
 const inputId = useId();
 const checked = ref(false);
-const inputRef = ref<HTMLInputElement | null>(null);
+const inputRef = useTemplateRef("inputRef");
 
 watch(checked, (newValue) => {
   if (newValue === true && inputRef.value) {
-    inputRef.value.focus();
+    nextTick(() => {
+      inputRef.value?.$el.focus();
+    });
   }
 });
 </script>
