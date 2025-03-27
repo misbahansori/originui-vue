@@ -13,54 +13,76 @@ export function useSliderWithInput({
   initialValue = [minValue],
   defaultValue = [minValue],
 }: UseSliderWithInputProps) {
-  // Ensure defaultValue is always an array
-  const defaultVals = defaultValue || [minValue];
-  const sliderValue = ref(initialValue);
+  const sliderValues = ref(initialValue);
   const inputValues = ref(initialValue.map((v) => v.toString()));
 
   const showReset = computed(() => {
-    return !sliderValue.value.every((val, i) => {
-      const defaultVal = i < defaultVals.length ? defaultVals[i] : minValue;
-      return val === defaultVal;
-    });
+    return (
+      sliderValues.value.length === defaultValue.length &&
+      !sliderValues.value.every((value, index) => value === defaultValue[index])
+    );
   });
 
-  const validateAndUpdateValue = (inputValue: string, index: number) => {
-    let parsedValue = parseFloat(inputValue);
+  const validateAndUpdateValue = (rawValue: string, index: number) => {
+    if (rawValue === "" || rawValue === "-") {
+      const newInputValues = [...inputValues.value];
+      newInputValues[index] = "0";
+      inputValues.value = newInputValues;
 
-    if (isNaN(parsedValue)) {
-      // Reset to current slider value if input is invalid
-      inputValues.value[index] = sliderValue.value[index]?.toString() || "";
+      const newSliderValues = [...sliderValues.value];
+      newSliderValues[index] = 0;
+      sliderValues.value = newSliderValues;
       return;
     }
 
-    // Clamp value between min and max
-    parsedValue = Math.max(minValue, Math.min(maxValue, parsedValue));
+    const numValue = parseFloat(rawValue);
 
-    // Update both the input field and slider
-    inputValues.value[index] = parsedValue.toString();
-    const newSliderValue = [...sliderValue.value];
-    newSliderValue[index] = parsedValue;
-    sliderValue.value = newSliderValue;
+    if (isNaN(numValue)) {
+      const newInputValues = [...inputValues.value];
+      newInputValues[index] = sliderValues.value[index]!.toString();
+      inputValues.value = newInputValues;
+      return;
+    }
+
+    let clampedValue = Math.min(maxValue, Math.max(minValue, numValue));
+
+    if (sliderValues.value.length > 1) {
+      if (index === 0) {
+        clampedValue = Math.min(clampedValue, sliderValues.value[1]!);
+      } else {
+        clampedValue = Math.max(clampedValue, sliderValues.value[0]!);
+      }
+    }
+
+    const newSliderValues = [...sliderValues.value];
+    newSliderValues[index] = clampedValue;
+    sliderValues.value = newSliderValues;
+
+    const newInputValues = [...inputValues.value];
+    newInputValues[index] = clampedValue.toString();
+    inputValues.value = newInputValues;
   };
 
-  const handleInputChange = (event: Event, index: number) => {
-    const target = event.target as HTMLInputElement;
-    inputValues.value[index] = target.value;
+  const handleInputChange = (index: number, newValue: string | number) => {
+    if (newValue === "" || /^-?\d*\.?\d*$/.test(newValue.toString())) {
+      const newInputValues = [...inputValues.value];
+      newInputValues[index] = newValue.toString();
+      inputValues.value = newInputValues;
+    }
   };
 
   const handleSliderChange = (newValue: number[]) => {
-    sliderValue.value = newValue;
+    sliderValues.value = newValue;
     inputValues.value = newValue.map((v) => v.toString());
   };
 
   const resetToDefault = () => {
-    sliderValue.value = [...defaultVals];
-    inputValues.value = defaultVals.map((v) => v.toString());
+    sliderValues.value = [...defaultValue];
+    inputValues.value = defaultValue.map((v) => v.toString());
   };
 
   return {
-    sliderValue,
+    sliderValues,
     inputValues,
     validateAndUpdateValue,
     handleInputChange,

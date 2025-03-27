@@ -8,7 +8,7 @@ const initialValue = [1.25];
 const defaultValue = [1];
 
 const {
-  sliderValue,
+  sliderValues,
   inputValues,
   validateAndUpdateValue,
   handleInputChange,
@@ -50,8 +50,8 @@ const {
           class="h-7 w-12 px-2 py-0"
           type="text"
           inputmode="decimal"
-          :value="inputValues[0]"
-          @input="(e: Event) => handleInputChange(e, 0)"
+          :model-value="inputValues[0]"
+          @update:model-value="(newValue) => handleInputChange(0, newValue)"
           @blur="() => validateAndUpdateValue(inputValues[0] ?? '', 0)"
           @keydown="
             (e: KeyboardEvent) => {
@@ -66,7 +66,10 @@ const {
     <div class="flex items-center gap-4">
       <Slider
         class="grow"
-        v-model="sliderValue"
+        :model-value="sliderValues"
+        @update:model-value="
+          (newValue) => newValue && handleSliderChange(newValue)
+        "
         :min="minValue"
         :max="maxValue"
         :step="0.01"
