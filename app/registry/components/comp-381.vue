@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const id = useId();
+</script>
+
 <template>
   <div class="flex flex-col gap-4">
     <Popover>
@@ -45,7 +49,3 @@
     </Popover>
   </div>
 </template>
-
-<script setup>
-const id = useId();
-</script>
