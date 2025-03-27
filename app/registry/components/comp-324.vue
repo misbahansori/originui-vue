@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import { nextTick, onMounted, ref } from "vue";
+import { onMounted, ref } from "vue";
 
 const CORRECT_CODE = "6548";
-const value = ref("");
+const otpValues = ref(["", "", "", ""]);
 const hasGuessed = ref<boolean | undefined>(undefined);
 const inputRef = ref<HTMLInputElement | null>(null);
 const closeButtonRef = ref<HTMLButtonElement | null>(null);
-const inputId = useId();
-const otpValues = ref(["", "", "", ""]);
 
 onMounted(() => {
   if (hasGuessed.value) {
@@ -16,19 +14,12 @@ onMounted(() => {
 });
 
 async function onSubmit() {
-  inputRef.value?.select();
-  await nextTick();
+  hasGuessed.value = otpValues.value.join("") === CORRECT_CODE;
 
-  hasGuessed.value = value.value === CORRECT_CODE;
-
-  value.value = "";
+  otpValues.value = ["", "", "", ""];
   setTimeout(() => {
     inputRef.value?.blur();
   }, 20);
-}
-
-function handleFocus() {
-  hasGuessed.value = undefined;
 }
 </script>
 
@@ -78,10 +69,14 @@ function handleFocus() {
       <template v-else>
         <div class="space-y-4">
           <div class="flex justify-center">
-            <PinInput :id="inputId" class="flex items-center gap-3">
+            <PinInput
+              v-model="otpValues"
+              @complete="onSubmit"
+              class="flex items-center gap-3"
+            >
               <PinInputGroup class="flex items-center gap-3">
                 <PinInputInput
-                  v-for="(id, index) in otpValues"
+                  v-for="(id, index) in 4"
                   :key="id"
                   :index="index"
                   class="focus:border-ring focus:ring-ring/50 border-input size-9 rounded-md border font-medium shadow-xs transition-[color,box-shadow] focus:ring-[3px]"
