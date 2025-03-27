@@ -1,16 +1,4 @@
 <script setup lang="ts">
-import { Icon } from "#components";
-import {
-  Timeline,
-  TimelineContent,
-  TimelineDate,
-  TimelineHeader,
-  TimelineIndicator,
-  TimelineItem,
-  TimelineSeparator,
-  TimelineTitle,
-} from "~/registry/components/ui/timeline";
-
 const items = [
   {
     id: 1,

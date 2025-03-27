@@ -1,11 +1,4 @@
 <script setup lang="ts">
-import { Icon } from "#components";
-import {
-  Timeline,
-  TimelineContent,
-  TimelineItem,
-} from "~/registry/components/ui/timeline";
-
 type ActionType = "post" | "reply" | "edit" | "create";
 
 const items: {
