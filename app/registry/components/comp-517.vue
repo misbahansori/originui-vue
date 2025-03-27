@@ -30,6 +30,7 @@ const handleNextStep = () => {
         :key="step"
         :step="step"
         :class="step !== steps.length ? 'flex-1' : ''"
+        :data-loading="isLoading && step === currentStep ? 'true' : undefined"
       >
         <StepperTrigger as-child>
           <StepperIndicator :is-loading="isLoading" />

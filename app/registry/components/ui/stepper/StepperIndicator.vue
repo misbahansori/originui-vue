@@ -43,9 +43,12 @@ const forwarded = useForwardProps(delegatedProps);
         class="absolute size-4 scale-0 opacity-0 transition-all group-data-[state=completed]/step:scale-100 group-data-[state=completed]/step:opacity-100"
         aria-hidden="true"
       />
-      <span v-if="isLoading" class="absolute transition-all">
+      <span
+        v-if="isLoading"
+        class="absolute opacity-0 transition-all group-data-[state=active]/step:opacity-100 group-data-[state=active]/step:transition-none"
+      >
         <Icon
-          name="lucide:loader"
+          name="lucide:loader-circle"
           class="size-3.5 animate-spin"
           aria-hidden="true"
         />
