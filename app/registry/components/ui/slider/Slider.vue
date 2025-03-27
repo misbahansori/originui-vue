@@ -11,7 +11,10 @@ import { computed, type HTMLAttributes } from "vue";
 import { cn } from "~/utils/utils";
 
 const props = defineProps<
-  SliderRootProps & { class?: HTMLAttributes["class"] }
+  SliderRootProps & {
+    class?: HTMLAttributes["class"];
+    showTooltip?: boolean;
+  }
 >();
 const emits = defineEmits<SliderRootEmits>();
 
@@ -22,6 +25,32 @@ const delegatedProps = computed(() => {
 });
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits);
+
+const showTooltipState = ref(false);
+
+const handlePointerDown = () => {
+  if (props.showTooltip) {
+    showTooltipState.value = true;
+  }
+};
+
+const handlePointerUp = () => {
+  if (props.showTooltip) {
+    showTooltipState.value = false;
+  }
+};
+
+onMounted(() => {
+  if (props.showTooltip) {
+    document.addEventListener("pointerup", handlePointerUp);
+  }
+});
+
+onUnmounted(() => {
+  if (props.showTooltip) {
+    document.removeEventListener("pointerup", handlePointerUp);
+  }
+});
 </script>
 
 <template>
@@ -41,10 +70,31 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
         class="bg-primary absolute data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full"
       />
     </SliderTrack>
-    <SliderThumb
-      v-for="(_, key) in modelValue"
-      :key="key"
-      class="border-primary bg-background ring-ring/50 block size-4 shrink-0 rounded-full border shadow-sm transition-[color,box-shadow] outline-none hover:ring-4 focus-visible:ring-4 disabled:pointer-events-none disabled:opacity-50"
-    />
+    <template v-if="showTooltip" v-for="(_, key) in modelValue" :key="key">
+      <TooltipProvider>
+        <Tooltip :open="showTooltipState">
+          <TooltipTrigger asChild>
+            <SliderThumb
+              as="span"
+              class="border-primary bg-background ring-ring/50 block size-4 shrink-0 rounded-full border shadow-sm transition-[color,box-shadow] outline-none hover:ring-4 focus-visible:ring-4 disabled:pointer-events-none disabled:opacity-50"
+              @pointerdown="handlePointerDown"
+            />
+          </TooltipTrigger>
+          <TooltipContent
+            className="px-2 py-1 text-xs"
+            :sideOffset="8"
+            :side="props.orientation === 'vertical' ? 'right' : 'top'"
+          >
+            {{ modelValue?.[key] }}
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
+    </template>
+    <template v-else>
+      <SliderThumb
+        as="span"
+        class="border-primary bg-background ring-ring/50 block size-4 shrink-0 rounded-full border shadow-sm transition-[color,box-shadow] outline-none hover:ring-4 focus-visible:ring-4 disabled:pointer-events-none disabled:opacity-50"
+      />
+    </template>
   </SliderRoot>
 </template>
