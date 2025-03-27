@@ -4,16 +4,14 @@ import { nextTick, ref, useId, watch } from "vue";
 const radioId = useId();
 const inputId = useId();
 const selectedValue = ref("without-expansion");
-const inputRef = ref<HTMLInputElement | null>(null);
+const inputRef = useTemplateRef("inputRef");
 
 watch(selectedValue, (newValue) => {
-  if (newValue === "with-expansion") {
-    nextTick(() => {
-      if (inputRef.value) {
-        inputRef.value.focus();
-      }
-    });
-  }
+  if (newValue !== "with-expansion") return;
+
+  nextTick(() => {
+    inputRef.value?.$el.focus();
+  });
 });
 </script>
 
