@@ -1,34 +1,32 @@
 <script lang="ts" setup>
-import type { StepperIndicatorProps } from 'reka-ui';
-import { StepperIndicator, useForwardProps } from 'reka-ui';
-import { cn } from '~/utils/utils';
+import type { StepperIndicatorProps } from "reka-ui";
+import { StepperIndicator, useForwardProps } from "reka-ui";
+import { cn } from "~/utils/utils";
 
-import { computed, type HTMLAttributes } from 'vue';
+import { computed, type HTMLAttributes } from "vue";
 
-const props = defineProps<StepperIndicatorProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  StepperIndicatorProps & { class?: HTMLAttributes["class"] }
+>();
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+  const { class: _, ...delegated } = props;
 
-  return delegated
-})
+  return delegated;
+});
 
-const forwarded = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps);
 </script>
 
 <template>
   <StepperIndicator
     v-bind="forwarded"
-    :class="cn(
-      'inline-flex items-center justify-center rounded-full text-muted-foreground/50 w-10 h-10',
-      // Disabled
-      'group-data-[disabled]:text-muted-foreground group-data-[disabled]:opacity-50',
-      // Active
-      'group-data-[state=active]:bg-primary group-data-[state=active]:text-primary-foreground',
-      // Completed
-      'group-data-[state=completed]:bg-accent group-data-[state=completed]:text-accent-foreground',
-      props.class,
-    )"
+    :class="
+      cn(
+        'bg-muted text-muted-foreground data-[state=active]:bg-primary data-[state=completed]:bg-primary data-[state=active]:text-primary-foreground data-[state=completed]:text-primary-foreground relative flex size-6 shrink-0 items-center justify-center rounded-full text-xs font-medium',
+        props.class,
+      )
+    "
   >
     <slot />
   </StepperIndicator>
