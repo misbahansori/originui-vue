@@ -3,123 +3,48 @@ import { ref, useId } from "vue";
 
 const id = useId();
 const selectedValue = ref("all");
+
+const starRatings = [
+  { value: "all", label: "All reviews", count: 12921, stars: 0 },
+  { value: "5-stars", label: "5 stars", count: 5168, stars: 5 },
+  { value: "4-stars", label: "4 stars", count: 4726, stars: 4 },
+  { value: "3-stars", label: "3 stars", count: 3234, stars: 3 },
+  { value: "2-stars", label: "2 stars", count: 1842, stars: 2 },
+  { value: "1-star", label: "1 star", count: 452, stars: 1 },
+];
 </script>
 
 <template>
   <RadioGroup v-model="selectedValue">
-    <div class="flex items-center gap-2">
-      <RadioGroupItem value="all" :id="`${id}-1`" />
-      <Label :for="`${id}-1`">
-        All reviews
+    <div
+      v-for="(rating, index) in starRatings"
+      :key="rating.value"
+      class="flex items-center gap-2"
+    >
+      <RadioGroupItem :value="rating.value" :id="`${id}-${index + 1}`" />
+      <Label :for="`${id}-${index + 1}`" class="inline-flex items-center gap-1">
+        <template v-if="rating.stars > 0">
+          <span
+            class="inline-flex items-center text-amber-500"
+            aria-hidden="true"
+          >
+            <Icon
+              v-for="star in 5"
+              :key="star"
+              name="ri:star-fill"
+              size="16"
+              :class="{ 'opacity-30': star > rating.stars }"
+            />
+          </span>
+          <span class="sr-only">{{ rating.label }}</span>
+        </template>
+        <template v-else>
+          {{ rating.label }}
+        </template>
         <span
           class="text-muted-foreground text-xs leading-[inherit] font-normal"
         >
-          (12,921)
-        </span>
-      </Label>
-    </div>
-    <div class="flex items-center gap-2">
-      <RadioGroupItem value="5-stars" :id="`${id}-2`" />
-      <Label :for="`${id}-2`" class="inline-flex items-center gap-1">
-        <span
-          class="inline-flex items-center text-amber-500"
-          aria-hidden="true"
-        >
-          <Icon name="remix:star-fill" size="16" />
-          <Icon name="remix:star-fill" size="16" />
-          <Icon name="remix:star-fill" size="16" />
-          <Icon name="remix:star-fill" size="16" />
-          <Icon name="remix:star-fill" size="16" />
-        </span>
-        <span class="sr-only">5 stars</span>
-        <span
-          class="text-muted-foreground text-xs leading-[inherit] font-normal"
-        >
-          (5,168)
-        </span>
-      </Label>
-    </div>
-    <div class="flex items-center gap-2">
-      <RadioGroupItem value="4-stars" :id="`${id}-3`" />
-      <Label :for="`${id}-3`" class="inline-flex items-center gap-1">
-        <span
-          class="inline-flex items-center text-amber-500"
-          aria-hidden="true"
-        >
-          <Icon name="remix:star-fill" size="16" />
-          <Icon name="remix:star-fill" size="16" />
-          <Icon name="remix:star-fill" size="16" />
-          <Icon name="remix:star-fill" size="16" />
-          <Icon name="remix:star-fill" size="16" class="opacity-30" />
-        </span>
-        <span class="sr-only">4 stars</span>
-        <span
-          class="text-muted-foreground text-xs leading-[inherit] font-normal"
-        >
-          (4,726)
-        </span>
-      </Label>
-    </div>
-    <div class="flex items-center gap-2">
-      <RadioGroupItem value="3-stars" :id="`${id}-4`" />
-      <Label :for="`${id}-4`" class="inline-flex items-center gap-1">
-        <span
-          class="inline-flex items-center text-amber-500"
-          aria-hidden="true"
-        >
-          <Icon name="remix:star-fill" size="16" />
-          <Icon name="remix:star-fill" size="16" />
-          <Icon name="remix:star-fill" size="16" />
-          <Icon name="remix:star-fill" size="16" class="opacity-30" />
-          <Icon name="remix:star-fill" size="16" class="opacity-30" />
-        </span>
-        <span class="sr-only">3 stars</span>
-        <span
-          class="text-muted-foreground text-xs leading-[inherit] font-normal"
-        >
-          (3,234)
-        </span>
-      </Label>
-    </div>
-    <div class="flex items-center gap-2">
-      <RadioGroupItem value="2-stars" :id="`${id}-5`" />
-      <Label :for="`${id}-5`" class="inline-flex items-center gap-1">
-        <span
-          class="inline-flex items-center text-amber-500"
-          aria-hidden="true"
-        >
-          <Icon name="remix:star-fill" size="16" />
-          <Icon name="remix:star-fill" size="16" />
-          <Icon name="remix:star-fill" size="16" class="opacity-30" />
-          <Icon name="remix:star-fill" size="16" class="opacity-30" />
-          <Icon name="remix:star-fill" size="16" class="opacity-30" />
-        </span>
-        <span class="sr-only">2 stars</span>
-        <span
-          class="text-muted-foreground text-xs leading-[inherit] font-normal"
-        >
-          (1,842)
-        </span>
-      </Label>
-    </div>
-    <div class="flex items-center gap-2">
-      <RadioGroupItem value="1-star" :id="`${id}-6`" />
-      <Label :for="`${id}-6`" class="inline-flex items-center gap-1">
-        <span
-          class="inline-flex items-center text-amber-500"
-          aria-hidden="true"
-        >
-          <Icon name="remix:star-fill" size="16" />
-          <Icon name="remix:star-fill" size="16" class="opacity-30" />
-          <Icon name="remix:star-fill" size="16" class="opacity-30" />
-          <Icon name="remix:star-fill" size="16" class="opacity-30" />
-          <Icon name="remix:star-fill" size="16" class="opacity-30" />
-        </span>
-        <span class="sr-only">1 star</span>
-        <span
-          class="text-muted-foreground text-xs leading-[inherit] font-normal"
-        >
-          (452)
+          ({{ rating.count.toLocaleString() }})
         </span>
       </Label>
     </div>
