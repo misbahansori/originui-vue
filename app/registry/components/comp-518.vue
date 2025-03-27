@@ -15,17 +15,19 @@
         </StepperTrigger>
         <StepperSeparator />
       </StepperItem>
-      <StepperItem :step="2" class="not-last:flex-1" loading>
+      <StepperItem :step="2" class="not-last:flex-1" data-loading>
         <StepperTrigger>
-          <StepperIndicator />
+          <StepperIndicator :isLoading="true" />
         </StepperTrigger>
         <StepperSeparator />
       </StepperItem>
-      <StepperItem :step="3" class="not-last:flex-1">
+      <StepperItem :step="3">
         <StepperTrigger>
           <StepperIndicator as-child>
-            <Icon name="lucide:shuffle" size="14" aria-hidden="true" />
-            <span class="sr-only">Shuffle</span>
+            <div>
+              <Icon name="lucide:shuffle" aria-hidden="true" class="size-3.5" />
+              <span class="sr-only">Shuffle</span>
+            </div>
           </StepperIndicator>
         </StepperTrigger>
       </StepperItem>

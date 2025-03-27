@@ -1,12 +1,4 @@
 <script lang="ts" setup>
-import {
-  Stepper,
-  StepperIndicator,
-  StepperItem,
-  StepperTitle,
-  StepperTrigger,
-} from "~/registry/components/ui/stepper";
-
 const steps = [
   {
     step: 1,
@@ -37,7 +29,7 @@ const steps = [
         class="flex-1"
       >
         <StepperTrigger class="w-full flex-col items-start gap-2 rounded">
-          <StepperIndicator as-child class="bg-border h-1 w-full">
+          <StepperIndicator class="bg-border h-1 w-full">
             <span class="sr-only">{{ step }}</span>
           </StepperIndicator>
           <div class="space-y-0.5">

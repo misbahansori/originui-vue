@@ -1,14 +1,4 @@
 <script lang="ts" setup>
-import { ref } from "vue";
-import { Button } from "~/registry/components/ui/button";
-import {
-  Stepper,
-  StepperIndicator,
-  StepperItem,
-  StepperSeparator,
-  StepperTrigger,
-} from "~/registry/components/ui/stepper";
-
 const steps = [1, 2, 3, 4];
 const currentStep = ref(2);
 const isLoading = ref(false);

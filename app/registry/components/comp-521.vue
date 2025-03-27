@@ -1,25 +1,12 @@
 <script lang="ts" setup>
-import { ref } from "vue";
-import { Button } from "~/registry/components/ui/button";
-import {
-  Stepper,
-  StepperIndicator,
-  StepperItem,
-  StepperTrigger,
-} from "~/registry/components/ui/stepper";
-
 const steps = [1, 2, 3, 4];
 const currentStep = ref(1);
-
-const setCurrentStep = (step: number) => {
-  currentStep.value = step;
-};
 </script>
 
 <template>
   <div class="mx-auto max-w-xl space-y-8 text-center">
     <div class="space-y-3">
-      <Stepper :value="currentStep" @value-change="setCurrentStep">
+      <Stepper v-model="currentStep">
         <StepperItem
           v-for="step in steps"
           :key="step"
@@ -27,10 +14,7 @@ const setCurrentStep = (step: number) => {
           class="flex-1"
         >
           <StepperTrigger class="w-full flex-col items-start gap-2" as-child>
-            <StepperIndicator
-              as-child
-              class="bg-border h-2 w-full rounded-none"
-            >
+            <StepperIndicator class="bg-border h-2 w-full rounded-none">
               <span class="sr-only">{{ step }}</span>
             </StepperIndicator>
           </StepperTrigger>
@@ -44,7 +28,7 @@ const setCurrentStep = (step: number) => {
       <Button
         variant="outline"
         class="w-32"
-        @click="setCurrentStep(currentStep - 1)"
+        @click="currentStep = currentStep - 1"
         :disabled="currentStep === 1"
       >
         Prev step
@@ -52,7 +36,7 @@ const setCurrentStep = (step: number) => {
       <Button
         variant="outline"
         class="w-32"
-        @click="setCurrentStep(currentStep + 1)"
+        @click="currentStep = currentStep + 1"
         :disabled="currentStep >= steps.length"
       >
         Next step

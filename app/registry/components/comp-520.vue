@@ -1,20 +1,6 @@
 <script lang="ts" setup>
-import { ChevronLeft, ChevronRight } from "lucide-vue-next";
-import { ref } from "vue";
-import { Button } from "~/registry/components/ui/button";
-import {
-  Stepper,
-  StepperIndicator,
-  StepperItem,
-  StepperTrigger,
-} from "~/registry/components/ui/stepper";
-
 const steps = [1, 2, 3, 4];
 const currentStep = ref(2);
-
-const setCurrentStep = (step: number) => {
-  currentStep.value = step;
-};
 </script>
 
 <template>
@@ -24,17 +10,13 @@ const setCurrentStep = (step: number) => {
         class="shrink-0"
         variant="ghost"
         size="icon"
-        @click="setCurrentStep(currentStep - 1)"
+        @click="currentStep = currentStep - 1"
         :disabled="currentStep === 1"
         aria-label="Prev step"
       >
-        <ChevronLeft :size="16" aria-hidden="true" />
+        <Icon name="lucide:chevron-left" aria-hidden="true" class="size-4" />
       </Button>
-      <Stepper
-        :value="currentStep"
-        @value-change="setCurrentStep"
-        class="gap-1"
-      >
+      <Stepper v-model="currentStep" class="gap-1">
         <StepperItem
           v-for="step in steps"
           :key="step"
@@ -42,7 +24,7 @@ const setCurrentStep = (step: number) => {
           class="flex-1"
         >
           <StepperTrigger class="w-full flex-col items-start gap-2" as-child>
-            <StepperIndicator as-child class="bg-border h-1 w-full">
+            <StepperIndicator class="bg-border h-1 w-full">
               <span class="sr-only">{{ step }}</span>
             </StepperIndicator>
           </StepperTrigger>
@@ -52,11 +34,11 @@ const setCurrentStep = (step: number) => {
         class="shrink-0"
         variant="ghost"
         size="icon"
-        @click="setCurrentStep(currentStep + 1)"
+        @click="currentStep = currentStep + 1"
         :disabled="currentStep === steps.length"
         aria-label="Next step"
       >
-        <ChevronRight :size="16" aria-hidden="true" />
+        <Icon name="lucide:chevron-right" aria-hidden="true" class="size-4" />
       </Button>
     </div>
     <p
