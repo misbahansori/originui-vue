@@ -17,21 +17,10 @@ const steps = [1, 2, 3, 4];
         v-for="step in steps"
         :key="step"
         :step="step"
-        class="not-last:flex-1"
+        :class="step !== steps.length ? 'flex-1' : ''"
       >
         <StepperTrigger>
-          <StepperIndicator>
-            <span
-              class="transition-all group-data-loading/step:scale-0 group-data-loading/step:opacity-0 group-data-loading/step:transition-none group-data-[state=completed]/step:scale-0 group-data-[state=completed]/step:opacity-0"
-            >
-              {{ step }}
-            </span>
-            <Icon
-              name="lucide:check"
-              class="absolute size-4 scale-0 opacity-0 transition-all group-data-[state=completed]/step:scale-100 group-data-[state=completed]/step:opacity-100"
-              aria-hidden="true"
-            />
-          </StepperIndicator>
+          <StepperIndicator />
         </StepperTrigger>
         <StepperSeparator v-if="step < steps.length" />
       </StepperItem>

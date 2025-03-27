@@ -20,6 +20,7 @@ const forwarded = useForwardProps(delegatedProps);
 
 <template>
   <StepperIndicator
+    v-slot="{ step }"
     v-bind="forwarded"
     :class="
       cn(
@@ -28,6 +29,17 @@ const forwarded = useForwardProps(delegatedProps);
       )
     "
   >
-    <slot />
+    <slot>
+      <span
+        class="transition-all group-data-loading/step:scale-0 group-data-loading/step:opacity-0 group-data-loading/step:transition-none group-data-[state=completed]/step:scale-0 group-data-[state=completed]/step:opacity-0"
+      >
+        {{ step }}
+      </span>
+      <Icon
+        name="lucide:check"
+        class="absolute size-4 scale-0 opacity-0 transition-all group-data-[state=completed]/step:scale-100 group-data-[state=completed]/step:opacity-100"
+        aria-hidden="true"
+      />
+    </slot>
   </StepperIndicator>
 </template>

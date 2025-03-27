@@ -17,11 +17,11 @@ const steps = [1, 2, 3, 4];
         v-for="step in steps"
         :key="step"
         :step="step"
-        class="not-last:flex-1"
+        :class="step !== steps.length ? 'flex-1' : ''"
       >
         <StepperTrigger>
           <StepperIndicator
-            class="data-[state=active]:border-primary size-4 data-[state=active]:border-2 data-[state=active]:bg-transparent [&_span]:sr-only [&_svg]:size-3"
+            class="group-data-[state=active]/step:border-primary size-4 group-data-[state=active]/step:border-2 group-data-[state=active]/step:bg-transparent [&_span]:sr-only [&_svg]:size-3"
           />
         </StepperTrigger>
         <StepperSeparator v-if="step < steps.length" />

@@ -17,7 +17,7 @@ const steps = [1, 2, 3, 4];
         v-for="step in steps"
         :key="step"
         :step="step"
-        class="not-last:flex-1"
+        :class="step !== steps.length ? 'flex-1' : ''"
       >
         <StepperTrigger>
           <StepperIndicator>{{ step }}</StepperIndicator>
