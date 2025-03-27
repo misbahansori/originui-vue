@@ -11,20 +11,16 @@ import {
 
 const steps = [1, 2, 3, 4];
 const currentStep = ref(2);
-
-const setCurrentStep = (step: number) => {
-  currentStep.value = step;
-};
 </script>
 
 <template>
   <div class="mx-auto max-w-xl space-y-8 text-center">
-    <Stepper :value="currentStep" @value-change="setCurrentStep">
+    <Stepper v-model="currentStep">
       <StepperItem
         v-for="step in steps"
         :key="step"
         :step="step"
-        class="not-last:flex-1"
+        :class="step !== steps.length ? 'flex-1' : ''"
       >
         <StepperTrigger as-child>
           <StepperIndicator />
@@ -36,7 +32,7 @@ const setCurrentStep = (step: number) => {
       <Button
         variant="outline"
         class="w-32"
-        @click="setCurrentStep(currentStep - 1)"
+        @click="currentStep = currentStep - 1"
         :disabled="currentStep === 1"
       >
         Prev step
@@ -44,7 +40,7 @@ const setCurrentStep = (step: number) => {
       <Button
         variant="outline"
         class="w-32"
-        @click="setCurrentStep(currentStep + 1)"
+        @click="currentStep = currentStep + 1"
         :disabled="currentStep > steps.length"
       >
         Next step

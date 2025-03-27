@@ -6,7 +6,10 @@ import { cn } from "~/utils/utils";
 import { computed, type HTMLAttributes } from "vue";
 
 const props = defineProps<
-  StepperIndicatorProps & { class?: HTMLAttributes["class"] }
+  StepperIndicatorProps & {
+    class?: HTMLAttributes["class"];
+    isLoading?: boolean;
+  }
 >();
 
 const delegatedProps = computed(() => {
@@ -40,6 +43,13 @@ const forwarded = useForwardProps(delegatedProps);
         class="absolute size-4 scale-0 opacity-0 transition-all group-data-[state=completed]/step:scale-100 group-data-[state=completed]/step:opacity-100"
         aria-hidden="true"
       />
+      <span v-if="isLoading" class="absolute transition-all">
+        <Icon
+          name="lucide:loader"
+          class="size-3.5 animate-spin"
+          aria-hidden="true"
+        />
+      </span>
     </slot>
   </StepperIndicator>
 </template>

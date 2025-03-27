@@ -13,14 +13,10 @@ const steps = [1, 2, 3, 4];
 const currentStep = ref(2);
 const isLoading = ref(false);
 
-const setCurrentStep = (step: number) => {
-  currentStep.value = step;
-};
-
 const handleNextStep = () => {
   isLoading.value = true;
   setTimeout(() => {
-    setCurrentStep(currentStep.value + 1);
+    currentStep.value = currentStep.value + 1;
     isLoading.value = false;
   }, 1000);
 };
@@ -28,16 +24,15 @@ const handleNextStep = () => {
 
 <template>
   <div class="mx-auto max-w-xl space-y-8 text-center">
-    <Stepper :value="currentStep" @value-change="setCurrentStep">
+    <Stepper v-model="currentStep">
       <StepperItem
         v-for="step in steps"
         :key="step"
         :step="step"
-        class="not-last:flex-1"
-        :loading="isLoading"
+        :class="step !== steps.length ? 'flex-1' : ''"
       >
         <StepperTrigger as-child>
-          <StepperIndicator />
+          <StepperIndicator :is-loading="isLoading" />
         </StepperTrigger>
         <StepperSeparator v-if="step < steps.length" />
       </StepperItem>
@@ -46,7 +41,7 @@ const handleNextStep = () => {
       <Button
         variant="outline"
         class="w-32"
-        @click="setCurrentStep(currentStep - 1)"
+        @click="currentStep = currentStep - 1"
         :disabled="currentStep === 1"
       >
         Prev step
