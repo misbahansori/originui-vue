@@ -1,6 +1,15 @@
 <script setup lang="ts">
-// TODO: Implement with useSliderWithInput composable
-const value = ref([25]);
+const minValue = 0;
+const maxValue = 100;
+const initialValue = [25];
+
+const {
+  sliderValues,
+  inputValues,
+  validateAndUpdateValue,
+  handleInputChange,
+  handleSliderChange,
+} = useSliderWithInput({ minValue, maxValue, initialValue });
 </script>
 
 <template>
@@ -9,17 +18,27 @@ const value = ref([25]);
     <div class="flex items-center gap-4">
       <Slider
         class="grow"
-        v-model="value"
-        :min="0"
-        :max="100"
+        :model-value="sliderValues"
+        @update:model-value="
+          (newValue) => newValue && handleSliderChange(newValue)
+        "
+        :min="minValue"
+        :max="maxValue"
         aria-label="Slider with input"
       />
       <Input
         class="h-8 w-12 px-2 py-1"
         type="text"
         inputmode="decimal"
-        :value="value[0]"
-        aria-label="Enter value"
+        :model-value="inputValues[0]"
+        @update:model-value="(newValue) => handleInputChange(0, newValue)"
+        @blur="() => validateAndUpdateValue(inputValues[0] ?? '', 0)"
+        @keydown="
+          (e: KeyboardEvent) => {
+            if (e.key === 'Enter')
+              validateAndUpdateValue(inputValues[0] ?? '', 0);
+          }
+        "
       />
     </div>
   </div>

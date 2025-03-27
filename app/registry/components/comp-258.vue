@@ -1,8 +1,15 @@
 <script setup lang="ts">
+const minValue = 0;
+const maxValue = 200;
+const initialValue = [50, 150];
 
-
-// TODO: Implement with useSliderWithInput composable
-const value = ref([50, 150]);
+const {
+  sliderValues,
+  inputValues,
+  validateAndUpdateValue,
+  handleInputChange,
+  handleSliderChange,
+} = useSliderWithInput({ minValue, maxValue, initialValue });
 </script>
 
 <template>
@@ -10,25 +17,42 @@ const value = ref([50, 150]);
     <Label>Dual range slider with input</Label>
     <div class="flex items-center gap-4">
       <Input
-        class="h-8 w-12 px-2 py-1"
+        class="h-8 w-16 px-2 py-1 text-center"
         type="text"
         inputmode="decimal"
-        :value="value[0]"
-        aria-label="Enter minimum value"
+        :model-value="inputValues[0]"
+        @update:model-value="(newValue) => handleInputChange(0, newValue)"
+        @blur="() => validateAndUpdateValue(inputValues[0] ?? '', 0)"
+        @keydown="
+          (e: KeyboardEvent) => {
+            if (e.key === 'Enter')
+              validateAndUpdateValue(inputValues[0] ?? '', 0);
+          }
+        "
       />
       <Slider
         class="grow"
-        v-model="value"
-        :min="0"
-        :max="200"
+        :model-value="sliderValues"
+        @update:model-value="
+          (newValue) => newValue && handleSliderChange(newValue)
+        "
+        :min="minValue"
+        :max="maxValue"
         aria-label="Dual range slider with input"
       />
       <Input
-        class="h-8 w-12 px-2 py-1"
+        class="h-8 w-16 px-2 py-1 text-center"
         type="text"
         inputmode="decimal"
-        :value="value[1]"
-        aria-label="Enter maximum value"
+        :model-value="inputValues[1]"
+        @update:model-value="(newValue) => handleInputChange(1, newValue)"
+        @blur="() => validateAndUpdateValue(inputValues[1] ?? '', 1)"
+        @keydown="
+          (e: KeyboardEvent) => {
+            if (e.key === 'Enter')
+              validateAndUpdateValue(inputValues[1] ?? '', 1);
+          }
+        "
       />
     </div>
   </div>

@@ -1,20 +1,16 @@
 <script setup lang="ts">
-
-
 const minValue = 0;
 const maxValue = 200;
 const steps = 5;
 const value = ref<number[]>([100]);
 
 const decreaseValue = () => {
-  const currentValue =
-    value.value && value.value.length > 0 ? value.value[0] : minValue;
+  const currentValue = value.value?.[0] ?? minValue;
   value.value = [Math.max(minValue, currentValue - steps)];
 };
 
 const increaseValue = () => {
-  const currentValue =
-    value.value && value.value.length > 0 ? value.value[0] : minValue;
+  const currentValue = value.value?.[0] ?? minValue;
   value.value = [Math.min(maxValue, currentValue + steps)];
 };
 </script>

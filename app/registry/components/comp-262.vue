@@ -1,30 +1,15 @@
 <script setup lang="ts">
-// TODO: This is a simplified version without the full implementation of useSliderWithInput
 const minValue = 0;
 const maxValue = 100;
-const sliderValue = ref([25]);
-const inputValue = ref("25");
+const initialValue = [25];
 
-function handleInputChange(e: Event) {
-  const target = e.target as HTMLInputElement;
-  inputValue.value = target.value;
-}
-
-function validateAndUpdateValue() {
-  const value = Number(inputValue.value);
-  if (!isNaN(value) && value >= minValue && value <= maxValue) {
-    sliderValue.value = [value];
-  } else if (sliderValue.value.length > 0) {
-    inputValue.value = sliderValue.value[0].toString();
-  }
-}
-
-// Watch for slider value changes
-function updateInputFromSlider() {
-  if (sliderValue.value.length > 0) {
-    inputValue.value = sliderValue.value[0].toString();
-  }
-}
+const {
+  sliderValues,
+  inputValues,
+  validateAndUpdateValue,
+  handleInputChange,
+  handleSliderChange,
+} = useSliderWithInput({ minValue, maxValue, initialValue });
 </script>
 
 <template>
@@ -33,21 +18,28 @@ function updateInputFromSlider() {
     <div class="flex h-40 flex-col items-center justify-center gap-4">
       <Slider
         class="data-[orientation=vertical]:min-h-0"
-        v-model="sliderValue"
+        :model-value="sliderValues"
         :min="minValue"
         :max="maxValue"
         orientation="vertical"
         aria-label="Slider with input"
-        @update:model-value="updateInputFromSlider"
+        @update:model-value="
+          (newValue) => newValue && handleSliderChange(newValue)
+        "
       />
       <Input
-        class="h-8 w-12 px-2 py-1"
+        class="h-8 w-11 px-2 py-1 text-center"
         type="text"
         inputmode="decimal"
-        :value="inputValue"
-        @input="handleInputChange"
-        @blur="validateAndUpdateValue"
-        @keydown.enter="validateAndUpdateValue"
+        :model-value="inputValues[0]"
+        @update:model-value="(newValue) => handleInputChange(0, newValue)"
+        @blur="() => validateAndUpdateValue(inputValues[0] ?? '', 0)"
+        @keydown="
+          (e: KeyboardEvent) => {
+            if (e.key === 'Enter')
+              validateAndUpdateValue(inputValues[0] ?? '', 0);
+          }
+        "
         aria-label="Enter value"
       />
     </div>
