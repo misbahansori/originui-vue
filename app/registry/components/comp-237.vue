@@ -1,57 +1,50 @@
 <script setup lang="ts">
+import { ListboxContent, ListboxItem, ListboxRoot } from "reka-ui";
+
 const selectedKeys = ref(["svelte"]);
+const options = [
+  { id: "react", name: "React" },
+  { id: "vue", name: "Vue" },
+  { id: "angular", name: "Angular" },
+  { id: "svelte", name: "Svelte" },
+];
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
     <Label>Listbox with single option</Label>
-    <div class="border-input overflow-hidden rounded-md border">
-      <ListBox
+    <ListboxRoot
+      class="border-input overflow-hidden rounded-md border"
+      v-model="selectedKeys"
+    >
+      <ListboxContent
         class="bg-background space-y-1 p-1 text-sm shadow-xs transition-[color,box-shadow]"
         aria-label="Select framework"
-        selection-mode="single"
-        v-model:selected-keys="selectedKeys"
       >
-        <ListBoxItem
-          id="react"
-          class="data-[selected=true]:bg-accent data-[selected=true]:text-accent-foreground data-focus-visible:border-ring data-focus-visible:ring-ring/50 relative rounded px-2 py-1.5 outline-none data-disabled:cursor-not-allowed data-disabled:opacity-50 data-focus-visible:ring-[3px]"
+        <ListboxItem
+          v-for="option in options"
+          :key="option.id"
+          :id="option.id"
+          :value="option.id"
+          class="data-[state=checked]:bg-accent data-[state=checked]:text-accent-foreground data-[highlighted]:bg-accent/50 data-[highlighted]:text-accent-foreground data-focus-visible:border-ring data-focus-visible:ring-ring/50 relative rounded px-2 py-1.5 outline-none data-disabled:cursor-not-allowed data-disabled:opacity-50 data-focus-visible:ring-[3px]"
         >
-          React
-        </ListBoxItem>
-        <ListBoxItem
-          id="vue"
-          class="data-[selected=true]:bg-accent data-[selected=true]:text-accent-foreground data-focus-visible:border-ring data-focus-visible:ring-ring/50 relative rounded px-2 py-1.5 outline-none data-disabled:cursor-not-allowed data-disabled:opacity-50 data-focus-visible:ring-[3px]"
-        >
-          Vue
-        </ListBoxItem>
-        <ListBoxItem
-          id="angular"
-          class="data-[selected=true]:bg-accent data-[selected=true]:text-accent-foreground data-focus-visible:border-ring data-focus-visible:ring-ring/50 relative rounded px-2 py-1.5 outline-none data-disabled:cursor-not-allowed data-disabled:opacity-50 data-focus-visible:ring-[3px]"
-          disabled
-        >
-          Angular
-        </ListBoxItem>
-        <ListBoxItem
-          id="svelte"
-          class="data-[selected=true]:bg-accent data-[selected=true]:text-accent-foreground data-focus-visible:border-ring data-focus-visible:ring-ring/50 relative rounded px-2 py-1.5 outline-none data-disabled:cursor-not-allowed data-disabled:opacity-50 data-focus-visible:ring-[3px]"
-        >
-          Svelte
-        </ListBoxItem>
-      </ListBox>
-    </div>
+          {{ option.name }}
+        </ListboxItem>
+      </ListboxContent>
+    </ListboxRoot>
     <p
       class="text-muted-foreground mt-2 text-xs"
       role="region"
       aria-live="polite"
     >
-      Built with
+      Built with reka-ui
       <a
         class="hover:text-foreground underline"
-        href="https://react-spectrum.adobe.com/react-aria/ListBox.html"
+        href="https://reka-ui.com/docs/components/listbox"
         target="_blank"
         rel="noopener nofollow"
       >
-        React Aria
+        Listbox
       </a>
     </p>
   </div>
