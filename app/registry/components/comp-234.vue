@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { ref, useId } from "vue";
-
-const id = useId();
-
 interface Option {
   value: string;
   label: string;

@@ -1,12 +1,6 @@
 <script setup lang="ts">
-import { ref, useId } from "vue";
-
 const id = useId();
 const checked = ref(false);
-
-const toggleSwitch = () => {
-  checked.value = !checked.value;
-};
 </script>
 
 <template>
@@ -24,7 +18,7 @@ const toggleSwitch = () => {
     </span>
     <Switch
       :id="id"
-      v-model:checked="checked"
+      v-model="checked"
       :aria-labelledby="`${id}-off ${id}-on`"
     />
     <span
