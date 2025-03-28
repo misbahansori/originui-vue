@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { LucidePlus } from "lucide-vue-next";
 import { AccordionTrigger } from "reka-ui";
 
 const items = [
@@ -49,8 +50,7 @@ const items = [
             class="ocus-visible:ring-0 flex flex-1 items-center justify-between rounded-md py-2 text-left text-[15px] leading-6 font-semibold transition-all outline-none [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg]:rotate-180 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0"
           >
             {{ item.title }}
-            <Icon
-              name="lucide:plus"
+            <LucidePlus
               class="pointer-events-none size-4 shrink-0 opacity-60 transition-transform duration-200"
               aria-hidden="true"
             />

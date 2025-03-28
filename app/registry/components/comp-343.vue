@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { LucidePlus } from "lucide-vue-next";
 import { AccordionTrigger } from "reka-ui";
 
 const items = [
@@ -65,8 +66,7 @@ const items = [
                 </span>
               </span>
             </span>
-            <Icon
-              name="lucide:plus"
+            <LucidePlus
               class="pointer-events-none size-4 shrink-0 opacity-60 transition-transform duration-200"
               aria-hidden="true"
             />
