@@ -34,22 +34,29 @@ function checkIfMobile() {
     <div
       class="mx-auto flex h-[72px] w-full max-w-6xl items-center justify-between gap-3"
     >
-      <NuxtLink class="shrink-0" to="/" aria-label="Home">
-        <span class="sr-only">Origin UI</span>
+      <NuxtLink
+        to="/"
+        aria-label="Home"
+        class="flex shrink-0 items-center gap-2"
+      >
         <img
           src="/logo.svg"
           alt="Origin UI logo"
           width="117"
           height="24"
-          class="dark:hidden"
+          class="size-6 dark:hidden"
         />
         <img
           src="/logo-dark.svg"
           alt="Origin UI logo"
           width="117"
           height="24"
-          class="hidden dark:block"
+          class="hidden size-6 dark:block"
         />
+        <div class="font-heading text-[1.4rem] font-semibold">
+          <span>Origin UI</span>
+          <span class="font-bold text-[#41B883]">&nbsp;Vue</span>
+        </div>
       </NuxtLink>
       <div class="flex items-center">
         <template v-if="!isMobile">
