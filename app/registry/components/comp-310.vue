@@ -41,16 +41,11 @@ const { remaining } = useCountdown(totalSeconds, {
       return;
     }
 
-    const days = Math.floor(seconds / (60 * 60 * 24));
-    const hours = Math.floor((seconds % (60 * 60 * 24)) / (60 * 60));
-    const minutes = Math.floor((seconds % (60 * 60)) / 60);
-    const remainingSeconds = seconds % 60;
-
     timeLeft.value = {
-      days,
-      hours,
-      minutes,
-      seconds: remainingSeconds,
+      days: Math.floor(seconds / (60 * 60 * 24)),
+      hours: Math.floor((seconds % (60 * 60 * 24)) / (60 * 60)),
+      minutes: Math.floor((seconds % (60 * 60)) / 60),
+      seconds: seconds % 60,
       isExpired: false,
     };
   },
