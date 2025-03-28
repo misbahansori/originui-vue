@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
-
 const password = ref("");
 const isVisible = ref(false);
 

@@ -1,15 +1,7 @@
 <script setup lang="ts">
-// TODO: This component uses a third-party library (react-payment-inputs)
-// We need to find an equivalent Vue library or implement custom functionality
+import { mask as vMask } from "vue-the-mask";
 
 const cvcCode = ref("");
-
-// Simple CVC validation
-function handleInput(e: Event) {
-  const target = e.target as HTMLInputElement;
-  const value = target.value.replace(/\D/g, "");
-  cvcCode.value = value.slice(0, 4); // Most cards have 3-4 digit CVC
-}
 </script>
 
 <template>
@@ -18,19 +10,25 @@ function handleInput(e: Event) {
     <Input
       id="cvc-code"
       v-model="cvcCode"
-      @input="handleInput"
       class="[direction:inherit]"
       placeholder="CVC"
       maxlength="4"
-      type="password"
+      v-mask="'###'"
     />
     <p
       class="text-muted-foreground mt-2 text-xs"
       role="region"
       aria-live="polite"
     >
-      <!-- TODO: This original component used react-payment-inputs -->
-      Built with custom Vue CVC input
+      Built with
+      <a
+        class="hover:text-foreground underline"
+        href="https://vuejs-tips.github.io/vue-the-mask"
+        target="_blank"
+        rel="noopener nofollow"
+      >
+        vue-the-mask
+      </a>
     </p>
   </div>
 </template>

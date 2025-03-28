@@ -1,21 +1,10 @@
 <script setup lang="ts">
+import { useClipboard } from "@vueuse/core";
+
 const inputValue = ref("pnpm install origin-ui");
-const copied = ref(false);
 const inputRef = ref<HTMLInputElement | null>(null);
 
-function handleCopy() {
-  if (inputRef.value) {
-    navigator.clipboard.writeText(inputRef.value.value);
-    copied.value = true;
-    setTimeout(() => {
-      copied.value = false;
-    }, 1500);
-  }
-}
-
-function cn(...classes: any[]) {
-  return classes.filter(Boolean).join(" ");
-}
+const { copy, copied } = useClipboard();
 </script>
 
 <template>
@@ -34,7 +23,7 @@ function cn(...classes: any[]) {
         <Tooltip :delay-duration="0">
           <TooltipTrigger as-child>
             <button
-              @click="handleCopy"
+              @click="copy(inputValue)"
               class="text-muted-foreground/80 hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-md transition-[color,box-shadow] outline-none focus:z-10 focus-visible:ring-[3px] disabled:pointer-events-none disabled:cursor-not-allowed"
               :aria-label="copied ? 'Copied' : 'Copy to clipboard'"
               :disabled="copied"

@@ -35,10 +35,12 @@
     "vaul-vue": "^0.4.1",
     "vue": "latest",
     "vue-router": "latest",
-    "vue-sonner": "^1.3.0"
+    "vue-sonner": "^1.3.0",
+    "vue-the-mask": "^0.11.1"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.10",
+    "@types/vue-the-mask": "^0.11.5",
     "nuxt-umami": "^3.2.0",
     "tailwindcss": "^4.0.10"
   },
