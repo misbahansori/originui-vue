@@ -38,14 +38,14 @@ const options = [
       role="region"
       aria-live="polite"
     >
-      Built with
+      Built with reka-ui
       <a
         class="hover:text-foreground underline"
-        href="https://react-spectrum.adobe.com/react-aria/ListBox.html"
+        href="https://reka-ui.com/docs/components/listbox"
         target="_blank"
         rel="noopener nofollow"
       >
-        React Aria
+        Listbox
       </a>
     </p>
   </div>
