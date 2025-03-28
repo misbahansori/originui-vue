@@ -27,8 +27,15 @@ const cardNumber = ref("");
       role="region"
       aria-live="polite"
     >
-      <!-- TODO: This original component used react-payment-inputs -->
-      Built with custom Vue credit card formatting
+      Built with
+      <a
+        class="hover:text-foreground underline"
+        href="https://vuejs-tips.github.io/vue-the-mask"
+        target="_blank"
+        rel="noopener nofollow"
+      >
+        vue-the-mask
+      </a>
     </p>
   </div>
 </template>

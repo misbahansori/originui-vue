@@ -1,37 +1,7 @@
 <script setup lang="ts">
-// TODO: This component uses a third-party library (use-mask-input)
-// We need to find an equivalent Vue library or implement custom functionality
+import { mask as vMask } from "vue-the-mask";
 
 const inputValue = ref("");
-
-function applyMask(e: Event) {
-  const target = e.target as HTMLInputElement;
-  const value = target.value;
-
-  let maskedValue = "";
-  const pattern = "99:99:99"; // Mask pattern: 9 = digit
-  let valueIndex = 0;
-
-  for (let i = 0; i < pattern.length && valueIndex < value.length; i++) {
-    const patternChar = pattern[i];
-
-    if (patternChar === ":") {
-      maskedValue += ":";
-    } else {
-      const valueChar = value[valueIndex] || "";
-      valueIndex++;
-
-      if (patternChar === "9" && /[0-9]/.test(valueChar)) {
-        maskedValue += valueChar;
-      } else {
-        // If character doesn't match pattern, don't advance
-        valueIndex--;
-      }
-    }
-  }
-
-  inputValue.value = maskedValue;
-}
 </script>
 
 <template>
@@ -42,7 +12,7 @@ function applyMask(e: Event) {
       placeholder="00:00:00"
       type="text"
       v-model="inputValue"
-      @input="applyMask"
+      v-mask="'##:##:##'"
       maxlength="8"
     />
     <p
@@ -50,8 +20,15 @@ function applyMask(e: Event) {
       role="region"
       aria-live="polite"
     >
-      <!-- TODO: This original component used use-mask-input -->
-      Built with custom Vue mask implementation
+      Built with
+      <a
+        class="hover:text-foreground underline"
+        href="https://vuejs-tips.github.io/vue-the-mask"
+        target="_blank"
+        rel="noopener nofollow"
+      >
+        vue-the-mask
+      </a>
     </p>
   </div>
 </template>
