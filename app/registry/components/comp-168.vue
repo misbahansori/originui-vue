@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref, useId } from "vue";
-
 const id = useId();
 const selectedValue = ref("0");
 const values = ["0", "1", "2", "3", "4", "5"];

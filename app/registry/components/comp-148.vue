@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref, useId } from "vue";
 // TODO: Implement CheckboxTree component
 interface TreeNode {
   id: string;

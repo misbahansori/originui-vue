@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { nextTick, ref, useId, watch } from "vue";
-
 const radioId = useId();
 const inputId = useId();
 const selectedValue = ref("without-expansion");

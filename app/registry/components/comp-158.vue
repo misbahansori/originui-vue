@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref, useId } from "vue";
-
 const id = useId();
 const selectedColor = ref("blue");
 </script>

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref, useId } from "vue";
-
 type CheckedStates = Record<string, boolean>;
 
 const id = useId();
