@@ -19,9 +19,7 @@ const {
       <Slider
         class="grow"
         :model-value="sliderValues"
-        @update:model-value="
-          (newValue) => newValue && handleSliderChange(newValue)
-        "
+        @update:model-value="handleSliderChange"
         :min="minValue"
         :max="maxValue"
         aria-label="Slider with input"
@@ -33,11 +31,7 @@ const {
         :model-value="inputValues[0]"
         @update:model-value="(newValue) => handleInputChange(0, newValue)"
         @blur="() => validateAndUpdateValue(inputValues[0] ?? '', 0)"
-        @keydown="
-          (e: KeyboardEvent) => {
-            if (e.key === 'Enter')
-              validateAndUpdateValue(inputValues[0] ?? '', 0);
-          }
+        @keydown.enter="validateAndUpdateValue(inputValues[0] ?? '', 0)"
         "
       />
     </div>

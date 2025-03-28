@@ -71,7 +71,9 @@ export function useSliderWithInput({
     }
   };
 
-  const handleSliderChange = (newValue: number[]) => {
+  const handleSliderChange = (newValue?: number[]) => {
+    if (!newValue) return;
+
     sliderValues.value = newValue;
     inputValues.value = newValue.map((v) => v.toString());
   };

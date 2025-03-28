@@ -23,9 +23,7 @@ const {
         :max="maxValue"
         orientation="vertical"
         aria-label="Slider with input"
-        @update:model-value="
-          (newValue) => newValue && handleSliderChange(newValue)
-        "
+        @update:model-value="handleSliderChange"
       />
       <Input
         class="h-8 w-11 px-2 py-1 text-center"
@@ -34,12 +32,7 @@ const {
         :model-value="inputValues[0]"
         @update:model-value="(newValue) => handleInputChange(0, newValue)"
         @blur="() => validateAndUpdateValue(inputValues[0] ?? '', 0)"
-        @keydown="
-          (e: KeyboardEvent) => {
-            if (e.key === 'Enter')
-              validateAndUpdateValue(inputValues[0] ?? '', 0);
-          }
-        "
+        @keydown.enter="validateAndUpdateValue(inputValues[0] ?? '', 0)"
         aria-label="Enter value"
       />
     </div>

@@ -28,9 +28,7 @@ defineExpose({
       :model-value="sliderValues"
       :min="minValue"
       :max="maxValue"
-      @update:model-value="
-        (newValue) => newValue && handleSliderChange(newValue)
-      "
+      @update:model-value="handleSliderChange"
       class="grow [&>:last-child>span]:rounded"
     />
     <Input
@@ -40,12 +38,7 @@ defineExpose({
       :model-value="inputValues[0]"
       @update:model-value="(newValue) => handleInputChange(0, newValue)"
       @blur="() => validateAndUpdateValue(inputValues[0] ?? '', 0)"
-      @keydown="
-        (e: KeyboardEvent) => {
-          if (e.key === 'Enter')
-            validateAndUpdateValue(inputValues[0] ?? '', 0);
-        }
-      "
+      @keydown.enter="validateAndUpdateValue(inputValues[0] ?? '', 0)"
     />
   </div>
 </template>
