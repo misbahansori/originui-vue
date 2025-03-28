@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useCountdown } from "@vueuse/core";
 
-
 interface TimeLeft {
   days: number;
   hours: number;
@@ -10,7 +9,6 @@ interface TimeLeft {
   isExpired: boolean;
 }
 
-// Define the sale end date - eg: new Date('2024-12-31T23:59:59')
 const saleEndDate = new Date(
   Date.now() + 9 * 60 * 60 * 1000 + 45 * 60 * 1000 + 24 * 1000,
 ); // Setting 9h 45m 24s from now for demo purposes

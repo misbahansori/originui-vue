@@ -1,6 +1,4 @@
 <script setup lang="ts">
-
-
 const isDownloading = ref(false);
 
 const handleDownload = () => {

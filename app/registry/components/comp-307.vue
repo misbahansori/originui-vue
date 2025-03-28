@@ -1,6 +1,4 @@
 <script setup lang="ts">
-
-
 const isVisible = ref(true);
 
 const hideBanner = () => {
