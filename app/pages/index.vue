@@ -38,8 +38,8 @@ useSeoMeta({
         <span class="text-[#41B883]">Vue</span>
       </h1>
       <p class="text-muted-foreground mb-8 text-lg">
-        An open-source collection of copy-and-paste components for quickly
-        building application UIs.
+        An open-source collection of copy-and-paste components for quickly build
+        application UIs.
       </p>
       <SearchButton />
     </div>
