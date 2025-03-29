@@ -18,7 +18,11 @@
         </Button>
       </PaginationPrev>
       <template v-for="item in items">
-        <PaginationListItem v-if="item.type === 'page'" :value="item.value">
+        <PaginationListItem
+          v-if="item.type === 'page'"
+          :value="item.value"
+          asChild
+        >
           <Button
             :variant="item.value === page ? 'outline' : 'ghost'"
             class="size-9"
