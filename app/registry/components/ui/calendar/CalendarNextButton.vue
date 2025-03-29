@@ -22,7 +22,7 @@ const forwardedProps = useForwardProps(delegatedProps);
   <CalendarNext
     :class="
       cn(
-        buttonVariants({ variant: 'outline' }),
+        buttonVariants({ variant: 'ghost' }),
         'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
         props.class,
       )
