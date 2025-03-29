@@ -19,7 +19,7 @@ export interface RegistryItem {
   name: string;
   type: string;
   description: string;
-  dependencies?: string[];
+  registryDependencies?: string[];
   files: ComponentFile[];
   tailwind?: TailwindConfig;
   meta?: {
