@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { MoreHorizontal } from "lucide-vue-next";
 import { PaginationEllipsis, type PaginationEllipsisProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 import { cn } from "~/utils/utils";
@@ -21,7 +20,8 @@ const delegatedProps = computed(() => {
     :class="cn('flex h-9 w-9 items-center justify-center', props.class)"
   >
     <slot>
-      <MoreHorizontal />
+      <Icon name="lucide:ellipsis" aria-hidden="true" class="size-4" />
+      <span class="sr-only">More pages</span>
     </slot>
   </PaginationEllipsis>
 </template>
