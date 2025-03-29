@@ -46,13 +46,13 @@ onMounted(async () => {
       <DialogContent class="p-5 sm:max-w-[640px]">
         <DialogHeader>
           <DialogTitle class="text-left">Installation</DialogTitle>
-          <DialogDescription class="sr-only">
-            Use the CLI to add components to your project
+          <DialogDescription>
+            Download the source code of the component and install it in your
+            project.
           </DialogDescription>
         </DialogHeader>
         <div class="min-w-0 space-y-5">
-          <CliCommands :name="component.name" />
-
+          <DownloadSourceCommand :component="component" />
           <div class="space-y-2">
             <p class="text-lg font-semibold tracking-tight">Code</p>
             <div class="relative">
