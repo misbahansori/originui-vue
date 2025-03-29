@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "start": "node .output/server/index.mjs"
+    "start": "node .output/server/index.mjs",
+    "registry:build": "shadcn build"
   },
   "dependencies": {
     "@internationalized/date": "^3.7.0",
@@ -28,6 +29,7 @@
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "reka-ui": "^2.0.2",
+    "shadcn": "2.4.0-canary.17",
     "shadcn-nuxt": "^1.0.2",
     "shiki": "^3.2.1",
     "tailwind-merge": "^3.0.2",

@@ -1,5 +1,6 @@
 import type { RegistryTag } from "~/config/registry-tags";
-import registry from "../registry.json";
+import registry from "~~/registry.json";
+import type { RegistryItem } from "shadcn/registry";
 
 // Define registry interfaces
 export interface ComponentFile {
@@ -13,20 +14,6 @@ export interface TailwindConfig {
   keyframes?: Record<string, Record<string, string>>;
   animations?: Record<string, string>;
   extend?: any;
-}
-
-export interface RegistryItem {
-  name: string;
-  type: string;
-  description: string;
-  registryDependencies?: string[];
-  files: ComponentFile[];
-  tailwind?: TailwindConfig;
-  meta?: {
-    colSpan?: 1 | 2 | 3;
-    style?: 1 | 2 | 3;
-    tags?: RegistryTag[];
-  };
 }
 
 const components = registry.items as unknown as RegistryItem[];

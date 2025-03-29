@@ -1200,7 +1200,15 @@
         }
       ],
       "meta": {
-        "tags": ["input", "label", "date", "calendar", "range calendar", "picker", "react aria"]
+        "tags": [
+          "input",
+          "label",
+          "date",
+          "calendar",
+          "range calendar",
+          "picker",
+          "react aria"
+        ]
       }
     },
     {
@@ -1210,7 +1218,11 @@
         "https://originui.com/r/calendar-rac.json",
         "https://originui.com/r/datefield-rac.json"
       ],
-      "dependencies": ["react-aria-components", "react-aria", "@internationalized/date"],
+      "dependencies": [
+        "react-aria-components",
+        "react-aria",
+        "@internationalized/date"
+      ],
       "files": [
         {
           "path": "registry/default/components/comp-43.tsx",
@@ -1218,7 +1230,15 @@
         }
       ],
       "meta": {
-        "tags": ["input", "label", "date", "calendar", "range calendar", "picker", "react aria"]
+        "tags": [
+          "input",
+          "label",
+          "date",
+          "calendar",
+          "range calendar",
+          "picker",
+          "react aria"
+        ]
       }
     },
     {
@@ -4782,7 +4802,15 @@
         }
       ],
       "meta": {
-        "tags": ["slider", "label", "button", "input", "tooltip", "reset", "radix"]
+        "tags": [
+          "slider",
+          "label",
+          "button",
+          "input",
+          "tooltip",
+          "reset",
+          "radix"
+        ]
       }
     },
     {
@@ -5528,7 +5556,7 @@
         }
       ],
       "meta": {
-        "tags": ["notification", "toast", "radix"],
+        "tags": ["notification", "toast", "sonner", "radix"],
         "colSpan": 2,
         "style": 1
       }
@@ -5545,7 +5573,7 @@
         }
       ],
       "meta": {
-        "tags": ["notification", "toast", "success", "radix"],
+        "tags": ["notification", "toast", "sonner", "success", "radix"],
         "colSpan": 2,
         "style": 1
       }
@@ -5967,7 +5995,14 @@
         }
       ],
       "meta": {
-        "tags": ["dialog", "modal", "signup", "authentication", "form", "radix"],
+        "tags": [
+          "dialog",
+          "modal",
+          "signup",
+          "authentication",
+          "form",
+          "radix"
+        ],
         "style": 1
       }
     },
@@ -6032,7 +6067,15 @@
         }
       ],
       "meta": {
-        "tags": ["dialog", "modal", "checkout", "payment", "credit card", "form", "radix"],
+        "tags": [
+          "dialog",
+          "modal",
+          "checkout",
+          "payment",
+          "credit card",
+          "form",
+          "radix"
+        ],
         "style": 1
       }
     },
@@ -6056,7 +6099,15 @@
         }
       ],
       "meta": {
-        "tags": ["dialog", "modal", "checkout", "payment", "credit card", "form", "radix"],
+        "tags": [
+          "dialog",
+          "modal",
+          "checkout",
+          "payment",
+          "credit card",
+          "form",
+          "radix"
+        ],
         "style": 1
       }
     },
@@ -6105,7 +6156,16 @@
         }
       ],
       "meta": {
-        "tags": ["dialog", "modal", "user", "profile", "image", "avatar", "form", "radix"],
+        "tags": [
+          "dialog",
+          "modal",
+          "user",
+          "profile",
+          "image",
+          "avatar",
+          "form",
+          "radix"
+        ],
         "style": 1
       }
     },
@@ -8658,7 +8718,15 @@
         }
       ],
       "meta": {
-        "tags": ["table", "tanstack", "checkbox", "collapsible", "flag", "badge", "chip"],
+        "tags": [
+          "table",
+          "tanstack",
+          "checkbox",
+          "collapsible",
+          "flag",
+          "badge",
+          "chip"
+        ],
         "colSpan": 3
       }
     },
@@ -8682,7 +8750,16 @@
         }
       ],
       "meta": {
-        "tags": ["table", "tanstack", "checkbox", "sort", "flag", "badge", "chip", "pagination"],
+        "tags": [
+          "table",
+          "tanstack",
+          "checkbox",
+          "sort",
+          "flag",
+          "badge",
+          "chip",
+          "pagination"
+        ],
         "colSpan": 3
       }
     },
@@ -8709,7 +8786,16 @@
         }
       ],
       "meta": {
-        "tags": ["table", "tanstack", "checkbox", "sort", "flag", "badge", "chip", "pagination"],
+        "tags": [
+          "table",
+          "tanstack",
+          "checkbox",
+          "sort",
+          "flag",
+          "badge",
+          "chip",
+          "pagination"
+        ],
         "colSpan": 3
       }
     },
@@ -8813,7 +8899,13 @@
         }
       ],
       "meta": {
-        "tags": ["calendar", "range calendar", "date", "disabled", "react aria"],
+        "tags": [
+          "calendar",
+          "range calendar",
+          "date",
+          "disabled",
+          "react aria"
+        ],
         "style": 1
       }
     },
@@ -8858,7 +8950,13 @@
         }
       ],
       "meta": {
-        "tags": ["calendar", "range calendar", "date", "disabled", "react daypicker"],
+        "tags": [
+          "calendar",
+          "range calendar",
+          "date",
+          "disabled",
+          "react daypicker"
+        ],
         "style": 1
       }
     },
@@ -9120,7 +9218,13 @@
         }
       ],
       "meta": {
-        "tags": ["calendar", "range calendar", "date", "button", "react daypicker"],
+        "tags": [
+          "calendar",
+          "range calendar",
+          "date",
+          "button",
+          "react daypicker"
+        ],
         "colSpan": 3,
         "style": 1
       }
@@ -9643,6 +9747,109 @@
       ],
       "meta": {
         "tags": ["timeline"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-542",
+      "type": "registry:component",
+      "dependencies": [
+        "date-fns",
+        "@dnd-kit/core",
+        "@dnd-kit/modifiers",
+        "@dnd-kit/utilities",
+        "@remixicon/react"
+      ],
+      "registryDependencies": [
+        "https://originui.com/r/button.json",
+        "https://originui.com/r/calendar.json",
+        "https://originui.com/r/checkbox.json",
+        "https://originui.com/r/dropdown-menu.json",
+        "https://originui.com/r/dialog.json",
+        "https://originui.com/r/input.json",
+        "https://originui.com/r/textarea.json",
+        "https://originui.com/r/label.json",
+        "https://originui.com/r/popover.json",
+        "https://originui.com/r/radio-group.json",
+        "https://originui.com/r/select.json",
+        "https://originui.com/r/sonner.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/components/comp-542.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/agenda-view.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/calendar-dnd-context.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/constants.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/day-view.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/draggable-event.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/droppable-cell.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/event-dialog.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/event-item.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/events-popup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/event-calendar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/index.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/month-view.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/types.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/utils.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/week-view.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/hooks/use-current-time-indicator.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/event-calendar/hooks/use-event-visibility.ts",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["calendar"],
         "colSpan": 3
       }
     }
