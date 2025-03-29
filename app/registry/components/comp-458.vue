@@ -6,22 +6,20 @@
     v-slot="{ page, pageCount }"
   >
     <PaginationList class="flex w-full items-center justify-between gap-3">
-      <PaginationPrev asChild>
-        <Button variant="outline" class="size-9">
-          <Icon name="lucide:chevron-left" aria-hidden="true" class="size-4" />
-        </Button>
-      </PaginationPrev>
       <p class="text-muted-foreground text-sm" aria-live="polite">
         Page
         <span class="text-foreground">{{ page }}</span>
         of
         <span class="text-foreground">{{ pageCount }}</span>
       </p>
-      <PaginationNext asChild>
-        <Button variant="outline" class="size-9">
-          <Icon name="lucide:chevron-right" aria-hidden="true" class="size-4" />
-        </Button>
-      </PaginationNext>
+      <div class="flex items-center gap-3">
+        <PaginationPrev asChild>
+          <Button variant="outline" class="h-9 w-auto px-4">Previous</Button>
+        </PaginationPrev>
+        <PaginationNext asChild>
+          <Button variant="outline" class="h-9 w-auto px-4">Next</Button>
+        </PaginationNext>
+      </div>
     </PaginationList>
   </Pagination>
 </template>

@@ -5,9 +5,9 @@
     :total="100"
     v-slot="{ page, pageCount }"
   >
-    <PaginationList class="flex w-full items-center justify-between gap-3">
+    <PaginationList class="flex w-full items-center justify-center gap-3">
       <PaginationPrev asChild>
-        <Button variant="outline" class="size-9">
+        <Button variant="ghost" class="size-9">
           <Icon name="lucide:chevron-left" aria-hidden="true" class="size-4" />
         </Button>
       </PaginationPrev>
@@ -18,7 +18,7 @@
         <span class="text-foreground">{{ pageCount }}</span>
       </p>
       <PaginationNext asChild>
-        <Button variant="outline" class="size-9">
+        <Button variant="ghost" class="size-9">
           <Icon name="lucide:chevron-right" aria-hidden="true" class="size-4" />
         </Button>
       </PaginationNext>
