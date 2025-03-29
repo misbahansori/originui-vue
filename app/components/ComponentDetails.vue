@@ -43,24 +43,27 @@ onMounted(async () => {
           <TooltipContent class="px-2 py-1 text-xs">View code</TooltipContent>
         </Tooltip>
       </TooltipProvider>
-      <DialogContent class="p-5 sm:max-w-[600px]">
+      <DialogContent class="p-5 sm:max-w-[640px]">
         <DialogHeader>
-          <DialogTitle class="text-left">Code</DialogTitle>
+          <DialogTitle class="text-left">Installation</DialogTitle>
+          <DialogDescription class="sr-only">
+            Use the CLI to add components to your project
+          </DialogDescription>
         </DialogHeader>
-        <div class="min-w-0">
-          <div class="relative">
-            <div
-              class="[&_code]:font-mono [&_code]:text-[13px] [&_pre]:max-h-[450px] [&_pre]:overflow-auto [&_pre]:rounded-md [&_pre]:bg-zinc-950! [&_pre]:p-4 [&_pre]:leading-snug dark:[&_pre]:bg-zinc-900!"
-              v-html="html"
-            ></div>
-            <CopyButton :text="code" />
+        <div class="min-w-0 space-y-5">
+          <CliCommands :name="component.name" />
+
+          <div class="space-y-2">
+            <p class="text-lg font-semibold tracking-tight">Code</p>
+            <div class="relative">
+              <div
+                class="[&_code]:font-mono [&_code]:text-[13px] [&_pre]:max-h-[450px] [&_pre]:overflow-auto [&_pre]:rounded-md [&_pre]:bg-zinc-950! [&_pre]:p-4 [&_pre]:leading-snug dark:[&_pre]:bg-zinc-900!"
+                v-html="html"
+              ></div>
+              <CopyButton :text="code" />
+            </div>
           </div>
         </div>
-        <DevOnly>
-          <div class="text-muted-foreground text-sm">
-            {{ component.name }}
-          </div>
-        </DevOnly>
       </DialogContent>
     </Dialog>
   </div>
