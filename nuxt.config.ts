@@ -67,4 +67,8 @@ export default defineNuxtConfig({
       scan: true,
     },
   },
+
+  sitemap: {
+    sources: ["/api/__sitemap__/urls"],
+  },
 });
