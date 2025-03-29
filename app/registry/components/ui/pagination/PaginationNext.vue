@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import { ChevronRight } from "lucide-vue-next";
 import { PaginationNext, type PaginationNextProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
-import { Button } from "~/registry/components/ui/button";
-import { cn } from "~/utils/utils";
 
 const props = withDefaults(
   defineProps<PaginationNextProps & { class?: HTMLAttributes["class"] }>(),
@@ -21,10 +18,10 @@ const delegatedProps = computed(() => {
 
 <template>
   <PaginationNext v-bind="delegatedProps">
-    <Button :class="cn('h-10 w-10 p-0', props.class)" variant="outline">
-      <slot>
-        <ChevronRight class="h-4 w-4" />
-      </slot>
-    </Button>
+    <slot>
+      <Button :class="cn('h-9 w-9 p-0', props.class)" variant="outline">
+        <Icon name="lucide:chevron-right" aria-hidden="true" class="size-4" />
+      </Button>
+    </slot>
   </PaginationNext>
 </template>

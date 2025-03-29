@@ -1,0 +1,25 @@
+<template>
+  <Pagination
+    :defaultPage="1"
+    :itemsPerPage="10"
+    :total="100"
+    v-slot="{ page, pageCount }"
+  >
+    <PaginationList class="flex w-full items-center justify-between gap-3">
+      <p class="text-muted-foreground text-sm" aria-live="polite">
+        Page
+        <span class="text-foreground">{{ page }}</span>
+        of
+        <span class="text-foreground">{{ pageCount }}</span>
+      </p>
+      <div class="flex items-center gap-3">
+        <PaginationPrev asChild>
+          <Button variant="outline" class="h-9 w-auto px-4">Previous</Button>
+        </PaginationPrev>
+        <PaginationNext asChild>
+          <Button variant="outline" class="h-9 w-auto px-4">Next</Button>
+        </PaginationNext>
+      </div>
+    </PaginationList>
+  </Pagination>
+</template>
