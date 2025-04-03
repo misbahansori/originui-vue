@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { computed, ref, useId } from "vue";
-import { cn } from "~/utils/utils";
-
 const id = useId();
 const open = ref(false);
 const value = ref("");
