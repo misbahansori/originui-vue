@@ -7,11 +7,14 @@ type PackageManager = "pnpm" | "npm" | "yarn" | "bun";
 
 const packageManager = ref<PackageManager>("pnpm");
 
+const runtimeConfig = useRuntimeConfig();
+const siteUrl = runtimeConfig.public.SITE_URL;
+
 const commands = {
-  pnpm: `pnpm dlx shadcn@latest add https://originui.com/r/${props.name}.json`,
-  npm: `npx shadcn@latest add https://originui.com/r/${props.name}.json`,
-  yarn: `npx shadcn@latest add https://originui.com/r/${props.name}.json`,
-  bun: `bunx --bun shadcn@latest add https://originui.com/r/${props.name}.json`,
+  pnpm: `pnpm dlx shadcn-vue@latest add ${siteUrl}/r/${props.name}.json`,
+  npm: `npx shadcn-vue@latest add ${siteUrl}/r/${props.name}.json`,
+  yarn: `npx shadcn-vue@latest add ${siteUrl}/r/${props.name}.json`,
+  bun: `bunx --bun shadcn-vue@latest add ${siteUrl}/r/${props.name}.json`,
 };
 </script>
 
