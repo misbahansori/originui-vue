@@ -1,0 +1,35 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip",
+  "type": "registry:ui",
+  "dependencies": [
+    "reka-ui"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/ui/tooltip/Tooltip.vue",
+      "content": "<script setup lang=\"ts\">\nimport { TooltipRoot, type TooltipRootEmits, type TooltipRootProps, useForwardPropsEmits } from 'reka-ui'\n\nconst props = defineProps<TooltipRootProps>()\nconst emits = defineEmits<TooltipRootEmits>()\n\nconst forwarded = useForwardPropsEmits(props, emits)\n</script>\n\n<template>\n  <TooltipRoot v-bind=\"forwarded\">\n    <slot />\n  </TooltipRoot>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "app/registry/components/ui/tooltip/TooltipContent.vue",
+      "content": "<script setup lang=\"ts\">\nimport {\n  TooltipContent,\n  type TooltipContentEmits,\n  type TooltipContentProps,\n  TooltipPortal,\n  useForwardPropsEmits,\n} from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport { cn } from \"~/utils/utils\";\n\ndefineOptions({\n  inheritAttrs: false,\n});\n\nconst props = withDefaults(\n  defineProps<TooltipContentProps & { class?: HTMLAttributes[\"class\"] }>(),\n  {\n    sideOffset: 4,\n  },\n);\n\nconst emits = defineEmits<TooltipContentEmits>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwarded = useForwardPropsEmits(delegatedProps, emits);\n</script>\n\n<template>\n  <TooltipPortal>\n    <TooltipContent\n      v-bind=\"{ ...forwarded, ...$attrs }\"\n      :class=\"\n        cn(\n          'bg-popover text-popover-foreground animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 relative z-50 max-w-70 rounded-md border px-3 py-1.5 text-xs',\n          props.class,\n        )\n      \"\n    >\n      <slot />\n    </TooltipContent>\n  </TooltipPortal>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "app/registry/components/ui/tooltip/TooltipProvider.vue",
+      "content": "<script setup lang=\"ts\">\nimport { TooltipProvider, type TooltipProviderProps } from 'reka-ui'\n\nconst props = defineProps<TooltipProviderProps>()\n</script>\n\n<template>\n  <TooltipProvider v-bind=\"props\">\n    <slot />\n  </TooltipProvider>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "app/registry/components/ui/tooltip/TooltipTrigger.vue",
+      "content": "<script setup lang=\"ts\">\nimport { TooltipTrigger, type TooltipTriggerProps } from 'reka-ui'\n\nconst props = defineProps<TooltipTriggerProps>()\n</script>\n\n<template>\n  <TooltipTrigger v-bind=\"props\">\n    <slot />\n  </TooltipTrigger>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "app/registry/components/ui/tooltip/index.ts",
+      "content": "export { default as Tooltip } from './Tooltip.vue'\nexport { default as TooltipContent } from './TooltipContent.vue'\nexport { default as TooltipProvider } from './TooltipProvider.vue'\nexport { default as TooltipTrigger } from './TooltipTrigger.vue'\n",
+      "type": "registry:ui"
+    }
+  ]
+}

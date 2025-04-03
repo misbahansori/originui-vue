@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-263",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/label.json",
+    "https://originui.com/r/slider.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-263.vue",
+      "content": "<script setup lang=\"ts\">\nconst value = ref([2, 7]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Vertical dual range slider and tooltip</Label>\n    <div class=\"flex h-40 justify-center\">\n      <Slider\n        v-model=\"value\"\n        :max=\"10\"\n        orientation=\"vertical\"\n        aria-label=\"Vertical slider\"\n        show-tooltip\n      />\n    </div>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "slider",
+      "vertical slider",
+      "range slider",
+      "label",
+      "radix"
+    ]
+  }
+}

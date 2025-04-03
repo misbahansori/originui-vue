@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-02",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/input.json",
+    "https://originui.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-02.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">\n      Required input\n      <span class=\"text-destructive\">*</span>\n    </Label>\n    <Input :id=\"id\" placeholder=\"Email\" type=\"email\" required />\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "input",
+      "label",
+      "required"
+    ]
+  }
+}

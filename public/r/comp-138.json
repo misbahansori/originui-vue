@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-138",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/checkbox.json",
+    "https://originui.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-138.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\nconst checked = ref(false);\n</script>\n\n<template>\n  <div class=\"flex items-center gap-2\">\n    <Checkbox :id=\"id\" v-model=\"checked\" />\n    <Label :for=\"id\">\n      I agree to the\n      <a class=\"underline\" href=\"https://originui.com\" target=\"_blank\">\n        terms of service\n      </a>\n    </Label>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "checkbox",
+      "label",
+      "login",
+      "authentication",
+      "radix"
+    ]
+  }
+}

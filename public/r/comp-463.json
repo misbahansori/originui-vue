@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-463",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/label.json",
+    "https://originui.com/r/pagination.json",
+    "https://originui.com/r/select.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-463.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <Pagination\n    :defaultPage=\"1\"\n    :itemsPerPage=\"10\"\n    :total=\"100\"\n    v-slot=\"{ page, pageCount }\"\n    :showEdges=\"true\"\n    :siblingCount=\"0\"\n  >\n    <PaginationList\n      class=\"flex w-full items-center justify-between gap-1\"\n      v-slot=\"{ items }\"\n    >\n      <div class=\"flex items-center gap-3\">\n        <Label :for=\"id\">Rows per page</Label>\n        <Select defaultValue=\"25\">\n          <SelectTrigger :id=\"id\" class=\"w-fit whitespace-nowrap\">\n            <SelectValue placeholder=\"Select number of results\" />\n          </SelectTrigger>\n          <SelectContent\n            className=\"[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2\"\n          >\n            <SelectItem value=\"10\">10</SelectItem>\n            <SelectItem value=\"25\">25</SelectItem>\n            <SelectItem value=\"50\">50</SelectItem>\n            <SelectItem value=\"100\">100</SelectItem>\n          </SelectContent>\n        </Select>\n      </div>\n      <p class=\"text-muted-foreground text-sm\" aria-live=\"polite\">\n        Page\n        <span class=\"text-foreground\">{{ page }}</span>\n        of\n        <span class=\"text-foreground\">{{ pageCount }}</span>\n      </p>\n      <div class=\"flex items-center gap-1\">\n        <PaginationFirst asChild>\n          <Button variant=\"ghost\" class=\"size-9\">\n            <Icon\n              name=\"lucide:chevron-first\"\n              aria-hidden=\"true\"\n              class=\"size-4\"\n            />\n          </Button>\n        </PaginationFirst>\n        <PaginationPrev asChild>\n          <Button variant=\"ghost\" class=\"size-9\">\n            <Icon\n              name=\"lucide:chevron-left\"\n              aria-hidden=\"true\"\n              class=\"size-4\"\n            />\n          </Button>\n        </PaginationPrev>\n        <PaginationNext asChild>\n          <Button variant=\"ghost\" class=\"size-9\">\n            <Icon\n              name=\"lucide:chevron-right\"\n              aria-hidden=\"true\"\n              class=\"size-4\"\n            />\n          </Button>\n        </PaginationNext>\n        <PaginationLast asChild>\n          <Button variant=\"ghost\" class=\"size-9\">\n            <Icon\n              name=\"lucide:chevron-last\"\n              aria-hidden=\"true\"\n              class=\"size-4\"\n            />\n          </Button>\n        </PaginationLast>\n      </div>\n    </PaginationList>\n  </Pagination>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "pagination",
+      "select",
+      "radix"
+    ],
+    "colSpan": 2
+  }
+}

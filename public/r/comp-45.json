@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-45",
+  "type": "registry:component",
+  "dependencies": [
+    "input-otp"
+  ],
+  "registryDependencies": [
+    "https://originui.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-45.vue",
+      "content": "<script setup lang=\"ts\">\nconst inputId = useId();\nconst value = ref([\"\", \"\", \"\", \"\", \"\", \"\"]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"inputId\">OTP input double</Label>\n    <PinInput\n      :id=\"inputId\"\n      v-model=\"value\"\n      class=\"flex items-center gap-3 has-disabled:opacity-50\"\n    >\n      <PinInputGroup>\n        <template v-for=\"(id, index) in 6\" :key=\"id\">\n          <PinInputInput\n            :index=\"index\"\n            :class=\"[\n              'focus:border-ring focus:ring-ring/50 relative -ms-px size-9 border font-medium shadow-xs transition-[color,box-shadow] focus:ring-[3px]',\n              index % 3 === 0 ? 'ms-0 rounded-s-md' : '',\n              index % 3 === 2 ? 'rounded-e-md' : '',\n            ]\"\n          ></PinInputInput>\n          <div v-if=\"index === 2\" class=\"text-muted-foreground/80\">\n            <Icon name=\"lucide:minus\" :size=\"16\" aria-hidden=\"true\" />\n          </div>\n        </template>\n      </PinInputGroup>\n    </PinInput>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with shadcn-vue\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://www.shadcn-vue.com/docs/components/pin-input.html\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        PinInput\n      </a>\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "input",
+      "label",
+      "otp"
+    ]
+  }
+}

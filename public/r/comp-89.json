@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-89",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-89.vue",
+      "content": "<template>\n  <div class=\"inline-flex items-center gap-2\">\n    <Button variant=\"ghost\">Cancel</Button>\n    <Button>Save</Button>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "button"
+    ],
+    "style": 2
+  }
+}

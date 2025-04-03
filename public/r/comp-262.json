@@ -1,0 +1,31 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-262",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/label.json",
+    "https://originui.com/r/slider.json",
+    "https://originui.com/r/input.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-262.vue",
+      "content": "<script setup lang=\"ts\">\nconst minValue = 0;\nconst maxValue = 100;\nconst initialValue = [25];\n\nconst {\n  sliderValues,\n  inputValues,\n  validateAndUpdateValue,\n  handleInputChange,\n  handleSliderChange,\n} = useSliderWithInput({ minValue, maxValue, initialValue });\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Vertical slider with input</Label>\n    <div class=\"flex h-40 flex-col items-center justify-center gap-4\">\n      <Slider\n        class=\"data-[orientation=vertical]:min-h-0\"\n        :model-value=\"sliderValues\"\n        :min=\"minValue\"\n        :max=\"maxValue\"\n        orientation=\"vertical\"\n        aria-label=\"Slider with input\"\n        @update:model-value=\"handleSliderChange\"\n      />\n      <Input\n        class=\"h-8 w-11 px-2 py-1 text-center\"\n        type=\"text\"\n        inputmode=\"decimal\"\n        :model-value=\"inputValues[0]\"\n        @update:model-value=\"(newValue) => handleInputChange(0, newValue)\"\n        @blur=\"() => validateAndUpdateValue(inputValues[0] ?? '', 0)\"\n        @keydown.enter=\"validateAndUpdateValue(inputValues[0] ?? '', 0)\"\n        aria-label=\"Enter value\"\n      />\n    </div>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "app/composables/useSliderWithInput.ts",
+      "content": "interface UseSliderWithInputProps {\n  minValue?: number;\n  maxValue?: number;\n  initialValue?: number[];\n  defaultValue?: number[];\n}\n\nexport function useSliderWithInput({\n  minValue = 0,\n  maxValue = 100,\n  initialValue = [minValue],\n  defaultValue = [minValue],\n}: UseSliderWithInputProps) {\n  const sliderValues = ref(initialValue);\n  const inputValues = ref(initialValue.map((v) => v.toString()));\n\n  const showReset = computed(() => {\n    return (\n      sliderValues.value.length === defaultValue.length &&\n      !sliderValues.value.every((value, index) => value === defaultValue[index])\n    );\n  });\n\n  const validateAndUpdateValue = (rawValue: string, index: number) => {\n    if (rawValue === \"\" || rawValue === \"-\") {\n      const newInputValues = [...inputValues.value];\n      newInputValues[index] = \"0\";\n      inputValues.value = newInputValues;\n\n      const newSliderValues = [...sliderValues.value];\n      newSliderValues[index] = 0;\n      sliderValues.value = newSliderValues;\n      return;\n    }\n\n    const numValue = parseFloat(rawValue);\n\n    if (isNaN(numValue)) {\n      const newInputValues = [...inputValues.value];\n      newInputValues[index] = sliderValues.value[index]!.toString();\n      inputValues.value = newInputValues;\n      return;\n    }\n\n    let clampedValue = Math.min(maxValue, Math.max(minValue, numValue));\n\n    if (sliderValues.value.length > 1) {\n      if (index === 0) {\n        clampedValue = Math.min(clampedValue, sliderValues.value[1]!);\n      } else {\n        clampedValue = Math.max(clampedValue, sliderValues.value[0]!);\n      }\n    }\n\n    const newSliderValues = [...sliderValues.value];\n    newSliderValues[index] = clampedValue;\n    sliderValues.value = newSliderValues;\n\n    const newInputValues = [...inputValues.value];\n    newInputValues[index] = clampedValue.toString();\n    inputValues.value = newInputValues;\n  };\n\n  const handleInputChange = (index: number, newValue: string | number) => {\n    if (newValue === \"\" || /^-?\\d*\\.?\\d*$/.test(newValue.toString())) {\n      const newInputValues = [...inputValues.value];\n      newInputValues[index] = newValue.toString();\n      inputValues.value = newInputValues;\n    }\n  };\n\n  const handleSliderChange = (newValue?: number[]) => {\n    if (!newValue) return;\n\n    sliderValues.value = newValue;\n    inputValues.value = newValue.map((v) => v.toString());\n  };\n\n  const resetToDefault = () => {\n    sliderValues.value = [...defaultValue];\n    inputValues.value = defaultValue.map((v) => v.toString());\n  };\n\n  return {\n    sliderValues,\n    inputValues,\n    validateAndUpdateValue,\n    handleInputChange,\n    handleSliderChange,\n    resetToDefault,\n    showReset,\n  };\n}\n",
+      "type": "registry:hook"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "slider",
+      "vertical slider",
+      "label",
+      "input",
+      "radix"
+    ]
+  }
+}

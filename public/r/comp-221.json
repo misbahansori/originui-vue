@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-221",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/select.json",
+    "https://originui.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-221.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Select with left text</Label>\n    <Select default-value=\"1\">\n      <SelectTrigger :id=\"id\">\n        <span>\n          Language:\n          <SelectValue placeholder=\"Select a language\" />\n        </span>\n      </SelectTrigger>\n      <SelectContent>\n        <SelectItem value=\"1\">Javascript</SelectItem>\n        <SelectItem value=\"2\">Bash</SelectItem>\n      </SelectContent>\n    </Select>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "label",
+      "select",
+      "radix"
+    ]
+  }
+}

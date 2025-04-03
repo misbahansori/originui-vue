@@ -1,0 +1,71 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion",
+  "type": "registry:ui",
+  "dependencies": [
+    "reka-ui",
+    "lucide-vue-next"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/ui/accordion/Accordion.vue",
+      "content": "<script setup lang=\"ts\">\nimport {\n  AccordionRoot,\n  type AccordionRootEmits,\n  type AccordionRootProps,\n  useForwardPropsEmits,\n} from 'reka-ui'\n\nconst props = defineProps<AccordionRootProps>()\nconst emits = defineEmits<AccordionRootEmits>()\n\nconst forwarded = useForwardPropsEmits(props, emits)\n</script>\n\n<template>\n  <AccordionRoot v-bind=\"forwarded\">\n    <slot />\n  </AccordionRoot>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "app/registry/components/ui/accordion/AccordionContent.vue",
+      "content": "<script setup lang=\"ts\">\nimport { AccordionContent, type AccordionContentProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport { cn } from \"~/utils/utils\";\n\nconst props = defineProps<\n  AccordionContentProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <AccordionContent\n    v-bind=\"delegatedProps\"\n    class=\"data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm\"\n  >\n    <div :class=\"cn('pt-0 pb-4', props.class)\">\n      <slot />\n    </div>\n  </AccordionContent>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "app/registry/components/ui/accordion/AccordionItem.vue",
+      "content": "<script setup lang=\"ts\">\nimport {\n  AccordionItem,\n  type AccordionItemProps,\n  useForwardProps,\n} from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport { cn } from \"~/utils/utils\";\n\nconst props = defineProps<\n  AccordionItemProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwardedProps = useForwardProps(delegatedProps);\n</script>\n\n<template>\n  <AccordionItem\n    v-bind=\"forwardedProps\"\n    :class=\"cn('border-b last:border-b-0', props.class)\"\n  >\n    <slot />\n  </AccordionItem>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "app/registry/components/ui/accordion/AccordionTrigger.vue",
+      "content": "<script setup lang=\"ts\">\nimport { ChevronDown } from \"lucide-vue-next\";\nimport {\n  AccordionHeader,\n  AccordionTrigger,\n  type AccordionTriggerProps,\n} from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport { cn } from \"~/utils/utils\";\n\nconst props = defineProps<\n  AccordionTriggerProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <AccordionHeader class=\"flex\">\n    <AccordionTrigger\n      v-bind=\"delegatedProps\"\n      :class=\"\n        cn(\n          'focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-center justify-between gap-4 rounded-md py-4 text-left text-sm font-semibold transition-all outline-none hover:underline focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:rotate-180',\n          props.class,\n        )\n      \"\n    >\n      <slot />\n      <slot name=\"icon\">\n        <ChevronDown\n          class=\"pointer-events-none h-4 w-4 shrink-0 opacity-60 transition-transform duration-200\"\n          aria-hidden=\"true\"\n        />\n      </slot>\n    </AccordionTrigger>\n  </AccordionHeader>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "app/registry/components/ui/accordion/index.ts",
+      "content": "export { default as Accordion } from './Accordion.vue'\nexport { default as AccordionContent } from './AccordionContent.vue'\nexport { default as AccordionItem } from './AccordionItem.vue'\nexport { default as AccordionTrigger } from './AccordionTrigger.vue'\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "app/registry/components/ui/accordion/metadata.json",
+      "content": "{\n  \"tailwind\": {\n    \"config\": {\n      \"theme\": {\n        \"extend\": {\n          \"keyframes\": {\n            \"accordion-down\": {\n              \"from\": {\n                \"height\": \"0\"\n              },\n              \"to\": {\n                \"height\": \"var(--reka-accordion-content-height)\"\n              }\n            },\n            \"accordion-up\": {\n              \"from\": {\n                \"height\": \"var(--reka-accordion-content-height)\"\n              },\n              \"to\": {\n                \"height\": \"0\"\n              }\n            }\n          },\n          \"animation\": {\n            \"accordion-down\": \"accordion-down 0.2s ease-out\",\n            \"accordion-up\": \"accordion-up 0.2s ease-out\"\n          }\n        }\n      }\n    }\n  }\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "tailwind": {
+    "config": {
+      "theme": {
+        "extend": {
+          "keyframes": {
+            "accordion-down": {
+              "from": {
+                "height": "0"
+              },
+              "to": {
+                "height": "var(--radix-accordion-content-height)"
+              }
+            },
+            "accordion-up": {
+              "from": {
+                "height": "var(--radix-accordion-content-height)"
+              },
+              "to": {
+                "height": "0"
+              }
+            }
+          },
+          "animation": {
+            "accordion-down": "accordion-down 0.2s ease-out",
+            "accordion-up": "accordion-up 0.2s ease-out"
+          }
+        }
+      }
+    }
+  }
+}

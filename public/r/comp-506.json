@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-506",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/button.json",
+    "https://originui.com/r/calendar.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-506.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "calendar",
+      "date",
+      "button",
+      "react daypicker"
+    ],
+    "colSpan": 3,
+    "style": 1
+  }
+}

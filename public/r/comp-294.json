@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-294",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-294.vue",
+      "content": "<template>\n  <!-- To make the notification fixed, add classes like `fixed bottom-4 right-4` to the container element. -->\n  <div class=\"bg-background z-50 max-w-[400px] rounded-md border p-4 shadow-lg\">\n    <div class=\"flex gap-3\">\n      <div\n        class=\"flex size-9 shrink-0 items-center justify-center rounded-full border\"\n        aria-hidden=\"true\"\n      >\n        <Icon name=\"lucide:refresh-cw\" class=\"size-4 opacity-60\" />\n      </div>\n      <div class=\"flex grow flex-col gap-3\">\n        <div class=\"space-y-1\">\n          <p class=\"text-sm font-medium\">Version 1.4 is now available!</p>\n          <p class=\"text-muted-foreground text-sm\">\n            This update contains several bug fixes and performance improvements.\n          </p>\n        </div>\n        <div class=\"flex gap-2\">\n          <Button size=\"sm\">Install</Button>\n          <Button size=\"sm\" variant=\"link\">Later</Button>\n        </div>\n      </div>\n      <Button\n        variant=\"ghost\"\n        class=\"group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent\"\n        aria-label=\"Close notification\"\n      >\n        <Icon\n          name=\"lucide:x\"\n          class=\"size-4 opacity-60 transition-opacity group-hover:opacity-100\"\n          aria-hidden=\"true\"\n        />\n      </Button>\n    </div>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "notification",
+      "button",
+      "info"
+    ],
+    "colSpan": 2,
+    "style": 1
+  }
+}

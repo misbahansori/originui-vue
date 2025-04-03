@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-142",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/checkbox.json",
+    "https://originui.com/r/label.json",
+    "https://originui.com/r/input.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-142.vue",
+      "content": "<script setup lang=\"ts\">\nconst checkboxId = useId();\nconst inputId = useId();\nconst checked = ref(false);\nconst inputRef = useTemplateRef(\"inputRef\");\n\nwatch(checked, (newValue) => {\n  if (newValue === true && inputRef.value) {\n    nextTick(() => {\n      inputRef.value?.$el.focus();\n    });\n  }\n});\n</script>\n\n<template>\n  <div>\n    <div class=\"flex items-start gap-2\">\n      <Checkbox\n        :id=\"checkboxId\"\n        v-model=\"checked\"\n        :aria-describedby=\"`${checkboxId}-description`\"\n        :aria-controls=\"inputId\"\n      />\n      <div class=\"grow\">\n        <div class=\"grid gap-2\">\n          <Label :for=\"checkboxId\">Checkbox with expansion</Label>\n          <p\n            :id=\"`${checkboxId}-description`\"\n            class=\"text-muted-foreground text-xs\"\n          >\n            You can use this checkbox with a label and a description.\n          </p>\n        </div>\n        <!-- Expandable field -->\n        <div\n          role=\"region\"\n          :id=\"inputId\"\n          :aria-labelledby=\"checkboxId\"\n          class=\"grid transition-all ease-in-out data-[state=collapsed]:grid-rows-[0fr] data-[state=collapsed]:opacity-0 data-[state=expanded]:grid-rows-[1fr] data-[state=expanded]:opacity-100\"\n          :data-state=\"checked ? 'expanded' : 'collapsed'\"\n        >\n          <div class=\"pointer-events-none -m-2 overflow-hidden p-2\">\n            <div class=\"pointer-events-auto mt-3\">\n              <Input\n                ref=\"inputRef\"\n                type=\"text\"\n                id=\"checkbox-11-additional-info\"\n                placeholder=\"Enter details\"\n                aria-label=\"Additional Information\"\n                :disabled=\"!checked\"\n              />\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "checkbox",
+      "label",
+      "collapsible",
+      "radix"
+    ]
+  }
+}

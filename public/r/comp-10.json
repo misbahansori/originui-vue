@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-10",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/input.json",
+    "https://originui.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-10.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with end icon</Label>\n    <div class=\"relative\">\n      <Input :id=\"id\" class=\"peer pe-9\" placeholder=\"Email\" type=\"email\" />\n      <div\n        class=\"text-muted-foreground/80 pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 peer-disabled:opacity-50\"\n      >\n        <Icon name=\"lucide:mail\" :size=\"16\" aria-hidden=\"true\" />\n      </div>\n    </div>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "input",
+      "label"
+    ]
+  }
+}

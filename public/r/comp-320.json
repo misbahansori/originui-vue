@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-320",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/button.json",
+    "https://originui.com/r/dialog.json",
+    "https://originui.com/r/input.json",
+    "https://originui.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-320.vue",
+      "content": "<script setup lang=\"ts\">\nconst PROJECT_NAME = \"Origin UI\";\nconst inputValue = ref(\"\");\n</script>\n\n<template>\n  <Dialog>\n    <DialogTrigger asChild>\n      <Button variant=\"outline\">Delete project</Button>\n    </DialogTrigger>\n    <DialogContent>\n      <div class=\"flex flex-col items-center gap-2\">\n        <div\n          class=\"flex size-9 shrink-0 items-center justify-center rounded-full border\"\n          aria-hidden=\"true\"\n        >\n          <Icon\n            name=\"lucide:circle-alert\"\n            class=\"size-4 opacity-80\"\n            aria-hidden=\"true\"\n          />\n        </div>\n        <DialogHeader>\n          <DialogTitle class=\"sm:text-center\">Final confirmation</DialogTitle>\n          <DialogDescription class=\"sm:text-center\">\n            This action cannot be undone. To confirm, please enter the project\n            name\n            <span class=\"text-foreground\">Origin UI</span>\n            .\n          </DialogDescription>\n        </DialogHeader>\n      </div>\n\n      <form class=\"space-y-5\">\n        <div class=\"*:not-first:mt-2\">\n          <Label for=\"project-name\">Project name</Label>\n          <Input\n            id=\"project-name\"\n            type=\"text\"\n            placeholder=\"Type Origin UI to confirm\"\n            v-model=\"inputValue\"\n          />\n        </div>\n        <DialogFooter>\n          <DialogClose asChild>\n            <Button type=\"button\" variant=\"outline\" class=\"flex-1\">\n              Cancel\n            </Button>\n          </DialogClose>\n          <Button\n            type=\"button\"\n            class=\"flex-1\"\n            :disabled=\"inputValue !== PROJECT_NAME\"\n          >\n            Delete\n          </Button>\n        </DialogFooter>\n      </form>\n    </DialogContent>\n  </Dialog>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "dialog",
+      "modal",
+      "delete",
+      "radix"
+    ],
+    "style": 1
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-415",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-415.vue",
+      "content": "<template>\n  <Badge>\n    <Icon\n      name=\"lucide:zap\"\n      class=\"-ms-0.5 size-3 opacity-60\"\n      aria-hidden=\"true\"\n    />\n    Badge\n  </Badge>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "badge",
+      "chip"
+    ],
+    "style": 1
+  }
+}

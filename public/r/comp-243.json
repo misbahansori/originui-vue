@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-243",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/label.json",
+    "https://originui.com/r/slider.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-243.vue",
+      "content": "<script setup lang=\"ts\">\nconst value = ref([25]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Slider with solid thumb</Label>\n    <Slider\n      v-model=\"value\"\n      class=\"[&>:last-child]:bg-primary [&>:first-child]:opacity-70\"\n      aria-label=\"Slider with solid thumb\"\n    />\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "slider",
+      "label",
+      "radix"
+    ]
+  }
+}

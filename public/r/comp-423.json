@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-423",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-423.vue",
+      "content": "<script setup>\nconst id = useId();\n</script>\n\n<template>\n  <Badge\n    class=\"has-data-[state=unchecked]:bg-muted has-data-[state=unchecked]:text-muted-foreground has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative outline-none has-focus-visible:ring-[3px]\"\n  >\n    <Checkbox\n      :id=\"id\"\n      class=\"peer sr-only after:absolute after:inset-0\"\n      :default-checked=\"true\"\n    />\n    <Icon\n      name=\"lucide:check\"\n      class=\"hidden size-4 peer-data-[state=checked]:block\"\n      aria-hidden=\"true\"\n    />\n    <label\n      :for=\"id\"\n      class=\"cursor-pointer select-none after:absolute after:inset-0\"\n    >\n      Selectable\n    </label>\n  </Badge>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "badge",
+      "chip",
+      "checkbox"
+    ],
+    "style": 1
+  }
+}

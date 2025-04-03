@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-105",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/button.json",
+    "https://originui.com/r/tooltip.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-105.vue",
+      "content": "<script setup lang=\"ts\">\n\n\nconst copied = ref(false);\n\nasync function handleCopy() {\n  try {\n    // await navigator.clipboard.writeText(\"string to copy\");\n    copied.value = true;\n    setTimeout(() => {\n      copied.value = false;\n    }, 1500);\n  } catch (err) {\n    console.error(\"Failed to copy text: \", err);\n  }\n}\n</script>\n\n<template>\n  <TooltipProvider :delay-duration=\"0\">\n    <Tooltip>\n      <TooltipTrigger as-child>\n        <Button\n          variant=\"outline\"\n          size=\"icon\"\n          class=\"disabled:opacity-100\"\n          @click=\"handleCopy\"\n          :aria-label=\"copied ? 'Copied' : 'Copy to clipboard'\"\n          :disabled=\"copied\"\n        >\n          <div\n            :class=\"[\n              'transition-all',\n              copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0',\n            ]\"\n          >\n            <Icon\n              name=\"lucide:check\"\n              class=\"stroke-emerald-500\"\n              size=\"16\"\n              aria-hidden=\"true\"\n            />\n          </div>\n          <div\n            :class=\"[\n              'absolute transition-all',\n              copied ? 'scale-0 opacity-0' : 'scale-100 opacity-100',\n            ]\"\n          >\n            <Icon name=\"lucide:copy\" size=\"16\" aria-hidden=\"true\" />\n          </div>\n        </Button>\n      </TooltipTrigger>\n      <TooltipContent class=\"px-2 py-1 text-xs\">Click to copy</TooltipContent>\n    </Tooltip>\n  </TooltipProvider>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "button",
+      "copy"
+    ],
+    "style": 2
+  }
+}

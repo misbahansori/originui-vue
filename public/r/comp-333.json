@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-333",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/command.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-333.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "dialog",
+      "modal",
+      "command",
+      "combobox",
+      "popover",
+      "search",
+      "radix",
+      "autocomplete",
+      "radix"
+    ],
+    "style": 1
+  }
+}

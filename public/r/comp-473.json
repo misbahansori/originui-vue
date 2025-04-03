@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-473",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/checkbox.json",
+    "https://originui.com/r/table.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-473.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "table",
+      "checkbox",
+      "card"
+    ],
+    "colSpan": 3
+  }
+}

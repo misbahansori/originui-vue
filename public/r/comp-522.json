@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-522",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/stepper.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-522.vue",
+      "content": "<script lang=\"ts\" setup>\nconst steps = [\n  {\n    step: 1,\n    title: \"Step One\",\n    description: \"Desc for step one\",\n  },\n  {\n    step: 2,\n    title: \"Step Two\",\n    description: \"Desc for step two\",\n  },\n  {\n    step: 3,\n    title: \"Step Three\",\n    description: \"Desc for step three\",\n  },\n];\n</script>\n\n<template>\n  <div class=\"space-y-8 text-center\">\n    <Stepper :default-value=\"2\">\n      <StepperItem\n        v-for=\"{ step, title, description } in steps\"\n        :key=\"step\"\n        :step=\"step\"\n        class=\"relative flex-1 flex-col!\"\n      >\n        <StepperTrigger class=\"flex-col gap-3 rounded\">\n          <StepperIndicator />\n          <div class=\"space-y-0.5 px-2\">\n            <StepperTitle>{{ title }}</StepperTitle>\n            <StepperDescription class=\"max-sm:hidden\">\n              {{ description }}\n            </StepperDescription>\n          </div>\n        </StepperTrigger>\n        <StepperSeparator\n          v-if=\"step < steps.length\"\n          class=\"absolute inset-x-0 top-3 left-[calc(50%+0.75rem+0.125rem)] -order-1 m-0 -translate-y-1/2 group-data-[orientation=horizontal]/stepper:w-[calc(100%-1.5rem-0.25rem)] group-data-[orientation=horizontal]/stepper:flex-none\"\n        />\n      </StepperItem>\n    </Stepper>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Stepper with titles and descriptions\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "stepper"
+    ],
+    "colSpan": 3
+  }
+}

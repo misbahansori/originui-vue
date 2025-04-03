@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-17",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/input.json",
+    "https://originui.com/r/label.json",
+    "https://originui.com/r/select-native.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-17.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with start select</Label>\n    <div class=\"flex rounded-md shadow-xs\">\n      <SelectNative\n        class=\"text-muted-foreground hover:text-foreground w-fit rounded-e-none shadow-none\"\n      >\n        <option value=\"https://\">https://</option>\n        <option value=\"http://\">http://</option>\n        <option value=\"ftp://\">ftp://</option>\n        <option value=\"sftp://\">sftp://</option>\n        <option value=\"ws://\">ws://</option>\n        <option value=\"wss://\">wss://</option>\n      </SelectNative>\n      <Input\n        :id=\"id\"\n        class=\"-ms-px rounded-s-none shadow-none focus-visible:z-10\"\n        placeholder=\"192.168.1.1\"\n        type=\"text\"\n      />\n    </div>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "input",
+      "label",
+      "select",
+      "native select"
+    ]
+  }
+}

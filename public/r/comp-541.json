@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-541",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/timeline.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-541.vue",
+      "content": "<script setup lang=\"ts\">\nconst items = [\n  {\n    id: 1,\n    date: \"Mar 15, 2024\",\n    title: \"Project Kickoff\",\n    description: \"Initial team meeting.\",\n  },\n  {\n    id: 2,\n    date: \"Mar 22, 2024\",\n    title: \"Design Phase\",\n    description: \"Completed wireframes.\",\n  },\n  {\n    id: 3,\n    date: \"Apr 5, 2024\",\n    title: \"Development Sprint\",\n    description: \"Backend development.\",\n  },\n  {\n    id: 4,\n    date: \"Apr 19, 2024\",\n    title: \"Testing & Deployment\",\n    description: \"Performance optimization.\",\n  },\n];\n</script>\n\n<template>\n  <Timeline :default-value=\"3\" orientation=\"horizontal\">\n    <TimelineItem\n      v-for=\"item in items\"\n      :key=\"item.id\"\n      :step=\"item.id\"\n      class=\"group-data-[orientation=horizontal]/timeline:mt-0\"\n    >\n      <TimelineHeader>\n        <TimelineSeparator\n          class=\"group-data-[orientation=horizontal]/timeline:top-8\"\n        />\n        <TimelineDate class=\"mb-10\">{{ item.date }}</TimelineDate>\n        <TimelineTitle>{{ item.title }}</TimelineTitle>\n        <TimelineIndicator\n          class=\"group-data-[orientation=horizontal]/timeline:top-8\"\n        />\n      </TimelineHeader>\n      <TimelineContent>{{ item.description }}</TimelineContent>\n    </TimelineItem>\n  </Timeline>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "timeline"
+    ],
+    "colSpan": 3
+  }
+}

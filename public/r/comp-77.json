@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-77",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/label.json",
+    "https://originui.com/r/textarea.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-77.vue",
+      "content": "<script setup lang=\"ts\">\nconst textValue = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"autogrowing-textarea\">Autogrowing textarea</Label>\n    <Textarea\n      id=\"autogrowing-textarea\"\n      class=\"field-sizing-content max-h-29.5 min-h-[none] resize-none py-1.75\"\n      v-model=\"textValue\"\n      placeholder=\"Leave a comment\"\n    />\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "label",
+      "textarea"
+    ]
+  }
+}

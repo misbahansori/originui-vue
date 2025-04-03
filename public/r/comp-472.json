@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-472",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/checkbox.json",
+    "https://originui.com/r/table.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-472.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "table",
+      "checkbox"
+    ],
+    "colSpan": 3
+  }
+}

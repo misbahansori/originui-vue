@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-192",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/select-native.json",
+    "https://originui.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-192.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Select with helper text (native)</Label>\n    <SelectNative :id=\"id\">\n      <option value=\"1\">Vue</option>\n      <option value=\"2\">Nuxt</option>\n      <option value=\"3\">Astro</option>\n      <option value=\"4\">Vitesse</option>\n    </SelectNative>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Tell us what's your favorite Select framework\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "label",
+      "select",
+      "native select"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-113",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-113.vue",
+      "content": "<template>\n  <div\n    class=\"divide-primary-foreground/30 inline-flex divide-x rounded-md shadow-xs rtl:space-x-reverse\"\n  >\n    <Button\n      class=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\"\n      size=\"icon\"\n      aria-label=\"Options\"\n    >\n      <Icon name=\"lucide:chevron-down\" size=\"16\" aria-hidden=\"true\" />\n    </Button>\n    <Button\n      class=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\"\n    >\n      <Icon\n        name=\"lucide:pin\"\n        class=\"-ms-1 opacity-60\"\n        size=\"16\"\n        aria-hidden=\"true\"\n      />\n      Pinned\n    </Button>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "button",
+      "dropdown"
+    ],
+    "style": 2
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-54",
+  "type": "registry:component",
+  "dependencies": [
+    "use-mask-input"
+  ],
+  "registryDependencies": [
+    "https://originui.com/r/input.json",
+    "https://originui.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-54.vue",
+      "content": "<script setup lang=\"ts\">\nimport { mask as vMask } from \"vue-the-mask\";\n\nconst inputValue = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"masked-input\">Input with mask</Label>\n    <Input\n      id=\"masked-input\"\n      placeholder=\"AB12 CDE\"\n      type=\"text\"\n      v-model=\"inputValue\"\n      v-mask=\"'AA99 AAA'\"\n      maxlength=\"7\"\n    />\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://vuejs-tips.github.io/vue-the-mask\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        vue-the-mask\n      </a>\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "input",
+      "label",
+      "mask"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-307",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-307.vue",
+      "content": "<script setup lang=\"ts\">\nconst isVisible = ref(true);\n\nconst hideBanner = () => {\n  isVisible.value = false;\n};\n</script>\n\n<template>\n  <div v-if=\"isVisible\" class=\"dark bg-muted text-foreground px-4 py-3 md:py-2\">\n    <div class=\"flex gap-2 md:items-center\">\n      <div class=\"flex grow gap-3 md:items-center\">\n        <Icon\n          name=\"lucide:eclipse\"\n          class=\"size-4 shrink-0 opacity-60 max-md:mt-0.5\"\n          aria-hidden=\"true\"\n        />\n        <div\n          class=\"flex grow flex-col justify-between gap-3 md:flex-row md:items-center\"\n        >\n          <p class=\"text-sm\">\n            It's live and ready to use! Start exploring the latest addition to\n            your toolkit.\n          </p>\n          <div class=\"flex gap-2 max-md:flex-wrap\">\n            <Button size=\"sm\" class=\"text-sm\">Download</Button>\n            <Button variant=\"link\" size=\"sm\" class=\"text-sm\">Learn more</Button>\n          </div>\n        </div>\n      </div>\n      <Button\n        variant=\"ghost\"\n        class=\"group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent\"\n        @click=\"hideBanner\"\n        aria-label=\"Close banner\"\n      >\n        <Icon\n          name=\"lucide:x\"\n          class=\"size-4 opacity-60 transition-opacity group-hover:opacity-100\"\n          aria-hidden=\"true\"\n        />\n      </Button>\n    </div>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "banner"
+    ],
+    "colSpan": 3
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-66",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/label.json",
+    "https://originui.com/r/textarea.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-66.vue",
+      "content": "<script setup lang=\"ts\">\nconst textValue = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"shorter-textarea\">Shorter textarea</Label>\n    <Textarea\n      id=\"shorter-textarea\"\n      class=\"min-h-[none]\"\n      v-model=\"textValue\"\n      placeholder=\"Leave a comment\"\n      rows=\"2\"\n    />\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "label",
+      "textarea"
+    ]
+  }
+}

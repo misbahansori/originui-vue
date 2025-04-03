@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-64",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/label.json",
+    "https://originui.com/r/textarea.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-64.vue",
+      "content": "<script setup lang=\"ts\">\nconst textValue = ref(\"Hello!\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"error-textarea\">Textarea with error</Label>\n    <Textarea\n      id=\"error-textarea\"\n      v-model=\"textValue\"\n      placeholder=\"Leave a comment\"\n      aria-invalid=\"true\"\n    />\n    <p class=\"text-destructive mt-2 text-xs\" role=\"alert\" aria-live=\"polite\">\n      Message should be at least 10 characters\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "label",
+      "textarea",
+      "error"
+    ]
+  }
+}

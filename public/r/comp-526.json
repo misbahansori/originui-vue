@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-526",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/stepper.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-526.vue",
+      "content": "<script lang=\"ts\" setup>\nconst steps = [1, 2, 3, 4];\n</script>\n\n<template>\n  <div class=\"space-y-8 text-center\">\n    <Stepper :default-value=\"2\" orientation=\"vertical\">\n      <StepperItem\n        v-for=\"step in steps\"\n        :key=\"step\"\n        :step=\"step\"\n        class=\"not-last:flex-1\"\n      >\n        <StepperTrigger>\n          <StepperIndicator />\n        </StepperTrigger>\n        <StepperSeparator v-if=\"step < steps.length\" />\n      </StepperItem>\n    </Stepper>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Vertical stepper with numbers and checkmarks\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "stepper",
+      "vertical stepper"
+    ],
+    "colSpan": 2
+  }
+}

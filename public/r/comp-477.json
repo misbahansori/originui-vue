@@ -1,0 +1,31 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-477",
+  "type": "registry:component",
+  "dependencies": [
+    "@tanstack/react-table"
+  ],
+  "registryDependencies": [
+    "https://originui.com/r/badge.json",
+    "https://originui.com/r/checkbox.json",
+    "https://originui.com/r/table.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-477.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "table",
+      "tanstack",
+      "checkbox",
+      "badge",
+      "chip",
+      "flag"
+    ],
+    "colSpan": 3
+  }
+}

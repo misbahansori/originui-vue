@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-117",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-117.vue",
+      "content": "<template>\n  <Button class=\"py-0 pe-0\" variant=\"outline\">\n    <Icon\n      name=\"lucide:thumbs-up\"\n      class=\"opacity-60\"\n      size=\"16\"\n      aria-hidden=\"true\"\n    />\n    Like\n    <span\n      class=\"text-muted-foreground before:bg-input relative ms-1 inline-flex h-full items-center justify-center rounded-full px-3 text-xs font-medium before:absolute before:inset-0 before:left-0 before:w-px\"\n    >\n      86\n    </span>\n  </Button>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "button",
+      "like",
+      "counter"
+    ],
+    "style": 2
+  }
+}

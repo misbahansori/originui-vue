@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-499",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/calendar.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-499.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "calendar",
+      "date",
+      "week",
+      "react daypicker"
+    ],
+    "style": 1
+  }
+}

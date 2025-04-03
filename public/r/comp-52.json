@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-52",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/input.json",
+    "https://originui.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-52.vue",
+      "content": "<script setup lang=\"ts\">\nconst inputValue = ref(\"This is a read-only input\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"readonly-input\">Read-only input</Label>\n    <Input\n      id=\"readonly-input\"\n      class=\"read-only:bg-muted\"\n      v-model=\"inputValue\"\n      readonly\n      placeholder=\"Email\"\n      type=\"email\"\n    />\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "input",
+      "label",
+      "read-only"
+    ]
+  }
+}

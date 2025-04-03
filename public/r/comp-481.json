@@ -1,0 +1,34 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-481",
+  "type": "registry:component",
+  "dependencies": [
+    "@dnd-kit/core",
+    "@dnd-kit/modifiers",
+    "@dnd-kit/sortable",
+    "@dnd-kit/utilities",
+    "@tanstack/react-table"
+  ],
+  "registryDependencies": [
+    "https://originui.com/r/button.json",
+    "https://originui.com/r/dropdown-menu.json",
+    "https://originui.com/r/table.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-481.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "table",
+      "tanstack",
+      "flag",
+      "sort",
+      "drag and drop"
+    ],
+    "colSpan": 3
+  }
+}

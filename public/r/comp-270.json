@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-270",
+  "type": "registry:component",
+  "files": [
+    {
+      "path": "app/registry/components/comp-270.vue",
+      "content": "<template>\n  <div class=\"rounded-md border border-red-500/50 px-4 py-3 text-red-600\">\n    <p class=\"flex items-center text-sm\">\n      <Icon\n        name=\"lucide:circle-alert\"\n        class=\"me-3 -mt-0.5 inline-flex size-4 shrink-0 opacity-60\"\n        aria-hidden=\"true\"\n      />\n      An error occurred!\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "alert",
+      "error"
+    ],
+    "colSpan": 2
+  }
+}

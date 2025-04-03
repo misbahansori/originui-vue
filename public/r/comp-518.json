@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-518",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/stepper.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-518.vue",
+      "content": "<template>\n  <div class=\"mx-auto max-w-xl space-y-8 text-center\">\n    <Stepper :default-value=\"2\">\n      <StepperItem :step=\"1\" class=\"not-last:flex-1\">\n        <StepperTrigger>\n          <StepperIndicator as-child>\n            <img\n              class=\"rounded-full\"\n              src=\"/avatar-40-05.jpg\"\n              width=\"32\"\n              height=\"32\"\n              alt=\"Mike Palmer\"\n            />\n          </StepperIndicator>\n        </StepperTrigger>\n        <StepperSeparator />\n      </StepperItem>\n      <StepperItem :step=\"2\" class=\"not-last:flex-1\" data-loading>\n        <StepperTrigger>\n          <StepperIndicator :isLoading=\"true\" />\n        </StepperTrigger>\n        <StepperSeparator />\n      </StepperItem>\n      <StepperItem :step=\"3\">\n        <StepperTrigger>\n          <StepperIndicator as-child>\n            <div>\n              <Icon name=\"lucide:shuffle\" aria-hidden=\"true\" class=\"size-3.5\" />\n              <span class=\"sr-only\">Shuffle</span>\n            </div>\n          </StepperIndicator>\n        </StepperTrigger>\n      </StepperItem>\n    </Stepper>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Stepper with mixed elements\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "stepper"
+    ],
+    "colSpan": 3
+  }
+}

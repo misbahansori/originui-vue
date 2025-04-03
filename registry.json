@@ -1440,62 +1440,12 @@
       ]
     },
     {
-      "name": "use-character-limit",
-      "type": "registry:hook",
-      "files": [
-        {
-          "path": "app/registry/components/hooks/use-character-limit.ts",
-          "type": "registry:hook"
-        }
-      ]
-    },
-    {
-      "name": "use-image-upload",
-      "type": "registry:hook",
-      "files": [
-        {
-          "path": "app/registry/components/hooks/use-image-upload.ts",
-          "type": "registry:hook"
-        }
-      ]
-    },
-    {
-      "name": "use-pagination",
-      "type": "registry:hook",
-      "files": [
-        {
-          "path": "app/registry/components/hooks/use-pagination.ts",
-          "type": "registry:hook"
-        }
-      ]
-    },
-    {
-      "name": "use-slider-with-input",
-      "type": "registry:hook",
-      "files": [
-        {
-          "path": "app/registry/components/hooks/use-slider-with-input.ts",
-          "type": "registry:hook"
-        }
-      ]
-    },
-    {
-      "name": "use-toast",
-      "type": "registry:hook",
-      "files": [
-        {
-          "path": "app/registry/components/hooks/use-toast.ts",
-          "type": "registry:hook"
-        }
-      ]
-    },
-    {
       "name": "utils",
       "type": "registry:lib",
       "dependencies": ["clsx", "tailwind-merge"],
       "files": [
         {
-          "path": "app/registry/components/lib/utils.ts",
+          "path": "app/utils/utils.ts",
           "type": "registry:lib"
         }
       ]
@@ -2058,10 +2008,6 @@
         {
           "path": "app/registry/components/comp-34.vue",
           "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/hooks/use-character-limit.ts",
-          "type": "registry:hook"
         }
       ],
       "meta": {
@@ -2079,10 +2025,6 @@
         {
           "path": "app/registry/components/comp-35.vue",
           "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/hooks/use-character-limit.ts",
-          "type": "registry:hook"
         }
       ],
       "meta": {
@@ -2753,10 +2695,6 @@
         {
           "path": "app/registry/components/comp-74.vue",
           "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/hooks/use-character-limit.ts",
-          "type": "registry:hook"
         }
       ],
       "meta": {
@@ -3540,10 +3478,6 @@
         {
           "path": "app/registry/components/comp-125.vue",
           "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/hooks/use-image-upload.ts",
-          "type": "registry:hook"
         }
       ],
       "meta": {
@@ -3559,10 +3493,6 @@
         {
           "path": "app/registry/components/comp-126.vue",
           "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/hooks/use-image-upload.ts",
-          "type": "registry:hook"
         }
       ],
       "meta": {
@@ -5790,7 +5720,7 @@
           "type": "registry:component"
         },
         {
-          "path": "app/registry/components/hooks/use-slider-with-input.ts",
+          "path": "app/composables/useSliderWithInput.ts",
           "type": "registry:hook"
         }
       ],
@@ -5820,7 +5750,7 @@
           "type": "registry:component"
         },
         {
-          "path": "app/registry/components/hooks/use-slider-with-input.ts",
+          "path": "app/composables/useSliderWithInput.ts",
           "type": "registry:hook"
         }
       ],
@@ -5876,7 +5806,7 @@
           "type": "registry:component"
         },
         {
-          "path": "app/registry/components/hooks/use-slider-with-input.ts",
+          "path": "app/composables/useSliderWithInput.ts",
           "type": "registry:hook"
         }
       ],
@@ -5951,7 +5881,7 @@
           "type": "registry:component"
         },
         {
-          "path": "app/registry/components/hooks/use-slider-with-input.ts",
+          "path": "app/composables/useSliderWithInput.ts",
           "type": "registry:hook"
         }
       ],
@@ -5991,7 +5921,7 @@
           "type": "registry:component"
         },
         {
-          "path": "app/registry/components/hooks/use-slider-with-input.ts",
+          "path": "app/composables/useSliderWithInput.ts",
           "type": "registry:hook"
         }
       ],
@@ -6014,7 +5944,7 @@
           "type": "registry:component"
         },
         {
-          "path": "app/registry/components/hooks/use-slider-with-input.ts",
+          "path": "app/composables/useSliderWithInput.ts",
           "type": "registry:hook"
         }
       ],
@@ -6506,10 +6436,6 @@
         {
           "path": "app/registry/components/comp-297.vue",
           "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/hooks/use-toast.ts",
-          "type": "registry:hook"
         }
       ],
       "meta": {
@@ -7138,14 +7064,6 @@
         {
           "path": "app/registry/components/comp-331.vue",
           "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/hooks/use-character-limit.ts",
-          "type": "registry:hook"
-        },
-        {
-          "path": "app/registry/components/hooks/use-image-upload.ts",
-          "type": "registry:hook"
         }
       ],
       "meta": {
@@ -9267,10 +9185,6 @@
         {
           "path": "app/registry/components/comp-459.vue",
           "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/hooks/use-pagination.ts",
-          "type": "registry:hook"
         }
       ],
       "meta": {
@@ -9286,10 +9200,6 @@
         {
           "path": "app/registry/components/comp-460.vue",
           "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/hooks/use-pagination.ts",
-          "type": "registry:hook"
         }
       ],
       "meta": {
@@ -9308,10 +9218,6 @@
         {
           "path": "app/registry/components/comp-461.vue",
           "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/hooks/use-pagination.ts",
-          "type": "registry:hook"
         }
       ],
       "meta": {
@@ -9330,10 +9236,6 @@
         {
           "path": "app/registry/components/comp-462.vue",
           "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/hooks/use-pagination.ts",
-          "type": "registry:hook"
         }
       ],
       "meta": {
@@ -9353,10 +9255,6 @@
         {
           "path": "app/registry/components/comp-463.vue",
           "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/hooks/use-pagination.ts",
-          "type": "registry:hook"
         }
       ],
       "meta": {
@@ -9375,10 +9273,6 @@
         {
           "path": "app/registry/components/comp-464.vue",
           "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/hooks/use-pagination.ts",
-          "type": "registry:hook"
         }
       ],
       "meta": {
@@ -9398,10 +9292,6 @@
         {
           "path": "app/registry/components/comp-465.vue",
           "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/hooks/use-pagination.ts",
-          "type": "registry:hook"
         }
       ],
       "meta": {
@@ -9772,10 +9662,6 @@
         {
           "path": "app/registry/components/comp-484.vue",
           "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/hooks/use-pagination.ts",
-          "type": "registry:hook"
         }
       ],
       "meta": {
@@ -10740,109 +10626,6 @@
       ],
       "meta": {
         "tags": ["timeline"],
-        "colSpan": 3
-      }
-    },
-    {
-      "name": "comp-542",
-      "type": "registry:component",
-      "dependencies": [
-        "date-fns",
-        "@dnd-kit/core",
-        "@dnd-kit/modifiers",
-        "@dnd-kit/utilities",
-        "@remixicon/react"
-      ],
-      "registryDependencies": [
-        "https://originui.com/r/button.json",
-        "https://originui.com/r/calendar.json",
-        "https://originui.com/r/checkbox.json",
-        "https://originui.com/r/dropdown-menu.json",
-        "https://originui.com/r/dialog.json",
-        "https://originui.com/r/input.json",
-        "https://originui.com/r/textarea.json",
-        "https://originui.com/r/label.json",
-        "https://originui.com/r/popover.json",
-        "https://originui.com/r/radio-group.json",
-        "https://originui.com/r/select.json",
-        "https://originui.com/r/sonner.json"
-      ],
-      "files": [
-        {
-          "path": "app/registry/components/comp-542.vue",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/agenda-view.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/calendar-dnd-context.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/constants.ts",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/day-view.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/draggable-event.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/droppable-cell.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/event-dialog.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/event-item.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/events-popup.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/event-calendar.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/index.ts",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/month-view.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/types.ts",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/utils.ts",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/week-view.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/hooks/use-current-time-indicator.ts",
-          "type": "registry:component"
-        },
-        {
-          "path": "app/registry/components/event-calendar/hooks/use-event-visibility.ts",
-          "type": "registry:component"
-        }
-      ],
-      "meta": {
-        "tags": ["calendar"],
         "colSpan": 3
       }
     }

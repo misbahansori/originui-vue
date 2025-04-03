@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-398",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/avatar.json",
+    "https://originui.com/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-398.vue",
+      "content": "<template>\n  <div class=\"relative\">\n    <Avatar>\n      <AvatarImage src=\"./avatar-80-07.jpg\" alt=\"Kelly King\" />\n      <AvatarFallback>KK</AvatarFallback>\n    </Avatar>\n    <Badge\n      class=\"border-background absolute -top-1.5 left-full min-w-5 -translate-x-3.5 px-1\"\n    >\n      6\n    </Badge>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "avatar",
+      "user",
+      "profile",
+      "badge",
+      "chip"
+    ],
+    "style": 1
+  }
+}

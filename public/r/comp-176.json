@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-176",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/switch.json",
+    "https://originui.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-176.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"inline-flex items-center gap-2\">\n    <Switch :id=\"id\" class=\"rounded-sm [&_span]:rounded\" />\n    <Label :for=\"id\" class=\"sr-only\">Square switch</Label>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "switch",
+      "radix"
+    ],
+    "style": 1
+  }
+}

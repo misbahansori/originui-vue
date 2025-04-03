@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-70",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/button.json",
+    "https://originui.com/r/label.json",
+    "https://originui.com/r/textarea.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-70.vue",
+      "content": "<script setup lang=\"ts\">\nconst textValue = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"full-button-textarea\">Textarea with button</Label>\n    <Textarea\n      id=\"full-button-textarea\"\n      v-model=\"textValue\"\n      placeholder=\"Leave a comment\"\n    />\n    <Button variant=\"outline\" class=\"w-full\">Send</Button>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "label",
+      "textarea",
+      "button"
+    ]
+  }
+}

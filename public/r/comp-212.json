@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-212",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/select.json",
+    "https://originui.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-212.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Select with auto-width</Label>\n    <Select default-value=\"1\">\n      <!-- Adjust the min-width to fit the longest option -->\n      <SelectTrigger :id=\"id\" class=\"w-auto max-w-full min-w-48\">\n        <SelectValue placeholder=\"Select framework\" />\n      </SelectTrigger>\n      <SelectContent>\n        <SelectItem value=\"1\">Vue</SelectItem>\n        <SelectItem value=\"2\">Nuxt</SelectItem>\n        <SelectItem value=\"3\">Astro</SelectItem>\n        <SelectItem value=\"4\">Vitesse</SelectItem>\n      </SelectContent>\n    </Select>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "label",
+      "select",
+      "radix"
+    ]
+  }
+}

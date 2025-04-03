@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-174",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/switch.json",
+    "https://originui.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-174.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div\n    class=\"inline-flex items-center gap-2 [--primary:var(--color-indigo-500)] [--ring:var(--color-indigo-300)] in-[.dark]:[--primary:var(--color-indigo-500)] in-[.dark]:[--ring:var(--color-indigo-900)]\"\n  >\n    <Switch :id=\"id\" :default-checked=\"true\" />\n    <Label :for=\"id\" class=\"sr-only\">Colored switch</Label>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "switch",
+      "radix"
+    ],
+    "style": 1
+  }
+}
