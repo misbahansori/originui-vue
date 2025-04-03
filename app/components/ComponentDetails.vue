@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { RegistryItem } from "shadcn/registry";
 import { codeToHtml } from "shiki";
 
 const props = defineProps<{
