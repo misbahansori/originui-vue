@@ -1,67 +1,76 @@
 <script setup lang="ts">
 const id = useId();
+
+const options = [
+  {
+    value: "1",
+    label: "Jenny Hamilton",
+    avatar: "/avatar-40-01.jpg",
+    username: "@jennycodes",
+  },
+  {
+    value: "2",
+    label: "Paul Smith",
+    avatar: "/avatar-40-02.jpg",
+    username: "@paulsmith",
+  },
+  {
+    value: "3",
+    label: "Luna Wyen",
+    avatar: "/avatar-40-03.jpg",
+    username: "@wyen.luna",
+  },
+];
+
+const selectedOption = ref(options[0]);
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
     <Label :for="id">Options with portrait</Label>
-    <Select default-value="1">
+    <Select v-model="selectedOption">
       <SelectTrigger
         :id="id"
         class="h-auto ps-2 text-left [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_img]:shrink-0"
       >
-        <SelectValue placeholder="Choose a plan" />
+        <SelectValue placeholder="Select user">
+          <span v-if="selectedOption" class="flex items-center gap-2">
+            <img
+              class="rounded-full"
+              :src="selectedOption.avatar"
+              :alt="selectedOption.label"
+              width="40"
+              height="40"
+            />
+            <span>
+              <span class="block font-medium">{{ selectedOption.label }}</span>
+              <span class="text-muted-foreground mt-0.5 block text-xs">
+                {{ selectedOption.username }}
+              </span>
+            </span>
+          </span>
+        </SelectValue>
       </SelectTrigger>
       <SelectContent
         class="[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2"
       >
-        <SelectItem value="1">
+        <SelectItem
+          v-for="option in options"
+          :key="option.value"
+          :value="option"
+        >
           <span class="flex items-center gap-2">
             <img
               class="rounded-full"
-              src="/avatar-40-01.jpg"
-              alt="Jenny Hamilton"
+              :src="option.avatar"
+              :alt="option.label"
               width="40"
               height="40"
             />
             <span>
-              <span class="block font-medium">Jenny Hamilton</span>
+              <span class="block font-medium">{{ option.label }}</span>
               <span class="text-muted-foreground mt-0.5 block text-xs">
-                @jennycodes
-              </span>
-            </span>
-          </span>
-        </SelectItem>
-        <SelectItem value="2">
-          <span class="flex items-center gap-2">
-            <img
-              class="rounded-full"
-              src="/avatar-40-02.jpg"
-              alt="Paul Smith"
-              width="40"
-              height="40"
-            />
-            <span>
-              <span class="block font-medium">Paul Smith</span>
-              <span class="text-muted-foreground mt-0.5 block text-xs">
-                @paulsmith
-              </span>
-            </span>
-          </span>
-        </SelectItem>
-        <SelectItem value="3">
-          <span class="flex items-center gap-2">
-            <img
-              class="rounded-full"
-              src="/avatar-40-03.jpg"
-              alt="Luna Wyen"
-              width="40"
-              height="40"
-            />
-            <span>
-              <span class="block font-medium">Luna Wyen</span>
-              <span class="text-muted-foreground mt-0.5 block text-xs">
-                @wyen.luna
+                {{ option.username }}
               </span>
             </span>
           </span>

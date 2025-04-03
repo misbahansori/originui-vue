@@ -1,5 +1,23 @@
 <script setup lang="ts">
 const id = useId();
+
+const options = [
+  {
+    label: "Standard Plan",
+    value: "standard",
+    description: "Ideal for individuals",
+  },
+  {
+    label: "Pro Plan",
+    value: "pro",
+    description: "For professional users",
+  },
+  {
+    label: "Enterprise Plan",
+    value: "enterprise",
+    description: "Built for large teams",
+  },
+];
 </script>
 
 <template>
@@ -12,22 +30,14 @@ const id = useId();
       <SelectContent
         class="[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2"
       >
-        <SelectItem value="1">
-          Standard Plan
+        <SelectItem
+          v-for="option in options"
+          :key="option.value"
+          :value="option"
+        >
+          <SelectItemText>{{ option.label }}</SelectItemText>
           <span class="text-muted-foreground mt-1 block text-xs" data-desc>
-            Ideal for individuals
-          </span>
-        </SelectItem>
-        <SelectItem value="2">
-          Pro Plan
-          <span class="text-muted-foreground mt-1 block text-xs" data-desc>
-            For professional users
-          </span>
-        </SelectItem>
-        <SelectItem value="3">
-          Enterprise Plan
-          <span class="text-muted-foreground mt-1 block text-xs" data-desc>
-            Built for large teams
+            {{ option.description }}
           </span>
         </SelectItem>
       </SelectContent>
