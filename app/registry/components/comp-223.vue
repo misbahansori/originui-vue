@@ -1,31 +1,56 @@
 <script setup lang="ts">
 const id = useId();
+
+const options = [
+  {
+    label: "Vue",
+    icon: "logos:vue",
+    value: "vue",
+  },
+  {
+    label: "Nuxt",
+    icon: "logos:nuxt-icon",
+    value: "nuxt",
+  },
+  {
+    label: "Vite",
+    icon: "logos:vitejs",
+    value: "vite",
+  },
+];
+
+const selectedOption = ref(options[0]);
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
     <Label :for="id">Options with icon and right indicator</Label>
-    <Select default-value="2">
+    <Select v-model="selectedOption">
       <SelectTrigger
         :id="id"
         class="[&>span_svg]:text-muted-foreground/80 [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_svg]:shrink-0"
       >
-        <SelectValue placeholder="Select framework" />
+        <SelectValue placeholder="Select framework">
+          <template v-if="selectedOption">
+            <Icon
+              :name="selectedOption.icon"
+              class="size-4"
+              aria-hidden="true"
+            />
+            <span class="truncate">{{ selectedOption.label }}</span>
+          </template>
+        </SelectValue>
       </SelectTrigger>
       <SelectContent
         class="[&_*[role=option]>span>svg]:text-muted-foreground/80 [&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2 [&_*[role=option]>span]:flex [&_*[role=option]>span]:items-center [&_*[role=option]>span]:gap-2 [&_*[role=option]>span>svg]:shrink-0"
       >
-        <SelectItem value="1">
-          <Icon name="logos:vue" size="16" aria-hidden="true" />
-          <span class="truncate">Vue</span>
-        </SelectItem>
-        <SelectItem value="2">
-          <Icon name="logos:nuxt-icon" size="16" aria-hidden="true" />
-          <span class="truncate">Nuxt</span>
-        </SelectItem>
-        <SelectItem value="3">
-          <Icon name="logos:vitejs" size="16" aria-hidden="true" />
-          <span class="truncate">Vitesse</span>
+        <SelectItem
+          v-for="option in options"
+          :key="option.value"
+          :value="option"
+        >
+          <Icon :name="option.icon" class="size-4" aria-hidden="true" />
+          <span class="truncate">{{ option.label }}</span>
         </SelectItem>
       </SelectContent>
     </Select>

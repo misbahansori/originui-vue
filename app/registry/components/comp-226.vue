@@ -1,51 +1,52 @@
 <script setup lang="ts">
 const id = useId();
+
+const options = [
+  { value: "1", label: "Frank Allison", avatar: "/avatar-20-01.jpg" },
+  { value: "2", label: "Jenny Hamilton", avatar: "/avatar-20-02.jpg" },
+  { value: "3", label: "Paul Smith", avatar: "/avatar-20-03.jpg" },
+];
+
+const selectedOption = ref(options[0]);
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
     <Label :for="id">Options with avatar</Label>
-    <Select default-value="1">
+    <Select v-model="selectedOption">
       <SelectTrigger
         :id="id"
         class="ps-2 [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_img]:shrink-0"
       >
-        <SelectValue placeholder="Select framework" />
+        <SelectValue placeholder="Select framework">
+          <template v-if="selectedOption">
+            <img
+              :src="selectedOption.avatar"
+              :alt="selectedOption.label"
+              class="size-5 rounded"
+            />
+            <span class="truncate">{{ selectedOption.label }}</span>
+          </template>
+        </SelectValue>
       </SelectTrigger>
       <SelectContent
         class="[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2 [&_*[role=option]>span]:flex [&_*[role=option]>span]:items-center [&_*[role=option]>span]:gap-2"
       >
         <SelectGroup>
           <SelectLabel class="ps-2">Impersonate user</SelectLabel>
-          <SelectItem value="1">
+          <SelectItem
+            v-for="option in options"
+            :key="option.value"
+            :value="option"
+          >
             <img
               class="size-5 rounded"
-              src="/avatar-20-01.jpg"
-              alt="Frank Allison"
+              :src="option.avatar"
+              :alt="option.label"
               width="20"
               height="20"
             />
-            <span class="truncate">Jenny Hamilton</span>
-          </SelectItem>
-          <SelectItem value="2">
-            <img
-              class="size-5 rounded"
-              src="/avatar-20-02.jpg"
-              alt="Xavier Guerra"
-              width="20"
-              height="20"
-            />
-            <span class="truncate">Paul Smith</span>
-          </SelectItem>
-          <SelectItem value="3">
-            <img
-              class="size-5 rounded"
-              src="/avatar-20-03.jpg"
-              alt="Anne Kelley"
-              width="20"
-              height="20"
-            />
-            <span class="truncate">Luna Wyen</span>
+            <span class="truncate">{{ option.label }}</span>
           </SelectItem>
         </SelectGroup>
       </SelectContent>
