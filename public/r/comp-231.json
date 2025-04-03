@@ -1,0 +1,32 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-231",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/command.json",
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/popover.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-231.vue",
+      "content": "<script setup lang=\"ts\">\nimport { computed, ref, useId } from \"vue\";\nimport { cn } from \"~/utils/utils\";\n\nconst id = useId();\nconst open = ref(false);\nconst value = ref(\"Europe/London\");\n\nconst timezones = Intl.supportedValuesOf(\"timeZone\");\n\nconst formattedTimezones = computed(() => {\n  return timezones\n    .map((timezone) => {\n      const formatter = new Intl.DateTimeFormat(\"en\", {\n        timeZone: timezone,\n        timeZoneName: \"shortOffset\",\n      });\n      const parts = formatter.formatToParts(new Date());\n      const offset =\n        parts.find((part) => part.type === \"timeZoneName\")?.value || \"\";\n      const modifiedOffset = offset === \"GMT\" ? \"GMT+0\" : offset;\n\n      return {\n        value: timezone,\n        label: `(${modifiedOffset}) ${timezone.replace(/_/g, \" \")}`,\n        numericOffset: parseInt(\n          offset.replace(\"GMT\", \"\").replace(\"+\", \"\") || \"0\",\n        ),\n      };\n    })\n    .sort((a, b) => a.numericOffset - b.numericOffset);\n});\n\nconst selectedTimezone = computed(() => {\n  return formattedTimezones.value.find(\n    (timezone) => timezone.value === value.value,\n  )?.label;\n});\n\nfunction handleSelect(currentValue: string) {\n  value.value = currentValue === value.value ? \"\" : currentValue;\n  open.value = false;\n}\n\nfunction customFilter(value: string, search: string) {\n  const normalizedValue = value.toLowerCase();\n  const normalizedSearch = search.toLowerCase().replace(/\\s+/g, \"\");\n  return normalizedValue.includes(normalizedSearch) ? 1 : 0;\n}\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Timezone select with search</Label>\n    <Popover v-model:open=\"open\">\n      <PopoverTrigger as-child>\n        <Button\n          :id=\"id\"\n          variant=\"outline\"\n          role=\"combobox\"\n          :aria-expanded=\"open\"\n          class=\"bg-background hover:bg-background border-input w-full justify-between px-3 font-normal outline-offset-0 outline-none focus-visible:outline-[3px]\"\n        >\n          <span :class=\"cn('truncate', !value && 'text-muted-foreground')\">\n            {{ selectedTimezone || \"Select timezone\" }}\n          </span>\n          <Icon\n            name=\"lucide:chevron-down\"\n            size=\"16\"\n            class=\"text-muted-foreground/80 shrink-0\"\n            aria-hidden=\"true\"\n          />\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent\n        class=\"border-input w-full min-w-[var(--reka-popper-anchor-width)] p-0\"\n        align=\"start\"\n      >\n        <Command :filter=\"customFilter\">\n          <CommandInput placeholder=\"Search timezone...\" />\n          <CommandList>\n            <CommandEmpty>No timezone found.</CommandEmpty>\n            <CommandGroup>\n              <CommandItem\n                v-for=\"timezone in formattedTimezones\"\n                :key=\"timezone.value\"\n                :value=\"timezone.value\"\n                @select=\"handleSelect(timezone.value)\"\n              >\n                {{ timezone.label }}\n                <Icon\n                  v-if=\"value === timezone.value\"\n                  name=\"lucide:check\"\n                  size=\"16\"\n                  class=\"ml-auto\"\n                />\n              </CommandItem>\n            </CommandGroup>\n          </CommandList>\n        </Command>\n      </PopoverContent>\n    </Popover>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "label",
+      "select",
+      "command",
+      "combobox",
+      "popover",
+      "search",
+      "autocomplete",
+      "timezone",
+      "time",
+      "radix"
+    ]
+  }
+}

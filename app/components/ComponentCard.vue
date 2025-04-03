@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { RegistryItem } from "shadcn/registry";
+
 interface Props {
   component: RegistryItem;
   isSearchPage?: boolean;

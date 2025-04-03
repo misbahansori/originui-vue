@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-479",
+  "type": "registry:component",
+  "dependencies": [
+    "@tanstack/react-table"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/table.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-479.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "table",
+      "tanstack",
+      "flag",
+      "sort",
+      "resize"
+    ],
+    "colSpan": 3
+  }
+}

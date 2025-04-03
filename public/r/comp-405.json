@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-405",
+  "type": "registry:component",
+  "files": [
+    {
+      "path": "app/registry/components/comp-405.vue",
+      "content": "<template></template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "avatar",
+      "avatar group"
+    ],
+    "style": 1
+  }
+}

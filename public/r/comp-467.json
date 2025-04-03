@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-467",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/table.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-467.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "table",
+      "user",
+      "avatar"
+    ],
+    "colSpan": 3
+  }
+}

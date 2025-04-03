@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-177",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/switch.json",
+    "https://originui-vue.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-177.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"inline-flex items-center gap-2\">\n    <Switch\n      :id=\"id\"\n      class=\"[&_span]:border-input h-3 w-9 border-none outline-offset-[6px] [&_span]:border\"\n    />\n    <Label :for=\"id\" class=\"sr-only\">M2-style switch</Label>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "switch",
+      "radix"
+    ],
+    "style": 1
+  }
+}

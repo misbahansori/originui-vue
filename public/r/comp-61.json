@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-61",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/textarea.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-61.vue",
+      "content": "<script setup lang=\"ts\">\nconst textValue = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"helper-textarea\">Textarea with helper text</Label>\n    <Textarea\n      id=\"helper-textarea\"\n      v-model=\"textValue\"\n      placeholder=\"Leave a comment\"\n    />\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Please add as many details as you can\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "label",
+      "textarea",
+      "helper"
+    ]
+  }
+}

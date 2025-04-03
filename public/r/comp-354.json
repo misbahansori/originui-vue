@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-354",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/tooltip.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-354.vue",
+      "content": "<template>\n  <TooltipProvider :delay-duration=\"0\">\n    <Tooltip>\n      <TooltipTrigger as-child>\n        <Button variant=\"outline\" size=\"sm\">Tiny</Button>\n      </TooltipTrigger>\n      <TooltipContent class=\"px-2 py-1 text-xs\">\n        This is a simple tooltip\n      </TooltipContent>\n    </Tooltip>\n  </TooltipProvider>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "tooltip",
+      "radix"
+    ],
+    "style": 1
+  }
+}

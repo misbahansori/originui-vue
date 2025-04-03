@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-374",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/dropdown-menu.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-374.vue",
+      "content": "<script setup lang=\"ts\">\nconst framework = ref(\"nextjs\");\nconst emailNotifications = ref(false);\nconst pushNotifications = ref(true);\n</script>\n\n<template>\n  <DropdownMenu>\n    <DropdownMenuTrigger asChild>\n      <Button variant=\"outline\">\n        Rich menu with icons\n        <Icon\n          name=\"lucide:chevron-down\"\n          class=\"-me-1 size-4 opacity-60\"\n          aria-hidden=\"true\"\n        />\n      </Button>\n    </DropdownMenuTrigger>\n    <DropdownMenuContent>\n      <DropdownMenuGroup>\n        <DropdownMenuItem>\n          <Icon\n            name=\"lucide:plus\"\n            class=\"size-4 opacity-60\"\n            aria-hidden=\"true\"\n          />\n          <span>New</span>\n          <DropdownMenuShortcut>⌘N</DropdownMenuShortcut>\n        </DropdownMenuItem>\n      </DropdownMenuGroup>\n      <DropdownMenuSeparator />\n      <DropdownMenuGroup>\n        <DropdownMenuSub>\n          <DropdownMenuSubTrigger inset>Framework</DropdownMenuSubTrigger>\n          <DropdownMenuPortal>\n            <DropdownMenuSubContent>\n              <DropdownMenuRadioGroup v-model=\"framework\">\n                <DropdownMenuRadioItem value=\"nextjs\">\n                  Next.js\n                </DropdownMenuRadioItem>\n                <DropdownMenuRadioItem value=\"sveltekit\" disabled>\n                  SvelteKit\n                </DropdownMenuRadioItem>\n                <DropdownMenuRadioItem value=\"remix\">\n                  Remix\n                </DropdownMenuRadioItem>\n                <DropdownMenuRadioItem value=\"astro\">\n                  Astro\n                </DropdownMenuRadioItem>\n              </DropdownMenuRadioGroup>\n            </DropdownMenuSubContent>\n          </DropdownMenuPortal>\n        </DropdownMenuSub>\n        <DropdownMenuSub>\n          <DropdownMenuSubTrigger inset>Notifications</DropdownMenuSubTrigger>\n          <DropdownMenuPortal>\n            <DropdownMenuSubContent>\n              <DropdownMenuCheckboxItem\n                :checked=\"emailNotifications\"\n                @update:checked=\"emailNotifications = $event\"\n              >\n                Email\n              </DropdownMenuCheckboxItem>\n              <DropdownMenuCheckboxItem\n                :checked=\"pushNotifications\"\n                @update:checked=\"pushNotifications = $event\"\n              >\n                Push\n              </DropdownMenuCheckboxItem>\n            </DropdownMenuSubContent>\n          </DropdownMenuPortal>\n        </DropdownMenuSub>\n      </DropdownMenuGroup>\n      <DropdownMenuSeparator />\n      <DropdownMenuGroup>\n        <DropdownMenuItem>\n          <Icon\n            name=\"lucide:share-2\"\n            class=\"size-4 opacity-60\"\n            aria-hidden=\"true\"\n          />\n          <span>Share</span>\n        </DropdownMenuItem>\n        <DropdownMenuItem>\n          <Icon\n            name=\"lucide:archive-restore\"\n            class=\"size-4 opacity-60\"\n            aria-hidden=\"true\"\n          />\n          <span>Archive</span>\n        </DropdownMenuItem>\n      </DropdownMenuGroup>\n      <DropdownMenuSeparator />\n      <DropdownMenuItem variant=\"destructive\">\n        <Icon name=\"lucide:trash\" class=\"size-4\" aria-hidden=\"true\" />\n        <span>Delete</span>\n        <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>\n      </DropdownMenuItem>\n    </DropdownMenuContent>\n  </DropdownMenu>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "dropdown",
+      "checkbox",
+      "radio",
+      "delete",
+      "radix"
+    ],
+    "style": 1
+  }
+}

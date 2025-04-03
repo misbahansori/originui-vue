@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { LucideLoader } from "lucide-vue-next";
+import type { RegistryItem } from "shadcn/registry";
 defineProps<{
   component: RegistryItem;
 }>();
@@ -10,7 +12,7 @@ defineProps<{
     </template>
     <template #fallback>
       <div class="flex items-center justify-center p-4">
-        <Icon name="lucide:loader" class="mx-auto size-4 animate-spin" />
+        <LucideLoader class="mx-auto size-4 animate-spin" />
       </div>
     </template>
   </Suspense>

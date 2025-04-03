@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-190",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/select-native.json",
+    "https://originui-vue.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-190.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Select with placeholder (native)</Label>\n    <SelectNative :id=\"id\" default-value=\"\">\n      <option value=\"\" disabled>Please select a value</option>\n      <option value=\"1\">1 to 5</option>\n      <option value=\"2\">5 to 10</option>\n      <option value=\"3\">More than 10</option>\n    </SelectNative>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "label",
+      "select",
+      "native select"
+    ]
+  }
+}

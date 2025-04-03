@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-361",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/tooltip.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-361.vue",
+      "content": "<template>\n  <TooltipProvider :delay-duration=\"0\">\n    <Tooltip>\n      <TooltipTrigger as-child>\n        <Button variant=\"outline\" size=\"sm\">Stats</Button>\n      </TooltipTrigger>\n      <TooltipContent class=\"py-3\">\n        <ul class=\"grid gap-3 text-xs\">\n          <li class=\"grid gap-0.5\">\n            <span class=\"text-muted-foreground\">Status</span>\n            <span class=\"font-medium\">Completed</span>\n          </li>\n          <li class=\"grid gap-0.5\">\n            <span class=\"text-muted-foreground\">Code Coverage</span>\n            <span class=\"font-medium\">94.3%</span>\n          </li>\n          <li class=\"grid gap-0.5\">\n            <span class=\"text-muted-foreground\">Last Deploy</span>\n            <span class=\"font-medium\">Today at 15:42</span>\n          </li>\n          <li class=\"grid gap-0.5\">\n            <span class=\"text-muted-foreground\">Performance Score</span>\n            <span class=\"font-medium\">98/100</span>\n          </li>\n        </ul>\n      </TooltipContent>\n    </Tooltip>\n  </TooltipProvider>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "tooltip",
+      "radix"
+    ],
+    "style": 1
+  }
+}

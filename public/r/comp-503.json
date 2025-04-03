@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-503",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/calendar.json",
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-503.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "calendar",
+      "date",
+      "input",
+      "time",
+      "react daypicker"
+    ],
+    "style": 1
+  }
+}

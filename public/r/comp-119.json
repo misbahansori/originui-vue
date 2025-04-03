@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-119",
+  "type": "registry:component",
+  "dependencies": [
+    "@remixicon/react"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-119.vue",
+      "content": "<template>\n  <div class=\"inline-flex flex-wrap gap-2\">\n    <Button variant=\"outline\" aria-label=\"Login with Google\" size=\"icon\">\n      <Icon name=\"ri:google-fill\" size=\"16\" aria-hidden=\"true\" />\n    </Button>\n    <Button variant=\"outline\" aria-label=\"Login with Facebook\" size=\"icon\">\n      <Icon name=\"ri:facebook-fill\" size=\"16\" aria-hidden=\"true\" />\n    </Button>\n    <Button variant=\"outline\" aria-label=\"Login with X\" size=\"icon\">\n      <Icon name=\"ri:twitter-x-fill\" size=\"16\" aria-hidden=\"true\" />\n    </Button>\n    <Button variant=\"outline\" aria-label=\"Login with GitHub\" size=\"icon\">\n      <Icon name=\"ri:github-fill\" size=\"16\" aria-hidden=\"true\" />\n    </Button>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "button",
+      "social",
+      "login",
+      "authentication"
+    ],
+    "style": 2
+  }
+}

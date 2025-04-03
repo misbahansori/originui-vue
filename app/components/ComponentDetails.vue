@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { RegistryItem } from "shadcn/registry";
 import { codeToHtml } from "shiki";
 
 const props = defineProps<{
@@ -46,13 +47,12 @@ onMounted(async () => {
       <DialogContent class="p-5 sm:max-w-[640px]">
         <DialogHeader>
           <DialogTitle class="text-left">Installation</DialogTitle>
-          <DialogDescription>
-            Download the source code of the component and install it in your
-            project.
+          <DialogDescription class="sr-only">
+            Use the CLI to add components to your project
           </DialogDescription>
         </DialogHeader>
         <div class="min-w-0 space-y-5">
-          <DownloadSourceCommand :component="component" />
+          <CliCommands :name="component.name" />
           <div class="space-y-2">
             <p class="text-lg font-semibold tracking-tight">Code</p>
             <div class="relative">

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-505",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/calendar.json",
+    "https://originui-vue.com/r/scroll-area.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-505.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "calendar",
+      "date",
+      "time",
+      "button",
+      "react daypicker"
+    ],
+    "colSpan": 3,
+    "style": 1
+  }
+}

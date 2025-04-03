@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-186",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/switch.json",
+    "https://originui-vue.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-186.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div\n    class=\"border-input has-data-[state=checked]:border-ring relative flex w-full items-start gap-2 rounded-md border p-4 shadow-xs outline-none\"\n  >\n    <Switch\n      :id=\"id\"\n      class=\"order-1 h-4 w-6 after:absolute after:inset-0 [&_span]:size-3 data-[state=checked]:[&_span]:translate-x-2 data-[state=checked]:[&_span]:rtl:-translate-x-2\"\n      :aria-describedby=\"`${id}-description`\"\n    />\n    <div class=\"grid grow gap-2\">\n      <Label :for=\"id\">\n        Label\n        <span\n          class=\"text-muted-foreground text-xs leading-[inherit] font-normal\"\n        >\n          (Sublabel)\n        </span>\n      </Label>\n      <p :id=\"`${id}-description`\" class=\"text-muted-foreground text-xs\">\n        A short description goes here.\n      </p>\n    </div>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "switch",
+      "label",
+      "card",
+      "radix"
+    ],
+    "style": 1
+  }
+}

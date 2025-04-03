@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-300",
+  "type": "registry:component",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-300.vue",
+      "content": "<script setup lang=\"ts\">\n// TODO: Implement the component\n</script>\n\n<template>\n  <Button variant=\"outline\">Custom sonner</Button>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "notification",
+      "toast",
+      "sonner",
+      "success",
+      "radix"
+    ],
+    "colSpan": 2,
+    "style": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-449",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/breadcrumb.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-449.vue",
+      "content": "<template>\n  <Breadcrumb>\n    <BreadcrumbList>\n      <BreadcrumbItem>\n        <BreadcrumbLink href=\"#\" class=\"inline-flex items-center gap-1.5\">\n          <Icon name=\"lucide:home\" class=\"size-4\" aria-hidden=\"true\" />\n          Home\n        </BreadcrumbLink>\n      </BreadcrumbItem>\n      <BreadcrumbSeparator />\n      <BreadcrumbItem>\n        <BreadcrumbLink href=\"#\" class=\"inline-flex items-center gap-1.5\">\n          <Icon name=\"lucide:component\" class=\"size-4\" aria-hidden=\"true\" />\n          Components\n        </BreadcrumbLink>\n      </BreadcrumbItem>\n      <BreadcrumbSeparator />\n      <BreadcrumbItem>\n        <BreadcrumbPage>Breadcrumb</BreadcrumbPage>\n      </BreadcrumbItem>\n    </BreadcrumbList>\n  </Breadcrumb>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "breadcrumb",
+      "radix"
+    ],
+    "colSpan": 2,
+    "style": 1
+  }
+}

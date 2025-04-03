@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-179",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/switch.json",
+    "https://originui-vue.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-179.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\nconst checked = ref(true);\n</script>\n\n<template>\n  <div class=\"inline-flex items-center gap-2\">\n    <Switch :id=\"id\" v-model=\"checked\" aria-label=\"Toggle switch\" />\n    <Label :for=\"id\" class=\"text-sm font-medium\">\n      {{ checked ? \"On\" : \"Off\" }}\n    </Label>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "switch",
+      "label",
+      "radix"
+    ],
+    "style": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-440",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/tabs.json",
+    "https://originui-vue.com/r/tooltip.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-440.vue",
+      "content": "<template>\n  <Tabs defaultValue=\"tab-1\" class=\"items-center\">\n    <TabsList>\n      <TooltipProvider :delay-duration=\"0\">\n        <Tooltip>\n          <TooltipTrigger as-child>\n            <span>\n              <TabsTrigger value=\"tab-1\" class=\"py-3\">\n                <Icon name=\"lucide:home\" class=\"size-4\" aria-hidden=\"true\" />\n              </TabsTrigger>\n            </span>\n          </TooltipTrigger>\n          <TooltipContent class=\"px-2 py-1 text-xs\">Overview</TooltipContent>\n        </Tooltip>\n      </TooltipProvider>\n      <TooltipProvider :delay-duration=\"0\">\n        <Tooltip>\n          <TooltipTrigger as-child>\n            <span>\n              <TabsTrigger value=\"tab-2\" class=\"group py-3\">\n                <span class=\"relative\">\n                  <Icon\n                    name=\"lucide:panels-top-left\"\n                    class=\"size-4\"\n                    aria-hidden=\"true\"\n                  />\n                  <Badge\n                    class=\"border-background absolute -top-2.5 left-full min-w-4 -translate-x-1.5 px-0.5 text-[10px]/[.875rem] transition-opacity group-data-[state=inactive]:opacity-50\"\n                  >\n                    3\n                  </Badge>\n                </span>\n              </TabsTrigger>\n            </span>\n          </TooltipTrigger>\n          <TooltipContent class=\"px-2 py-1 text-xs\">Projects</TooltipContent>\n        </Tooltip>\n      </TooltipProvider>\n      <TooltipProvider :delay-duration=\"0\">\n        <Tooltip>\n          <TooltipTrigger as-child>\n            <span>\n              <TabsTrigger value=\"tab-3\" class=\"py-3\">\n                <Icon name=\"lucide:box\" class=\"size-4\" aria-hidden=\"true\" />\n              </TabsTrigger>\n            </span>\n          </TooltipTrigger>\n          <TooltipContent class=\"px-2 py-1 text-xs\">Packages</TooltipContent>\n        </Tooltip>\n      </TooltipProvider>\n    </TabsList>\n    <TabsContent value=\"tab-1\">\n      <p class=\"text-muted-foreground p-4 text-center text-xs\">\n        Content for Tab 1\n      </p>\n    </TabsContent>\n    <TabsContent value=\"tab-2\">\n      <p class=\"text-muted-foreground p-4 text-center text-xs\">\n        Content for Tab 2\n      </p>\n    </TabsContent>\n    <TabsContent value=\"tab-3\">\n      <p class=\"text-muted-foreground p-4 text-center text-xs\">\n        Content for Tab 3\n      </p>\n    </TabsContent>\n  </Tabs>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "tabs",
+      "radix"
+    ],
+    "colSpan": 2,
+    "style": 2
+  }
+}

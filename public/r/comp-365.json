@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-365",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/hover-card.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-365.vue",
+      "content": "<template>\n  <div class=\"max-w-md text-sm\">\n    <HoverCard>\n      <HoverCardTrigger as-child>\n        <a class=\"flex size-16 overflow-hidden rounded-md\" href=\"#\">\n          <img\n            class=\"h-full w-full object-cover\"\n            src=\"/dialog-content.png\"\n            width=\"382\"\n            height=\"216\"\n            alt=\"Content image\"\n          />\n        </a>\n      </HoverCardTrigger>\n      <HoverCardContent class=\"w-[320px]\" show-arrow>\n        <div class=\"space-y-3\">\n          <div class=\"space-y-1\">\n            <h2 class=\"font-semibold\">\n              Building a Design System with Next.js and Tailwind CSS\n            </h2>\n            <p class=\"text-muted-foreground text-sm\">\n              Learn how to build a comprehensive design system using Tailwind\n              CSS, including component architecture, and theme customization.\n            </p>\n          </div>\n          <div class=\"text-muted-foreground flex items-center gap-2 text-xs\">\n            <span>8 min read</span>\n            <span>·</span>\n            <span>Updated 2 days ago</span>\n          </div>\n        </div>\n      </HoverCardContent>\n    </HoverCard>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "tooltip",
+      "hover card",
+      "image",
+      "radix"
+    ],
+    "style": 1
+  }
+}

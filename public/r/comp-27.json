@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-27",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-27.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\nconst inputValue = ref(\"\");\nconst isLoading = ref(false);\nlet timer: ReturnType<typeof setTimeout> | null = null;\n\nwatchEffect(() => {\n  if (inputValue.value) {\n    isLoading.value = true;\n    timer = setTimeout(() => {\n      isLoading.value = false;\n    }, 500);\n  }\n\n  return () => timer && clearTimeout(timer);\n});\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Search input with loader</Label>\n    <div class=\"relative\">\n      <Input\n        :id=\"id\"\n        class=\"peer ps-9 pe-9\"\n        placeholder=\"Search...\"\n        type=\"search\"\n        v-model=\"inputValue\"\n      />\n      <div\n        class=\"text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50\"\n      >\n        <Icon\n          v-if=\"isLoading\"\n          name=\"lucide:loader-circle\"\n          class=\"animate-spin\"\n          :size=\"16\"\n          role=\"status\"\n          aria-label=\"Loading...\"\n        />\n        <Icon v-else name=\"lucide:search\" :size=\"16\" aria-hidden=\"true\" />\n      </div>\n      <button\n        class=\"text-muted-foreground/80 hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-md transition-[color,box-shadow] outline-none focus:z-10 focus-visible:ring-[3px] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50\"\n        aria-label=\"Press to speak\"\n        type=\"submit\"\n      >\n        <Icon name=\"lucide:mic\" :size=\"16\" aria-hidden=\"true\" />\n      </button>\n    </div>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "input",
+      "label",
+      "button",
+      "search"
+    ]
+  }
+}

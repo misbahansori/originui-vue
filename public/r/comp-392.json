@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-392",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/avatar.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-392.vue",
+      "content": "<template>\n  <Avatar>\n    <AvatarFallback>\n      <Icon\n        name=\"lucide:user-round\"\n        class=\"size-4 opacity-60\"\n        aria-hidden=\"true\"\n      />\n    </AvatarFallback>\n  </Avatar>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "avatar",
+      "user",
+      "profile"
+    ],
+    "style": 1
+  }
+}

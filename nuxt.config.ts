@@ -12,6 +12,12 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  runtimeConfig: {
+    public: {
+      SITE_URL: process.env.NUXT_SITE_URL,
+    },
+  },
+
   modules: [
     "@vueuse/nuxt",
     "@nuxt/fonts",

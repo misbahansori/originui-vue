@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-533",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/timeline.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-533.vue",
+      "content": "<script setup lang=\"ts\">\nconst items = [\n  {\n    id: 1,\n    date: \"15 minutes ago\",\n    title: \"Pull Request Submitted\",\n    description:\n      \"Submitted PR #342 with new feature implementation. Waiting for code review from team leads.\",\n  },\n  {\n    id: 2,\n    date: \"10 minutes ago\",\n    title: \"CI Pipeline Started\",\n    description:\n      \"Automated tests and build process initiated. Running unit tests and code quality checks.\",\n  },\n  {\n    id: 3,\n    date: \"5 minutes ago\",\n    title: \"Code Review Feedback\",\n    description:\n      \"Received comments on PR. Minor adjustments needed in error handling and documentation.\",\n  },\n  {\n    id: 4,\n    title: \"Changes Pushed\",\n    description:\n      \"Implemented requested changes and pushed updates to feature branch. Awaiting final approval.\",\n  },\n];\n</script>\n\n<template>\n  <Timeline :default-value=\"3\">\n    <TimelineItem v-for=\"item in items\" :key=\"item.id\" :step=\"item.id\">\n      <TimelineHeader>\n        <TimelineSeparator />\n        <TimelineTitle class=\"-mt-0.5\">{{ item.title }}</TimelineTitle>\n        <TimelineIndicator />\n      </TimelineHeader>\n      <TimelineContent>\n        {{ item.description }}\n        <TimelineDate v-if=\"item.date\" class=\"mt-2 mb-0\">\n          {{ item.date }}\n        </TimelineDate>\n      </TimelineContent>\n    </TimelineItem>\n  </Timeline>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "timeline",
+      "vertical timeline"
+    ],
+    "colSpan": 2
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-129",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/badge.json",
+    "https://originui-vue.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-129.vue",
+      "content": "<script setup lang=\"ts\">\nconst count = ref(3);\n\nfunction handleClick() {\n  count.value = 0;\n}\n</script>\n\n<template>\n  <Button\n    variant=\"outline\"\n    size=\"icon\"\n    class=\"relative\"\n    @click=\"handleClick\"\n    aria-label=\"Notifications\"\n  >\n    <Icon name=\"lucide:bell\" size=\"16\" aria-hidden=\"true\" />\n    <Badge\n      v-if=\"count > 0\"\n      class=\"absolute -top-2 left-full min-w-5 -translate-x-1/2 px-1\"\n    >\n      {{ count > 99 ? \"99+\" : count }}\n    </Badge>\n  </Button>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "button",
+      "dropdown",
+      "notification"
+    ],
+    "style": 2
+  }
+}

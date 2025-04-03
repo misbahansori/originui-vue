@@ -1,0 +1,30 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-480",
+  "type": "registry:component",
+  "dependencies": [
+    "@tanstack/react-table"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/dropdown-menu.json",
+    "https://originui-vue.com/r/table.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-480.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "table",
+      "tanstack",
+      "flag",
+      "sticky",
+      "resize"
+    ],
+    "colSpan": 3
+  }
+}

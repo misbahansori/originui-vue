@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-475",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/table.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-475.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "table",
+      "sticky"
+    ],
+    "colSpan": 3
+  }
+}

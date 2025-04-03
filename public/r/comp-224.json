@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-224",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/select.json",
+    "https://originui-vue.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-224.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Select with description and right indicator</Label>\n    <Select default-value=\"2\">\n      <SelectTrigger :id=\"id\" class=\"**:data-desc:hidden\">\n        <SelectValue placeholder=\"Choose a plan\" />\n      </SelectTrigger>\n      <SelectContent\n        class=\"[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2\"\n      >\n        <SelectItem value=\"1\">\n          Standard Plan\n          <span class=\"text-muted-foreground mt-1 block text-xs\" data-desc>\n            Ideal for individuals\n          </span>\n        </SelectItem>\n        <SelectItem value=\"2\">\n          Pro Plan\n          <span class=\"text-muted-foreground mt-1 block text-xs\" data-desc>\n            For professional users\n          </span>\n        </SelectItem>\n        <SelectItem value=\"3\">\n          Enterprise Plan\n          <span class=\"text-muted-foreground mt-1 block text-xs\" data-desc>\n            Built for large teams\n          </span>\n        </SelectItem>\n      </SelectContent>\n    </Select>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "label",
+      "select",
+      "radix"
+    ]
+  }
+}

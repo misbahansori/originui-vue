@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-109",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/toggle-group.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-109.vue",
+      "content": "<script setup lang=\"ts\">\nconst value = ref(\"center\");\n</script>\n\n<template>\n  <ToggleGroup\n    variant=\"outline\"\n    class=\"inline-flex\"\n    type=\"single\"\n    v-model=\"value\"\n  >\n    <ToggleGroupItem value=\"left\">Left</ToggleGroupItem>\n    <ToggleGroupItem value=\"center\">Center</ToggleGroupItem>\n    <ToggleGroupItem value=\"right\">Right</ToggleGroupItem>\n  </ToggleGroup>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "button",
+      "toggle group"
+    ],
+    "style": 2
+  }
+}

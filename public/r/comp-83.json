@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-83",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-83.vue",
+      "content": "<template>\n  <Button variant=\"secondary\">\n    <Icon\n      name=\"lucide:x\"\n      class=\"-ms-1 opacity-60\"\n      :size=\"16\"\n      aria-hidden=\"true\"\n    />\n    Button\n  </Button>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "button"
+    ],
+    "style": 2
+  }
+}

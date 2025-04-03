@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-201",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/select-native.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-201.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"group relative\">\n    <label\n      :for=\"id\"\n      class=\"bg-background text-foreground absolute start-1 top-0 z-10 block -translate-y-1/2 px-2 text-xs font-medium group-has-[select:disabled]:opacity-50\"\n    >\n      Select with overlapping label (native)\n    </label>\n    <SelectNative :id=\"id\" default-value=\"\">\n      <option value=\"\" disabled>Select framework</option>\n      <option value=\"1\">Vue</option>\n      <option value=\"2\">Nuxt</option>\n      <option value=\"3\">Astro</option>\n      <option value=\"4\">Vitesse</option>\n    </SelectNative>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "label",
+      "select",
+      "native select"
+    ]
+  }
+}

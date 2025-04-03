@@ -1,0 +1,33 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-264",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/slider.json",
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-264.vue",
+      "content": "<script setup lang=\"ts\">\nconst sliders = [\n  {\n    label: \"X\",\n    minValue: -10,\n    maxValue: 10,\n    initialValue: [-2],\n    defaultValue: [0],\n  },\n  {\n    label: \"Y\",\n    minValue: -10,\n    maxValue: 10,\n    initialValue: [4],\n    defaultValue: [0],\n  },\n\n  {\n    label: \"Z\",\n    minValue: -10,\n    maxValue: 10,\n    initialValue: [2],\n    defaultValue: [0],\n  },\n];\n\nconst slidersRefs = useTemplateRef(\"slidersRefs\");\n\nconst resetAll = () => {\n  slidersRefs.value?.forEach((slider) => {\n    slider?.resetToDefault();\n  });\n};\n</script>\n\n<template>\n  <div class=\"space-y-4\">\n    <legend class=\"text-foreground text-sm font-medium\">Object position</legend>\n    <div class=\"space-y-2\">\n      <SliderWithInput\n        v-for=\"slider in sliders\"\n        :key=\"slider.label\"\n        ref=\"slidersRefs\"\n        :label=\"slider.label\"\n        :min-value=\"slider.minValue\"\n        :max-value=\"slider.maxValue\"\n        :initial-value=\"slider.initialValue\"\n        :default-value=\"slider.defaultValue\"\n      />\n    </div>\n    <Button class=\"w-full\" variant=\"outline\" @click=\"resetAll\">\n      <Icon\n        name=\"lucide:rotate-ccw\"\n        class=\"-ms-1 opacity-60\"\n        size=\"16\"\n        aria-hidden=\"true\"\n      />\n      Reset\n    </Button>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "app/composables/useSliderWithInput.ts",
+      "content": "interface UseSliderWithInputProps {\n  minValue?: number;\n  maxValue?: number;\n  initialValue?: number[];\n  defaultValue?: number[];\n}\n\nexport function useSliderWithInput({\n  minValue = 0,\n  maxValue = 100,\n  initialValue = [minValue],\n  defaultValue = [minValue],\n}: UseSliderWithInputProps) {\n  const sliderValues = ref(initialValue);\n  const inputValues = ref(initialValue.map((v) => v.toString()));\n\n  const showReset = computed(() => {\n    return (\n      sliderValues.value.length === defaultValue.length &&\n      !sliderValues.value.every((value, index) => value === defaultValue[index])\n    );\n  });\n\n  const validateAndUpdateValue = (rawValue: string, index: number) => {\n    if (rawValue === \"\" || rawValue === \"-\") {\n      const newInputValues = [...inputValues.value];\n      newInputValues[index] = \"0\";\n      inputValues.value = newInputValues;\n\n      const newSliderValues = [...sliderValues.value];\n      newSliderValues[index] = 0;\n      sliderValues.value = newSliderValues;\n      return;\n    }\n\n    const numValue = parseFloat(rawValue);\n\n    if (isNaN(numValue)) {\n      const newInputValues = [...inputValues.value];\n      newInputValues[index] = sliderValues.value[index]!.toString();\n      inputValues.value = newInputValues;\n      return;\n    }\n\n    let clampedValue = Math.min(maxValue, Math.max(minValue, numValue));\n\n    if (sliderValues.value.length > 1) {\n      if (index === 0) {\n        clampedValue = Math.min(clampedValue, sliderValues.value[1]!);\n      } else {\n        clampedValue = Math.max(clampedValue, sliderValues.value[0]!);\n      }\n    }\n\n    const newSliderValues = [...sliderValues.value];\n    newSliderValues[index] = clampedValue;\n    sliderValues.value = newSliderValues;\n\n    const newInputValues = [...inputValues.value];\n    newInputValues[index] = clampedValue.toString();\n    inputValues.value = newInputValues;\n  };\n\n  const handleInputChange = (index: number, newValue: string | number) => {\n    if (newValue === \"\" || /^-?\\d*\\.?\\d*$/.test(newValue.toString())) {\n      const newInputValues = [...inputValues.value];\n      newInputValues[index] = newValue.toString();\n      inputValues.value = newInputValues;\n    }\n  };\n\n  const handleSliderChange = (newValue?: number[]) => {\n    if (!newValue) return;\n\n    sliderValues.value = newValue;\n    inputValues.value = newValue.map((v) => v.toString());\n  };\n\n  const resetToDefault = () => {\n    sliderValues.value = [...defaultValue];\n    inputValues.value = defaultValue.map((v) => v.toString());\n  };\n\n  return {\n    sliderValues,\n    inputValues,\n    validateAndUpdateValue,\n    handleInputChange,\n    handleSliderChange,\n    resetToDefault,\n    showReset,\n  };\n}\n",
+      "type": "registry:hook"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "slider",
+      "label",
+      "input",
+      "button",
+      "reset",
+      "radix"
+    ]
+  }
+}

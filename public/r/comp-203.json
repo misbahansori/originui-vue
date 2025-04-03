@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-203",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/select.json",
+    "https://originui-vue.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-203.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Simple select with default value</Label>\n    <Select default-value=\"1\">\n      <SelectTrigger :id=\"id\">\n        <SelectValue placeholder=\"Select framework\" />\n      </SelectTrigger>\n      <SelectContent>\n        <SelectItem value=\"1\">Vue</SelectItem>\n        <SelectItem value=\"2\">Nuxt</SelectItem>\n        <SelectItem value=\"3\">Astro</SelectItem>\n        <SelectItem value=\"4\">Vitesse</SelectItem>\n      </SelectContent>\n    </Select>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "label",
+      "select",
+      "radix"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-276",
+  "type": "registry:component",
+  "files": [
+    {
+      "path": "app/registry/components/comp-276.vue",
+      "content": "<template>\n  <div class=\"rounded-md border border-amber-500/50 px-4 py-3 text-amber-600\">\n    <div class=\"flex items-start gap-3\">\n      <Icon\n        name=\"lucide:triangle-alert\"\n        class=\"mt-0.5 size-4 shrink-0 opacity-60\"\n        aria-hidden=\"true\"\n      />\n      <div class=\"flex grow justify-between gap-3\">\n        <p class=\"text-sm\">Some information is missing!</p>\n        <a\n          href=\"#\"\n          class=\"group flex items-center text-sm font-medium whitespace-nowrap\"\n        >\n          Link\n          <Icon\n            name=\"lucide:arrow-right\"\n            class=\"ms-1 inline-flex size-4 shrink-0 opacity-60 transition-transform group-hover:translate-x-0.5\"\n            aria-hidden=\"true\"\n          />\n        </a>\n      </div>\n    </div>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "alert",
+      "warning"
+    ],
+    "colSpan": 2
+  }
+}

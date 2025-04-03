@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-417",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-417.vue",
+      "content": "<template>\n  <Badge as-child>\n    <a href=\"#\">Link</a>\n  </Badge>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "badge",
+      "chip"
+    ],
+    "style": 1
+  }
+}

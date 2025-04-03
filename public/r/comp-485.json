@@ -1,0 +1,43 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-485",
+  "type": "registry:component",
+  "dependencies": [
+    "@tanstack/react-table"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/alert-dialog.json",
+    "https://originui-vue.com/r/badge.json",
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/checkbox.json",
+    "https://originui-vue.com/r/dropdown-menu.json",
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/pagination.json",
+    "https://originui-vue.com/r/popover.json",
+    "https://originui-vue.com/r/select.json",
+    "https://originui-vue.com/r/table.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-485.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "table",
+      "tanstack",
+      "checkbox",
+      "sort",
+      "flag",
+      "badge",
+      "chip",
+      "pagination",
+      "filter",
+      "select"
+    ],
+    "colSpan": 3
+  }
+}

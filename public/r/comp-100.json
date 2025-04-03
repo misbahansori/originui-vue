@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-100",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-100.vue",
+      "content": "<script setup lang=\"ts\">\nconst open = ref(false);\n\nfunction toggleOpen() {\n  open.value = !open.value;\n}\n</script>\n\n<template>\n  <Button\n    class=\"group\"\n    variant=\"outline\"\n    size=\"icon\"\n    @click=\"toggleOpen\"\n    :aria-expanded=\"open\"\n    :aria-label=\"open ? 'Close menu' : 'Open menu'\"\n  >\n    <svg\n      class=\"pointer-events-none\"\n      width=\"16\"\n      height=\"16\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      stroke=\"currentColor\"\n      stroke-width=\"2\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n    >\n      <path\n        d=\"M4 12L20 12\"\n        :class=\"[\n          'origin-center -translate-y-[7px] transition-all duration-300 [transition-timing-function:cubic-bezier(.5,.85,.25,1.1)]',\n          open ? 'translate-x-0 translate-y-0 rotate-[315deg]' : '',\n        ]\"\n      />\n      <path\n        d=\"M4 12H20\"\n        :class=\"[\n          'origin-center transition-all duration-300 [transition-timing-function:cubic-bezier(.5,.85,.25,1.8)]',\n          open ? 'rotate-45' : '',\n        ]\"\n      />\n      <path\n        d=\"M4 12H20\"\n        :class=\"[\n          'origin-center translate-y-[7px] transition-all duration-300 [transition-timing-function:cubic-bezier(.5,.85,.25,1.1)]',\n          open ? 'translate-y-0 rotate-[135deg]' : '',\n        ]\"\n      />\n    </svg>\n  </Button>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "button",
+      "menu",
+      "hamburger"
+    ],
+    "style": 2
+  }
+}

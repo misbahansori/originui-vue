@@ -1,0 +1,33 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-482",
+  "type": "registry:component",
+  "dependencies": [
+    "@tanstack/react-table"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/badge.json",
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/checkbox.json",
+    "https://originui-vue.com/r/table.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-482.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "table",
+      "tanstack",
+      "checkbox",
+      "collapsible",
+      "flag",
+      "badge",
+      "chip"
+    ],
+    "colSpan": 3
+  }
+}

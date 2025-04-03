@@ -1,0 +1,38 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-329",
+  "type": "registry:component",
+  "dependencies": [
+    "react-payment-inputs"
+  ],
+  "devDependencies": [
+    "@types/react-payment-inputs"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/badge.json",
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/dialog.json",
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/radio-group.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-329.vue",
+      "content": "<template></template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "dialog",
+      "modal",
+      "checkout",
+      "payment",
+      "credit card",
+      "form",
+      "radix"
+    ],
+    "style": 1
+  }
+}

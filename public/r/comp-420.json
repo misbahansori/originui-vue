@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-420",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-420.vue",
+      "content": "<template>\n  <Badge variant=\"outline\" class=\"gap-1.5\">\n    <span\n      class=\"size-1.5 rounded-full bg-emerald-500\"\n      aria-hidden=\"true\"\n    ></span>\n    Badge\n  </Badge>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "badge",
+      "chip",
+      "status"
+    ],
+    "style": 1
+  }
+}

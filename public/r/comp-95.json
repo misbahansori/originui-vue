@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-95",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-95.vue",
+      "content": "<template>\n  <Button variant=\"ghost\" class=\"h-auto p-0 hover:bg-transparent\">\n    <Avatar>\n      <AvatarImage src=\"./avatar.jpg\" alt=\"Profile image\" />\n      <AvatarFallback>KK</AvatarFallback>\n    </Avatar>\n    <Icon\n      name=\"lucide:chevron-down\"\n      size=\"16\"\n      class=\"opacity-60\"\n      aria-hidden=\"true\"\n    />\n  </Button>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "button",
+      "user",
+      "avatar",
+      "profile",
+      "dropdown"
+    ],
+    "style": 2
+  }
+}

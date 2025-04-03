@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-242",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/slider.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-242.vue",
+      "content": "<script setup lang=\"ts\">\nconst value = ref([25]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Slider with square thumb</Label>\n    <Slider\n      v-model=\"value\"\n      :max=\"100\"\n      :step=\"10\"\n      class=\"[&>:last-child]:rounded\"\n      aria-label=\"Slider with square thumb\"\n    />\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "slider",
+      "label",
+      "radix"
+    ]
+  }
+}

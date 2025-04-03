@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-487",
+  "type": "registry:component",
+  "dependencies": [
+    "react-aria-components"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/calendar-rac.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-487.vue",
+      "content": "<script setup lang=\"ts\">\nimport {\n  type DateValue,\n  getLocalTimeZone,\n  today,\n} from \"@internationalized/date\";\n\nconst value = ref(today(getLocalTimeZone())) as Ref<DateValue>;\n</script>\n\n<template>\n  <Calendar\n    v-model=\"value\"\n    :weekday-format=\"'short'\"\n    class=\"rounded-md border\"\n  />\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "calendar",
+      "date",
+      "react aria"
+    ],
+    "style": 1
+  }
+}

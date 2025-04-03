@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-381",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/checkbox.json",
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/popover.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-381.vue",
+      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"flex flex-col gap-4\">\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant=\"outline\" size=\"icon\" aria-label=\"Filters\">\n          <Icon name=\"lucide:list-filter\" class=\"size-4\" aria-hidden=\"true\" />\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent class=\"w-36 p-3\">\n        <div class=\"space-y-3\">\n          <div class=\"text-muted-foreground text-xs font-medium\">Filters</div>\n          <form>\n            <div class=\"space-y-3\">\n              <div class=\"flex items-center gap-2\">\n                <Checkbox :id=\"`${id}-1`\" />\n                <Label :for=\"`${id}-1`\" class=\"font-normal\">Real Time</Label>\n              </div>\n              <div class=\"flex items-center gap-2\">\n                <Checkbox :id=\"`${id}-2`\" />\n                <Label :for=\"`${id}-2`\" class=\"font-normal\">Top Channels</Label>\n              </div>\n              <div class=\"flex items-center gap-2\">\n                <Checkbox :id=\"`${id}-3`\" />\n                <Label :for=\"`${id}-3`\" class=\"font-normal\">Last Orders</Label>\n              </div>\n              <div class=\"flex items-center gap-2\">\n                <Checkbox :id=\"`${id}-4`\" />\n                <Label :for=\"`${id}-4`\" class=\"font-normal\">Total Spent</Label>\n              </div>\n            </div>\n            <div\n              role=\"separator\"\n              aria-orientation=\"horizontal\"\n              class=\"bg-border -mx-3 my-3 h-px\"\n            ></div>\n            <div class=\"flex justify-between gap-2\">\n              <Button size=\"sm\" variant=\"outline\" class=\"h-7 px-2\">\n                Clear\n              </Button>\n              <Button size=\"sm\" class=\"h-7 px-2\">Apply</Button>\n            </div>\n          </form>\n        </div>\n      </PopoverContent>\n    </Popover>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "popover",
+      "filter",
+      "radix"
+    ],
+    "style": 1
+  }
+}

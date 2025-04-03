@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-59",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/textarea.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-59.vue",
+      "content": "<script setup lang=\"ts\">\nconst textValue = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"simple-textarea\">Simple textarea</Label>\n    <Textarea\n      id=\"simple-textarea\"\n      v-model=\"textValue\"\n      placeholder=\"Leave a comment\"\n    />\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "label",
+      "textarea"
+    ]
+  }
+}

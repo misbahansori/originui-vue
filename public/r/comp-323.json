@@ -1,0 +1,30 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-323",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/dialog.json",
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/radio-group.json",
+    "https://originui-vue.com/r/textarea.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-323.vue",
+      "content": "<template>\n  <Dialog>\n    <DialogTrigger asChild>\n      <Button variant=\"outline\">Rating</Button>\n    </DialogTrigger>\n    <DialogContent\n      class=\"flex flex-col gap-0 p-0 [&>button:last-child]:top-3.5\"\n    >\n      <DialogHeader class=\"contents space-y-0 text-left\">\n        <DialogTitle class=\"border-b px-6 py-4 text-base\">\n          Help us improve\n        </DialogTitle>\n      </DialogHeader>\n      <div class=\"px-6 py-4\">\n        <form class=\"space-y-5\">\n          <div class=\"space-y-4\">\n            <div>\n              <fieldset class=\"space-y-4\">\n                <legend\n                  class=\"text-foreground text-lg leading-none font-semibold\"\n                >\n                  How hard was it to set up your account?\n                </legend>\n                <RadioGroup class=\"flex gap-0 -space-x-px rounded-md shadow-xs\">\n                  <label\n                    v-for=\"number in [0, 1, 2, 3, 4, 5, 6, 7, 8]\"\n                    :key=\"number\"\n                    class=\"border-input has-data-[state=checked]:border-ring focus-within:border-ring focus-within:ring-ring/50 relative flex size-9 flex-1 cursor-pointer flex-col items-center justify-center gap-3 border text-center text-sm transition-[color,box-shadow] outline-none first:rounded-s-md last:rounded-e-md focus-within:ring-[3px] has-data-disabled:cursor-not-allowed has-data-disabled:opacity-50 has-data-[state=checked]:z-10\"\n                  >\n                    <RadioGroupItem\n                      :id=\"`radio-17-r${number}`\"\n                      :value=\"number.toString()\"\n                      class=\"sr-only after:absolute after:inset-0\"\n                    />\n                    {{ number }}\n                  </label>\n                </RadioGroup>\n              </fieldset>\n              <div\n                class=\"text-muted-foreground mt-2 flex justify-between text-xs\"\n              >\n                <p>Very easy</p>\n                <p>Very difficult</p>\n              </div>\n            </div>\n\n            <div class=\"*:not-first:mt-2\">\n              <Label>Why did you give this rating?</Label>\n              <Textarea\n                id=\"feedback\"\n                placeholder=\"How can we improve Origin UI?\"\n                aria-label=\"Send feedback\"\n              />\n            </div>\n          </div>\n          <Button type=\"button\" class=\"w-full\">Send feedback</Button>\n        </form>\n      </div>\n    </DialogContent>\n  </Dialog>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "dialog",
+      "modal",
+      "rating",
+      "feedback",
+      "form",
+      "radix"
+    ],
+    "style": 1
+  }
+}

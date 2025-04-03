@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-504",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/calendar.json",
+    "https://originui-vue.com/r/collapsible.json",
+    "https://originui-vue.com/r/scroll-area.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-504.vue",
+      "content": "<template>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "calendar",
+      "date",
+      "collapsible",
+      "react daypicker",
+      "radix"
+    ],
+    "style": 1
+  }
+}

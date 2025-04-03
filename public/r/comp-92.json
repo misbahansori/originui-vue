@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-92",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "app/registry/components/comp-92.vue",
+      "content": "<template>\n  <Button variant=\"outline\" class=\"gap-3\">\n    Messages\n    <span\n      class=\"text-muted-foreground -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium\"\n    >\n      18\n    </span>\n  </Button>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "button",
+      "counter"
+    ],
+    "style": 2
+  }
+}
