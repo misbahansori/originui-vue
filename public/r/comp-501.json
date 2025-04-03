@@ -3,8 +3,8 @@
   "name": "comp-501",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/button.json",
-    "https://originui.com/r/calendar.json"
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/calendar.json"
   ],
   "files": [
     {

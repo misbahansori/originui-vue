@@ -6,8 +6,8 @@
     "react-aria-components"
   ],
   "registryDependencies": [
-    "https://originui.com/r/calendar-rac.json",
-    "https://originui.com/r/datefield-rac.json"
+    "https://originui-vue.com/r/calendar-rac.json",
+    "https://originui-vue.com/r/datefield-rac.json"
   ],
   "files": [
     {

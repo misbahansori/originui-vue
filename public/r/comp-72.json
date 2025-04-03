@@ -3,7 +3,7 @@
   "name": "comp-72",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/textarea.json"
+    "https://originui-vue.com/r/textarea.json"
   ],
   "files": [
     {

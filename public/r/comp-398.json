@@ -3,8 +3,8 @@
   "name": "comp-398",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/avatar.json",
-    "https://originui.com/r/badge.json"
+    "https://originui-vue.com/r/avatar.json",
+    "https://originui-vue.com/r/badge.json"
   ],
   "files": [
     {

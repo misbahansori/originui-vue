@@ -3,10 +3,10 @@
   "name": "comp-325",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/button.json",
-    "https://originui.com/r/dialog.json",
-    "https://originui.com/r/input.json",
-    "https://originui.com/r/label.json"
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/dialog.json",
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json"
   ],
   "files": [
     {

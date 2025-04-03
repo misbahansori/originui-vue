@@ -3,7 +3,7 @@
   "name": "comp-414",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/badge.json"
+    "https://originui-vue.com/r/badge.json"
   ],
   "files": [
     {

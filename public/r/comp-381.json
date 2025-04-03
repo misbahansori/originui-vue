@@ -3,10 +3,10 @@
   "name": "comp-381",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/button.json",
-    "https://originui.com/r/checkbox.json",
-    "https://originui.com/r/label.json",
-    "https://originui.com/r/popover.json"
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/checkbox.json",
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/popover.json"
   ],
   "files": [
     {

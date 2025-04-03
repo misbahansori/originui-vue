@@ -3,7 +3,7 @@
   "name": "comp-168",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/radio-group.json"
+    "https://originui-vue.com/r/radio-group.json"
   ],
   "files": [
     {

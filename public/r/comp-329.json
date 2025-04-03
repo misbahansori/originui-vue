@@ -9,12 +9,12 @@
     "@types/react-payment-inputs"
   ],
   "registryDependencies": [
-    "https://originui.com/r/badge.json",
-    "https://originui.com/r/button.json",
-    "https://originui.com/r/dialog.json",
-    "https://originui.com/r/input.json",
-    "https://originui.com/r/label.json",
-    "https://originui.com/r/radio-group.json"
+    "https://originui-vue.com/r/badge.json",
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/dialog.json",
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/radio-group.json"
   ],
   "files": [
     {

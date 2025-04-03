@@ -3,9 +3,9 @@
   "name": "comp-502",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/calendar.json",
-    "https://originui.com/r/input.json",
-    "https://originui.com/r/label.json"
+    "https://originui-vue.com/r/calendar.json",
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json"
   ],
   "files": [
     {

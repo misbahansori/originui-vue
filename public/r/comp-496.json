@@ -3,7 +3,7 @@
   "name": "comp-496",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/calendar.json"
+    "https://originui-vue.com/r/calendar.json"
   ],
   "files": [
     {

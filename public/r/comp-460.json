@@ -3,7 +3,7 @@
   "name": "comp-460",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/pagination.json"
+    "https://originui-vue.com/r/pagination.json"
   ],
   "files": [
     {

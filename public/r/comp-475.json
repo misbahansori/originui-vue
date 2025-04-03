@@ -3,7 +3,7 @@
   "name": "comp-475",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/table.json"
+    "https://originui-vue.com/r/table.json"
   ],
   "files": [
     {

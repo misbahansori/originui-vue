@@ -6,7 +6,7 @@
     "@tanstack/react-table"
   ],
   "registryDependencies": [
-    "https://originui.com/r/table.json"
+    "https://originui-vue.com/r/table.json"
   ],
   "files": [
     {

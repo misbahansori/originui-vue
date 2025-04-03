@@ -3,7 +3,7 @@
   "name": "comp-397",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/avatar.json"
+    "https://originui-vue.com/r/avatar.json"
   ],
   "files": [
     {

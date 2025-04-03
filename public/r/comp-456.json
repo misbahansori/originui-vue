@@ -3,8 +3,8 @@
   "name": "comp-456",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/button.json",
-    "https://originui.com/r/pagination.json"
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/pagination.json"
   ],
   "files": [
     {

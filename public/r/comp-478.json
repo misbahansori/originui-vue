@@ -6,11 +6,11 @@
     "@tanstack/react-table"
   ],
   "registryDependencies": [
-    "https://originui.com/r/checkbox.json",
-    "https://originui.com/r/input.json",
-    "https://originui.com/r/label.json",
-    "https://originui.com/r/select.json",
-    "https://originui.com/r/table.json"
+    "https://originui-vue.com/r/checkbox.json",
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/select.json",
+    "https://originui-vue.com/r/table.json"
   ],
   "files": [
     {

@@ -3,9 +3,9 @@
   "name": "comp-53",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/input.json",
-    "https://originui.com/r/label.json",
-    "https://originui.com/r/tooltip.json"
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/tooltip.json"
   ],
   "files": [
     {

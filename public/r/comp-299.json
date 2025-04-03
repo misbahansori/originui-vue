@@ -6,7 +6,7 @@
     "sonner"
   ],
   "registryDependencies": [
-    "https://originui.com/r/button.json"
+    "https://originui-vue.com/r/button.json"
   ],
   "files": [
     {

@@ -3,7 +3,7 @@
   "name": "comp-31",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/input.json"
+    "https://originui-vue.com/r/input.json"
   ],
   "files": [
     {

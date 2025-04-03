@@ -3,7 +3,7 @@
   "name": "comp-217",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/select.json"
+    "https://originui-vue.com/r/select.json"
   ],
   "files": [
     {

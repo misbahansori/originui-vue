@@ -6,8 +6,8 @@
     "input-otp"
   ],
   "registryDependencies": [
-    "https://originui.com/r/button.json",
-    "https://originui.com/r/dialog.json"
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/dialog.json"
   ],
   "files": [
     {

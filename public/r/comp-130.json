@@ -3,7 +3,7 @@
   "name": "comp-130",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/toggle.json"
+    "https://originui-vue.com/r/toggle.json"
   ],
   "files": [
     {

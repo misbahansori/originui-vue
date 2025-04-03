@@ -3,7 +3,7 @@
   "name": "comp-333",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/command.json"
+    "https://originui-vue.com/r/command.json"
   ],
   "files": [
     {

@@ -3,7 +3,7 @@
   "name": "comp-365",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/hover-card.json"
+    "https://originui-vue.com/r/hover-card.json"
   ],
   "files": [
     {

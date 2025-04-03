@@ -3,7 +3,7 @@
   "name": "comp-525",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/stepper.json"
+    "https://originui-vue.com/r/stepper.json"
   ],
   "files": [
     {

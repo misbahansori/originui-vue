@@ -3,7 +3,7 @@
   "name": "comp-344",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/accordion.json"
+    "https://originui-vue.com/r/accordion.json"
   ],
   "files": [
     {

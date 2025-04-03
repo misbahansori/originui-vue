@@ -3,8 +3,8 @@
   "name": "comp-211",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/select.json",
-    "https://originui.com/r/label.json"
+    "https://originui-vue.com/r/select.json",
+    "https://originui-vue.com/r/label.json"
   ],
   "files": [
     {

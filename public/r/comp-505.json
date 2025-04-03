@@ -3,9 +3,9 @@
   "name": "comp-505",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/button.json",
-    "https://originui.com/r/calendar.json",
-    "https://originui.com/r/scroll-area.json"
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/calendar.json",
+    "https://originui-vue.com/r/scroll-area.json"
   ],
   "files": [
     {

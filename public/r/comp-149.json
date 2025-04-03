@@ -3,7 +3,7 @@
   "name": "comp-149",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/checkbox.json"
+    "https://originui-vue.com/r/checkbox.json"
   ],
   "files": [
     {

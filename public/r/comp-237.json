@@ -6,7 +6,7 @@
     "react-aria-components"
   ],
   "registryDependencies": [
-    "https://originui.com/r/label.json"
+    "https://originui-vue.com/r/label.json"
   ],
   "files": [
     {

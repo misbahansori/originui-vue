@@ -3,8 +3,8 @@
   "name": "comp-133",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/checkbox.json",
-    "https://originui.com/r/label.json"
+    "https://originui-vue.com/r/checkbox.json",
+    "https://originui-vue.com/r/label.json"
   ],
   "files": [
     {

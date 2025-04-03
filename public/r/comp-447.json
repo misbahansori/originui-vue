@@ -3,8 +3,8 @@
   "name": "comp-447",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/breadcrumb.json",
-    "https://originui.com/r/dropdown-menu.json"
+    "https://originui-vue.com/r/breadcrumb.json",
+    "https://originui-vue.com/r/dropdown-menu.json"
   ],
   "files": [
     {

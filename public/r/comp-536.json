@@ -3,7 +3,7 @@
   "name": "comp-536",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/timeline.json"
+    "https://originui-vue.com/r/timeline.json"
   ],
   "files": [
     {

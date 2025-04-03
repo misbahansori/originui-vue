@@ -6,8 +6,8 @@
     "react-phone-number-input"
   ],
   "registryDependencies": [
-    "https://originui.com/r/input.json",
-    "https://originui.com/r/label.json"
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json"
   ],
   "files": [
     {
