@@ -1,21 +1,27 @@
 <script lang="ts" setup>
-import { RangeCalendarHeading, type RangeCalendarHeadingProps, useForwardProps } from 'reka-ui';
-import { computed, type HTMLAttributes } from 'vue';
-import { cn } from '~/utils/utils';
+import {
+  RangeCalendarHeading,
+  type RangeCalendarHeadingProps,
+  useForwardProps,
+} from "reka-ui";
+import { computed, type HTMLAttributes } from "vue";
+import { cn } from "~/utils/utils";
 
-const props = defineProps<RangeCalendarHeadingProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  RangeCalendarHeadingProps & { class?: HTMLAttributes["class"] }
+>();
 
 defineSlots<{
-  default: (props: { headingValue: string }) => any
-}>()
+  default: (props: { headingValue: string }) => any;
+}>();
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+  const { class: _, ...delegated } = props;
 
-  return delegated
-})
+  return delegated;
+});
 
-const forwardedProps = useForwardProps(delegatedProps)
+const forwardedProps = useForwardProps(delegatedProps);
 </script>
 
 <template>

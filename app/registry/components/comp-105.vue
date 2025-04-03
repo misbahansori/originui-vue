@@ -1,19 +1,5 @@
 <script setup lang="ts">
-
-
-const copied = ref(false);
-
-async function handleCopy() {
-  try {
-    // await navigator.clipboard.writeText("string to copy");
-    copied.value = true;
-    setTimeout(() => {
-      copied.value = false;
-    }, 1500);
-  } catch (err) {
-    console.error("Failed to copy text: ", err);
-  }
-}
+const { copy, copied } = useClipboard();
 </script>
 
 <template>
@@ -24,7 +10,7 @@ async function handleCopy() {
           variant="outline"
           size="icon"
           class="disabled:opacity-100"
-          @click="handleCopy"
+          @click="copy('Sample text')"
           :aria-label="copied ? 'Copied' : 'Copy to clipboard'"
           :disabled="copied"
         >
