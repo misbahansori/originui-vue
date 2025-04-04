@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
 
 const CORRECT_CODE = "6548";
 const otpValues = ref(["", "", "", ""]);
 const hasGuessed = ref<boolean | undefined>(undefined);
-const inputRef = ref<HTMLInputElement | null>(null);
-const closeButtonRef = ref<HTMLButtonElement | null>(null);
+const inputRef = useTemplateRef("inputRef");
+const closeButtonRef = useTemplateRef("closeButtonRef");
 
-onMounted(() => {
-  if (hasGuessed.value) {
-    closeButtonRef.value?.focus();
+watch(hasGuessed, (value) => {
+  if (value) {
+    closeButtonRef.value?.$el?.focus();
   }
 });
 
@@ -17,8 +17,9 @@ async function onSubmit() {
   hasGuessed.value = otpValues.value.join("") === CORRECT_CODE;
 
   otpValues.value = ["", "", "", ""];
+
   setTimeout(() => {
-    inputRef.value?.blur();
+    inputRef.value?.at(0)?.$el?.focus();
   }, 20);
 }
 </script>
@@ -79,6 +80,7 @@ async function onSubmit() {
                   v-for="(id, index) in 4"
                   :key="id"
                   :index="index"
+                  ref="inputRef"
                   class="focus:border-ring focus:ring-ring/50 border-input size-9 rounded-md border font-medium shadow-xs transition-[color,box-shadow] focus:ring-[3px]"
                 ></PinInputInput>
               </PinInputGroup>
