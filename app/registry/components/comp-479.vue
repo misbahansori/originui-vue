@@ -156,7 +156,7 @@ const table = useVueTable({
             "
             :colSpan="header.colSpan"
             :style="{
-              width: header.getSize(),
+              width: header.getSize() + 'px',
             }"
           >
             <template v-if="!header.isPlaceholder">
@@ -167,7 +167,7 @@ const table = useVueTable({
                       'flex h-full cursor-pointer items-center justify-between gap-2 select-none',
                   )
                 "
-                @click="header.column.toggleSorting()"
+                @click="header.column.getToggleSortingHandler()?.($event)"
                 @keydown="
                   (e) => {
                     if (
@@ -204,8 +204,8 @@ const table = useVueTable({
             <div
               v-if="header.column.getCanResize()"
               @dblclick="header.column.resetSize()"
-              @mousedown="header.getResizeHandler()"
-              @touchstart="header.getResizeHandler()"
+              @mousedown="header.getResizeHandler()?.($event)"
+              @touchstart="header.getResizeHandler()?.($event)"
               class="user-select-none before:bg-border absolute top-0 -right-2 z-10 flex h-full w-4 cursor-col-resize touch-none justify-center before:absolute before:inset-y-0 before:w-px before:translate-x-px"
             />
           </TableHead>
