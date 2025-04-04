@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const formId = "payment-form";
+import { mask as vMask } from "vue-the-mask";
+
+const formId = useId();
 const isDefaultPayment = ref(false);
 const cardName = ref("");
 const cardNumber = ref("");
@@ -51,6 +53,7 @@ const cvc = ref("");
                 v-model="cardNumber"
                 type="text"
                 class="peer pe-9 [direction:inherit]"
+                v-mask="'#### #### #### ####'"
                 placeholder="1234 5678 9012 3456"
               />
               <div
@@ -72,6 +75,7 @@ const cvc = ref("");
                 v-model="expiryDate"
                 type="text"
                 class="[direction:inherit]"
+                v-mask="'##/##'"
                 placeholder="MM/YY"
               />
             </div>
@@ -82,6 +86,7 @@ const cvc = ref("");
                 v-model="cvc"
                 type="text"
                 class="[direction:inherit]"
+                v-mask="'###'"
                 placeholder="123"
               />
             </div>
