@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
 import { mask as vMask } from "vue-the-mask";
 
 const id = useId();
