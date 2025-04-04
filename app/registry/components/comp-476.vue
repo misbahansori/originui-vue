@@ -125,13 +125,13 @@ const items = [
           <Icon
             v-if="browser.supported"
             name="lucide:check"
-            class="inline-flex size-4 stroke-emerald-600"
+            class="inline-flex size-4 text-emerald-600"
             aria-hidden="true"
           />
           <Icon
             v-else
             name="lucide:x"
-            class="inline-flex size-4 stroke-red-600"
+            class="inline-flex size-4 text-red-600"
             aria-hidden="true"
           />
           <span class="sr-only">
