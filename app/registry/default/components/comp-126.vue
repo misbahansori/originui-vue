@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { LucideCircleUserRound, LucideX } from "lucide-vue-next";
+import { ref } from "vue";
+
 const previewUrl = ref<string | null>(null);
 const fileName = ref<string | null>(null);
 const fileInput = ref<HTMLInputElement | null>(null);
@@ -13,12 +17,14 @@ function handleFileChange(event: Event) {
   const input = event.target as HTMLInputElement;
   if (input.files && input.files.length > 0) {
     const file = input.files[0];
-    fileName.value = file.name;
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      previewUrl.value = e.target?.result as string;
-    };
-    reader.readAsDataURL(file);
+    if (file) {
+      fileName.value = file.name;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        previewUrl.value = e.target?.result as string;
+      };
+      reader.readAsDataURL(file);
+    }
   }
 }
 
@@ -50,7 +56,7 @@ function handleRemove() {
           style="object-fit: cover"
         />
         <div v-else aria-hidden="true" class="flex items-center justify-center">
-          <Icon name="lucide:circle-user-round" class="opacity-60" size="16" />
+          <LucideCircleUserRound class="opacity-60" :size="16" />
         </div>
       </Button>
       <Button
@@ -61,7 +67,7 @@ function handleRemove() {
         class="border-background absolute -top-2 -right-2 size-6 rounded-full border-2"
         aria-label="Remove image"
       >
-        <Icon name="lucide:x" size="16" />
+        <LucideX :size="16" />
       </Button>
       <input
         type="file"

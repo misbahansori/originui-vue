@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { LucideChevronDown, LucideChevronUp } from "lucide-vue-next";
+import { ref } from "vue";
+
 const isExpanded = ref(false);
 
 function toggleExpand() {
@@ -15,19 +19,12 @@ function toggleExpand() {
     aria-controls="expandable-content"
   >
     {{ isExpanded ? "Show less" : "Show more" }}
-    <Icon
+    <LucideChevronUp
       v-if="isExpanded"
-      name="lucide:chevron-up"
       class="-me-1"
-      size="16"
+      :size="16"
       aria-hidden="true"
     />
-    <Icon
-      v-else
-      name="lucide:chevron-down"
-      class="-me-1"
-      size="16"
-      aria-hidden="true"
-    />
+    <LucideChevronDown v-else class="-me-1" :size="16" aria-hidden="true" />
   </Button>
 </template>

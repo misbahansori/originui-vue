@@ -1,32 +1,21 @@
 <script setup lang="ts">
-const previewUrl = ref<string | null>(null);
-const fileName = ref<string | null>(null);
-const fileInput = ref<HTMLInputElement | null>(null);
+import { Button } from "@/registry/default/ui/button";
+import { LucideCircleUserRound } from "lucide-vue-next";
+
+const file = shallowRef<File | null>(null);
+const previewUrl = useObjectUrl(file);
+const inputRef = useTemplateRef("fileInput");
 
 function handleButtonClick() {
-  if (fileInput.value) {
-    fileInput.value.click();
+  if (inputRef.value) {
+    inputRef.value.click();
   }
 }
 
 function handleFileChange(event: Event) {
   const input = event.target as HTMLInputElement;
-  if (input.files && input.files.length > 0) {
-    const file = input.files[0];
-    fileName.value = file.name;
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      previewUrl.value = e.target?.result as string;
-    };
-    reader.readAsDataURL(file);
-  }
-}
-
-function handleRemove() {
-  previewUrl.value = null;
-  fileName.value = null;
-  if (fileInput.value) {
-    fileInput.value.value = "";
+  if (input.files?.[0]) {
+    file.value = input.files[0];
   }
 }
 </script>
@@ -49,12 +38,12 @@ function handleRemove() {
           height="32"
         />
         <div v-else aria-hidden="true" class="flex items-center justify-center">
-          <Icon name="lucide:circle-user-round" class="opacity-60" size="16" />
+          <LucideCircleUserRound class="opacity-60" :size="16" />
         </div>
       </div>
       <div class="relative inline-block">
         <Button @click="handleButtonClick" aria-haspopup="dialog">
-          {{ fileName ? "Change image" : "Upload image" }}
+          {{ file ? "Change image" : "Upload image" }}
         </Button>
         <input
           type="file"
@@ -66,15 +55,15 @@ function handleRemove() {
         />
       </div>
     </div>
-    <div v-if="fileName" class="mt-2">
+    <div v-if="file" class="mt-2">
       <div class="inline-flex gap-2 text-xs">
         <p class="text-muted-foreground truncate" aria-live="polite">
-          {{ fileName }}
+          {{ file.name }}
         </p>
         <button
-          @click="handleRemove"
+          @click="() => (file = null)"
           class="font-medium text-red-500 hover:underline"
-          :aria-label="`Remove ${fileName}`"
+          :aria-label="`Remove ${file.name}`"
         >
           Remove
         </button>

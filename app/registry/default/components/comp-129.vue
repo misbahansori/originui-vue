@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Badge } from "@/registry/default/ui/badge";
+import { Button } from "@/registry/default/ui/button";
+import { LucideBell } from "lucide-vue-next";
+import { ref } from "vue";
+
 const count = ref(3);
 
 function handleClick() {
@@ -14,7 +19,7 @@ function handleClick() {
     @click="handleClick"
     aria-label="Notifications"
   >
-    <Icon name="lucide:bell" size="16" aria-hidden="true" />
+    <LucideBell :size="16" aria-hidden="true" />
     <Badge
       v-if="count > 0"
       class="absolute -top-2 left-full min-w-5 -translate-x-1/2 px-1"
