@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@/lib/utils";
 import type { HTMLAttributes } from "vue";
 
 const props = defineProps<{

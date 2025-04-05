@@ -22,7 +22,7 @@ const components = getComponentsByNames(
 );
 
 const glob = import.meta.glob(
-  ["~/registry/components/**/*.vue", "!~/registry/components/ui"],
+  ["~/registry/default/components/**/*.vue", "!~/registry/default/ui"],
   {
     query: "?raw",
     import: "default",
@@ -30,7 +30,7 @@ const glob = import.meta.glob(
 );
 
 const componentsWithRawCode = components.map((component) => {
-  const resolver = glob[`/registry/components/${component.name}.vue`];
+  const resolver = glob[`/registry/default/components/${component.name}.vue`];
 
   return { ...component, resolver: resolver as () => Promise<unknown> };
 });
