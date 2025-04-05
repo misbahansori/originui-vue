@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-199.vue",
+      "path": "app/registry/default/components/comp-199.vue",
       "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Select with option groups (native)</Label>\n    <SelectNative :id=\"id\">\n      <optgroup label=\"Frontend\">\n        <option value=\"1\">Vue</option>\n        <option value=\"2\">Nuxt</option>\n        <option value=\"3\">Angular</option>\n      </optgroup>\n      <optgroup label=\"Backend\">\n        <option value=\"4\">Node.js</option>\n        <option value=\"5\">Python</option>\n        <option value=\"6\">PHP</option>\n      </optgroup>\n    </SelectNative>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

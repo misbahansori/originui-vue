@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-449.vue",
+      "path": "app/registry/default/components/comp-449.vue",
       "content": "<template>\n  <Breadcrumb>\n    <BreadcrumbList>\n      <BreadcrumbItem>\n        <BreadcrumbLink href=\"#\" class=\"inline-flex items-center gap-1.5\">\n          <Icon name=\"lucide:home\" class=\"size-4\" aria-hidden=\"true\" />\n          Home\n        </BreadcrumbLink>\n      </BreadcrumbItem>\n      <BreadcrumbSeparator />\n      <BreadcrumbItem>\n        <BreadcrumbLink href=\"#\" class=\"inline-flex items-center gap-1.5\">\n          <Icon name=\"lucide:component\" class=\"size-4\" aria-hidden=\"true\" />\n          Components\n        </BreadcrumbLink>\n      </BreadcrumbItem>\n      <BreadcrumbSeparator />\n      <BreadcrumbItem>\n        <BreadcrumbPage>Breadcrumb</BreadcrumbPage>\n      </BreadcrumbItem>\n    </BreadcrumbList>\n  </Breadcrumb>\n</template>\n",
       "type": "registry:component"
     }

@@ -10,7 +10,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-489.vue",
+      "path": "app/registry/default/components/comp-489.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  type DateValue,\n  getLocalTimeZone,\n  isWeekend,\n  today,\n} from \"@internationalized/date\";\n\nconst now = ref(today(getLocalTimeZone())) as Ref<DateValue>;\n\nconst disabledRanges = [\n  [now.value, now.value],\n  [now.value.add({ days: 14 }), now.value.add({ days: 14 })],\n  [now.value.add({ days: 23 }), now.value.add({ days: 23 })],\n] as const;\n\nconst isDateUnavailable = (date: DateValue) =>\n  isWeekend(date, \"en\") ||\n  disabledRanges.some(\n    (interval) =>\n      date.compare(interval[0]) >= 0 && date.compare(interval[1]) <= 0,\n  );\n</script>\n\n<template>\n  <Calendar\n    v-model=\"now\"\n    :isDateUnavailable=\"isDateUnavailable\"\n    :weekday-format=\"'short'\"\n    :minValue=\"today(getLocalTimeZone())\"\n    class=\"rounded-md border\"\n  />\n</template>\n",
       "type": "registry:component"
     }

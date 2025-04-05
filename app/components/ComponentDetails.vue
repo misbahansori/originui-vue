@@ -1,17 +1,30 @@
 <script setup lang="ts">
 import type { RegistryItem } from "shadcn/registry";
 import { codeToHtml } from "shiki";
+import { MagicString } from "vue/compiler-sfc";
 
 const props = defineProps<{
-  component: RegistryItem & { resolver: (() => Promise<unknown>) | undefined };
+  component: RegistryItem;
 }>();
 
 const html = shallowRef("");
 const code = shallowRef("");
 
+function transformImportPath(code: string) {
+  const s = new MagicString(code);
+  s.replaceAll(`@/registry/default`, "@/components");
+  return s.toString();
+}
+
 onMounted(async () => {
-  code.value = (await props.component.resolver?.()) as string;
-  html.value = await codeToHtml(code.value ?? "", {
+  const rawCode = await import(
+    `../registry/default/components/${props.component.name}.vue?raw`
+  ).then((res) => res.default.trim());
+
+  const transformedCode = transformImportPath(rawCode);
+
+  code.value = transformedCode;
+  html.value = await codeToHtml(transformedCode, {
     lang: "vue",
     theme: "github-dark",
   });

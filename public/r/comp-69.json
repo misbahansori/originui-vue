@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-69.vue",
+      "path": "app/registry/default/components/comp-69.vue",
       "content": "<script setup lang=\"ts\">\nconst textValue = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"right-button-textarea\">Textarea with right button</Label>\n    <Textarea\n      id=\"right-button-textarea\"\n      v-model=\"textValue\"\n      placeholder=\"Leave a comment\"\n    />\n    <div class=\"flex justify-end\">\n      <Button variant=\"outline\">Send</Button>\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

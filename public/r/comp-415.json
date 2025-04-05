@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-415.vue",
+      "path": "app/registry/default/components/comp-415.vue",
       "content": "<template>\n  <Badge>\n    <Icon\n      name=\"lucide:zap\"\n      class=\"-ms-0.5 size-3 opacity-60\"\n      aria-hidden=\"true\"\n    />\n    Badge\n  </Badge>\n</template>\n",
       "type": "registry:component"
     }

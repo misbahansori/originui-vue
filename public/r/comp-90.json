@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-90.vue",
+      "path": "app/registry/default/components/comp-90.vue",
       "content": "<template>\n  <Button disabled>\n    <Icon\n      name=\"lucide:loader-circle\"\n      class=\"-ms-1 animate-spin\"\n      :size=\"16\"\n      aria-hidden=\"true\"\n    />\n    Button\n  </Button>\n</template>\n",
       "type": "registry:component"
     }

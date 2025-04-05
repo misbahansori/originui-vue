@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-86.vue",
+      "path": "app/registry/default/components/comp-86.vue",
       "content": "<template>\n  <Button class=\"group\">\n    Button\n    <Icon\n      name=\"lucide:arrow-right\"\n      class=\"-me-1 opacity-60 transition-transform group-hover:translate-x-0.5\"\n      :size=\"16\"\n      aria-hidden=\"true\"\n    />\n  </Button>\n</template>\n",
       "type": "registry:component"
     }

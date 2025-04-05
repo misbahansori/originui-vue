@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { cn } from "~/utils/utils";
+import { cn } from "@/lib/utils";
 
 interface Props {
   class?: string;

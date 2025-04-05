@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-251.vue",
+      "path": "app/registry/default/components/comp-251.vue",
       "content": "<script setup lang=\"ts\">\nconst value = ref([25, 75]);\n</script>\n\n<template>\n  <div class=\"space-y-4\">\n    <div class=\"flex items-center justify-between gap-2\">\n      <Label class=\"leading-6\">Dual range slider with output</Label>\n      <output class=\"text-sm font-medium tabular-nums\">\n        {{ value[0] }} - {{ value[1] }}\n      </output>\n    </div>\n    <Slider v-model=\"value\" aria-label=\"Dual range slider with output\" />\n  </div>\n</template>\n",
       "type": "registry:component"
     }

@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-175.vue",
+      "path": "app/registry/default/components/comp-175.vue",
       "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"inline-flex items-center gap-2\">\n    <Switch :id=\"id\" disabled />\n    <Label :for=\"id\" class=\"sr-only\">Disabled</Label>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

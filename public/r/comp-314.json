@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-314.vue",
+      "path": "app/registry/default/components/comp-314.vue",
       "content": "<template>\n  <AlertDialog>\n    <AlertDialogTrigger asChild>\n      <Button variant=\"outline\">Alert dialog with icon</Button>\n    </AlertDialogTrigger>\n    <AlertDialogContent>\n      <div class=\"flex flex-col gap-2 max-sm:items-center sm:flex-row sm:gap-4\">\n        <div\n          class=\"flex size-9 shrink-0 items-center justify-center rounded-full border\"\n          aria-hidden=\"true\"\n        >\n          <Icon\n            name=\"lucide:circle-alert\"\n            class=\"size-4 opacity-80\"\n            aria-hidden=\"true\"\n          />\n        </div>\n        <AlertDialogHeader>\n          <AlertDialogTitle>Are you sure?</AlertDialogTitle>\n          <AlertDialogDescription>\n            Are you sure you want to delete your account? All your data will be\n            removed.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n      </div>\n      <AlertDialogFooter>\n        <AlertDialogCancel>Cancel</AlertDialogCancel>\n        <AlertDialogAction>Confirm</AlertDialogAction>\n      </AlertDialogFooter>\n    </AlertDialogContent>\n  </AlertDialog>\n</template>\n",
       "type": "registry:component"
     }

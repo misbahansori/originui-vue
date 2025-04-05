@@ -7,8 +7,8 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/ui/aspect-ratio/AspectRatio.vue",
-      "content": "<script setup lang=\"ts\">\nimport { AspectRatio, type AspectRatioProps } from 'reka-ui'\n\nconst props = defineProps<AspectRatioProps>()\n</script>\n\n<template>\n  <AspectRatio v-bind=\"props\">\n    <slot />\n  </AspectRatio>\n</template>\n",
+      "path": "app/registry/default/ui/aspect-ratio/AspectRatio.vue",
+      "content": "<script setup lang=\"ts\">\nimport { AspectRatio, type AspectRatioProps } from \"reka-ui\";\n\nconst props = defineProps<AspectRatioProps>();\n</script>\n\n<template>\n  <AspectRatio v-bind=\"props\">\n    <slot />\n  </AspectRatio>\n</template>\n",
       "type": "registry:ui"
     }
   ]

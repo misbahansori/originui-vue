@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-452.vue",
+      "path": "app/registry/default/components/comp-452.vue",
       "content": "<template>\n  <Breadcrumb>\n    <BreadcrumbList class=\"bg-background rounded-md border px-3 py-2 shadow-xs\">\n      <BreadcrumbItem>\n        <BreadcrumbLink href=\"#\">\n          <Icon name=\"lucide:home\" class=\"size-4\" aria-hidden=\"true\" />\n          <span class=\"sr-only\">Home</span>\n        </BreadcrumbLink>\n      </BreadcrumbItem>\n      <BreadcrumbSeparator />\n      <BreadcrumbItem>\n        <BreadcrumbLink href=\"#\">Components</BreadcrumbLink>\n      </BreadcrumbItem>\n      <BreadcrumbSeparator />\n      <BreadcrumbItem>\n        <BreadcrumbPage>Breadcrumb</BreadcrumbPage>\n      </BreadcrumbItem>\n    </BreadcrumbList>\n  </Breadcrumb>\n</template>\n",
       "type": "registry:component"
     }

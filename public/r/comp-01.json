@@ -8,8 +8,8 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-01.vue",
-      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Simple input</Label>\n    <Input :id=\"id\" placeholder=\"Email\" type=\"email\" />\n  </div>\n</template>\n",
+      "path": "app/registry/default/components/comp-01.vue",
+      "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Simple input</Label>\n    <Input :id=\"id\" placeholder=\"Email\" type=\"email\" />\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

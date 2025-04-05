@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-295.vue",
+      "path": "app/registry/default/components/comp-295.vue",
       "content": "<template>\n  <!-- To make the notification fixed, add classes like `fixed bottom-4 right-4` to the container element. -->\n  <div class=\"bg-background z-50 max-w-[400px] rounded-md border p-4 shadow-lg\">\n    <div class=\"flex gap-3\">\n      <img\n        class=\"size-9 rounded-full\"\n        src=\"/avatar-32-01.jpg\"\n        width=\"32\"\n        height=\"32\"\n        alt=\"Mary Palmer\"\n      />\n      <div class=\"flex grow flex-col gap-3\">\n        <div class=\"space-y-1\">\n          <p class=\"text-muted-foreground text-sm\">\n            <a class=\"text-foreground font-medium hover:underline\" href=\"#\">\n              Mary Palmer\n            </a>\n            mentioned you in\n            <a class=\"text-foreground font-medium hover:underline\" href=\"#\">\n              project-campaign-02\n            </a>\n            .\n          </p>\n          <p class=\"text-muted-foreground text-xs\">2 min ago</p>\n        </div>\n        <div class=\"flex gap-2\">\n          <Button size=\"sm\">Accept</Button>\n          <Button size=\"sm\" variant=\"outline\">Decline</Button>\n        </div>\n      </div>\n      <Button\n        variant=\"ghost\"\n        class=\"group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent\"\n        aria-label=\"Close notification\"\n      >\n        <Icon\n          name=\"lucide:x\"\n          class=\"size-4 opacity-60 transition-opacity group-hover:opacity-100\"\n          aria-hidden=\"true\"\n        />\n      </Button>\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

@@ -7,8 +7,8 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-492.vue",
-      "content": "<template>\n</template>\n",
+      "path": "app/registry/default/components/comp-492.vue",
+      "content": "<template></template>\n",
       "type": "registry:component"
     }
   ],

@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-375.vue",
+      "path": "app/registry/default/components/comp-375.vue",
       "content": "<template>\n  <DropdownMenu>\n    <DropdownMenuTrigger asChild>\n      <Button size=\"icon\" variant=\"outline\" aria-label=\"Open account menu\">\n        <Icon\n          name=\"lucide:circle-user-round\"\n          class=\"size-4\"\n          aria-hidden=\"true\"\n        />\n      </Button>\n    </DropdownMenuTrigger>\n    <DropdownMenuContent class=\"max-w-64\">\n      <DropdownMenuLabel class=\"flex flex-col\">\n        <span>Signed in as</span>\n        <span class=\"text-foreground text-xs font-normal\">\n          k.kennedy@originui.com\n        </span>\n      </DropdownMenuLabel>\n      <DropdownMenuSeparator />\n      <DropdownMenuGroup>\n        <DropdownMenuItem>Option 1</DropdownMenuItem>\n        <DropdownMenuItem>Option 2</DropdownMenuItem>\n        <DropdownMenuItem>Option 3</DropdownMenuItem>\n      </DropdownMenuGroup>\n      <DropdownMenuSeparator />\n      <DropdownMenuItem>Logout</DropdownMenuItem>\n    </DropdownMenuContent>\n  </DropdownMenu>\n</template>\n",
       "type": "registry:component"
     }

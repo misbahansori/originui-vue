@@ -4,7 +4,7 @@
   "type": "registry:component",
   "files": [
     {
-      "path": "app/registry/components/comp-302.vue",
+      "path": "app/registry/default/components/comp-302.vue",
       "content": "<template>\n  <div class=\"dark bg-muted text-foreground px-4 py-3\">\n    <p class=\"flex justify-center text-sm\">\n      <a href=\"#\" class=\"group\">\n        <span class=\"me-1 text-base leading-none\">✨</span>\n        Introducing transactional and marketing emails\n        <Icon\n          name=\"lucide:arrow-right\"\n          class=\"ms-2 -mt-0.5 inline-flex size-4 opacity-60 transition-transform group-hover:translate-x-0.5\"\n          aria-hidden=\"true\"\n        />\n      </a>\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-293.vue",
+      "path": "app/registry/default/components/comp-293.vue",
       "content": "<template>\n  <!-- To make the notification fixed, add classes like `fixed bottom-4 right-4` to the container element. -->\n  <div class=\"bg-background z-50 max-w-[400px] rounded-md border p-4 shadow-lg\">\n    <div class=\"flex gap-2\">\n      <div class=\"flex grow flex-col gap-3\">\n        <div class=\"space-y-1\">\n          <p class=\"text-sm font-medium\">We Value Your Privacy 🍪</p>\n          <p class=\"text-muted-foreground text-sm\">\n            We use cookies to improve your experience, and show personalized\n            content.\n          </p>\n        </div>\n        <div class=\"flex gap-2\">\n          <Button size=\"sm\">Accept</Button>\n          <Button size=\"sm\" variant=\"outline\">Decline</Button>\n        </div>\n      </div>\n      <Button\n        variant=\"ghost\"\n        class=\"group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent\"\n        aria-label=\"Close notification\"\n      >\n        <Icon\n          name=\"lucide:x\"\n          class=\"size-4 opacity-60 transition-opacity group-hover:opacity-100\"\n          aria-hidden=\"true\"\n        />\n      </Button>\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

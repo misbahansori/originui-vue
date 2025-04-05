@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-357.vue",
+      "path": "app/registry/default/components/comp-357.vue",
       "content": "<template>\n  <TooltipProvider :delay-duration=\"0\">\n    <Tooltip>\n      <TooltipTrigger as-child>\n        <Button variant=\"outline\" size=\"sm\">W/ title</Button>\n      </TooltipTrigger>\n      <TooltipContent class=\"py-3\">\n        <div class=\"space-y-1\">\n          <p class=\"text-[13px] font-medium\">Tooltip with title</p>\n          <p class=\"text-muted-foreground text-xs\">\n            Tooltips are made to be highly customizable, with features like\n            dynamic placement, rich content, and a robust API. You can even use\n            them as a full-featured dropdown menu by setting the\n            <code>trigger</code>\n            prop to\n            <code>click</code>\n            .\n          </p>\n        </div>\n      </TooltipContent>\n    </Tooltip>\n  </TooltipProvider>\n</template>\n",
       "type": "registry:component"
     }

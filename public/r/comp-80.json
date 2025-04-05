@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-80.vue",
+      "path": "app/registry/default/components/comp-80.vue",
       "content": "<template>\n  <Button class=\"rounded-full\">Button</Button>\n</template>\n",
       "type": "registry:component"
     }

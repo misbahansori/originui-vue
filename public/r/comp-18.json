@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-18.vue",
+      "path": "app/registry/default/components/comp-18.vue",
       "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with end select</Label>\n    <div class=\"flex rounded-md shadow-xs\">\n      <Input\n        :id=\"id\"\n        class=\"-me-px rounded-e-none shadow-none focus-visible:z-10\"\n        placeholder=\"google\"\n        type=\"text\"\n      />\n      <SelectNative\n        class=\"text-muted-foreground hover:text-foreground w-fit rounded-s-none shadow-none\"\n      >\n        <option>.com</option>\n        <option>.org</option>\n        <option>.net</option>\n      </SelectNative>\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

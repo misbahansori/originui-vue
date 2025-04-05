@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-89.vue",
+      "path": "app/registry/default/components/comp-89.vue",
       "content": "<template>\n  <div class=\"inline-flex items-center gap-2\">\n    <Button variant=\"ghost\">Cancel</Button>\n    <Button>Save</Button>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
