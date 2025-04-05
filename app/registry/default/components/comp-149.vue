@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { Checkbox } from "@/registry/default/ui/checkbox";
+import { ref, useId } from "vue";
+
 const id = useId();
 
 interface DayItem {
