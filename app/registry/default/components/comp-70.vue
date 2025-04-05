@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { Label } from "@/registry/default/ui/label";
+import { Textarea } from "@/registry/default/ui/textarea";
+import { ref } from "vue";
+
 const textValue = ref("");
 </script>
 
