@@ -1,38 +1,21 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
 import { LucideCircleUserRound, LucideX } from "lucide-vue-next";
-import { ref } from "vue";
 
-const previewUrl = ref<string | null>(null);
-const fileName = ref<string | null>(null);
-const fileInput = ref<HTMLInputElement | null>(null);
+const file = shallowRef<File | null>(null);
+const previewUrl = useObjectUrl(file);
+const inputRef = useTemplateRef("fileInput");
 
-function handleThumbnailClick() {
-  if (fileInput.value) {
-    fileInput.value.click();
+function handleButtonClick() {
+  if (inputRef.value) {
+    inputRef.value.click();
   }
 }
 
 function handleFileChange(event: Event) {
   const input = event.target as HTMLInputElement;
-  if (input.files && input.files.length > 0) {
-    const file = input.files[0];
-    if (file) {
-      fileName.value = file.name;
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        previewUrl.value = e.target?.result as string;
-      };
-      reader.readAsDataURL(file);
-    }
-  }
-}
-
-function handleRemove() {
-  previewUrl.value = null;
-  fileName.value = null;
-  if (fileInput.value) {
-    fileInput.value.value = "";
+  if (input.files?.[0]) {
+    file.value = input.files[0];
   }
 }
 </script>
@@ -43,7 +26,7 @@ function handleRemove() {
       <Button
         variant="outline"
         class="relative size-16 overflow-hidden"
-        @click="handleThumbnailClick"
+        @click="handleButtonClick"
         :aria-label="previewUrl ? 'Change image' : 'Upload image'"
       >
         <img
@@ -61,7 +44,7 @@ function handleRemove() {
       </Button>
       <Button
         v-if="previewUrl"
-        @click="handleRemove"
+        @click="() => (file = null)"
         size="icon"
         variant="destructive"
         class="border-background absolute -top-2 -right-2 size-6 rounded-full border-2"
@@ -78,8 +61,8 @@ function handleRemove() {
         aria-label="Upload image file"
       />
     </div>
-    <p v-if="fileName" class="text-muted-foreground mt-2 text-xs">
-      {{ fileName }}
+    <p v-if="file" class="text-muted-foreground mt-2 text-xs">
+      {{ file.name }}
     </p>
     <div class="sr-only" aria-live="polite" role="status">
       {{
