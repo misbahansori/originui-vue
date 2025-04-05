@@ -35,15 +35,6 @@ export default defineNuxtConfig({
 
   compatibilityDate: "2024-04-03",
 
-  alias: {
-    "@": fileURLToPath(new URL("./", import.meta.url)),
-  },
-
-  shadcn: {
-    prefix: "",
-    componentDir: "./app/components/ui",
-  },
-
   colorMode: {
     classSuffix: "",
     classPrefix: "",
@@ -64,10 +55,19 @@ export default defineNuxtConfig({
     ],
   },
 
+  imports: {
+    dirs: ["~/lib"],
+  },
+
+  shadcn: {
+    prefix: "",
+    componentDir: "./app/registry/default/ui",
+  },
+
   components: {
     dirs: [
       { path: "~/components" },
-      { path: "~~/registry/default/components", global: true },
+      { path: "~/registry/default/components", global: true },
     ],
   },
 

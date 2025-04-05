@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/registry/default/ui/button";
 
 const links = [

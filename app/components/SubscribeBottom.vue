@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { cn } from "@/lib/utils";
 import { computed, ref } from "vue";
-import { cn } from "~/utils/utils";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 

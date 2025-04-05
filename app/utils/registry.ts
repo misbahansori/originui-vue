@@ -1,4 +1,4 @@
-import type { RegistryTag } from "~~/registry/registry-tags";
+import type { RegistryTag } from "@/registry/registry-tags";
 import registry from "~~/registry.json";
 import type { RegistryItem } from "shadcn/registry";
 
