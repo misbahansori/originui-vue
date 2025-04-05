@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Badge } from "@/registry/default/ui/badge";
+import { Label } from "@/registry/default/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
+import { ref, useId } from "vue";
+
 const id = useId();
 const selectedValue = ref("2");
 

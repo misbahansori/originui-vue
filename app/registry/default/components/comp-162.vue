@@ -1,12 +1,22 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
+import {
+  LucideBrush,
+  LucideEraser,
+  LucideScissors,
+  LucideSwatchBook,
+} from "lucide-vue-next";
+import { ref, useId } from "vue";
+
 const id = useId();
 const selectedValue = ref("1");
 
 const items = [
-  { value: "1", label: "Palette", icon: "lucide:swatch-book" },
-  { value: "2", label: "Brush", icon: "lucide:brush" },
-  { value: "3", label: "Eraser", icon: "lucide:eraser" },
-  { value: "4", label: "Cut", icon: "lucide:scissors" },
+  { value: "1", label: "Palette", icon: LucideSwatchBook },
+  { value: "2", label: "Brush", icon: LucideBrush },
+  { value: "3", label: "Eraser", icon: LucideEraser },
+  { value: "4", label: "Cut", icon: LucideScissors },
 ];
 </script>
 
@@ -23,10 +33,10 @@ const items = [
           :value="item.value"
           class="order-1 after:absolute after:inset-0"
         />
-        <Icon
-          :name="item.icon"
+        <component
+          :is="item.icon"
           class="opacity-60"
-          size="16"
+          :size="16"
           aria-hidden="true"
         />
       </div>

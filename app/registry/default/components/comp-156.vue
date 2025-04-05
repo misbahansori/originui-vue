@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
+import { nextTick, ref, useId, useTemplateRef, watch } from "vue";
+
 const radioId = useId();
 const inputId = useId();
 const selectedValue = ref("without-expansion");
