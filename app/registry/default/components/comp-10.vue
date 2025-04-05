@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { LucideMail } from "lucide-vue-next";
+import { useId } from "vue";
+
 const id = useId();
 </script>
 
@@ -10,7 +15,7 @@ const id = useId();
       <div
         class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 peer-disabled:opacity-50"
       >
-        <Icon name="lucide:mail" :size="16" aria-hidden="true" />
+        <LucideMail :size="16" aria-hidden="true" />
       </div>
     </div>
   </div>
