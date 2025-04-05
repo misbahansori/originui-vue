@@ -1,12 +1,12 @@
 <script setup lang="ts">
+import { Badge } from "@/registry/default/ui/badge";
+import { Checkbox } from "@/registry/default/ui/checkbox";
 import {
   FlexRender,
   getCoreRowModel,
   useVueTable,
   type ColumnDef,
 } from "@tanstack/vue-table";
-import { Badge } from "~/registry/components/ui/badge";
-import { Checkbox } from "~/registry/components/ui/checkbox";
 
 type Item = {
   id: string;

@@ -1,16 +1,12 @@
 <script lang="ts" setup>
+import { buttonVariants } from "@/registry/default/ui/button";
 import { ChevronLeft } from "lucide-vue-next";
-import {
-  RangeCalendarPrev,
-  type RangeCalendarPrevProps,
-  useForwardProps,
-} from "reka-ui";
+import { CalendarPrev, type CalendarPrevProps, useForwardProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
-import { buttonVariants } from "~/registry/components/ui/button";
 import { cn } from "~/utils/utils";
 
 const props = defineProps<
-  RangeCalendarPrevProps & { class?: HTMLAttributes["class"] }
+  CalendarPrevProps & { class?: HTMLAttributes["class"] }
 >();
 
 const delegatedProps = computed(() => {
@@ -23,7 +19,7 @@ const forwardedProps = useForwardProps(delegatedProps);
 </script>
 
 <template>
-  <RangeCalendarPrev
+  <CalendarPrev
     :class="
       cn(
         buttonVariants({ variant: 'ghost' }),
@@ -36,5 +32,5 @@ const forwardedProps = useForwardProps(delegatedProps);
     <slot>
       <ChevronLeft class="h-4 w-4" />
     </slot>
-  </RangeCalendarPrev>
+  </CalendarPrev>
 </template>

@@ -1,5 +1,15 @@
 <script setup lang="ts">
 import { Icon } from "#components";
+import { Checkbox } from "@/registry/default/ui/checkbox";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/registry/default/ui/table";
+import TableFilter from "@/registry/default/ui/table/TableFilter.vue";
 import {
   FlexRender,
   getCoreRowModel,
@@ -14,16 +24,6 @@ import {
   type SortingState,
 } from "@tanstack/vue-table";
 import type { VNodeArrayChildren } from "vue";
-import { Checkbox } from "~/registry/components/ui/checkbox";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "~/registry/components/ui/table";
-import TableFilter from "~/registry/components/ui/table/TableFilter.vue";
 import { cn } from "~/utils/utils";
 
 type Item = {

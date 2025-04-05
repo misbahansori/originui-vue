@@ -2,13 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-dialog",
   "type": "registry:ui",
-  "dependencies": [
-    "reka-ui",
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
+  "dependencies": ["reka-ui", "lucide-vue-next"],
+  "registryDependencies": ["https://originui-vue.com/r/button.json"],
   "files": [
     {
       "path": "app/registry/components/ui/alert-dialog/AlertDialog.vue",
@@ -17,12 +12,12 @@
     },
     {
       "path": "app/registry/components/ui/alert-dialog/AlertDialogAction.vue",
-      "content": "<script setup lang=\"ts\">\nimport { AlertDialogAction, type AlertDialogActionProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport { buttonVariants } from \"~/registry/components/ui/button\";\nimport { cn } from \"~/utils/utils\";\n\nconst props = defineProps<\n  AlertDialogActionProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <AlertDialogAction\n    v-bind=\"delegatedProps\"\n    :class=\"cn(buttonVariants(), props.class)\"\n  >\n    <slot />\n  </AlertDialogAction>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { AlertDialogAction, type AlertDialogActionProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport { buttonVariants } from \"@/registry/default/ui/button\";\nimport { cn } from \"~/utils/utils\";\n\nconst props = defineProps<\n  AlertDialogActionProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <AlertDialogAction\n    v-bind=\"delegatedProps\"\n    :class=\"cn(buttonVariants(), props.class)\"\n  >\n    <slot />\n  </AlertDialogAction>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "app/registry/components/ui/alert-dialog/AlertDialogCancel.vue",
-      "content": "<script setup lang=\"ts\">\nimport { AlertDialogCancel, type AlertDialogCancelProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport { buttonVariants } from \"~/registry/components/ui/button\";\nimport { cn } from \"~/utils/utils\";\n\nconst props = defineProps<\n  AlertDialogCancelProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <AlertDialogCancel\n    v-bind=\"delegatedProps\"\n    :class=\"cn(buttonVariants({ variant: 'outline' }), props.class)\"\n  >\n    <slot />\n  </AlertDialogCancel>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { AlertDialogCancel, type AlertDialogCancelProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport { buttonVariants } from \"@/registry/default/ui/button\";\nimport { cn } from \"~/utils/utils\";\n\nconst props = defineProps<\n  AlertDialogCancelProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <AlertDialogCancel\n    v-bind=\"delegatedProps\"\n    :class=\"cn(buttonVariants({ variant: 'outline' }), props.class)\"\n  >\n    <slot />\n  </AlertDialogCancel>\n</template>\n",
       "type": "registry:ui"
     },
     {

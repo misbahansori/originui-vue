@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { Dialog, DialogContent } from "@/registry/default/ui/dialog";
 import type { DialogRootEmits, DialogRootProps } from "reka-ui";
 import { useForwardPropsEmits } from "reka-ui";
-import { Dialog, DialogContent } from "~/registry/components/ui/dialog";
 import Command from "./Command.vue";
 
 const props = defineProps<DialogRootProps>();

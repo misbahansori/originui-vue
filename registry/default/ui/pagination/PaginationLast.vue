@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ChevronsLeft } from "lucide-vue-next";
-import { PaginationFirst, type PaginationFirstProps } from "reka-ui";
+import { Button } from "@/registry/default/ui/button";
+import { ChevronsRight } from "lucide-vue-next";
+import { PaginationLast, type PaginationLastProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
-import { Button } from "~/registry/components/ui/button";
 import { cn } from "~/utils/utils";
 
 const props = withDefaults(
-  defineProps<PaginationFirstProps & { class?: HTMLAttributes["class"] }>(),
+  defineProps<PaginationLastProps & { class?: HTMLAttributes["class"] }>(),
   {
     asChild: true,
   },
@@ -20,11 +20,11 @@ const delegatedProps = computed(() => {
 </script>
 
 <template>
-  <PaginationFirst v-bind="delegatedProps">
+  <PaginationLast v-bind="delegatedProps">
     <slot>
       <Button :class="cn('h-9 w-9 p-0', props.class)" variant="outline">
-        <ChevronsLeft class="h-4 w-4" />
+        <ChevronsRight class="h-4 w-4" />
       </Button>
     </slot>
-  </PaginationFirst>
+  </PaginationLast>
 </template>

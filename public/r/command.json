@@ -2,12 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "command",
   "type": "registry:ui",
-  "dependencies": [
-    "reka-ui"
-  ],
-  "registryDependencies": [
-    "dialog"
-  ],
+  "dependencies": ["reka-ui"],
+  "registryDependencies": ["dialog"],
   "files": [
     {
       "path": "app/registry/components/ui/command/Command.vue",
@@ -16,7 +12,7 @@
     },
     {
       "path": "app/registry/components/ui/command/CommandDialog.vue",
-      "content": "<script setup lang=\"ts\">\nimport type { DialogRootEmits, DialogRootProps } from \"reka-ui\";\nimport { useForwardPropsEmits } from \"reka-ui\";\nimport { Dialog, DialogContent } from \"~/registry/components/ui/dialog\";\nimport Command from \"./Command.vue\";\n\nconst props = defineProps<DialogRootProps>();\nconst emits = defineEmits<DialogRootEmits>();\n\nconst forwarded = useForwardPropsEmits(props, emits);\n</script>\n\n<template>\n  <Dialog v-bind=\"forwarded\">\n    <DialogContent class=\"overflow-hidden p-0 shadow-lg\">\n      <Command\n        class=\"[&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group]]:px-2 [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5\"\n      >\n        <slot />\n      </Command>\n    </DialogContent>\n  </Dialog>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport type { DialogRootEmits, DialogRootProps } from \"reka-ui\";\nimport { useForwardPropsEmits } from \"reka-ui\";\nimport { Dialog, DialogContent } from \"@/registry/default/ui/dialog\";\nimport Command from \"./Command.vue\";\n\nconst props = defineProps<DialogRootProps>();\nconst emits = defineEmits<DialogRootEmits>();\n\nconst forwarded = useForwardPropsEmits(props, emits);\n</script>\n\n<template>\n  <Dialog v-bind=\"forwarded\">\n    <DialogContent class=\"overflow-hidden p-0 shadow-lg\">\n      <Command\n        class=\"[&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group]]:px-2 [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5\"\n      >\n        <slot />\n      </Command>\n    </DialogContent>\n  </Dialog>\n</template>\n",
       "type": "registry:ui"
     },
     {

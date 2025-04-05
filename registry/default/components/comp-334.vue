@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/registry/default/ui/accordion";
+
 const items = [
   {
     id: "1",

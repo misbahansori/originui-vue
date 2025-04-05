@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { buttonVariants } from "~/registry/components/ui/button";
+import { buttonVariants } from "@/registry/default/ui/button";
 
 const links = [
   { text: "Layouts", href: "/layouts", isNew: true },

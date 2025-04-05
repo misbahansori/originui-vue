@@ -1,4 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
+import { fileURLToPath } from "node:url";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -34,9 +35,13 @@ export default defineNuxtConfig({
 
   compatibilityDate: "2024-04-03",
 
+  alias: {
+    "@": fileURLToPath(new URL("./", import.meta.url)),
+  },
+
   shadcn: {
     prefix: "",
-    componentDir: "./app/registry/components/ui",
+    componentDir: "./app/components/ui",
   },
 
   colorMode: {
@@ -62,7 +67,7 @@ export default defineNuxtConfig({
   components: {
     dirs: [
       { path: "~/components" },
-      { path: "~/registry/components", global: true },
+      { path: "~~/registry/default/components", global: true },
     ],
   },
 

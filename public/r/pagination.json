@@ -2,12 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "pagination",
   "type": "registry:ui",
-  "dependencies": [
-    "reka-ui"
-  ],
-  "registryDependencies": [
-    "button"
-  ],
+  "dependencies": ["reka-ui"],
+  "registryDependencies": ["button"],
   "files": [
     {
       "path": "app/registry/components/ui/pagination/PaginationEllipsis.vue",
@@ -16,12 +12,12 @@
     },
     {
       "path": "app/registry/components/ui/pagination/PaginationFirst.vue",
-      "content": "<script setup lang=\"ts\">\nimport { ChevronsLeft } from \"lucide-vue-next\";\nimport { PaginationFirst, type PaginationFirstProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport { Button } from \"~/registry/components/ui/button\";\nimport { cn } from \"~/utils/utils\";\n\nconst props = withDefaults(\n  defineProps<PaginationFirstProps & { class?: HTMLAttributes[\"class\"] }>(),\n  {\n    asChild: true,\n  },\n);\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <PaginationFirst v-bind=\"delegatedProps\">\n    <slot>\n      <Button :class=\"cn('h-9 w-9 p-0', props.class)\" variant=\"outline\">\n        <ChevronsLeft class=\"h-4 w-4\" />\n      </Button>\n    </slot>\n  </PaginationFirst>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { ChevronsLeft } from \"lucide-vue-next\";\nimport { PaginationFirst, type PaginationFirstProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport { Button } from \"@/registry/default/ui/button\";\nimport { cn } from \"~/utils/utils\";\n\nconst props = withDefaults(\n  defineProps<PaginationFirstProps & { class?: HTMLAttributes[\"class\"] }>(),\n  {\n    asChild: true,\n  },\n);\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <PaginationFirst v-bind=\"delegatedProps\">\n    <slot>\n      <Button :class=\"cn('h-9 w-9 p-0', props.class)\" variant=\"outline\">\n        <ChevronsLeft class=\"h-4 w-4\" />\n      </Button>\n    </slot>\n  </PaginationFirst>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "app/registry/components/ui/pagination/PaginationLast.vue",
-      "content": "<script setup lang=\"ts\">\nimport { ChevronsRight } from \"lucide-vue-next\";\nimport { PaginationLast, type PaginationLastProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport { Button } from \"~/registry/components/ui/button\";\nimport { cn } from \"~/utils/utils\";\n\nconst props = withDefaults(\n  defineProps<PaginationLastProps & { class?: HTMLAttributes[\"class\"] }>(),\n  {\n    asChild: true,\n  },\n);\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <PaginationLast v-bind=\"delegatedProps\">\n    <slot>\n      <Button :class=\"cn('h-9 w-9 p-0', props.class)\" variant=\"outline\">\n        <ChevronsRight class=\"h-4 w-4\" />\n      </Button>\n    </slot>\n  </PaginationLast>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { ChevronsRight } from \"lucide-vue-next\";\nimport { PaginationLast, type PaginationLastProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport { Button } from \"@/registry/default/ui/button\";\nimport { cn } from \"~/utils/utils\";\n\nconst props = withDefaults(\n  defineProps<PaginationLastProps & { class?: HTMLAttributes[\"class\"] }>(),\n  {\n    asChild: true,\n  },\n);\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <PaginationLast v-bind=\"delegatedProps\">\n    <slot>\n      <Button :class=\"cn('h-9 w-9 p-0', props.class)\" variant=\"outline\">\n        <ChevronsRight class=\"h-4 w-4\" />\n      </Button>\n    </slot>\n  </PaginationLast>\n</template>\n",
       "type": "registry:ui"
     },
     {
