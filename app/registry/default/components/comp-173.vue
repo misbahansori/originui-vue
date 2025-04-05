@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import { Switch } from "@/registry/default/ui/switch";
+
 const id = useId();
 </script>
 

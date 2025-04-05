@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Switch } from "@/registry/default/ui/switch";
+import { LucideMoon, LucideSun } from "lucide-vue-next";
+import { ref } from "vue";
+
 const id = useId();
 const checked = ref(false);
 </script>
@@ -14,7 +18,7 @@ const checked = ref(false);
       :aria-controls="id"
       @click="checked = false"
     >
-      <Icon name="lucide:moon" size="16" aria-hidden="true" />
+      <LucideMoon :size="16" aria-hidden="true" />
     </span>
     <Switch
       :id="id"
@@ -28,7 +32,7 @@ const checked = ref(false);
       :aria-controls="id"
       @click="checked = true"
     >
-      <Icon name="lucide:sun" size="16" aria-hidden="true" />
+      <LucideSun :size="16" aria-hidden="true" />
     </span>
   </div>
 </template>
