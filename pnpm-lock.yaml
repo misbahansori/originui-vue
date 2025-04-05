@@ -26,6 +26,9 @@ importers:
       '@nuxtjs/tailwindcss':
         specifier: ^6.13.1
         version: 6.13.1(magicast@0.3.5)
+      '@remixicon/vue':
+        specifier: ^4.6.0
+        version: 4.6.0(vue@3.5.13(typescript@5.8.2))
       '@tailwindcss/postcss':
         specifier: ^4.0.10
         version: 4.0.10
@@ -1012,6 +1015,11 @@ packages:
   '@redocly/openapi-core@1.33.0':
     resolution: {integrity: sha512-MUB1jPxYX2NmgiobICcvyrkSbPSaGAb/P/MsxSW+UT9hxpQvDCX81bstGg68BcKIdeFvVRKcoyG4xiTgDOEBfQ==}
     engines: {node: '>=18.17.0', npm: '>=9.5.0'}
+
+  '@remixicon/vue@4.6.0':
+    resolution: {integrity: sha512-OKDNBHM4gPbXZkYpKMu6xxLIP8LaioQQ7ipC10IfY4Wh5cmhrtA3aQIWgeCWGToRn1XoYoKAD8K95jUmE24hLQ==}
+    peerDependencies:
+      vue: '>= 3'
 
   '@resvg/resvg-js-android-arm-eabi@2.6.2':
     resolution: {integrity: sha512-FrJibrAk6v29eabIPgcTUMPXiEz8ssrAk7TXxsiZzww9UTQ1Z5KAbFJs+Z0Ez+VZTYgnE5IQJqBcoSiMebtPHA==}
@@ -6203,6 +6211,10 @@ snapshots:
       yaml-ast-parser: 0.0.43
     transitivePeerDependencies:
       - supports-color
+
+  '@remixicon/vue@4.6.0(vue@3.5.13(typescript@5.8.2))':
+    dependencies:
+      vue: 3.5.13(typescript@5.8.2)
 
   '@resvg/resvg-js-android-arm-eabi@2.6.2':
     optional: true
