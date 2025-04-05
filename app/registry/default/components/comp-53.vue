@@ -1,6 +1,16 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/registry/default/ui/tooltip";
 import { useClipboard } from "@vueuse/core";
+import { LucideCheck, LucideCopy } from "lucide-vue-next";
+import { ref } from "vue";
 
 const inputValue = ref("pnpm install origin-ui");
 const inputRef = ref<HTMLInputElement | null>(null);
@@ -37,8 +47,7 @@ const { copy, copied } = useClipboard();
                   )
                 "
               >
-                <Icon
-                  name="lucide:check"
+                <LucideCheck
                   class="stroke-emerald-500"
                   :size="16"
                   aria-hidden="true"
@@ -52,7 +61,7 @@ const { copy, copied } = useClipboard();
                   )
                 "
               >
-                <Icon name="lucide:copy" :size="16" aria-hidden="true" />
+                <LucideCopy :size="16" aria-hidden="true" />
               </div>
             </button>
           </TooltipTrigger>
