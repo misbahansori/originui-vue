@@ -10,7 +10,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-264.vue",
+      "path": "app/registry/default/components/comp-264.vue",
       "content": "<script setup lang=\"ts\">\nconst sliders = [\n  {\n    label: \"X\",\n    minValue: -10,\n    maxValue: 10,\n    initialValue: [-2],\n    defaultValue: [0],\n  },\n  {\n    label: \"Y\",\n    minValue: -10,\n    maxValue: 10,\n    initialValue: [4],\n    defaultValue: [0],\n  },\n\n  {\n    label: \"Z\",\n    minValue: -10,\n    maxValue: 10,\n    initialValue: [2],\n    defaultValue: [0],\n  },\n];\n\nconst slidersRefs = useTemplateRef(\"slidersRefs\");\n\nconst resetAll = () => {\n  slidersRefs.value?.forEach((slider) => {\n    slider?.resetToDefault();\n  });\n};\n</script>\n\n<template>\n  <div class=\"space-y-4\">\n    <legend class=\"text-foreground text-sm font-medium\">Object position</legend>\n    <div class=\"space-y-2\">\n      <SliderWithInput\n        v-for=\"slider in sliders\"\n        :key=\"slider.label\"\n        ref=\"slidersRefs\"\n        :label=\"slider.label\"\n        :min-value=\"slider.minValue\"\n        :max-value=\"slider.maxValue\"\n        :initial-value=\"slider.initialValue\"\n        :default-value=\"slider.defaultValue\"\n      />\n    </div>\n    <Button class=\"w-full\" variant=\"outline\" @click=\"resetAll\">\n      <Icon\n        name=\"lucide:rotate-ccw\"\n        class=\"-ms-1 opacity-60\"\n        size=\"16\"\n        aria-hidden=\"true\"\n      />\n      Reset\n    </Button>\n  </div>\n</template>\n",
       "type": "registry:component"
     },

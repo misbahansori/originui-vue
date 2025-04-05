@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-523.vue",
+      "path": "app/registry/default/components/comp-523.vue",
       "content": "<script lang=\"ts\" setup>\nconst steps = [\n  {\n    step: 1,\n    title: \"Step One\",\n  },\n  {\n    step: 2,\n    title: \"Step Two\",\n  },\n  {\n    step: 3,\n    title: \"Step Three\",\n  },\n];\n</script>\n\n<template>\n  <div class=\"space-y-8 text-center\">\n    <Stepper :default-value=\"2\">\n      <StepperItem\n        v-for=\"{ step, title } in steps\"\n        :key=\"step\"\n        :step=\"step\"\n        class=\"max-md:items-start\"\n        :class=\"step !== steps.length ? 'flex-1' : ''\"\n      >\n        <StepperTrigger class=\"rounded max-md:flex-col\">\n          <StepperIndicator />\n          <div class=\"text-center md:text-left\">\n            <StepperTitle>{{ title }}</StepperTitle>\n          </div>\n        </StepperTrigger>\n        <StepperSeparator\n          v-if=\"step < steps.length\"\n          class=\"max-md:mt-3.5 md:mx-4\"\n        />\n      </StepperItem>\n    </Stepper>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Stepper with inline titles\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

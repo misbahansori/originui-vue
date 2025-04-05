@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-93.vue",
+      "path": "app/registry/default/components/comp-93.vue",
       "content": "<template>\n  <Button variant=\"outline\">\n    <Icon\n      name=\"lucide:printer\"\n      class=\"-ms-1 opacity-60\"\n      :size=\"16\"\n      aria-hidden=\"true\"\n    />\n    Print\n    <kbd\n      class=\"bg-background text-muted-foreground/70 ms-1 -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium\"\n    >\n      ⌘P\n    </kbd>\n  </Button>\n</template>\n",
       "type": "registry:component"
     }

@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-253.vue",
+      "path": "app/registry/default/components/comp-253.vue",
       "content": "<script setup lang=\"ts\">\nconst value = ref([25, 50, 100]);\n\nconst formatTooltip = (val: number) => `${val}%`;\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Slider with multiple thumbs</Label>\n    <Slider\n      v-model=\"value\"\n      aria-label=\"Slider with multiple thumbs\"\n      :show-tooltip=\"true\"\n      :tooltip-content=\"formatTooltip\"\n    />\n  </div>\n</template>\n",
       "type": "registry:component"
     }

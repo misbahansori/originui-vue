@@ -10,7 +10,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-299.vue",
+      "path": "app/registry/default/components/comp-299.vue",
       "content": "<script setup lang=\"ts\">\n// TODO: Implement this component\n</script>\n\n<template>\n  <Button variant=\"outline\">Show sonner</Button>\n</template>\n",
       "type": "registry:component"
     }

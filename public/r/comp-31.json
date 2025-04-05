@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-31.vue",
+      "path": "app/registry/default/components/comp-31.vue",
       "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"group relative\">\n    <label\n      :for=\"id\"\n      class=\"bg-background text-foreground absolute start-1 top-0 z-10 block -translate-y-1/2 px-2 text-xs font-medium group-has-disabled:opacity-50\"\n    >\n      Input with overlapping label\n    </label>\n    <Input :id=\"id\" class=\"h-10\" placeholder=\"Email\" type=\"email\" />\n  </div>\n</template>\n",
       "type": "registry:component"
     }

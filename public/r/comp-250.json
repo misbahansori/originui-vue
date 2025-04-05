@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-250.vue",
+      "path": "app/registry/default/components/comp-250.vue",
       "content": "<script setup lang=\"ts\">\nconst value = ref([25, 75]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Dual range slider</Label>\n    <Slider v-model=\"value\" :step=\"10\" aria-label=\"Dual range slider\" />\n  </div>\n</template>\n",
       "type": "registry:component"
     }

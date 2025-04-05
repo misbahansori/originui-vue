@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-112.vue",
+      "path": "app/registry/default/components/comp-112.vue",
       "content": "<template>\n  <div class=\"inline-flex -space-x-px rounded-md shadow-xs rtl:space-x-reverse\">\n    <Button\n      class=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\"\n      variant=\"outline\"\n    >\n      Preview\n    </Button>\n    <Button\n      class=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\"\n      variant=\"outline\"\n      size=\"icon\"\n      aria-label=\"Open link\"\n    >\n      <Icon\n        name=\"lucide:square-arrow-out-up-right\"\n        size=\"16\"\n        aria-hidden=\"true\"\n      />\n    </Button>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

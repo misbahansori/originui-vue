@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-103.vue",
+      "path": "app/registry/default/components/comp-103.vue",
       "content": "<template>\n  <div\n    class=\"inline-flex -space-x-px rounded-full shadow-xs rtl:space-x-reverse\"\n  >\n    <Button\n      class=\"rounded-none shadow-none first:rounded-s-full last:rounded-e-full focus-visible:z-10\"\n      size=\"icon\"\n      aria-label=\"Upvote\"\n    >\n      <Icon name=\"lucide:chevron-up\" size=\"16\" aria-hidden=\"true\" />\n    </Button>\n    <span\n      class=\"bg-primary text-primary-foreground flex items-center px-1 text-sm font-medium\"\n    >\n      235\n    </span>\n    <Button\n      class=\"rounded-none shadow-none first:rounded-s-full last:rounded-e-full focus-visible:z-10\"\n      size=\"icon\"\n      aria-label=\"Downvote\"\n    >\n      <Icon name=\"lucide:chevron-down\" size=\"16\" aria-hidden=\"true\" />\n    </Button>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-71.vue",
+      "path": "app/registry/default/components/comp-71.vue",
       "content": "<script setup lang=\"ts\">\nconst textValue = ref(\"\");\n</script>\n\n<template>\n  <div class=\"group relative\">\n    <Label\n      for=\"overlapping-textarea\"\n      class=\"bg-background text-foreground absolute start-1 top-0 z-10 block -translate-y-1/2 px-2 text-xs font-medium group-has-disabled:opacity-50\"\n    >\n      Textarea with overlapping label\n    </Label>\n    <Textarea id=\"overlapping-textarea\" v-model=\"textValue\" />\n  </div>\n</template>\n",
       "type": "registry:component"
     }

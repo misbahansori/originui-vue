@@ -10,7 +10,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-36.vue",
+      "path": "app/registry/default/components/comp-36.vue",
       "content": "<script setup lang=\"ts\">\nconst id = useId();\nconst date = ref(new Date());\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\" class=\"text-foreground text-sm font-medium\">\n      Date input\n    </Label>\n    <div\n      :id=\"id\"\n      class=\"border-input bg-background text-foreground focus-within:border-ring focus-within:ring-ring/50 flex h-9 items-center rounded-md border px-3 shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px]\"\n    >\n      <input\n        v-model=\"date\"\n        type=\"date\"\n        class=\"w-full bg-transparent text-sm focus:outline-none\"\n      />\n    </div>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with native date input\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

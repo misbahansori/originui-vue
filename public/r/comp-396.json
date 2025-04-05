@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-396.vue",
+      "path": "app/registry/default/components/comp-396.vue",
       "content": "<template>\n  <div class=\"relative\">\n    <Avatar class=\"rounded-md\">\n      <AvatarImage src=\"./avatar-80-07.jpg\" alt=\"Kelly King\" />\n      <AvatarFallback>KK</AvatarFallback>\n    </Avatar>\n    <span\n      class=\"border-background absolute -end-1 -top-1 size-3 rounded-full border-2 bg-emerald-500\"\n    >\n      <span class=\"sr-only\">Online</span>\n    </span>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

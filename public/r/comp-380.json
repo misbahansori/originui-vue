@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-380.vue",
+      "path": "app/registry/default/components/comp-380.vue",
       "content": "<script setup lang=\"ts\">\nconst colorMode = useColorMode();\n</script>\n\n<template>\n  <div>\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button size=\"icon\" variant=\"outline\" aria-label=\"Select theme\">\n          <Icon\n            v-if=\"colorMode.value === 'light'\"\n            name=\"lucide:sun\"\n            class=\"size-4\"\n            aria-hidden=\"true\"\n          />\n          <Icon\n            v-if=\"colorMode.value === 'dark'\"\n            name=\"lucide:moon\"\n            class=\"size-4\"\n            aria-hidden=\"true\"\n          />\n        </Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent class=\"min-w-32\">\n        <DropdownMenuItem @click=\"colorMode.preference = 'light'\">\n          <Icon\n            name=\"lucide:sun\"\n            class=\"size-4 opacity-60\"\n            aria-hidden=\"true\"\n          />\n          <span>Light</span>\n        </DropdownMenuItem>\n        <DropdownMenuItem @click=\"colorMode.preference = 'dark'\">\n          <Icon\n            name=\"lucide:moon\"\n            class=\"size-4 opacity-60\"\n            aria-hidden=\"true\"\n          />\n          <span>Dark</span>\n        </DropdownMenuItem>\n        <DropdownMenuItem @click=\"colorMode.preference = 'system'\">\n          <Icon\n            name=\"lucide:monitor\"\n            class=\"size-4 opacity-60\"\n            aria-hidden=\"true\"\n          />\n          <span>System</span>\n        </DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

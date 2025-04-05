@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-454.vue",
+      "path": "app/registry/default/components/comp-454.vue",
       "content": "<template>\n  <Pagination :defaultPage=\"1\" :itemsPerPage=\"10\" :total=\"50\">\n    <PaginationList class=\"flex w-full items-center justify-between gap-3\">\n      <PaginationPrev asChild>\n        <Button variant=\"outline\" class=\"h-9 w-auto px-4\">\n          <Icon\n            name=\"lucide:chevron-left\"\n            aria-hidden=\"true\"\n            class=\"size-4 opacity-60\"\n          />\n          Previous\n        </Button>\n      </PaginationPrev>\n      <PaginationNext asChild>\n        <Button variant=\"outline\" class=\"h-9 w-auto px-4\">\n          Next\n          <Icon\n            name=\"lucide:chevron-right\"\n            aria-hidden=\"true\"\n            class=\"size-4 opacity-60\"\n          />\n        </Button>\n      </PaginationNext>\n    </PaginationList>\n  </Pagination>\n</template>\n",
       "type": "registry:component"
     }

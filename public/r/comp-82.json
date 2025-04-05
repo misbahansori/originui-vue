@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-82.vue",
+      "path": "app/registry/default/components/comp-82.vue",
       "content": "<script setup lang=\"ts\">\n// Component using shadcn-vue button with destructive variant and icon\n</script>\n\n<template>\n  <Button variant=\"destructive\">\n    <Icon\n      name=\"lucide:trash\"\n      class=\"-ms-1 opacity-60\"\n      :size=\"16\"\n      aria-hidden=\"true\"\n    />\n    Button\n  </Button>\n</template>\n",
       "type": "registry:component"
     }

@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-419.vue",
+      "path": "app/registry/default/components/comp-419.vue",
       "content": "<template>\n  <Badge variant=\"outline\" class=\"gap-1\">\n    <Icon\n      name=\"lucide:check\"\n      class=\"size-4 text-emerald-500\"\n      aria-hidden=\"true\"\n    />\n    Badge\n  </Badge>\n</template>\n",
       "type": "registry:component"
     }

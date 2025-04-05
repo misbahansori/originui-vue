@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-392.vue",
+      "path": "app/registry/default/components/comp-392.vue",
       "content": "<template>\n  <Avatar>\n    <AvatarFallback>\n      <Icon\n        name=\"lucide:user-round\"\n        class=\"size-4 opacity-60\"\n        aria-hidden=\"true\"\n      />\n    </AvatarFallback>\n  </Avatar>\n</template>\n",
       "type": "registry:component"
     }

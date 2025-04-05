@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-393.vue",
+      "path": "app/registry/default/components/comp-393.vue",
       "content": "<template>\n  <Avatar class=\"rounded-md\">\n    <AvatarImage src=\"./avatar-80-07.jpg\" alt=\"Kelly King\" />\n    <AvatarFallback>KK</AvatarFallback>\n  </Avatar>\n</template>\n",
       "type": "registry:component"
     }

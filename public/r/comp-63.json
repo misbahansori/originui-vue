@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-63.vue",
+      "path": "app/registry/default/components/comp-63.vue",
       "content": "<script setup lang=\"ts\">\nconst textValue = ref(\"\");\n</script>\n\n<template>\n  <div\n    class=\"[--ring:var(--color-indigo-300)] *:not-first:mt-2 in-[.dark]:[--ring:var(--color-indigo-900)]\"\n  >\n    <Label for=\"colored-textarea\">Textarea with colored border and ring</Label>\n    <Textarea\n      id=\"colored-textarea\"\n      v-model=\"textValue\"\n      placeholder=\"Leave a comment\"\n    />\n  </div>\n</template>\n",
       "type": "registry:component"
     }

@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-75.vue",
+      "path": "app/registry/default/components/comp-75.vue",
       "content": "<script setup lang=\"ts\">\nconst textValue = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"no-resize-textarea\">Textarea with no resize</Label>\n    <Textarea\n      id=\"no-resize-textarea\"\n      class=\"[resize:none]\"\n      v-model=\"textValue\"\n      placeholder=\"Leave a comment\"\n    />\n  </div>\n</template>\n",
       "type": "registry:component"
     }

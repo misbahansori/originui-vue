@@ -4,7 +4,7 @@
   "type": "registry:component",
   "files": [
     {
-      "path": "app/registry/components/comp-311.vue",
+      "path": "app/registry/default/components/comp-311.vue",
       "content": "<template>\n  <div class=\"border-b px-4 py-3\">\n    <p class=\"text-center text-sm\">\n      <span class=\"mr-1 text-base leading-none\">📫</span>\n      Subscribe to our newsletter and get 10% off your first order!\n      <span class=\"text-muted-foreground mx-1\">·</span>\n      <a href=\"#\" class=\"font-medium underline hover:no-underline\">Subscribe</a>\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

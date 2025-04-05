@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-79.vue",
+      "path": "app/registry/default/components/comp-79.vue",
       "content": "<template>\n  <Button disabled>Button</Button>\n</template>\n",
       "type": "registry:component"
     }

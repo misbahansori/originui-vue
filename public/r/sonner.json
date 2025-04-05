@@ -7,13 +7,13 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/ui/sonner/Sonner.vue",
-      "content": "<script lang=\"ts\" setup>\nimport { Toaster as Sonner, type ToasterProps } from 'vue-sonner'\n\nconst props = defineProps<ToasterProps>()\n</script>\n\n<template>\n  <Sonner\n    class=\"toaster group\"\n    v-bind=\"props\"\n    :toast-options=\"{\n      classes: {\n        toast: 'group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg',\n        description: 'group-[.toast]:text-muted-foreground',\n        actionButton:\n          'group-[.toast]:bg-primary group-[.toast]:text-primary-foreground',\n        cancelButton:\n          'group-[.toast]:bg-muted group-[.toast]:text-muted-foreground',\n      },\n    }\"\n  />\n</template>\n",
+      "path": "app/registry/default/ui/sonner/Sonner.vue",
+      "content": "<script lang=\"ts\" setup>\nimport { Toaster as Sonner, type ToasterProps } from \"vue-sonner\";\n\nconst props = defineProps<ToasterProps>();\n</script>\n\n<template>\n  <Sonner\n    class=\"toaster group\"\n    v-bind=\"props\"\n    :toast-options=\"{\n      classes: {\n        toast:\n          'group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg',\n        description: 'group-[.toast]:text-muted-foreground',\n        actionButton:\n          'group-[.toast]:bg-primary group-[.toast]:text-primary-foreground',\n        cancelButton:\n          'group-[.toast]:bg-muted group-[.toast]:text-muted-foreground',\n      },\n    }\"\n  />\n</template>\n",
       "type": "registry:ui"
     },
     {
-      "path": "app/registry/components/ui/sonner/index.ts",
-      "content": "export { default as Toaster } from './Sonner.vue'\n",
+      "path": "app/registry/default/ui/sonner/index.ts",
+      "content": "export { default as Toaster } from \"./Sonner.vue\";\n",
       "type": "registry:ui"
     }
   ]

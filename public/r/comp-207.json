@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-207.vue",
+      "path": "app/registry/default/components/comp-207.vue",
       "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div\n    class=\"[--ring:var(--color-indigo-300)] *:not-first:mt-2 in-[.dark]:[--ring:var(--color-indigo-900)]\"\n  >\n    <Label :for=\"id\">Select with colored border and ring</Label>\n    <Select default-value=\"1\">\n      <SelectTrigger :id=\"id\">\n        <SelectValue placeholder=\"Select framework\" />\n      </SelectTrigger>\n      <SelectContent>\n        <SelectItem value=\"1\">Vue</SelectItem>\n        <SelectItem value=\"2\">Nuxt</SelectItem>\n        <SelectItem value=\"3\">Astro</SelectItem>\n        <SelectItem value=\"4\">Vitesse</SelectItem>\n      </SelectContent>\n    </Select>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

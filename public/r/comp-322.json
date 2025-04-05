@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-322.vue",
+      "path": "app/registry/default/components/comp-322.vue",
       "content": "<template>\n  <Dialog>\n    <DialogTrigger asChild>\n      <Button variant=\"outline\">Feedback</Button>\n    </DialogTrigger>\n    <DialogContent>\n      <DialogHeader>\n        <DialogTitle>Send us feedback</DialogTitle>\n        <DialogDescription>\n          Watch\n          <a class=\"text-foreground hover:underline\" href=\"#\">tutorials</a>\n          , read Origin UI's\n          <a class=\"text-foreground hover:underline\" href=\"#\">documentation</a>\n          , or join our\n          <a class=\"text-foreground hover:underline\" href=\"#\">Discord</a>\n          for community help.\n        </DialogDescription>\n      </DialogHeader>\n      <form class=\"space-y-5\">\n        <Textarea\n          id=\"feedback\"\n          placeholder=\"How can we improve Origin UI?\"\n          aria-label=\"Send feedback\"\n        />\n        <div class=\"flex flex-col sm:flex-row sm:justify-end\">\n          <Button type=\"button\">Send feedback</Button>\n        </div>\n      </form>\n    </DialogContent>\n  </Dialog>\n</template>\n",
       "type": "registry:component"
     }

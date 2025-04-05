@@ -9,8 +9,8 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-503.vue",
-      "content": "<template>\n</template>\n",
+      "path": "app/registry/default/components/comp-503.vue",
+      "content": "<template></template>\n",
       "type": "registry:component"
     }
   ],

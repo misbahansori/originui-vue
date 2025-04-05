@@ -14,7 +14,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-47.vue",
+      "path": "app/registry/default/components/comp-47.vue",
       "content": "<script setup lang=\"ts\">\nimport { mask as vMask } from \"vue-the-mask\";\n\nconst cardNumber = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"card-number\">Card Number</Label>\n    <div class=\"relative\">\n      <Input\n        id=\"card-number\"\n        v-model=\"cardNumber\"\n        class=\"peer ps-9 [direction:inherit]\"\n        placeholder=\"0000 0000 0000 0000\"\n        maxlength=\"19\"\n        v-mask=\"'#### #### #### ####'\"\n      />\n      <div\n        class=\"text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50\"\n      >\n        <Icon name=\"lucide:credit-card\" :size=\"16\" aria-hidden=\"true\" />\n      </div>\n    </div>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://vuejs-tips.github.io/vue-the-mask\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        vue-the-mask\n      </a>\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

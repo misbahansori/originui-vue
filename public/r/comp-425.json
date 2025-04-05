@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-425.vue",
+      "path": "app/registry/default/components/comp-425.vue",
       "content": "<script setup>\nconst isActive = ref(true);\n</script>\n\n<template>\n  <Badge v-if=\"isActive\" variant=\"outline\" class=\"gap-0 rounded-md px-2 py-1\">\n    Tag\n    <button\n      class=\"focus-visible:border-ring focus-visible:ring-ring/50 text-foreground/60 hover:text-foreground -my-[5px] -ms-0.5 -me-2 inline-flex size-7 shrink-0 cursor-pointer items-center justify-center rounded-[inherit] p-0 transition-[color,box-shadow] outline-none focus-visible:ring-[3px]\"\n      @click=\"isActive = false\"\n      aria-label=\"Delete\"\n    >\n      <Icon name=\"lucide:x\" class=\"size-4\" aria-hidden=\"true\" />\n    </button>\n  </Badge>\n</template>\n",
       "type": "registry:component"
     }

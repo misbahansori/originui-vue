@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-210.vue",
+      "path": "app/registry/default/components/comp-210.vue",
       "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Disabled select</Label>\n    <Select default-value=\"1\" disabled>\n      <SelectTrigger :id=\"id\">\n        <SelectValue placeholder=\"Select framework\" />\n      </SelectTrigger>\n      <SelectContent>\n        <SelectItem value=\"1\">Vue</SelectItem>\n        <SelectItem value=\"2\">Nuxt</SelectItem>\n        <SelectItem value=\"3\">Astro</SelectItem>\n        <SelectItem value=\"4\">Vitesse</SelectItem>\n      </SelectContent>\n    </Select>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

@@ -7,13 +7,13 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/ui/separator/Separator.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Separator, type SeparatorProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport { cn } from \"~/utils/utils\";\n\nconst props = defineProps<\n  SeparatorProps & { class?: HTMLAttributes[\"class\"]; label?: string }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <Separator\n    v-bind=\"delegatedProps\"\n    :class=\"\n      cn(\n        'bg-border relative shrink-0',\n        props.orientation === 'vertical' ? 'h-full w-px' : 'h-px w-full',\n        props.class,\n      )\n    \"\n  >\n    <span\n      v-if=\"props.label\"\n      :class=\"\n        cn(\n          'text-muted-foreground bg-background absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center text-xs',\n          props.orientation === 'vertical'\n            ? 'w-[1px] px-1 py-2'\n            : 'h-[1px] px-2 py-1',\n        )\n      \"\n    >\n      {{ props.label }}\n    </span>\n  </Separator>\n</template>\n",
+      "path": "app/registry/default/ui/separator/Separator.vue",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { Separator, type SeparatorProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  SeparatorProps & { class?: HTMLAttributes[\"class\"]; label?: string }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <Separator\n    v-bind=\"delegatedProps\"\n    :class=\"\n      cn(\n        'bg-border relative shrink-0',\n        props.orientation === 'vertical' ? 'h-full w-px' : 'h-px w-full',\n        props.class,\n      )\n    \"\n  >\n    <span\n      v-if=\"props.label\"\n      :class=\"\n        cn(\n          'text-muted-foreground bg-background absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center text-xs',\n          props.orientation === 'vertical'\n            ? 'w-[1px] px-1 py-2'\n            : 'h-[1px] px-2 py-1',\n        )\n      \"\n    >\n      {{ props.label }}\n    </span>\n  </Separator>\n</template>\n",
       "type": "registry:ui"
     },
     {
-      "path": "app/registry/components/ui/separator/index.ts",
-      "content": "export { default as Separator } from './Separator.vue'\n",
+      "path": "app/registry/default/ui/separator/index.ts",
+      "content": "export { default as Separator } from \"./Separator.vue\";\n",
       "type": "registry:ui"
     }
   ]

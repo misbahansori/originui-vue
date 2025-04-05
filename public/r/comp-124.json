@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-124.vue",
+      "path": "app/registry/default/components/comp-124.vue",
       "content": "<template>\n  <Button variant=\"link\" class=\"gap-1\">\n    <Icon\n      name=\"lucide:chevron-left\"\n      class=\"opacity-60\"\n      size=\"16\"\n      aria-hidden=\"true\"\n    />\n    Go back\n  </Button>\n</template>\n",
       "type": "registry:component"
     }

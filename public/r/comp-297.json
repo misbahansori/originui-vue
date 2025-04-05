@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-297.vue",
+      "path": "app/registry/default/components/comp-297.vue",
       "content": "<script setup lang=\"ts\">\n// TODO: Implement this component\n</script>\n\n<template>\n  <Button variant=\"outline\">Show toast</Button>\n</template>\n",
       "type": "registry:component"
     }

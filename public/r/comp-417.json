@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-417.vue",
+      "path": "app/registry/default/components/comp-417.vue",
       "content": "<template>\n  <Badge as-child>\n    <a href=\"#\">Link</a>\n  </Badge>\n</template>\n",
       "type": "registry:component"
     }

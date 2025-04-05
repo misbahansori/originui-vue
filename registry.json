@@ -1445,7 +1445,7 @@
       "dependencies": ["clsx", "tailwind-merge"],
       "files": [
         {
-          "path": "app/utils/utils.ts",
+          "path": "app/lib/utils.ts",
           "type": "registry:lib"
         }
       ]

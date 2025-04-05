@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-19.vue",
+      "path": "app/registry/default/components/comp-19.vue",
       "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with end inline button</Label>\n    <div class=\"relative\">\n      <Input :id=\"id\" class=\"pe-9\" placeholder=\"Email\" type=\"email\" />\n      <button\n        class=\"text-muted-foreground/80 hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-md transition-[color,box-shadow] outline-none focus:z-10 focus-visible:ring-[3px] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50\"\n        aria-label=\"Subscribe\"\n      >\n        <Icon name=\"lucide:send\" :size=\"16\" aria-hidden=\"true\" />\n      </button>\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

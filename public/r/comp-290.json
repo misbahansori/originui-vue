@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-290.vue",
+      "path": "app/registry/default/components/comp-290.vue",
       "content": "<template>\n  <!-- To make the notification fixed, add classes like `fixed bottom-4 right-4` to the container element. -->\n  <div class=\"bg-background z-50 max-w-[400px] rounded-md border p-4 shadow-lg\">\n    <div class=\"flex gap-2\">\n      <div class=\"flex grow gap-3\">\n        <Icon\n          name=\"lucide:circle-alert\"\n          class=\"mt-0.5 size-4 shrink-0 text-red-500\"\n          aria-hidden=\"true\"\n        />\n        <div class=\"flex grow flex-col gap-3\">\n          <div class=\"space-y-1\">\n            <p class=\"text-sm font-medium\">\n              We couldn't complete your request!\n            </p>\n            <p class=\"text-muted-foreground text-sm\">\n              It indicates that an issue has prevented the processing of the\n              request.\n            </p>\n          </div>\n          <div class=\"flex gap-2\">\n            <Button size=\"sm\">Learn more</Button>\n          </div>\n        </div>\n        <Button\n          variant=\"ghost\"\n          class=\"group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent\"\n          aria-label=\"Close notification\"\n        >\n          <Icon\n            name=\"lucide:x\"\n            class=\"size-4 opacity-60 transition-opacity group-hover:opacity-100\"\n            aria-hidden=\"true\"\n          />\n        </Button>\n      </div>\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component"
     }

@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-116.vue",
+      "path": "app/registry/default/components/comp-116.vue",
       "content": "<template>\n  <Button class=\"relative pe-12\">\n    Next\n    <span\n      class=\"bg-primary-foreground/15 pointer-events-none absolute inset-y-0 end-0 flex w-9 items-center justify-center\"\n    >\n      <Icon\n        name=\"lucide:chevron-right\"\n        class=\"opacity-60\"\n        size=\"16\"\n        aria-hidden=\"true\"\n      />\n    </span>\n  </Button>\n</template>\n",
       "type": "registry:component"
     }

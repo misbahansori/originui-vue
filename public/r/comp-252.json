@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/components/comp-252.vue",
+      "path": "app/registry/default/components/comp-252.vue",
       "content": "<script setup lang=\"ts\">\nconst value = ref([25]);\n</script>\n\n<template>\n  <div class=\"space-y-3\">\n    <div class=\"flex items-center justify-between gap-2\">\n      <Label class=\"leading-6\">Volume</Label>\n      <span class=\"text-sm font-medium tabular-nums\">{{ value[0] }}</span>\n    </div>\n    <div class=\"flex items-center gap-2\">\n      <Icon\n        name=\"lucide:volume-x\"\n        class=\"shrink-0 opacity-60\"\n        size=\"16\"\n        aria-hidden=\"true\"\n      />\n      <Slider v-model=\"value\" aria-label=\"Volume slider\" />\n      <Icon\n        name=\"lucide:volume-2\"\n        class=\"shrink-0 opacity-60\"\n        size=\"16\"\n        aria-hidden=\"true\"\n      />\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
