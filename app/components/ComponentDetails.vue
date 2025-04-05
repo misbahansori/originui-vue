@@ -4,7 +4,7 @@ import { codeToHtml } from "shiki";
 import { MagicString } from "vue/compiler-sfc";
 
 const props = defineProps<{
-  component: RegistryItem & { resolver: (() => Promise<unknown>) | undefined };
+  component: RegistryItem;
 }>();
 
 const html = shallowRef("");
@@ -17,7 +17,10 @@ function transformImportPath(code: string) {
 }
 
 onMounted(async () => {
-  const rawCode = (await props.component.resolver?.()) as string;
+  const rawCode = await import(
+    `../registry/default/components/${props.component.name}.vue?raw`
+  ).then((res) => res.default.trim());
+
   const transformedCode = transformImportPath(rawCode);
 
   code.value = transformedCode;
