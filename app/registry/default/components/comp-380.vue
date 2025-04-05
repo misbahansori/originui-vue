@@ -1,5 +1,11 @@
 <script setup lang="ts">
-const colorMode = useColorMode();
+import { useColorMode } from "@vueuse/core";
+
+const { system, store } = useColorMode();
+
+const colorMode = computed(() =>
+  store.value === "auto" ? system.value : store.value,
+);
 </script>
 
 <template>
@@ -8,13 +14,13 @@ const colorMode = useColorMode();
       <DropdownMenuTrigger asChild>
         <Button size="icon" variant="outline" aria-label="Select theme">
           <Icon
-            v-if="colorMode.value === 'light'"
+            v-if="colorMode === 'light'"
             name="lucide:sun"
             class="size-4"
             aria-hidden="true"
           />
           <Icon
-            v-if="colorMode.value === 'dark'"
+            v-if="colorMode === 'dark'"
             name="lucide:moon"
             class="size-4"
             aria-hidden="true"
@@ -22,7 +28,7 @@ const colorMode = useColorMode();
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent class="min-w-32">
-        <DropdownMenuItem @click="colorMode.preference = 'light'">
+        <DropdownMenuItem @click="store = 'light'">
           <Icon
             name="lucide:sun"
             class="size-4 opacity-60"
@@ -30,7 +36,7 @@ const colorMode = useColorMode();
           />
           <span>Light</span>
         </DropdownMenuItem>
-        <DropdownMenuItem @click="colorMode.preference = 'dark'">
+        <DropdownMenuItem @click="store = 'dark'">
           <Icon
             name="lucide:moon"
             class="size-4 opacity-60"
@@ -38,7 +44,7 @@ const colorMode = useColorMode();
           />
           <span>Dark</span>
         </DropdownMenuItem>
-        <DropdownMenuItem @click="colorMode.preference = 'system'">
+        <DropdownMenuItem @click="store = 'auto'">
           <Icon
             name="lucide:monitor"
             class="size-4 opacity-60"
