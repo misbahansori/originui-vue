@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { computed, ref, useId } from "vue";
+
 const id = useId();
 const inputValue = ref("");
 const maxLength = 50;

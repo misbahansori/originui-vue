@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { LucideEye, LucideEyeOff } from "lucide-vue-next";
+import { ref, useId } from "vue";
+
 const id = useId();
 const isVisible = ref(false);
 
@@ -25,13 +30,8 @@ const toggleVisibility = () => {
         :aria-pressed="isVisible"
         aria-controls="password"
       >
-        <Icon
-          v-if="isVisible"
-          name="lucide:eye-off"
-          :size="16"
-          aria-hidden="true"
-        />
-        <Icon v-else name="lucide:eye" :size="16" aria-hidden="true" />
+        <LucideEyeOff v-if="isVisible" :size="16" aria-hidden="true" />
+        <LucideEye v-else :size="16" aria-hidden="true" />
       </button>
     </div>
   </div>

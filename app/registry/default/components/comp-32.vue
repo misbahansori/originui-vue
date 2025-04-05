@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { Input } from "@/registry/default/ui/input";
+import { useId } from "vue";
+
 const id = useId();
 </script>
 

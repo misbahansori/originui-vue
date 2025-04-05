@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { LucideCircleX } from "lucide-vue-next";
+import { ref, useId } from "vue";
+
 const id = useId();
 const inputValue = ref("Click to clear");
 const inputRef = ref<HTMLInputElement | null>(null);
@@ -27,7 +32,7 @@ const handleClearInput = () => {
         aria-label="Clear input"
         @click="handleClearInput"
       >
-        <Icon name="lucide:circle-x" :size="16" aria-hidden="true" />
+        <LucideCircleX :size="16" aria-hidden="true" />
       </button>
     </div>
   </div>
