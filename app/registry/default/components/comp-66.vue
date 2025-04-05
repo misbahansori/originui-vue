@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
 import { Textarea } from "@/registry/default/ui/textarea";
-import { ref } from "vue";
+import { ref, useId } from "vue";
 
 const textValue = ref("");
+const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="shorter-textarea">Shorter textarea</Label>
+    <Label :for="id">Shorter textarea</Label>
     <Textarea
-      id="shorter-textarea"
+      :id="id"
       class="min-h-[none]"
       v-model="textValue"
       placeholder="Leave a comment"

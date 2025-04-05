@@ -4,16 +4,17 @@ import { Textarea } from "@/registry/default/ui/textarea";
 import { ref } from "vue";
 
 const textValue = ref("");
+const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="required-textarea">
+    <Label :for="id">
       Required textarea
       <span class="text-destructive">*</span>
     </Label>
     <Textarea
-      id="required-textarea"
+      :id="id"
       v-model="textValue"
       placeholder="Leave a message"
       required

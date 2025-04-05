@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
 import { Textarea } from "@/registry/default/ui/textarea";
-import { ref } from "vue";
+import { ref, useId } from "vue";
 
 const textValue = ref("");
+const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="gray-textarea">Textarea with gray background</Label>
+    <Label :for="id">Textarea with gray background</Label>
     <Textarea
-      id="gray-textarea"
+      :id="id"
       class="bg-muted border-transparent shadow-none"
       v-model="textValue"
       placeholder="Leave a comment"
