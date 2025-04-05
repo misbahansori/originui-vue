@@ -1,4 +1,12 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import {
+  PinInput,
+  PinInputGroup,
+  PinInputInput,
+} from "@/registry/default/ui/pin-input";
+import { ref, useId } from "vue";
+
 const inputId = useId();
 const value = ref(["", "", "", "", ""]);
 </script>

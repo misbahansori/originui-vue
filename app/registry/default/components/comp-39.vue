@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import { LucideClock } from "lucide-vue-next";
+import { ref, useId } from "vue";
+
 const id = useId();
 const time = ref("");
 </script>
@@ -22,7 +26,7 @@ const time = ref("");
       <div
         class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 end-0 z-10 flex items-center justify-center pe-3"
       >
-        <Icon name="lucide:clock" :size="16" aria-hidden="true" />
+        <LucideClock :size="16" aria-hidden="true" />
       </div>
     </div>
     <p

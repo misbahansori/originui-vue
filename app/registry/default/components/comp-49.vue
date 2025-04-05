@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { ref } from "vue";
 import { mask as vMask } from "vue-the-mask";
 
 const cvcCode = ref("");

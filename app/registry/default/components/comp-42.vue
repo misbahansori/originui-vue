@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import { ref, useId } from "vue";
+
 const startId = useId();
 const endId = useId();
 

@@ -1,4 +1,13 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import {
+  PinInput,
+  PinInputGroup,
+  PinInputInput,
+} from "@/registry/default/ui/pin-input";
+import { LucideMinus } from "lucide-vue-next";
+import { ref, useId } from "vue";
+
 const inputId = useId();
 const value = ref(["", "", "", "", "", ""]);
 </script>
@@ -22,7 +31,7 @@ const value = ref(["", "", "", "", "", ""]);
             ]"
           ></PinInputInput>
           <div v-if="index === 2" class="text-muted-foreground/80">
-            <Icon name="lucide:minus" :size="16" aria-hidden="true" />
+            <LucideMinus :size="16" aria-hidden="true" />
           </div>
         </template>
       </PinInputGroup>

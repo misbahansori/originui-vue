@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { SelectNative } from "@/registry/default/ui/select-native";
+import { ref } from "vue";
+
 // TODO: This component uses a third-party library (react-phone-number-input)
 // We need to find an equivalent Vue library or implement custom functionality
 const phoneValue = ref("");

@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { LucideCreditCard } from "lucide-vue-next";
+import { ref } from "vue";
 import { mask as vMask } from "vue-the-mask";
 
 const cardNumber = ref("");
@@ -19,7 +23,7 @@ const cardNumber = ref("");
       <div
         class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50"
       >
-        <Icon name="lucide:credit-card" :size="16" aria-hidden="true" />
+        <LucideCreditCard :size="16" aria-hidden="true" />
       </div>
     </div>
     <p
