@@ -1,4 +1,16 @@
 <script setup lang="ts">
+import {
+  ToggleGroup,
+  ToggleGroupItem,
+} from "@/registry/default/ui/toggle-group";
+import {
+  LucideAlignCenter,
+  LucideAlignJustify,
+  LucideAlignLeft,
+  LucideAlignRight,
+} from "lucide-vue-next";
+import { ref } from "vue";
+
 const value = ref("center");
 </script>
 
@@ -13,28 +25,28 @@ const value = ref("center");
       aria-label="Align Left"
       value="left"
     >
-      <Icon name="lucide:align-left" size="16" aria-hidden="true" />
+      <LucideAlignLeft :size="16" aria-hidden="true" />
     </ToggleGroupItem>
     <ToggleGroupItem
       class="bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
       aria-label="Align Center"
       value="center"
     >
-      <Icon name="lucide:align-center" size="16" aria-hidden="true" />
+      <LucideAlignCenter :size="16" aria-hidden="true" />
     </ToggleGroupItem>
     <ToggleGroupItem
       class="bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
       aria-label="Align Right"
       value="right"
     >
-      <Icon name="lucide:align-right" size="16" aria-hidden="true" />
+      <LucideAlignRight :size="16" aria-hidden="true" />
     </ToggleGroupItem>
     <ToggleGroupItem
       class="bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
       aria-label="Align Justify"
       value="justify"
     >
-      <Icon name="lucide:align-justify" size="16" aria-hidden="true" />
+      <LucideAlignJustify :size="16" aria-hidden="true" />
     </ToggleGroupItem>
   </ToggleGroup>
 </template>

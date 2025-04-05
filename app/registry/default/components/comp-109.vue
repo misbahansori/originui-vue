@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import {
+  ToggleGroup,
+  ToggleGroupItem,
+} from "@/registry/default/ui/toggle-group";
+import { ref } from "vue";
+
 const value = ref("center");
 </script>
 

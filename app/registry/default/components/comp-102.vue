@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { LucideChevronDown, LucideChevronUp } from "lucide-vue-next";
+</script>
+
 <template>
   <div class="inline-flex -space-x-px rounded-md shadow-xs rtl:space-x-reverse">
     <Button
@@ -6,7 +11,7 @@
       size="icon"
       aria-label="Upvote"
     >
-      <Icon name="lucide:chevron-up" size="16" aria-hidden="true" />
+      <LucideChevronUp :size="16" aria-hidden="true" />
     </Button>
     <span
       class="border-input flex items-center border px-3 text-sm font-medium"
@@ -19,7 +24,7 @@
       size="icon"
       aria-label="Downvote"
     >
-      <Icon name="lucide:chevron-down" size="16" aria-hidden="true" />
+      <LucideChevronDown :size="16" aria-hidden="true" />
     </Button>
   </div>
 </template>
