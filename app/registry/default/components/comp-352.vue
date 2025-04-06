@@ -1,4 +1,17 @@
 <script setup lang="ts">
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/registry/default/ui/accordion";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/registry/default/ui/collapsible";
+import { LucideChevronDown } from "lucide-vue-next";
+
 const items = [
   {
     id: "1",
@@ -98,8 +111,7 @@ const items = [
             <CollapsibleTrigger
               class="flex gap-2 text-[15px] leading-6 font-semibold [&[data-state=open]>svg]:rotate-180"
             >
-              <Icon
-                name="lucide:chevron-down"
+              <LucideChevronDown
                 class="mt-1 size-4 shrink-0 opacity-60 transition-transform duration-200"
                 aria-hidden="true"
               />

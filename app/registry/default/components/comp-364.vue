@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/registry/default/ui/hover-card";
+</script>
+
 <template>
   <HoverCard>
     <div class="flex items-center gap-3">

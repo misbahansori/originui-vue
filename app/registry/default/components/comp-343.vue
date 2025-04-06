@@ -9,6 +9,7 @@ import {
   LucideBell,
   LucideLifeBuoy,
   LucideLink2,
+  LucidePlus,
   LucideShieldCheck,
 } from "lucide-vue-next";
 import { AccordionTrigger } from "reka-ui";

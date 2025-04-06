@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/registry/default/ui/dropdown-menu";
+</script>
+
 <template>
   <DropdownMenu>
     <DropdownMenuTrigger asChild>

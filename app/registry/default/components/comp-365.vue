@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/registry/default/ui/hover-card";
+</script>
+
 <template>
   <div class="max-w-md text-sm">
     <HoverCard>
