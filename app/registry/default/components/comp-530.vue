@@ -1,4 +1,13 @@
 <script setup lang="ts">
+import {
+  Timeline,
+  TimelineHeader,
+  TimelineIndicator,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineTitle,
+} from "@/registry/default/ui/timeline";
+
 const items = [
   {
     id: 1,
