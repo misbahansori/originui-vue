@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { cn } from "@/lib/utils";
+
 const id = useId();
 const open = ref(false);
 const value = ref("");
