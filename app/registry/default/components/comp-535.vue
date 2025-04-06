@@ -9,6 +9,12 @@ import {
   TimelineSeparator,
   TimelineTitle,
 } from "@/registry/default/ui/timeline";
+import {
+  LucideGitCompare,
+  LucideGitFork,
+  LucideGitMerge,
+  LucideGitPullRequest,
+} from "lucide-vue-next";
 
 const items = [
   {
@@ -17,7 +23,7 @@ const items = [
     title: "Forked Repository",
     description:
       "Forked the repository to create a new branch for development.",
-    icon: "lucide:git-fork",
+    icon: LucideGitFork,
   },
   {
     id: 2,
@@ -25,7 +31,7 @@ const items = [
     title: "Pull Request Submitted",
     description:
       "Submitted PR #342 with new feature implementation. Waiting for code review from team leads.",
-    icon: "lucide:git-pull-request",
+    icon: LucideGitPullRequest,
   },
   {
     id: 3,
@@ -33,14 +39,14 @@ const items = [
     title: "Comparing Branches",
     description:
       "Received comments on PR. Minor adjustments needed in error handling and documentation.",
-    icon: "lucide:git-compare",
+    icon: LucideGitCompare,
   },
   {
     id: 4,
     title: "Merged Branch",
     description:
       "Merged the feature branch into the main branch. Ready for deployment.",
-    icon: "lucide:git-merge",
+    icon: LucideGitMerge,
   },
 ];
 </script>
@@ -61,7 +67,7 @@ const items = [
         <TimelineIndicator
           class="bg-primary/10 group-data-completed/timeline-item:bg-primary group-data-completed/timeline-item:text-primary-foreground flex size-6 items-center justify-center border-none group-data-[orientation=vertical]/timeline:-left-7"
         >
-          <Icon :name="item.icon" size="14" />
+          <component :is="item.icon" :size="14" />
         </TimelineIndicator>
       </TimelineHeader>
       <TimelineContent>

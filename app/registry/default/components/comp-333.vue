@@ -9,6 +9,13 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from "@/registry/default/ui/command";
+import {
+  LucideArrowUpRight,
+  LucideCircleFadingPlus,
+  LucideFileInput,
+  LucideFolderPlus,
+  LucideSearch,
+} from "lucide-vue-next";
 import { onMounted, onUnmounted, ref } from "vue";
 
 const open = ref(false);
@@ -36,9 +43,9 @@ onUnmounted(() => {
       @click="open = true"
     >
       <span class="flex grow items-center">
-        <Icon
-          name="lucide:search"
-          class="text-muted-foreground/80 -ms-1 me-3 size-4"
+        <LucideSearch
+          :size="16"
+          class="text-muted-foreground/80 -ms-1 me-3"
           aria-hidden="true"
         />
         <span class="text-muted-foreground/70 font-normal">Search</span>
@@ -55,27 +62,23 @@ onUnmounted(() => {
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Quick start">
           <CommandItem value="new-folder">
-            <Icon
-              name="lucide:folder-plus"
-              class="size-4 opacity-60"
+            <LucideFolderPlus
+              :size="16"
+              class="opacity-60"
               aria-hidden="true"
             />
             <span>New folder</span>
             <CommandShortcut class="justify-center">⌘N</CommandShortcut>
           </CommandItem>
           <CommandItem value="import-document">
-            <Icon
-              name="lucide:file-input"
-              class="size-4 opacity-60"
-              aria-hidden="true"
-            />
+            <LucideFileInput :size="16" class="opacity-60" aria-hidden="true" />
             <span>Import document</span>
             <CommandShortcut class="justify-center">⌘I</CommandShortcut>
           </CommandItem>
           <CommandItem value="add-block">
-            <Icon
-              name="lucide:circle-fading-plus"
-              class="size-4 opacity-60"
+            <LucideCircleFadingPlus
+              :size="16"
+              class="opacity-60"
               aria-hidden="true"
             />
             <span>Add block</span>
@@ -85,25 +88,25 @@ onUnmounted(() => {
         <CommandSeparator />
         <CommandGroup heading="Navigation">
           <CommandItem value="dashboard">
-            <Icon
-              name="lucide:arrow-up-right"
-              class="size-4 opacity-60"
+            <LucideArrowUpRight
+              :size="16"
+              class="opacity-60"
               aria-hidden="true"
             />
             <span>Go to dashboard</span>
           </CommandItem>
           <CommandItem value="apps">
-            <Icon
-              name="lucide:arrow-up-right"
-              class="size-4 opacity-60"
+            <LucideArrowUpRight
+              :size="16"
+              class="opacity-60"
               aria-hidden="true"
             />
             <span>Go to apps</span>
           </CommandItem>
           <CommandItem value="connections">
-            <Icon
-              name="lucide:arrow-up-right"
-              class="size-4 opacity-60"
+            <LucideArrowUpRight
+              :size="16"
+              class="opacity-60"
               aria-hidden="true"
             />
             <span>Go to connections</span>

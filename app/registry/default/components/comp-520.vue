@@ -6,6 +6,7 @@ import {
   StepperItem,
   StepperTrigger,
 } from "@/registry/default/ui/stepper";
+import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
 import { ref } from "vue";
 
 const steps = [1, 2, 3, 4];
@@ -23,7 +24,7 @@ const currentStep = ref(2);
         :disabled="currentStep === 1"
         aria-label="Prev step"
       >
-        <Icon name="lucide:chevron-left" aria-hidden="true" class="size-4" />
+        <LucideChevronLeft :size="16" aria-hidden="true" />
       </Button>
       <Stepper v-model="currentStep" class="gap-1">
         <StepperItem
@@ -47,7 +48,7 @@ const currentStep = ref(2);
         :disabled="currentStep === steps.length"
         aria-label="Next step"
       >
-        <Icon name="lucide:chevron-right" aria-hidden="true" class="size-4" />
+        <LucideChevronRight :size="16" aria-hidden="true" />
       </Button>
     </div>
     <p

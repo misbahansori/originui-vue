@@ -14,6 +14,19 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/registry/default/ui/popover";
+import {
+  LucideBrain,
+  LucideChevronDown,
+  LucideCpu,
+  LucideDatabase,
+  LucideGlobe,
+  LucideHelpCircle,
+  LucideLayout,
+  LucideLineChart,
+  LucideNetwork,
+  LucideSearch,
+  LucideServer,
+} from "lucide-vue-next";
 import { ref, useId } from "vue";
 
 const id = useId();
@@ -24,61 +37,61 @@ const items = [
   {
     value: "analytics platform",
     label: "Analytics Platform",
-    icon: "lucide:line-chart",
+    icon: LucideLineChart,
     number: 2451,
   },
   {
     value: "ai services",
     label: "AI Services",
-    icon: "lucide:brain",
+    icon: LucideBrain,
     number: 1832,
   },
   {
     value: "database systems",
     label: "Database Systems",
-    icon: "lucide:database",
+    icon: LucideDatabase,
     number: 1654,
   },
   {
     value: "compute resources",
     label: "Compute Resources",
-    icon: "lucide:cpu",
+    icon: LucideCpu,
     number: 943,
   },
   {
     value: "network services",
     label: "Network Services",
-    icon: "lucide:network",
+    icon: LucideNetwork,
     number: 832,
   },
   {
     value: "web services",
     label: "Web Services",
-    icon: "lucide:globe",
+    icon: LucideGlobe,
     number: 654,
   },
   {
     value: "monitoring tools",
     label: "Monitoring Tools",
-    icon: "lucide:search",
+    icon: LucideSearch,
     number: 432,
   },
   {
     value: "server management",
     label: "Server Management",
-    icon: "lucide:server",
+    icon: LucideServer,
     number: 321,
   },
   {
     value: "infrastructure",
     label: "Infrastructure",
-    icon: "lucide:blocks",
+    icon: "Lucide:Blocks",
     number: 234,
   },
   {
     value: "frontend services",
     label: "Frontend Services",
-    icon: "lucide:layout",
+    icon: LucideLayout,
     number: 123,
   },
 ];
@@ -92,8 +105,8 @@ function getSelectedItem() {
   return items.find((item) => item.value === value.value);
 }
 
-function getSelectedItemIcon(): string {
-  return getSelectedItem()?.icon || "lucide:help-circle";
+function getSelectedItemIcon() {
+  return getSelectedItem()?.icon || LucideHelpCircle;
 }
 </script>
 
@@ -110,19 +123,18 @@ function getSelectedItemIcon(): string {
           class="bg-background hover:bg-background border-input w-full justify-between px-3 font-normal outline-offset-0 outline-none focus-visible:outline-[3px]"
         >
           <span v-if="value" class="flex min-w-0 items-center gap-2">
-            <Icon
-              v-if="getSelectedItem()"
-              :name="getSelectedItemIcon()"
-              class="text-muted-foreground size-4"
+            <component
+              :is="getSelectedItemIcon()"
+              :size="16"
+              class="text-muted-foreground"
             />
             <span class="truncate">{{ getSelectedItem()?.label }}</span>
           </span>
           <span v-else class="text-muted-foreground">
             Select service category
           </span>
-          <Icon
-            name="lucide:chevron-down"
-            size="16"
+          <LucideChevronDown
+            :size="16"
             class="text-muted-foreground/80 shrink-0"
             aria-hidden="true"
           />
@@ -145,9 +157,10 @@ function getSelectedItemIcon(): string {
                 class="flex items-center justify-between"
               >
                 <div class="flex items-center gap-2">
-                  <Icon
-                    :name="item.icon"
-                    class="text-muted-foreground size-4"
+                  <component
+                    :is="item.icon"
+                    :size="16"
+                    class="text-muted-foreground"
                   />
                   {{ item.label }}
                 </div>

@@ -14,6 +14,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/registry/default/ui/popover";
+import { LucideCheck, LucideChevronDown } from "lucide-vue-next";
 import { ref, useId } from "vue";
 
 const id = useId();
@@ -95,9 +96,8 @@ function handleSelect(currentValue: string) {
             <span class="truncate">{{ value }}</span>
           </span>
           <span v-else class="text-muted-foreground">Select country</span>
-          <Icon
-            name="lucide:chevron-down"
-            size="16"
+          <LucideChevronDown
+            :size="16"
             class="text-muted-foreground/80 shrink-0"
             aria-hidden="true"
           />
@@ -121,10 +121,9 @@ function handleSelect(currentValue: string) {
                 >
                   <span class="text-lg leading-none">{{ country.flag }}</span>
                   {{ country.value }}
-                  <Icon
+                  <LucideCheck
                     v-if="value === country.value"
-                    name="lucide:check"
-                    size="16"
+                    :size="16"
                     class="ml-auto"
                   />
                 </CommandItem>

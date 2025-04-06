@@ -7,6 +7,7 @@ import {
 } from "@/registry/default/ui/accordion";
 import {
   LucideBell,
+  LucideChevronDown,
   LucideLifeBuoy,
   LucideLink2,
   LucideShieldCheck,
@@ -70,7 +71,8 @@ const items = [
               >
                 <component
                   :is="item.icon"
-                  class="size-4 opacity-60"
+                  :size="16"
+                  class="opacity-60"
                   aria-hidden="true"
                 />
               </span>
@@ -81,9 +83,9 @@ const items = [
                 </span>
               </span>
             </span>
-            <Icon
-              name="lucide:chevron-down"
-              class="pointer-events-none size-4 shrink-0 opacity-60 transition-transform duration-200"
+            <LucideChevronDown
+              :size="16"
+              class="pointer-events-none shrink-0 opacity-60 transition-transform duration-200"
               aria-hidden="true"
             />
           </AccordionTrigger>

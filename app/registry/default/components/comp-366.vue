@@ -6,6 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/registry/default/ui/dropdown-menu";
+import { LucideEllipsis } from "lucide-vue-next";
 </script>
 
 <template>
@@ -17,7 +18,7 @@ import {
         class="rounded-full shadow-none"
         aria-label="Open edit menu"
       >
-        <Icon name="lucide:ellipsis" class="size-4" aria-hidden="true" />
+        <LucideEllipsis :size="16" aria-hidden="true" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent>

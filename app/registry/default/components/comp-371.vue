@@ -6,7 +6,9 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "@/registry/default/ui/dropdown-menu";
+import { LucideChevronDown } from "lucide-vue-next";
 import { ref } from "vue";
+
 const nextjs = ref<boolean | "indeterminate">(false);
 const sveltekit = ref<boolean | "indeterminate">(true);
 const astro = ref<boolean | "indeterminate">(false);
@@ -18,9 +20,9 @@ const remix = ref<boolean | "indeterminate">(false);
     <DropdownMenuTrigger asChild>
       <Button variant="outline">
         Checkbox items
-        <Icon
-          name="lucide:chevron-down"
-          class="-me-1 size-4 opacity-60"
+        <LucideChevronDown
+          :size="16"
+          class="-me-1 opacity-60"
           aria-hidden="true"
         />
       </Button>

@@ -22,6 +22,12 @@ import {
   type ColumnDef,
   type SortingState,
 } from "@tanstack/vue-table";
+import {
+  LucideArrowLeftToLine,
+  LucideArrowRightToLine,
+  LucideEllipsis,
+  LucidePinOff,
+} from "lucide-vue-next";
 import { h, onMounted, ref } from "vue";
 
 type Item = {
@@ -179,7 +185,7 @@ const table = useVueTable({
                   :aria-label="`Unpin ${header.column.columnDef.header} column`"
                   :title="`Unpin ${header.column.columnDef.header} column`"
                 >
-                  <Icon name="lucide:pin-off" class="size-4 opacity-60" />
+                  <LucidePinOff :size="16" class="opacity-60" />
                 </Button>
                 <DropdownMenu v-else>
                   <DropdownMenuTrigger asChild>
@@ -190,22 +196,16 @@ const table = useVueTable({
                       :aria-label="`Pin options for ${header.column.columnDef.header} column`"
                       :title="`Pin options for ${header.column.columnDef.header} column`"
                     >
-                      <Icon name="lucide:ellipsis" class="size-4 opacity-60" />
+                      <LucideEllipsis :size="16" class="opacity-60" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem @click="header.column.pin('left')">
-                      <Icon
-                        name="lucide:arrow-left-to-line"
-                        class="size-4 opacity-60"
-                      />
+                      <LucideArrowLeftToLine :size="16" class="opacity-60" />
                       Stick to left
                     </DropdownMenuItem>
                     <DropdownMenuItem @click="header.column.pin('right')">
-                      <Icon
-                        name="lucide:arrow-right-to-line"
-                        class="size-4 opacity-60"
-                      />
+                      <LucideArrowRightToLine :size="16" class="opacity-60" />
                       Stick to right
                     </DropdownMenuItem>
                   </DropdownMenuContent>

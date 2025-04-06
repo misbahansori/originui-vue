@@ -4,6 +4,12 @@ import {
   TimelineContent,
   TimelineItem,
 } from "@/registry/default/ui/timeline";
+import {
+  LucideBookOpen,
+  LucideMessageCircle,
+  LucidePencil,
+  LucidePlus,
+} from "lucide-vue-next";
 
 type ActionType = "post" | "reply" | "edit" | "create";
 
@@ -44,12 +50,12 @@ const items: {
   },
 ];
 
-const getActionIcon = (action: ActionType): string => {
-  const icons: Record<ActionType, string> = {
-    post: "lucide:book-open",
-    reply: "lucide:message-circle",
-    edit: "lucide:pencil",
-    create: "lucide:plus",
+const getActionIcon = (action: ActionType): any => {
+  const icons: Record<ActionType, any> = {
+    post: LucideBookOpen,
+    reply: LucideMessageCircle,
+    edit: LucidePencil,
+    create: LucidePlus,
   };
   return icons[action];
 };
@@ -93,10 +99,10 @@ const getRelativeTimeString = (date: Date): string => {
         :step="item.id"
         class="m-0! flex-row items-center gap-3 py-2.5!"
       >
-        <Icon
-          :name="getActionIcon(item.action)"
+        <component
+          :is="getActionIcon(item.action)"
+          :size="16"
           class="text-muted-foreground/80"
-          size="16"
         />
         <img :src="item.image" :alt="item.user" class="size-6 rounded-full" />
         <TimelineContent class="text-foreground">
