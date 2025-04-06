@@ -1,4 +1,13 @@
-<script setup>
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/registry/default/ui/popover";
+import { LucideArrowLeft, LucideArrowRight } from "lucide-vue-next";
+import { computed, ref } from "vue";
+
 const tips = [
   {
     title: "Welcome to Dashboard",
@@ -53,9 +62,11 @@ const isLastTip = computed(() => currentTip.value === tips.length - 1);
     <PopoverContent class="max-w-[280px] py-3 shadow-none" side="top">
       <div class="space-y-3">
         <div class="space-y-1">
-          <p class="text-[13px] font-medium">{{ tips[currentTip].title }}</p>
+          <p class="text-[13px] font-medium">
+            {{ tips[currentTip]?.title }}
+          </p>
           <p class="text-muted-foreground text-xs">
-            {{ tips[currentTip].description }}
+            {{ tips[currentTip]?.description }}
           </p>
         </div>
         <div class="flex items-center justify-between">
@@ -71,11 +82,7 @@ const isLastTip = computed(() => currentTip.value === tips.length - 1);
               :disabled="isFirstTip"
               aria-label="Previous tip"
             >
-              <Icon
-                name="lucide:arrow-left"
-                class="size-4"
-                aria-hidden="true"
-              />
+              <LucideArrowLeft class="size-4" aria-hidden="true" />
             </Button>
             <Button
               size="icon"
@@ -85,11 +92,7 @@ const isLastTip = computed(() => currentTip.value === tips.length - 1);
               :disabled="isLastTip"
               aria-label="Next tip"
             >
-              <Icon
-                name="lucide:arrow-right"
-                class="size-4"
-                aria-hidden="true"
-              />
+              <LucideArrowRight class="size-4" aria-hidden="true" />
             </Button>
           </div>
         </div>

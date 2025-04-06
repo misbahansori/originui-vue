@@ -1,4 +1,16 @@
 <script setup lang="ts">
+import {
+  Timeline,
+  TimelineContent,
+  TimelineDate,
+  TimelineHeader,
+  TimelineIndicator,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineTitle,
+} from "@/registry/default/ui/timeline";
+import { LucideCheck } from "lucide-vue-next";
+
 const items = [
   {
     id: 1,
@@ -48,10 +60,9 @@ const items = [
         <TimelineIndicator
           class="group-data-completed/timeline-item:bg-primary group-data-completed/timeline-item:text-primary-foreground flex size-6 items-center justify-center group-data-completed/timeline-item:border-none group-data-[orientation=vertical]/timeline:-left-7"
         >
-          <Icon
-            name="lucide:check"
+          <LucideCheck
+            :size="16"
             class="group-not-data-completed/timeline-item:hidden"
-            size="16"
           />
         </TimelineIndicator>
       </TimelineHeader>

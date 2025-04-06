@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { LucideRocket, LucideX } from "lucide-vue-next";
+import { ref } from "vue";
+
 const isVisible = ref(true);
 
 const hideBanner = () => {
@@ -14,7 +18,7 @@ const hideBanner = () => {
           class="bg-primary/15 flex size-9 shrink-0 items-center justify-center rounded-full max-md:mt-0.5"
           aria-hidden="true"
         >
-          <Icon name="lucide:rocket" class="size-4 opacity-80" />
+          <LucideRocket class="size-4 opacity-80" />
         </div>
         <div
           class="flex grow flex-col justify-between gap-3 md:flex-row md:items-center"
@@ -39,8 +43,7 @@ const hideBanner = () => {
         @click="hideBanner"
         aria-label="Close banner"
       >
-        <Icon
-          name="lucide:x"
+        <LucideX
           class="size-4 opacity-60 transition-opacity group-hover:opacity-100"
           aria-hidden="true"
         />

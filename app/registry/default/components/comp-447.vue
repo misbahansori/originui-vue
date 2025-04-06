@@ -1,3 +1,21 @@
+<script setup lang="ts">
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/registry/default/ui/breadcrumb";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/registry/default/ui/dropdown-menu";
+import { LucideFolders } from "lucide-vue-next";
+</script>
+
 <template>
   <Breadcrumb>
     <BreadcrumbList>
@@ -13,7 +31,7 @@
               aria-hidden="true"
               class="flex size-5 items-center justify-center"
             >
-              <Icon name="lucide:folders" class="size-4" />
+              <LucideFolders class="size-4" />
             </span>
             <span class="sr-only">Toggle menu</span>
           </DropdownMenuTrigger>

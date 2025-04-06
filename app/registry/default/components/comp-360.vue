@@ -1,3 +1,20 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/registry/default/ui/tooltip";
+import {
+  LucideChevronDown,
+  LucideChevronLeft,
+  LucideChevronRight,
+  LucideChevronUp,
+  LucideCircle,
+} from "lucide-vue-next";
+</script>
+
 <template>
   <div class="inline-grid w-fit grid-cols-3 gap-1">
     <TooltipProvider :delay-duration="0">
@@ -9,7 +26,7 @@
             size="icon"
             aria-label="Pan camera up"
           >
-            <Icon name="lucide:chevron-up" class="size-4" aria-hidden="true" />
+            <LucideChevronUp class="size-4" aria-hidden="true" />
           </Button>
         </TooltipTrigger>
         <TooltipContent side="top" class="px-2 py-1 text-xs">
@@ -31,11 +48,7 @@
             size="icon"
             aria-label="Pan camera left"
           >
-            <Icon
-              name="lucide:chevron-left"
-              class="size-4"
-              aria-hidden="true"
-            />
+            <LucideChevronLeft class="size-4" aria-hidden="true" />
           </Button>
         </TooltipTrigger>
         <TooltipContent side="left" class="px-2 py-1 text-xs">
@@ -49,17 +62,13 @@
       </Tooltip>
     </TooltipProvider>
     <div class="flex items-center justify-center" aria-hidden="true">
-      <Icon name="lucide:circle" class="size-4 opacity-60" />
+      <LucideCircle class="size-4 opacity-60" />
     </div>
     <TooltipProvider :delay-duration="0">
       <Tooltip>
         <TooltipTrigger as-child>
           <Button variant="outline" size="icon" aria-label="Pan camera right">
-            <Icon
-              name="lucide:chevron-right"
-              class="size-4"
-              aria-hidden="true"
-            />
+            <LucideChevronRight class="size-4" aria-hidden="true" />
           </Button>
         </TooltipTrigger>
         <TooltipContent side="right" class="px-2 py-1 text-xs">
@@ -81,11 +90,7 @@
             size="icon"
             aria-label="Pan camera down"
           >
-            <Icon
-              name="lucide:chevron-down"
-              class="size-4"
-              aria-hidden="true"
-            />
+            <LucideChevronDown class="size-4" aria-hidden="true" />
           </Button>
         </TooltipTrigger>
         <TooltipContent side="bottom" class="px-2 py-1 text-xs">

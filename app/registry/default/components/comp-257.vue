@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import { Slider } from "@/registry/default/ui/slider";
+import { ref } from "vue";
+
 const value = ref([3]);
 const emojis = ["😡", "🙁", "😐", "🙂", "😍"];
 const labels = ["Awful", "Poor", "Okay", "Good", "Amazing"];

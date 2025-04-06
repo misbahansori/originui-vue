@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import {
+  Timeline,
+  TimelineContent,
+  TimelineDate,
+  TimelineItem,
+} from "@/registry/default/ui/timeline";
+
 const items = [
   {
     id: 1,

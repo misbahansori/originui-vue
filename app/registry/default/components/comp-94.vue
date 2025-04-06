@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+</script>
+
 <template>
   <Button class="gap-0 rounded-full py-0 ps-0">
     <div class="me-0.5 flex aspect-square h-full p-1.5">

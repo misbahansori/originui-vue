@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Checkbox } from "@/registry/default/ui/checkbox";
+import { Label } from "@/registry/default/ui/label";
+import { Brush, Eraser, Scissors, SwatchBook } from "lucide-vue-next";
+import { ref, useId } from "vue";
+
 type CheckedStates = Record<string, boolean>;
 
 const id = useId();
@@ -10,10 +15,10 @@ const checkedStates = ref<CheckedStates>({
 });
 
 const items = [
-  { value: "1", label: "Palette", icon: "lucide:swatch-book" },
-  { value: "2", label: "Brush", icon: "lucide:brush" },
-  { value: "3", label: "Eraser", icon: "lucide:eraser" },
-  { value: "4", label: "Cut", icon: "lucide:scissors" },
+  { value: "1", label: "Palette", icon: SwatchBook },
+  { value: "2", label: "Brush", icon: Brush },
+  { value: "3", label: "Eraser", icon: Eraser },
+  { value: "4", label: "Cut", icon: Scissors },
 ];
 </script>
 
@@ -30,10 +35,10 @@ const items = [
           class="order-1 after:absolute after:inset-0"
           v-model="checkedStates[item.value]"
         />
-        <Icon
-          :name="item.icon"
+        <component
+          :is="item.icon"
           class="opacity-60"
-          size="16"
+          :size="16"
           aria-hidden="true"
         />
       </div>

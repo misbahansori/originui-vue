@@ -1,4 +1,18 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/registry/default/ui/dialog";
+import { Label } from "@/registry/default/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
+import { LucideCheck, LucideRefreshCcw } from "lucide-vue-next";
+import { ref, useId } from "vue";
+
 const id = useId();
 const selectedPlan = ref("2");
 
@@ -59,7 +73,7 @@ const features = [
           class="flex size-11 shrink-0 items-center justify-center rounded-full border"
           aria-hidden="true"
         >
-          <Icon name="lucide:refresh-ccw" class="size-4 opacity-80" />
+          <LucideRefreshCcw class="size-4 opacity-80" />
         </div>
         <DialogHeader>
           <DialogTitle class="text-left">Change your plan</DialogTitle>
@@ -104,8 +118,7 @@ const features = [
               :key="feature.id"
               class="flex gap-2"
             >
-              <Icon
-                name="lucide:check"
+              <LucideCheck
                 class="text-primary mt-0.5 size-4 shrink-0"
                 aria-hidden="true"
               />

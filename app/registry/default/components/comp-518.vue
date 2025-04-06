@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import {
+  Stepper,
+  StepperIndicator,
+  StepperItem,
+  StepperSeparator,
+  StepperTrigger,
+} from "@/registry/default/ui/stepper";
+</script>
+
 <template>
   <div class="mx-auto max-w-xl space-y-8 text-center">
     <Stepper :default-value="2">

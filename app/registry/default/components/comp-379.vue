@@ -1,3 +1,22 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuTrigger,
+} from "@/registry/default/ui/dropdown-menu";
+import {
+  LucideHeading1,
+  LucideHeading2,
+  LucideMinus,
+  LucidePlus,
+  LucideTextQuote,
+  LucideType,
+} from "lucide-vue-next";
+</script>
+
 <template>
   <DropdownMenu>
     <DropdownMenuTrigger asChild>
@@ -7,7 +26,7 @@
         class="rounded-full shadow-none"
         aria-label="Open edit menu"
       >
-        <Icon name="lucide:plus" class="size-4" aria-hidden="true" />
+        <LucidePlus class="size-4" aria-hidden="true" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent class="pb-2">
@@ -17,7 +36,7 @@
           class="bg-background flex size-8 items-center justify-center rounded-md border"
           aria-hidden="true"
         >
-          <Icon name="lucide:type" class="size-4 opacity-60" />
+          <LucideType class="size-4 opacity-60" />
         </div>
         <div>
           <div class="text-sm font-medium">Text</div>
@@ -31,7 +50,7 @@
           class="bg-background flex size-8 items-center justify-center rounded-md border"
           aria-hidden="true"
         >
-          <Icon name="lucide:text-quote" class="size-4 opacity-60" />
+          <LucideTextQuote class="size-4 opacity-60" />
         </div>
         <div>
           <div class="text-sm font-medium">Quote</div>
@@ -43,7 +62,7 @@
           class="bg-background flex size-8 items-center justify-center rounded-md border"
           aria-hidden="true"
         >
-          <Icon name="lucide:minus" class="size-4 opacity-60" />
+          <LucideMinus class="size-4 opacity-60" />
         </div>
         <div>
           <div class="text-sm font-medium">Divider</div>
@@ -57,7 +76,7 @@
           class="bg-background flex size-8 items-center justify-center rounded-md border"
           aria-hidden="true"
         >
-          <Icon name="lucide:heading-1" class="size-4 opacity-60" />
+          <LucideHeading1 class="size-4 opacity-60" />
         </div>
         <div>
           <div class="text-sm font-medium">Heading 1</div>
@@ -69,7 +88,7 @@
           class="bg-background flex size-8 items-center justify-center rounded-md border"
           aria-hidden="true"
         >
-          <Icon name="lucide:heading-2" class="size-4 opacity-60" />
+          <LucideHeading2 class="size-4 opacity-60" />
         </div>
         <div>
           <div class="text-sm font-medium">Heading 2</div>

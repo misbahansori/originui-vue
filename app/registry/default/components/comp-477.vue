@@ -1,12 +1,23 @@
 <script setup lang="ts">
+import { cn } from "@/lib/utils";
 import { Badge } from "@/registry/default/ui/badge";
 import { Checkbox } from "@/registry/default/ui/checkbox";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/registry/default/ui/table";
 import {
   FlexRender,
   getCoreRowModel,
   useVueTable,
   type ColumnDef,
 } from "@tanstack/vue-table";
+import { h, onMounted, shallowRef } from "vue";
 
 type Item = {
   id: string;

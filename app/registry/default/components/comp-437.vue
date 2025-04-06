@@ -1,3 +1,22 @@
+<script setup lang="ts">
+import { Badge } from "@/registry/default/ui/badge";
+import { ScrollArea, ScrollBar } from "@/registry/default/ui/scroll-area";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/default/ui/tabs";
+import {
+  LucideBox,
+  LucideChartLine,
+  LucideHome,
+  LucidePanelsTopLeft,
+  LucideSettings,
+  LucideUsersRound,
+} from "lucide-vue-next";
+</script>
+
 <template>
   <Tabs defaultValue="tab-1">
     <ScrollArea>
@@ -8,8 +27,7 @@
           value="tab-1"
           class="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
         >
-          <Icon
-            name="lucide:home"
+          <LucideHome
             class="-ms-0.5 me-1.5 size-4 opacity-60"
             aria-hidden="true"
           />
@@ -19,8 +37,7 @@
           value="tab-2"
           class="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
         >
-          <Icon
-            name="lucide:panels-top-left"
+          <LucidePanelsTopLeft
             class="-ms-0.5 me-1.5 size-4 opacity-60"
             aria-hidden="true"
           />
@@ -33,8 +50,7 @@
           value="tab-3"
           class="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
         >
-          <Icon
-            name="lucide:box"
+          <LucideBox
             class="-ms-0.5 me-1.5 size-4 opacity-60"
             aria-hidden="true"
           />
@@ -45,8 +61,7 @@
           value="tab-4"
           class="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
         >
-          <Icon
-            name="lucide:users-round"
+          <LucideUsersRound
             class="-ms-0.5 me-1.5 size-4 opacity-60"
             aria-hidden="true"
           />
@@ -56,8 +71,7 @@
           value="tab-5"
           class="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
         >
-          <Icon
-            name="lucide:chart-line"
+          <LucideChartLine
             class="-ms-0.5 me-1.5 size-4 opacity-60"
             aria-hidden="true"
           />
@@ -67,8 +81,7 @@
           value="tab-6"
           class="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
         >
-          <Icon
-            name="lucide:settings"
+          <LucideSettings
             class="-ms-0.5 me-1.5 size-4 opacity-60"
             aria-hidden="true"
           />

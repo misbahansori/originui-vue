@@ -1,18 +1,28 @@
+<script setup lang="ts">
+import { Badge } from "@/registry/default/ui/badge";
+import { ScrollArea, ScrollBar } from "@/registry/default/ui/scroll-area";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/default/ui/tabs";
+import { LucideBox, LucideHome, LucidePanelsTopLeft } from "lucide-vue-next";
+</script>
+
 <template>
   <Tabs defaultValue="tab-1">
     <ScrollArea>
       <TabsList class="mb-3">
         <TabsTrigger value="tab-1">
-          <Icon
-            name="lucide:home"
+          <LucideHome
             class="-ms-0.5 me-1.5 size-4 opacity-60"
             aria-hidden="true"
           />
           Overview
         </TabsTrigger>
         <TabsTrigger value="tab-2" class="group">
-          <Icon
-            name="lucide:panels-top-left"
+          <LucidePanelsTopLeft
             class="-ms-0.5 me-1.5 size-4 opacity-60"
             aria-hidden="true"
           />
@@ -25,8 +35,7 @@
           </Badge>
         </TabsTrigger>
         <TabsTrigger value="tab-3" class="group">
-          <Icon
-            name="lucide:box"
+          <LucideBox
             class="-ms-0.5 me-1.5 size-4 opacity-60"
             aria-hidden="true"
           />

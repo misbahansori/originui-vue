@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { LucideDownload, LucideLoaderCircle } from "lucide-vue-next";
+import { ref } from "vue";
+
 const isDownloading = ref(false);
 
 const handleDownload = () => {
@@ -26,19 +30,14 @@ const handleDownload = () => {
         class="min-w-24"
       >
         <template v-if="isDownloading">
-          <Icon
-            name="lucide:loader-circle"
+          <LucideLoaderCircle
             class="-ms-0.5 me-2 size-4 animate-spin"
             aria-hidden="true"
           />
           Updating...
         </template>
         <template v-else>
-          <Icon
-            name="lucide:download"
-            class="-ms-0.5 size-4"
-            aria-hidden="true"
-          />
+          <LucideDownload class="-ms-0.5 size-4" aria-hidden="true" />
           Update now
         </template>
       </Button>

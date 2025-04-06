@@ -1,4 +1,15 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectItemText,
+  SelectTrigger,
+  SelectValue,
+} from "@/registry/default/ui/select";
+import { useId } from "vue";
+
 const id = useId();
 
 const options = [

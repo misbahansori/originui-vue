@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import { LucideMinus, LucidePlus } from "lucide-vue-next";
 import {
   NumberFieldDecrement,
   NumberFieldIncrement,
   NumberFieldInput,
   NumberFieldRoot,
 } from "reka-ui";
+import { ref, useId } from "vue";
 
 const id = useId();
 const value = ref(2048);
@@ -23,7 +26,7 @@ const value = ref(2048);
         <NumberFieldDecrement
           class="border-input bg-background text-muted-foreground/80 hover:bg-accent hover:text-foreground -ms-px flex aspect-square h-[inherit] items-center justify-center rounded-s-md border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
         >
-          <Icon name="lucide:minus" :size="16" aria-hidden="true" />
+          <LucideMinus :size="16" aria-hidden="true" />
         </NumberFieldDecrement>
         <NumberFieldInput
           v-model.number="value"
@@ -32,7 +35,7 @@ const value = ref(2048);
         <NumberFieldIncrement
           class="border-input bg-background text-muted-foreground/80 hover:bg-accent hover:text-foreground -me-px flex aspect-square h-[inherit] items-center justify-center rounded-e-md border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
         >
-          <Icon name="lucide:plus" :size="16" aria-hidden="true" />
+          <LucidePlus :size="16" aria-hidden="true" />
         </NumberFieldIncrement>
       </NumberFieldRoot>
     </div>

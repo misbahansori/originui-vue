@@ -1,4 +1,19 @@
 <script setup lang="ts">
+import { Badge } from "@/registry/default/ui/badge";
+import { Button } from "@/registry/default/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/registry/default/ui/dialog";
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
+import { LucideCreditCard, LucideStore } from "lucide-vue-next";
+import { onMounted, ref } from "vue";
 import { mask as vMask } from "vue-the-mask";
 
 const id = useId();
@@ -28,7 +43,7 @@ onMounted(() => {
           class="flex size-11 shrink-0 items-center justify-center rounded-full border"
           aria-hidden="true"
         >
-          <Icon name="lucide:store" class="size-4 opacity-80" />
+          <LucideStore class="size-4 opacity-80" />
         </div>
         <DialogHeader>
           <DialogTitle class="text-left">Confirm and pay</DialogTitle>
@@ -90,11 +105,7 @@ onMounted(() => {
                 <div
                   class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 peer-disabled:opacity-50"
                 >
-                  <Icon
-                    name="lucide:credit-card"
-                    class="size-4"
-                    aria-hidden="true"
-                  />
+                  <LucideCreditCard class="size-4" aria-hidden="true" />
                 </div>
               </div>
               <div class="-mt-px flex">

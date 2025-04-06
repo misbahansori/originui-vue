@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import { SelectNative } from "@/registry/default/ui/select-native";
+import { useId } from "vue";
+
 const id = useId();
 </script>
 

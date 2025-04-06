@@ -1,12 +1,30 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/registry/default/ui/dropdown-menu";
+import {
+  LucideBolt,
+  LucideBookOpen,
+  LucideCircleUserRound,
+  LucideLayers2,
+  LucideLogOut,
+  LucidePin,
+  LucideUserPen,
+} from "lucide-vue-next";
+</script>
+
 <template>
   <DropdownMenu>
     <DropdownMenuTrigger asChild>
       <Button size="icon" variant="outline" aria-label="Open account menu">
-        <Icon
-          name="lucide:circle-user-round"
-          class="size-4"
-          aria-hidden="true"
-        />
+        <LucideCircleUserRound class="size-4" aria-hidden="true" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent class="max-w-64">
@@ -30,56 +48,32 @@
       <DropdownMenuSeparator />
       <DropdownMenuGroup>
         <DropdownMenuItem>
-          <Icon
-            name="lucide:bolt"
-            class="size-4 opacity-60"
-            aria-hidden="true"
-          />
+          <LucideBolt class="size-4 opacity-60" aria-hidden="true" />
           <span>Option 1</span>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <Icon
-            name="lucide:layers-2"
-            class="size-4 opacity-60"
-            aria-hidden="true"
-          />
+          <LucideLayers2 class="size-4 opacity-60" aria-hidden="true" />
           <span>Option 2</span>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <Icon
-            name="lucide:book-open"
-            class="size-4 opacity-60"
-            aria-hidden="true"
-          />
+          <LucideBookOpen class="size-4 opacity-60" aria-hidden="true" />
           <span>Option 3</span>
         </DropdownMenuItem>
       </DropdownMenuGroup>
       <DropdownMenuSeparator />
       <DropdownMenuGroup>
         <DropdownMenuItem>
-          <Icon
-            name="lucide:pin"
-            class="size-4 opacity-60"
-            aria-hidden="true"
-          />
+          <LucidePin class="size-4 opacity-60" aria-hidden="true" />
           <span>Option 4</span>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <Icon
-            name="lucide:user-pen"
-            class="size-4 opacity-60"
-            aria-hidden="true"
-          />
+          <LucideUserPen class="size-4 opacity-60" aria-hidden="true" />
           <span>Option 5</span>
         </DropdownMenuItem>
       </DropdownMenuGroup>
       <DropdownMenuSeparator />
       <DropdownMenuItem>
-        <Icon
-          name="lucide:log-out"
-          class="size-4 opacity-60"
-          aria-hidden="true"
-        />
+        <LucideLogOut class="size-4 opacity-60" aria-hidden="true" />
         <span>Logout</span>
       </DropdownMenuItem>
     </DropdownMenuContent>

@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import { Slider } from "@/registry/default/ui/slider";
+import { LucideVolume2, LucideVolumeX } from "lucide-vue-next";
+import { ref } from "vue";
+
 const value = ref([25]);
 </script>
 
@@ -9,17 +14,15 @@ const value = ref([25]);
       <span class="text-sm font-medium tabular-nums">{{ value[0] }}</span>
     </div>
     <div class="flex items-center gap-2">
-      <Icon
-        name="lucide:volume-x"
+      <LucideVolumeX
         class="shrink-0 opacity-60"
-        size="16"
+        :size="16"
         aria-hidden="true"
       />
       <Slider v-model="value" aria-label="Volume slider" />
-      <Icon
-        name="lucide:volume-2"
+      <LucideVolume2
         class="shrink-0 opacity-60"
-        size="16"
+        :size="16"
         aria-hidden="true"
       />
     </div>

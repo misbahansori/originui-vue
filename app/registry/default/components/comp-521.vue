@@ -1,4 +1,13 @@
 <script lang="ts" setup>
+import { Button } from "@/registry/default/ui/button";
+import {
+  Stepper,
+  StepperIndicator,
+  StepperItem,
+  StepperTrigger,
+} from "@/registry/default/ui/stepper";
+import { ref } from "vue";
+
 const steps = [1, 2, 3, 4];
 const currentStep = ref(1);
 </script>

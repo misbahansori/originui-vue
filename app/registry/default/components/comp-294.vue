@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { LucideRefreshCw, LucideX } from "lucide-vue-next";
+</script>
+
 <template>
   <!-- To make the notification fixed, add classes like `fixed bottom-4 right-4` to the container element. -->
   <div class="bg-background z-50 max-w-[400px] rounded-md border p-4 shadow-lg">
@@ -6,7 +11,7 @@
         class="flex size-9 shrink-0 items-center justify-center rounded-full border"
         aria-hidden="true"
       >
-        <Icon name="lucide:refresh-cw" class="size-4 opacity-60" />
+        <LucideRefreshCw class="size-4 opacity-60" />
       </div>
       <div class="flex grow flex-col gap-3">
         <div class="space-y-1">
@@ -25,8 +30,7 @@
         class="group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent"
         aria-label="Close notification"
       >
-        <Icon
-          name="lucide:x"
+        <LucideX
           class="size-4 opacity-60 transition-opacity group-hover:opacity-100"
           aria-hidden="true"
         />

@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { LucideSquareArrowOutUpRight } from "lucide-vue-next";
+</script>
+
 <template>
   <div class="inline-flex -space-x-px rounded-md shadow-xs rtl:space-x-reverse">
     <Button
@@ -12,11 +17,7 @@
       size="icon"
       aria-label="Open link"
     >
-      <Icon
-        name="lucide:square-arrow-out-up-right"
-        size="16"
-        aria-hidden="true"
-      />
+      <LucideSquareArrowOutUpRight :size="16" aria-hidden="true" />
     </Button>
   </div>
 </template>

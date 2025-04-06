@@ -1,3 +1,17 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/registry/default/ui/dialog";
+import { Label } from "@/registry/default/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
+import { Textarea } from "@/registry/default/ui/textarea";
+</script>
+
 <template>
   <Dialog>
     <DialogTrigger asChild>

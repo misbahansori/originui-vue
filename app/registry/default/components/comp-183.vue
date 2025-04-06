@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import { Switch } from "@/registry/default/ui/switch";
+import { LucideMoon, LucideSun } from "lucide-vue-next";
+import { ref } from "vue";
+
 const id = useId();
 const checked = ref(true);
 </script>
@@ -16,12 +21,12 @@ const checked = ref(true);
       <span
         class="peer-data-[state=checked]:text-muted-foreground/70 pointer-events-none relative ms-0.5 flex min-w-8 items-center justify-center text-center"
       >
-        <Icon name="lucide:moon" size="16" aria-hidden="true" />
+        <LucideMoon :size="16" aria-hidden="true" />
       </span>
       <span
         class="peer-data-[state=unchecked]:text-muted-foreground/70 pointer-events-none relative me-0.5 flex min-w-8 items-center justify-center text-center"
       >
-        <Icon name="lucide:sun" size="16" aria-hidden="true" />
+        <LucideSun :size="16" aria-hidden="true" />
       </span>
     </div>
     <Label :for="id" class="sr-only">Labeled switch</Label>

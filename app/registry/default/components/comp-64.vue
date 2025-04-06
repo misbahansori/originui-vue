@@ -1,12 +1,17 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import { Textarea } from "@/registry/default/ui/textarea";
+import { ref, useId } from "vue";
+
 const textValue = ref("Hello!");
+const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="error-textarea">Textarea with error</Label>
+    <Label :for="id">Textarea with error</Label>
     <Textarea
-      id="error-textarea"
+      :id="id"
       v-model="textValue"
       placeholder="Leave a comment"
       aria-invalid="true"

@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import { Slider } from "@/registry/default/ui/slider";
+import { reactive } from "vue";
+
 const values = reactive({
   "60Hz": [2],
   "250Hz": [1],

@@ -1,11 +1,22 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/registry/default/ui/dropdown-menu";
+import { LucideChevronDown } from "lucide-vue-next";
+</script>
+
 <template>
   <DropdownMenu>
     <DropdownMenuTrigger asChild>
       <Button variant="outline">
         Same width of trigger
-        <Icon
-          name="lucide:chevron-down"
-          class="-me-1 size-4 opacity-60"
+        <LucideChevronDown
+          :size="16"
+          class="-me-1 opacity-60"
           aria-hidden="true"
         />
       </Button>

@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import { SelectNative } from "@/registry/default/ui/select-native";
+import { LucideClock } from "lucide-vue-next";
+import { useId } from "vue";
+
 const id = useId();
 </script>
 
@@ -15,7 +20,7 @@ const id = useId();
       <div
         class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 group-has-[select[disabled]]:opacity-50"
       >
-        <Icon name="lucide:clock" size="16" aria-hidden="true" />
+        <LucideClock class="h-4 w-4" aria-hidden="true" />
       </div>
     </div>
   </div>

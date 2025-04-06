@@ -1,16 +1,26 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  RiFacebookFill,
+  RiGithubFill,
+  RiGoogleFill,
+  RiTwitterXFill,
+} from "@remixicon/vue";
+</script>
+
 <template>
   <div class="inline-flex flex-wrap gap-2">
     <Button variant="outline" aria-label="Login with Google" size="icon">
-      <Icon name="ri:google-fill" size="16" aria-hidden="true" />
+      <RiGoogleFill size="16" aria-hidden="true" />
     </Button>
     <Button variant="outline" aria-label="Login with Facebook" size="icon">
-      <Icon name="ri:facebook-fill" size="16" aria-hidden="true" />
+      <RiFacebookFill size="16" aria-hidden="true" />
     </Button>
     <Button variant="outline" aria-label="Login with X" size="icon">
-      <Icon name="ri:twitter-x-fill" size="16" aria-hidden="true" />
+      <RiTwitterXFill size="16" aria-hidden="true" />
     </Button>
     <Button variant="outline" aria-label="Login with GitHub" size="icon">
-      <Icon name="ri:github-fill" size="16" aria-hidden="true" />
+      <RiGithubFill size="16" aria-hidden="true" />
     </Button>
   </div>
 </template>

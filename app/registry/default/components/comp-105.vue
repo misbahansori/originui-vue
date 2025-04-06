@@ -1,4 +1,14 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/registry/default/ui/tooltip";
+import { useClipboard } from "@vueuse/core";
+import { LucideCheck, LucideCopy } from "lucide-vue-next";
+
 const { copy, copied } = useClipboard();
 </script>
 
@@ -20,10 +30,9 @@ const { copy, copied } = useClipboard();
               copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0',
             ]"
           >
-            <Icon
-              name="lucide:check"
+            <LucideCheck
               class="stroke-emerald-500"
-              size="16"
+              :size="16"
               aria-hidden="true"
             />
           </div>
@@ -33,7 +42,7 @@ const { copy, copied } = useClipboard();
               copied ? 'scale-0 opacity-0' : 'scale-100 opacity-100',
             ]"
           >
-            <Icon name="lucide:copy" size="16" aria-hidden="true" />
+            <LucideCopy :size="16" aria-hidden="true" />
           </div>
         </Button>
       </TooltipTrigger>

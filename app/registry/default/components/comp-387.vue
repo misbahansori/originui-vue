@@ -1,4 +1,27 @@
-<script setup>
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { Input } from "@/registry/default/ui/input";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/registry/default/ui/popover";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/registry/default/ui/tooltip";
+import {
+  RiCodeFill,
+  RiFacebookFill,
+  RiMailLine,
+  RiTwitterXFill,
+} from "@remixicon/vue";
+import { useClipboard } from "@vueuse/core";
+import { LucideCheck, LucideCopy } from "lucide-vue-next";
+import { useId } from "vue";
+
 const id = useId();
 const code = ref("https://originui.com/Avx8HD");
 
@@ -16,24 +39,20 @@ const { copy, copied } = useClipboard();
           <div class="text-sm font-medium">Share code</div>
           <div class="flex flex-wrap justify-center gap-2">
             <Button size="icon" variant="outline" aria-label="Embed">
-              <Icon name="ri:code-fill" class="size-4" aria-hidden="true" />
+              <RiCodeFill size="16" aria-hidden="true" />
             </Button>
             <Button size="icon" variant="outline" aria-label="Share on Twitter">
-              <Icon
-                name="ri:twitter-x-fill"
-                class="size-4"
-                aria-hidden="true"
-              />
+              <RiTwitterXFill size="16" aria-hidden="true" />
             </Button>
             <Button
               size="icon"
               variant="outline"
               aria-label="Share on Facebook"
             >
-              <Icon name="ri:facebook-fill" class="size-4" aria-hidden="true" />
+              <RiFacebookFill size="16" aria-hidden="true" />
             </Button>
             <Button size="icon" variant="outline" aria-label="Share via email">
-              <Icon name="ri:mail-line" class="size-4" aria-hidden="true" />
+              <RiMailLine size="16" aria-hidden="true" />
             </Button>
           </div>
           <div class="space-y-2">
@@ -63,8 +82,7 @@ const { copy, copied } = useClipboard();
                             : 'scale-0 opacity-0',
                         ]"
                       >
-                        <Icon
-                          name="lucide:check"
+                        <LucideCheck
                           class="size-4 stroke-emerald-500"
                           aria-hidden="true"
                         />
@@ -77,11 +95,7 @@ const { copy, copied } = useClipboard();
                             : 'scale-100 opacity-100',
                         ]"
                       >
-                        <Icon
-                          name="lucide:copy"
-                          class="size-4"
-                          aria-hidden="true"
-                        />
+                        <LucideCopy class="size-4" aria-hidden="true" />
                       </div>
                     </button>
                   </TooltipTrigger>

@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  LucideChevronLeft,
+  LucideChevronRight,
+  LucideEllipsis,
+} from "lucide-vue-next";
+</script>
+
 <template>
   <Pagination
     :defaultPage="1"
@@ -16,7 +25,7 @@
           variant="outline"
           class="size-9 rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10 aria-disabled:pointer-events-none [&[aria-disabled]>svg]:opacity-50"
         >
-          <Icon name="lucide:chevron-left" aria-hidden="true" class="size-4" />
+          <LucideChevronLeft :size="16" aria-hidden="true" />
         </Button>
       </PaginationPrev>
       <template v-for="item in items">
@@ -38,7 +47,7 @@
             variant="outline"
             class="size-9 rounded-none shadow-none focus-visible:z-10 aria-disabled:pointer-events-none [&[aria-disabled]>svg]:opacity-50"
           >
-            <Icon name="lucide:ellipsis" aria-hidden="true" class="size-4" />
+            <LucideEllipsis :size="16" aria-hidden="true" />
           </Button>
         </PaginationEllipsis>
       </template>
@@ -47,7 +56,7 @@
           variant="outline"
           class="size-9 rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10 aria-disabled:pointer-events-none [&[aria-disabled]>svg]:opacity-50"
         >
-          <Icon name="lucide:chevron-right" aria-hidden="true" class="size-4" />
+          <LucideChevronRight :size="16" aria-hidden="true" />
         </Button>
       </PaginationNext>
     </PaginationList>

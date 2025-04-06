@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/default/ui/avatar";
+import { Badge } from "@/registry/default/ui/badge";
+</script>
+
 <template>
   <div class="relative">
     <Avatar>

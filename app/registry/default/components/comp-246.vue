@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
+import { Label } from "@/registry/default/ui/label";
+import { Slider } from "@/registry/default/ui/slider";
+import { ref } from "vue";
 
 const value = ref([5]);
 const max = 12;

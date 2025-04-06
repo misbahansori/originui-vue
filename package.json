@@ -18,6 +18,7 @@
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/seo": "3.0.1",
     "@nuxtjs/tailwindcss": "^6.13.1",
+    "@remixicon/vue": "^4.6.0",
     "@tailwindcss/postcss": "^4.0.10",
     "@tanstack/vue-table": "^8.21.2",
     "@vueuse/core": "^12.8.2",

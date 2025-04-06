@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
+import { Star } from "lucide-vue-next";
+import { ref } from "vue";
+
 const id = useId();
 const hoverRating = ref("");
 const currentRating = ref("");
@@ -36,9 +40,8 @@ const stars = ["1", "2", "3", "4", "5"];
         @mouseleave="clearHoverRating"
       >
         <RadioGroupItem :id="`${id}-${value}`" :value="value" class="sr-only" />
-        <Icon
-          name="ri:star-fill"
-          size="24"
+        <Star
+          :size="24"
           :class="`transition-all ${
             (hoverRating || currentRating) >= value
               ? 'text-amber-500'

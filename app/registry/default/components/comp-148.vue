@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Checkbox } from "@/registry/default/ui/checkbox";
+import { Label } from "@/registry/default/ui/label";
+import { ref, useId } from "vue";
+
 // TODO: Implement CheckboxTree component
 interface TreeNode {
   id: string;

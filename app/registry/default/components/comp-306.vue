@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { LucideEclipse, LucideX } from "lucide-vue-next";
+import { ref } from "vue";
+
 const isVisible = ref(true);
 
 const hideBanner = () => {
@@ -10,8 +14,7 @@ const hideBanner = () => {
   <div v-if="isVisible" class="dark bg-muted text-foreground px-4 py-3 md:py-2">
     <div class="flex gap-2 md:items-center">
       <div class="flex grow gap-3 md:items-center">
-        <Icon
-          name="lucide:eclipse"
+        <LucideEclipse
           class="size-4 shrink-0 opacity-60 max-md:mt-0.5"
           aria-hidden="true"
         />
@@ -36,8 +39,7 @@ const hideBanner = () => {
         @click="hideBanner"
         aria-label="Close banner"
       >
-        <Icon
-          name="lucide:x"
+        <LucideX
           class="size-4 opacity-60 transition-opacity group-hover:opacity-100"
           aria-hidden="true"
         />

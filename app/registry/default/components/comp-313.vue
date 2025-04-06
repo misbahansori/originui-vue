@@ -1,3 +1,18 @@
+<script setup lang="ts">
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/registry/default/ui/alert-dialog";
+import { Button } from "@/registry/default/ui/button";
+</script>
+
 <template>
   <AlertDialog>
     <AlertDialogTrigger asChild>

@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { Switch } from "@/registry/default/ui/switch";
+import { ref } from "vue";
+
 const id = useId();
 const checked = ref(false);
 </script>

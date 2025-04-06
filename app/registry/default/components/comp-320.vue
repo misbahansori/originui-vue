@@ -1,4 +1,20 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/registry/default/ui/dialog";
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { LucideCircleAlert } from "lucide-vue-next";
+import { ref } from "vue";
+
 const PROJECT_NAME = "Origin UI";
 const inputValue = ref("");
 </script>
@@ -14,11 +30,7 @@ const inputValue = ref("");
           class="flex size-9 shrink-0 items-center justify-center rounded-full border"
           aria-hidden="true"
         >
-          <Icon
-            name="lucide:circle-alert"
-            class="size-4 opacity-80"
-            aria-hidden="true"
-          />
+          <LucideCircleAlert class="size-4 opacity-80" aria-hidden="true" />
         </div>
         <DialogHeader>
           <DialogTitle class="sm:text-center">Final confirmation</DialogTitle>

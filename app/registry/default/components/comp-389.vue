@@ -1,5 +1,19 @@
-<script setup>
-const tourSteps = [
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/registry/default/ui/popover";
+import { computed, ref } from "vue";
+
+interface TourStep {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+const tourSteps: TourStep[] = [
   {
     icon: "lucide:heart",
     title: "Heart",
@@ -36,11 +50,17 @@ const handleNavigation = () => {
   }
 };
 
-const handleOpenChange = (open) => {
+const handleOpenChange = (open: boolean) => {
   if (open) {
     currentTip.value = 0;
   }
 };
+
+const currentStep = computed(() => {
+  const step = tourSteps[currentTip.value];
+  if (!step) throw new Error("Tour step not found");
+  return step;
+});
 </script>
 
 <template>
@@ -69,10 +89,10 @@ const handleOpenChange = (open) => {
         <div class="space-y-3">
           <div class="space-y-1">
             <p class="text-[13px] font-medium">
-              {{ tourSteps[currentTip].title }}
+              {{ currentStep.title }}
             </p>
             <p class="text-muted-foreground text-xs">
-              {{ tourSteps[currentTip].description }}
+              {{ currentStep.description }}
             </p>
           </div>
           <div class="flex items-center justify-between gap-2">

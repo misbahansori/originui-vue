@@ -1,4 +1,23 @@
 <script setup lang="ts">
+import { cn } from "@/lib/utils";
+import { Button } from "@/registry/default/ui/button";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/registry/default/ui/command";
+import { Label } from "@/registry/default/ui/label";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/registry/default/ui/popover";
+import { LucideCheck, LucideChevronDown } from "lucide-vue-next";
+import { computed, ref, useId } from "vue";
+
 const id = useId();
 const open = ref(false);
 const value = ref("");
@@ -95,9 +114,8 @@ function handleSelect(currentValue: string) {
           <span :class="cn('truncate', !value && 'text-muted-foreground')">
             {{ selectedFramework || "Select framework" }}
           </span>
-          <Icon
-            name="lucide:chevron-down"
-            size="16"
+          <LucideChevronDown
+            :size="16"
             class="text-muted-foreground/80 shrink-0"
             aria-hidden="true"
           />
@@ -119,10 +137,9 @@ function handleSelect(currentValue: string) {
                 @select="handleSelect(framework.value)"
               >
                 {{ framework.label }}
-                <Icon
+                <LucideCheck
                   v-if="value === framework.value"
-                  name="lucide:check"
-                  size="16"
+                  :size="16"
                   class="ml-auto"
                 />
               </CommandItem>

@@ -1,4 +1,16 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/registry/default/ui/dialog";
+import { LucideArrowRight } from "lucide-vue-next";
 import { ref } from "vue";
 
 const step = ref(1);
@@ -81,8 +93,7 @@ const handleOpenChange = (open: boolean) => {
             <template v-if="step < totalSteps">
               <Button class="group" type="button" @click="handleContinue">
                 Next
-                <Icon
-                  name="lucide:arrow-right"
+                <LucideArrowRight
                   class="-me-1 size-4 opacity-60 transition-transform group-hover:translate-x-0.5"
                   aria-hidden="true"
                 />

@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { SelectNative } from "@/registry/default/ui/select-native";
+import { useId } from "vue";
+
 const id = useId();
 </script>
 

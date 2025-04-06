@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { LucideX } from "lucide-vue-next";
 import {
   TagsInputInput,
   TagsInputItem,
@@ -6,6 +7,7 @@ import {
   TagsInputItemText,
   TagsInputRoot,
 } from "reka-ui";
+import { ref, useId } from "vue";
 
 const id = useId();
 const tags = ref<string[]>(["red", "green"]);
@@ -29,7 +31,7 @@ const tags = ref<string[]>(["red", "green"]);
           class="focus-visible:border-ring focus-visible:ring-ring/50 text-muted-foreground/80 hover:text-foreground absolute -inset-y-px -end-px flex size-7 rounded-e-md p-0 transition-[color,box-shadow] outline-none focus-visible:ring-[3px]"
           aria-label="Remove tag"
         >
-          <Icon name="lucide:x" :size="12" class="m-auto" aria-hidden="true" />
+          <LucideX :size="12" class="m-auto" aria-hidden="true" />
         </TagsInputItemDelete>
       </TagsInputItem>
 

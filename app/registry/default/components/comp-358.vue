@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/registry/default/ui/tooltip";
+import { LucideGlobe } from "lucide-vue-next";
+</script>
 <template>
   <TooltipProvider :delay-duration="0">
     <Tooltip>
@@ -6,8 +16,7 @@
       </TooltipTrigger>
       <TooltipContent class="dark py-3">
         <div class="flex gap-3">
-          <Icon
-            name="lucide:globe"
+          <LucideGlobe
             class="mt-0.5 size-4 shrink-0 opacity-60"
             aria-hidden="true"
           />

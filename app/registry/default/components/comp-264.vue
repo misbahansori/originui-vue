@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { LucideRotateCcw } from "lucide-vue-next";
+import { useTemplateRef } from "vue";
+
 const sliders = [
   {
     label: "X",
@@ -49,12 +53,7 @@ const resetAll = () => {
       />
     </div>
     <Button class="w-full" variant="outline" @click="resetAll">
-      <Icon
-        name="lucide:rotate-ccw"
-        class="-ms-1 opacity-60"
-        size="16"
-        aria-hidden="true"
-      />
+      <LucideRotateCcw class="-ms-1 opacity-60" :size="16" aria-hidden="true" />
       Reset
     </Button>
   </div>

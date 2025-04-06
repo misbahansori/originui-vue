@@ -1,4 +1,14 @@
 <script setup lang="ts">
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/registry/default/ui/table";
+
 const items = [
   {
     id: "1",
@@ -47,9 +57,7 @@ const items = [
   <div>
     <Table>
       <TableHeader class="bg-transparent">
-        <TableRow
-          class="*:border-border hover:bg-transparent [&>:not(:last-child)]:border-r"
-        >
+        <TableRow class="hover:bg-transparent">
           <TableHead>Name</TableHead>
           <TableHead>Email</TableHead>
           <TableHead>Location</TableHead>
@@ -57,24 +65,32 @@ const items = [
           <TableHead class="text-right">Balance</TableHead>
         </TableRow>
       </TableHeader>
+      <tbody aria-hidden="true" class="table-row h-2"></tbody>
       <TableBody
         class="[&_td:first-child]:rounded-l-lg [&_td:last-child]:rounded-r-lg"
       >
         <TableRow
           v-for="item in items"
           :key="item.id"
-          class="*:border-border hover:bg-transparent [&>:not(:last-child)]:border-r"
+          class="odd:bg-muted/50 odd:hover:bg-muted/50 border-none hover:bg-transparent"
         >
-          <TableCell class="font-medium">{{ item.name }}</TableCell>
-          <TableCell>{{ item.email }}</TableCell>
-          <TableCell>{{ item.location }}</TableCell>
-          <TableCell>{{ item.status }}</TableCell>
-          <TableCell class="text-right">{{ item.balance }}</TableCell>
+          <TableCell class="py-2.5 font-medium">{{ item.name }}</TableCell>
+          <TableCell class="py-2.5">{{ item.email }}</TableCell>
+          <TableCell class="py-2.5">{{ item.location }}</TableCell>
+          <TableCell class="py-2.5">{{ item.status }}</TableCell>
+          <TableCell class="py-2.5 text-right">
+            {{ item.balance }}
+          </TableCell>
         </TableRow>
       </TableBody>
+      <tbody aria-hidden="true" class="table-row h-2"></tbody>
+      <TableFooter class="bg-transparent">
+        <TableRow class="hover:bg-transparent">
+          <TableCell :colspan="4">Total</TableCell>
+          <TableCell class="text-right">$2,500.00</TableCell>
+        </TableRow>
+      </TableFooter>
     </Table>
-    <p class="text-muted-foreground mt-4 text-center text-sm">
-      Table with vertical lines
-    </p>
+    <p class="text-muted-foreground mt-4 text-center text-sm">Striped table</p>
   </div>
 </template>

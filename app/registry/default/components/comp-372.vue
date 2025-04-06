@@ -1,4 +1,15 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuTrigger,
+} from "@/registry/default/ui/dropdown-menu";
+import { LucideChevronDown } from "lucide-vue-next";
+import { ref } from "vue";
+
 const framework = ref("nextjs");
 </script>
 
@@ -7,9 +18,9 @@ const framework = ref("nextjs");
     <DropdownMenuTrigger asChild>
       <Button variant="outline">
         Radio items
-        <Icon
-          name="lucide:chevron-down"
-          class="-me-1 size-4 opacity-60"
+        <LucideChevronDown
+          :size="16"
+          class="-me-1 opacity-60"
           aria-hidden="true"
         />
       </Button>

@@ -1,9 +1,15 @@
 <script setup lang="ts">
-const bookmarked = ref(false);
+import { Toggle } from "@/registry/default/ui/toggle";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/registry/default/ui/tooltip";
+import { LucideBookmark } from "lucide-vue-next";
+import { ref } from "vue";
 
-function toggleBookmark() {
-  bookmarked.value = !bookmarked.value;
-}
+const bookmarked = ref(false);
 </script>
 
 <template>
@@ -14,10 +20,9 @@ function toggleBookmark() {
           <Toggle
             class="group size-9 p-0 hover:bg-indigo-50 hover:text-indigo-500 data-[state=on]:bg-indigo-50 data-[state=on]:text-indigo-500"
             aria-label="Bookmark this"
-            :pressed="bookmarked"
-            @update:pressed="toggleBookmark"
+            v-model="bookmarked"
           >
-            <Icon name="lucide:bookmark" size="16" aria-hidden="true" />
+            <LucideBookmark :size="16" aria-hidden="true" />
           </Toggle>
         </div>
       </TooltipTrigger>

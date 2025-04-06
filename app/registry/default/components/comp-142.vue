@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Checkbox } from "@/registry/default/ui/checkbox";
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { nextTick, useId, useTemplateRef } from "vue";
+
 const checkboxId = useId();
 const inputId = useId();
 const checked = ref(false);

@@ -1,79 +1,100 @@
 <script setup lang="ts">
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/registry/default/ui/accordion";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/registry/default/ui/collapsible";
+import {
+  LucideAtSign,
+  LucideChevronDown,
+  LucideCircleDashed,
+  LucideCommand,
+  LucideEclipse,
+  LucideGauge,
+  LucideZap,
+} from "lucide-vue-next";
+
 const items = [
   {
     id: "1",
     title: "What makes Origin UI different?",
-    icon: "lucide:command",
+    icon: LucideCommand,
     collapsibles: [
       {
         title: "What about performance?",
         content:
           "We optimize every component for maximum performance and minimal bundle size.",
-        icon: "lucide:gauge",
+        icon: LucideGauge,
       },
       {
         title: "How is the documentation?",
         content:
           "Our documentation is comprehensive and includes live examples for every component.",
-        icon: "lucide:circle-dashed",
+        icon: LucideCircleDashed,
       },
     ],
   },
   {
     id: "2",
     title: "How can I customize the components?",
-    icon: "lucide:eclipse",
+    icon: LucideEclipse,
     collapsibles: [
       {
         title: "Can I use custom themes?",
         content:
           "Yes, our theming system is fully customizable and supports both light and dark modes.",
-        icon: "lucide:gauge",
+        icon: LucideGauge,
       },
       {
         title: "What about Tailwind support?",
         content:
           "We have first-class support for Tailwind CSS with custom utility classes.",
-        icon: "lucide:circle-dashed",
+        icon: LucideCircleDashed,
       },
     ],
   },
   {
     id: "3",
     title: "Is Origin UI optimized for performance?",
-    icon: "lucide:zap",
+    icon: LucideZap,
     collapsibles: [
       {
         title: "What's the bundle size impact?",
         content:
           "Our components are tree-shakeable and typically add minimal overhead to your bundle.",
         open: true,
-        icon: "lucide:gauge",
+        icon: LucideGauge,
       },
       {
         title: "How is code splitting handled?",
         content:
           "We support automatic code splitting for optimal loading performance.",
-        icon: "lucide:circle-dashed",
+        icon: LucideCircleDashed,
       },
     ],
   },
   {
     id: "4",
     title: "How accessible are the components?",
-    icon: "lucide:at-sign",
+    icon: LucideAtSign,
     collapsibles: [
       {
         title: "Which screen readers are supported?",
         content:
           "We test with NVDA, VoiceOver, and JAWS to ensure broad compatibility.",
-        icon: "lucide:gauge",
+        icon: LucideGauge,
       },
       {
         title: "What about keyboard navigation?",
         content:
           "Full keyboard navigation support is implemented following WAI-ARIA best practices.",
-        icon: "lucide:circle-dashed",
+        icon: LucideCircleDashed,
       },
     ],
   },
@@ -94,8 +115,8 @@ const items = [
           class="justify-start gap-3 rounded-md text-[15px] leading-6 outline-none hover:no-underline focus-visible:ring-0 [&>svg]:-order-1"
         >
           <span class="flex items-center gap-3">
-            <Icon
-              :name="item.icon"
+            <component
+              :is="item.icon"
               class="size-4 shrink-0 opacity-60"
               aria-hidden="true"
             />
@@ -112,14 +133,13 @@ const items = [
             <CollapsibleTrigger
               class="flex gap-2 text-[15px] leading-6 font-semibold [&[data-state=open]>svg]:rotate-180"
             >
-              <Icon
-                name="lucide:chevron-down"
+              <LucideChevronDown
                 class="mt-1 size-4 shrink-0 opacity-60 transition-transform duration-200"
                 aria-hidden="true"
               />
               <span class="flex items-center gap-3">
-                <Icon
-                  :name="collapsible.icon"
+                <component
+                  :is="collapsible.icon"
                   class="size-4 shrink-0 opacity-60"
                   aria-hidden="true"
                 />

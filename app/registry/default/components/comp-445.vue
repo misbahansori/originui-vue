@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/default/ui/tabs";
+</script>
+
 <template>
   <Tabs defaultValue="tab-1" orientation="vertical" class="w-full flex-row">
     <TabsList class="flex-col gap-1 bg-transparent py-0">

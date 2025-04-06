@@ -1,7 +1,11 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { LucideLoaderCircle } from "lucide-vue-next";
+</script>
+
 <template>
   <Button disabled>
-    <Icon
-      name="lucide:loader-circle"
+    <LucideLoaderCircle
       class="-ms-1 animate-spin"
       :size="16"
       aria-hidden="true"

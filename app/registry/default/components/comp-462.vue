@@ -1,3 +1,23 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Pagination,
+  PaginationEllipsis,
+  PaginationList,
+  PaginationListItem,
+  PaginationNext,
+  PaginationPrev,
+} from "@/registry/default/ui/pagination";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/registry/default/ui/select";
+import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
+</script>
+
 <template>
   <Pagination
     :defaultPage="1"
@@ -20,11 +40,7 @@
       <div class="flex items-center gap-1">
         <PaginationPrev asChild>
           <Button variant="ghost" class="size-9">
-            <Icon
-              name="lucide:chevron-left"
-              aria-hidden="true"
-              class="size-4"
-            />
+            <LucideChevronLeft aria-hidden="true" class="size-4" />
           </Button>
         </PaginationPrev>
         <template v-for="item in items">
@@ -44,11 +60,7 @@
         </template>
         <PaginationNext asChild>
           <Button variant="ghost" class="size-9">
-            <Icon
-              name="lucide:chevron-right"
-              aria-hidden="true"
-              class="size-4"
-            />
+            <LucideChevronRight aria-hidden="true" class="size-4" />
           </Button>
         </PaginationNext>
       </div>

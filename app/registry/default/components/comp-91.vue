@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { LucideLoaderCircle } from "lucide-vue-next";
+import { ref } from "vue";
+
 const isLoading = ref(false);
 
 function handleClick() {
@@ -22,12 +26,7 @@ function handleClick() {
       v-if="isLoading"
       class="absolute inset-0 flex items-center justify-center"
     >
-      <Icon
-        name="lucide:loader-circle"
-        class="animate-spin"
-        :size="16"
-        aria-hidden="true"
-      />
+      <LucideLoaderCircle class="animate-spin" :size="16" aria-hidden="true" />
     </div>
   </Button>
 </template>

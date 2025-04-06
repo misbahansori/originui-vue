@@ -1,4 +1,13 @@
 <script lang="ts" setup>
+import {
+  Stepper,
+  StepperIndicator,
+  StepperItem,
+  StepperSeparator,
+  StepperTitle,
+  StepperTrigger,
+} from "@/registry/default/ui/stepper";
+
 const steps = [
   {
     step: 1,

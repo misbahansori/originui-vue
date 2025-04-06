@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import { ref } from "vue";
+
+// TODO: Implement this in the original ui
 interface Option {
   value: string;
   label: string;

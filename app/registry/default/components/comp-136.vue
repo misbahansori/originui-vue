@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Checkbox } from "@/registry/default/ui/checkbox";
+import { Label } from "@/registry/default/ui/label";
+import { ref, useId } from "vue";
+
 const id = useId();
 const checked = ref(true);
 </script>

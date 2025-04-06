@@ -1,4 +1,12 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuTrigger,
+} from "@/registry/default/ui/dropdown-menu";
 import { computed, ref } from "vue";
 
 const options = [
@@ -34,7 +42,7 @@ const selectedOption = computed(() => {
     <Button
       class="rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10"
     >
-      {{ selectedOption.label }}
+      {{ selectedOption?.label }}
     </Button>
     <DropdownMenu>
       <DropdownMenuTrigger as-child>
@@ -43,7 +51,7 @@ const selectedOption = computed(() => {
           size="icon"
           aria-label="Options"
         >
-          <Icon name="lucide:chevron-down" size="16" aria-hidden="true" />
+          <LucideChevronDown size="16" aria-hidden="true" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent

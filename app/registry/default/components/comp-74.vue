@@ -1,8 +1,11 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { Label } from "@/registry/default/ui/label";
+import { Textarea } from "@/registry/default/ui/textarea";
+import { computed, ref, useId } from "vue";
 
 const maxLength = 180;
 const textValue = ref("");
+const id = useId();
 
 const characterCount = computed(() => {
   return textValue.value.length;
@@ -15,9 +18,9 @@ const charactersLeft = computed(() => {
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="character-count-textarea">Textarea with characters left</Label>
+    <Label :for="id">Textarea with characters left</Label>
     <Textarea
-      id="character-count-textarea"
+      :id="id"
       v-model="textValue"
       :maxlength="maxLength"
       aria-describedby="character-count-description"

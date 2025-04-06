@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/default/ui/tabs";
+import { LucideBox, LucideHome, LucidePanelsTopLeft } from "lucide-vue-next";
+</script>
+
 <template>
   <Tabs defaultValue="tab-1" orientation="vertical" class="w-full flex-row">
     <TabsList
@@ -7,8 +17,7 @@
         value="tab-1"
         class="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative w-full justify-start after:absolute after:inset-y-0 after:start-0 after:-ms-1 after:w-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
       >
-        <Icon
-          name="lucide:home"
+        <LucideHome
           class="-ms-0.5 me-1.5 size-4 opacity-60"
           aria-hidden="true"
         />
@@ -18,8 +27,7 @@
         value="tab-2"
         class="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative w-full justify-start after:absolute after:inset-y-0 after:start-0 after:-ms-1 after:w-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
       >
-        <Icon
-          name="lucide:panels-top-left"
+        <LucidePanelsTopLeft
           class="-ms-0.5 me-1.5 size-4 opacity-60"
           aria-hidden="true"
         />
@@ -29,8 +37,7 @@
         value="tab-3"
         class="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative w-full justify-start after:absolute after:inset-y-0 after:start-0 after:-ms-1 after:w-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
       >
-        <Icon
-          name="lucide:box"
+        <LucideBox
           class="-ms-0.5 me-1.5 size-4 opacity-60"
           aria-hidden="true"
         />

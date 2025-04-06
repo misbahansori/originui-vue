@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
+import { ref } from "vue";
+
 const id = useId();
 const selectedValue = ref("on");
 </script>

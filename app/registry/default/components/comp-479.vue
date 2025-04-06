@@ -1,6 +1,13 @@
 <script setup lang="ts">
-import { Icon } from "#components";
 import { cn } from "@/lib/utils";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/registry/default/ui/table";
 import {
   FlexRender,
   getCoreRowModel,
@@ -9,6 +16,8 @@ import {
   type ColumnDef,
   type SortingState,
 } from "@tanstack/vue-table";
+import { LucideChevronDown, LucideChevronUp } from "lucide-vue-next";
+import { h, onMounted, ref, shallowRef } from "vue";
 
 type Item = {
   id: string;
@@ -187,15 +196,13 @@ const table = useVueTable({
                     :props="header.getContext()"
                   />
                 </span>
-                <Icon
+                <LucideChevronUp
                   v-if="header.column.getIsSorted() === 'asc'"
-                  name="lucide:chevron-up"
                   class="size-4 shrink-0 opacity-60"
                   aria-hidden="true"
                 />
-                <Icon
+                <LucideChevronDown
                   v-else-if="header.column.getIsSorted() === 'desc'"
-                  name="lucide:chevron-down"
                   class="size-4 shrink-0 opacity-60"
                   aria-hidden="true"
                 />

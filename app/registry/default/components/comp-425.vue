@@ -1,4 +1,8 @@
-<script setup>
+<script setup lang="ts">
+import { Badge } from "@/registry/default/ui/badge";
+import { LucideX } from "lucide-vue-next";
+import { ref } from "vue";
+
 const isActive = ref(true);
 </script>
 
@@ -10,7 +14,7 @@ const isActive = ref(true);
       @click="isActive = false"
       aria-label="Delete"
     >
-      <Icon name="lucide:x" class="size-4" aria-hidden="true" />
+      <LucideX class="size-4" aria-hidden="true" />
     </button>
   </Badge>
 </template>

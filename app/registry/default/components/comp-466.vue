@@ -1,4 +1,14 @@
 <script setup lang="ts">
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/registry/default/ui/table";
+
 const items = [
   {
     id: "1",

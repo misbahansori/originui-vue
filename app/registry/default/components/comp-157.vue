@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
+import { LucideStar } from "lucide-vue-next";
+import { ref, useId } from "vue";
+
 const id = useId();
 const selectedValue = ref("all");
 
@@ -26,11 +31,10 @@ const starRatings = [
             class="inline-flex items-center text-amber-500"
             aria-hidden="true"
           >
-            <Icon
+            <LucideStar
               v-for="star in 5"
               :key="star"
-              name="ri:star-fill"
-              size="16"
+              :size="16"
               :class="{ 'opacity-30': star > rating.stars }"
             />
           </span>

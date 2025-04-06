@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { Label } from "@/registry/default/ui/label";
+import { Slider } from "@/registry/default/ui/slider";
+import { LucideMinus, LucidePlus } from "lucide-vue-next";
+import { ref } from "vue";
+
 const minValue = 0;
 const maxValue = 200;
 const steps = 5;
@@ -28,7 +34,7 @@ const increaseValue = () => {
           @click="decreaseValue"
           :disabled="(value[0] || 0) === 0"
         >
-          <Icon name="lucide:minus" size="16" aria-hidden="true" />
+          <LucideMinus :size="16" aria-hidden="true" />
         </Button>
       </div>
       <Slider
@@ -48,7 +54,7 @@ const increaseValue = () => {
           @click="increaseValue"
           :disabled="(value[0] || 0) === 200"
         >
-          <Icon name="lucide:plus" size="16" aria-hidden="true" />
+          <LucidePlus :size="16" aria-hidden="true" />
         </Button>
       </div>
     </div>

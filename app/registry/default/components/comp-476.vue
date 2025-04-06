@@ -1,4 +1,19 @@
 <script setup lang="ts">
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/registry/default/ui/table";
+import {
+  LucideCheck,
+  LucideMonitor,
+  LucideSmartphone,
+  LucideX,
+} from "lucide-vue-next";
+
 const items = [
   {
     feature: "scroll-timeline",
@@ -62,19 +77,11 @@ const items = [
       >
         <TableCell></TableCell>
         <TableHead class="border-b text-center" :colspan="5">
-          <Icon
-            name="lucide:monitor"
-            class="inline-flex size-4"
-            aria-hidden="true"
-          />
+          <LucideMonitor :size="16" class="inline-flex" aria-hidden="true" />
           <span class="sr-only">Desktop browsers</span>
         </TableHead>
         <TableHead class="border-b text-center" :colspan="5">
-          <Icon
-            name="lucide:smartphone"
-            class="inline-flex size-4"
-            aria-hidden="true"
-          />
+          <LucideSmartphone :size="16" class="inline-flex" aria-hidden="true" />
           <span class="sr-only">Mobile browsers</span>
         </TableHead>
       </TableRow>
@@ -122,16 +129,16 @@ const items = [
           :key="`${browser.name}-${index}`"
           class="space-y-1 text-center"
         >
-          <Icon
+          <LucideCheck
             v-if="browser.supported"
-            name="lucide:check"
-            class="inline-flex size-4 text-emerald-600"
+            :size="16"
+            class="inline-flex text-emerald-600"
             aria-hidden="true"
           />
-          <Icon
+          <LucideX
             v-else
-            name="lucide:x"
-            class="inline-flex size-4 text-red-600"
+            :size="16"
+            class="inline-flex text-red-600"
             aria-hidden="true"
           />
           <span class="sr-only">

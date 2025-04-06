@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
+import { LucideCheck, LucideMinus } from "lucide-vue-next";
+import { ref, useId } from "vue";
+
 const id = useId();
 const selectedValue = ref("1");
 
@@ -31,15 +35,13 @@ const items = [
         <span
           class="group peer-data-[state=unchecked]:text-muted-foreground/70 mt-2 flex items-center gap-1"
         >
-          <Icon
-            name="lucide:check"
-            size="16"
+          <LucideCheck
+            :size="16"
             class="group-peer-data-[state=unchecked]:hidden"
             aria-hidden="true"
           />
-          <Icon
-            name="lucide:minus"
-            size="16"
+          <LucideMinus
+            :size="16"
             class="group-peer-data-[state=checked]:hidden"
             aria-hidden="true"
           />
