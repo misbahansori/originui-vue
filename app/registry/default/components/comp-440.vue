@@ -1,3 +1,20 @@
+<script setup lang="ts">
+import { Badge } from "@/registry/default/ui/badge";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/default/ui/tabs";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/registry/default/ui/tooltip";
+import { LucideBox, LucideHome, LucidePanelsTopLeft } from "lucide-vue-next";
+</script>
+
 <template>
   <Tabs defaultValue="tab-1" class="items-center">
     <TabsList>
@@ -6,7 +23,7 @@
           <TooltipTrigger as-child>
             <span>
               <TabsTrigger value="tab-1" class="py-3">
-                <Icon name="lucide:home" class="size-4" aria-hidden="true" />
+                <LucideHome class="size-4" aria-hidden="true" />
               </TabsTrigger>
             </span>
           </TooltipTrigger>
@@ -19,11 +36,7 @@
             <span>
               <TabsTrigger value="tab-2" class="group py-3">
                 <span class="relative">
-                  <Icon
-                    name="lucide:panels-top-left"
-                    class="size-4"
-                    aria-hidden="true"
-                  />
+                  <LucidePanelsTopLeft class="size-4" aria-hidden="true" />
                   <Badge
                     class="border-background absolute -top-2.5 left-full min-w-4 -translate-x-1.5 px-0.5 text-[10px]/[.875rem] transition-opacity group-data-[state=inactive]:opacity-50"
                   >
@@ -41,7 +54,7 @@
           <TooltipTrigger as-child>
             <span>
               <TabsTrigger value="tab-3" class="py-3">
-                <Icon name="lucide:box" class="size-4" aria-hidden="true" />
+                <LucideBox class="size-4" aria-hidden="true" />
               </TabsTrigger>
             </span>
           </TooltipTrigger>

@@ -1,3 +1,14 @@
+<script setup lang="ts">
+import { ScrollArea, ScrollBar } from "@/registry/default/ui/scroll-area";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/default/ui/tabs";
+import { LucideBox, LucideHome, LucidePanelsTopLeft } from "lucide-vue-next";
+</script>
+
 <template>
   <Tabs defaultValue="tab-1">
     <ScrollArea>
@@ -6,8 +17,7 @@
           value="tab-1"
           class="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full data-[state=active]:shadow-none"
         >
-          <Icon
-            name="lucide:home"
+          <LucideHome
             class="-ms-0.5 me-1.5 size-4 opacity-60"
             aria-hidden="true"
           />
@@ -17,8 +27,7 @@
           value="tab-2"
           class="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full data-[state=active]:shadow-none"
         >
-          <Icon
-            name="lucide:panels-top-left"
+          <LucidePanelsTopLeft
             class="-ms-0.5 me-1.5 size-4 opacity-60"
             aria-hidden="true"
           />
@@ -28,8 +37,7 @@
           value="tab-3"
           class="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full data-[state=active]:shadow-none"
         >
-          <Icon
-            name="lucide:box"
+          <LucideBox
             class="-ms-0.5 me-1.5 size-4 opacity-60"
             aria-hidden="true"
           />

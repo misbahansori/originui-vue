@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import { Badge } from "@/registry/default/ui/badge";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/default/ui/tabs";
+</script>
+
 <template>
   <Tabs defaultValue="tab-1">
     <TabsList class="mx-auto flex w-full max-w-xs bg-transparent">
