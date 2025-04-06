@@ -1,4 +1,9 @@
-<script setup>
+<script setup lang="ts">
+import { Badge } from "@/registry/default/ui/badge";
+import { Checkbox } from "@/registry/default/ui/checkbox";
+import { LucideCheck } from "lucide-vue-next";
+import { useId } from "vue";
+
 const id = useId();
 </script>
 
@@ -11,8 +16,7 @@ const id = useId();
       class="peer sr-only after:absolute after:inset-0"
       :default-checked="true"
     />
-    <Icon
-      name="lucide:check"
+    <LucideCheck
       class="hidden size-4 peer-data-[state=checked]:block"
       aria-hidden="true"
     />

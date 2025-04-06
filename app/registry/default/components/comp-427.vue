@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/default/ui/tabs";
+</script>
+
 <template>
   <Tabs defaultValue="tab-1" class="items-center">
     <TabsList class="bg-transparent">
