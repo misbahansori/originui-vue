@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import { Calendar } from "@/registry/default/ui/calendar";
 import {
   type DateValue,
   getLocalTimeZone,
   isWeekend,
   today,
 } from "@internationalized/date";
+import type { Ref } from "vue";
+import { ref } from "vue";
 
 const now = ref(today(getLocalTimeZone())) as Ref<DateValue>;
 
