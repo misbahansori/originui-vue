@@ -12,7 +12,7 @@ const id = useId();
     <Label :for="id">Autogrowing textarea</Label>
     <Textarea
       :id="id"
-      class="field-sizing-content max-h-29.5 min-h-[none] resize-none py-1.75"
+      class="field-sizing-content max-h-29.5 min-h-0 resize-none py-1.75"
       v-model="textValue"
       placeholder="Leave a comment"
     />

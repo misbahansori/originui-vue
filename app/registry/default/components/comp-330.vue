@@ -88,7 +88,7 @@ const features = [
           <div
             v-for="plan in plans"
             :key="plan.id"
-            class="border-input has-data-[state=checked]:border-ring has-data-[state=checked]:bg-accent relative flex w-full items-center gap-2 rounded-md border px-4 py-3 shadow-xs outline-none"
+            class="border-input has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-accent relative flex w-full items-center gap-2 rounded-md border px-4 py-3 shadow-xs outline-none"
           >
             <RadioGroupItem
               :value="plan.id"

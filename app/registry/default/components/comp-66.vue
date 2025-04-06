@@ -12,7 +12,7 @@ const id = useId();
     <Label :for="id">Shorter textarea</Label>
     <Textarea
       :id="id"
-      class="min-h-[none]"
+      class="min-h-0"
       v-model="textValue"
       placeholder="Leave a comment"
       rows="2"

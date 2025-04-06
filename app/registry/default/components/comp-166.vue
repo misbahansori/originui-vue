@@ -27,7 +27,7 @@ const items = [
       <div
         v-for="item in items"
         :key="`${id}-${item.value}`"
-        class="border-input has-data-[state=checked]:border-ring has-data-[state=checked]:bg-accent relative flex flex-col gap-4 border p-4 outline-none first:rounded-t-md last:rounded-b-md has-data-[state=checked]:z-10"
+        class="border-input has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-accent relative flex flex-col gap-4 border p-4 outline-none first:rounded-t-md last:rounded-b-md has-data-[state=checked]:z-10"
       >
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-2">

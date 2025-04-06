@@ -22,7 +22,7 @@ const items = [
       <div
         v-for="item in items"
         :key="`${id}-${item.value}`"
-        class="border-input has-data-[state=checked]:border-ring relative flex flex-col items-start gap-4 rounded-md border p-3 shadow-xs outline-none"
+        class="border-input has-data-[state=checked]:border-primary/50 relative flex flex-col items-start gap-4 rounded-md border p-3 shadow-xs outline-none"
       >
         <div class="flex items-center gap-2">
           <RadioGroupItem

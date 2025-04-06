@@ -7,7 +7,7 @@ const id = useId();
 
 <template>
   <div
-    class="border-input has-data-[state=checked]:border-ring relative flex w-full items-start gap-2 rounded-md border p-4 shadow-xs outline-none"
+    class="border-input has-data-[state=checked]:border-primary/50 relative flex w-full items-start gap-2 rounded-md border p-4 shadow-xs outline-none"
   >
     <Switch
       :id="id"

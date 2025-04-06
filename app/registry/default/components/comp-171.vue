@@ -29,8 +29,8 @@ const stars = ["1", "2", "3", "4", "5"];
     </legend>
     <RadioGroup
       class="inline-flex gap-0"
-      :value="currentRating"
-      @update:value="handleValueChange"
+      :modelValue="currentRating"
+      @update:modelValue="handleValueChange"
     >
       <label
         v-for="value in stars"
