@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/registry/default/ui/popover";
+</script>
+
 <template>
   <Popover>
     <PopoverTrigger asChild>

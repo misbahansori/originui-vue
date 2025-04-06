@@ -1,4 +1,15 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { Checkbox } from "@/registry/default/ui/checkbox";
+import { Label } from "@/registry/default/ui/label";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/registry/default/ui/popover";
+import { LucideListFilter } from "lucide-vue-next";
+import { useId } from "vue";
+
 const id = useId();
 </script>
 
@@ -7,7 +18,7 @@ const id = useId();
     <Popover>
       <PopoverTrigger asChild>
         <Button variant="outline" size="icon" aria-label="Filters">
-          <Icon name="lucide:list-filter" class="size-4" aria-hidden="true" />
+          <LucideListFilter class="size-4" aria-hidden="true" />
         </Button>
       </PopoverTrigger>
       <PopoverContent class="w-36 p-3">

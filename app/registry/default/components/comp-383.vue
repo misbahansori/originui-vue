@@ -1,5 +1,25 @@
-<script setup>
-const initialNotifications = [
+<script setup lang="ts">
+import { Badge } from "@/registry/default/ui/badge";
+import { Button } from "@/registry/default/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/registry/default/ui/popover";
+import { LucideBell } from "lucide-vue-next";
+import { computed, ref } from "vue";
+
+interface Notification {
+  id: number;
+  image: string;
+  user: string;
+  action: string;
+  target: string;
+  timestamp: string;
+  unread: boolean;
+}
+
+const initialNotifications: Notification[] = [
   {
     id: 1,
     image: "/avatar-80-01.jpg",
@@ -56,7 +76,7 @@ const initialNotifications = [
   },
 ];
 
-const notifications = ref(initialNotifications);
+const notifications = ref<Notification[]>(initialNotifications);
 const unreadCount = computed(
   () => notifications.value.filter((n) => n.unread).length,
 );
@@ -68,7 +88,7 @@ const handleMarkAllAsRead = () => {
   }));
 };
 
-const handleNotificationClick = (id) => {
+const handleNotificationClick = (id: number) => {
   notifications.value = notifications.value.map((notification) =>
     notification.id === id ? { ...notification, unread: false } : notification,
   );
@@ -84,7 +104,7 @@ const handleNotificationClick = (id) => {
         class="relative"
         aria-label="Open notifications"
       >
-        <Icon name="lucide:bell" class="size-4" aria-hidden="true" />
+        <LucideBell class="size-4" aria-hidden="true" />
         <Badge
           v-if="unreadCount > 0"
           class="absolute -top-2 left-full min-w-5 -translate-x-1/2 px-1"
