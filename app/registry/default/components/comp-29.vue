@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import { LucideChevronDown, LucideChevronUp } from "lucide-vue-next";
 import {
   NumberFieldDecrement,
   NumberFieldIncrement,
   NumberFieldInput,
   NumberFieldRoot,
 } from "reka-ui";
+import { ref, useId } from "vue";
 
 const id = useId();
 const value = ref(99);
@@ -33,12 +36,12 @@ const value = ref(99);
           <NumberFieldIncrement
             class="border-input bg-background text-muted-foreground/80 hover:bg-accent hover:text-foreground -me-px flex h-1/2 w-6 flex-1 items-center justify-center border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
           >
-            <Icon name="lucide:chevron-up" :size="12" aria-hidden="true" />
+            <LucideChevronUp :size="12" aria-hidden="true" />
           </NumberFieldIncrement>
           <NumberFieldDecrement
             class="border-input bg-background text-muted-foreground/80 hover:bg-accent hover:text-foreground -me-px -mt-px flex h-1/2 w-6 flex-1 items-center justify-center border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
           >
-            <Icon name="lucide:chevron-down" :size="12" aria-hidden="true" />
+            <LucideChevronDown :size="12" aria-hidden="true" />
           </NumberFieldDecrement>
         </div>
       </NumberFieldRoot>

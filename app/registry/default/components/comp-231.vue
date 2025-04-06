@@ -15,6 +15,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/registry/default/ui/popover";
+import { LucideCheck, LucideChevronDown } from "lucide-vue-next";
 import { computed, ref, useId } from "vue";
 
 const id = useId();
@@ -79,9 +80,8 @@ function customFilter(value: string, search: string) {
           <span :class="cn('truncate', !value && 'text-muted-foreground')">
             {{ selectedTimezone || "Select timezone" }}
           </span>
-          <Icon
-            name="lucide:chevron-down"
-            size="16"
+          <LucideChevronDown
+            :size="16"
             class="text-muted-foreground/80 shrink-0"
             aria-hidden="true"
           />
@@ -103,10 +103,9 @@ function customFilter(value: string, search: string) {
                 @select="handleSelect(timezone.value)"
               >
                 {{ timezone.label }}
-                <Icon
+                <LucideCheck
                   v-if="value === timezone.value"
-                  name="lucide:check"
-                  size="16"
+                  :size="16"
                   class="ml-auto"
                 />
               </CommandItem>

@@ -16,6 +16,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/registry/default/ui/popover";
+import { LucideCheck, LucideChevronDown, LucidePlus } from "lucide-vue-next";
 import { computed, ref, useId } from "vue";
 
 const id = useId();
@@ -60,9 +61,8 @@ function handleSelect(currentValue: string) {
           <span :class="cn('truncate', !value && 'text-muted-foreground')">
             {{ selectedOrganization || "Select organization" }}
           </span>
-          <Icon
-            name="lucide:chevron-down"
-            size="16"
+          <LucideChevronDown
+            :size="16"
             class="text-muted-foreground/80 shrink-0"
             aria-hidden="true"
           />
@@ -84,10 +84,9 @@ function handleSelect(currentValue: string) {
                 @select="handleSelect(organization.value)"
               >
                 {{ organization.label }}
-                <Icon
+                <LucideCheck
                   v-if="value === organization.value"
-                  name="lucide:check"
-                  size="16"
+                  :size="16"
                   class="ml-auto"
                 />
               </CommandItem>
@@ -95,9 +94,8 @@ function handleSelect(currentValue: string) {
             <CommandSeparator />
             <CommandGroup>
               <Button variant="ghost" class="w-full justify-start font-normal">
-                <Icon
-                  name="lucide:plus"
-                  size="16"
+                <LucidePlus
+                  :size="16"
                   class="-ms-2 opacity-60"
                   aria-hidden="true"
                 />

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
-import { LucideEye, LucideEyeOff } from "lucide-vue-next";
+import { LucideCheck, LucideEye, LucideEyeOff, LucideX } from "lucide-vue-next";
 import { computed, ref } from "vue";
 
 const password = ref("");
@@ -105,16 +105,14 @@ function getStrengthText(score: number) {
         :key="index"
         class="flex items-center gap-2"
       >
-        <Icon
+        <LucideCheck
           v-if="req.met"
-          name="lucide:check"
           :size="16"
           class="text-emerald-500"
           aria-hidden="true"
         />
-        <Icon
+        <LucideX
           v-else
-          name="lucide:x"
           :size="16"
           class="text-muted-foreground/80"
           aria-hidden="true"
