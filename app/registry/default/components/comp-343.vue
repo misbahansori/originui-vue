@@ -1,11 +1,22 @@
 <script setup lang="ts">
-import { LucidePlus } from "lucide-vue-next";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionHeader,
+  AccordionItem,
+} from "@/registry/default/ui/accordion";
+import {
+  LucideBell,
+  LucideLifeBuoy,
+  LucideLink2,
+  LucideShieldCheck,
+} from "lucide-vue-next";
 import { AccordionTrigger } from "reka-ui";
 
 const items = [
   {
     id: "1",
-    icon: "lucide:link-2",
+    icon: LucideLink2,
     title: "Connected accounts",
     sub: "Manage your linked social and work accounts",
     content:
@@ -13,7 +24,7 @@ const items = [
   },
   {
     id: "2",
-    icon: "lucide:bell",
+    icon: LucideBell,
     title: "Notifications",
     sub: "Customize your notification preferences",
     content:
@@ -21,7 +32,7 @@ const items = [
   },
   {
     id: "3",
-    icon: "lucide:shield-check",
+    icon: LucideShieldCheck,
     title: "2-step verification",
     sub: "Add an extra layer of security to your account",
     content:
@@ -29,7 +40,7 @@ const items = [
   },
   {
     id: "4",
-    icon: "lucide:life-buoy",
+    icon: LucideLifeBuoy,
     title: "Contact support",
     sub: "We're here to help 24/7",
     content:
@@ -57,7 +68,11 @@ const items = [
                 class="flex size-10 shrink-0 items-center justify-center rounded-full border"
                 aria-hidden="true"
               >
-                <Icon :name="item.icon" class="size-4 opacity-60" />
+                <component
+                  :is="item.icon"
+                  class="size-4 opacity-60"
+                  aria-hidden="true"
+                />
               </span>
               <span class="flex flex-col space-y-1">
                 <span>{{ item.title }}</span>

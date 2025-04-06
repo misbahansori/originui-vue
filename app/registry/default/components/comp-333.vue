@@ -1,4 +1,14 @@
 <script setup lang="ts">
+import {
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from "@/registry/default/ui/command";
 import { onMounted, onUnmounted, ref } from "vue";
 
 const open = ref(false);

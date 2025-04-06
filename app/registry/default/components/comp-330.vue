@@ -10,8 +10,8 @@ import {
 } from "@/registry/default/ui/dialog";
 import { Label } from "@/registry/default/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
-import { LucideRefreshCcw } from "lucide-vue-next";
-import { ref } from "vue";
+import { LucideCheck, LucideRefreshCcw } from "lucide-vue-next";
+import { ref, useId } from "vue";
 
 const id = useId();
 const selectedPlan = ref("2");

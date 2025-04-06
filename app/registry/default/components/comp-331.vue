@@ -14,7 +14,7 @@ import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
 import { Textarea } from "@/registry/default/ui/textarea";
 import { useObjectUrl } from "@vueuse/core";
-import { LucideImagePlus, LucideX } from "lucide-vue-next";
+import { LucideCheck, LucideImagePlus, LucideX } from "lucide-vue-next";
 import { computed, ref, useId } from "vue";
 
 const id = useId();

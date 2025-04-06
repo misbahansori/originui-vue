@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import {
+  Accordion,
+  AccordionContent,
+  AccordionHeader,
+  AccordionItem,
+} from "@/registry/default/ui/accordion";
+import { LucideChevronDown } from "lucide-vue-next";
 import { AccordionTrigger } from "reka-ui";
 
 const items = [
@@ -53,8 +60,8 @@ const items = [
                 {{ item.sub }}
               </span>
             </span>
-            <Icon
-              name="lucide:chevron-down"
+            <component
+              :is="LucideChevronDown"
               class="pointer-events-none size-4 shrink-0 opacity-60 transition-transform duration-200"
               aria-hidden="true"
             />
