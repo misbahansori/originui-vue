@@ -1,4 +1,13 @@
 <script setup lang="ts">
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/registry/default/ui/table";
+
 const items = [
   {
     feature: "scroll-timeline",

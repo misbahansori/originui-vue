@@ -1,4 +1,16 @@
 <script setup lang="ts">
+import { Checkbox } from "@/registry/default/ui/checkbox";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/registry/default/ui/table";
+import { useId } from "vue";
+
 const items = [
   {
     id: "1",

@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableRow,
+} from "@/registry/default/ui/table";
+</script>
+
 <template>
   <div class="mx-auto max-w-lg">
     <div class="bg-background overflow-hidden rounded-md border">

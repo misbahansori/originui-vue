@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Icon } from "#components";
 import { cn } from "@/lib/utils";
 import { Checkbox } from "@/registry/default/ui/checkbox";
 import {
@@ -24,7 +23,13 @@ import {
   type ColumnFiltersState,
   type SortingState,
 } from "@tanstack/vue-table";
+import {
+  LucideChevronDown,
+  LucideChevronUp,
+  LucideExternalLink,
+} from "lucide-vue-next";
 import type { VNodeArrayChildren } from "vue";
+import { h, ref } from "vue";
 
 type Item = {
   id: string;
@@ -151,8 +156,7 @@ const columns: ColumnDef<Item>[] = [
         },
         [
           row.getValue("link"),
-          h(Icon, {
-            name: "lucide:external-link",
+          h(LucideExternalLink, {
             class: "size-3",
             "aria-hidden": "true",
           }),
@@ -350,15 +354,13 @@ const table = useVueTable({
                   :render="header.column.columnDef.header"
                   :props="header.getContext()"
                 />
-                <Icon
+                <LucideChevronUp
                   v-if="header.column.getIsSorted() === 'asc'"
-                  name="lucide:chevron-up"
                   class="size-4 shrink-0 opacity-60"
                   aria-hidden="true"
                 />
-                <Icon
+                <LucideChevronDown
                   v-else-if="header.column.getIsSorted() === 'desc'"
-                  name="lucide:chevron-down"
                   class="size-4 shrink-0 opacity-60"
                   aria-hidden="true"
                 />
