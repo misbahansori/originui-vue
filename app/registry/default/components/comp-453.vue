@@ -1,4 +1,21 @@
-<script setup>
+<script setup lang="ts">
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from "@/registry/default/ui/breadcrumb";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/registry/default/ui/select";
+import { LucideDatabase } from "lucide-vue-next";
+import { ref } from "vue";
+
 const selectedValue = ref("1");
 </script>
 
@@ -19,7 +36,7 @@ const selectedValue = ref("1");
             <div
               class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 group-has-[select[disabled]]:opacity-50"
             >
-              <Icon name="lucide:database" class="size-4" aria-hidden="true" />
+              <LucideDatabase class="size-4" aria-hidden="true" />
             </div>
             <SelectValue placeholder="Select database" />
           </SelectTrigger>

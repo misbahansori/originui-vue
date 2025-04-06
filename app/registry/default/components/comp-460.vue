@@ -1,3 +1,23 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Pagination,
+  PaginationEllipsis,
+  PaginationFirst,
+  PaginationLast,
+  PaginationList,
+  PaginationListItem,
+  PaginationNext,
+  PaginationPrev,
+} from "@/registry/default/ui/pagination";
+import {
+  LucideChevronFirst,
+  LucideChevronLast,
+  LucideChevronLeft,
+  LucideChevronRight,
+} from "lucide-vue-next";
+</script>
+
 <template>
   <Pagination
     :defaultPage="1"
@@ -13,12 +33,12 @@
     >
       <PaginationFirst asChild>
         <Button variant="ghost" class="size-9">
-          <Icon name="lucide:chevron-first" aria-hidden="true" class="size-4" />
+          <LucideChevronFirst aria-hidden="true" class="size-4" />
         </Button>
       </PaginationFirst>
       <PaginationPrev asChild>
         <Button variant="ghost" class="size-9">
-          <Icon name="lucide:chevron-left" aria-hidden="true" class="size-4" />
+          <LucideChevronLeft aria-hidden="true" class="size-4" />
         </Button>
       </PaginationPrev>
       <template v-for="item in items">
@@ -38,12 +58,12 @@
       </template>
       <PaginationNext asChild>
         <Button variant="ghost" class="size-9">
-          <Icon name="lucide:chevron-right" aria-hidden="true" class="size-4" />
+          <LucideChevronRight aria-hidden="true" class="size-4" />
         </Button>
       </PaginationNext>
       <PaginationLast asChild>
         <Button variant="ghost" class="size-9">
-          <Icon name="lucide:chevron-last" aria-hidden="true" class="size-4" />
+          <LucideChevronLast aria-hidden="true" class="size-4" />
         </Button>
       </PaginationLast>
     </PaginationList>

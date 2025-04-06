@@ -1,3 +1,16 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Pagination,
+  PaginationEllipsis,
+  PaginationList,
+  PaginationListItem,
+  PaginationNext,
+  PaginationPrev,
+} from "@/registry/default/ui/pagination";
+import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
+</script>
+
 <template>
   <Pagination
     :defaultPage="1"
@@ -13,7 +26,7 @@
     >
       <PaginationPrev asChild>
         <Button variant="ghost" class="h-9 w-auto px-4">
-          <Icon name="lucide:chevron-left" aria-hidden="true" class="size-4" />
+          <LucideChevronLeft aria-hidden="true" class="size-4" />
           Previous
         </Button>
       </PaginationPrev>
@@ -35,7 +48,7 @@
       <PaginationNext asChild>
         <Button variant="ghost" class="h-9 w-auto px-4">
           Next
-          <Icon name="lucide:chevron-right" aria-hidden="true" class="size-4" />
+          <LucideChevronRight aria-hidden="true" class="size-4" />
         </Button>
       </PaginationNext>
     </PaginationList>

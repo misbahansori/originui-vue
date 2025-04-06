@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Pagination,
+  PaginationList,
+  PaginationNext,
+  PaginationPrev,
+} from "@/registry/default/ui/pagination";
+</script>
+
 <template>
   <Pagination
     :defaultPage="1"
