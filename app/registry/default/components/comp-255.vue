@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { Input } from '@/registry/default/ui/input';
+import { Label } from '@/registry/default/ui/label';
+import { Slider } from '@/registry/default/ui/slider';
+
 const minValue = 0;
 const maxValue = 100;
 const initialValue = [25];

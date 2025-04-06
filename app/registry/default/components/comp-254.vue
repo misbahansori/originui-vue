@@ -1,4 +1,17 @@
 <script setup lang="ts">
+import { cn } from "@/lib/utils";
+import { Button } from "@/registry/default/ui/button";
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { Slider } from "@/registry/default/ui/slider";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/registry/default/ui/tooltip";
+import { LucideRotateCcw } from "lucide-vue-next";
+
 const minValue = 0;
 const maxValue = 2;
 const initialValue = [1.25];
@@ -35,7 +48,7 @@ const {
                 aria-label="Reset"
                 @click="resetToDefault"
               >
-                <Icon name="lucide:rotate-ccw" size="16" aria-hidden="true" />
+                <LucideRotateCcw :size="16" aria-hidden="true" />
               </Button>
             </TooltipTrigger>
             <TooltipContent class="px-2 py-1 text-xs">

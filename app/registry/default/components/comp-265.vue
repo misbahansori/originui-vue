@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { Slider } from "@/registry/default/ui/slider";
+import { computed } from "vue";
+
 const items = [
   { id: 1, price: 80 },
   { id: 2, price: 95 },

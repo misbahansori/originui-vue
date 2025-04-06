@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { Label } from "@/registry/default/ui/label";
+import { Slider } from "@/registry/default/ui/slider";
+import { ref } from "vue";
+
 const min_price = 5;
 const max_price = 1240;
 const value = ref([min_price, max_price]);
