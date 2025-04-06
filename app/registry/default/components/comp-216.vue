@@ -1,4 +1,13 @@
 <script setup lang="ts">
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/registry/default/ui/select";
+import { useId } from "vue";
+
 const id = useId();
 </script>
 

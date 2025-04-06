@@ -1,21 +1,32 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/registry/default/ui/select";
+import { RiReactjsLine, RiSvelteLine, RiVuejsLine } from "@remixicon/vue";
+import { ref, useId } from "vue";
+
 const id = useId();
 
 const options = [
   {
     label: "Vue",
-    icon: "logos:vue",
+    icon: RiVuejsLine,
     value: "vue",
   },
   {
-    label: "Nuxt",
-    icon: "logos:nuxt-icon",
-    value: "nuxt",
+    label: "React",
+    icon: RiReactjsLine,
+    value: "react",
   },
   {
-    label: "Vite",
-    icon: "logos:vitejs",
-    value: "vite",
+    label: "Svelte",
+    icon: RiSvelteLine,
+    value: "svelte",
   },
 ];
 
@@ -32,8 +43,8 @@ const selectedOption = ref(options[0]);
       >
         <SelectValue placeholder="Select framework">
           <template v-if="selectedOption">
-            <Icon
-              :name="selectedOption.icon"
+            <component
+              :is="selectedOption.icon"
               class="size-4"
               aria-hidden="true"
             />
@@ -49,7 +60,7 @@ const selectedOption = ref(options[0]);
           :key="option.value"
           :value="option"
         >
-          <Icon :name="option.icon" class="size-4" aria-hidden="true" />
+          <component :is="option.icon" class="size-4" aria-hidden="true" />
           <span class="truncate">{{ option.label }}</span>
         </SelectItem>
       </SelectContent>
