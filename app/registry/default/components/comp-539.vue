@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import {
+  Timeline,
+  TimelineContent,
+  TimelineItem,
+} from "@/registry/default/ui/timeline";
+
 type ActionType = "post" | "reply" | "edit" | "create";
 
 const items: {
