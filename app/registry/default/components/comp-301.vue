@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+</script>
+
 <template>
   <!-- To make the notification fixed, add classes like `fixed bottom-4 inset-x-4` to the container element. -->
   <div class="bg-background z-50 rounded-md border px-4 py-3 shadow-lg">

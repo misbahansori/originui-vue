@@ -1,3 +1,18 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/registry/default/ui/dialog";
+import { ScrollArea } from "@/registry/default/ui/scroll-area";
+</script>
+
 <template>
   <Dialog>
     <DialogTrigger asChild>

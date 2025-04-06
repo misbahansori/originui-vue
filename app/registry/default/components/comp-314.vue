@@ -1,3 +1,19 @@
+<script setup lang="ts">
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/registry/default/ui/alert-dialog";
+import { Button } from "@/registry/default/ui/button";
+import { LucideCircleAlert } from "lucide-vue-next";
+</script>
+
 <template>
   <AlertDialog>
     <AlertDialogTrigger asChild>
@@ -9,11 +25,7 @@
           class="flex size-9 shrink-0 items-center justify-center rounded-full border"
           aria-hidden="true"
         >
-          <Icon
-            name="lucide:circle-alert"
-            class="size-4 opacity-80"
-            aria-hidden="true"
-          />
+          <LucideCircleAlert class="size-4 opacity-80" aria-hidden="true" />
         </div>
         <AlertDialogHeader>
           <AlertDialogTitle>Are you sure?</AlertDialogTitle>
