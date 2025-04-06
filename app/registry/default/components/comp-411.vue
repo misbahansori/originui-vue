@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+</script>
+
 <template>
   <div
     class="bg-background flex items-center rounded-full border p-1 shadow-sm"

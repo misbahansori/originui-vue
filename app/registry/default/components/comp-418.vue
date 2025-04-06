@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { Badge } from "@/registry/default/ui/badge";
+</script>
+
 <template>
   <Badge class="items-baseline gap-1.5">
     Badge
