@@ -1,4 +1,3 @@
-import { defineSitemapEventHandler } from "#imports";
 import type { SitemapUrlInput } from "#sitemap/types";
 import { categories } from "~/config/components";
 
