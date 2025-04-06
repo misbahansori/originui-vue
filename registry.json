@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "acme",
-  "homepage": "https://acme.com",
+  "name": "Originui Vue",
+  "homepage": "https://originui-vue.com",
   "items": [
     {
       "name": "accordion",
@@ -1589,6 +1589,7 @@
     {
       "name": "comp-09",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
       "registryDependencies": [
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
@@ -1606,6 +1607,7 @@
     {
       "name": "comp-10",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
       "registryDependencies": [
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
@@ -1761,6 +1763,7 @@
     {
       "name": "comp-19",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
       "registryDependencies": [
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
@@ -1778,6 +1781,7 @@
     {
       "name": "comp-20",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
       "registryDependencies": [
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
@@ -1814,7 +1818,8 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/input.json",
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/button.json"
       ],
       "files": [
         {
@@ -1829,6 +1834,7 @@
     {
       "name": "comp-23",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
       "registryDependencies": [
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
@@ -1846,6 +1852,7 @@
     {
       "name": "comp-24",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
       "registryDependencies": [
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
@@ -1880,6 +1887,7 @@
     {
       "name": "comp-26",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
       "registryDependencies": [
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
@@ -1897,6 +1905,7 @@
     {
       "name": "comp-27",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
       "registryDependencies": [
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
@@ -1914,7 +1923,11 @@
     {
       "name": "comp-28",
       "type": "registry:component",
-      "dependencies": ["react-aria-components"],
+      "dependencies": ["reka-ui", "lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/input.json",
+        "https://originui-vue.com/r/label.json"
+      ],
       "files": [
         {
           "path": "app/registry/default/components/comp-28.vue",
@@ -1928,7 +1941,11 @@
     {
       "name": "comp-29",
       "type": "registry:component",
-      "dependencies": ["react-aria-components"],
+      "dependencies": ["reka-ui", "lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/input.json",
+        "https://originui-vue.com/r/label.json"
+      ],
       "files": [
         {
           "path": "app/registry/default/components/comp-29.vue",
@@ -2035,7 +2052,7 @@
       "name": "comp-36",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/datefield-rac.json"],
-      "dependencies": ["react-aria-components"],
+      "dependencies": ["reka-ui"],
       "files": [
         {
           "path": "app/registry/default/components/comp-36.vue",
@@ -2109,7 +2126,7 @@
         "https://originui-vue.com/r/calendar-rac.json",
         "https://originui-vue.com/r/datefield-rac.json"
       ],
-      "dependencies": ["react-aria-components"],
+      "dependencies": ["reka-ui"],
       "files": [
         {
           "path": "app/registry/default/components/comp-41.vue",
@@ -2127,7 +2144,7 @@
         "https://originui-vue.com/r/calendar-rac.json",
         "https://originui-vue.com/r/datefield-rac.json"
       ],
-      "dependencies": ["react-aria-components"],
+      "dependencies": ["reka-ui"],
       "files": [
         {
           "path": "app/registry/default/components/comp-42.vue",
@@ -2153,11 +2170,7 @@
         "https://originui-vue.com/r/calendar-rac.json",
         "https://originui-vue.com/r/datefield-rac.json"
       ],
-      "dependencies": [
-        "react-aria-components",
-        "react-aria",
-        "@internationalized/date"
-      ],
+      "dependencies": ["reka-ui", "react-aria", "@internationalized/date"],
       "files": [
         {
           "path": "app/registry/default/components/comp-43.vue",
@@ -5425,7 +5438,7 @@
       "name": "comp-237",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/label.json"],
-      "dependencies": ["react-aria-components"],
+      "dependencies": ["reka-ui"],
       "files": [
         {
           "path": "app/registry/default/components/comp-237.vue",
@@ -5440,7 +5453,7 @@
       "name": "comp-238",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/label.json"],
-      "dependencies": ["react-aria-components"],
+      "dependencies": ["reka-ui"],
       "files": [
         {
           "path": "app/registry/default/components/comp-238.vue",
@@ -5455,7 +5468,7 @@
       "name": "comp-239",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/label.json"],
-      "dependencies": ["react-aria-components"],
+      "dependencies": ["reka-ui"],
       "files": [
         {
           "path": "app/registry/default/components/comp-239.vue",
@@ -9738,7 +9751,7 @@
       "name": "comp-487",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/calendar-rac.json"],
-      "dependencies": ["react-aria-components"],
+      "dependencies": ["reka-ui"],
       "files": [
         {
           "path": "app/registry/default/components/comp-487.vue",
@@ -9754,7 +9767,7 @@
       "name": "comp-488",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/calendar-rac.json"],
-      "dependencies": ["react-aria-components"],
+      "dependencies": ["reka-ui"],
       "files": [
         {
           "path": "app/registry/default/components/comp-488.vue",
@@ -9770,7 +9783,7 @@
       "name": "comp-489",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/calendar-rac.json"],
-      "dependencies": ["react-aria-components"],
+      "dependencies": ["reka-ui"],
       "files": [
         {
           "path": "app/registry/default/components/comp-489.vue",
