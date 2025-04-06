@@ -1,6 +1,21 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import {
+  Pagination,
+  PaginationEllipsis,
+  PaginationList,
+  PaginationListItem,
+  PaginationNext,
+  PaginationPrev,
+} from "@/registry/default/ui/pagination";
+import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
+import { useId } from "vue";
+
 const id = useId();
 </script>
+
 <template>
   <Pagination
     :defaultPage="1"
@@ -17,11 +32,7 @@ const id = useId();
       <div class="flex items-center gap-1">
         <PaginationPrev asChild>
           <Button variant="ghost" class="size-9">
-            <Icon
-              name="lucide:chevron-left"
-              aria-hidden="true"
-              class="size-4"
-            />
+            <LucideChevronLeft aria-hidden="true" class="size-4" />
           </Button>
         </PaginationPrev>
         <template v-for="item in items">
@@ -41,11 +52,7 @@ const id = useId();
         </template>
         <PaginationNext asChild>
           <Button variant="ghost" class="size-9">
-            <Icon
-              name="lucide:chevron-right"
-              aria-hidden="true"
-              class="size-4"
-            />
+            <LucideChevronRight aria-hidden="true" class="size-4" />
           </Button>
         </PaginationNext>
       </div>
