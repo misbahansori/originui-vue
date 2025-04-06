@@ -1,4 +1,30 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuPortal,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@/registry/default/ui/dropdown-menu";
+import {
+  LucideArchiveRestore,
+  LucideChevronDown,
+  LucidePlus,
+  LucideShare2,
+  LucideTrash,
+} from "lucide-vue-next";
+import { ref } from "vue";
+
 const framework = ref("nextjs");
 const emailNotifications = ref(false);
 const pushNotifications = ref(true);
@@ -9,21 +35,13 @@ const pushNotifications = ref(true);
     <DropdownMenuTrigger asChild>
       <Button variant="outline">
         Rich menu with icons
-        <Icon
-          name="lucide:chevron-down"
-          class="-me-1 size-4 opacity-60"
-          aria-hidden="true"
-        />
+        <LucideChevronDown class="-me-1 size-4 opacity-60" aria-hidden="true" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent>
       <DropdownMenuGroup>
         <DropdownMenuItem>
-          <Icon
-            name="lucide:plus"
-            class="size-4 opacity-60"
-            aria-hidden="true"
-          />
+          <LucidePlus class="size-4 opacity-60" aria-hidden="true" />
           <span>New</span>
           <DropdownMenuShortcut>⌘N</DropdownMenuShortcut>
         </DropdownMenuItem>
@@ -55,16 +73,10 @@ const pushNotifications = ref(true);
           <DropdownMenuSubTrigger inset>Notifications</DropdownMenuSubTrigger>
           <DropdownMenuPortal>
             <DropdownMenuSubContent>
-              <DropdownMenuCheckboxItem
-                :checked="emailNotifications"
-                @update:checked="emailNotifications = $event"
-              >
+              <DropdownMenuCheckboxItem v-model="emailNotifications">
                 Email
               </DropdownMenuCheckboxItem>
-              <DropdownMenuCheckboxItem
-                :checked="pushNotifications"
-                @update:checked="pushNotifications = $event"
-              >
+              <DropdownMenuCheckboxItem v-model="pushNotifications">
                 Push
               </DropdownMenuCheckboxItem>
             </DropdownMenuSubContent>
@@ -74,25 +86,17 @@ const pushNotifications = ref(true);
       <DropdownMenuSeparator />
       <DropdownMenuGroup>
         <DropdownMenuItem>
-          <Icon
-            name="lucide:share-2"
-            class="size-4 opacity-60"
-            aria-hidden="true"
-          />
+          <LucideShare2 class="size-4 opacity-60" aria-hidden="true" />
           <span>Share</span>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <Icon
-            name="lucide:archive-restore"
-            class="size-4 opacity-60"
-            aria-hidden="true"
-          />
+          <LucideArchiveRestore class="size-4 opacity-60" aria-hidden="true" />
           <span>Archive</span>
         </DropdownMenuItem>
       </DropdownMenuGroup>
       <DropdownMenuSeparator />
       <DropdownMenuItem variant="destructive">
-        <Icon name="lucide:trash" class="size-4" aria-hidden="true" />
+        <LucideTrash class="size-4" aria-hidden="true" />
         <span>Delete</span>
         <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
       </DropdownMenuItem>

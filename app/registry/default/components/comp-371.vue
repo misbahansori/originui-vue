@@ -1,10 +1,16 @@
 <script setup lang="ts">
-import type { Checked } from "@radix-ui/react-dropdown-menu";
-
-const nextjs = ref<Checked>(false);
-const sveltekit = ref<Checked>(true);
-const astro = ref<Checked>(false);
-const remix = ref<Checked>(false);
+import { Button } from "@/registry/default/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+} from "@/registry/default/ui/dropdown-menu";
+import { ref } from "vue";
+const nextjs = ref<boolean | "indeterminate">(false);
+const sveltekit = ref<boolean | "indeterminate">(true);
+const astro = ref<boolean | "indeterminate">(false);
+const remix = ref<boolean | "indeterminate">(false);
 </script>
 
 <template>
@@ -20,31 +26,16 @@ const remix = ref<Checked>(false);
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent>
-      <DropdownMenuCheckboxItem
-        :checked="nextjs"
-        @update:checked="nextjs = $event"
-      >
+      <DropdownMenuCheckboxItem v-model="nextjs">
         Next.js
       </DropdownMenuCheckboxItem>
-      <DropdownMenuCheckboxItem
-        :checked="sveltekit"
-        @update:checked="sveltekit = $event"
-      >
+      <DropdownMenuCheckboxItem v-model="sveltekit">
         SvelteKit
       </DropdownMenuCheckboxItem>
-      <DropdownMenuCheckboxItem
-        :checked="remix"
-        @update:checked="remix = $event"
-        disabled
-      >
+      <DropdownMenuCheckboxItem v-model="remix" disabled>
         Remix
       </DropdownMenuCheckboxItem>
-      <DropdownMenuCheckboxItem
-        :checked="astro"
-        @update:checked="astro = $event"
-      >
-        Astro
-      </DropdownMenuCheckboxItem>
+      <DropdownMenuCheckboxItem v-model="astro">Astro</DropdownMenuCheckboxItem>
     </DropdownMenuContent>
   </DropdownMenu>
 </template>

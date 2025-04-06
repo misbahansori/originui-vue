@@ -1,4 +1,14 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuTrigger,
+} from "@/registry/default/ui/dropdown-menu";
+import { ref } from "vue";
+
 const framework = ref("nextjs");
 </script>
 

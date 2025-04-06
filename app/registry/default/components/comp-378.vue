@@ -1,3 +1,20 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuTrigger,
+} from "@/registry/default/ui/dropdown-menu";
+import {
+  LucideBook,
+  LucideInfo,
+  LucideLifeBuoy,
+  LucideMessageCircleMore,
+} from "lucide-vue-next";
+</script>
+
 <template>
   <DropdownMenu>
     <DropdownMenuTrigger asChild>
@@ -7,7 +24,7 @@
         class="rounded-full shadow-none"
         aria-label="Open edit menu"
       >
-        <Icon name="lucide:info" class="size-4" aria-hidden="true" />
+        <LucideInfo class="size-4" aria-hidden="true" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent class="pb-2">
@@ -17,11 +34,7 @@
         asChild
       >
         <a href="#">
-          <Icon
-            name="lucide:book"
-            class="size-4 opacity-60"
-            aria-hidden="true"
-          />
+          <LucideBook class="size-4 opacity-60" aria-hidden="true" />
           Documentation
         </a>
       </DropdownMenuItem>
@@ -30,11 +43,7 @@
         asChild
       >
         <a href="#">
-          <Icon
-            name="lucide:life-buoy"
-            class="size-4 opacity-60"
-            aria-hidden="true"
-          />
+          <LucideLifeBuoy class="size-4 opacity-60" aria-hidden="true" />
           Support
         </a>
       </DropdownMenuItem>
@@ -43,8 +52,7 @@
         asChild
       >
         <a href="#">
-          <Icon
-            name="lucide:message-circle-more"
+          <LucideMessageCircleMore
             class="size-4 opacity-60"
             aria-hidden="true"
           />

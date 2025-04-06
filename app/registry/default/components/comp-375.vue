@@ -1,12 +1,22 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/registry/default/ui/dropdown-menu";
+import { LucideCircleUserRound } from "lucide-vue-next";
+</script>
+
 <template>
   <DropdownMenu>
     <DropdownMenuTrigger asChild>
       <Button size="icon" variant="outline" aria-label="Open account menu">
-        <Icon
-          name="lucide:circle-user-round"
-          class="size-4"
-          aria-hidden="true"
-        />
+        <LucideCircleUserRound class="size-4" aria-hidden="true" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent class="max-w-64">
