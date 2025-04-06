@@ -1,4 +1,25 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/registry/default/ui/dialog";
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/registry/default/ui/tooltip";
+import { useClipboard } from "@vueuse/core";
+import { LucideCheck, LucideCopy, LucideUserRoundPlus } from "lucide-vue-next";
+import { ref, useId } from "vue";
+
 const id = useId();
 const emails = ref(["mark@yourcompany.com", "jane@yourcompany.com", ""]);
 
@@ -20,11 +41,7 @@ const { copy, copied } = useClipboard();
           class="flex size-11 shrink-0 items-center justify-center rounded-full border"
           aria-hidden="true"
         >
-          <Icon
-            name="lucide:user-round-plus"
-            class="size-4 opacity-80"
-            aria-hidden="true"
-          />
+          <LucideUserRoundPlus class="size-4 opacity-80" aria-hidden="true" />
         </div>
         <DialogHeader>
           <DialogTitle class="text-left">Invite team members</DialogTitle>
@@ -88,8 +105,7 @@ const { copy, copied } = useClipboard();
                       copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
                     "
                   >
-                    <Icon
-                      name="lucide:check"
+                    <LucideCheck
                       class="size-4 stroke-emerald-500"
                       aria-hidden="true"
                     />
@@ -100,11 +116,7 @@ const { copy, copied } = useClipboard();
                       copied ? 'scale-0 opacity-0' : 'scale-100 opacity-100'
                     "
                   >
-                    <Icon
-                      name="lucide:copy"
-                      class="size-4"
-                      aria-hidden="true"
-                    />
+                    <LucideCopy class="size-4" aria-hidden="true" />
                   </div>
                 </button>
               </TooltipTrigger>

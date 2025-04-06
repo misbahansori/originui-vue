@@ -1,29 +1,42 @@
 <script setup lang="ts">
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/registry/default/ui/accordion";
+import {
+  LucideAtSign,
+  LucideCommand,
+  LucideEclipse,
+  LucideZap,
+} from "lucide-vue-next";
+
 const items = [
   {
     id: "1",
-    icon: "lucide:command",
+    icon: LucideCommand,
     title: "What makes Origin UI different?",
     content:
       "Origin UI focuses on developer experience and performance. Built with TypeScript, it offers excellent type safety, follows accessibility standards, and provides comprehensive documentation with regular updates.",
   },
   {
     id: "2",
-    icon: "lucide:eclipse",
+    icon: LucideEclipse,
     title: "How can I customize the components?",
     content:
       "Use our CSS variables for global styling, or className and style props for component-specific changes. We support CSS modules, Tailwind, and dark mode out of the box.",
   },
   {
     id: "3",
-    icon: "lucide:zap",
+    icon: LucideZap,
     title: "Is Origin UI optimized for performance?",
     content:
       "Yes, with tree-shaking, code splitting, and minimal runtime overhead. Most components are under 5KB gzipped.",
   },
   {
     id: "4",
-    icon: "lucide:at-sign",
+    icon: LucideAtSign,
     title: "How accessible are the components?",
     content:
       "All components follow WAI-ARIA standards, featuring proper ARIA attributes, keyboard navigation, and screen reader support. Regular testing ensures compatibility with NVDA, VoiceOver, and JAWS.",
@@ -43,8 +56,8 @@ const items = [
       >
         <AccordionTrigger class="py-2 text-[15px] leading-6 hover:no-underline">
           <span class="flex items-center gap-3">
-            <Icon
-              :name="item.icon"
+            <component
+              :is="item.icon"
               class="size-4 shrink-0 opacity-60"
               aria-hidden="true"
             />

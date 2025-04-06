@@ -1,3 +1,16 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/registry/default/ui/dialog";
+import { Textarea } from "@/registry/default/ui/textarea";
+</script>
+
 <template>
   <Dialog>
     <DialogTrigger asChild>

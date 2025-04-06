@@ -1,3 +1,17 @@
+<script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/registry/default/ui/dialog";
+import { Input } from "@/registry/default/ui/input";
+import { LucideMail } from "lucide-vue-next";
+</script>
+
 <template>
   <Dialog>
     <DialogTrigger asChild>
@@ -41,7 +55,7 @@
             <div
               class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50"
             >
-              <Icon name="lucide:mail" class="size-4" aria-hidden="true" />
+              <LucideMail class="size-4" aria-hidden="true" />
             </div>
           </div>
         </div>

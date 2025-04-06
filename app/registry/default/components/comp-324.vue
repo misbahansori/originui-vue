@@ -1,5 +1,20 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { Button } from "@/registry/default/ui/button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/registry/default/ui/dialog";
+import {
+  PinInput,
+  PinInputGroup,
+  PinInputInput,
+} from "@/registry/default/ui/pin-input";
+import { ref, watch } from "vue";
 
 const CORRECT_CODE = "6548";
 const otpValues = ref(["", "", "", ""]);

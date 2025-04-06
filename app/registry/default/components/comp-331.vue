@@ -1,5 +1,21 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/registry/default/ui/dialog";
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { Textarea } from "@/registry/default/ui/textarea";
 import { useObjectUrl } from "@vueuse/core";
+import { LucideImagePlus, LucideX } from "lucide-vue-next";
+import { computed, ref, useId } from "vue";
 
 const id = useId();
 const maxLength = 180;
@@ -90,11 +106,7 @@ const handleAvatarThumbnailClick = () => {
                     : 'Upload image'
                 "
               >
-                <Icon
-                  name="lucide:image-plus"
-                  class="size-4"
-                  aria-hidden="true"
-                />
+                <LucideImagePlus class="size-4" aria-hidden="true" />
               </button>
               <button
                 v-if="coverPreviewUrl || !hideDefault"
@@ -103,7 +115,7 @@ const handleAvatarThumbnailClick = () => {
                 @click="handleRemove"
                 aria-label="Remove image"
               >
-                <Icon name="lucide:x" class="size-4" aria-hidden="true" />
+                <LucideX class="size-4" aria-hidden="true" />
               </button>
             </div>
           </div>
@@ -136,11 +148,7 @@ const handleAvatarThumbnailClick = () => {
               @click="handleAvatarThumbnailClick"
               aria-label="Change profile picture"
             >
-              <Icon
-                name="lucide:image-plus"
-                class="size-4"
-                aria-hidden="true"
-              />
+              <LucideImagePlus class="size-4" aria-hidden="true" />
             </button>
             <input
               type="file"
@@ -191,8 +199,7 @@ const handleAvatarThumbnailClick = () => {
                 <div
                   class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 peer-disabled:opacity-50"
                 >
-                  <Icon
-                    name="lucide:check"
+                  <LucideCheck
                     class="size-4 text-emerald-500"
                     aria-hidden="true"
                   />

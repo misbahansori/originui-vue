@@ -1,6 +1,12 @@
 <script setup lang="ts">
+import {
+  Accordion,
+  AccordionContent,
+  AccordionHeader,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/registry/default/ui/accordion";
 import { PlusIcon } from "lucide-vue-next";
-import { AccordionTrigger } from "reka-ui";
 
 const items = [
   {
