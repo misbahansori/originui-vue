@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
 import {
   ListboxContent,
   ListboxGroup,
@@ -6,6 +7,7 @@ import {
   ListboxItem,
   ListboxRoot,
 } from "reka-ui";
+import { ref } from "vue";
 
 const selectedKeys = ref(["lettuce", "tuna"]);
 const options = [

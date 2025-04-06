@@ -1,4 +1,21 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/registry/default/ui/command";
+import { Label } from "@/registry/default/ui/label";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/registry/default/ui/popover";
+import { ref, useId } from "vue";
+
 const id = useId();
 const open = ref(false);
 const value = ref("");

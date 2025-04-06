@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
 import { ListboxContent, ListboxItem, ListboxRoot } from "reka-ui";
+import { ref } from "vue";
 
 const selectedKeys = ref(["svelte"]);
 const options = [
