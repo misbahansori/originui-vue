@@ -1,8 +1,11 @@
+<script setup lang="ts">
+import { LucideArrowRight, LucideTriangleAlert } from "lucide-vue-next";
+</script>
+
 <template>
   <div class="rounded-md border px-4 py-3">
     <div class="flex items-start gap-3">
-      <Icon
-        name="lucide:triangle-alert"
+      <LucideTriangleAlert
         class="mt-0.5 size-4 shrink-0 text-amber-500"
         aria-hidden="true"
       />
@@ -13,8 +16,7 @@
           class="group flex items-center text-sm font-medium whitespace-nowrap"
         >
           Link
-          <Icon
-            name="lucide:arrow-right"
+          <LucideArrowRight
             class="ms-1 inline-flex size-4 shrink-0 opacity-60 transition-transform group-hover:translate-x-0.5"
             aria-hidden="true"
           />

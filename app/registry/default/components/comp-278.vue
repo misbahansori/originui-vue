@@ -1,8 +1,11 @@
+<script setup lang="ts">
+import { LucideCircleAlert } from "lucide-vue-next";
+</script>
+
 <template>
   <div class="rounded-md border border-red-500/50 px-4 py-3 text-red-600">
     <div class="flex items-start gap-3">
-      <Icon
-        name="lucide:circle-alert"
+      <LucideCircleAlert
         class="mt-0.5 size-4 shrink-0 opacity-60"
         aria-hidden="true"
       />
