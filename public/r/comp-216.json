@@ -2,21 +2,16 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-216",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/select.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/select.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-216.vue",
+      "path": "components/comp-216.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/default/ui/select\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"group relative\">\n    <label\n      :for=\"id\"\n      class=\"bg-background text-foreground absolute start-1 top-0 z-10 block -translate-y-1/2 px-2 text-xs font-medium group-has-disabled:opacity-50\"\n    >\n      Select with overlapping label\n    </label>\n    <Select>\n      <SelectTrigger :id=\"id\">\n        <SelectValue placeholder=\"Select framework\" />\n      </SelectTrigger>\n      <SelectContent>\n        <SelectItem value=\"1\">Vue</SelectItem>\n        <SelectItem value=\"2\">Nuxt</SelectItem>\n        <SelectItem value=\"3\">Astro</SelectItem>\n        <SelectItem value=\"4\">Vitesse</SelectItem>\n      </SelectContent>\n    </Select>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "select",
-      "radix"
-    ]
+    "tags": ["label", "select", "radix"]
   }
 }

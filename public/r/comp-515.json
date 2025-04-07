@@ -2,20 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-515",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/stepper.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-515.vue",
+      "path": "components/comp-515.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  Stepper,\n  StepperIndicator,\n  StepperItem,\n  StepperSeparator,\n  StepperTrigger,\n} from \"@/registry/default/ui/stepper\";\n\nconst steps = [1, 2, 3, 4];\n</script>\n\n<template>\n  <div class=\"mx-auto max-w-xl space-y-8 text-center\">\n    <Stepper :default-value=\"2\">\n      <StepperItem\n        v-for=\"step in steps\"\n        :key=\"step\"\n        :step=\"step\"\n        :class=\"step !== steps.length ? 'flex-1' : ''\"\n      >\n        <StepperTrigger>\n          <StepperIndicator\n            class=\"group-data-[state=active]/step:border-primary size-4 group-data-[state=active]/step:border-2 group-data-[state=active]/step:bg-transparent [&_span]:sr-only [&_svg]:size-3\"\n          />\n        </StepperTrigger>\n        <StepperSeparator v-if=\"step < steps.length\" />\n      </StepperItem>\n    </Stepper>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Stepper with tiny buttons and checkmarks\n    </p>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "stepper"
-    ],
+    "tags": ["stepper"],
     "colSpan": 3
   }
 }

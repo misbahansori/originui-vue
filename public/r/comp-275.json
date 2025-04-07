@@ -4,16 +4,14 @@
   "type": "registry:component",
   "files": [
     {
-      "path": "app/registry/default/components/comp-275.vue",
+      "path": "components/comp-275.vue",
       "content": "<script setup lang=\"ts\">\nimport { LucideArrowRight, LucideTriangleAlert } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <div class=\"rounded-md border px-4 py-3\">\n    <div class=\"flex items-start gap-3\">\n      <LucideTriangleAlert\n        class=\"mt-0.5 size-4 shrink-0 text-amber-500\"\n        aria-hidden=\"true\"\n      />\n      <div class=\"flex grow justify-between gap-3\">\n        <p class=\"text-sm\">Some information is missing!</p>\n        <a\n          href=\"#\"\n          class=\"group flex items-center text-sm font-medium whitespace-nowrap\"\n        >\n          Link\n          <LucideArrowRight\n            class=\"ms-1 inline-flex size-4 shrink-0 opacity-60 transition-transform group-hover:translate-x-0.5\"\n            aria-hidden=\"true\"\n          />\n        </a>\n      </div>\n    </div>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "alert",
-      "warning"
-    ],
+    "tags": ["alert", "warning"],
     "colSpan": 2
   }
 }

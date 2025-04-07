@@ -2,20 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-312",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/button.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-312.vue",
+      "path": "components/comp-312.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideDownload, LucideLoaderCircle } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nconst isDownloading = ref(false);\n\nconst handleDownload = () => {\n  isDownloading.value = true;\n  // Simulate download\n  setTimeout(() => {\n    isDownloading.value = false;\n  }, 2000);\n};\n</script>\n\n<template>\n  <div class=\"bg-muted px-4 py-3 md:py-2\">\n    <div class=\"flex flex-wrap items-center justify-center gap-x-4 gap-y-2\">\n      <p class=\"text-sm\">\n        <span class=\"font-medium\">v2.1.0</span>\n        <span class=\"text-muted-foreground mx-2\">•</span>\n        New features and improvements available\n      </p>\n      <Button\n        size=\"sm\"\n        variant=\"outline\"\n        :disabled=\"isDownloading\"\n        @click=\"handleDownload\"\n        class=\"min-w-24\"\n      >\n        <template v-if=\"isDownloading\">\n          <LucideLoaderCircle\n            class=\"-ms-0.5 me-2 size-4 animate-spin\"\n            aria-hidden=\"true\"\n          />\n          Updating...\n        </template>\n        <template v-else>\n          <LucideDownload class=\"-ms-0.5 size-4\" aria-hidden=\"true\" />\n          Update now\n        </template>\n      </Button>\n    </div>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "banner"
-    ],
+    "tags": ["banner"],
     "colSpan": 3
   }
 }

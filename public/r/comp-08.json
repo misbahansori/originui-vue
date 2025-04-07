@@ -8,16 +8,13 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-08.vue",
+      "path": "components/comp-08.vue",
       "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Disabled input</Label>\n    <Input :id=\"id\" placeholder=\"Email\" type=\"email\" disabled />\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "disabled"
-    ]
+    "tags": ["input", "label", "disabled"]
   }
 }

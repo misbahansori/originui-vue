@@ -8,16 +8,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-440.vue",
+      "path": "components/comp-440.vue",
       "content": "<script setup lang=\"ts\">\nimport { Badge } from \"@/registry/default/ui/badge\";\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@/registry/default/ui/tabs\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/registry/default/ui/tooltip\";\nimport { LucideBox, LucideHome, LucidePanelsTopLeft } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Tabs defaultValue=\"tab-1\" class=\"items-center\">\n    <TabsList>\n      <TooltipProvider :delay-duration=\"0\">\n        <Tooltip>\n          <TooltipTrigger as-child>\n            <span>\n              <TabsTrigger value=\"tab-1\" class=\"py-3\">\n                <LucideHome class=\"size-4\" aria-hidden=\"true\" />\n              </TabsTrigger>\n            </span>\n          </TooltipTrigger>\n          <TooltipContent class=\"px-2 py-1 text-xs\">Overview</TooltipContent>\n        </Tooltip>\n      </TooltipProvider>\n      <TooltipProvider :delay-duration=\"0\">\n        <Tooltip>\n          <TooltipTrigger as-child>\n            <span>\n              <TabsTrigger value=\"tab-2\" class=\"group py-3\">\n                <span class=\"relative\">\n                  <LucidePanelsTopLeft class=\"size-4\" aria-hidden=\"true\" />\n                  <Badge\n                    class=\"border-background absolute -top-2.5 left-full min-w-4 -translate-x-1.5 px-0.5 text-[10px]/[.875rem] transition-opacity group-data-[state=inactive]:opacity-50\"\n                  >\n                    3\n                  </Badge>\n                </span>\n              </TabsTrigger>\n            </span>\n          </TooltipTrigger>\n          <TooltipContent class=\"px-2 py-1 text-xs\">Projects</TooltipContent>\n        </Tooltip>\n      </TooltipProvider>\n      <TooltipProvider :delay-duration=\"0\">\n        <Tooltip>\n          <TooltipTrigger as-child>\n            <span>\n              <TabsTrigger value=\"tab-3\" class=\"py-3\">\n                <LucideBox class=\"size-4\" aria-hidden=\"true\" />\n              </TabsTrigger>\n            </span>\n          </TooltipTrigger>\n          <TooltipContent class=\"px-2 py-1 text-xs\">Packages</TooltipContent>\n        </Tooltip>\n      </TooltipProvider>\n    </TabsList>\n    <TabsContent value=\"tab-1\">\n      <p class=\"text-muted-foreground p-4 text-center text-xs\">\n        Content for Tab 1\n      </p>\n    </TabsContent>\n    <TabsContent value=\"tab-2\">\n      <p class=\"text-muted-foreground p-4 text-center text-xs\">\n        Content for Tab 2\n      </p>\n    </TabsContent>\n    <TabsContent value=\"tab-3\">\n      <p class=\"text-muted-foreground p-4 text-center text-xs\">\n        Content for Tab 3\n      </p>\n    </TabsContent>\n  </Tabs>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "tabs",
-      "radix"
-    ],
+    "tags": ["tabs", "radix"],
     "colSpan": 2,
     "style": 2
   }

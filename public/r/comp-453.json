@@ -2,22 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-453",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/breadcrumb.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/breadcrumb.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-453.vue",
+      "path": "components/comp-453.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbSeparator,\n} from \"@/registry/default/ui/breadcrumb\";\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/default/ui/select\";\nimport { LucideDatabase } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nconst selectedValue = ref(\"1\");\n</script>\n\n<template>\n  <Breadcrumb>\n    <BreadcrumbList>\n      <BreadcrumbItem>\n        <BreadcrumbLink href=\"#\">Databases</BreadcrumbLink>\n      </BreadcrumbItem>\n      <BreadcrumbSeparator />\n      <BreadcrumbItem>\n        <Select v-model=\"selectedValue\">\n          <SelectTrigger\n            id=\"select-database\"\n            class=\"relative gap-2 ps-9\"\n            aria-label=\"Select database\"\n          >\n            <div\n              class=\"text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 group-has-[select[disabled]]:opacity-50\"\n            >\n              <LucideDatabase class=\"size-4\" aria-hidden=\"true\" />\n            </div>\n            <SelectValue placeholder=\"Select database\" />\n          </SelectTrigger>\n          <SelectContent>\n            <SelectItem value=\"1\">Orion</SelectItem>\n            <SelectItem value=\"2\">Sigma</SelectItem>\n            <SelectItem value=\"3\">Dorado</SelectItem>\n          </SelectContent>\n        </Select>\n      </BreadcrumbItem>\n    </BreadcrumbList>\n  </Breadcrumb>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "breadcrumb",
-      "select",
-      "radix"
-    ],
+    "tags": ["breadcrumb", "select", "radix"],
     "colSpan": 2,
     "style": 1
   }

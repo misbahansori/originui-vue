@@ -2,12 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-328",
   "type": "registry:component",
-  "dependencies": [
-    "react-payment-inputs"
-  ],
-  "devDependencies": [
-    "@types/react-payment-inputs"
-  ],
+  "dependencies": ["react-payment-inputs"],
+  "devDependencies": ["@types/react-payment-inputs"],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/checkbox.json",
@@ -17,9 +13,10 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-328.vue",
+      "path": "components/comp-328.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Checkbox } from \"@/registry/default/ui/checkbox\";\nimport {\n  Dialog,\n  DialogContent,\n  DialogDescription,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@/registry/default/ui/dialog\";\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { LucideWallet } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\nimport { mask as vMask } from \"vue-the-mask\";\n\nconst formId = useId();\nconst isDefaultPayment = ref(false);\nconst cardName = ref(\"\");\nconst cardNumber = ref(\"\");\nconst expiryDate = ref(\"\");\nconst cvc = ref(\"\");\n</script>\n\n<template>\n  <Dialog>\n    <DialogTrigger asChild>\n      <Button variant=\"outline\">Card details</Button>\n    </DialogTrigger>\n    <DialogContent>\n      <div class=\"flex flex-col gap-2\">\n        <div\n          class=\"flex size-11 shrink-0 items-center justify-center rounded-full border\"\n          aria-hidden=\"true\"\n        >\n          <LucideWallet class=\"size-4 opacity-80\" aria-hidden=\"true\" />\n        </div>\n        <DialogHeader>\n          <DialogTitle class=\"text-left\">Update your card</DialogTitle>\n          <DialogDescription class=\"text-left\">\n            Your new card will replace your current card.\n          </DialogDescription>\n        </DialogHeader>\n      </div>\n\n      <form class=\"space-y-5\">\n        <div class=\"space-y-4\">\n          <div class=\"*:not-first:mt-2\">\n            <Label :for=\"`name-${formId}`\">Name on card</Label>\n            <Input\n              :id=\"`name-${formId}`\"\n              v-model=\"cardName\"\n              type=\"text\"\n              required\n            />\n          </div>\n          <div class=\"*:not-first:mt-2\">\n            <Label :for=\"`number-${formId}`\">Card Number</Label>\n            <div class=\"relative\">\n              <Input\n                :id=\"`number-${formId}`\"\n                v-model=\"cardNumber\"\n                type=\"text\"\n                class=\"peer pe-9 [direction:inherit]\"\n                v-mask=\"'#### #### #### ####'\"\n                placeholder=\"1234 5678 9012 3456\"\n              />\n              <div\n                class=\"text-muted-foreground/80 pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 peer-disabled:opacity-50\"\n              >\n                <LucideCreditCard class=\"size-4\" aria-hidden=\"true\" />\n              </div>\n            </div>\n          </div>\n          <div class=\"flex gap-4\">\n            <div class=\"flex-1 space-y-2\">\n              <Label :for=\"`expiry-${formId}`\">Expiry date</Label>\n              <Input\n                :id=\"`expiry-${formId}`\"\n                v-model=\"expiryDate\"\n                type=\"text\"\n                class=\"[direction:inherit]\"\n                v-mask=\"'##/##'\"\n                placeholder=\"MM/YY\"\n              />\n            </div>\n            <div class=\"flex-1 space-y-2\">\n              <Label :for=\"`cvc-${formId}`\">CVC</Label>\n              <Input\n                :id=\"`cvc-${formId}`\"\n                v-model=\"cvc\"\n                type=\"text\"\n                class=\"[direction:inherit]\"\n                v-mask=\"'###'\"\n                placeholder=\"123\"\n              />\n            </div>\n          </div>\n        </div>\n        <div class=\"flex items-center gap-2\">\n          <Checkbox :id=\"`primary-${formId}`\" v-model=\"isDefaultPayment\" />\n          <Label\n            :for=\"`primary-${formId}`\"\n            class=\"text-muted-foreground font-normal\"\n          >\n            Set as default payment method\n          </Label>\n        </div>\n        <Button type=\"button\" class=\"w-full\">Update card</Button>\n      </form>\n    </DialogContent>\n  </Dialog>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {

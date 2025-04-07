@@ -2,31 +2,21 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-48",
   "type": "registry:component",
-  "dependencies": [
-    "react-payment-inputs"
-  ],
-  "devDependencies": [
-    "@types/react-payment-inputs"
-  ],
+  "dependencies": ["react-payment-inputs"],
+  "devDependencies": ["@types/react-payment-inputs"],
   "registryDependencies": [
     "https://originui-vue.com/r/input.json",
     "https://originui-vue.com/r/label.json"
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-48.vue",
+      "path": "components/comp-48.vue",
       "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { ref } from \"vue\";\nimport { mask as vMask } from \"vue-the-mask\";\n\nconst expiryDate = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"expiry-date\">Expiry date</Label>\n    <Input\n      id=\"expiry-date\"\n      v-model=\"expiryDate\"\n      class=\"[direction:inherit]\"\n      placeholder=\"MM/YY\"\n      maxlength=\"5\"\n      v-mask=\"'##/##'\"\n    />\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://vuejs-tips.github.io/vue-the-mask\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        vue-the-mask\n      </a>\n    </p>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "checkout",
-      "payment",
-      "credit card",
-      "form"
-    ]
+    "tags": ["input", "label", "checkout", "payment", "credit card", "form"]
   }
 }

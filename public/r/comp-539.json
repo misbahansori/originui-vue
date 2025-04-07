@@ -2,21 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-539",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/timeline.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-539.vue",
+      "path": "components/comp-539.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  Timeline,\n  TimelineContent,\n  TimelineItem,\n} from \"@/registry/default/ui/timeline\";\nimport {\n  LucideBookOpen,\n  LucideMessageCircle,\n  LucidePencil,\n  LucidePlus,\n} from \"lucide-vue-next\";\n\ntype ActionType = \"post\" | \"reply\" | \"edit\" | \"create\";\n\nconst items: {\n  id: number;\n  user: string;\n  image: string;\n  action: ActionType;\n  date: Date;\n}[] = [\n  {\n    id: 1,\n    user: \"Matt\",\n    image: \"/avatar-40-02.jpg\",\n    action: \"post\",\n    date: new Date(Date.now() - 59000), // 59 seconds ago\n  },\n  {\n    id: 2,\n    user: \"Matt\",\n    image: \"/avatar-40-02.jpg\",\n    action: \"reply\",\n    date: new Date(Date.now() - 180000), // 3 minutes ago\n  },\n  {\n    id: 3,\n    user: \"Matt\",\n    image: \"/avatar-40-02.jpg\",\n    action: \"edit\",\n    date: new Date(Date.now() - 300000), // 5 minutes ago\n  },\n  {\n    id: 4,\n    user: \"Matt\",\n    image: \"/avatar-40-02.jpg\",\n    action: \"create\",\n    date: new Date(Date.now() - 600000), // 10 minutes ago\n  },\n];\n\nconst getActionIcon = (action: ActionType): any => {\n  const icons: Record<ActionType, any> = {\n    post: LucideBookOpen,\n    reply: LucideMessageCircle,\n    edit: LucidePencil,\n    create: LucidePlus,\n  };\n  return icons[action];\n};\n\nconst getActionText = (action: ActionType): string => {\n  const texts: Record<ActionType, string> = {\n    post: \"wrote a new post\",\n    reply: \"replied to a comment\",\n    edit: \"edited a post\",\n    create: \"created a new project\",\n  };\n  return texts[action];\n};\n\nconst getRelativeTimeString = (date: Date): string => {\n  const now = new Date();\n  const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);\n\n  if (diffInSeconds < 60) {\n    return `${diffInSeconds} seconds ago`;\n  } else if (diffInSeconds < 3600) {\n    const minutes = Math.floor(diffInSeconds / 60);\n    return `${minutes} ${minutes === 1 ? \"minute\" : \"minutes\"} ago`;\n  } else if (diffInSeconds < 86400) {\n    const hours = Math.floor(diffInSeconds / 3600);\n    return `${hours} ${hours === 1 ? \"hour\" : \"hours\"} ago`;\n  } else {\n    const days = Math.floor(diffInSeconds / 86400);\n    return `${days} ${days === 1 ? \"day\" : \"days\"} ago`;\n  }\n};\n</script>\n\n<template>\n  <div class=\"space-y-3\">\n    <div class=\"text-muted-foreground text-xs font-medium\">Activity</div>\n    <Timeline>\n      <TimelineItem\n        v-for=\"item in items\"\n        :key=\"item.id\"\n        :step=\"item.id\"\n        class=\"m-0! flex-row items-center gap-3 py-2.5!\"\n      >\n        <component\n          :is=\"getActionIcon(item.action)\"\n          :size=\"16\"\n          class=\"text-muted-foreground/80\"\n        />\n        <img :src=\"item.image\" :alt=\"item.user\" class=\"size-6 rounded-full\" />\n        <TimelineContent class=\"text-foreground\">\n          <a class=\"font-medium hover:underline\" href=\"#\">{{ item.user }}</a>\n          <span class=\"font-normal\">\n            {{ getActionText(item.action) }}\n            <a class=\"hover:underline\" href=\"#\">\n              {{ getRelativeTimeString(item.date) }}\n            </a>\n          </span>\n        </TimelineContent>\n      </TimelineItem>\n    </Timeline>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "timeline",
-      "vertical timeline"
-    ],
+    "tags": ["timeline", "vertical timeline"],
     "colSpan": 2
   }
 }

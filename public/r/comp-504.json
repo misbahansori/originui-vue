@@ -10,19 +10,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-504.vue",
+      "path": "components/comp-504.vue",
       "content": "<template></template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "calendar",
-      "date",
-      "collapsible",
-      "react daypicker",
-      "radix"
-    ],
+    "tags": ["calendar", "date", "collapsible", "react daypicker", "radix"],
     "style": 1
   }
 }

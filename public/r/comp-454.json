@@ -8,15 +8,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-454.vue",
+      "path": "components/comp-454.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Pagination,\n  PaginationList,\n  PaginationNext,\n  PaginationPrev,\n} from \"@/registry/default/ui/pagination\";\nimport { LucideChevronLeft, LucideChevronRight } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Pagination :defaultPage=\"1\" :itemsPerPage=\"10\" :total=\"50\">\n    <PaginationList class=\"flex w-full items-center justify-between gap-3\">\n      <PaginationPrev asChild>\n        <Button variant=\"outline\" class=\"h-9 w-auto px-4\">\n          <LucideChevronLeft aria-hidden=\"true\" class=\"size-4 opacity-60\" />\n          Previous\n        </Button>\n      </PaginationPrev>\n      <PaginationNext asChild>\n        <Button variant=\"outline\" class=\"h-9 w-auto px-4\">\n          Next\n          <LucideChevronRight aria-hidden=\"true\" class=\"size-4 opacity-60\" />\n        </Button>\n      </PaginationNext>\n    </PaginationList>\n  </Pagination>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "pagination"
-    ],
+    "tags": ["pagination"],
     "colSpan": 2
   }
 }

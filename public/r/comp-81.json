@@ -2,20 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-81",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/button.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-81.vue",
+      "path": "components/comp-81.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideArchive } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Button>\n    <LucideArchive class=\"-ms-1 opacity-60\" :size=\"16\" aria-hidden=\"true\" />\n    Button\n  </Button>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "button"
-    ],
+    "tags": ["button"],
     "style": 2
   }
 }

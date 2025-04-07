@@ -2,22 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-423",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/badge.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/badge.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-423.vue",
+      "path": "components/comp-423.vue",
       "content": "<script setup lang=\"ts\">\nimport { Badge } from \"@/registry/default/ui/badge\";\nimport { Checkbox } from \"@/registry/default/ui/checkbox\";\nimport { LucideCheck } from \"lucide-vue-next\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <Badge\n    class=\"has-data-[state=unchecked]:bg-muted has-data-[state=unchecked]:text-muted-foreground has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative outline-none has-focus-visible:ring-[3px]\"\n  >\n    <Checkbox\n      :id=\"id\"\n      class=\"peer sr-only after:absolute after:inset-0\"\n      :default-checked=\"true\"\n    />\n    <LucideCheck\n      class=\"hidden size-4 peer-data-[state=checked]:block\"\n      aria-hidden=\"true\"\n    />\n    <label\n      :for=\"id\"\n      class=\"cursor-pointer select-none after:absolute after:inset-0\"\n    >\n      Selectable\n    </label>\n  </Badge>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "badge",
-      "chip",
-      "checkbox"
-    ],
+    "tags": ["badge", "chip", "checkbox"],
     "style": 1
   }
 }

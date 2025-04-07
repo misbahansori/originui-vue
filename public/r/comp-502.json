@@ -9,18 +9,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-502.vue",
+      "path": "components/comp-502.vue",
       "content": "<template></template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "calendar",
-      "date",
-      "input",
-      "react daypicker"
-    ],
+    "tags": ["calendar", "date", "input", "react daypicker"],
     "style": 1
   }
 }

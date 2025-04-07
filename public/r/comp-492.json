@@ -2,14 +2,13 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-492",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/calendar.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/calendar.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-492.vue",
+      "path": "components/comp-492.vue",
       "content": "<template></template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {

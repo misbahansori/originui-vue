@@ -8,18 +8,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-360.vue",
+      "path": "components/comp-360.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/registry/default/ui/tooltip\";\nimport {\n  LucideChevronDown,\n  LucideChevronLeft,\n  LucideChevronRight,\n  LucideChevronUp,\n  LucideCircle,\n} from \"lucide-vue-next\";\n</script>\n\n<template>\n  <div class=\"inline-grid w-fit grid-cols-3 gap-1\">\n    <TooltipProvider :delay-duration=\"0\">\n      <Tooltip>\n        <TooltipTrigger as-child>\n          <Button\n            class=\"col-start-2\"\n            variant=\"outline\"\n            size=\"icon\"\n            aria-label=\"Pan camera up\"\n          >\n            <LucideChevronUp class=\"size-4\" aria-hidden=\"true\" />\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent side=\"top\" class=\"px-2 py-1 text-xs\">\n          Pan top\n          <kbd\n            class=\"bg-background text-muted-foreground/70 ms-2 -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium\"\n          >\n            ⌘T\n          </kbd>\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n    <TooltipProvider :delay-duration=\"0\">\n      <Tooltip>\n        <TooltipTrigger as-child>\n          <Button\n            class=\"col-start-1\"\n            variant=\"outline\"\n            size=\"icon\"\n            aria-label=\"Pan camera left\"\n          >\n            <LucideChevronLeft class=\"size-4\" aria-hidden=\"true\" />\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent side=\"left\" class=\"px-2 py-1 text-xs\">\n          Pan left\n          <kbd\n            class=\"bg-background text-muted-foreground/70 ms-2 -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium\"\n          >\n            ⌘L\n          </kbd>\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n    <div class=\"flex items-center justify-center\" aria-hidden=\"true\">\n      <LucideCircle class=\"size-4 opacity-60\" />\n    </div>\n    <TooltipProvider :delay-duration=\"0\">\n      <Tooltip>\n        <TooltipTrigger as-child>\n          <Button variant=\"outline\" size=\"icon\" aria-label=\"Pan camera right\">\n            <LucideChevronRight class=\"size-4\" aria-hidden=\"true\" />\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent side=\"right\" class=\"px-2 py-1 text-xs\">\n          Pan right\n          <kbd\n            class=\"bg-background text-muted-foreground/70 ms-2 -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium\"\n          >\n            ⌘R\n          </kbd>\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n    <TooltipProvider :delay-duration=\"0\">\n      <Tooltip>\n        <TooltipTrigger as-child>\n          <Button\n            class=\"col-start-2\"\n            variant=\"outline\"\n            size=\"icon\"\n            aria-label=\"Pan camera down\"\n          >\n            <LucideChevronDown class=\"size-4\" aria-hidden=\"true\" />\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent side=\"bottom\" class=\"px-2 py-1 text-xs\">\n          Pan bottom\n          <kbd\n            class=\"bg-background text-muted-foreground/70 ms-2 -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium\"\n          >\n            ⌘B\n          </kbd>\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "tooltip",
-      "button",
-      "kbd",
-      "radix"
-    ],
+    "tags": ["tooltip", "button", "kbd", "radix"],
     "style": 1
   }
 }

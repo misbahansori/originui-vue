@@ -2,21 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-451",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/breadcrumb.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/breadcrumb.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-451.vue",
+      "path": "components/comp-451.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@/registry/default/ui/breadcrumb\";\nimport { LucideHome } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Breadcrumb>\n    <BreadcrumbList>\n      <BreadcrumbItem>\n        <BreadcrumbLink href=\"#\">\n          <LucideHome class=\"size-4\" aria-hidden=\"true\" />\n          <span class=\"sr-only\">Home</span>\n        </BreadcrumbLink>\n      </BreadcrumbItem>\n      <BreadcrumbSeparator>·</BreadcrumbSeparator>\n      <BreadcrumbItem>\n        <BreadcrumbLink href=\"#\">Components</BreadcrumbLink>\n      </BreadcrumbItem>\n      <BreadcrumbSeparator>·</BreadcrumbSeparator>\n      <BreadcrumbItem>\n        <BreadcrumbPage>Breadcrumb</BreadcrumbPage>\n      </BreadcrumbItem>\n    </BreadcrumbList>\n  </Breadcrumb>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "breadcrumb",
-      "radix"
-    ],
+    "tags": ["breadcrumb", "radix"],
     "colSpan": 2,
     "style": 1
   }

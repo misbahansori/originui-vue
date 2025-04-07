@@ -2,21 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-474",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/table.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/table.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-474.vue",
+      "path": "components/comp-474.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableRow,\n} from \"@/registry/default/ui/table\";\n</script>\n\n<template>\n  <div class=\"mx-auto max-w-lg\">\n    <div class=\"bg-background overflow-hidden rounded-md border\">\n      <Table>\n        <TableBody>\n          <TableRow\n            class=\"*:border-border hover:bg-transparent [&>:not(:last-child)]:border-r\"\n          >\n            <TableCell class=\"bg-muted/50 py-2 font-medium\">Name</TableCell>\n            <TableCell class=\"py-2\">David Kim</TableCell>\n          </TableRow>\n          <TableRow\n            class=\"*:border-border hover:bg-transparent [&>:not(:last-child)]:border-r\"\n          >\n            <TableCell class=\"bg-muted/50 py-2 font-medium\">Email</TableCell>\n            <TableCell class=\"py-2\">d.kim@company.com</TableCell>\n          </TableRow>\n          <TableRow\n            class=\"*:border-border hover:bg-transparent [&>:not(:last-child)]:border-r\"\n          >\n            <TableCell class=\"bg-muted/50 py-2 font-medium\">Location</TableCell>\n            <TableCell class=\"py-2\">Seoul, KR</TableCell>\n          </TableRow>\n          <TableRow\n            class=\"*:border-border hover:bg-transparent [&>:not(:last-child)]:border-r\"\n          >\n            <TableCell class=\"bg-muted/50 py-2 font-medium\">Status</TableCell>\n            <TableCell class=\"py-2\">Active</TableCell>\n          </TableRow>\n          <TableRow\n            class=\"*:border-border hover:bg-transparent [&>:not(:last-child)]:border-r\"\n          >\n            <TableCell class=\"bg-muted/50 py-2 font-medium\">Balance</TableCell>\n            <TableCell class=\"py-2\">$1,000.00</TableCell>\n          </TableRow>\n        </TableBody>\n      </Table>\n    </div>\n    <p class=\"text-muted-foreground mt-4 text-center text-sm\">Vertical table</p>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "table",
-      "vertical table"
-    ],
+    "tags": ["table", "vertical table"],
     "colSpan": 3
   }
 }

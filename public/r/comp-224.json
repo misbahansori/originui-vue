@@ -8,16 +8,13 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-224.vue",
+      "path": "components/comp-224.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectItemText,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/default/ui/select\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n\nconst options = [\n  {\n    label: \"Standard Plan\",\n    value: \"standard\",\n    description: \"Ideal for individuals\",\n  },\n  {\n    label: \"Pro Plan\",\n    value: \"pro\",\n    description: \"For professional users\",\n  },\n  {\n    label: \"Enterprise Plan\",\n    value: \"enterprise\",\n    description: \"Built for large teams\",\n  },\n];\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Select with description and right indicator</Label>\n    <Select default-value=\"2\">\n      <SelectTrigger :id=\"id\" class=\"**:data-desc:hidden\">\n        <SelectValue placeholder=\"Choose a plan\" />\n      </SelectTrigger>\n      <SelectContent\n        class=\"[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2\"\n      >\n        <SelectItem\n          v-for=\"option in options\"\n          :key=\"option.value\"\n          :value=\"option\"\n        >\n          <SelectItemText>{{ option.label }}</SelectItemText>\n          <span class=\"text-muted-foreground mt-1 block text-xs\" data-desc>\n            {{ option.description }}\n          </span>\n        </SelectItem>\n      </SelectContent>\n    </Select>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "select",
-      "radix"
-    ]
+    "tags": ["label", "select", "radix"]
   }
 }

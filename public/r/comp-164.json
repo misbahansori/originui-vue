@@ -2,23 +2,16 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-164",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/radio-group.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/radio-group.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-164.vue",
+      "path": "components/comp-164.vue",
       "content": "<script setup lang=\"ts\">\nimport { RadioGroup, RadioGroupItem } from \"@/registry/default/ui/radio-group\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst selectedValue = ref(\"1\");\n\nconst items = [\n  { value: \"1\", label: \"2 CPU\" },\n  { value: \"2\", label: \"4 CPU\" },\n  { value: \"3\", label: \"6 CPU\" },\n  { value: \"4\", label: \"8 CPU\" },\n  { value: \"5\", label: \"12 CPU\" },\n  { value: \"6\", label: \"16 CPU\", disabled: true },\n];\n</script>\n\n<template>\n  <fieldset class=\"space-y-4\">\n    <legend class=\"text-foreground text-sm leading-none font-medium\">\n      CPU Cores\n    </legend>\n    <RadioGroup class=\"grid grid-cols-3 gap-2\" v-model=\"selectedValue\">\n      <label\n        v-for=\"item in items\"\n        :key=\"`${id}-${item.value}`\"\n        class=\"border-input has-data-[state=checked]:border-primary/50 focus-within:border-ring focus-within:ring-ring/50 relative flex cursor-pointer flex-col items-center gap-3 rounded-md border px-2 py-3 text-center shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px] has-data-disabled:cursor-not-allowed has-data-disabled:opacity-50\"\n        :data-disabled=\"item.disabled\"\n      >\n        <RadioGroupItem\n          :id=\"`${id}-${item.value}`\"\n          :value=\"item.value\"\n          class=\"sr-only after:absolute after:inset-0\"\n          :disabled=\"item.disabled\"\n        />\n        <p class=\"text-foreground text-sm leading-none font-medium\">\n          {{ item.label }}\n        </p>\n      </label>\n    </RadioGroup>\n  </fieldset>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "radio",
-      "label",
-      "card",
-      "pricing",
-      "radix"
-    ]
+    "tags": ["radio", "label", "card", "pricing", "radix"]
   }
 }

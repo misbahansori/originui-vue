@@ -2,22 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-102",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/button.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-102.vue",
+      "path": "components/comp-102.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideChevronDown, LucideChevronUp } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <div class=\"inline-flex -space-x-px rounded-md shadow-xs rtl:space-x-reverse\">\n    <Button\n      class=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\"\n      variant=\"outline\"\n      size=\"icon\"\n      aria-label=\"Upvote\"\n    >\n      <LucideChevronUp :size=\"16\" aria-hidden=\"true\" />\n    </Button>\n    <span\n      class=\"border-input flex items-center border px-3 text-sm font-medium\"\n    >\n      235\n    </span>\n    <Button\n      class=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\"\n      variant=\"outline\"\n      size=\"icon\"\n      aria-label=\"Downvote\"\n    >\n      <LucideChevronDown :size=\"16\" aria-hidden=\"true\" />\n    </Button>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "vote",
-      "counter"
-    ],
+    "tags": ["button", "vote", "counter"],
     "style": 2
   }
 }

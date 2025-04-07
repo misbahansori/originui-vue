@@ -2,21 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-79",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/button.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-79.vue",
+      "path": "components/comp-79.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\n</script>\n\n<template>\n  <Button disabled>Button</Button>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "disabled"
-    ],
+    "tags": ["button", "disabled"],
     "style": 2
   }
 }

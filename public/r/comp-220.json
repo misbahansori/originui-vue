@@ -8,17 +8,13 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-220.vue",
+      "path": "components/comp-220.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/default/ui/select\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\n\nconst options = [\n  {\n    value: \"1\",\n    label: \"Completed\",\n    class: \"text-emerald-600\",\n  },\n  {\n    value: \"2\",\n    label: \"In Progress\",\n    class: \"text-blue-500\",\n  },\n  {\n    value: \"3\",\n    label: \"Pending\",\n    class: \"text-amber-500\",\n  },\n  {\n    value: \"4\",\n    label: \"Cancelled\",\n    class: \"text-gray-500\",\n  },\n  {\n    value: \"5\",\n    label: \"Failed\",\n    class: \"text-red-500\",\n  },\n];\n\nconst selectedOption = ref(options[0]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Status select</Label>\n    <Select v-model=\"selectedOption\">\n      <SelectTrigger\n        :id=\"id\"\n        class=\"[&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_svg]:shrink-0\"\n      >\n        <SelectValue placeholder=\"Select status\">\n          <span v-if=\"selectedOption\" class=\"flex items-center gap-2\">\n            <svg\n              width=\"8\"\n              height=\"8\"\n              fill=\"currentColor\"\n              viewBox=\"0 0 8 8\"\n              xmlns=\"http://www.w3.org/2000/svg\"\n              :class=\"selectedOption.class\"\n              aria-hidden=\"true\"\n            >\n              <circle cx=\"4\" cy=\"4\" r=\"4\" />\n            </svg>\n            <span class=\"truncate\">{{ selectedOption.label }}</span>\n          </span>\n        </SelectValue>\n      </SelectTrigger>\n      <SelectContent\n        class=\"[&_*[role=option]>span>svg]:text-muted-foreground/80 [&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2 [&_*[role=option]>span]:flex [&_*[role=option]>span]:items-center [&_*[role=option]>span]:gap-2 [&_*[role=option]>span>svg]:shrink-0\"\n      >\n        <SelectItem\n          v-for=\"option in options\"\n          :key=\"option.value\"\n          :value=\"option\"\n        >\n          <span class=\"flex items-center gap-2\">\n            <svg\n              width=\"8\"\n              height=\"8\"\n              fill=\"currentColor\"\n              viewBox=\"0 0 8 8\"\n              xmlns=\"http://www.w3.org/2000/svg\"\n              :class=\"option.class\"\n              aria-hidden=\"true\"\n            >\n              <circle cx=\"4\" cy=\"4\" r=\"4\" />\n            </svg>\n            <span class=\"truncate\">{{ option.label }}</span>\n          </span>\n        </SelectItem>\n      </SelectContent>\n    </Select>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "select",
-      "status",
-      "radix"
-    ]
+    "tags": ["label", "select", "status", "radix"]
   }
 }

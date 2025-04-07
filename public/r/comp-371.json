@@ -8,17 +8,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-371.vue",
+      "path": "components/comp-371.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuCheckboxItem,\n  DropdownMenuContent,\n  DropdownMenuTrigger,\n} from \"@/registry/default/ui/dropdown-menu\";\nimport { LucideChevronDown } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nconst nextjs = ref<boolean | \"indeterminate\">(false);\nconst sveltekit = ref<boolean | \"indeterminate\">(true);\nconst astro = ref<boolean | \"indeterminate\">(false);\nconst remix = ref<boolean | \"indeterminate\">(false);\n</script>\n\n<template>\n  <DropdownMenu>\n    <DropdownMenuTrigger asChild>\n      <Button variant=\"outline\">\n        Checkbox items\n        <LucideChevronDown\n          :size=\"16\"\n          class=\"-me-1 opacity-60\"\n          aria-hidden=\"true\"\n        />\n      </Button>\n    </DropdownMenuTrigger>\n    <DropdownMenuContent>\n      <DropdownMenuCheckboxItem v-model=\"nextjs\">\n        Next.js\n      </DropdownMenuCheckboxItem>\n      <DropdownMenuCheckboxItem v-model=\"sveltekit\">\n        SvelteKit\n      </DropdownMenuCheckboxItem>\n      <DropdownMenuCheckboxItem v-model=\"remix\" disabled>\n        Remix\n      </DropdownMenuCheckboxItem>\n      <DropdownMenuCheckboxItem v-model=\"astro\">Astro</DropdownMenuCheckboxItem>\n    </DropdownMenuContent>\n  </DropdownMenu>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "dropdown",
-      "checkbox",
-      "radix"
-    ],
+    "tags": ["dropdown", "checkbox", "radix"],
     "style": 1
   }
 }

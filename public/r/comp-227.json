@@ -8,19 +8,13 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-227.vue",
+      "path": "components/comp-227.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/default/ui/select\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\n\nconst options = [\n  {\n    value: \"1\",\n    label: \"Frank Morris\",\n    initials: \"F\",\n    class: \"bg-indigo-400/20 text-indigo-500\",\n  },\n  {\n    value: \"2\",\n    label: \"Xavier Guerra\",\n    initials: \"X\",\n    class: \"bg-purple-400/20 text-purple-500\",\n  },\n  {\n    value: \"3\",\n    label: \"Anne Kelley\",\n    initials: \"A\",\n    class: \"bg-rose-400/20 text-rose-500\",\n  },\n];\n\nconst selectedOption = ref(options[0]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Options with placeholder avatar</Label>\n    <Select v-model=\"selectedOption\">\n      <SelectTrigger\n        :id=\"id\"\n        class=\"ps-2 [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_[data-square]]:shrink-0\"\n      >\n        <SelectValue placeholder=\"Select framework\">\n          <template v-if=\"selectedOption\">\n            <span\n              data-square\n              class=\"flex size-5 items-center justify-center rounded bg-indigo-400/20 text-xs font-medium text-indigo-500\"\n              :class=\"selectedOption.class\"\n              aria-hidden=\"true\"\n            >\n              {{ selectedOption.initials }}\n            </span>\n            <span class=\"truncate\">{{ selectedOption.label }}</span>\n          </template>\n        </SelectValue>\n      </SelectTrigger>\n      <SelectContent\n        class=\"[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2 [&_*[role=option]>span]:flex [&_*[role=option]>span]:items-center [&_*[role=option]>span]:gap-2\"\n      >\n        <SelectGroup>\n          <SelectLabel class=\"ps-2\">Impersonate user</SelectLabel>\n          <SelectItem\n            v-for=\"option in options\"\n            :key=\"option.value\"\n            :value=\"option\"\n          >\n            <span\n              data-square\n              class=\"flex size-5 items-center justify-center rounded text-xs font-medium\"\n              :class=\"option.class\"\n              aria-hidden=\"true\"\n            >\n              {{ option.initials }}\n            </span>\n            <span class=\"truncate\">{{ option.label }}</span>\n          </SelectItem>\n        </SelectGroup>\n      </SelectContent>\n    </Select>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "select",
-      "user",
-      "avatar",
-      "profile",
-      "radix"
-    ]
+    "tags": ["label", "select", "user", "avatar", "profile", "radix"]
   }
 }

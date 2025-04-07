@@ -9,26 +9,32 @@
       "dependencies": ["reka-ui", "lucide-vue-next"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/accordion/Accordion.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/accordion/AccordionContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/accordion/AccordionItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/accordion/AccordionTrigger.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/accordion/index.ts",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/accordion/metadata.json",
           "type": "registry:ui"
         }
@@ -71,42 +77,52 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/alert-dialog/AlertDialog.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/alert-dialog/AlertDialogAction.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/alert-dialog/AlertDialogCancel.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/alert-dialog/AlertDialogContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/alert-dialog/AlertDialogDescription.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/alert-dialog/AlertDialogFooter.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/alert-dialog/AlertDialogHeader.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/alert-dialog/AlertDialogTitle.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/alert-dialog/AlertDialogTrigger.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/alert-dialog/index.ts",
           "type": "registry:ui"
         }
@@ -118,18 +134,22 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/alert/Alert.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/alert/AlertDescription.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/alert/AlertTitle.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/alert/index.ts",
           "type": "registry:ui"
         }
@@ -141,6 +161,7 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/aspect-ratio/AspectRatio.vue",
           "type": "registry:ui"
         }
@@ -152,18 +173,22 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/avatar/Avatar.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/avatar/AvatarFallback.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/avatar/AvatarImage.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/avatar/index.ts",
           "type": "registry:ui"
         }
@@ -175,10 +200,12 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/badge/Badge.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/badge/index.ts",
           "type": "registry:ui"
         }
@@ -190,34 +217,42 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/breadcrumb/Breadcrumb.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/breadcrumb/BreadcrumbEllipsis.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/breadcrumb/BreadcrumbItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/breadcrumb/BreadcrumbLink.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/breadcrumb/BreadcrumbList.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/breadcrumb/BreadcrumbPage.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/breadcrumb/BreadcrumbSeparator.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/breadcrumb/index.ts",
           "type": "registry:ui"
         }
@@ -229,10 +264,12 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/button/Button.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/button/index.ts",
           "type": "registry:ui"
         }
@@ -244,54 +281,67 @@
       "dependencies": ["reka-ui", "lucide-vue-next"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/calendar/Calendar.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/calendar/CalendarCell.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/calendar/CalendarCellTrigger.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/calendar/CalendarGrid.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/calendar/CalendarGridBody.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/calendar/CalendarGridHead.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/calendar/CalendarGridRow.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/calendar/CalendarHeadCell.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/calendar/CalendarHeader.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/calendar/CalendarHeading.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/calendar/CalendarNextButton.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/calendar/CalendarPrevButton.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/calendar/index.ts",
           "type": "registry:ui"
         }
@@ -303,30 +353,37 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/card/Card.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/card/CardContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/card/CardDescription.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/card/CardFooter.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/card/CardHeader.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/card/CardTitle.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/card/index.ts",
           "type": "registry:ui"
         }
@@ -338,10 +395,12 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/checkbox/Checkbox.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/checkbox/index.ts",
           "type": "registry:ui"
         }
@@ -353,18 +412,22 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/collapsible/Collapsible.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/collapsible/CollapsibleContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/collapsible/CollapsibleTrigger.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/collapsible/index.ts",
           "type": "registry:ui"
         }
@@ -376,42 +439,52 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/combobox/Combobox.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/combobox/ComboboxAnchor.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/combobox/ComboboxEmpty.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/combobox/ComboboxGroup.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/combobox/ComboboxInput.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/combobox/ComboboxItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/combobox/ComboboxList.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/combobox/ComboboxSeparator.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/combobox/ComboboxTrigger.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/combobox/index.ts",
           "type": "registry:ui"
         }
@@ -424,42 +497,52 @@
       "registryDependencies": ["dialog"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/command/Command.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/command/CommandDialog.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/command/CommandEmpty.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/command/CommandGroup.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/command/CommandInput.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/command/CommandItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/command/CommandList.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/command/CommandSeparator.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/command/CommandShortcut.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/command/index.ts",
           "type": "registry:ui"
         }
@@ -471,66 +554,82 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/ContextMenu.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/index.ts",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/ContextMenuCheckboxItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/ContextMenuContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/ContextMenuGroup.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/ContextMenuItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/ContextMenuLabel.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/ContextMenuPortal.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/ContextMenuRadioGroup.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/ContextMenuRadioItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/ContextMenuSeparator.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/ContextMenuShortcut.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/ContextMenuSub.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/ContextMenuSubContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/ContextMenuSubTrigger.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/context-menu/ContextMenuTrigger.vue",
           "type": "registry:ui"
         }
@@ -542,42 +641,52 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/dialog/Dialog.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dialog/DialogClose.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dialog/DialogContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dialog/DialogDescription.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dialog/DialogFooter.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dialog/DialogHeader.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dialog/DialogScrollContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dialog/DialogTitle.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dialog/DialogTrigger.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dialog/index.ts",
           "type": "registry:ui"
         }
@@ -589,34 +698,42 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/drawer/Drawer.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/drawer/DrawerContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/drawer/DrawerDescription.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/drawer/DrawerFooter.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/drawer/DrawerHeader.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/drawer/DrawerOverlay.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/drawer/DrawerTitle.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/drawer/index.ts",
           "type": "registry:ui"
         }
@@ -628,62 +745,77 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/dropdown-menu/DropdownMenu.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dropdown-menu/index.ts",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dropdown-menu/DropdownMenuCheckboxItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dropdown-menu/DropdownMenuContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dropdown-menu/DropdownMenuGroup.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dropdown-menu/DropdownMenuItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dropdown-menu/DropdownMenuLabel.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dropdown-menu/DropdownMenuRadioGroup.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dropdown-menu/DropdownMenuRadioItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dropdown-menu/DropdownMenuSeparator.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dropdown-menu/DropdownMenuShortcut.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dropdown-menu/DropdownMenuSub.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dropdown-menu/DropdownMenuSubContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dropdown-menu/DropdownMenuSubTrigger.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/dropdown-menu/DropdownMenuTrigger.vue",
           "type": "registry:ui"
         }
@@ -695,18 +827,22 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/hover-card/HoverCard.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/hover-card/HoverCardContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/hover-card/HoverCardTrigger.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/hover-card/index.ts",
           "type": "registry:ui"
         }
@@ -718,10 +854,12 @@
       "dependencies": ["@vueuse/core"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/input/Input.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/input/index.ts",
           "type": "registry:ui"
         }
@@ -733,10 +871,12 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/label/Label.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/label/index.ts",
           "type": "registry:ui"
         }
@@ -748,26 +888,32 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/number-field/NumberField.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/number-field/NumberFieldContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/number-field/NumberFieldDecrement.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/number-field/NumberFieldIncrement.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/number-field/NumberFieldInput.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/number-field/index.ts",
           "type": "registry:ui"
         }
@@ -780,26 +926,32 @@
       "registryDependencies": ["button"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/pagination/PaginationEllipsis.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/pagination/PaginationFirst.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/pagination/PaginationLast.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/pagination/PaginationNext.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/pagination/PaginationPrev.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/pagination/index.ts",
           "type": "registry:ui"
         }
@@ -811,22 +963,27 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/pin-input/PinInput.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/pin-input/PinInputGroup.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/pin-input/PinInputInput.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/pin-input/PinInputSeparator.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/pin-input/index.ts",
           "type": "registry:ui"
         }
@@ -838,18 +995,22 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/popover/Popover.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/popover/PopoverContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/popover/PopoverTrigger.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/popover/index.ts",
           "type": "registry:ui"
         }
@@ -861,10 +1022,12 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/progress/Progress.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/progress/index.ts",
           "type": "registry:ui"
         }
@@ -876,14 +1039,17 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/radio-group/RadioGroup.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/radio-group/RadioGroupItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/radio-group/index.ts",
           "type": "registry:ui"
         }
@@ -896,54 +1062,67 @@
       "registryDependencies": ["button"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/range-calendar/RangeCalendar.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/range-calendar/RangeCalendarCell.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/range-calendar/RangeCalendarCellTrigger.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/range-calendar/RangeCalendarGrid.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/range-calendar/RangeCalendarGridBody.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/range-calendar/RangeCalendarGridHead.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/range-calendar/RangeCalendarGridRow.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/range-calendar/RangeCalendarHeadCell.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/range-calendar/RangeCalendarHeader.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/range-calendar/RangeCalendarHeading.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/range-calendar/RangeCalendarNextButton.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/range-calendar/RangeCalendarPrevButton.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/range-calendar/index.ts",
           "type": "registry:ui"
         }
@@ -955,14 +1134,17 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/scroll-area/ScrollArea.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/scroll-area/ScrollBar.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/scroll-area/index.ts",
           "type": "registry:ui"
         }
@@ -973,10 +1155,12 @@
       "type": "registry:ui",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/select-native/SelectNative.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/select-native/index.ts",
           "type": "registry:ui"
         }
@@ -988,50 +1172,62 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/select/Select.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/select/SelectContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/select/SelectGroup.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/select/SelectItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/select/SelectItemText.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/select/SelectLabel.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/select/SelectScrollDownButton.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/select/SelectScrollUpButton.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/select/SelectSeparator.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/select/SelectTrigger.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/select/SelectValue.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/select/index.ts",
           "type": "registry:ui"
         }
@@ -1043,10 +1239,12 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/separator/Separator.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/separator/index.ts",
           "type": "registry:ui"
         }
@@ -1060,14 +1258,17 @@
       "registryDependencies": ["tooltip"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/slider/Slider.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/slider/SliderWithInput.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/slider/index.ts",
           "type": "registry:ui"
         }
@@ -1079,10 +1280,12 @@
       "dependencies": ["vue-sonner"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/sonner/Sonner.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/sonner/index.ts",
           "type": "registry:ui"
         }
@@ -1094,34 +1297,42 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/stepper/Stepper.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/stepper/StepperDescription.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/stepper/StepperIndicator.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/stepper/StepperItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/stepper/StepperSeparator.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/stepper/StepperTitle.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/stepper/StepperTrigger.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/stepper/index.ts",
           "type": "registry:ui"
         }
@@ -1133,10 +1344,12 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/switch/Switch.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/switch/index.ts",
           "type": "registry:ui"
         }
@@ -1148,42 +1361,52 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/table/Table.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/table/TableBody.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/table/TableCaption.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/table/TableCell.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/table/TableEmpty.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/table/TableFooter.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/table/TableHead.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/table/TableHeader.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/table/TableRow.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/table/index.ts",
           "type": "registry:ui"
         }
@@ -1195,22 +1418,27 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/tabs/Tabs.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/tabs/TabsContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/tabs/TabsList.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/tabs/TabsTrigger.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/tabs/index.ts",
           "type": "registry:ui"
         }
@@ -1222,26 +1450,32 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/tags-input/TagsInput.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/tags-input/TagsInputInput.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/tags-input/TagsInputItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/tags-input/TagsInputItemDelete.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/tags-input/TagsInputItemText.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/tags-input/index.ts",
           "type": "registry:ui"
         }
@@ -1252,10 +1486,12 @@
       "type": "registry:ui",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/textarea/Textarea.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/textarea/index.ts",
           "type": "registry:ui"
         }
@@ -1266,38 +1502,47 @@
       "type": "registry:ui",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/timeline/Timeline.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/timeline/TimelineContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/timeline/TimelineDate.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/timeline/TimelineHeader.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/timeline/TimelineIndicator.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/timeline/TimelineItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/timeline/TimelineSeparator.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/timeline/TimelineTitle.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/timeline/index.ts",
           "type": "registry:ui"
         }
@@ -1309,38 +1554,47 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/toast/Toast.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/toast/ToastAction.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/toast/ToastClose.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/toast/ToastDescription.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/toast/ToastProvider.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/toast/ToastTitle.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/toast/ToastViewport.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/toast/Toaster.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/toast/index.ts",
           "type": "registry:ui"
         }
@@ -1352,10 +1606,12 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/toggle/Toggle.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/toggle/index.ts",
           "type": "registry:ui"
         }
@@ -1368,14 +1624,17 @@
       "registryDependencies": ["toggle"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/toggle-group/ToggleGroup.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/toggle-group/ToggleGroupItem.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/toggle-group/index.ts",
           "type": "registry:ui"
         }
@@ -1387,22 +1646,27 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/ui/tooltip/Tooltip.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/tooltip/TooltipContent.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/tooltip/TooltipProvider.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/tooltip/TooltipTrigger.vue",
           "type": "registry:ui"
         },
         {
+          "target": "",
           "path": "app/registry/default/ui/tooltip/index.ts",
           "type": "registry:ui"
         }
@@ -1428,6 +1692,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-01.vue",
           "type": "registry:component"
         }
@@ -1445,6 +1710,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-02.vue",
           "type": "registry:component"
         }
@@ -1462,6 +1728,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-03.vue",
           "type": "registry:component"
         }
@@ -1479,6 +1746,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-04.vue",
           "type": "registry:component"
         }
@@ -1496,6 +1764,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-05.vue",
           "type": "registry:component"
         }
@@ -1513,6 +1782,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-06.vue",
           "type": "registry:component"
         }
@@ -1530,6 +1800,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-07.vue",
           "type": "registry:component"
         }
@@ -1547,6 +1818,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-08.vue",
           "type": "registry:component"
         }
@@ -1565,6 +1837,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-09.vue",
           "type": "registry:component"
         }
@@ -1583,6 +1856,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-10.vue",
           "type": "registry:component"
         }
@@ -1600,6 +1874,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-11.vue",
           "type": "registry:component"
         }
@@ -1617,6 +1892,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-12.vue",
           "type": "registry:component"
         }
@@ -1634,6 +1910,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-13.vue",
           "type": "registry:component"
         }
@@ -1651,6 +1928,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-14.vue",
           "type": "registry:component"
         }
@@ -1668,6 +1946,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-15.vue",
           "type": "registry:component"
         }
@@ -1685,6 +1964,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-16.vue",
           "type": "registry:component"
         }
@@ -1703,6 +1983,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-17.vue",
           "type": "registry:component"
         }
@@ -1721,6 +2002,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-18.vue",
           "type": "registry:component"
         }
@@ -1739,6 +2021,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-19.vue",
           "type": "registry:component"
         }
@@ -1757,6 +2040,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-20.vue",
           "type": "registry:component"
         }
@@ -1774,6 +2058,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-21.vue",
           "type": "registry:component"
         }
@@ -1792,6 +2077,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-22.vue",
           "type": "registry:component"
         }
@@ -1810,6 +2096,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-23.vue",
           "type": "registry:component"
         }
@@ -1828,6 +2115,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-24.vue",
           "type": "registry:component"
         }
@@ -1845,6 +2133,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-25.vue",
           "type": "registry:component"
         }
@@ -1863,6 +2152,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-26.vue",
           "type": "registry:component"
         }
@@ -1881,6 +2171,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-27.vue",
           "type": "registry:component"
         }
@@ -1899,6 +2190,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-28.vue",
           "type": "registry:component"
         }
@@ -1917,6 +2209,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-29.vue",
           "type": "registry:component"
         }
@@ -1934,6 +2227,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-30.vue",
           "type": "registry:component"
         }
@@ -1948,6 +2242,7 @@
       "registryDependencies": ["https://originui-vue.com/r/input.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-31.vue",
           "type": "registry:component"
         }
@@ -1962,6 +2257,7 @@
       "registryDependencies": ["https://originui-vue.com/r/input.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-32.vue",
           "type": "registry:component"
         }
@@ -1975,6 +2271,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-33.vue",
           "type": "registry:component"
         }
@@ -1992,6 +2289,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-34.vue",
           "type": "registry:component"
         }
@@ -2009,6 +2307,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-35.vue",
           "type": "registry:component"
         }
@@ -2024,6 +2323,7 @@
       "registryDependencies": ["https://originui-vue.com/r/label.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-36.vue",
           "type": "registry:component"
         }
@@ -2039,6 +2339,7 @@
       "registryDependencies": ["https://originui-vue.com/r/label.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-37.vue",
           "type": "registry:component"
         }
@@ -2054,6 +2355,7 @@
       "registryDependencies": ["https://originui-vue.com/r/label.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-38.vue",
           "type": "registry:component"
         }
@@ -2069,6 +2371,7 @@
       "registryDependencies": ["https://originui-vue.com/r/label.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-39.vue",
           "type": "registry:component"
         }
@@ -2083,6 +2386,7 @@
       "registryDependencies": ["https://originui-vue.com/r/datefield-rac.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-40.vue",
           "type": "registry:component"
         }
@@ -2101,6 +2405,7 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-41.vue",
           "type": "registry:component"
         }
@@ -2119,6 +2424,7 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-42.vue",
           "type": "registry:component"
         }
@@ -2145,6 +2451,7 @@
       "dependencies": ["reka-ui", "react-aria", "@internationalized/date"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-43.vue",
           "type": "registry:component"
         }
@@ -2168,6 +2475,7 @@
       "dependencies": ["input-otp"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-44.vue",
           "type": "registry:component"
         }
@@ -2183,6 +2491,7 @@
       "dependencies": ["input-otp"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-45.vue",
           "type": "registry:component"
         }
@@ -2201,6 +2510,7 @@
       "dependencies": ["react-phone-number-input"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-46.vue",
           "type": "registry:component"
         }
@@ -2220,6 +2530,7 @@
       "devDependencies": ["@types/react-payment-inputs"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-47.vue",
           "type": "registry:component"
         }
@@ -2239,6 +2550,7 @@
       "devDependencies": ["@types/react-payment-inputs"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-48.vue",
           "type": "registry:component"
         }
@@ -2258,6 +2570,7 @@
       "devDependencies": ["@types/react-payment-inputs"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-49.vue",
           "type": "registry:component"
         }
@@ -2277,6 +2590,7 @@
       "devDependencies": ["@types/react-payment-inputs"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-50.vue",
           "type": "registry:component"
         }
@@ -2294,6 +2608,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-51.vue",
           "type": "registry:component"
         }
@@ -2311,6 +2626,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-52.vue",
           "type": "registry:component"
         }
@@ -2329,6 +2645,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-53.vue",
           "type": "registry:component"
         }
@@ -2347,6 +2664,7 @@
       "dependencies": ["use-mask-input"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-54.vue",
           "type": "registry:component"
         }
@@ -2365,6 +2683,7 @@
       "dependencies": ["use-mask-input"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-55.vue",
           "type": "registry:component"
         }
@@ -2380,6 +2699,7 @@
       "dependencies": ["emblor"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-56.vue",
           "type": "registry:component"
         }
@@ -2395,6 +2715,7 @@
       "dependencies": ["emblor"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-57.vue",
           "type": "registry:component"
         }
@@ -2410,6 +2731,7 @@
       "dependencies": ["input-otp"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-58.vue",
           "type": "registry:component"
         }
@@ -2427,6 +2749,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-59.vue",
           "type": "registry:component"
         }
@@ -2444,6 +2767,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-60.vue",
           "type": "registry:component"
         }
@@ -2461,6 +2785,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-61.vue",
           "type": "registry:component"
         }
@@ -2478,6 +2803,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-63.vue",
           "type": "registry:component"
         }
@@ -2495,6 +2821,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-63.vue",
           "type": "registry:component"
         }
@@ -2512,6 +2839,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-64.vue",
           "type": "registry:component"
         }
@@ -2529,6 +2857,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-65.vue",
           "type": "registry:component"
         }
@@ -2546,6 +2875,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-66.vue",
           "type": "registry:component"
         }
@@ -2563,6 +2893,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-67.vue",
           "type": "registry:component"
         }
@@ -2581,6 +2912,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-68.vue",
           "type": "registry:component"
         }
@@ -2599,6 +2931,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-69.vue",
           "type": "registry:component"
         }
@@ -2617,6 +2950,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-70.vue",
           "type": "registry:component"
         }
@@ -2634,6 +2968,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-71.vue",
           "type": "registry:component"
         }
@@ -2648,6 +2983,7 @@
       "registryDependencies": ["https://originui-vue.com/r/textarea.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-72.vue",
           "type": "registry:component"
         }
@@ -2661,6 +2997,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-73.vue",
           "type": "registry:component"
         }
@@ -2678,6 +3015,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-74.vue",
           "type": "registry:component"
         }
@@ -2695,6 +3033,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-75.vue",
           "type": "registry:component"
         }
@@ -2712,6 +3051,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-76.vue",
           "type": "registry:component"
         }
@@ -2729,6 +3069,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-77.vue",
           "type": "registry:component"
         }
@@ -2743,6 +3084,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-78.vue",
           "type": "registry:component"
         }
@@ -2758,6 +3100,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-79.vue",
           "type": "registry:component"
         }
@@ -2773,6 +3116,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-80.vue",
           "type": "registry:component"
         }
@@ -2788,6 +3132,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-81.vue",
           "type": "registry:component"
         }
@@ -2803,6 +3148,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-82.vue",
           "type": "registry:component"
         }
@@ -2818,6 +3164,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-83.vue",
           "type": "registry:component"
         }
@@ -2833,6 +3180,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-84.vue",
           "type": "registry:component"
         }
@@ -2848,6 +3196,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-85.vue",
           "type": "registry:component"
         }
@@ -2863,6 +3212,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-86.vue",
           "type": "registry:component"
         }
@@ -2878,6 +3228,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-87.vue",
           "type": "registry:component"
         }
@@ -2893,6 +3244,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-88.vue",
           "type": "registry:component"
         }
@@ -2908,6 +3260,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-89.vue",
           "type": "registry:component"
         }
@@ -2923,6 +3276,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-90.vue",
           "type": "registry:component"
         }
@@ -2938,6 +3292,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-91.vue",
           "type": "registry:component"
         }
@@ -2953,6 +3308,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-92.vue",
           "type": "registry:component"
         }
@@ -2968,6 +3324,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-93.vue",
           "type": "registry:component"
         }
@@ -2983,6 +3340,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-94.vue",
           "type": "registry:component"
         }
@@ -2998,6 +3356,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-95.vue",
           "type": "registry:component"
         }
@@ -3013,6 +3372,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-96.vue",
           "type": "registry:component"
         }
@@ -3028,6 +3388,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-97.vue",
           "type": "registry:component"
         }
@@ -3043,6 +3404,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-98.vue",
           "type": "registry:component"
         }
@@ -3061,6 +3423,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-99.vue",
           "type": "registry:component"
         }
@@ -3076,6 +3439,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-100.vue",
           "type": "registry:component"
         }
@@ -3094,6 +3458,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-101.vue",
           "type": "registry:component"
         }
@@ -3109,6 +3474,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-102.vue",
           "type": "registry:component"
         }
@@ -3124,6 +3490,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-103.vue",
           "type": "registry:component"
         }
@@ -3139,6 +3506,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-104.vue",
           "type": "registry:component"
         }
@@ -3157,6 +3525,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-105.vue",
           "type": "registry:component"
         }
@@ -3172,6 +3541,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-106.vue",
           "type": "registry:component"
         }
@@ -3187,6 +3557,7 @@
       "registryDependencies": ["https://originui-vue.com/r/toggle-group.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-107.vue",
           "type": "registry:component"
         }
@@ -3202,6 +3573,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-108.vue",
           "type": "registry:component"
         }
@@ -3217,6 +3589,7 @@
       "registryDependencies": ["https://originui-vue.com/r/toggle-group.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-109.vue",
           "type": "registry:component"
         }
@@ -3232,6 +3605,7 @@
       "registryDependencies": ["https://originui-vue.com/r/toggle-group.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-110.vue",
           "type": "registry:component"
         }
@@ -3247,6 +3621,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-111.vue",
           "type": "registry:component"
         }
@@ -3262,6 +3637,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-112.vue",
           "type": "registry:component"
         }
@@ -3277,6 +3653,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-113.vue",
           "type": "registry:component"
         }
@@ -3292,6 +3669,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-114.vue",
           "type": "registry:component"
         }
@@ -3307,6 +3685,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-115.vue",
           "type": "registry:component"
         }
@@ -3322,6 +3701,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-116.vue",
           "type": "registry:component"
         }
@@ -3337,6 +3717,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-117.vue",
           "type": "registry:component"
         }
@@ -3352,6 +3733,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-118.vue",
           "type": "registry:component"
         }
@@ -3368,6 +3750,7 @@
       "dependencies": ["@remixicon/react"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-119.vue",
           "type": "registry:component"
         }
@@ -3384,6 +3767,7 @@
       "dependencies": ["@remixicon/react"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-120.vue",
           "type": "registry:component"
         }
@@ -3400,6 +3784,7 @@
       "dependencies": ["@remixicon/react"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-121.vue",
           "type": "registry:component"
         }
@@ -3416,6 +3801,7 @@
       "dependencies": ["@remixicon/react"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-122.vue",
           "type": "registry:component"
         }
@@ -3431,6 +3817,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-123.vue",
           "type": "registry:component"
         }
@@ -3446,6 +3833,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-124.vue",
           "type": "registry:component"
         }
@@ -3461,6 +3849,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-125.vue",
           "type": "registry:component"
         }
@@ -3476,6 +3865,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-126.vue",
           "type": "registry:component"
         }
@@ -3491,6 +3881,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-127.vue",
           "type": "registry:component"
         }
@@ -3506,6 +3897,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-128.vue",
           "type": "registry:component"
         }
@@ -3524,6 +3916,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-129.vue",
           "type": "registry:component"
         }
@@ -3539,6 +3932,7 @@
       "registryDependencies": ["https://originui-vue.com/r/toggle.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-130.vue",
           "type": "registry:component"
         }
@@ -3557,6 +3951,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-131.vue",
           "type": "registry:component"
         }
@@ -3575,6 +3970,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-132.vue",
           "type": "registry:component"
         }
@@ -3592,6 +3988,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-133.vue",
           "type": "registry:component"
         }
@@ -3609,6 +4006,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-134.vue",
           "type": "registry:component"
         }
@@ -3626,6 +4024,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-135.vue",
           "type": "registry:component"
         }
@@ -3643,6 +4042,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-136.vue",
           "type": "registry:component"
         }
@@ -3660,6 +4060,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-137.vue",
           "type": "registry:component"
         }
@@ -3677,6 +4078,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-138.vue",
           "type": "registry:component"
         }
@@ -3694,6 +4096,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-139.vue",
           "type": "registry:component"
         }
@@ -3711,6 +4114,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-140.vue",
           "type": "registry:component"
         }
@@ -3728,6 +4132,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-141.vue",
           "type": "registry:component"
         }
@@ -3746,6 +4151,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-142.vue",
           "type": "registry:component"
         }
@@ -3763,6 +4169,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-143.vue",
           "type": "registry:component"
         }
@@ -3780,6 +4187,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-144.vue",
           "type": "registry:component"
         }
@@ -3797,6 +4205,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-145.vue",
           "type": "registry:component"
         }
@@ -3814,6 +4223,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-146.vue",
           "type": "registry:component"
         }
@@ -3831,6 +4241,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-147.vue",
           "type": "registry:component"
         }
@@ -3849,6 +4260,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-148.vue",
           "type": "registry:component"
         }
@@ -3863,6 +4275,7 @@
       "registryDependencies": ["https://originui-vue.com/r/checkbox.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-149.vue",
           "type": "registry:component"
         }
@@ -3876,6 +4289,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-150.vue",
           "type": "registry:component"
         }
@@ -3893,6 +4307,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-151.vue",
           "type": "registry:component"
         }
@@ -3910,6 +4325,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-152.vue",
           "type": "registry:component"
         }
@@ -3927,6 +4343,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-153.vue",
           "type": "registry:component"
         }
@@ -3944,6 +4361,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-154.vue",
           "type": "registry:component"
         }
@@ -3961,6 +4379,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-155.vue",
           "type": "registry:component"
         }
@@ -3979,6 +4398,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-156.vue",
           "type": "registry:component"
         }
@@ -3997,6 +4417,7 @@
       "dependencies": ["@remixicon/react"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-157.vue",
           "type": "registry:component"
         }
@@ -4011,6 +4432,7 @@
       "registryDependencies": ["https://originui-vue.com/r/radio-group.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-158.vue",
           "type": "registry:component"
         }
@@ -4028,6 +4450,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-159.vue",
           "type": "registry:component"
         }
@@ -4045,6 +4468,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-160.vue",
           "type": "registry:component"
         }
@@ -4062,6 +4486,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-161.vue",
           "type": "registry:component"
         }
@@ -4079,6 +4504,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-162.vue",
           "type": "registry:component"
         }
@@ -4094,6 +4520,7 @@
       "dependencies": ["@remixicon/react"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-163.vue",
           "type": "registry:component"
         }
@@ -4108,6 +4535,7 @@
       "registryDependencies": ["https://originui-vue.com/r/radio-group.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-164.vue",
           "type": "registry:component"
         }
@@ -4125,6 +4553,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-165.vue",
           "type": "registry:component"
         }
@@ -4143,6 +4572,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-166.vue",
           "type": "registry:component"
         }
@@ -4157,6 +4587,7 @@
       "registryDependencies": ["https://originui-vue.com/r/radio-group.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-167.vue",
           "type": "registry:component"
         }
@@ -4171,6 +4602,7 @@
       "registryDependencies": ["https://originui-vue.com/r/radio-group.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-168.vue",
           "type": "registry:component"
         }
@@ -4185,6 +4617,7 @@
       "registryDependencies": ["https://originui-vue.com/r/radio-group.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-169.vue",
           "type": "registry:component"
         }
@@ -4199,6 +4632,7 @@
       "registryDependencies": ["https://originui-vue.com/r/radio-group.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-170.vue",
           "type": "registry:component"
         }
@@ -4215,6 +4649,7 @@
       "dependencies": ["@remixicon/react"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-171.vue",
           "type": "registry:component"
         }
@@ -4233,6 +4668,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-172.vue",
           "type": "registry:component"
         }
@@ -4251,6 +4687,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-173.vue",
           "type": "registry:component"
         }
@@ -4269,6 +4706,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-174.vue",
           "type": "registry:component"
         }
@@ -4287,6 +4725,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-175.vue",
           "type": "registry:component"
         }
@@ -4305,6 +4744,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-176.vue",
           "type": "registry:component"
         }
@@ -4323,6 +4763,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-177.vue",
           "type": "registry:component"
         }
@@ -4341,6 +4782,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-178.vue",
           "type": "registry:component"
         }
@@ -4359,6 +4801,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-179.vue",
           "type": "registry:component"
         }
@@ -4374,6 +4817,7 @@
       "registryDependencies": ["https://originui-vue.com/r/switch.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-180.vue",
           "type": "registry:component"
         }
@@ -4392,6 +4836,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-181.vue",
           "type": "registry:component"
         }
@@ -4407,6 +4852,7 @@
       "registryDependencies": ["https://originui-vue.com/r/switch.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-182.vue",
           "type": "registry:component"
         }
@@ -4425,6 +4871,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-183.vue",
           "type": "registry:component"
         }
@@ -4443,6 +4890,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-184.vue",
           "type": "registry:component"
         }
@@ -4461,6 +4909,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-185.vue",
           "type": "registry:component"
         }
@@ -4479,6 +4928,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-186.vue",
           "type": "registry:component"
         }
@@ -4497,6 +4947,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-187.vue",
           "type": "registry:component"
         }
@@ -4515,6 +4966,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-188.vue",
           "type": "registry:component"
         }
@@ -4533,6 +4985,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-189.vue",
           "type": "registry:component"
         }
@@ -4550,6 +5003,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-190.vue",
           "type": "registry:component"
         }
@@ -4567,6 +5021,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-191.vue",
           "type": "registry:component"
         }
@@ -4584,6 +5039,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-192.vue",
           "type": "registry:component"
         }
@@ -4601,6 +5057,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-193.vue",
           "type": "registry:component"
         }
@@ -4618,6 +5075,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-194.vue",
           "type": "registry:component"
         }
@@ -4635,6 +5093,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-195.vue",
           "type": "registry:component"
         }
@@ -4652,6 +5111,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-196.vue",
           "type": "registry:component"
         }
@@ -4669,6 +5129,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-197.vue",
           "type": "registry:component"
         }
@@ -4686,6 +5147,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-198.vue",
           "type": "registry:component"
         }
@@ -4703,6 +5165,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-199.vue",
           "type": "registry:component"
         }
@@ -4720,6 +5183,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-200.vue",
           "type": "registry:component"
         }
@@ -4734,6 +5198,7 @@
       "registryDependencies": ["https://originui-vue.com/r/select-native.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-201.vue",
           "type": "registry:component"
         }
@@ -4748,6 +5213,7 @@
       "registryDependencies": ["https://originui-vue.com/r/select-native.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-202.vue",
           "type": "registry:component"
         }
@@ -4765,6 +5231,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-203.vue",
           "type": "registry:component"
         }
@@ -4782,6 +5249,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-204.vue",
           "type": "registry:component"
         }
@@ -4799,6 +5267,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-205.vue",
           "type": "registry:component"
         }
@@ -4816,6 +5285,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-206.vue",
           "type": "registry:component"
         }
@@ -4833,6 +5303,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-207.vue",
           "type": "registry:component"
         }
@@ -4850,6 +5321,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-208.vue",
           "type": "registry:component"
         }
@@ -4867,6 +5339,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-209.vue",
           "type": "registry:component"
         }
@@ -4884,6 +5357,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-210.vue",
           "type": "registry:component"
         }
@@ -4901,6 +5375,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-211.vue",
           "type": "registry:component"
         }
@@ -4918,6 +5393,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-212.vue",
           "type": "registry:component"
         }
@@ -4935,6 +5411,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-213.vue",
           "type": "registry:component"
         }
@@ -4952,6 +5429,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-214.vue",
           "type": "registry:component"
         }
@@ -4969,6 +5447,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-215.vue",
           "type": "registry:component"
         }
@@ -4983,6 +5462,7 @@
       "registryDependencies": ["https://originui-vue.com/r/select.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-216.vue",
           "type": "registry:component"
         }
@@ -4997,6 +5477,7 @@
       "registryDependencies": ["https://originui-vue.com/r/select.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-217.vue",
           "type": "registry:component"
         }
@@ -5014,6 +5495,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-218.vue",
           "type": "registry:component"
         }
@@ -5031,6 +5513,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-219.vue",
           "type": "registry:component"
         }
@@ -5048,6 +5531,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-220.vue",
           "type": "registry:component"
         }
@@ -5065,6 +5549,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-221.vue",
           "type": "registry:component"
         }
@@ -5083,6 +5568,7 @@
       "dependencies": ["@remixicon/react"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-222.vue",
           "type": "registry:component"
         }
@@ -5101,6 +5587,7 @@
       "dependencies": ["@remixicon/react"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-223.vue",
           "type": "registry:component"
         }
@@ -5118,6 +5605,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-224.vue",
           "type": "registry:component"
         }
@@ -5135,6 +5623,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-225.vue",
           "type": "registry:component"
         }
@@ -5152,6 +5641,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-226.vue",
           "type": "registry:component"
         }
@@ -5169,6 +5659,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-227.vue",
           "type": "registry:component"
         }
@@ -5186,6 +5677,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-228.vue",
           "type": "registry:component"
         }
@@ -5205,6 +5697,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-229.vue",
           "type": "registry:component"
         }
@@ -5233,6 +5726,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-230.vue",
           "type": "registry:component"
         }
@@ -5261,6 +5755,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-231.vue",
           "type": "registry:component"
         }
@@ -5291,6 +5786,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-232.vue",
           "type": "registry:component"
         }
@@ -5320,6 +5816,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-233.vue",
           "type": "registry:component"
         }
@@ -5346,6 +5843,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-234.vue",
           "type": "registry:component"
         }
@@ -5372,6 +5870,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-235.vue",
           "type": "registry:component"
         }
@@ -5398,6 +5897,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-236.vue",
           "type": "registry:component"
         }
@@ -5413,6 +5913,7 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-237.vue",
           "type": "registry:component"
         }
@@ -5428,6 +5929,7 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-238.vue",
           "type": "registry:component"
         }
@@ -5443,6 +5945,7 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-239.vue",
           "type": "registry:component"
         }
@@ -5460,6 +5963,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-240.vue",
           "type": "registry:component"
         }
@@ -5477,6 +5981,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-241.vue",
           "type": "registry:component"
         }
@@ -5494,6 +5999,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-242.vue",
           "type": "registry:component"
         }
@@ -5511,6 +6017,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-243.vue",
           "type": "registry:component"
         }
@@ -5528,6 +6035,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-244.vue",
           "type": "registry:component"
         }
@@ -5545,6 +6053,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-245.vue",
           "type": "registry:component"
         }
@@ -5562,6 +6071,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-246.vue",
           "type": "registry:component"
         }
@@ -5579,6 +6089,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-247.vue",
           "type": "registry:component"
         }
@@ -5596,6 +6107,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-248.vue",
           "type": "registry:component"
         }
@@ -5613,6 +6125,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-249.vue",
           "type": "registry:component"
         }
@@ -5630,6 +6143,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-250.vue",
           "type": "registry:component"
         }
@@ -5647,6 +6161,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-251.vue",
           "type": "registry:component"
         }
@@ -5664,6 +6179,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-252.vue",
           "type": "registry:component"
         }
@@ -5681,6 +6197,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-253.vue",
           "type": "registry:component"
         }
@@ -5701,6 +6218,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-254.vue",
           "type": "registry:component"
         },
@@ -5731,6 +6249,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-255.vue",
           "type": "registry:component"
         },
@@ -5752,6 +6271,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-256.vue",
           "type": "registry:component"
         }
@@ -5769,6 +6289,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-257.vue",
           "type": "registry:component"
         }
@@ -5787,6 +6308,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-258.vue",
           "type": "registry:component"
         },
@@ -5809,6 +6331,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-259.vue",
           "type": "registry:component"
         }
@@ -5827,6 +6350,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-260.vue",
           "type": "registry:component"
         }
@@ -5844,6 +6368,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-261.vue",
           "type": "registry:component"
         }
@@ -5862,6 +6387,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-262.vue",
           "type": "registry:component"
         },
@@ -5883,6 +6409,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-263.vue",
           "type": "registry:component"
         }
@@ -5902,6 +6429,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-264.vue",
           "type": "registry:component"
         },
@@ -5925,6 +6453,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-265.vue",
           "type": "registry:component"
         },
@@ -5946,6 +6475,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-266.vue",
           "type": "registry:component"
         }
@@ -5959,6 +6489,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-267.vue",
           "type": "registry:component"
         }
@@ -5973,6 +6504,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-268.vue",
           "type": "registry:component"
         }
@@ -5987,6 +6519,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-269.vue",
           "type": "registry:component"
         }
@@ -6001,6 +6534,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-270.vue",
           "type": "registry:component"
         }
@@ -6015,6 +6549,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-271.vue",
           "type": "registry:component"
         }
@@ -6029,6 +6564,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-272.vue",
           "type": "registry:component"
         }
@@ -6043,6 +6579,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-273.vue",
           "type": "registry:component"
         }
@@ -6057,6 +6594,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-274.vue",
           "type": "registry:component"
         }
@@ -6071,6 +6609,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-275.vue",
           "type": "registry:component"
         }
@@ -6085,6 +6624,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-276.vue",
           "type": "registry:component"
         }
@@ -6099,6 +6639,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-277.vue",
           "type": "registry:component"
         }
@@ -6113,6 +6654,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-278.vue",
           "type": "registry:component"
         }
@@ -6128,6 +6670,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-279.vue",
           "type": "registry:component"
         }
@@ -6144,6 +6687,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-280.vue",
           "type": "registry:component"
         }
@@ -6160,6 +6704,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-281.vue",
           "type": "registry:component"
         }
@@ -6176,6 +6721,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-282.vue",
           "type": "registry:component"
         }
@@ -6192,6 +6738,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-283.vue",
           "type": "registry:component"
         }
@@ -6208,6 +6755,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-284.vue",
           "type": "registry:component"
         }
@@ -6224,6 +6772,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-285.vue",
           "type": "registry:component"
         }
@@ -6240,6 +6789,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-286.vue",
           "type": "registry:component"
         }
@@ -6256,6 +6806,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-287.vue",
           "type": "registry:component"
         }
@@ -6272,6 +6823,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-288.vue",
           "type": "registry:component"
         }
@@ -6288,6 +6840,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-289.vue",
           "type": "registry:component"
         }
@@ -6304,6 +6857,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-290.vue",
           "type": "registry:component"
         }
@@ -6320,6 +6874,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-291.vue",
           "type": "registry:component"
         }
@@ -6336,6 +6891,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-292.vue",
           "type": "registry:component"
         }
@@ -6352,6 +6908,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-293.vue",
           "type": "registry:component"
         }
@@ -6368,6 +6925,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-294.vue",
           "type": "registry:component"
         }
@@ -6384,6 +6942,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-295.vue",
           "type": "registry:component"
         }
@@ -6400,6 +6959,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-296.vue",
           "type": "registry:component"
         }
@@ -6419,6 +6979,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-297.vue",
           "type": "registry:component"
         }
@@ -6438,6 +6999,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-298.vue",
           "type": "registry:component"
         }
@@ -6455,6 +7017,7 @@
       "dependencies": ["sonner"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-299.vue",
           "type": "registry:component"
         }
@@ -6472,6 +7035,7 @@
       "dependencies": ["sonner"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-300.vue",
           "type": "registry:component"
         }
@@ -6488,6 +7052,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-301.vue",
           "type": "registry:component"
         }
@@ -6502,6 +7067,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-302.vue",
           "type": "registry:component"
         }
@@ -6516,6 +7082,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-303.vue",
           "type": "registry:component"
         }
@@ -6530,6 +7097,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-304.vue",
           "type": "registry:component"
         }
@@ -6545,6 +7113,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-305.vue",
           "type": "registry:component"
         }
@@ -6560,6 +7129,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-306.vue",
           "type": "registry:component"
         }
@@ -6575,6 +7145,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-307.vue",
           "type": "registry:component"
         }
@@ -6590,6 +7161,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-308.vue",
           "type": "registry:component"
         }
@@ -6605,6 +7177,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-309.vue",
           "type": "registry:component"
         }
@@ -6620,6 +7193,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-310.vue",
           "type": "registry:component"
         }
@@ -6634,6 +7208,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-311.vue",
           "type": "registry:component"
         }
@@ -6649,6 +7224,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-312.vue",
           "type": "registry:component"
         }
@@ -6667,6 +7243,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-313.vue",
           "type": "registry:component"
         }
@@ -6685,6 +7262,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-314.vue",
           "type": "registry:component"
         }
@@ -6703,6 +7281,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-315.vue",
           "type": "registry:component"
         }
@@ -6722,6 +7301,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-316.vue",
           "type": "registry:component"
         }
@@ -6740,6 +7320,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-317.vue",
           "type": "registry:component"
         }
@@ -6758,6 +7339,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-318.vue",
           "type": "registry:component"
         }
@@ -6776,6 +7358,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-319.vue",
           "type": "registry:component"
         }
@@ -6796,6 +7379,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-320.vue",
           "type": "registry:component"
         }
@@ -6815,6 +7399,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-321.vue",
           "type": "registry:component"
         }
@@ -6834,6 +7419,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-322.vue",
           "type": "registry:component"
         }
@@ -6855,6 +7441,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-323.vue",
           "type": "registry:component"
         }
@@ -6874,6 +7461,7 @@
       "dependencies": ["input-otp"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-324.vue",
           "type": "registry:component"
         }
@@ -6894,6 +7482,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-325.vue",
           "type": "registry:component"
         }
@@ -6922,6 +7511,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-326.vue",
           "type": "registry:component"
         }
@@ -6943,6 +7533,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-327.vue",
           "type": "registry:component"
         }
@@ -6966,6 +7557,7 @@
       "devDependencies": ["@types/react-payment-inputs"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-328.vue",
           "type": "registry:component"
         }
@@ -6998,6 +7590,7 @@
       "devDependencies": ["@types/react-payment-inputs"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-329.vue",
           "type": "registry:component"
         }
@@ -7026,6 +7619,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-330.vue",
           "type": "registry:component"
         }
@@ -7047,6 +7641,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-331.vue",
           "type": "registry:component"
         }
@@ -7074,6 +7669,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-332.vue",
           "type": "registry:component"
         }
@@ -7089,6 +7685,7 @@
       "registryDependencies": ["https://originui-vue.com/r/command.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-333.vue",
           "type": "registry:component"
         }
@@ -7114,6 +7711,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-334.vue",
           "type": "registry:component"
         }
@@ -7129,6 +7727,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-335.vue",
           "type": "registry:component"
         }
@@ -7144,6 +7743,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-336.vue",
           "type": "registry:component"
         }
@@ -7159,6 +7759,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-337.vue",
           "type": "registry:component"
         }
@@ -7174,6 +7775,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-338.vue",
           "type": "registry:component"
         }
@@ -7189,6 +7791,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-339.vue",
           "type": "registry:component"
         }
@@ -7204,6 +7807,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-340.vue",
           "type": "registry:component"
         }
@@ -7219,6 +7823,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-341.vue",
           "type": "registry:component"
         }
@@ -7234,6 +7839,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-342.vue",
           "type": "registry:component"
         }
@@ -7249,6 +7855,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-343.vue",
           "type": "registry:component"
         }
@@ -7264,6 +7871,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-344.vue",
           "type": "registry:component"
         }
@@ -7279,6 +7887,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-345.vue",
           "type": "registry:component"
         }
@@ -7294,6 +7903,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-346.vue",
           "type": "registry:component"
         }
@@ -7309,6 +7919,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-347.vue",
           "type": "registry:component"
         }
@@ -7324,6 +7935,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-348.vue",
           "type": "registry:component"
         }
@@ -7339,6 +7951,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-349.vue",
           "type": "registry:component"
         }
@@ -7354,6 +7967,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-350.vue",
           "type": "registry:component"
         }
@@ -7369,6 +7983,7 @@
       "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-351.vue",
           "type": "registry:component"
         }
@@ -7387,6 +8002,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-352.vue",
           "type": "registry:component"
         }
@@ -7405,6 +8021,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-353.vue",
           "type": "registry:component"
         }
@@ -7423,6 +8040,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-354.vue",
           "type": "registry:component"
         }
@@ -7441,6 +8059,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-355.vue",
           "type": "registry:component"
         }
@@ -7459,6 +8078,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-356.vue",
           "type": "registry:component"
         }
@@ -7477,6 +8097,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-357.vue",
           "type": "registry:component"
         }
@@ -7495,6 +8116,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-358.vue",
           "type": "registry:component"
         }
@@ -7513,6 +8135,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-359.vue",
           "type": "registry:component"
         }
@@ -7531,6 +8154,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-360.vue",
           "type": "registry:component"
         }
@@ -7549,6 +8173,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-361.vue",
           "type": "registry:component"
         }
@@ -7567,6 +8192,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-362.vue",
           "type": "registry:component"
         }
@@ -7585,6 +8211,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-363.vue",
           "type": "registry:component"
         }
@@ -7600,6 +8227,7 @@
       "registryDependencies": ["https://originui-vue.com/r/hover-card.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-364.vue",
           "type": "registry:component"
         }
@@ -7615,6 +8243,7 @@
       "registryDependencies": ["https://originui-vue.com/r/hover-card.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-365.vue",
           "type": "registry:component"
         }
@@ -7633,6 +8262,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-366.vue",
           "type": "registry:component"
         }
@@ -7651,6 +8281,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-367.vue",
           "type": "registry:component"
         }
@@ -7669,6 +8300,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-368.vue",
           "type": "registry:component"
         }
@@ -7687,6 +8319,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-369.vue",
           "type": "registry:component"
         }
@@ -7705,6 +8338,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-370.vue",
           "type": "registry:component"
         }
@@ -7723,6 +8357,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-371.vue",
           "type": "registry:component"
         }
@@ -7741,6 +8376,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-372.vue",
           "type": "registry:component"
         }
@@ -7759,6 +8395,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-373.vue",
           "type": "registry:component"
         }
@@ -7777,6 +8414,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-374.vue",
           "type": "registry:component"
         }
@@ -7795,6 +8433,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-375.vue",
           "type": "registry:component"
         }
@@ -7813,6 +8452,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-376.vue",
           "type": "registry:component"
         }
@@ -7832,6 +8472,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-377.vue",
           "type": "registry:component"
         }
@@ -7850,6 +8491,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-378.vue",
           "type": "registry:component"
         }
@@ -7868,6 +8510,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-379.vue",
           "type": "registry:component"
         }
@@ -7886,6 +8529,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-380.vue",
           "type": "registry:component"
         }
@@ -7906,6 +8550,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-381.vue",
           "type": "registry:component"
         }
@@ -7925,6 +8570,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-382.vue",
           "type": "registry:component"
         }
@@ -7944,6 +8590,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-383.vue",
           "type": "registry:component"
         }
@@ -7962,6 +8609,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-384.vue",
           "type": "registry:component"
         }
@@ -7980,6 +8628,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-385.vue",
           "type": "registry:component"
         }
@@ -7998,6 +8647,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-386.vue",
           "type": "registry:component"
         }
@@ -8018,6 +8668,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-387.vue",
           "type": "registry:component"
         }
@@ -8037,6 +8688,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-388.vue",
           "type": "registry:component"
         }
@@ -8055,6 +8707,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-389.vue",
           "type": "registry:component"
         }
@@ -8070,6 +8723,7 @@
       "registryDependencies": ["https://originui-vue.com/r/avatar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-390.vue",
           "type": "registry:component"
         }
@@ -8085,6 +8739,7 @@
       "registryDependencies": ["https://originui-vue.com/r/avatar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-391.vue",
           "type": "registry:component"
         }
@@ -8100,6 +8755,7 @@
       "registryDependencies": ["https://originui-vue.com/r/avatar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-392.vue",
           "type": "registry:component"
         }
@@ -8115,6 +8771,7 @@
       "registryDependencies": ["https://originui-vue.com/r/avatar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-393.vue",
           "type": "registry:component"
         }
@@ -8130,6 +8787,7 @@
       "registryDependencies": ["https://originui-vue.com/r/avatar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-394.vue",
           "type": "registry:component"
         }
@@ -8145,6 +8803,7 @@
       "registryDependencies": ["https://originui-vue.com/r/avatar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-395.vue",
           "type": "registry:component"
         }
@@ -8160,6 +8819,7 @@
       "registryDependencies": ["https://originui-vue.com/r/avatar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-396.vue",
           "type": "registry:component"
         }
@@ -8175,6 +8835,7 @@
       "registryDependencies": ["https://originui-vue.com/r/avatar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-397.vue",
           "type": "registry:component"
         }
@@ -8193,6 +8854,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-398.vue",
           "type": "registry:component"
         }
@@ -8211,6 +8873,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-399.vue",
           "type": "registry:component"
         }
@@ -8225,6 +8888,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-400.vue",
           "type": "registry:component"
         }
@@ -8239,6 +8903,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-401.vue",
           "type": "registry:component"
         }
@@ -8253,6 +8918,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-402.vue",
           "type": "registry:component"
         }
@@ -8267,6 +8933,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-403.vue",
           "type": "registry:component"
         }
@@ -8281,6 +8948,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-404.vue",
           "type": "registry:component"
         }
@@ -8295,6 +8963,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-405.vue",
           "type": "registry:component"
         }
@@ -8309,6 +8978,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-406.vue",
           "type": "registry:component"
         }
@@ -8323,6 +8993,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-407.vue",
           "type": "registry:component"
         }
@@ -8337,6 +9008,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-408.vue",
           "type": "registry:component"
         }
@@ -8352,6 +9024,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-409.vue",
           "type": "registry:component"
         }
@@ -8367,6 +9040,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-410.vue",
           "type": "registry:component"
         }
@@ -8382,6 +9056,7 @@
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-411.vue",
           "type": "registry:component"
         }
@@ -8396,6 +9071,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-412.vue",
           "type": "registry:component"
         }
@@ -8411,6 +9087,7 @@
       "registryDependencies": ["https://originui-vue.com/r/badge.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-413.vue",
           "type": "registry:component"
         }
@@ -8426,6 +9103,7 @@
       "registryDependencies": ["https://originui-vue.com/r/badge.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-414.vue",
           "type": "registry:component"
         }
@@ -8441,6 +9119,7 @@
       "registryDependencies": ["https://originui-vue.com/r/badge.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-415.vue",
           "type": "registry:component"
         }
@@ -8456,6 +9135,7 @@
       "registryDependencies": ["https://originui-vue.com/r/badge.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-416.vue",
           "type": "registry:component"
         }
@@ -8471,6 +9151,7 @@
       "registryDependencies": ["https://originui-vue.com/r/badge.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-417.vue",
           "type": "registry:component"
         }
@@ -8486,6 +9167,7 @@
       "registryDependencies": ["https://originui-vue.com/r/badge.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-418.vue",
           "type": "registry:component"
         }
@@ -8501,6 +9183,7 @@
       "registryDependencies": ["https://originui-vue.com/r/badge.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-419.vue",
           "type": "registry:component"
         }
@@ -8516,6 +9199,7 @@
       "registryDependencies": ["https://originui-vue.com/r/badge.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-420.vue",
           "type": "registry:component"
         }
@@ -8531,6 +9215,7 @@
       "registryDependencies": ["https://originui-vue.com/r/badge.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-421.vue",
           "type": "registry:component"
         }
@@ -8546,6 +9231,7 @@
       "registryDependencies": ["https://originui-vue.com/r/badge.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-422.vue",
           "type": "registry:component"
         }
@@ -8561,6 +9247,7 @@
       "registryDependencies": ["https://originui-vue.com/r/badge.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-423.vue",
           "type": "registry:component"
         }
@@ -8575,6 +9262,7 @@
       "type": "registry:component",
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-424.vue",
           "type": "registry:component"
         }
@@ -8590,6 +9278,7 @@
       "registryDependencies": ["https://originui-vue.com/r/badge.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-425.vue",
           "type": "registry:component"
         }
@@ -8605,6 +9294,7 @@
       "registryDependencies": ["https://originui-vue.com/r/tabs.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-426.vue",
           "type": "registry:component"
         }
@@ -8621,6 +9311,7 @@
       "registryDependencies": ["https://originui-vue.com/r/tabs.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-427.vue",
           "type": "registry:component"
         }
@@ -8637,6 +9328,7 @@
       "registryDependencies": ["https://originui-vue.com/r/tabs.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-428.vue",
           "type": "registry:component"
         }
@@ -8653,6 +9345,7 @@
       "registryDependencies": ["https://originui-vue.com/r/tabs.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-429.vue",
           "type": "registry:component"
         }
@@ -8669,6 +9362,7 @@
       "registryDependencies": ["https://originui-vue.com/r/tabs.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-430.vue",
           "type": "registry:component"
         }
@@ -8685,6 +9379,7 @@
       "registryDependencies": ["https://originui-vue.com/r/tabs.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-431.vue",
           "type": "registry:component"
         }
@@ -8701,6 +9396,7 @@
       "registryDependencies": ["https://originui-vue.com/r/tabs.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-432.vue",
           "type": "registry:component"
         }
@@ -8720,6 +9416,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-433.vue",
           "type": "registry:component"
         }
@@ -8739,6 +9436,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-434.vue",
           "type": "registry:component"
         }
@@ -8758,6 +9456,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-435.vue",
           "type": "registry:component"
         }
@@ -8777,6 +9476,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-436.vue",
           "type": "registry:component"
         }
@@ -8797,6 +9497,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-437.vue",
           "type": "registry:component"
         }
@@ -8813,6 +9514,7 @@
       "registryDependencies": ["https://originui-vue.com/r/tabs.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-438.vue",
           "type": "registry:component"
         }
@@ -8829,6 +9531,7 @@
       "registryDependencies": ["https://originui-vue.com/r/tabs.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-439.vue",
           "type": "registry:component"
         }
@@ -8848,6 +9551,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-440.vue",
           "type": "registry:component"
         }
@@ -8867,6 +9571,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-441.vue",
           "type": "registry:component"
         }
@@ -8883,6 +9588,7 @@
       "registryDependencies": ["https://originui-vue.com/r/tabs.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-442.vue",
           "type": "registry:component"
         }
@@ -8899,6 +9605,7 @@
       "registryDependencies": ["https://originui-vue.com/r/tabs.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-443.vue",
           "type": "registry:component"
         }
@@ -8915,6 +9622,7 @@
       "registryDependencies": ["https://originui-vue.com/r/tabs.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-444.vue",
           "type": "registry:component"
         }
@@ -8931,6 +9639,7 @@
       "registryDependencies": ["https://originui-vue.com/r/tabs.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-445.vue",
           "type": "registry:component"
         }
@@ -8950,6 +9659,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-446.vue",
           "type": "registry:component"
         }
@@ -8969,6 +9679,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-447.vue",
           "type": "registry:component"
         }
@@ -8985,6 +9696,7 @@
       "registryDependencies": ["https://originui-vue.com/r/breadcrumb.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-448.vue",
           "type": "registry:component"
         }
@@ -9001,6 +9713,7 @@
       "registryDependencies": ["https://originui-vue.com/r/breadcrumb.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-449.vue",
           "type": "registry:component"
         }
@@ -9017,6 +9730,7 @@
       "registryDependencies": ["https://originui-vue.com/r/breadcrumb.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-450.vue",
           "type": "registry:component"
         }
@@ -9033,6 +9747,7 @@
       "registryDependencies": ["https://originui-vue.com/r/breadcrumb.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-451.vue",
           "type": "registry:component"
         }
@@ -9049,6 +9764,7 @@
       "registryDependencies": ["https://originui-vue.com/r/breadcrumb.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-452.vue",
           "type": "registry:component"
         }
@@ -9065,6 +9781,7 @@
       "registryDependencies": ["https://originui-vue.com/r/breadcrumb.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-453.vue",
           "type": "registry:component"
         }
@@ -9084,6 +9801,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-454.vue",
           "type": "registry:component"
         }
@@ -9102,6 +9820,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-455.vue",
           "type": "registry:component"
         }
@@ -9120,6 +9839,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-456.vue",
           "type": "registry:component"
         }
@@ -9135,6 +9855,7 @@
       "registryDependencies": ["https://originui-vue.com/r/pagination.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-457.vue",
           "type": "registry:component"
         }
@@ -9153,6 +9874,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-458.vue",
           "type": "registry:component"
         }
@@ -9168,6 +9890,7 @@
       "registryDependencies": ["https://originui-vue.com/r/pagination.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-459.vue",
           "type": "registry:component"
         }
@@ -9183,6 +9906,7 @@
       "registryDependencies": ["https://originui-vue.com/r/pagination.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-460.vue",
           "type": "registry:component"
         }
@@ -9201,6 +9925,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-461.vue",
           "type": "registry:component"
         }
@@ -9219,6 +9944,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-462.vue",
           "type": "registry:component"
         }
@@ -9238,6 +9964,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-463.vue",
           "type": "registry:component"
         }
@@ -9256,6 +9983,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-464.vue",
           "type": "registry:component"
         }
@@ -9275,6 +10003,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-465.vue",
           "type": "registry:component"
         }
@@ -9290,6 +10019,7 @@
       "registryDependencies": ["https://originui-vue.com/r/table.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-466.vue",
           "type": "registry:component"
         }
@@ -9305,6 +10035,7 @@
       "registryDependencies": ["https://originui-vue.com/r/table.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-467.vue",
           "type": "registry:component"
         }
@@ -9320,6 +10051,7 @@
       "registryDependencies": ["https://originui-vue.com/r/table.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-468.vue",
           "type": "registry:component"
         }
@@ -9335,6 +10067,7 @@
       "registryDependencies": ["https://originui-vue.com/r/table.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-469.vue",
           "type": "registry:component"
         }
@@ -9350,6 +10083,7 @@
       "registryDependencies": ["https://originui-vue.com/r/table.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-470.vue",
           "type": "registry:component"
         }
@@ -9365,6 +10099,7 @@
       "registryDependencies": ["https://originui-vue.com/r/table.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-471.vue",
           "type": "registry:component"
         }
@@ -9383,6 +10118,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-472.vue",
           "type": "registry:component"
         }
@@ -9401,6 +10137,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-473.vue",
           "type": "registry:component"
         }
@@ -9416,6 +10153,7 @@
       "registryDependencies": ["https://originui-vue.com/r/table.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-474.vue",
           "type": "registry:component"
         }
@@ -9431,6 +10169,7 @@
       "registryDependencies": ["https://originui-vue.com/r/table.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-475.vue",
           "type": "registry:component"
         }
@@ -9446,6 +10185,7 @@
       "registryDependencies": ["https://originui-vue.com/r/table.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-476.vue",
           "type": "registry:component"
         }
@@ -9466,6 +10206,7 @@
       "dependencies": ["@tanstack/react-table"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-477.vue",
           "type": "registry:component"
         }
@@ -9488,6 +10229,7 @@
       "dependencies": ["@tanstack/react-table"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-478.vue",
           "type": "registry:component"
         }
@@ -9514,6 +10256,7 @@
       "dependencies": ["@tanstack/react-table"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-479.vue",
           "type": "registry:component"
         }
@@ -9534,6 +10277,7 @@
       "dependencies": ["@tanstack/react-table"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-480.vue",
           "type": "registry:component"
         }
@@ -9560,6 +10304,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-481.vue",
           "type": "registry:component"
         }
@@ -9581,6 +10326,7 @@
       "dependencies": ["@tanstack/react-table"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-482.vue",
           "type": "registry:component"
         }
@@ -9613,6 +10359,7 @@
       "dependencies": ["@tanstack/react-table"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-483.vue",
           "type": "registry:component"
         }
@@ -9645,6 +10392,7 @@
       "dependencies": ["@tanstack/react-table"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-484.vue",
           "type": "registry:component"
         }
@@ -9682,6 +10430,7 @@
       "dependencies": ["@tanstack/react-table"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-485.vue",
           "type": "registry:component"
         }
@@ -9711,6 +10460,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-486.vue",
           "type": "registry:component"
         }
@@ -9726,6 +10476,7 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-487.vue",
           "type": "registry:component"
         }
@@ -9742,6 +10493,7 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-488.vue",
           "type": "registry:component"
         }
@@ -9758,6 +10510,7 @@
       "dependencies": ["reka-ui"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-489.vue",
           "type": "registry:component"
         }
@@ -9779,6 +10532,7 @@
       "registryDependencies": ["https://originui-vue.com/r/calendar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-490.vue",
           "type": "registry:component"
         }
@@ -9794,6 +10548,7 @@
       "registryDependencies": ["https://originui-vue.com/r/calendar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-491.vue",
           "type": "registry:component"
         }
@@ -9809,6 +10564,7 @@
       "registryDependencies": ["https://originui-vue.com/r/calendar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-492.vue",
           "type": "registry:component"
         }
@@ -9830,6 +10586,7 @@
       "registryDependencies": ["https://originui-vue.com/r/calendar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-493.vue",
           "type": "registry:component"
         }
@@ -9845,6 +10602,7 @@
       "registryDependencies": ["https://originui-vue.com/r/calendar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-494.vue",
           "type": "registry:component"
         }
@@ -9860,6 +10618,7 @@
       "registryDependencies": ["https://originui-vue.com/r/calendar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-495.vue",
           "type": "registry:component"
         }
@@ -9875,6 +10634,7 @@
       "registryDependencies": ["https://originui-vue.com/r/calendar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-496.vue",
           "type": "registry:component"
         }
@@ -9893,6 +10653,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-497.vue",
           "type": "registry:component"
         }
@@ -9911,6 +10672,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-498.vue",
           "type": "registry:component"
         }
@@ -9926,6 +10688,7 @@
       "registryDependencies": ["https://originui-vue.com/r/calendar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-499.vue",
           "type": "registry:component"
         }
@@ -9944,6 +10707,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-500.vue",
           "type": "registry:component"
         }
@@ -9962,6 +10726,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-501.vue",
           "type": "registry:component"
         }
@@ -9981,6 +10746,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-502.vue",
           "type": "registry:component"
         }
@@ -10000,6 +10766,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-503.vue",
           "type": "registry:component"
         }
@@ -10020,6 +10787,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-504.vue",
           "type": "registry:component"
         }
@@ -10039,6 +10807,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-505.vue",
           "type": "registry:component"
         }
@@ -10058,6 +10827,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-506.vue",
           "type": "registry:component"
         }
@@ -10077,6 +10847,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-507.vue",
           "type": "registry:component"
         }
@@ -10099,6 +10870,7 @@
       "registryDependencies": ["https://originui-vue.com/r/calendar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-508.vue",
           "type": "registry:component"
         }
@@ -10115,6 +10887,7 @@
       "registryDependencies": ["https://originui-vue.com/r/calendar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-509.vue",
           "type": "registry:component"
         }
@@ -10131,6 +10904,7 @@
       "registryDependencies": ["https://originui-vue.com/r/calendar.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-510.vue",
           "type": "registry:component"
         }
@@ -10152,6 +10926,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-511.vue",
           "type": "registry:component"
         }
@@ -10171,6 +10946,7 @@
       ],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-512.vue",
           "type": "registry:component"
         }
@@ -10185,6 +10961,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-513.vue",
           "type": "registry:component"
         }
@@ -10200,6 +10977,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-514.vue",
           "type": "registry:component"
         }
@@ -10215,6 +10993,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-515.vue",
           "type": "registry:component"
         }
@@ -10230,6 +11009,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-516.vue",
           "type": "registry:component"
         }
@@ -10245,6 +11025,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-517.vue",
           "type": "registry:component"
         }
@@ -10260,6 +11041,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-518.vue",
           "type": "registry:component"
         }
@@ -10275,6 +11057,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-519.vue",
           "type": "registry:component"
         }
@@ -10290,6 +11073,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-520.vue",
           "type": "registry:component"
         }
@@ -10305,6 +11089,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-521.vue",
           "type": "registry:component"
         }
@@ -10320,6 +11105,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-522.vue",
           "type": "registry:component"
         }
@@ -10335,6 +11121,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-523.vue",
           "type": "registry:component"
         }
@@ -10350,6 +11137,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-524.vue",
           "type": "registry:component"
         }
@@ -10365,6 +11153,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-525.vue",
           "type": "registry:component"
         }
@@ -10380,6 +11169,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-526.vue",
           "type": "registry:component"
         }
@@ -10395,6 +11185,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-527.vue",
           "type": "registry:component"
         }
@@ -10410,6 +11201,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-528.vue",
           "type": "registry:component"
         }
@@ -10425,6 +11217,7 @@
       "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-529.vue",
           "type": "registry:component"
         }
@@ -10440,6 +11233,7 @@
       "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-530.vue",
           "type": "registry:component"
         }
@@ -10455,6 +11249,7 @@
       "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-531.vue",
           "type": "registry:component"
         }
@@ -10470,6 +11265,7 @@
       "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-532.vue",
           "type": "registry:component"
         }
@@ -10485,6 +11281,7 @@
       "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-533.vue",
           "type": "registry:component"
         }
@@ -10500,6 +11297,7 @@
       "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-534.vue",
           "type": "registry:component"
         }
@@ -10515,6 +11313,7 @@
       "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-535.vue",
           "type": "registry:component"
         }
@@ -10530,6 +11329,7 @@
       "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-536.vue",
           "type": "registry:component"
         }
@@ -10545,6 +11345,7 @@
       "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-537.vue",
           "type": "registry:component"
         }
@@ -10560,6 +11361,7 @@
       "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-538.vue",
           "type": "registry:component"
         }
@@ -10575,6 +11377,7 @@
       "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-539.vue",
           "type": "registry:component"
         }
@@ -10590,6 +11393,7 @@
       "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-540.vue",
           "type": "registry:component"
         }
@@ -10605,6 +11409,7 @@
       "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
       "files": [
         {
+          "target": "",
           "path": "app/registry/default/components/comp-541.vue",
           "type": "registry:component"
         }

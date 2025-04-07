@@ -2,54 +2,61 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "toast",
   "type": "registry:ui",
-  "dependencies": [
-    "reka-ui"
-  ],
+  "dependencies": ["reka-ui"],
   "files": [
     {
-      "path": "app/registry/default/ui/toast/Toast.vue",
+      "path": "ui/toast/Toast.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { ToastRoot, type ToastRootEmits, useForwardPropsEmits } from \"reka-ui\";\nimport { computed } from \"vue\";\nimport { type ToastProps, toastVariants } from \".\";\n\nconst props = defineProps<ToastProps>();\n\nconst emits = defineEmits<ToastRootEmits>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwarded = useForwardPropsEmits(delegatedProps, emits);\n</script>\n\n<template>\n  <ToastRoot\n    v-bind=\"forwarded\"\n    :class=\"cn(toastVariants({ variant }), props.class)\"\n    @update:open=\"onOpenChange\"\n  >\n    <slot />\n  </ToastRoot>\n</template>\n",
-      "type": "registry:ui"
+      "type": "registry:ui",
+      "target": ""
     },
     {
-      "path": "app/registry/default/ui/toast/ToastAction.vue",
+      "path": "ui/toast/ToastAction.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { ToastAction, type ToastActionProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  ToastActionProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <ToastAction\n    v-bind=\"delegatedProps\"\n    :class=\"\n      cn(\n        'ring-offset-background hover:bg-secondary focus:ring-ring group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none disabled:opacity-50',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </ToastAction>\n</template>\n",
-      "type": "registry:ui"
+      "type": "registry:ui",
+      "target": ""
     },
     {
-      "path": "app/registry/default/ui/toast/ToastClose.vue",
+      "path": "ui/toast/ToastClose.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { X } from \"lucide-vue-next\";\nimport { ToastClose, type ToastCloseProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  ToastCloseProps & {\n    class?: HTMLAttributes[\"class\"];\n  }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <ToastClose\n    v-bind=\"delegatedProps\"\n    :class=\"\n      cn(\n        'text-foreground/50 hover:text-foreground absolute top-2 right-2 rounded-md p-1 opacity-0 transition-opacity group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 focus:opacity-100 focus:ring-2 focus:outline-none group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600',\n        props.class,\n      )\n    \"\n  >\n    <X class=\"h-4 w-4\" />\n  </ToastClose>\n</template>\n",
-      "type": "registry:ui"
+      "type": "registry:ui",
+      "target": ""
     },
     {
-      "path": "app/registry/default/ui/toast/ToastDescription.vue",
+      "path": "ui/toast/ToastDescription.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { ToastDescription, type ToastDescriptionProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  ToastDescriptionProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <ToastDescription\n    :class=\"cn('text-sm opacity-90', props.class)\"\n    v-bind=\"delegatedProps\"\n  >\n    <slot />\n  </ToastDescription>\n</template>\n",
-      "type": "registry:ui"
+      "type": "registry:ui",
+      "target": ""
     },
     {
-      "path": "app/registry/default/ui/toast/ToastProvider.vue",
+      "path": "ui/toast/ToastProvider.vue",
       "content": "<script setup lang=\"ts\">\nimport { ToastProvider, type ToastProviderProps } from \"reka-ui\";\n\nconst props = defineProps<ToastProviderProps>();\n</script>\n\n<template>\n  <ToastProvider v-bind=\"props\">\n    <slot />\n  </ToastProvider>\n</template>\n",
-      "type": "registry:ui"
+      "type": "registry:ui",
+      "target": ""
     },
     {
-      "path": "app/registry/default/ui/toast/ToastTitle.vue",
+      "path": "ui/toast/ToastTitle.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { ToastTitle, type ToastTitleProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  ToastTitleProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <ToastTitle\n    v-bind=\"delegatedProps\"\n    :class=\"cn('text-sm font-semibold', props.class)\"\n  >\n    <slot />\n  </ToastTitle>\n</template>\n",
-      "type": "registry:ui"
+      "type": "registry:ui",
+      "target": ""
     },
     {
-      "path": "app/registry/default/ui/toast/ToastViewport.vue",
+      "path": "ui/toast/ToastViewport.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { ToastViewport, type ToastViewportProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  ToastViewportProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <ToastViewport\n    v-bind=\"delegatedProps\"\n    :class=\"\n      cn(\n        'fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:top-auto sm:right-0 sm:bottom-0 sm:flex-col md:max-w-[420px]',\n        props.class,\n      )\n    \"\n  />\n</template>\n",
-      "type": "registry:ui"
+      "type": "registry:ui",
+      "target": ""
     },
     {
-      "path": "app/registry/default/ui/toast/Toaster.vue",
+      "path": "ui/toast/Toaster.vue",
       "content": "<script setup lang=\"ts\">\nimport { isVNode } from \"vue\";\nimport {\n  Toast,\n  ToastClose,\n  ToastDescription,\n  ToastProvider,\n  ToastTitle,\n  ToastViewport,\n} from \".\";\nimport { useToast } from \"./use-toast\";\n\nconst { toasts } = useToast();\n</script>\n\n<template>\n  <ToastProvider>\n    <Toast v-for=\"toast in toasts\" :key=\"toast.id\" v-bind=\"toast\">\n      <div class=\"grid gap-1\">\n        <ToastTitle v-if=\"toast.title\">\n          {{ toast.title }}\n        </ToastTitle>\n        <template v-if=\"toast.description\">\n          <ToastDescription v-if=\"isVNode(toast.description)\">\n            <component :is=\"toast.description\" />\n          </ToastDescription>\n          <ToastDescription v-else>\n            {{ toast.description }}\n          </ToastDescription>\n        </template>\n        <ToastClose />\n      </div>\n      <component :is=\"toast.action\" />\n    </Toast>\n    <ToastViewport />\n  </ToastProvider>\n</template>\n",
-      "type": "registry:ui"
+      "type": "registry:ui",
+      "target": ""
     },
     {
-      "path": "app/registry/default/ui/toast/index.ts",
+      "path": "ui/toast/index.ts",
       "content": "import type { ToastRootProps } from \"reka-ui\";\nimport type { HTMLAttributes } from \"vue\";\n\nexport { default as Toast } from \"./Toast.vue\";\nexport { default as ToastAction } from \"./ToastAction.vue\";\nexport { default as ToastClose } from \"./ToastClose.vue\";\nexport { default as ToastDescription } from \"./ToastDescription.vue\";\nexport { default as Toaster } from \"./Toaster.vue\";\nexport { default as ToastProvider } from \"./ToastProvider.vue\";\nexport { default as ToastTitle } from \"./ToastTitle.vue\";\nexport { default as ToastViewport } from \"./ToastViewport.vue\";\nexport { toast, useToast } from \"./use-toast\";\n\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nexport const toastVariants = cva(\n  \"group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[--reka-toast-swipe-end-x] data-[swipe=move]:translate-x-[--reka-toast-swipe-move-x] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full\",\n  {\n    variants: {\n      variant: {\n        default: \"border bg-background text-foreground\",\n        destructive:\n          \"destructive group border-destructive bg-destructive text-destructive-foreground\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n    },\n  },\n);\n\ntype ToastVariants = VariantProps<typeof toastVariants>;\n\nexport interface ToastProps extends ToastRootProps {\n  class?: HTMLAttributes[\"class\"];\n  variant?: ToastVariants[\"variant\"];\n  onOpenChange?: ((value: boolean) => void) | undefined;\n}\n",
-      "type": "registry:ui"
+      "type": "registry:ui",
+      "target": ""
     }
   ]
 }

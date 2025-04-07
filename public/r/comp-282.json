@@ -2,21 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-282",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/button.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-282.vue",
+      "path": "components/comp-282.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideInfo, LucideX } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <!-- To make the notification fixed, add classes like `fixed bottom-4 right-4` to the container element. -->\n  <div\n    class=\"bg-background z-50 max-w-[400px] rounded-md border px-4 py-3 shadow-lg\"\n  >\n    <div class=\"flex gap-2\">\n      <p class=\"grow text-sm\">\n        <LucideInfo\n          class=\"me-3 -mt-0.5 inline-flex size-4 text-blue-500\"\n          aria-hidden=\"true\"\n        />\n        Just a quick note!\n      </p>\n      <Button\n        variant=\"ghost\"\n        class=\"group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent\"\n        aria-label=\"Close notification\"\n      >\n        <LucideX\n          class=\"size-4 opacity-60 transition-opacity group-hover:opacity-100\"\n          aria-hidden=\"true\"\n        />\n      </Button>\n    </div>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "notification",
-      "info"
-    ],
+    "tags": ["notification", "info"],
     "colSpan": 2,
     "style": 1
   }

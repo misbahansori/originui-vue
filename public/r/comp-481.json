@@ -16,19 +16,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-481.vue",
+      "path": "components/comp-481.vue",
       "content": "<template></template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "table",
-      "tanstack",
-      "flag",
-      "sort",
-      "drag and drop"
-    ],
+    "tags": ["table", "tanstack", "flag", "sort", "drag and drop"],
     "colSpan": 3
   }
 }

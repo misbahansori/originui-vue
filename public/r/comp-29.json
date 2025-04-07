@@ -2,28 +2,20 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-29",
   "type": "registry:component",
-  "dependencies": [
-    "reka-ui",
-    "lucide-vue-next"
-  ],
+  "dependencies": ["reka-ui", "lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/input.json",
     "https://originui-vue.com/r/label.json"
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-29.vue",
+      "path": "components/comp-29.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { LucideChevronDown, LucideChevronUp } from \"lucide-vue-next\";\nimport {\n  NumberFieldDecrement,\n  NumberFieldIncrement,\n  NumberFieldInput,\n  NumberFieldRoot,\n} from \"reka-ui\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst value = ref(99);\n</script>\n\n<template>\n  <div>\n    <div class=\"*:not-first:mt-2\">\n      <Label :for=\"id\">Number input with chevrons</Label>\n      <NumberFieldRoot\n        :id=\"id\"\n        :min=\"0\"\n        v-model=\"value\"\n        :formatOptions=\"{\n          style: 'currency',\n          currency: 'USD',\n          currencySign: 'accounting',\n        }\"\n        class=\"border-input data-focus-within:border-ring data-focus-within:ring-ring/50 data-focus-within:has-aria-invalid:ring-destructive/20 dark:data-focus-within:has-aria-invalid:ring-destructive/40 data-focus-within:has-aria-invalid:border-destructive relative inline-flex h-9 w-full items-center overflow-hidden rounded-md border text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none data-disabled:opacity-50 data-focus-within:ring-[3px]\"\n      >\n        <NumberFieldInput\n          v-model.number=\"value\"\n          class=\"bg-background text-foreground flex-1 px-3 py-2 tabular-nums\"\n        />\n        <div class=\"flex h-[calc(100%+2px)] flex-col\">\n          <NumberFieldIncrement\n            class=\"border-input bg-background text-muted-foreground/80 hover:bg-accent hover:text-foreground -me-px flex h-1/2 w-6 flex-1 items-center justify-center border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50\"\n          >\n            <LucideChevronUp :size=\"12\" aria-hidden=\"true\" />\n          </NumberFieldIncrement>\n          <NumberFieldDecrement\n            class=\"border-input bg-background text-muted-foreground/80 hover:bg-accent hover:text-foreground -me-px -mt-px flex h-1/2 w-6 flex-1 items-center justify-center border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50\"\n          >\n            <LucideChevronDown :size=\"12\" aria-hidden=\"true\" />\n          </NumberFieldDecrement>\n        </div>\n      </NumberFieldRoot>\n    </div>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with reka-ui\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/docs/components/number-field\"\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n      >\n        NumberField\n      </a>\n    </p>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "button",
-      "number",
-      "react aria"
-    ]
+    "tags": ["input", "label", "button", "number", "react aria"]
   }
 }

@@ -2,22 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-445",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/tabs.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/tabs.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-445.vue",
+      "path": "components/comp-445.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@/registry/default/ui/tabs\";\n</script>\n\n<template>\n  <Tabs defaultValue=\"tab-1\" orientation=\"vertical\" class=\"w-full flex-row\">\n    <TabsList class=\"flex-col gap-1 bg-transparent py-0\">\n      <TabsTrigger\n        value=\"tab-1\"\n        class=\"data-[state=active]:bg-muted w-full justify-start data-[state=active]:shadow-none\"\n      >\n        Overview\n      </TabsTrigger>\n      <TabsTrigger\n        value=\"tab-2\"\n        class=\"data-[state=active]:bg-muted w-full justify-start data-[state=active]:shadow-none\"\n      >\n        Projects\n      </TabsTrigger>\n      <TabsTrigger\n        value=\"tab-3\"\n        class=\"data-[state=active]:bg-muted w-full justify-start data-[state=active]:shadow-none\"\n      >\n        Packages\n      </TabsTrigger>\n    </TabsList>\n    <div class=\"grow rounded-md border text-start\">\n      <TabsContent value=\"tab-1\">\n        <p class=\"text-muted-foreground px-4 py-3 text-xs\">Content for Tab 1</p>\n      </TabsContent>\n      <TabsContent value=\"tab-2\">\n        <p class=\"text-muted-foreground px-4 py-3 text-xs\">Content for Tab 2</p>\n      </TabsContent>\n      <TabsContent value=\"tab-3\">\n        <p class=\"text-muted-foreground px-4 py-3 text-xs\">Content for Tab 3</p>\n      </TabsContent>\n    </div>\n  </Tabs>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "tabs",
-      "vertical tabs",
-      "radix"
-    ],
+    "tags": ["tabs", "vertical tabs", "radix"],
     "colSpan": 2,
     "style": 2
   }

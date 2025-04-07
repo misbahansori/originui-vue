@@ -2,19 +2,19 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "sonner",
   "type": "registry:ui",
-  "dependencies": [
-    "vue-sonner"
-  ],
+  "dependencies": ["vue-sonner"],
   "files": [
     {
-      "path": "app/registry/default/ui/sonner/Sonner.vue",
+      "path": "ui/sonner/Sonner.vue",
       "content": "<script lang=\"ts\" setup>\nimport { Toaster as Sonner, type ToasterProps } from \"vue-sonner\";\n\nconst props = defineProps<ToasterProps>();\n</script>\n\n<template>\n  <Sonner\n    class=\"toaster group\"\n    v-bind=\"props\"\n    :toast-options=\"{\n      classes: {\n        toast:\n          'group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg',\n        description: 'group-[.toast]:text-muted-foreground',\n        actionButton:\n          'group-[.toast]:bg-primary group-[.toast]:text-primary-foreground',\n        cancelButton:\n          'group-[.toast]:bg-muted group-[.toast]:text-muted-foreground',\n      },\n    }\"\n  />\n</template>\n",
-      "type": "registry:ui"
+      "type": "registry:ui",
+      "target": ""
     },
     {
-      "path": "app/registry/default/ui/sonner/index.ts",
+      "path": "ui/sonner/index.ts",
       "content": "export { default as Toaster } from \"./Sonner.vue\";\n",
-      "type": "registry:ui"
+      "type": "registry:ui",
+      "target": ""
     }
   ]
 }

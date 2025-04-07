@@ -8,16 +8,13 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-221.vue",
+      "path": "components/comp-221.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/default/ui/select\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Select with left text</Label>\n    <Select default-value=\"1\">\n      <SelectTrigger :id=\"id\">\n        <span>\n          Language:\n          <SelectValue placeholder=\"Select a language\" />\n        </span>\n      </SelectTrigger>\n      <SelectContent>\n        <SelectItem value=\"1\">Javascript</SelectItem>\n        <SelectItem value=\"2\">Bash</SelectItem>\n      </SelectContent>\n    </Select>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "select",
-      "radix"
-    ]
+    "tags": ["label", "select", "radix"]
   }
 }

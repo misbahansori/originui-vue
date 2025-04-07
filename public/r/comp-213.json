@@ -8,16 +8,13 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-213.vue",
+      "path": "components/comp-213.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/default/ui/select\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Select with options groups</Label>\n    <Select default-value=\"1\">\n      <SelectTrigger :id=\"id\">\n        <SelectValue placeholder=\"Select framework\" />\n      </SelectTrigger>\n      <SelectContent>\n        <SelectGroup>\n          <SelectLabel>Frontend</SelectLabel>\n          <SelectItem value=\"1\">Vue</SelectItem>\n          <SelectItem value=\"2\">Nuxt</SelectItem>\n          <SelectItem value=\"3\">Svelte</SelectItem>\n        </SelectGroup>\n        <SelectGroup>\n          <SelectLabel>Backend</SelectLabel>\n          <SelectItem value=\"4\">Node.js</SelectItem>\n          <SelectItem value=\"5\">Python</SelectItem>\n          <SelectItem value=\"6\">Java</SelectItem>\n        </SelectGroup>\n      </SelectContent>\n    </Select>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "select",
-      "radix"
-    ]
+    "tags": ["label", "select", "radix"]
   }
 }

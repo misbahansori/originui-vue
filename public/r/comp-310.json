@@ -2,22 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-310",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/button.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-310.vue",
+      "path": "components/comp-310.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { useCountdown } from \"@vueuse/core\";\nimport { LucideTicketPercent, LucideX } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\ninterface TimeLeft {\n  days: number;\n  hours: number;\n  minutes: number;\n  seconds: number;\n  isExpired: boolean;\n}\n\nconst saleEndDate = new Date(\n  Date.now() + 9 * 60 * 60 * 1000 + 45 * 60 * 1000 + 24 * 1000,\n); // Setting 9h 45m 24s from now for demo purposes\n\nconst isVisible = ref(true);\nconst timeLeft = ref<TimeLeft>({\n  days: 0,\n  hours: 0,\n  minutes: 0,\n  seconds: 0,\n  isExpired: false,\n});\n\nconst totalSeconds = Math.max(\n  0,\n  Math.floor((saleEndDate.getTime() - Date.now()) / 1000),\n);\n\nconst { remaining } = useCountdown(totalSeconds, {\n  onTick() {\n    const seconds = remaining.value;\n    if (seconds <= 0) {\n      timeLeft.value = {\n        days: 0,\n        hours: 0,\n        minutes: 0,\n        seconds: 0,\n        isExpired: true,\n      };\n      return;\n    }\n\n    timeLeft.value = {\n      days: Math.floor(seconds / (60 * 60 * 24)),\n      hours: Math.floor((seconds % (60 * 60 * 24)) / (60 * 60)),\n      minutes: Math.floor((seconds % (60 * 60)) / 60),\n      seconds: seconds % 60,\n      isExpired: false,\n    };\n  },\n  immediate: true,\n});\n\nconst hideBanner = () => {\n  isVisible.value = false;\n};\n</script>\n\n<template>\n  <div\n    v-if=\"isVisible && !timeLeft.isExpired\"\n    class=\"dark bg-muted text-foreground px-4 py-3\"\n  >\n    <div class=\"flex gap-2 md:items-center\">\n      <div class=\"flex grow gap-3 md:items-center\">\n        <div\n          class=\"bg-primary/15 flex size-9 shrink-0 items-center justify-center rounded-full max-md:mt-0.5\"\n          aria-hidden=\"true\"\n        >\n          <LucideTicketPercent class=\"size-4 opacity-80\" />\n        </div>\n        <div\n          class=\"flex grow flex-col justify-between gap-3 md:flex-row md:items-center\"\n        >\n          <div class=\"space-y-0.5\">\n            <p class=\"text-sm font-medium\">Black Friday Sale!</p>\n            <p class=\"text-muted-foreground text-sm\">\n              It kicks off today and is available for just 24 hours—don't miss\n              out!\n            </p>\n          </div>\n          <div class=\"flex gap-3 max-md:flex-wrap\">\n            <div\n              class=\"divide-primary-foreground bg-primary/15 flex items-center divide-x rounded-md text-sm tabular-nums\"\n            >\n              <span\n                v-if=\"timeLeft.days > 0\"\n                class=\"flex h-8 items-center justify-center p-2\"\n              >\n                {{ timeLeft.days }}\n                <span class=\"text-muted-foreground\">d</span>\n              </span>\n              <span class=\"flex h-8 items-center justify-center p-2\">\n                {{ timeLeft.hours.toString().padStart(2, \"0\") }}\n                <span class=\"text-muted-foreground\">h</span>\n              </span>\n              <span class=\"flex h-8 items-center justify-center p-2\">\n                {{ timeLeft.minutes.toString().padStart(2, \"0\") }}\n                <span class=\"text-muted-foreground\">m</span>\n              </span>\n              <span class=\"flex h-8 items-center justify-center p-2\">\n                {{ timeLeft.seconds.toString().padStart(2, \"0\") }}\n                <span class=\"text-muted-foreground\">s</span>\n              </span>\n            </div>\n            <Button size=\"sm\" class=\"text-sm\">Shop now</Button>\n          </div>\n        </div>\n      </div>\n      <Button\n        variant=\"ghost\"\n        class=\"group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent\"\n        @click=\"hideBanner\"\n        aria-label=\"Close banner\"\n      >\n        <LucideX\n          class=\"size-4 opacity-60 transition-opacity group-hover:opacity-100\"\n          aria-hidden=\"true\"\n        />\n      </Button>\n    </div>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "banner",
-      "countdown",
-      "sale"
-    ],
+    "tags": ["banner", "countdown", "sale"],
     "colSpan": 3
   }
 }

@@ -2,20 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-517",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/stepper.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-517.vue",
+      "path": "components/comp-517.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Stepper,\n  StepperIndicator,\n  StepperItem,\n  StepperSeparator,\n  StepperTrigger,\n} from \"@/registry/default/ui/stepper\";\nimport { ref } from \"vue\";\n\nconst steps = [1, 2, 3, 4];\nconst currentStep = ref(2);\nconst isLoading = ref(false);\n\nconst handleNextStep = () => {\n  isLoading.value = true;\n  setTimeout(() => {\n    currentStep.value = currentStep.value + 1;\n    isLoading.value = false;\n  }, 1000);\n};\n</script>\n\n<template>\n  <div class=\"mx-auto max-w-xl space-y-8 text-center\">\n    <Stepper v-model=\"currentStep\">\n      <StepperItem\n        v-for=\"step in steps\"\n        :key=\"step\"\n        :step=\"step\"\n        :class=\"step !== steps.length ? 'flex-1' : ''\"\n        :data-loading=\"isLoading && step === currentStep ? 'true' : undefined\"\n      >\n        <StepperTrigger as-child>\n          <StepperIndicator :is-loading=\"isLoading\" />\n        </StepperTrigger>\n        <StepperSeparator v-if=\"step < steps.length\" />\n      </StepperItem>\n    </Stepper>\n    <div class=\"flex justify-center space-x-4\">\n      <Button\n        variant=\"outline\"\n        class=\"w-32\"\n        @click=\"currentStep = currentStep - 1\"\n        :disabled=\"currentStep === 1\"\n      >\n        Prev step\n      </Button>\n      <Button\n        variant=\"outline\"\n        class=\"w-32\"\n        @click=\"handleNextStep\"\n        :disabled=\"currentStep > steps.length\"\n      >\n        Next step\n      </Button>\n    </div>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Controlled stepper with checkmarks and loading state\n    </p>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "stepper"
-    ],
+    "tags": ["stepper"],
     "colSpan": 3
   }
 }

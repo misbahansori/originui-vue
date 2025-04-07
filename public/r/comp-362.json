@@ -8,17 +8,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-362.vue",
+      "path": "components/comp-362.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/registry/default/ui/tooltip\";\n</script>\n\n<template>\n  <TooltipProvider :delay-duration=\"0\">\n    <Tooltip>\n      <TooltipTrigger as-child>\n        <Button variant=\"outline\" size=\"sm\">Chart</Button>\n      </TooltipTrigger>\n      <TooltipContent class=\"py-2\">\n        <div class=\"space-y-2\">\n          <div class=\"text-[13px] font-medium\">Tuesday, Aug 13</div>\n          <div class=\"flex items-center gap-2 text-xs\">\n            <svg\n              width=\"8\"\n              height=\"8\"\n              fill=\"currentColor\"\n              viewBox=\"0 0 8 8\"\n              xmlns=\"http://www.w3.org/2000/svg\"\n              class=\"shrink-0 text-indigo-500\"\n              aria-hidden=\"true\"\n            >\n              <circle cx=\"4\" cy=\"4\" r=\"4\"></circle>\n            </svg>\n            <span class=\"flex grow gap-2\">\n              Sales\n              <span class=\"ml-auto\">$40</span>\n            </span>\n          </div>\n          <div class=\"flex items-center gap-2 text-xs\">\n            <svg\n              width=\"8\"\n              height=\"8\"\n              fill=\"currentColor\"\n              viewBox=\"0 0 8 8\"\n              xmlns=\"http://www.w3.org/2000/svg\"\n              class=\"shrink-0 text-purple-500\"\n              aria-hidden=\"true\"\n            >\n              <circle cx=\"4\" cy=\"4\" r=\"4\"></circle>\n            </svg>\n            <span class=\"flex grow gap-2\">\n              Revenue\n              <span class=\"ml-auto\">$74</span>\n            </span>\n          </div>\n          <div class=\"flex items-center gap-2 text-xs\">\n            <svg\n              width=\"8\"\n              height=\"8\"\n              fill=\"currentColor\"\n              viewBox=\"0 0 8 8\"\n              xmlns=\"http://www.w3.org/2000/svg\"\n              class=\"shrink-0 text-rose-500\"\n              aria-hidden=\"true\"\n            >\n              <circle cx=\"4\" cy=\"4\" r=\"4\"></circle>\n            </svg>\n            <span class=\"flex grow gap-2\">\n              Costs\n              <span class=\"ml-auto\">$410</span>\n            </span>\n          </div>\n        </div>\n      </TooltipContent>\n    </Tooltip>\n  </TooltipProvider>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "tooltip",
-      "chart",
-      "radix"
-    ],
+    "tags": ["tooltip", "chart", "radix"],
     "style": 1
   }
 }

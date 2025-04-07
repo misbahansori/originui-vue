@@ -8,16 +8,13 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-246.vue",
+      "path": "components/comp-246.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport { ref } from \"vue\";\n\nconst value = ref([5]);\nconst max = 12;\nconst skipInterval = 2; // Set to 1 to allow no text skipping\nconst ticks = [...Array(max + 1)].map((_, i) => i);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Slider with ticks</Label>\n    <div>\n      <Slider v-model=\"value\" :max=\"max\" aria-label=\"Slider with ticks\" />\n      <span\n        class=\"text-muted-foreground mt-3 flex w-full items-center justify-between gap-1 px-2.5 text-xs font-medium\"\n        aria-hidden=\"true\"\n      >\n        <span\n          v-for=\"(_, i) in ticks\"\n          :key=\"i\"\n          class=\"flex w-0 flex-col items-center justify-center gap-2\"\n        >\n          <span\n            :class=\"\n              cn(\n                'bg-muted-foreground/70 h-1 w-px',\n                i % skipInterval !== 0 && 'h-0.5',\n              )\n            \"\n          />\n          <span :class=\"cn(i % skipInterval !== 0 && 'opacity-0')\">\n            {{ i }}\n          </span>\n        </span>\n      </span>\n    </div>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "slider",
-      "label",
-      "radix"
-    ]
+    "tags": ["slider", "label", "radix"]
   }
 }

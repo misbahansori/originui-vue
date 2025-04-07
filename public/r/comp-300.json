@@ -2,27 +2,18 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-300",
   "type": "registry:component",
-  "dependencies": [
-    "sonner"
-  ],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
+  "dependencies": ["sonner"],
+  "registryDependencies": ["https://originui-vue.com/r/button.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-300.vue",
+      "path": "components/comp-300.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\n// TODO: Implement the component\n</script>\n\n<template>\n  <Button variant=\"outline\">Custom sonner</Button>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "notification",
-      "toast",
-      "sonner",
-      "success",
-      "radix"
-    ],
+    "tags": ["notification", "toast", "sonner", "success", "radix"],
     "colSpan": 2,
     "style": 1
   }

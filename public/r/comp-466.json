@@ -2,20 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-466",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/table.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/table.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-466.vue",
+      "path": "components/comp-466.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableFooter,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@/registry/default/ui/table\";\n\nconst items = [\n  {\n    id: \"1\",\n    name: \"Alex Thompson\",\n    email: \"alex.t@company.com\",\n    location: \"San Francisco, US\",\n    status: \"Active\",\n    balance: \"$1,250.00\",\n  },\n  {\n    id: \"2\",\n    name: \"Sarah Chen\",\n    email: \"sarah.c@company.com\",\n    location: \"Singapore\",\n    status: \"Active\",\n    balance: \"$600.00\",\n  },\n  {\n    id: \"3\",\n    name: \"James Wilson\",\n    email: \"j.wilson@company.com\",\n    location: \"London, UK\",\n    status: \"Inactive\",\n    balance: \"$650.00\",\n  },\n  {\n    id: \"4\",\n    name: \"Maria Garcia\",\n    email: \"m.garcia@company.com\",\n    location: \"Madrid, Spain\",\n    status: \"Active\",\n    balance: \"$0.00\",\n  },\n  {\n    id: \"5\",\n    name: \"David Kim\",\n    email: \"d.kim@company.com\",\n    location: \"Seoul, KR\",\n    status: \"Active\",\n    balance: \"-$1,000.00\",\n  },\n];\n</script>\n\n<template>\n  <div>\n    <Table>\n      <TableHeader>\n        <TableRow class=\"hover:bg-transparent\">\n          <TableHead>Name</TableHead>\n          <TableHead>Email</TableHead>\n          <TableHead>Location</TableHead>\n          <TableHead>Status</TableHead>\n          <TableHead class=\"text-right\">Balance</TableHead>\n        </TableRow>\n      </TableHeader>\n      <TableBody>\n        <TableRow v-for=\"item in items\" :key=\"item.id\">\n          <TableCell class=\"font-medium\">{{ item.name }}</TableCell>\n          <TableCell>{{ item.email }}</TableCell>\n          <TableCell>{{ item.location }}</TableCell>\n          <TableCell>{{ item.status }}</TableCell>\n          <TableCell class=\"text-right\">{{ item.balance }}</TableCell>\n        </TableRow>\n      </TableBody>\n      <TableFooter class=\"bg-transparent\">\n        <TableRow class=\"hover:bg-transparent\">\n          <TableCell :colspan=\"4\">Total</TableCell>\n          <TableCell class=\"text-right\">$2,500.00</TableCell>\n        </TableRow>\n      </TableFooter>\n    </Table>\n    <p class=\"text-muted-foreground mt-4 text-center text-sm\">Basic table</p>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "table"
-    ],
+    "tags": ["table"],
     "colSpan": 3
   }
 }

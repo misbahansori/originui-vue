@@ -10,18 +10,13 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-511.vue",
+      "path": "components/comp-511.vue",
       "content": "<template></template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "calendar",
-      "date",
-      "button",
-      "picker",
-      "react daypicker"
-    ]
+    "tags": ["calendar", "date", "button", "picker", "react daypicker"]
   }
 }

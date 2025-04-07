@@ -2,14 +2,13 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "aspect-ratio",
   "type": "registry:ui",
-  "dependencies": [
-    "reka-ui"
-  ],
+  "dependencies": ["reka-ui"],
   "files": [
     {
-      "path": "app/registry/default/ui/aspect-ratio/AspectRatio.vue",
+      "path": "ui/aspect-ratio/AspectRatio.vue",
       "content": "<script setup lang=\"ts\">\nimport { AspectRatio, type AspectRatioProps } from \"reka-ui\";\n\nconst props = defineProps<AspectRatioProps>();\n</script>\n\n<template>\n  <AspectRatio v-bind=\"props\">\n    <slot />\n  </AspectRatio>\n</template>\n",
-      "type": "registry:ui"
+      "type": "registry:ui",
+      "target": ""
     }
   ]
 }

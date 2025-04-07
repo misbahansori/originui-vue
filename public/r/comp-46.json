@@ -2,25 +2,20 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-46",
   "type": "registry:component",
-  "dependencies": [
-    "react-phone-number-input"
-  ],
+  "dependencies": ["react-phone-number-input"],
   "registryDependencies": [
     "https://originui-vue.com/r/input.json",
     "https://originui-vue.com/r/label.json"
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-46.vue",
+      "path": "components/comp-46.vue",
       "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { SelectNative } from \"@/registry/default/ui/select-native\";\nimport { ref } from \"vue\";\n\n// TODO: This component uses a third-party library (react-phone-number-input)\n// We need to find an equivalent Vue library or implement custom functionality\nconst phoneValue = ref(\"\");\nconst selectedCountry = ref(\"US\");\n\n// Common country codes - this would be expanded in a real implementation\nconst countries = [\n  { label: \"United States\", value: \"US\", code: \"+1\" },\n  { label: \"United Kingdom\", value: \"GB\", code: \"+44\" },\n  { label: \"Canada\", value: \"CA\", code: \"+1\" },\n  { label: \"Australia\", value: \"AU\", code: \"+61\" },\n];\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\" dir=\"ltr\">\n    <Label>Phone number input</Label>\n    <div class=\"flex rounded-md shadow-xs\">\n      <SelectNative\n        class=\"text-muted-foreground hover:text-foreground w-fit rounded-e-none shadow-none\"\n      >\n        <option\n          v-for=\"country in countries\"\n          :key=\"country.value\"\n          :value=\"country.value\"\n        >\n          {{ country.value }}\n        </option>\n      </SelectNative>\n      <Input\n        v-model=\"phoneValue\"\n        class=\"-ms-px rounded-s-none shadow-none focus-visible:z-10\"\n        placeholder=\"Enter phone number\"\n        type=\"tel\"\n      />\n    </div>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Todo : Implement a phone number input component\n    </p>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "phone"
-    ]
+    "tags": ["input", "label", "phone"]
   }
 }

@@ -2,25 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-36",
   "type": "registry:component",
-  "dependencies": [
-    "reka-ui"
-  ],
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json"
-  ],
+  "dependencies": ["reka-ui"],
+  "registryDependencies": ["https://originui-vue.com/r/label.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-36.vue",
+      "path": "components/comp-36.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { DateFieldInput, DateFieldRoot } from \"reka-ui\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\" class=\"text-foreground text-sm font-medium\">\n      Date input\n    </Label>\n    <DateFieldRoot\n      :id=\"id\"\n      v-slot=\"{ segments }\"\n      class=\"border-input bg-background text-foreground focus-within:border-ring focus-within:ring-ring/50 flex h-9 items-center rounded-md border px-3 shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px]\"\n    >\n      <template v-for=\"item in segments\" :key=\"item.part\">\n        <DateFieldInput\n          v-if=\"item.part === 'literal'\"\n          :part=\"item.part\"\n          class=\"text-muted-foreground/70\"\n        >\n          {{ item.value }}\n        </DateFieldInput>\n        <DateFieldInput\n          v-else\n          :part=\"item.part\"\n          class=\"data-[placeholder]:text-muted-foreground/70 focus:bg-muted rounded p-0.5 text-sm focus:shadow-black focus:outline-none\"\n        >\n          {{ item.value }}\n        </DateFieldInput>\n      </template>\n    </DateFieldRoot>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with reka-ui\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/docs/components/date-field\"\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n      >\n        DateField\n      </a>\n    </p>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "date",
-      "react aria"
-    ]
+    "tags": ["input", "label", "date", "react aria"]
   }
 }

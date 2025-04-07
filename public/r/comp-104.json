@@ -2,22 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-104",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/button.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-104.vue",
+      "path": "components/comp-104.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  LucideMinus,\n  LucidePlus,\n  LucideVolume,\n  LucideVolume1,\n  LucideVolume2,\n  LucideVolumeX,\n} from \"lucide-vue-next\";\nimport { computed, ref } from \"vue\";\n\nconst volume = ref(3); // Initialize volume state (0-6)\n\nfunction decreaseVolume() {\n  volume.value = Math.max(0, volume.value - 1);\n}\n\nfunction increaseVolume() {\n  volume.value = Math.min(6, volume.value + 1);\n}\n\n// Computed property for the volume icon component\nconst VolumeIcon = computed(() => {\n  if (volume.value === 0) return LucideVolumeX;\n  if (volume.value < 3) return LucideVolume;\n  if (volume.value < 5) return LucideVolume1;\n  return LucideVolume2;\n});\n</script>\n\n<template>\n  <div\n    class=\"inline-flex items-center\"\n    role=\"group\"\n    aria-labelledby=\"volume-control\"\n  >\n    <span id=\"volume-control\" class=\"sr-only\">Volume Control</span>\n    <Button\n      class=\"rounded-full\"\n      variant=\"outline\"\n      size=\"icon\"\n      aria-label=\"Decrease volume\"\n      @click=\"decreaseVolume\"\n      :disabled=\"volume === 0\"\n    >\n      <LucideMinus :size=\"16\" aria-hidden=\"true\" />\n    </Button>\n    <div\n      class=\"flex items-center px-3 text-sm font-medium tabular-nums\"\n      aria-live=\"polite\"\n    >\n      <component\n        :is=\"VolumeIcon\"\n        class=\"opacity-60\"\n        :size=\"16\"\n        aria-hidden=\"true\"\n      />\n      <span class=\"ms-2\" :aria-label=\"`Current volume is ${volume}`\">\n        {{ volume }}\n      </span>\n    </div>\n    <Button\n      class=\"rounded-full\"\n      variant=\"outline\"\n      size=\"icon\"\n      aria-label=\"Increase volume\"\n      @click=\"increaseVolume\"\n      :disabled=\"volume === 6\"\n    >\n      <LucidePlus :size=\"16\" aria-hidden=\"true\" />\n    </Button>\n  </div>\n</template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "volume",
-      "controls"
-    ],
+    "tags": ["button", "volume", "controls"],
     "style": 2
   }
 }

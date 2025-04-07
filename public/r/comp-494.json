@@ -2,22 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-494",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/calendar.json"
-  ],
+  "registryDependencies": ["https://originui-vue.com/r/calendar.json"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-494.vue",
+      "path": "components/comp-494.vue",
       "content": "<template></template>\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "calendar",
-      "date",
-      "react daypicker"
-    ],
+    "tags": ["calendar", "date", "react daypicker"],
     "style": 1
   }
 }
