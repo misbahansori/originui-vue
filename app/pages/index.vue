@@ -17,13 +17,13 @@ useSeoMeta({
     "Origin UI - Beautiful UI components built with Tailwind CSS and Vue",
   ogDescription:
     "An open-source collection of copy-and-paste components for quickly building application UIs.",
-  ogImage: "https://originui-vue.com/opengraph-image.jpg",
+  ogImage: "https://originui-vue.com/opengraph-image.webp",
   ogUrl: "https://originui-vue.com",
   twitterTitle:
     "Origin UI - Beautiful UI components built with Tailwind CSS and Vue",
   twitterDescription:
     "An open-source collection of copy-and-paste components for quickly building application UIs.",
-  twitterImage: "https://originui-vue.com/opengraph-image.jpg",
+  twitterImage: "https://originui-vue.com/opengraph-image.webp",
   twitterCard: "summary_large_image",
 });
 </script>
