@@ -3,20 +3,30 @@ import path from "path";
 import { glob } from "glob";
 import prettier from "prettier";
 
-const COMPONENTS_DIR = "app/registry/default/components";
-const REGISTRY_FILE = "registry.json";
+const CONFIG = {
+  componentsDir: "app/registry/default/components",
+  registryFile: "registry.json",
+  ignoredDependencies: ["vue"],
+  prettier: {
+    parser: "json",
+    printWidth: 60,
+    htmlWhitespaceSensitivity: "ignore",
+  },
+};
 
-const IGNORED_DEPENDENCIES = ["vue"];
+const REGISTRY_PATTERNS = [
+  /@\/registry\/default\/ui\/([^/'"]+)/,
+  /@\/registry\/default\/components\/([^/'"]+)/,
+  /@\/components\/ui\/([^/'"]+)/,
+];
 
+/**
+ * Converts a registry import path to its corresponding URL
+ * @param {string} importPath - The import path to convert
+ * @returns {string|null} The converted URL or null if not a registry import
+ */
 function convertRegistryPathToUrl(importPath) {
-  // Match both direct component imports and subpath imports
-  const patterns = [
-    /@\/registry\/default\/ui\/([^/'"]+)/,
-    /@\/registry\/default\/components\/([^/'"]+)/,
-    /@\/components\/ui\/([^/'"]+)/,
-  ];
-
-  for (const pattern of patterns) {
+  for (const pattern of REGISTRY_PATTERNS) {
     const match = importPath.match(pattern);
     if (match) {
       const componentName = match[1];
@@ -26,132 +36,195 @@ function convertRegistryPathToUrl(importPath) {
   return null;
 }
 
-async function checkImports() {
-  const registryContent = fs.readFileSync(REGISTRY_FILE, "utf8");
-  const registry = JSON.parse(registryContent);
+/**
+ * Extracts imports from script content
+ * @param {string} scriptContent - The content of the script tag
+ * @returns {{ dependencies: Set<string>, registryDeps: Set<string> }}
+ */
+function extractImports(scriptContent) {
+  const dependencies = new Set();
+  const registryDeps = new Set();
 
-  const files = await glob(`${COMPONENTS_DIR}/**/*.vue`);
-  const dependencyMap = new Map();
+  const importBlocks =
+    scriptContent.match(
+      /import\s+{[\s\S]*?}.*?from\s+['"](.*?)['"];?|import\s+.*?from\s+['"](.*?)['"];?/g,
+    ) || [];
 
-  for (const file of files) {
-    const content = fs.readFileSync(file, "utf8");
-    const componentName = path.basename(file, ".vue");
+  importBlocks.forEach((imp) => {
+    const fromMatch = imp.match(/from\s+['"](.*?)['"]/);
+    if (!fromMatch) return;
 
-    // Check for script section
-    const scriptMatch = content.match(/<script[^>]*>([\s\S]*?)<\/script>/);
-    if (!scriptMatch) {
-      continue;
+    const importPath = fromMatch[1];
+
+    if (CONFIG.ignoredDependencies.includes(importPath)) return;
+
+    const registryUrl = convertRegistryPathToUrl(importPath);
+    if (registryUrl) {
+      registryDeps.add(registryUrl);
+      return;
     }
 
-    const scriptContent = scriptMatch[1];
-    // Handle both single-line and multi-line imports
-    const importBlocks =
-      scriptContent.match(
-        /import\s+{[\s\S]*?}.*?from\s+['"](.*?)['"];?|import\s+.*?from\s+['"](.*?)['"];?/g,
-      ) || [];
+    if (
+      !importPath.startsWith("./") &&
+      !importPath.startsWith("../") &&
+      !importPath.startsWith("@/")
+    ) {
+      dependencies.add(importPath);
+    }
+  });
 
-    if (importBlocks.length > 0) {
-      const dependencies = new Set();
-      const registryDeps = new Set();
+  return { dependencies, registryDeps };
+}
 
-      importBlocks.forEach((imp) => {
-        // Extract the import path, handling both single and multi-line cases
-        const fromMatch = imp.match(/from\s+['"](.*?)['"]/);
-        if (!fromMatch) return;
+/**
+ * Updates component dependencies in the registry
+ * @param {Object} registry - The registry object
+ * @param {string} componentName - Name of the component
+ * @param {Set<string>} dependencies - Package dependencies
+ * @param {Set<string>} registryDeps - Registry dependencies
+ * @returns {{ hasChanges: boolean, updatedComponent: Object }}
+ */
+function updateComponentInRegistry(
+  registry,
+  componentName,
+  dependencies,
+  registryDeps,
+) {
+  const componentIndex = registry.items.findIndex(
+    (item) => item.name === componentName,
+  );
 
-        const importPath = fromMatch[1];
+  if (componentIndex === -1) return { hasChanges: false };
 
-        // Skip ignored dependencies
-        if (IGNORED_DEPENDENCIES.includes(importPath)) {
-          return;
-        }
+  const component = registry.items[componentIndex];
+  const depsArray = Array.from(dependencies);
+  const registryDepsArray = Array.from(registryDeps);
 
-        // Handle registry imports
-        const registryUrl = convertRegistryPathToUrl(importPath);
-        if (registryUrl) {
-          registryDeps.add(registryUrl);
-          return;
-        }
+  const updatedComponent = { ...component };
 
-        // Handle package dependencies
-        if (!importPath.startsWith("./") && !importPath.startsWith("../")) {
-          if (!importPath.startsWith("@/")) {
-            dependencies.add(importPath);
-          }
-        }
-      });
+  if (depsArray.length > 0) {
+    updatedComponent.dependencies = depsArray;
+  } else {
+    delete updatedComponent.dependencies;
+  }
 
-      console.log({ dependencies, registryDeps, componentName });
+  if (registryDepsArray.length > 0) {
+    updatedComponent.registryDependencies = registryDepsArray;
+  } else {
+    delete updatedComponent.registryDependencies;
+  }
 
-      // Update registry.json for this component
-      const componentIndex = registry.items.findIndex(
-        (item) => item.name === componentName,
-      );
-      if (componentIndex !== -1) {
-        const component = registry.items[componentIndex];
-        const depsArray = Array.from(dependencies);
-        const registryDepsArray = Array.from(registryDeps);
+  const hasChanges =
+    JSON.stringify(component) !== JSON.stringify(updatedComponent);
 
-        // Create updated component without dependencies if they're empty
-        const updatedComponent = { ...component };
-        if (depsArray.length > 0) {
-          updatedComponent.dependencies = depsArray;
-        } else {
-          delete updatedComponent.dependencies;
-        }
-        if (registryDepsArray.length > 0) {
-          updatedComponent.registryDependencies = registryDepsArray;
-        } else {
-          delete updatedComponent.registryDependencies;
-        }
+  if (hasChanges) {
+    registry.items[componentIndex] = updatedComponent;
+  }
 
-        // Only update if there are changes
-        const hasChanges =
-          JSON.stringify(component) !== JSON.stringify(updatedComponent);
+  return { hasChanges, updatedComponent, depsArray, registryDepsArray };
+}
 
-        if (hasChanges) {
-          registry.items[componentIndex] = updatedComponent;
-          console.log(`📝 Updated ${componentName}:`);
-          if (depsArray.length > 0) {
-            console.log(`   Dependencies: ${depsArray.join(", ")}`);
-          }
-          if (registryDepsArray.length > 0) {
-            console.log(
-              `   Registry Dependencies: ${registryDepsArray.join(", ")}`,
-            );
-          }
-        }
-      }
+/**
+ * Process a single component file
+ * @param {string} file - Path to the component file
+ * @param {Object} registry - The registry object
+ * @returns {{ componentName: string, dependencies: Set<string>, updates: Object|null }}
+ */
+function processComponentFile(file, registry) {
+  const content = fs.readFileSync(file, "utf8");
+  const componentName = path.basename(file, ".vue");
+
+  const scriptMatch = content.match(/<script[^>]*>([\s\S]*?)<\/script>/);
+  if (!scriptMatch) {
+    return { componentName, dependencies: new Set(), updates: null };
+  }
+
+  const { dependencies, registryDeps } = extractImports(scriptMatch[1]);
+  const updates = updateComponentInRegistry(
+    registry,
+    componentName,
+    dependencies,
+    registryDeps,
+  );
+
+  return { componentName, dependencies, updates };
+}
+
+/**
+ * Main function to check imports and update registry
+ */
+async function checkImports() {
+  try {
+    const registryContent = fs.readFileSync(CONFIG.registryFile, "utf8");
+    const registry = JSON.parse(registryContent);
+    const files = await glob(`${CONFIG.componentsDir}/**/*.vue`);
+
+    const dependencyMap = new Map();
+    const updates = [];
+
+    // Process all component files
+    files.forEach((file) => {
+      const {
+        componentName,
+        dependencies,
+        updates: componentUpdates,
+      } = processComponentFile(file, registry);
 
       if (dependencies.size > 0) {
         dependencyMap.set(componentName, Array.from(dependencies));
       }
+
+      if (componentUpdates?.hasChanges) {
+        updates.push({
+          componentName,
+          dependencies: componentUpdates.depsArray,
+          registryDeps: componentUpdates.registryDepsArray,
+        });
+      }
+    });
+
+    // Write updated registry
+    const formattedRegistry = await prettier.format(
+      JSON.stringify(registry),
+      CONFIG.prettier,
+    );
+    fs.writeFileSync(CONFIG.registryFile, formattedRegistry);
+
+    // Log results
+    if (updates.length > 0) {
+      console.log("\n📝 Component Updates:");
+      updates.forEach(({ componentName, dependencies, registryDeps }) => {
+        console.log(`\n${componentName}:`);
+        if (dependencies?.length > 0) {
+          console.log(`  Dependencies: ${dependencies.join(", ")}`);
+        }
+        if (registryDeps?.length > 0) {
+          console.log(`  Registry Dependencies: ${registryDeps.join(", ")}`);
+        }
+      });
     }
+
+    // Log unique dependencies
+    const allDependencies = new Set();
+    dependencyMap.forEach((deps) =>
+      deps.forEach((dep) => allDependencies.add(dep)),
+    );
+
+    if (allDependencies.size > 0) {
+      console.log("\n📦 Unique Dependencies:");
+      Array.from(allDependencies)
+        .filter((dep) => !CONFIG.ignoredDependencies.includes(dep))
+        .sort()
+        .forEach((dep) => console.log(`  ${dep}`));
+    }
+
+    console.log(
+      `\n✅ Processed ${files.length} components, updated ${updates.length} entries`,
+    );
+  } catch (error) {
+    console.error("❌ Error checking imports:", error);
+    process.exit(1);
   }
-
-  // Write updated registry back to file with Prettier formatting
-  const formattedRegistry = await prettier.format(JSON.stringify(registry), {
-    parser: "json",
-    printWidth: 60,
-    htmlWhitespaceSensitivity: "ignore",
-  });
-
-  fs.writeFileSync(REGISTRY_FILE, formattedRegistry);
-
-  console.log("\n📊 Summary:");
-
-  // Output unique dependencies used
-  const allDependencies = new Set();
-  dependencyMap.forEach((deps) =>
-    deps.forEach((dep) => allDependencies.add(dep)),
-  );
-
-  console.log("\n📦 Unique dependencies used (excluding vue):");
-  allDependencies.forEach((dep) => {
-    if (!IGNORED_DEPENDENCIES.includes(dep)) {
-      console.log(`   ${dep}`);
-    }
-  });
 }
 
 checkImports().catch(console.error);
