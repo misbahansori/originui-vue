@@ -3,22 +3,10 @@ import { glob } from "glob";
 import prettier from "prettier";
 
 const PATH_MAPPINGS = [
-  {
-    from: "app/registry/default/ui/",
-    to: "ui/",
-  },
-  {
-    from: "app/registry/default/components/",
-    to: "components/",
-  },
-  {
-    from: "registry/default/ui/",
-    to: "ui/",
-  },
-  {
-    from: "registry/default/components/",
-    to: "components/",
-  },
+  { from: "app/registry/default/ui/", to: "ui/" },
+  { from: "app/registry/default/components/", to: "components/" },
+  { from: "registry/default/ui/", to: "ui/" },
+  { from: "registry/default/components/", to: "components/" },
 ];
 
 const PRETTIER_CONFIG = {
@@ -27,28 +15,15 @@ const PRETTIER_CONFIG = {
   htmlWhitespaceSensitivity: "ignore",
 };
 
-/**
- * Updates a single path based on defined mappings
- * @param {string} path - The path to update
- * @returns {{ newPath: string, wasUpdated: boolean }}
- */
 function updatePath(path) {
-  for (const mapping of PATH_MAPPINGS) {
-    if (path.startsWith(mapping.from)) {
-      return {
-        newPath: path.replace(mapping.from, mapping.to),
-        wasUpdated: true,
-      };
+  for (const { from, to } of PATH_MAPPINGS) {
+    if (path.startsWith(from)) {
+      return { newPath: path.replace(from, to), wasUpdated: true };
     }
   }
   return { newPath: path, wasUpdated: false };
 }
 
-/**
- * Updates paths in a single registry file
- * @param {string} filePath - Path to the registry JSON file
- * @returns {Promise<{ fileName: string, updates: Array<{ index: number, from: string, to: string }> }>}
- */
 async function processRegistryFile(filePath) {
   const content = fs.readFileSync(filePath, "utf8");
   const data = JSON.parse(content);
@@ -60,20 +35,16 @@ async function processRegistryFile(filePath) {
 
   let fileWasUpdated = false;
 
-  data.files.forEach((fileEntry, index) => {
-    if (!fileEntry.path) return;
+  for (const [index, fileEntry] of data.files.entries()) {
+    if (!fileEntry.path) continue;
 
     const { newPath, wasUpdated } = updatePath(fileEntry.path);
     if (wasUpdated) {
-      updates.push({
-        index,
-        from: fileEntry.path,
-        to: newPath,
-      });
+      updates.push({ index, from: fileEntry.path, to: newPath });
       fileEntry.path = newPath;
       fileWasUpdated = true;
     }
-  });
+  }
 
   if (fileWasUpdated) {
     const formattedJson = await prettier.format(
@@ -86,39 +57,40 @@ async function processRegistryFile(filePath) {
   return { fileName: filePath, updates };
 }
 
-/**
- * Main function to update registry paths
- */
+function logResults(updatedFiles) {
+  const totalUpdates = updatedFiles.reduce(
+    (sum, file) => sum + file.updates.length,
+    0,
+  );
+
+  if (totalUpdates === 0) {
+    console.log("✨ No paths needed updating");
+    return;
+  }
+
+  console.log("\n📝 Path updates summary:");
+  for (const { fileName, updates } of updatedFiles) {
+    console.log(`\n${fileName}:`);
+    for (const { index, from, to } of updates) {
+      console.log(`  [${index}] ${from} → ${to}`);
+    }
+  }
+  console.log(
+    `\n✅ Updated ${totalUpdates} paths in ${updatedFiles.length} files`,
+  );
+}
+
 async function updateRegistryPaths() {
   try {
     const files = await glob("public/r/**/*.json");
     const results = await Promise.all(files.map(processRegistryFile));
-
-    // Filter and format results
     const updatedFiles = results.filter((result) => result.updates.length > 0);
-    const totalUpdates = updatedFiles.reduce(
-      (sum, file) => sum + file.updates.length,
-      0,
-    );
 
-    if (totalUpdates > 0) {
-      console.log("\n📝 Path updates summary:");
-      updatedFiles.forEach(({ fileName, updates }) => {
-        console.log(`\n${fileName}:`);
-        updates.forEach(({ index, from, to }) => {
-          console.log(`  [${index}] ${from} → ${to}`);
-        });
-      });
-      console.log(
-        `\n✅ Updated ${totalUpdates} paths in ${updatedFiles.length} files`,
-      );
-    } else {
-      console.log("✨ No paths needed updating");
-    }
+    logResults(updatedFiles);
   } catch (error) {
     console.error("❌ Error updating registry paths:", error);
     process.exit(1);
   }
 }
 
-updateRegistryPaths().catch(console.error);
+updateRegistryPaths();
