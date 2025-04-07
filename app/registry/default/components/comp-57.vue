@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
 import { LucideX } from "lucide-vue-next";
 import {
   TagsInputInput,

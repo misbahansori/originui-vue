@@ -2398,11 +2398,8 @@
     {
       "name": "comp-41",
       "type": "registry:component",
-      "registryDependencies": [
-        "https://originui-vue.com/r/calendar-rac.json",
-        "https://originui-vue.com/r/datefield-rac.json"
-      ],
-      "dependencies": ["reka-ui"],
+      "registryDependencies": ["https://originui-vue.com/r/label.json"],
+      "dependencies": ["reka-ui", "lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -2417,10 +2414,7 @@
     {
       "name": "comp-42",
       "type": "registry:component",
-      "registryDependencies": [
-        "https://originui-vue.com/r/calendar-rac.json",
-        "https://originui-vue.com/r/datefield-rac.json"
-      ],
+      "registryDependencies": ["https://originui-vue.com/r/label.json"],
       "dependencies": ["reka-ui"],
       "files": [
         {
@@ -2444,11 +2438,8 @@
     {
       "name": "comp-43",
       "type": "registry:component",
-      "registryDependencies": [
-        "https://originui-vue.com/r/calendar-rac.json",
-        "https://originui-vue.com/r/datefield-rac.json"
-      ],
-      "dependencies": ["reka-ui", "react-aria", "@internationalized/date"],
+      "registryDependencies": ["https://originui-vue.com/r/label.json"],
+      "dependencies": ["reka-ui"],
       "files": [
         {
           "target": "",
@@ -2471,8 +2462,11 @@
     {
       "name": "comp-44",
       "type": "registry:component",
-      "registryDependencies": ["https://originui-vue.com/r/label.json"],
-      "dependencies": ["input-otp"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/pin-input.json"
+      ],
+      "dependencies": ["reka-ui"],
       "files": [
         {
           "target": "",
@@ -2487,8 +2481,11 @@
     {
       "name": "comp-45",
       "type": "registry:component",
-      "registryDependencies": ["https://originui-vue.com/r/label.json"],
-      "dependencies": ["input-otp"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/pin-input.json"
+      ],
+      "dependencies": ["reka-ui", "lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -2505,9 +2502,10 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/input.json",
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select-native.json"
       ],
-      "dependencies": ["react-phone-number-input"],
+      "dependencies": ["reka-ui"],
       "files": [
         {
           "target": "",
@@ -2526,8 +2524,7 @@
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
       ],
-      "dependencies": ["react-payment-inputs"],
-      "devDependencies": ["@types/react-payment-inputs"],
+      "dependencies": ["reka-ui", "lucide-vue-next", "vue-the-mask"],
       "files": [
         {
           "target": "",
@@ -2546,7 +2543,7 @@
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
       ],
-      "dependencies": ["react-payment-inputs"],
+      "dependencies": ["vue-the-mask"],
       "devDependencies": ["@types/react-payment-inputs"],
       "files": [
         {
@@ -2566,8 +2563,7 @@
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
       ],
-      "dependencies": ["react-payment-inputs"],
-      "devDependencies": ["@types/react-payment-inputs"],
+      "dependencies": ["vue-the-mask"],
       "files": [
         {
           "target": "",
@@ -2586,8 +2582,7 @@
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
       ],
-      "dependencies": ["react-payment-inputs"],
-      "devDependencies": ["@types/react-payment-inputs"],
+      "dependencies": ["lucide-vue-next", "vue-the-mask"],
       "files": [
         {
           "target": "",
@@ -2606,6 +2601,7 @@
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
       ],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -2643,6 +2639,7 @@
         "https://originui-vue.com/r/label.json",
         "https://originui-vue.com/r/tooltip.json"
       ],
+      "dependencies": ["lucide-vue-next", "@vueuse/core"],
       "files": [
         {
           "target": "",
@@ -2661,7 +2658,7 @@
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
       ],
-      "dependencies": ["use-mask-input"],
+      "dependencies": ["vue-the-mask"],
       "files": [
         {
           "target": "",
@@ -2680,7 +2677,7 @@
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
       ],
-      "dependencies": ["use-mask-input"],
+      "dependencies": ["vue-the-mask"],
       "files": [
         {
           "target": "",
@@ -2695,8 +2692,11 @@
     {
       "name": "comp-56",
       "type": "registry:component",
-      "registryDependencies": ["https://originui-vue.com/r/label.json"],
-      "dependencies": ["emblor"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/input.json"
+      ],
+      "dependencies": ["reka-ui", "lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -2712,7 +2712,7 @@
       "name": "comp-57",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/label.json"],
-      "dependencies": ["emblor"],
+      "dependencies": ["reka-ui", "lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -2727,8 +2727,10 @@
     {
       "name": "comp-58",
       "type": "registry:component",
-      "registryDependencies": ["https://originui-vue.com/r/label.json"],
-      "dependencies": ["input-otp"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/pin-input.json"
+      ],
       "files": [
         {
           "target": "",
