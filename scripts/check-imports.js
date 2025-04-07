@@ -9,10 +9,19 @@ const REGISTRY_FILE = "registry.json";
 const IGNORED_DEPENDENCIES = ["vue"];
 
 function convertRegistryPathToUrl(importPath) {
-  const match = importPath.match(/@\/registry\/default\/ui\/([^/]+)/);
-  if (match) {
-    const componentName = match[1];
-    return `https://originui-vue.com/r/${componentName}.json`;
+  // Match both direct component imports and subpath imports
+  const patterns = [
+    /@\/registry\/default\/ui\/([^/'"]+)/,
+    /@\/registry\/default\/components\/([^/'"]+)/,
+    /@\/components\/ui\/([^/'"]+)/,
+  ];
+
+  for (const pattern of patterns) {
+    const match = importPath.match(pattern);
+    if (match) {
+      const componentName = match[1];
+      return `https://originui-vue.com/r/${componentName}.json`;
+    }
   }
   return null;
 }
@@ -35,15 +44,22 @@ async function checkImports() {
     }
 
     const scriptContent = scriptMatch[1];
-    const imports =
-      scriptContent.match(/import\s+.*?from\s+['"](.*?)['"]/g) || [];
+    // Handle both single-line and multi-line imports
+    const importBlocks =
+      scriptContent.match(
+        /import\s+{[\s\S]*?}.*?from\s+['"](.*?)['"];?|import\s+.*?from\s+['"](.*?)['"];?/g,
+      ) || [];
 
-    if (imports.length > 0) {
+    if (importBlocks.length > 0) {
       const dependencies = new Set();
       const registryDeps = new Set();
 
-      imports.forEach((imp) => {
-        const importPath = imp.match(/from\s+['"](.*?)['"]/)[1];
+      importBlocks.forEach((imp) => {
+        // Extract the import path, handling both single and multi-line cases
+        const fromMatch = imp.match(/from\s+['"](.*?)['"]/);
+        if (!fromMatch) return;
+
+        const importPath = fromMatch[1];
 
         // Skip ignored dependencies
         if (IGNORED_DEPENDENCIES.includes(importPath)) {
@@ -64,6 +80,8 @@ async function checkImports() {
           }
         }
       });
+
+      console.log({ dependencies, registryDeps, componentName });
 
       // Update registry.json for this component
       const componentIndex = registry.items.findIndex(

@@ -2148,7 +2148,7 @@
     {
       "name": "comp-28",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
+      "dependencies": ["lucide-vue-next", "reka-ui"],
       "registryDependencies": [
         "https://originui-vue.com/r/label.json"
       ],
@@ -2172,7 +2172,7 @@
     {
       "name": "comp-29",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
+      "dependencies": ["lucide-vue-next", "reka-ui"],
       "registryDependencies": [
         "https://originui-vue.com/r/label.json"
       ],
@@ -2452,7 +2452,8 @@
       "name": "comp-44",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/pin-input.json"
       ],
       "files": [
         {
@@ -2467,7 +2468,8 @@
       "name": "comp-45",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/pin-input.json"
       ],
       "dependencies": ["lucide-vue-next"],
       "files": [
@@ -2638,7 +2640,8 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/input.json",
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "dependencies": ["@vueuse/core", "lucide-vue-next"],
       "files": [
@@ -2691,7 +2694,7 @@
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
       ],
-      "dependencies": ["lucide-vue-next"],
+      "dependencies": ["lucide-vue-next", "reka-ui"],
       "files": [
         {
           "target": "",
@@ -2709,7 +2712,7 @@
       "registryDependencies": [
         "https://originui-vue.com/r/label.json"
       ],
-      "dependencies": ["lucide-vue-next"],
+      "dependencies": ["lucide-vue-next", "reka-ui"],
       "files": [
         {
           "target": "",
@@ -2725,7 +2728,8 @@
       "name": "comp-58",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/pin-input.json"
       ],
       "files": [
         {
@@ -3311,6 +3315,7 @@
       "name": "comp-95",
       "type": "registry:component",
       "registryDependencies": [
+        "https://originui-vue.com/r/avatar.json",
         "https://originui-vue.com/r/button.json"
       ],
       "dependencies": ["lucide-vue-next"],
@@ -3384,7 +3389,8 @@
       "name": "comp-99",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "dependencies": ["lucide-vue-next"],
       "files": [
@@ -3400,7 +3406,8 @@
       "name": "comp-100",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "dependencies": ["lucide-vue-next"],
       "files": [
@@ -3419,7 +3426,8 @@
       "name": "comp-101",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/toggle.json"
+        "https://originui-vue.com/r/toggle.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "dependencies": ["lucide-vue-next"],
       "files": [
@@ -3485,13 +3493,15 @@
       "meta": {
         "tags": ["button", "volume", "controls"],
         "style": 2
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-105",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "dependencies": ["@vueuse/core", "lucide-vue-next"],
       "files": [
@@ -3535,7 +3545,11 @@
       "meta": {
         "tags": ["button", "toggle group"],
         "style": 2
-      }
+      },
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/toggle-group.json"
+      ]
     },
     {
       "name": "comp-108",
@@ -3569,7 +3583,10 @@
       "meta": {
         "tags": ["button", "toggle group"],
         "style": 2
-      }
+      },
+      "registryDependencies": [
+        "https://originui-vue.com/r/toggle-group.json"
+      ]
     },
     {
       "name": "comp-110",
@@ -3584,7 +3601,10 @@
       "meta": {
         "tags": ["button", "toggle group"],
         "style": 2
-      }
+      },
+      "registryDependencies": [
+        "https://originui-vue.com/r/toggle-group.json"
+      ]
     },
     {
       "name": "comp-111",
@@ -3750,7 +3770,8 @@
           "authentication"
         ],
         "style": 2
-      }
+      },
+      "dependencies": ["@remixicon/vue"]
     },
     {
       "name": "comp-120",
@@ -3773,7 +3794,8 @@
           "authentication"
         ],
         "style": 2
-      }
+      },
+      "dependencies": ["@remixicon/vue"]
     },
     {
       "name": "comp-121",
@@ -3796,7 +3818,8 @@
           "authentication"
         ],
         "style": 2
-      }
+      },
+      "dependencies": ["@remixicon/vue"]
     },
     {
       "name": "comp-122",
@@ -3819,7 +3842,8 @@
           "authentication"
         ],
         "style": 2
-      }
+      },
+      "dependencies": ["@remixicon/vue"]
     },
     {
       "name": "comp-123",
@@ -3921,7 +3945,8 @@
           "type": "registry:component"
         }
       ],
-      "meta": { "tags": ["button"], "style": 2 }
+      "meta": { "tags": ["button"], "style": 2 },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-128",
@@ -3982,7 +4007,8 @@
       "name": "comp-131",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -4549,7 +4575,8 @@
       ],
       "meta": {
         "tags": ["radio", "label", "card", "radix"]
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-163",
@@ -5324,7 +5351,8 @@
       "name": "comp-203",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5339,7 +5367,8 @@
       "name": "comp-204",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5354,7 +5383,8 @@
       "name": "comp-205",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5370,7 +5400,8 @@
       "name": "comp-206",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5387,7 +5418,8 @@
       "name": "comp-207",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5402,7 +5434,8 @@
       "name": "comp-208",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5417,7 +5450,8 @@
       "name": "comp-209",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5432,7 +5466,8 @@
       "name": "comp-210",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5449,7 +5484,8 @@
       "name": "comp-211",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5466,7 +5502,8 @@
       "name": "comp-212",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5481,7 +5518,8 @@
       "name": "comp-213",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5496,7 +5534,8 @@
       "name": "comp-214",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5511,7 +5550,8 @@
       "name": "comp-215",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5534,7 +5574,10 @@
           "type": "registry:component"
         }
       ],
-      "meta": { "tags": ["label", "select", "radix"] }
+      "meta": { "tags": ["label", "select", "radix"] },
+      "registryDependencies": [
+        "https://originui-vue.com/r/select.json"
+      ]
     },
     {
       "name": "comp-217",
@@ -5546,13 +5589,17 @@
           "type": "registry:component"
         }
       ],
-      "meta": { "tags": ["label", "select", "radix"] }
+      "meta": { "tags": ["label", "select", "radix"] },
+      "registryDependencies": [
+        "https://originui-vue.com/r/select.json"
+      ]
     },
     {
       "name": "comp-218",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5575,7 +5622,8 @@
       "name": "comp-219",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5590,7 +5638,8 @@
       "name": "comp-220",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5607,7 +5656,8 @@
       "name": "comp-221",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5622,7 +5672,8 @@
       "name": "comp-222",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "dependencies": ["@remixicon/vue"],
       "files": [
@@ -5638,7 +5689,8 @@
       "name": "comp-223",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "dependencies": ["@remixicon/vue"],
       "files": [
@@ -5654,7 +5706,8 @@
       "name": "comp-224",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5669,7 +5722,8 @@
       "name": "comp-225",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5686,7 +5740,8 @@
       "name": "comp-226",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5710,7 +5765,8 @@
       "name": "comp-227",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5734,7 +5790,8 @@
       "name": "comp-228",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -5759,7 +5816,9 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/command.json",
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/popover.json"
       ],
       "files": [
         {
@@ -5787,7 +5846,9 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/command.json",
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/popover.json"
       ],
       "files": [
         {
@@ -5815,7 +5876,9 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/command.json",
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/popover.json"
       ],
       "files": [
         {
@@ -5845,7 +5908,9 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/command.json",
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/popover.json"
       ],
       "files": [
         {
@@ -5874,7 +5939,9 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/command.json",
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/popover.json"
       ],
       "files": [
         {
@@ -5894,7 +5961,8 @@
           "autocomplete",
           "radix"
         ]
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-234",
@@ -6037,7 +6105,8 @@
           "multiselect",
           "react aria"
         ]
-      }
+      },
+      "dependencies": ["reka-ui"]
     },
     {
       "name": "comp-240",
@@ -6307,7 +6376,8 @@
         "https://originui-vue.com/r/button.json",
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json",
-        "https://originui-vue.com/r/slider.json"
+        "https://originui-vue.com/r/slider.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "files": [
         {
@@ -6924,7 +6994,8 @@
         "tags": ["notification", "warning"],
         "colSpan": 2,
         "style": 1
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-284",
@@ -7215,7 +7286,8 @@
       "name": "comp-298",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/toast.json"
       ],
       "files": [
         {
@@ -7476,6 +7548,7 @@
       "name": "comp-313",
       "type": "registry:component",
       "registryDependencies": [
+        "https://originui-vue.com/r/alert-dialog.json",
         "https://originui-vue.com/r/button.json"
       ],
       "files": [
@@ -7500,6 +7573,7 @@
       "name": "comp-314",
       "type": "registry:component",
       "registryDependencies": [
+        "https://originui-vue.com/r/alert-dialog.json",
         "https://originui-vue.com/r/button.json"
       ],
       "files": [
@@ -7525,7 +7599,8 @@
       "name": "comp-315",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json"
       ],
       "files": [
         {
@@ -7544,6 +7619,7 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json",
         "https://originui-vue.com/r/scroll-area.json"
       ],
       "files": [
@@ -7562,7 +7638,8 @@
       "name": "comp-317",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json"
       ],
       "files": [
         {
@@ -7580,7 +7657,8 @@
       "name": "comp-318",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json"
       ],
       "files": [
         {
@@ -7598,7 +7676,8 @@
       "name": "comp-319",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json"
       ],
       "files": [
         {
@@ -7617,6 +7696,7 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json",
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
       ],
@@ -7638,6 +7718,7 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json",
         "https://originui-vue.com/r/input.json"
       ],
       "files": [
@@ -7665,6 +7746,7 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json",
         "https://originui-vue.com/r/textarea.json"
       ],
       "files": [
@@ -7690,6 +7772,7 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json",
         "https://originui-vue.com/r/label.json",
         "https://originui-vue.com/r/radio-group.json",
         "https://originui-vue.com/r/textarea.json"
@@ -7717,7 +7800,9 @@
       "name": "comp-324",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json",
+        "https://originui-vue.com/r/pin-input.json"
       ],
       "files": [
         {
@@ -7736,6 +7821,7 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json",
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
       ],
@@ -7764,6 +7850,7 @@
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
         "https://originui-vue.com/r/checkbox.json",
+        "https://originui-vue.com/r/dialog.json",
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
       ],
@@ -7791,8 +7878,10 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json",
         "https://originui-vue.com/r/input.json",
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "files": [
         {
@@ -7820,6 +7909,7 @@
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
         "https://originui-vue.com/r/checkbox.json",
+        "https://originui-vue.com/r/dialog.json",
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json"
       ],
@@ -7851,6 +7941,7 @@
       "registryDependencies": [
         "https://originui-vue.com/r/badge.json",
         "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json",
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json",
         "https://originui-vue.com/r/radio-group.json"
@@ -7882,6 +7973,7 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json",
         "https://originui-vue.com/r/label.json",
         "https://originui-vue.com/r/radio-group.json"
       ],
@@ -7903,6 +7995,7 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json",
         "https://originui-vue.com/r/input.json",
         "https://originui-vue.com/r/label.json",
         "https://originui-vue.com/r/textarea.json"
@@ -7933,7 +8026,8 @@
       "name": "comp-332",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dialog.json"
       ],
       "files": [
         {
@@ -7971,7 +8065,11 @@
           "radix"
         ],
         "style": 1
-      }
+      },
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/command.json"
+      ]
     },
     {
       "name": "comp-334",
@@ -8005,7 +8103,10 @@
         "tags": ["accordion", "radix"],
         "colSpan": 2
       },
-      "dependencies": ["lucide-vue-next", "reka-ui"]
+      "dependencies": ["lucide-vue-next", "reka-ui"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/accordion.json"
+      ]
     },
     {
       "name": "comp-336",
@@ -8039,7 +8140,10 @@
         "tags": ["accordion", "radix"],
         "colSpan": 2
       },
-      "dependencies": ["lucide-vue-next"]
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/accordion.json"
+      ]
     },
     {
       "name": "comp-338",
@@ -8057,7 +8161,8 @@
       "meta": {
         "tags": ["accordion", "radix"],
         "colSpan": 2
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-339",
@@ -8073,7 +8178,10 @@
         "tags": ["accordion", "radix"],
         "colSpan": 2
       },
-      "dependencies": ["reka-ui"]
+      "dependencies": ["lucide-vue-next", "reka-ui"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/accordion.json"
+      ]
     },
     {
       "name": "comp-340",
@@ -8089,7 +8197,10 @@
         "tags": ["accordion", "radix"],
         "colSpan": 2
       },
-      "dependencies": ["lucide-vue-next", "reka-ui"]
+      "dependencies": ["lucide-vue-next", "reka-ui"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/accordion.json"
+      ]
     },
     {
       "name": "comp-341",
@@ -8105,7 +8216,10 @@
         "tags": ["accordion", "radix"],
         "colSpan": 2
       },
-      "dependencies": ["lucide-vue-next", "reka-ui"]
+      "dependencies": ["lucide-vue-next", "reka-ui"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/accordion.json"
+      ]
     },
     {
       "name": "comp-342",
@@ -8121,7 +8235,10 @@
         "tags": ["accordion", "radix"],
         "colSpan": 2
       },
-      "dependencies": ["reka-ui"]
+      "dependencies": ["lucide-vue-next", "reka-ui"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/accordion.json"
+      ]
     },
     {
       "name": "comp-343",
@@ -8137,7 +8254,10 @@
         "tags": ["accordion", "radix"],
         "colSpan": 2
       },
-      "dependencies": ["reka-ui"]
+      "dependencies": ["lucide-vue-next", "reka-ui"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/accordion.json"
+      ]
     },
     {
       "name": "comp-344",
@@ -8171,7 +8291,10 @@
         "tags": ["accordion", "radix"],
         "colSpan": 2
       },
-      "dependencies": ["lucide-vue-next", "reka-ui"]
+      "dependencies": ["lucide-vue-next", "reka-ui"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/accordion.json"
+      ]
     },
     {
       "name": "comp-346",
@@ -8205,7 +8328,10 @@
         "tags": ["accordion", "radix"],
         "colSpan": 2
       },
-      "dependencies": ["lucide-vue-next", "reka-ui"]
+      "dependencies": ["lucide-vue-next", "reka-ui"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/accordion.json"
+      ]
     },
     {
       "name": "comp-348",
@@ -8239,7 +8365,10 @@
         "tags": ["accordion", "radix"],
         "colSpan": 2
       },
-      "dependencies": ["lucide-vue-next", "reka-ui"]
+      "dependencies": ["lucide-vue-next", "reka-ui"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/accordion.json"
+      ]
     },
     {
       "name": "comp-350",
@@ -8273,7 +8402,10 @@
         "tags": ["accordion", "radix"],
         "colSpan": 2
       },
-      "dependencies": ["lucide-vue-next", "reka-ui"]
+      "dependencies": ["lucide-vue-next", "reka-ui"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/accordion.json"
+      ]
     },
     {
       "name": "comp-352",
@@ -8289,7 +8421,11 @@
         "tags": ["accordion", "collapsible", "radix"],
         "colSpan": 2
       },
-      "dependencies": ["lucide-vue-next"]
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/accordion.json",
+        "https://originui-vue.com/r/collapsible.json"
+      ]
     },
     {
       "name": "comp-353",
@@ -8308,13 +8444,15 @@
       "meta": {
         "tags": ["accordion", "collapsible", "radix"],
         "colSpan": 2
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-354",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "files": [
         {
@@ -8329,7 +8467,8 @@
       "name": "comp-355",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "files": [
         {
@@ -8344,7 +8483,8 @@
       "name": "comp-356",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "files": [
         {
@@ -8359,7 +8499,8 @@
       "name": "comp-357",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "files": [
         {
@@ -8374,7 +8515,8 @@
       "name": "comp-358",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "files": [
         {
@@ -8390,7 +8532,8 @@
       "name": "comp-359",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "files": [
         {
@@ -8408,7 +8551,8 @@
       "name": "comp-360",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "files": [
         {
@@ -8420,13 +8564,15 @@
       "meta": {
         "tags": ["tooltip", "button", "kbd", "radix"],
         "style": 1
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-361",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "files": [
         {
@@ -8441,7 +8587,8 @@
       "name": "comp-362",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "files": [
         {
@@ -8459,7 +8606,8 @@
       "name": "comp-363",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/hover-card.json"
       ],
       "files": [
         {
@@ -8527,7 +8675,8 @@
       "name": "comp-366",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -8543,7 +8692,8 @@
       "name": "comp-367",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -8559,7 +8709,8 @@
       "name": "comp-368",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -8568,13 +8719,15 @@
           "type": "registry:component"
         }
       ],
-      "meta": { "tags": ["dropdown", "radix"], "style": 1 }
+      "meta": { "tags": ["dropdown", "radix"], "style": 1 },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-369",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -8583,13 +8736,15 @@
           "type": "registry:component"
         }
       ],
-      "meta": { "tags": ["dropdown", "radix"], "style": 1 }
+      "meta": { "tags": ["dropdown", "radix"], "style": 1 },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-370",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -8598,13 +8753,15 @@
           "type": "registry:component"
         }
       ],
-      "meta": { "tags": ["dropdown", "radix"], "style": 1 }
+      "meta": { "tags": ["dropdown", "radix"], "style": 1 },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-371",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -8623,7 +8780,8 @@
       "name": "comp-372",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -8642,7 +8800,8 @@
       "name": "comp-373",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -8661,7 +8820,8 @@
       "name": "comp-374",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -8679,13 +8839,15 @@
           "radix"
         ],
         "style": 1
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-375",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -8704,7 +8866,8 @@
       "name": "comp-376",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -8722,13 +8885,16 @@
           "radix"
         ],
         "style": 1
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-377",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/avatar.json",
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -8746,13 +8912,15 @@
           "radix"
         ],
         "style": 1
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-378",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -8764,13 +8932,15 @@
       "meta": {
         "tags": ["dropdown", "info", "radix"],
         "style": 1
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-379",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -8782,13 +8952,15 @@
       "meta": {
         "tags": ["dropdown", "text editor", "radix"],
         "style": 1
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-380",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
       ],
       "files": [
         {
@@ -8809,7 +8981,8 @@
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
         "https://originui-vue.com/r/checkbox.json",
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/popover.json"
       ],
       "files": [
         {
@@ -8829,7 +9002,8 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/badge.json",
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/popover.json"
       ],
       "files": [
         {
@@ -8849,7 +9023,8 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/badge.json",
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/popover.json"
       ],
       "files": [
         {
@@ -8873,7 +9048,8 @@
       "name": "comp-384",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/popover.json"
       ],
       "files": [
         {
@@ -8891,7 +9067,8 @@
       "name": "comp-385",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/popover.json"
       ],
       "files": [
         {
@@ -8909,7 +9086,8 @@
       "name": "comp-386",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/popover.json"
       ],
       "files": [
         {
@@ -8929,7 +9107,9 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/input.json"
+        "https://originui-vue.com/r/input.json",
+        "https://originui-vue.com/r/popover.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "files": [
         {
@@ -8948,13 +9128,18 @@
         ],
         "style": 1
       },
-      "dependencies": ["@vueuse/core", "lucide-vue-next"]
+      "dependencies": [
+        "@remixicon/vue",
+        "@vueuse/core",
+        "lucide-vue-next"
+      ]
     },
     {
       "name": "comp-388",
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/popover.json",
         "https://originui-vue.com/r/textarea.json"
       ],
       "files": [
@@ -8973,7 +9158,8 @@
       "name": "comp-389",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/popover.json"
       ],
       "files": [
         {
@@ -9142,6 +9328,7 @@
       "name": "comp-398",
       "type": "registry:component",
       "registryDependencies": [
+        "https://originui-vue.com/r/avatar.json",
         "https://originui-vue.com/r/badge.json"
       ],
       "files": [
@@ -9166,6 +9353,7 @@
       "name": "comp-399",
       "type": "registry:component",
       "registryDependencies": [
+        "https://originui-vue.com/r/avatar.json",
         "https://originui-vue.com/r/badge.json"
       ],
       "files": [
@@ -9753,7 +9941,8 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/badge.json",
-        "https://originui-vue.com/r/scroll-area.json"
+        "https://originui-vue.com/r/scroll-area.json",
+        "https://originui-vue.com/r/tabs.json"
       ],
       "files": [
         {
@@ -9773,7 +9962,8 @@
       "name": "comp-434",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/scroll-area.json"
+        "https://originui-vue.com/r/scroll-area.json",
+        "https://originui-vue.com/r/tabs.json"
       ],
       "files": [
         {
@@ -9793,7 +9983,8 @@
       "name": "comp-435",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/scroll-area.json"
+        "https://originui-vue.com/r/scroll-area.json",
+        "https://originui-vue.com/r/tabs.json"
       ],
       "files": [
         {
@@ -9813,7 +10004,8 @@
       "name": "comp-436",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/scroll-area.json"
+        "https://originui-vue.com/r/scroll-area.json",
+        "https://originui-vue.com/r/tabs.json"
       ],
       "files": [
         {
@@ -9834,7 +10026,8 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/badge.json",
-        "https://originui-vue.com/r/scroll-area.json"
+        "https://originui-vue.com/r/scroll-area.json",
+        "https://originui-vue.com/r/tabs.json"
       ],
       "files": [
         {
@@ -9847,7 +10040,8 @@
         "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-438",
@@ -9864,13 +10058,17 @@
         "colSpan": 2,
         "style": 2
       },
-      "dependencies": ["lucide-vue-next"]
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/tabs.json"
+      ]
     },
     {
       "name": "comp-439",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/badge.json"
+        "https://originui-vue.com/r/badge.json",
+        "https://originui-vue.com/r/tabs.json"
       ],
       "files": [
         {
@@ -9889,7 +10087,9 @@
       "name": "comp-440",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/badge.json"
+        "https://originui-vue.com/r/badge.json",
+        "https://originui-vue.com/r/tabs.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "files": [
         {
@@ -9909,7 +10109,9 @@
       "name": "comp-441",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/badge.json"
+        "https://originui-vue.com/r/badge.json",
+        "https://originui-vue.com/r/tabs.json",
+        "https://originui-vue.com/r/tooltip.json"
       ],
       "files": [
         {
@@ -9978,7 +10180,10 @@
         "colSpan": 2,
         "style": 2
       },
-      "dependencies": ["lucide-vue-next"]
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/tabs.json"
+      ]
     },
     {
       "name": "comp-445",
@@ -10034,7 +10239,11 @@
         "colSpan": 2,
         "style": 1
       },
-      "dependencies": ["lucide-vue-next"]
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/breadcrumb.json",
+        "https://originui-vue.com/r/dropdown-menu.json"
+      ]
     },
     {
       "name": "comp-448",
@@ -10051,7 +10260,10 @@
         "colSpan": 2,
         "style": 1
       },
-      "dependencies": ["lucide-vue-next"]
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/breadcrumb.json"
+      ]
     },
     {
       "name": "comp-449",
@@ -10068,7 +10280,10 @@
         "colSpan": 2,
         "style": 1
       },
-      "dependencies": ["lucide-vue-next"]
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/breadcrumb.json"
+      ]
     },
     {
       "name": "comp-450",
@@ -10085,7 +10300,10 @@
         "colSpan": 2,
         "style": 1
       },
-      "dependencies": ["lucide-vue-next"]
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/breadcrumb.json"
+      ]
     },
     {
       "name": "comp-451",
@@ -10102,7 +10320,10 @@
         "colSpan": 2,
         "style": 1
       },
-      "dependencies": ["lucide-vue-next"]
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/breadcrumb.json"
+      ]
     },
     {
       "name": "comp-452",
@@ -10119,7 +10340,10 @@
         "colSpan": 2,
         "style": 1
       },
-      "dependencies": ["lucide-vue-next"]
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/breadcrumb.json"
+      ]
     },
     {
       "name": "comp-453",
@@ -10136,13 +10360,18 @@
         "colSpan": 2,
         "style": 1
       },
-      "dependencies": ["lucide-vue-next"]
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/breadcrumb.json",
+        "https://originui-vue.com/r/select.json"
+      ]
     },
     {
       "name": "comp-454",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/pagination.json"
       ],
       "files": [
         {
@@ -10158,7 +10387,8 @@
       "name": "comp-455",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/pagination.json"
       ],
       "files": [
         {
@@ -10174,7 +10404,8 @@
       "name": "comp-456",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/pagination.json"
       ],
       "files": [
         {
@@ -10190,7 +10421,8 @@
       "name": "comp-457",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/pagination.json"
       ],
       "files": [
         {
@@ -10206,7 +10438,8 @@
       "name": "comp-458",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/pagination.json"
       ],
       "files": [
         {
@@ -10221,7 +10454,8 @@
       "name": "comp-459",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/pagination.json"
       ],
       "files": [
         {
@@ -10237,7 +10471,8 @@
       "name": "comp-460",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/pagination.json"
       ],
       "files": [
         {
@@ -10246,7 +10481,8 @@
           "type": "registry:component"
         }
       ],
-      "meta": { "tags": ["pagination"], "colSpan": 2 }
+      "meta": { "tags": ["pagination"], "colSpan": 2 },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-461",
@@ -10261,13 +10497,16 @@
           "type": "registry:component"
         }
       ],
-      "meta": { "tags": ["pagination"], "colSpan": 2 }
+      "meta": { "tags": ["pagination"], "colSpan": 2 },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-462",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/pagination.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -10284,7 +10523,9 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/pagination.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -10296,13 +10537,16 @@
       "meta": {
         "tags": ["pagination", "select", "radix"],
         "colSpan": 2
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-464",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/pagination.json",
+        "https://originui-vue.com/r/select.json"
       ],
       "files": [
         {
@@ -10314,7 +10558,8 @@
       "meta": {
         "tags": ["pagination", "select", "radix"],
         "colSpan": 2
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-465",
@@ -10322,7 +10567,8 @@
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
         "https://originui-vue.com/r/input.json",
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/pagination.json"
       ],
       "files": [
         {
@@ -10434,7 +10680,8 @@
       "name": "comp-472",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/checkbox.json"
+        "https://originui-vue.com/r/checkbox.json",
+        "https://originui-vue.com/r/table.json"
       ],
       "files": [
         {
@@ -10452,7 +10699,8 @@
       "name": "comp-473",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/checkbox.json"
+        "https://originui-vue.com/r/checkbox.json",
+        "https://originui-vue.com/r/table.json"
       ],
       "files": [
         {
@@ -10512,14 +10760,16 @@
           "type": "registry:component"
         }
       ],
-      "meta": { "tags": ["table"], "colSpan": 3 }
+      "meta": { "tags": ["table"], "colSpan": 3 },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-477",
       "type": "registry:component",
       "registryDependencies": [
         "https://originui-vue.com/r/badge.json",
-        "https://originui-vue.com/r/checkbox.json"
+        "https://originui-vue.com/r/checkbox.json",
+        "https://originui-vue.com/r/table.json"
       ],
       "files": [
         {
@@ -10538,7 +10788,8 @@
           "flag"
         ],
         "colSpan": 3
-      }
+      },
+      "dependencies": ["@tanstack/vue-table"]
     },
     {
       "name": "comp-478",
@@ -10567,12 +10818,19 @@
           "sort"
         ],
         "colSpan": 3
-      }
+      },
+      "dependencies": [
+        "@tanstack/vue-table",
+        "lucide-vue-next"
+      ]
     },
     {
       "name": "comp-479",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
+      "dependencies": [
+        "@tanstack/vue-table",
+        "lucide-vue-next"
+      ],
       "files": [
         {
           "target": "",
@@ -10589,13 +10847,18 @@
           "resize"
         ],
         "colSpan": 3
-      }
+      },
+      "registryDependencies": [
+        "https://originui-vue.com/r/table.json"
+      ]
     },
     {
       "name": "comp-480",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/dropdown-menu.json",
+        "https://originui-vue.com/r/table.json"
       ],
       "files": [
         {
@@ -10613,7 +10876,11 @@
           "resize"
         ],
         "colSpan": 3
-      }
+      },
+      "dependencies": [
+        "@tanstack/vue-table",
+        "lucide-vue-next"
+      ]
     },
     {
       "name": "comp-481",
@@ -10817,7 +11084,8 @@
       "meta": {
         "tags": ["calendar", "date", "react aria"],
         "style": 1
-      }
+      },
+      "dependencies": ["@internationalized/date"]
     },
     {
       "name": "comp-488",
@@ -10865,7 +11133,8 @@
           "react aria"
         ],
         "style": 1
-      }
+      },
+      "dependencies": ["@internationalized/date"]
     },
     {
       "name": "comp-490",
@@ -11442,7 +11711,8 @@
       "name": "comp-516",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/stepper.json"
       ],
       "files": [
         {
@@ -11457,7 +11727,8 @@
       "name": "comp-517",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/stepper.json"
       ],
       "files": [
         {
@@ -11502,7 +11773,8 @@
       "name": "comp-520",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/stepper.json"
       ],
       "files": [
         {
@@ -11518,7 +11790,8 @@
       "name": "comp-521",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/stepper.json"
       ],
       "files": [
         {
@@ -11611,7 +11884,8 @@
       "name": "comp-527",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/button.json"
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/stepper.json"
       ],
       "files": [
         {
@@ -11747,7 +12021,10 @@
         "tags": ["timeline", "vertical timeline"],
         "colSpan": 2
       },
-      "dependencies": ["lucide-vue-next"]
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/timeline.json"
+      ]
     },
     {
       "name": "comp-535",
@@ -11765,7 +12042,8 @@
       "meta": {
         "tags": ["timeline", "vertical timeline"],
         "colSpan": 2
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-536",
@@ -11837,7 +12115,8 @@
       "meta": {
         "tags": ["timeline", "vertical timeline"],
         "colSpan": 2
-      }
+      },
+      "dependencies": ["lucide-vue-next"]
     },
     {
       "name": "comp-540",
