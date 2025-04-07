@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-327",
   "type": "registry:component",
+  "dependencies": ["@vueuse/core", "lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/dialog.json",
@@ -18,7 +19,14 @@
     }
   ],
   "meta": {
-    "tags": ["dialog", "modal", "form", "user", "team", "radix"],
+    "tags": [
+      "dialog",
+      "modal",
+      "form",
+      "user",
+      "team",
+      "radix"
+    ],
     "style": 1
   }
 }

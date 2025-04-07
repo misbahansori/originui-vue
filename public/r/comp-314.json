@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-314",
   "type": "registry:component",
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/alert-dialog.json",
     "https://originui-vue.com/r/button.json"
@@ -15,7 +16,13 @@
     }
   ],
   "meta": {
-    "tags": ["dialog", "modal", "alert", "alert dialog", "radix"],
+    "tags": [
+      "dialog",
+      "modal",
+      "alert",
+      "alert dialog",
+      "radix"
+    ],
     "style": 1
   }
 }

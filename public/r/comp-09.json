@@ -15,7 +15,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["input", "label"]
-  }
+  "meta": { "tags": ["input", "label"] }
 }

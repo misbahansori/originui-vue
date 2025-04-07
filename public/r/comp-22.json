@@ -3,9 +3,9 @@
   "name": "comp-22",
   "type": "registry:component",
   "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/button.json"
+    "https://originui-vue.com/r/label.json"
   ],
   "files": [
     {
@@ -15,7 +15,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["input", "label", "button"]
-  }
+  "meta": { "tags": ["input", "label", "button"] }
 }

@@ -10,8 +10,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["avatar", "avatar group"],
-    "style": 1
-  }
+  "meta": { "tags": ["avatar", "avatar group"], "style": 1 }
 }

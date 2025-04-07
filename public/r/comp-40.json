@@ -2,7 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-40",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/datefield-rac.json"],
+  "dependencies": ["reka-ui"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json"
+  ],
   "files": [
     {
       "path": "components/comp-40.vue",

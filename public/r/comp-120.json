@@ -2,8 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-120",
   "type": "registry:component",
-  "dependencies": ["@remixicon/react"],
-  "registryDependencies": ["https://originui-vue.com/r/button.json"],
+  "dependencies": ["@remixicon/vue"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ],
   "files": [
     {
       "path": "components/comp-120.vue",

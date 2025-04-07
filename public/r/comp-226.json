@@ -3,8 +3,8 @@
   "name": "comp-226",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui-vue.com/r/select.json",
-    "https://originui-vue.com/r/label.json"
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/select.json"
   ],
   "files": [
     {
@@ -15,6 +15,13 @@
     }
   ],
   "meta": {
-    "tags": ["label", "select", "user", "avatar", "profile", "radix"]
+    "tags": [
+      "label",
+      "select",
+      "user",
+      "avatar",
+      "profile",
+      "radix"
+    ]
   }
 }

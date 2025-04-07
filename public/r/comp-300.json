@@ -2,8 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-300",
   "type": "registry:component",
-  "dependencies": ["sonner"],
-  "registryDependencies": ["https://originui-vue.com/r/button.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ],
   "files": [
     {
       "path": "components/comp-300.vue",
@@ -13,7 +14,13 @@
     }
   ],
   "meta": {
-    "tags": ["notification", "toast", "sonner", "success", "radix"],
+    "tags": [
+      "notification",
+      "toast",
+      "sonner",
+      "success",
+      "radix"
+    ],
     "colSpan": 2,
     "style": 1
   }

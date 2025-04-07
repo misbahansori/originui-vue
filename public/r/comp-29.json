@@ -2,9 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-29",
   "type": "registry:component",
-  "dependencies": ["reka-ui", "lucide-vue-next"],
+  "dependencies": ["lucide-vue-next", "reka-ui"],
   "registryDependencies": [
-    "https://originui-vue.com/r/input.json",
     "https://originui-vue.com/r/label.json"
   ],
   "files": [
@@ -16,6 +15,12 @@
     }
   ],
   "meta": {
-    "tags": ["input", "label", "button", "number", "react aria"]
+    "tags": [
+      "input",
+      "label",
+      "button",
+      "number",
+      "react aria"
+    ]
   }
 }

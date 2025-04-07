@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-301",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/button.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ],
   "files": [
     {
       "path": "components/comp-301.vue",

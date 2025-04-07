@@ -2,7 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-339",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
+  "dependencies": ["lucide-vue-next", "reka-ui"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/accordion.json"
+  ],
   "files": [
     {
       "path": "components/comp-339.vue",
@@ -11,8 +14,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["accordion", "radix"],
-    "colSpan": 2
-  }
+  "meta": { "tags": ["accordion", "radix"], "colSpan": 2 }
 }

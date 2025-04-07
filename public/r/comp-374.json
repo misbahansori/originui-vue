@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-374",
   "type": "registry:component",
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/dropdown-menu.json"
@@ -15,7 +16,13 @@
     }
   ],
   "meta": {
-    "tags": ["dropdown", "checkbox", "radio", "delete", "radix"],
+    "tags": [
+      "dropdown",
+      "checkbox",
+      "radio",
+      "delete",
+      "radix"
+    ],
     "style": 1
   }
 }

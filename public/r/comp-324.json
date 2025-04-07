@@ -2,10 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-324",
   "type": "registry:component",
-  "dependencies": ["input-otp"],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/dialog.json"
+    "https://originui-vue.com/r/dialog.json",
+    "https://originui-vue.com/r/pin-input.json"
   ],
   "files": [
     {

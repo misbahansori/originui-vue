@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-328",
   "type": "registry:component",
-  "dependencies": ["react-payment-inputs"],
+  "dependencies": ["lucide-vue-next", "vue-the-mask"],
   "devDependencies": ["@types/react-payment-inputs"],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",

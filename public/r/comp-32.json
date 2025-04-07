@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-32",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/input.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/input.json"
+  ],
   "files": [
     {
       "path": "components/comp-32.vue",
@@ -11,7 +13,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["input", "label"]
-  }
+  "meta": { "tags": ["input", "label"] }
 }

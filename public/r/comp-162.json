@@ -2,9 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-162",
   "type": "registry:component",
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/radio-group.json",
-    "https://originui-vue.com/r/label.json"
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/radio-group.json"
   ],
   "files": [
     {
@@ -14,7 +15,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["radio", "label", "card", "radix"]
-  }
+  "meta": { "tags": ["radio", "label", "card", "radix"] }
 }

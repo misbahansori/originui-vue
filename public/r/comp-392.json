@@ -2,7 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-392",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/avatar.json"],
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/avatar.json"
+  ],
   "files": [
     {
       "path": "components/comp-392.vue",

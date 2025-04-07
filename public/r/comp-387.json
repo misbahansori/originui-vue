@@ -2,6 +2,11 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-387",
   "type": "registry:component",
+  "dependencies": [
+    "@remixicon/vue",
+    "@vueuse/core",
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/input.json",

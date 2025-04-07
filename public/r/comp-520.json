@@ -2,7 +2,11 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-520",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/stepper.json"
+  ],
   "files": [
     {
       "path": "components/comp-520.vue",
@@ -11,8 +15,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["stepper"],
-    "colSpan": 3
-  }
+  "meta": { "tags": ["stepper"], "colSpan": 3 }
 }

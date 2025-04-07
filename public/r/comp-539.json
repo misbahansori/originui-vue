@@ -2,7 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-539",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/timeline.json"
+  ],
   "files": [
     {
       "path": "components/comp-539.vue",

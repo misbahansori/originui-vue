@@ -2,8 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-299",
   "type": "registry:component",
-  "dependencies": ["sonner"],
-  "registryDependencies": ["https://originui-vue.com/r/button.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ],
   "files": [
     {
       "path": "components/comp-299.vue",

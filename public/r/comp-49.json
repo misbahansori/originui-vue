@@ -2,8 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-49",
   "type": "registry:component",
-  "dependencies": ["react-payment-inputs"],
-  "devDependencies": ["@types/react-payment-inputs"],
+  "dependencies": ["vue-the-mask"],
   "registryDependencies": [
     "https://originui-vue.com/r/input.json",
     "https://originui-vue.com/r/label.json"
@@ -17,6 +16,13 @@
     }
   ],
   "meta": {
-    "tags": ["input", "label", "checkout", "payment", "credit card", "form"]
+    "tags": [
+      "input",
+      "label",
+      "checkout",
+      "payment",
+      "credit card",
+      "form"
+    ]
   }
 }

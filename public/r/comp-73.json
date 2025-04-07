@@ -10,7 +10,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["label", "textarea"]
-  }
+  "meta": { "tags": ["label", "textarea"] }
 }

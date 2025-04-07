@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-150",
   "type": "registry:component",
+  "dependencies": ["@vueuse/core", "lucide-vue-next"],
   "files": [
     {
       "path": "components/comp-150.vue",
@@ -11,6 +12,12 @@
     }
   ],
   "meta": {
-    "tags": ["checkbox", "label", "toggle", "darkmode", "radix"]
+    "tags": [
+      "checkbox",
+      "label",
+      "toggle",
+      "darkmode",
+      "radix"
+    ]
   }
 }

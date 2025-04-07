@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-201",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/select-native.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/select-native.json"
+  ],
   "files": [
     {
       "path": "components/comp-201.vue",
@@ -11,7 +13,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["label", "select", "native select"]
-  }
+  "meta": { "tags": ["label", "select", "native select"] }
 }

@@ -2,8 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-489",
   "type": "registry:component",
-  "dependencies": ["reka-ui"],
-  "registryDependencies": ["https://originui-vue.com/r/calendar-rac.json"],
+  "dependencies": ["@internationalized/date"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/calendar.json"
+  ],
   "files": [
     {
       "path": "components/comp-489.vue",
@@ -13,7 +15,13 @@
     }
   ],
   "meta": {
-    "tags": ["calendar", "range calendar", "date", "disabled", "react aria"],
+    "tags": [
+      "calendar",
+      "range calendar",
+      "date",
+      "disabled",
+      "react aria"
+    ],
     "style": 1
   }
 }

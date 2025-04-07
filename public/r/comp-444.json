@@ -2,7 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-444",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/tabs.json"],
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/tabs.json"
+  ],
   "files": [
     {
       "path": "components/comp-444.vue",

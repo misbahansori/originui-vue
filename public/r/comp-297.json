@@ -3,8 +3,7 @@
   "name": "comp-297",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/toast.json"
+    "https://originui-vue.com/r/button.json"
   ],
   "files": [
     {

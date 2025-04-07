@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-157",
   "type": "registry:component",
-  "dependencies": ["@remixicon/react"],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/label.json",
     "https://originui-vue.com/r/radio-group.json"
@@ -15,7 +15,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["radio", "label", "rating", "radix"]
-  }
+  "meta": { "tags": ["radio", "label", "rating", "radix"] }
 }

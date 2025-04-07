@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-94",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/button.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ],
   "files": [
     {
       "path": "components/comp-94.vue",

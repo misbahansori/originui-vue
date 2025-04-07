@@ -3,8 +3,8 @@
   "name": "comp-174",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui-vue.com/r/switch.json",
-    "https://originui-vue.com/r/label.json"
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/switch.json"
   ],
   "files": [
     {
@@ -14,8 +14,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["switch", "radix"],
-    "style": 1
-  }
+  "meta": { "tags": ["switch", "radix"], "style": 1 }
 }

@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-474",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/table.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/table.json"
+  ],
   "files": [
     {
       "path": "components/comp-474.vue",

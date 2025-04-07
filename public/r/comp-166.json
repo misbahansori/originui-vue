@@ -3,9 +3,9 @@
   "name": "comp-166",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui-vue.com/r/radio-group.json",
+    "https://originui-vue.com/r/badge.json",
     "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/badge.json"
+    "https://originui-vue.com/r/radio-group.json"
   ],
   "files": [
     {
@@ -15,7 +15,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["radio", "label", "pricing", "radix"]
-  }
+  "meta": { "tags": ["radio", "label", "pricing", "radix"] }
 }

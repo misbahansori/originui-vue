@@ -3,7 +3,9 @@
   "name": "comp-239",
   "type": "registry:component",
   "dependencies": ["reka-ui"],
-  "registryDependencies": ["https://originui-vue.com/r/label.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json"
+  ],
   "files": [
     {
       "path": "components/comp-239.vue",

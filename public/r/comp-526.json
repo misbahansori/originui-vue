@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-526",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/stepper.json"
+  ],
   "files": [
     {
       "path": "components/comp-526.vue",

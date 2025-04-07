@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-465",
   "type": "registry:component",
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/input.json",
     "https://originui-vue.com/r/label.json",
     "https://originui-vue.com/r/pagination.json"
@@ -15,8 +17,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["pagination", "input"],
-    "colSpan": 2
-  }
+  "meta": { "tags": ["pagination", "input"], "colSpan": 2 }
 }

@@ -2,8 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-38",
   "type": "registry:component",
-  "dependencies": ["reka-ui", "lucide-vue-next"],
-  "registryDependencies": ["https://originui-vue.com/r/label.json"],
+  "dependencies": ["lucide-vue-next", "reka-ui"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json"
+  ],
   "files": [
     {
       "path": "components/comp-38.vue",

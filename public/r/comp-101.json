@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-101",
   "type": "registry:component",
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/toggle.json",
     "https://originui-vue.com/r/tooltip.json"
@@ -14,8 +15,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["button", "toggle"],
-    "style": 2
-  }
+  "meta": { "tags": ["button", "toggle"], "style": 2 }
 }

@@ -2,79 +2,122 @@ import fs from "fs";
 import { glob } from "glob";
 import prettier from "prettier";
 
+const PATH_MAPPINGS = [
+  {
+    from: "app/registry/default/ui/",
+    to: "ui/",
+  },
+  {
+    from: "app/registry/default/components/",
+    to: "components/",
+  },
+  {
+    from: "registry/default/ui/",
+    to: "ui/",
+  },
+  {
+    from: "registry/default/components/",
+    to: "components/",
+  },
+];
+
+const PRETTIER_CONFIG = {
+  parser: "json",
+  printWidth: 60,
+  htmlWhitespaceSensitivity: "ignore",
+};
+
+/**
+ * Updates a single path based on defined mappings
+ * @param {string} path - The path to update
+ * @returns {{ newPath: string, wasUpdated: boolean }}
+ */
+function updatePath(path) {
+  for (const mapping of PATH_MAPPINGS) {
+    if (path.startsWith(mapping.from)) {
+      return {
+        newPath: path.replace(mapping.from, mapping.to),
+        wasUpdated: true,
+      };
+    }
+  }
+  return { newPath: path, wasUpdated: false };
+}
+
+/**
+ * Updates paths in a single registry file
+ * @param {string} filePath - Path to the registry JSON file
+ * @returns {Promise<{ fileName: string, updates: Array<{ index: number, from: string, to: string }> }>}
+ */
+async function processRegistryFile(filePath) {
+  const content = fs.readFileSync(filePath, "utf8");
+  const data = JSON.parse(content);
+  const updates = [];
+
+  if (!Array.isArray(data.files)) {
+    return { fileName: filePath, updates };
+  }
+
+  let fileWasUpdated = false;
+
+  data.files.forEach((fileEntry, index) => {
+    if (!fileEntry.path) return;
+
+    const { newPath, wasUpdated } = updatePath(fileEntry.path);
+    if (wasUpdated) {
+      updates.push({
+        index,
+        from: fileEntry.path,
+        to: newPath,
+      });
+      fileEntry.path = newPath;
+      fileWasUpdated = true;
+    }
+  });
+
+  if (fileWasUpdated) {
+    const formattedJson = await prettier.format(
+      JSON.stringify(data),
+      PRETTIER_CONFIG,
+    );
+    fs.writeFileSync(filePath, formattedJson);
+  }
+
+  return { fileName: filePath, updates };
+}
+
+/**
+ * Main function to update registry paths
+ */
 async function updateRegistryPaths() {
   try {
-    // Find all JSON files in public/r directory
     const files = await glob("public/r/**/*.json");
-    let totalUpdates = 0;
+    const results = await Promise.all(files.map(processRegistryFile));
 
-    for (const file of files) {
-      console.log(`Processing ${file}...`);
-
-      // Read and parse the JSON file
-      const content = fs.readFileSync(file, "utf8");
-      const data = JSON.parse(content);
-      let fileWasUpdated = false;
-
-      // Check if the file has a files array
-      if (Array.isArray(data.files)) {
-        data.files.forEach((fileEntry, index) => {
-          if (fileEntry.path) {
-            const oldPath = fileEntry.path;
-
-            // Update path based on the pattern
-            if (oldPath.startsWith("app/registry/default/ui/")) {
-              fileEntry.path = oldPath.replace(
-                "app/registry/default/ui/",
-                "ui/",
-              );
-              fileWasUpdated = true;
-            } else if (oldPath.startsWith("app/registry/default/components/")) {
-              fileEntry.path = oldPath.replace(
-                "app/registry/default/components/",
-                "components/",
-              );
-              fileWasUpdated = true;
-            } else if (oldPath.startsWith("registry/default/ui/")) {
-              fileEntry.path = oldPath.replace("registry/default/ui/", "ui/");
-              fileWasUpdated = true;
-            } else if (oldPath.startsWith("registry/default/components/")) {
-              fileEntry.path = oldPath.replace(
-                "registry/default/components/",
-                "components/",
-              );
-              fileWasUpdated = true;
-            }
-
-            if (oldPath !== fileEntry.path) {
-              console.log(`  [${index}] Updated path from: ${oldPath}`);
-              console.log(`  [${index}] Updated path to:   ${fileEntry.path}`);
-              totalUpdates++;
-            }
-          }
-        });
-
-        // Only write if any paths were actually changed
-        if (fileWasUpdated) {
-          // Format and write the updated JSON
-          const formattedJson = await prettier.format(JSON.stringify(data), {
-            parser: "json",
-            printWidth: 60,
-            htmlWhitespaceSensitivity: "ignore",
-          });
-
-          fs.writeFileSync(file, formattedJson);
-        }
-      } else {
-        console.log(`  No files array found in ${file}`);
-      }
-    }
-
-    console.log(
-      `\n✅ Registry paths update completed! Updated ${totalUpdates} paths.`,
+    // Filter and format results
+    const updatedFiles = results.filter((result) => result.updates.length > 0);
+    const totalUpdates = updatedFiles.reduce(
+      (sum, file) => sum + file.updates.length,
+      0,
     );
+
+    if (totalUpdates > 0) {
+      console.log("\n📝 Path updates summary:");
+      updatedFiles.forEach(({ fileName, updates }) => {
+        console.log(`\n${fileName}:`);
+        updates.forEach(({ index, from, to }) => {
+          console.log(`  [${index}] ${from} → ${to}`);
+        });
+      });
+      console.log(
+        `\n✅ Updated ${totalUpdates} paths in ${updatedFiles.length} files`,
+      );
+    } else {
+      console.log("✨ No paths needed updating");
+    }
   } catch (error) {
-    console.error("Error updating registry paths:", error);
+    console.error("❌ Error updating registry paths:", error);
+    process.exit(1);
   }
 }
 

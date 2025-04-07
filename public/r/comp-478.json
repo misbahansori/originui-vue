@@ -2,12 +2,12 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-478",
   "type": "registry:component",
-  "dependencies": ["@tanstack/react-table"],
+  "dependencies": [
+    "@tanstack/vue-table",
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/checkbox.json",
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/select.json",
     "https://originui-vue.com/r/table.json"
   ],
   "files": [

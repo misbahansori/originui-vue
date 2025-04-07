@@ -3,9 +3,9 @@
   "name": "comp-262",
   "type": "registry:component",
   "registryDependencies": [
+    "https://originui-vue.com/r/input.json",
     "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/slider.json",
-    "https://originui-vue.com/r/input.json"
+    "https://originui-vue.com/r/slider.json"
   ],
   "files": [
     {
@@ -21,6 +21,12 @@
     }
   ],
   "meta": {
-    "tags": ["slider", "vertical slider", "label", "input", "radix"]
+    "tags": [
+      "slider",
+      "vertical slider",
+      "label",
+      "input",
+      "radix"
+    ]
   }
 }

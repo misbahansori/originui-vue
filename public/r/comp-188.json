@@ -3,8 +3,8 @@
   "name": "comp-188",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui-vue.com/r/switch.json",
-    "https://originui-vue.com/r/label.json"
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/switch.json"
   ],
   "files": [
     {
