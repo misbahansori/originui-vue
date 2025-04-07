@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-170",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/radio-group.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/radio-group.json"
+  ],
   "files": [
     {
       "path": "components/comp-170.vue",
@@ -12,7 +14,13 @@
     }
   ],
   "meta": {
-    "tags": ["radio", "label", "pricing", "switch", "radix"],
+    "tags": [
+      "radio",
+      "label",
+      "pricing",
+      "switch",
+      "radix"
+    ],
     "style": 1
   }
 }

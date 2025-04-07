@@ -2,7 +2,11 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-453",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/breadcrumb.json"],
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/breadcrumb.json",
+    "https://originui-vue.com/r/select.json"
+  ],
   "files": [
     {
       "path": "components/comp-453.vue",

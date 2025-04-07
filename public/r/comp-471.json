@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-471",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/table.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/table.json"
+  ],
   "files": [
     {
       "path": "components/comp-471.vue",
@@ -11,8 +13,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["table"],
-    "colSpan": 3
-  }
+  "meta": { "tags": ["table"], "colSpan": 3 }
 }

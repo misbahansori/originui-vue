@@ -2,8 +2,13 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-479",
   "type": "registry:component",
-  "dependencies": ["@tanstack/react-table"],
-  "registryDependencies": ["https://originui-vue.com/r/table.json"],
+  "dependencies": [
+    "@tanstack/vue-table",
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/table.json"
+  ],
   "files": [
     {
       "path": "components/comp-479.vue",

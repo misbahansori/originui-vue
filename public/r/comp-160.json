@@ -14,7 +14,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["radio", "label", "card", "radix"]
-  }
+  "meta": { "tags": ["radio", "label", "card", "radix"] }
 }

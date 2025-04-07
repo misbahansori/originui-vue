@@ -3,8 +3,7 @@
   "name": "comp-234",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/multiselect.json"
+    "https://originui-vue.com/r/label.json"
   ],
   "files": [
     {

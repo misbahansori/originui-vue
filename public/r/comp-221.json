@@ -3,8 +3,8 @@
   "name": "comp-221",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui-vue.com/r/select.json",
-    "https://originui-vue.com/r/label.json"
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/select.json"
   ],
   "files": [
     {
@@ -14,7 +14,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["label", "select", "radix"]
-  }
+  "meta": { "tags": ["label", "select", "radix"] }
 }

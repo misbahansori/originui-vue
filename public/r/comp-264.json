@@ -2,10 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-264",
   "type": "registry:component",
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/slider.json",
-    "https://originui-vue.com/r/input.json",
     "https://originui-vue.com/r/button.json"
   ],
   "files": [
@@ -22,6 +20,13 @@
     }
   ],
   "meta": {
-    "tags": ["slider", "label", "input", "button", "reset", "radix"]
+    "tags": [
+      "slider",
+      "label",
+      "input",
+      "button",
+      "reset",
+      "radix"
+    ]
   }
 }

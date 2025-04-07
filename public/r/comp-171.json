@@ -2,8 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-171",
   "type": "registry:component",
-  "dependencies": ["@remixicon/react"],
-  "registryDependencies": ["https://originui-vue.com/r/radio-group.json"],
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/radio-group.json"
+  ],
   "files": [
     {
       "path": "components/comp-171.vue",

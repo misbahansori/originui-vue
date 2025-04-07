@@ -3,8 +3,8 @@
   "name": "comp-200",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui-vue.com/r/select-native.json",
-    "https://originui-vue.com/r/label.json"
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/select-native.json"
   ],
   "files": [
     {
@@ -15,6 +15,12 @@
     }
   ],
   "meta": {
-    "tags": ["label", "select", "native select", "timezone", "time"]
+    "tags": [
+      "label",
+      "select",
+      "native select",
+      "timezone",
+      "time"
+    ]
   }
 }

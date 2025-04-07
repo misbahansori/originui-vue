@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-269",
   "type": "registry:component",
+  "dependencies": ["lucide-vue-next"],
   "files": [
     {
       "path": "components/comp-269.vue",
@@ -10,8 +11,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["alert", "error"],
-    "colSpan": 2
-  }
+  "meta": { "tags": ["alert", "error"], "colSpan": 2 }
 }

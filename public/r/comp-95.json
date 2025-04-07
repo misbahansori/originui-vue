@@ -2,7 +2,11 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-95",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/button.json"],
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/avatar.json",
+    "https://originui-vue.com/r/button.json"
+  ],
   "files": [
     {
       "path": "components/comp-95.vue",
@@ -12,7 +16,13 @@
     }
   ],
   "meta": {
-    "tags": ["button", "user", "avatar", "profile", "dropdown"],
+    "tags": [
+      "button",
+      "user",
+      "avatar",
+      "profile",
+      "dropdown"
+    ],
     "style": 2
   }
 }

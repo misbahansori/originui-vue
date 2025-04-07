@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-536",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/timeline.json"
+  ],
   "files": [
     {
       "path": "components/comp-536.vue",

@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-365",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/hover-card.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/hover-card.json"
+  ],
   "files": [
     {
       "path": "components/comp-365.vue",

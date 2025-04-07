@@ -2,7 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-333",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/command.json"],
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/command.json"
+  ],
   "files": [
     {
       "path": "components/comp-333.vue",

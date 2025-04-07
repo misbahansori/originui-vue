@@ -2,8 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-58",
   "type": "registry:component",
-  "dependencies": ["input-otp"],
-  "registryDependencies": ["https://originui-vue.com/r/label.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/pin-input.json"
+  ],
   "files": [
     {
       "path": "components/comp-58.vue",
@@ -12,7 +14,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["input", "label", "otp"]
-  }
+  "meta": { "tags": ["input", "label", "otp"] }
 }

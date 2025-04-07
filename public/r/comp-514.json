@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-514",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/stepper.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/stepper.json"
+  ],
   "files": [
     {
       "path": "components/comp-514.vue",
@@ -11,8 +13,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["stepper"],
-    "colSpan": 3
-  }
+  "meta": { "tags": ["stepper"], "colSpan": 3 }
 }

@@ -2,7 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-480",
   "type": "registry:component",
-  "dependencies": ["@tanstack/react-table"],
+  "dependencies": [
+    "@tanstack/vue-table",
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/dropdown-menu.json",
@@ -17,7 +20,13 @@
     }
   ],
   "meta": {
-    "tags": ["table", "tanstack", "flag", "sticky", "resize"],
+    "tags": [
+      "table",
+      "tanstack",
+      "flag",
+      "sticky",
+      "resize"
+    ],
     "colSpan": 3
   }
 }

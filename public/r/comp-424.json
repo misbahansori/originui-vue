@@ -2,6 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-424",
   "type": "registry:component",
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/badge.json"
+  ],
   "files": [
     {
       "path": "components/comp-424.vue",
@@ -10,8 +14,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["badge", "chip"],
-    "style": 1
-  }
+  "meta": { "tags": ["badge", "chip"], "style": 1 }
 }

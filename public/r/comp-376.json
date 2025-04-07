@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-376",
   "type": "registry:component",
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/dropdown-menu.json"
@@ -15,7 +16,13 @@
     }
   ],
   "meta": {
-    "tags": ["dropdown", "user", "profile", "avatar", "radix"],
+    "tags": [
+      "dropdown",
+      "user",
+      "profile",
+      "avatar",
+      "radix"
+    ],
     "style": 1
   }
 }

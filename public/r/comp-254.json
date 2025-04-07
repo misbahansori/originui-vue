@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-254",
   "type": "registry:component",
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/input.json",
@@ -23,6 +24,14 @@
     }
   ],
   "meta": {
-    "tags": ["slider", "label", "button", "input", "tooltip", "reset", "radix"]
+    "tags": [
+      "slider",
+      "label",
+      "button",
+      "input",
+      "tooltip",
+      "reset",
+      "radix"
+    ]
   }
 }

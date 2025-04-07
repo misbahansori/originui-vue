@@ -2,8 +2,11 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-56",
   "type": "registry:component",
-  "dependencies": ["emblor"],
-  "registryDependencies": ["https://originui-vue.com/r/label.json"],
+  "dependencies": ["lucide-vue-next", "reka-ui"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json"
+  ],
   "files": [
     {
       "path": "components/comp-56.vue",
@@ -12,7 +15,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["input", "label", "tag", "emblor"]
-  }
+  "meta": { "tags": ["input", "label", "tag", "emblor"] }
 }

@@ -2,7 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-169",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/radio-group.json"],
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/radio-group.json"
+  ],
   "files": [
     {
       "path": "components/comp-169.vue",

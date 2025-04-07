@@ -2,7 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-130",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/toggle.json"],
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/toggle.json"
+  ],
   "files": [
     {
       "path": "components/comp-130.vue",

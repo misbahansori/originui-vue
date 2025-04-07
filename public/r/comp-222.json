@@ -2,10 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-222",
   "type": "registry:component",
-  "dependencies": ["@remixicon/react"],
+  "dependencies": ["@remixicon/vue"],
   "registryDependencies": [
-    "https://originui-vue.com/r/select.json",
-    "https://originui-vue.com/r/label.json"
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/select.json"
   ],
   "files": [
     {
@@ -15,7 +15,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["label", "select", "radix"]
-  }
+  "meta": { "tags": ["label", "select", "radix"] }
 }

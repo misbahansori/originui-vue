@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-540",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/timeline.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/timeline.json"
+  ],
   "files": [
     {
       "path": "components/comp-540.vue",
@@ -11,8 +13,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["timeline"],
-    "colSpan": 3
-  }
+  "meta": { "tags": ["timeline"], "colSpan": 3 }
 }

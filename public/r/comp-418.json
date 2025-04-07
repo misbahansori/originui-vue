@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-418",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/badge.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/badge.json"
+  ],
   "files": [
     {
       "path": "components/comp-418.vue",

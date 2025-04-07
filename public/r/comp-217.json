@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-217",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/select.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/select.json"
+  ],
   "files": [
     {
       "path": "components/comp-217.vue",
@@ -11,7 +13,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["label", "select", "radix"]
-  }
+  "meta": { "tags": ["label", "select", "radix"] }
 }

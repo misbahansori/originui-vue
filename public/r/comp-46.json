@@ -2,10 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-46",
   "type": "registry:component",
-  "dependencies": ["react-phone-number-input"],
   "registryDependencies": [
     "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json"
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/select-native.json"
   ],
   "files": [
     {
@@ -15,7 +15,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["input", "label", "phone"]
-  }
+  "meta": { "tags": ["input", "label", "phone"] }
 }

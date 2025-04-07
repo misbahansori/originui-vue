@@ -2,8 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-163",
   "type": "registry:component",
-  "dependencies": ["@remixicon/react"],
-  "registryDependencies": ["https://originui-vue.com/r/radio-group.json"],
+  "dependencies": ["@remixicon/vue"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/radio-group.json"
+  ],
   "files": [
     {
       "path": "components/comp-163.vue",
@@ -13,6 +15,13 @@
     }
   ],
   "meta": {
-    "tags": ["radio", "label", "card", "checkout", "payment", "radix"]
+    "tags": [
+      "radio",
+      "label",
+      "card",
+      "checkout",
+      "payment",
+      "radix"
+    ]
   }
 }

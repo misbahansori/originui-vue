@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-395",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/avatar.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/avatar.json"
+  ],
   "files": [
     {
       "path": "components/comp-395.vue",

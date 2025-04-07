@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-440",
   "type": "registry:component",
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
+    "https://originui-vue.com/r/badge.json",
     "https://originui-vue.com/r/tabs.json",
     "https://originui-vue.com/r/tooltip.json"
   ],

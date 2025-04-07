@@ -14,7 +14,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["input", "label", "disabled"]
-  }
+  "meta": { "tags": ["input", "label", "disabled"] }
 }

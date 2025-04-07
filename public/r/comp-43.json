@@ -2,10 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-43",
   "type": "registry:component",
-  "dependencies": ["reka-ui", "react-aria", "@internationalized/date"],
   "registryDependencies": [
-    "https://originui-vue.com/r/calendar-rac.json",
-    "https://originui-vue.com/r/datefield-rac.json"
+    "https://originui-vue.com/r/label.json"
   ],
   "files": [
     {

@@ -2,10 +2,11 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-377",
   "type": "registry:component",
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
+    "https://originui-vue.com/r/avatar.json",
     "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/dropdown-menu.json",
-    "https://originui-vue.com/r/avatar.json"
+    "https://originui-vue.com/r/dropdown-menu.json"
   ],
   "files": [
     {
@@ -16,7 +17,13 @@
     }
   ],
   "meta": {
-    "tags": ["dropdown", "user", "avatar", "profile", "radix"],
+    "tags": [
+      "dropdown",
+      "user",
+      "avatar",
+      "profile",
+      "radix"
+    ],
     "style": 1
   }
 }

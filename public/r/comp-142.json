@@ -4,8 +4,8 @@
   "type": "registry:component",
   "registryDependencies": [
     "https://originui-vue.com/r/checkbox.json",
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/input.json"
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json"
   ],
   "files": [
     {

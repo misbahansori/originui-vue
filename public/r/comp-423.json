@@ -2,7 +2,11 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-423",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/badge.json"],
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/badge.json",
+    "https://originui-vue.com/r/checkbox.json"
+  ],
   "files": [
     {
       "path": "components/comp-423.vue",

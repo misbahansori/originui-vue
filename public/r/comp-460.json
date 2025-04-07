@@ -2,7 +2,11 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-460",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/pagination.json"],
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/pagination.json"
+  ],
   "files": [
     {
       "path": "components/comp-460.vue",
@@ -11,8 +15,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["pagination"],
-    "colSpan": 2
-  }
+  "meta": { "tags": ["pagination"], "colSpan": 2 }
 }

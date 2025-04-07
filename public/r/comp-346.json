@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-346",
   "type": "registry:component",
-  "registryDependencies": ["https://originui-vue.com/r/accordion.json"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/accordion.json"
+  ],
   "files": [
     {
       "path": "components/comp-346.vue",
@@ -11,8 +13,5 @@
       "target": ""
     }
   ],
-  "meta": {
-    "tags": ["accordion", "radix"],
-    "colSpan": 2
-  }
+  "meta": { "tags": ["accordion", "radix"], "colSpan": 2 }
 }

@@ -2,8 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "comp-487",
   "type": "registry:component",
-  "dependencies": ["reka-ui"],
-  "registryDependencies": ["https://originui-vue.com/r/calendar-rac.json"],
+  "dependencies": ["@internationalized/date"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/calendar.json"
+  ],
   "files": [
     {
       "path": "components/comp-487.vue",
