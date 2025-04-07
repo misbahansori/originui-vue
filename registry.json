@@ -3132,6 +3132,7 @@
       "name": "comp-81",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3148,6 +3149,7 @@
       "name": "comp-82",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3164,6 +3166,7 @@
       "name": "comp-83",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3180,6 +3183,7 @@
       "name": "comp-84",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3196,6 +3200,7 @@
       "name": "comp-85",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3212,6 +3217,7 @@
       "name": "comp-86",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3228,6 +3234,7 @@
       "name": "comp-87",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3244,6 +3251,7 @@
       "name": "comp-88",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3276,6 +3284,7 @@
       "name": "comp-90",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3292,6 +3301,7 @@
       "name": "comp-91",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3324,6 +3334,7 @@
       "name": "comp-93",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3355,7 +3366,11 @@
     {
       "name": "comp-95",
       "type": "registry:component",
-      "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/avatar.json"
+      ],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3372,6 +3387,7 @@
       "name": "comp-96",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3388,6 +3404,7 @@
       "name": "comp-97",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3404,6 +3421,7 @@
       "name": "comp-98",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3423,6 +3441,7 @@
         "https://originui-vue.com/r/button.json",
         "https://originui-vue.com/r/tooltip.json"
       ],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3439,6 +3458,7 @@
       "name": "comp-100",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3458,6 +3478,7 @@
         "https://originui-vue.com/r/toggle.json",
         "https://originui-vue.com/r/tooltip.json"
       ],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3474,6 +3495,7 @@
       "name": "comp-102",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3490,6 +3512,7 @@
       "name": "comp-103",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3506,6 +3529,7 @@
       "name": "comp-104",
       "type": "registry:component",
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "dependencies": ["lucide-vue-next"],
       "files": [
         {
           "target": "",
@@ -3525,6 +3549,7 @@
         "https://originui-vue.com/r/button.json",
         "https://originui-vue.com/r/tooltip.json"
       ],
+      "dependencies": ["lucide-vue-next", "@vueuse/core"],
       "files": [
         {
           "target": "",
