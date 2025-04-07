@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "start": "node .output/server/index.mjs",
-    "registry:build": "shadcn build"
+    "registry:build": "shadcn build",
+    "check-imports": "node scripts/check-imports.js"
   },
   "dependencies": {
     "@internationalized/date": "^3.7.0",
@@ -45,6 +46,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.10",
     "@types/vue-the-mask": "^0.11.5",
+    "glob": "^10.4.5",
     "nuxt-umami": "^3.2.0",
     "tailwindcss": "^4.0.10"
   },
