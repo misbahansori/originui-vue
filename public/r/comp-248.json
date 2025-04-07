@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-248.vue",
-      "content": "<script setup lang=\"ts\">\nconst value = ref([50]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Slider with labels</Label>\n    <div>\n      <span\n        class=\"text-muted-foreground mb-3 flex w-full items-center justify-between gap-2 text-xs font-medium\"\n        aria-hidden=\"true\"\n      >\n        <span>Low</span>\n        <span>High</span>\n      </span>\n      <Slider v-model=\"value\" :step=\"10\" aria-label=\"Slider with labels\" />\n    </div>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport { ref } from \"vue\";\n\nconst value = ref([50]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Slider with labels</Label>\n    <div>\n      <span\n        class=\"text-muted-foreground mb-3 flex w-full items-center justify-between gap-2 text-xs font-medium\"\n        aria-hidden=\"true\"\n      >\n        <span>Low</span>\n        <span>High</span>\n      </span>\n      <Slider v-model=\"value\" :step=\"10\" aria-label=\"Slider with labels\" />\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

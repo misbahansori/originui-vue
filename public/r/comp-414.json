@@ -8,7 +8,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-414.vue",
-      "content": "<template>\n  <Badge class=\"rounded\">Badge</Badge>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Badge } from \"@/registry/default/ui/badge\";\n</script>\n\n<template>\n  <Badge class=\"rounded\">Badge</Badge>\n</template>\n",
       "type": "registry:component"
     }
   ],

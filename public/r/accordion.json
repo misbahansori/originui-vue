@@ -29,7 +29,7 @@
     },
     {
       "path": "app/registry/default/ui/accordion/index.ts",
-      "content": "export { default as Accordion } from \"./Accordion.vue\";\nexport { default as AccordionContent } from \"./AccordionContent.vue\";\nexport { default as AccordionItem } from \"./AccordionItem.vue\";\nexport { default as AccordionTrigger } from \"./AccordionTrigger.vue\";\n",
+      "content": "export { default as Accordion } from \"./Accordion.vue\";\nexport { default as AccordionContent } from \"./AccordionContent.vue\";\nexport { default as AccordionItem } from \"./AccordionItem.vue\";\nexport { default as AccordionTrigger } from \"./AccordionTrigger.vue\";\nexport { AccordionHeader } from \"reka-ui\";\n",
       "type": "registry:ui"
     },
     {

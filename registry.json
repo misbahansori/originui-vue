@@ -333,37 +333,6 @@
       ]
     },
     {
-      "name": "carousel",
-      "type": "registry:ui",
-      "dependencies": ["reka-ui", "embla-carousel-vue", "@vueuse/core"],
-      "files": [
-        {
-          "path": "app/registry/default/ui/carousel/Carousel.vue",
-          "type": "registry:ui"
-        },
-        {
-          "path": "app/registry/default/ui/carousel/CarouselContent.vue",
-          "type": "registry:ui"
-        },
-        {
-          "path": "app/registry/default/ui/carousel/CarouselItem.vue",
-          "type": "registry:ui"
-        },
-        {
-          "path": "app/registry/default/ui/carousel/CarouselNext.vue",
-          "type": "registry:ui"
-        },
-        {
-          "path": "app/registry/default/ui/carousel/CarouselPrevious.vue",
-          "type": "registry:ui"
-        },
-        {
-          "path": "app/registry/default/ui/carousel/index.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "checkbox",
       "type": "registry:ui",
       "dependencies": ["reka-ui"],

@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-63.vue",
-      "content": "<script setup lang=\"ts\">\nconst textValue = ref(\"\");\n</script>\n\n<template>\n  <div\n    class=\"[--ring:var(--color-indigo-300)] *:not-first:mt-2 in-[.dark]:[--ring:var(--color-indigo-900)]\"\n  >\n    <Label for=\"colored-textarea\">Textarea with colored border and ring</Label>\n    <Textarea\n      id=\"colored-textarea\"\n      v-model=\"textValue\"\n      placeholder=\"Leave a comment\"\n    />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Textarea } from \"@/registry/default/ui/textarea\";\nimport { ref, useId } from \"vue\";\n\nconst textValue = ref(\"\");\nconst id = useId();\n</script>\n\n<template>\n  <div\n    class=\"[--ring:var(--color-indigo-300)] *:not-first:mt-2 in-[.dark]:[--ring:var(--color-indigo-900)]\"\n  >\n    <Label :for=\"id\">Textarea with colored border and ring</Label>\n    <Textarea :id=\"id\" v-model=\"textValue\" placeholder=\"Leave a comment\" />\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

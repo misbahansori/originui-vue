@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-278.vue",
-      "content": "<template>\n  <div class=\"rounded-md border border-red-500/50 px-4 py-3 text-red-600\">\n    <div class=\"flex items-start gap-3\">\n      <Icon\n        name=\"lucide:circle-alert\"\n        class=\"mt-0.5 size-4 shrink-0 opacity-60\"\n        aria-hidden=\"true\"\n      />\n      <div class=\"grow space-y-1\">\n        <p class=\"text-sm font-medium\">Password does not meet requirements:</p>\n        <ul class=\"list-inside list-disc text-sm opacity-80\">\n          <li>Minimum 8 characters</li>\n          <li>Include a special character</li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { LucideCircleAlert } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <div class=\"rounded-md border border-red-500/50 px-4 py-3 text-red-600\">\n    <div class=\"flex items-start gap-3\">\n      <LucideCircleAlert\n        class=\"mt-0.5 size-4 shrink-0 opacity-60\"\n        aria-hidden=\"true\"\n      />\n      <div class=\"grow space-y-1\">\n        <p class=\"text-sm font-medium\">Password does not meet requirements:</p>\n        <ul class=\"list-inside list-disc text-sm opacity-80\">\n          <li>Minimum 8 characters</li>\n          <li>Include a special character</li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

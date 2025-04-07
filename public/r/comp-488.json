@@ -3,7 +3,7 @@
   "name": "comp-488",
   "type": "registry:component",
   "dependencies": [
-    "react-aria-components"
+    "reka-ui"
   ],
   "registryDependencies": [
     "https://originui-vue.com/r/calendar-rac.json"

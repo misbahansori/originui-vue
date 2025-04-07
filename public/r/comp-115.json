@@ -8,7 +8,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-115.vue",
-      "content": "<template>\n  <Button class=\"relative ps-12\">\n    Previous\n    <span\n      class=\"bg-primary-foreground/15 pointer-events-none absolute inset-y-0 start-0 flex w-9 items-center justify-center\"\n    >\n      <Icon\n        name=\"lucide:chevron-left\"\n        class=\"opacity-60\"\n        size=\"16\"\n        aria-hidden=\"true\"\n      />\n    </span>\n  </Button>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideChevronLeft } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Button class=\"relative ps-12\">\n    Previous\n    <span\n      class=\"bg-primary-foreground/15 pointer-events-none absolute inset-y-0 start-0 flex w-9 items-center justify-center\"\n    >\n      <LucideChevronLeft class=\"opacity-60\" :size=\"16\" aria-hidden=\"true\" />\n    </span>\n  </Button>\n</template>\n",
       "type": "registry:component"
     }
   ],

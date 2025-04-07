@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-132.vue",
-      "content": "<script setup lang=\"ts\">\nconst id = useId();\nconst checked = ref(false);\n</script>\n\n<template>\n  <div class=\"flex items-center gap-2\">\n    <Checkbox :id=\"id\" v-model=\"checked\" />\n    <Label :for=\"id\">Simple checkbox</Label>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Checkbox } from \"@/registry/default/ui/checkbox\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst checked = ref(false);\n</script>\n\n<template>\n  <div class=\"flex items-center gap-2\">\n    <Checkbox :id=\"id\" v-model=\"checked\" />\n    <Label :for=\"id\">Simple checkbox</Label>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

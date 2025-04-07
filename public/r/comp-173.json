@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-173.vue",
-      "content": "<script setup lang=\"ts\">\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"inline-flex items-center gap-2\">\n    <Switch\n      :id=\"id\"\n      class=\"h-5 w-8 [&_span]:size-4 data-[state=checked]:[&_span]:translate-x-3 data-[state=checked]:[&_span]:rtl:-translate-x-3\"\n    />\n    <Label :for=\"id\" class=\"sr-only\">Small switch</Label>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Switch } from \"@/registry/default/ui/switch\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"inline-flex items-center gap-2\">\n    <Switch\n      :id=\"id\"\n      class=\"h-5 w-8 [&_span]:size-4 data-[state=checked]:[&_span]:translate-x-3 data-[state=checked]:[&_span]:rtl:-translate-x-3\"\n    />\n    <Label :for=\"id\" class=\"sr-only\">Small switch</Label>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

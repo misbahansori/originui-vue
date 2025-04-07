@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-399.vue",
-      "content": "<template>\n  <div class=\"relative\">\n    <Avatar class=\"rounded-md\">\n      <AvatarImage src=\"./avatar-80-07.jpg\" alt=\"Kelly King\" />\n      <AvatarFallback>KK</AvatarFallback>\n    </Avatar>\n    <Badge\n      class=\"border-background absolute -top-2 left-full min-w-5 -translate-x-3 px-1\"\n    >\n      6\n    </Badge>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n} from \"@/registry/default/ui/avatar\";\nimport { Badge } from \"@/registry/default/ui/badge\";\n</script>\n\n<template>\n  <div class=\"relative\">\n    <Avatar class=\"rounded-md\">\n      <AvatarImage src=\"./avatar-80-07.jpg\" alt=\"Kelly King\" />\n      <AvatarFallback>KK</AvatarFallback>\n    </Avatar>\n    <Badge\n      class=\"border-background absolute -top-2 left-full min-w-5 -translate-x-3 px-1\"\n    >\n      6\n    </Badge>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

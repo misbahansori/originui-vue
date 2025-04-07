@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-242.vue",
-      "content": "<script setup lang=\"ts\">\nconst value = ref([25]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Slider with square thumb</Label>\n    <Slider\n      v-model=\"value\"\n      :max=\"100\"\n      :step=\"10\"\n      class=\"[&>:last-child]:rounded\"\n      aria-label=\"Slider with square thumb\"\n    />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport { ref } from \"vue\";\n\nconst value = ref([25]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Slider with square thumb</Label>\n    <Slider\n      v-model=\"value\"\n      :max=\"100\"\n      :step=\"10\"\n      class=\"[&>:last-child]:rounded\"\n      aria-label=\"Slider with square thumb\"\n    />\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

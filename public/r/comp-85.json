@@ -8,7 +8,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-85.vue",
-      "content": "<template>\n  <Button class=\"group\" variant=\"ghost\">\n    <Icon\n      name=\"lucide:arrow-left\"\n      class=\"-ms-1 opacity-60 transition-transform group-hover:-translate-x-0.5\"\n      :size=\"16\"\n      aria-hidden=\"true\"\n    />\n    Button\n  </Button>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideArrowLeft } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Button class=\"group\" variant=\"ghost\">\n    <LucideArrowLeft\n      class=\"-ms-1 opacity-60 transition-transform group-hover:-translate-x-0.5\"\n      :size=\"16\"\n      aria-hidden=\"true\"\n    />\n    Button\n  </Button>\n</template>\n",
       "type": "registry:component"
     }
   ],

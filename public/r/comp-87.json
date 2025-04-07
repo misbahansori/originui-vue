@@ -8,7 +8,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-87.vue",
-      "content": "<template>\n  <Button class=\"group\" variant=\"secondary\">\n    <Icon\n      name=\"lucide:mail\"\n      class=\"-ms-1 opacity-60\"\n      :size=\"16\"\n      aria-hidden=\"true\"\n    />\n    Email\n    <Icon\n      name=\"lucide:arrow-right\"\n      class=\"-me-1 opacity-60 transition-transform group-hover:translate-x-0.5\"\n      :size=\"16\"\n      aria-hidden=\"true\"\n    />\n  </Button>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideArrowRight, LucideMail } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Button class=\"group\" variant=\"secondary\">\n    <LucideMail class=\"-ms-1 opacity-60\" :size=\"16\" aria-hidden=\"true\" />\n    Email\n    <LucideArrowRight\n      class=\"-me-1 opacity-60 transition-transform group-hover:translate-x-0.5\"\n      :size=\"16\"\n      aria-hidden=\"true\"\n    />\n  </Button>\n</template>\n",
       "type": "registry:component"
     }
   ],

@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-67.vue",
-      "content": "<script setup lang=\"ts\">\nconst textValue = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"disabled-textarea\">Disabled textarea</Label>\n    <Textarea\n      id=\"disabled-textarea\"\n      v-model=\"textValue\"\n      placeholder=\"Leave a comment\"\n      disabled\n    />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Textarea } from \"@/registry/default/ui/textarea\";\nimport { ref, useId } from \"vue\";\n\nconst textValue = ref(\"\");\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Disabled textarea</Label>\n    <Textarea\n      :id=\"id\"\n      v-model=\"textValue\"\n      placeholder=\"Leave a comment\"\n      disabled\n    />\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

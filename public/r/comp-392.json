@@ -8,7 +8,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-392.vue",
-      "content": "<template>\n  <Avatar>\n    <AvatarFallback>\n      <Icon\n        name=\"lucide:user-round\"\n        class=\"size-4 opacity-60\"\n        aria-hidden=\"true\"\n      />\n    </AvatarFallback>\n  </Avatar>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Avatar, AvatarFallback } from \"@/registry/default/ui/avatar\";\nimport { LucideUserRound } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Avatar>\n    <AvatarFallback>\n      <LucideUserRound class=\"size-4 opacity-60\" aria-hidden=\"true\" />\n    </AvatarFallback>\n  </Avatar>\n</template>\n",
       "type": "registry:component"
     }
   ],

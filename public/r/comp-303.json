@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-303.vue",
-      "content": "<template>\n  <div class=\"dark bg-muted text-foreground px-4 py-3\">\n    <p class=\"text-center text-sm\">\n      <Icon\n        name=\"lucide:eclipse\"\n        class=\"me-3 -mt-0.5 inline-flex size-4 opacity-60\"\n        aria-hidden=\"true\"\n      />\n      Get the most out of your app with real-time updates and analytics\n      <span class=\"text-muted-foreground\">·</span>\n      <a href=\"#\" class=\"font-medium underline hover:no-underline\">Upgrade</a>\n    </p>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { LucideEclipse } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <div class=\"dark bg-muted text-foreground px-4 py-3\">\n    <p class=\"text-center text-sm\">\n      <LucideEclipse\n        class=\"me-3 -mt-0.5 inline-flex size-4 opacity-60\"\n        aria-hidden=\"true\"\n      />\n      Get the most out of your app with real-time updates and analytics\n      <span class=\"text-muted-foreground\">·</span>\n      <a href=\"#\" class=\"font-medium underline hover:no-underline\">Upgrade</a>\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

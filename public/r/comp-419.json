@@ -8,7 +8,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-419.vue",
-      "content": "<template>\n  <Badge variant=\"outline\" class=\"gap-1\">\n    <Icon\n      name=\"lucide:check\"\n      class=\"size-4 text-emerald-500\"\n      aria-hidden=\"true\"\n    />\n    Badge\n  </Badge>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Badge } from \"@/registry/default/ui/badge\";\nimport { LucideCheck } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Badge variant=\"outline\" class=\"gap-1\">\n    <LucideCheck :size=\"16\" class=\"text-emerald-500\" aria-hidden=\"true\" />\n    Badge\n  </Badge>\n</template>\n",
       "type": "registry:component"
     }
   ],

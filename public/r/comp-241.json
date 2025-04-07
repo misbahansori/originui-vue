@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-241.vue",
-      "content": "<script setup lang=\"ts\">\nconst value = ref([25]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Disabled slider</Label>\n    <Slider v-model=\"value\" disabled aria-label=\"Disabled slider\" />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport { ref } from \"vue\";\n\nconst value = ref([25]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Disabled slider</Label>\n    <Slider v-model=\"value\" disabled aria-label=\"Disabled slider\" />\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

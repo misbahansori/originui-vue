@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-297.vue",
-      "content": "<script setup lang=\"ts\">\n// TODO: Implement this component\n</script>\n\n<template>\n  <Button variant=\"outline\">Show toast</Button>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\n// TODO: Implement this component\n</script>\n\n<template>\n  <Button variant=\"outline\">Show toast</Button>\n</template>\n",
       "type": "registry:component"
     }
   ],
