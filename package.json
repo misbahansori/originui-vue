@@ -9,7 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "start": "node .output/server/index.mjs",
-    "registry:build": "shadcn build",
+    "registry:build": "shadcn-vue build",
     "check-imports": "node scripts/check-imports.js",
     "update-registry-paths": "node scripts/update-registry-paths.js"
   },
@@ -32,8 +32,8 @@
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "reka-ui": "^2.0.2",
-    "shadcn": "2.4.0-canary.17",
     "shadcn-nuxt": "^1.0.2",
+    "shadcn-vue": "^2.0.1",
     "shiki": "^3.2.1",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7",

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { RegistryItem } from "shadcn/registry";
+import type { RegistryItem } from "shadcn-vue/registry";
 import { codeToHtml } from "shiki";
 import { MagicString } from "vue/compiler-sfc";
 
