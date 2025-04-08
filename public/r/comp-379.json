@@ -1,22 +1,28 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-379",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/dropdown-menu.json"
   ],
   "files": [
     {
-      "path": "components/comp-379.vue",
+      "path": "app/registry/default/components/comp-379.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuTrigger,\n} from \"@/registry/default/ui/dropdown-menu\";\nimport {\n  LucideHeading1,\n  LucideHeading2,\n  LucideMinus,\n  LucidePlus,\n  LucideTextQuote,\n  LucideType,\n} from \"lucide-vue-next\";\n</script>\n\n<template>\n  <DropdownMenu>\n    <DropdownMenuTrigger asChild>\n      <Button\n        size=\"icon\"\n        variant=\"ghost\"\n        class=\"rounded-full shadow-none\"\n        aria-label=\"Open edit menu\"\n      >\n        <LucidePlus class=\"size-4\" aria-hidden=\"true\" />\n      </Button>\n    </DropdownMenuTrigger>\n    <DropdownMenuContent class=\"pb-2\">\n      <DropdownMenuLabel>Add block</DropdownMenuLabel>\n      <DropdownMenuItem>\n        <div\n          class=\"bg-background flex size-8 items-center justify-center rounded-md border\"\n          aria-hidden=\"true\"\n        >\n          <LucideType class=\"size-4 opacity-60\" />\n        </div>\n        <div>\n          <div class=\"text-sm font-medium\">Text</div>\n          <div class=\"text-muted-foreground text-xs\">\n            Start writing with plain text\n          </div>\n        </div>\n      </DropdownMenuItem>\n      <DropdownMenuItem>\n        <div\n          class=\"bg-background flex size-8 items-center justify-center rounded-md border\"\n          aria-hidden=\"true\"\n        >\n          <LucideTextQuote class=\"size-4 opacity-60\" />\n        </div>\n        <div>\n          <div class=\"text-sm font-medium\">Quote</div>\n          <div class=\"text-muted-foreground text-xs\">Capture a quote</div>\n        </div>\n      </DropdownMenuItem>\n      <DropdownMenuItem>\n        <div\n          class=\"bg-background flex size-8 items-center justify-center rounded-md border\"\n          aria-hidden=\"true\"\n        >\n          <LucideMinus class=\"size-4 opacity-60\" />\n        </div>\n        <div>\n          <div class=\"text-sm font-medium\">Divider</div>\n          <div class=\"text-muted-foreground text-xs\">\n            Visually divide blocks\n          </div>\n        </div>\n      </DropdownMenuItem>\n      <DropdownMenuItem>\n        <div\n          class=\"bg-background flex size-8 items-center justify-center rounded-md border\"\n          aria-hidden=\"true\"\n        >\n          <LucideHeading1 class=\"size-4 opacity-60\" />\n        </div>\n        <div>\n          <div class=\"text-sm font-medium\">Heading 1</div>\n          <div class=\"text-muted-foreground text-xs\">Big section heading</div>\n        </div>\n      </DropdownMenuItem>\n      <DropdownMenuItem>\n        <div\n          class=\"bg-background flex size-8 items-center justify-center rounded-md border\"\n          aria-hidden=\"true\"\n        >\n          <LucideHeading2 class=\"size-4 opacity-60\" />\n        </div>\n        <div>\n          <div class=\"text-sm font-medium\">Heading 2</div>\n          <div class=\"text-muted-foreground text-xs\">\n            Medium section subheading\n          </div>\n        </div>\n      </DropdownMenuItem>\n    </DropdownMenuContent>\n  </DropdownMenu>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["dropdown", "text editor", "radix"],
+    "tags": [
+      "dropdown",
+      "text editor",
+      "radix"
+    ],
     "style": 1
   }
 }

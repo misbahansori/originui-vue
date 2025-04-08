@@ -1,15 +1,17 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-376",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/dropdown-menu.json"
   ],
   "files": [
     {
-      "path": "components/comp-376.vue",
+      "path": "app/registry/default/components/comp-376.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/registry/default/ui/dropdown-menu\";\nimport {\n  LucideBolt,\n  LucideBookOpen,\n  LucideCircleUserRound,\n  LucideLayers2,\n  LucideLogOut,\n  LucidePin,\n  LucideUserPen,\n} from \"lucide-vue-next\";\n</script>\n\n<template>\n  <DropdownMenu>\n    <DropdownMenuTrigger asChild>\n      <Button size=\"icon\" variant=\"outline\" aria-label=\"Open account menu\">\n        <LucideCircleUserRound class=\"size-4\" aria-hidden=\"true\" />\n      </Button>\n    </DropdownMenuTrigger>\n    <DropdownMenuContent class=\"max-w-64\">\n      <DropdownMenuLabel class=\"flex items-start gap-3\">\n        <img\n          src=\"/avatar.jpg\"\n          alt=\"Avatar\"\n          width=\"32\"\n          height=\"32\"\n          class=\"shrink-0 rounded-full\"\n        />\n        <div class=\"flex min-w-0 flex-col\">\n          <span class=\"text-foreground truncate text-sm font-medium\">\n            Keith Kennedy\n          </span>\n          <span class=\"text-muted-foreground truncate text-xs font-normal\">\n            k.kennedy@originui.com\n          </span>\n        </div>\n      </DropdownMenuLabel>\n      <DropdownMenuSeparator />\n      <DropdownMenuGroup>\n        <DropdownMenuItem>\n          <LucideBolt class=\"size-4 opacity-60\" aria-hidden=\"true\" />\n          <span>Option 1</span>\n        </DropdownMenuItem>\n        <DropdownMenuItem>\n          <LucideLayers2 class=\"size-4 opacity-60\" aria-hidden=\"true\" />\n          <span>Option 2</span>\n        </DropdownMenuItem>\n        <DropdownMenuItem>\n          <LucideBookOpen class=\"size-4 opacity-60\" aria-hidden=\"true\" />\n          <span>Option 3</span>\n        </DropdownMenuItem>\n      </DropdownMenuGroup>\n      <DropdownMenuSeparator />\n      <DropdownMenuGroup>\n        <DropdownMenuItem>\n          <LucidePin class=\"size-4 opacity-60\" aria-hidden=\"true\" />\n          <span>Option 4</span>\n        </DropdownMenuItem>\n        <DropdownMenuItem>\n          <LucideUserPen class=\"size-4 opacity-60\" aria-hidden=\"true\" />\n          <span>Option 5</span>\n        </DropdownMenuItem>\n      </DropdownMenuGroup>\n      <DropdownMenuSeparator />\n      <DropdownMenuItem>\n        <LucideLogOut class=\"size-4 opacity-60\" aria-hidden=\"true\" />\n        <span>Logout</span>\n      </DropdownMenuItem>\n    </DropdownMenuContent>\n  </DropdownMenu>\n</template>\n",
       "type": "registry:component",
       "target": ""

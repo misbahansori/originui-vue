@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-521",
   "type": "registry:component",
   "registryDependencies": [
@@ -8,11 +8,16 @@
   ],
   "files": [
     {
-      "path": "components/comp-521.vue",
+      "path": "app/registry/default/components/comp-521.vue",
       "content": "<script lang=\"ts\" setup>\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Stepper,\n  StepperIndicator,\n  StepperItem,\n  StepperTrigger,\n} from \"@/registry/default/ui/stepper\";\nimport { ref } from \"vue\";\n\nconst steps = [1, 2, 3, 4];\nconst currentStep = ref(1);\n</script>\n\n<template>\n  <div class=\"mx-auto max-w-xl space-y-8 text-center\">\n    <div class=\"space-y-3\">\n      <Stepper v-model=\"currentStep\">\n        <StepperItem\n          v-for=\"step in steps\"\n          :key=\"step\"\n          :step=\"step\"\n          class=\"flex-1\"\n        >\n          <StepperTrigger class=\"w-full flex-col items-start gap-2\" as-child>\n            <StepperIndicator class=\"bg-border h-2 w-full rounded-none\">\n              <span class=\"sr-only\">{{ step }}</span>\n            </StepperIndicator>\n          </StepperTrigger>\n        </StepperItem>\n      </Stepper>\n      <div class=\"text-muted-foreground text-sm font-medium tabular-nums\">\n        Step {{ currentStep }} of {{ steps.length }}\n      </div>\n    </div>\n    <div class=\"flex justify-center space-x-4\">\n      <Button\n        variant=\"outline\"\n        class=\"w-32\"\n        @click=\"currentStep = currentStep - 1\"\n        :disabled=\"currentStep === 1\"\n      >\n        Prev step\n      </Button>\n      <Button\n        variant=\"outline\"\n        class=\"w-32\"\n        @click=\"currentStep = currentStep + 1\"\n        :disabled=\"currentStep >= steps.length\"\n      >\n        Next step\n      </Button>\n    </div>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Progress stepper\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": { "tags": ["stepper"], "colSpan": 3 }
+  "meta": {
+    "tags": [
+      "stepper"
+    ],
+    "colSpan": 3
+  }
 }

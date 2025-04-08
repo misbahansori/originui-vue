@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-391",
   "type": "registry:component",
   "registryDependencies": [
@@ -7,14 +7,18 @@
   ],
   "files": [
     {
-      "path": "components/comp-391.vue",
+      "path": "app/registry/default/components/comp-391.vue",
       "content": "<script setup lang=\"ts\">\nimport { Avatar, AvatarFallback } from \"@/registry/default/ui/avatar\";\n</script>\n\n<template>\n  <Avatar>\n    <AvatarFallback>KK</AvatarFallback>\n  </Avatar>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["avatar", "user", "profile"],
+    "tags": [
+      "avatar",
+      "user",
+      "profile"
+    ],
     "style": 1
   }
 }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-60",
   "type": "registry:component",
   "registryDependencies": [
@@ -8,11 +8,17 @@
   ],
   "files": [
     {
-      "path": "components/comp-60.vue",
+      "path": "app/registry/default/components/comp-60.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Textarea } from \"@/registry/default/ui/textarea\";\nimport { ref } from \"vue\";\n\nconst textValue = ref(\"\");\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">\n      Required textarea\n      <span class=\"text-destructive\">*</span>\n    </Label>\n    <Textarea\n      :id=\"id\"\n      v-model=\"textValue\"\n      placeholder=\"Leave a message\"\n      required\n    />\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": { "tags": ["label", "textarea", "required"] }
+  "meta": {
+    "tags": [
+      "label",
+      "textarea",
+      "required"
+    ]
+  }
 }

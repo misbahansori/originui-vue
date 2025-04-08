@@ -1,18 +1,26 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-106",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json"
   ],
   "files": [
     {
-      "path": "components/comp-106.vue",
+      "path": "app/registry/default/components/comp-106.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideFlipHorizontal, LucideFlipVertical } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <div class=\"inline-flex -space-x-px rounded-md shadow-xs rtl:space-x-reverse\">\n    <Button\n      class=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\"\n      variant=\"outline\"\n      size=\"icon\"\n      aria-label=\"Flip Horizontal\"\n    >\n      <LucideFlipHorizontal :size=\"16\" aria-hidden=\"true\" />\n    </Button>\n    <Button\n      class=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\"\n      variant=\"outline\"\n      size=\"icon\"\n      aria-label=\"Flip Vertical\"\n    >\n      <LucideFlipVertical :size=\"16\" aria-hidden=\"true\" />\n    </Button>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": { "tags": ["button", "toggle group"], "style": 2 }
+  "meta": {
+    "tags": [
+      "button",
+      "toggle group"
+    ],
+    "style": 2
+  }
 }

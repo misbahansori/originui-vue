@@ -1,21 +1,26 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-285",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json"
   ],
   "files": [
     {
-      "path": "components/comp-285.vue",
+      "path": "app/registry/default/components/comp-285.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideArrowRight, LucideCircleCheck, LucideX } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <!-- To make the notification fixed, add classes like `fixed bottom-4 right-4` to the container element. -->\n  <div\n    class=\"bg-background z-50 max-w-[400px] rounded-md border px-4 py-3 shadow-lg\"\n  >\n    <div class=\"flex gap-2\">\n      <div class=\"flex grow gap-3\">\n        <LucideCircleCheck\n          class=\"mt-0.5 size-4 shrink-0 text-emerald-500\"\n          aria-hidden=\"true\"\n        />\n        <div class=\"flex grow justify-between gap-12\">\n          <p class=\"text-sm\">Completed successfully!</p>\n          <a href=\"#\" class=\"group text-sm font-medium whitespace-nowrap\">\n            Link\n            <LucideArrowRight\n              class=\"ms-1 -mt-0.5 inline-flex size-4 opacity-60 transition-transform group-hover:translate-x-0.5\"\n              aria-hidden=\"true\"\n            />\n          </a>\n        </div>\n      </div>\n      <Button\n        variant=\"ghost\"\n        class=\"group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent\"\n        aria-label=\"Close banner\"\n      >\n        <LucideX\n          class=\"size-4 opacity-60 transition-opacity group-hover:opacity-100\"\n          aria-hidden=\"true\"\n        />\n      </Button>\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["notification", "success"],
+    "tags": [
+      "notification",
+      "success"
+    ],
     "colSpan": 2,
     "style": 1
   }

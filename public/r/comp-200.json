@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-200",
   "type": "registry:component",
   "registryDependencies": [
@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "components/comp-200.vue",
+      "path": "app/registry/default/components/comp-200.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { SelectNative } from \"@/registry/default/ui/select-native\";\nimport { computed, useId } from \"vue\";\n\nconst id = useId();\n\nconst timezones = Intl.supportedValuesOf(\"timeZone\");\n\nconst formattedTimezones = computed(() => {\n  return timezones\n    .map((timezone) => {\n      const formatter = new Intl.DateTimeFormat(\"en\", {\n        timeZone: timezone,\n        timeZoneName: \"shortOffset\",\n      });\n      const parts = formatter.formatToParts(new Date());\n      const offset =\n        parts.find((part) => part.type === \"timeZoneName\")?.value || \"\";\n      const modifiedOffset = offset === \"GMT\" ? \"GMT+0\" : offset;\n\n      return {\n        value: timezone,\n        label: `(${modifiedOffset}) ${timezone.replace(/_/g, \" \")}`,\n        numericOffset: parseInt(\n          offset.replace(\"GMT\", \"\").replace(\"+\", \"\") || \"0\",\n        ),\n      };\n    })\n    .sort((a, b) => a.numericOffset - b.numericOffset);\n});\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Timezone select (native)</Label>\n    <SelectNative :id=\"id\" default-value=\"Europe/London\">\n      <option\n        v-for=\"{ value, label } in formattedTimezones\"\n        :key=\"value\"\n        :value=\"value\"\n      >\n        {{ label }}\n      </option>\n    </SelectNative>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""

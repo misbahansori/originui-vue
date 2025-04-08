@@ -1,21 +1,27 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-291",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json"
   ],
   "files": [
     {
-      "path": "components/comp-291.vue",
+      "path": "app/registry/default/components/comp-291.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideCircleCheck, LucideX } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <!-- To make the notification fixed, add classes like `fixed bottom-4 right-4` to the container element. -->\n  <div class=\"bg-background z-50 max-w-[400px] rounded-md border p-4 shadow-lg\">\n    <div class=\"flex gap-2\">\n      <div class=\"flex grow gap-3\">\n        <LucideCircleCheck\n          :size=\"16\"\n          class=\"mt-0.5 shrink-0 text-emerald-500\"\n          aria-hidden=\"true\"\n        />\n        <div class=\"flex grow flex-col gap-3\">\n          <div class=\"space-y-1\">\n            <p class=\"text-sm font-medium\">Your request was completed!</p>\n            <p class=\"text-muted-foreground text-sm\">\n              It demonstrates that the task or request has been processed.\n            </p>\n          </div>\n          <div class=\"flex gap-2\">\n            <Button size=\"sm\">Learn more</Button>\n          </div>\n        </div>\n        <Button\n          variant=\"ghost\"\n          class=\"group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent\"\n          aria-label=\"Close notification\"\n        >\n          <LucideX\n            :size=\"16\"\n            class=\"opacity-60 transition-opacity group-hover:opacity-100\"\n            aria-hidden=\"true\"\n          />\n        </Button>\n      </div>\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["notification", "button", "success"],
+    "tags": [
+      "notification",
+      "button",
+      "success"
+    ],
     "colSpan": 2,
     "style": 1
   }

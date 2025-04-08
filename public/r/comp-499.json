@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-499",
   "type": "registry:component",
   "registryDependencies": [
@@ -7,14 +7,19 @@
   ],
   "files": [
     {
-      "path": "components/comp-499.vue",
+      "path": "app/registry/default/components/comp-499.vue",
       "content": "<template></template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["calendar", "date", "week", "react daypicker"],
+    "tags": [
+      "calendar",
+      "date",
+      "week",
+      "react daypicker"
+    ],
     "style": 1
   }
 }

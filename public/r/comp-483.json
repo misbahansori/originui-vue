@@ -1,8 +1,10 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-483",
   "type": "registry:component",
-  "dependencies": ["@tanstack/react-table"],
+  "dependencies": [
+    "@tanstack/react-table"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/badge.json",
     "https://originui-vue.com/r/button.json",
@@ -14,7 +16,7 @@
   ],
   "files": [
     {
-      "path": "components/comp-483.vue",
+      "path": "app/registry/default/components/comp-483.vue",
       "content": "<template></template>\n",
       "type": "registry:component",
       "target": ""

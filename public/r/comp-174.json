@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-174",
   "type": "registry:component",
   "registryDependencies": [
@@ -8,11 +8,17 @@
   ],
   "files": [
     {
-      "path": "components/comp-174.vue",
+      "path": "app/registry/default/components/comp-174.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Switch } from \"@/registry/default/ui/switch\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div\n    class=\"inline-flex items-center gap-2 [--primary:var(--color-indigo-500)] [--ring:var(--color-indigo-300)] in-[.dark]:[--primary:var(--color-indigo-500)] in-[.dark]:[--ring:var(--color-indigo-900)]\"\n  >\n    <Switch :id=\"id\" :default-checked=\"true\" />\n    <Label :for=\"id\" class=\"sr-only\">Colored switch</Label>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": { "tags": ["switch", "radix"], "style": 1 }
+  "meta": {
+    "tags": [
+      "switch",
+      "radix"
+    ],
+    "style": 1
+  }
 }

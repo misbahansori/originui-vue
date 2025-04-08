@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-76",
   "type": "registry:component",
   "registryDependencies": [
@@ -8,11 +8,17 @@
   ],
   "files": [
     {
-      "path": "components/comp-76.vue",
+      "path": "app/registry/default/components/comp-76.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Textarea } from \"@/registry/default/ui/textarea\";\nimport { ref, useId } from \"vue\";\n\nconst textValue = ref(\"This is a read-only textarea\");\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Read-only textarea</Label>\n    <Textarea\n      :id=\"id\"\n      class=\"read-only:bg-muted\"\n      v-model=\"textValue\"\n      placeholder=\"Leave a comment\"\n      readonly\n    />\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": { "tags": ["label", "textarea", "read-only"] }
+  "meta": {
+    "tags": [
+      "label",
+      "textarea",
+      "read-only"
+    ]
+  }
 }

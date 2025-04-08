@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-422",
   "type": "registry:component",
   "registryDependencies": [
@@ -7,14 +7,18 @@
   ],
   "files": [
     {
-      "path": "components/comp-422.vue",
+      "path": "app/registry/default/components/comp-422.vue",
       "content": "<script setup lang=\"ts\">\nimport { Badge } from \"@/registry/default/ui/badge\";\n</script>\n\n<template>\n  <Badge variant=\"outline\" class=\"gap-1.5\">\n    <span class=\"size-1.5 rounded-full bg-red-500\" aria-hidden=\"true\"></span>\n    Badge\n  </Badge>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["badge", "chip", "status"],
+    "tags": [
+      "badge",
+      "chip",
+      "status"
+    ],
     "style": 1
   }
 }

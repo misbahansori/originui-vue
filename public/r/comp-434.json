@@ -1,22 +1,27 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-434",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/scroll-area.json",
     "https://originui-vue.com/r/tabs.json"
   ],
   "files": [
     {
-      "path": "components/comp-434.vue",
+      "path": "app/registry/default/components/comp-434.vue",
       "content": "<script setup lang=\"ts\">\nimport { ScrollArea, ScrollBar } from \"@/registry/default/ui/scroll-area\";\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@/registry/default/ui/tabs\";\nimport { LucideBox, LucideHome, LucidePanelsTopLeft } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Tabs defaultValue=\"tab-1\">\n    <ScrollArea>\n      <TabsList class=\"mb-3 gap-1 bg-transparent\">\n        <TabsTrigger\n          value=\"tab-1\"\n          class=\"data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full data-[state=active]:shadow-none\"\n        >\n          <LucideHome\n            class=\"-ms-0.5 me-1.5 size-4 opacity-60\"\n            aria-hidden=\"true\"\n          />\n          Overview\n        </TabsTrigger>\n        <TabsTrigger\n          value=\"tab-2\"\n          class=\"data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full data-[state=active]:shadow-none\"\n        >\n          <LucidePanelsTopLeft\n            class=\"-ms-0.5 me-1.5 size-4 opacity-60\"\n            aria-hidden=\"true\"\n          />\n          Projects\n        </TabsTrigger>\n        <TabsTrigger\n          value=\"tab-3\"\n          class=\"data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full data-[state=active]:shadow-none\"\n        >\n          <LucideBox\n            class=\"-ms-0.5 me-1.5 size-4 opacity-60\"\n            aria-hidden=\"true\"\n          />\n          Packages\n        </TabsTrigger>\n      </TabsList>\n      <ScrollBar orientation=\"horizontal\" />\n    </ScrollArea>\n    <TabsContent value=\"tab-1\">\n      <p class=\"text-muted-foreground p-4 pt-1 text-center text-xs\">\n        Content for Tab 1\n      </p>\n    </TabsContent>\n    <TabsContent value=\"tab-2\">\n      <p class=\"text-muted-foreground p-4 pt-1 text-center text-xs\">\n        Content for Tab 2\n      </p>\n    </TabsContent>\n    <TabsContent value=\"tab-3\">\n      <p class=\"text-muted-foreground p-4 pt-1 text-center text-xs\">\n        Content for Tab 3\n      </p>\n    </TabsContent>\n  </Tabs>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["tabs", "radix"],
+    "tags": [
+      "tabs",
+      "radix"
+    ],
     "colSpan": 2,
     "style": 2
   }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-512",
   "type": "registry:component",
   "registryDependencies": [
@@ -10,7 +10,7 @@
   ],
   "files": [
     {
-      "path": "components/comp-512.vue",
+      "path": "app/registry/default/components/comp-512.vue",
       "content": "<template></template>\n",
       "type": "registry:component",
       "target": ""

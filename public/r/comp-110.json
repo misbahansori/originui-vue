@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-110",
   "type": "registry:component",
   "registryDependencies": [
@@ -7,11 +7,17 @@
   ],
   "files": [
     {
-      "path": "components/comp-110.vue",
+      "path": "app/registry/default/components/comp-110.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@/registry/default/ui/toggle-group\";\nimport { ref } from \"vue\";\n\nconst value = ref(\"left\");\n</script>\n\n<template>\n  <ToggleGroup type=\"single\" variant=\"outline\" v-model=\"value\">\n    <ToggleGroupItem class=\"flex-1\" value=\"left\">Left</ToggleGroupItem>\n    <ToggleGroupItem class=\"flex-1\" value=\"center\">Center</ToggleGroupItem>\n    <ToggleGroupItem class=\"flex-1\" value=\"right\">Right</ToggleGroupItem>\n  </ToggleGroup>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": { "tags": ["button", "toggle group"], "style": 2 }
+  "meta": {
+    "tags": [
+      "button",
+      "toggle group"
+    ],
+    "style": 2
+  }
 }

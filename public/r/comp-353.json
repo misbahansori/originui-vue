@@ -1,22 +1,28 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-353",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/accordion.json",
     "https://originui-vue.com/r/collapsible.json"
   ],
   "files": [
     {
-      "path": "components/comp-353.vue",
+      "path": "app/registry/default/components/comp-353.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@/registry/default/ui/accordion\";\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@/registry/default/ui/collapsible\";\nimport {\n  LucideAtSign,\n  LucideChevronDown,\n  LucideCircleDashed,\n  LucideCommand,\n  LucideEclipse,\n  LucideGauge,\n  LucideZap,\n} from \"lucide-vue-next\";\n\nconst items = [\n  {\n    id: \"1\",\n    title: \"What makes Origin UI different?\",\n    icon: LucideCommand,\n    collapsibles: [\n      {\n        title: \"What about performance?\",\n        content:\n          \"We optimize every component for maximum performance and minimal bundle size.\",\n        icon: LucideGauge,\n      },\n      {\n        title: \"How is the documentation?\",\n        content:\n          \"Our documentation is comprehensive and includes live examples for every component.\",\n        icon: LucideCircleDashed,\n      },\n    ],\n  },\n  {\n    id: \"2\",\n    title: \"How can I customize the components?\",\n    icon: LucideEclipse,\n    collapsibles: [\n      {\n        title: \"Can I use custom themes?\",\n        content:\n          \"Yes, our theming system is fully customizable and supports both light and dark modes.\",\n        icon: LucideGauge,\n      },\n      {\n        title: \"What about Tailwind support?\",\n        content:\n          \"We have first-class support for Tailwind CSS with custom utility classes.\",\n        icon: LucideCircleDashed,\n      },\n    ],\n  },\n  {\n    id: \"3\",\n    title: \"Is Origin UI optimized for performance?\",\n    icon: LucideZap,\n    collapsibles: [\n      {\n        title: \"What's the bundle size impact?\",\n        content:\n          \"Our components are tree-shakeable and typically add minimal overhead to your bundle.\",\n        open: true,\n        icon: LucideGauge,\n      },\n      {\n        title: \"How is code splitting handled?\",\n        content:\n          \"We support automatic code splitting for optimal loading performance.\",\n        icon: LucideCircleDashed,\n      },\n    ],\n  },\n  {\n    id: \"4\",\n    title: \"How accessible are the components?\",\n    icon: LucideAtSign,\n    collapsibles: [\n      {\n        title: \"Which screen readers are supported?\",\n        content:\n          \"We test with NVDA, VoiceOver, and JAWS to ensure broad compatibility.\",\n        icon: LucideGauge,\n      },\n      {\n        title: \"What about keyboard navigation?\",\n        content:\n          \"Full keyboard navigation support is implemented following WAI-ARIA best practices.\",\n        icon: LucideCircleDashed,\n      },\n    ],\n  },\n];\n</script>\n\n<template>\n  <div class=\"space-y-4\">\n    <h2 class=\"text-xl font-bold\">Multi-level w/ icon</h2>\n    <Accordion type=\"single\" collapsible class=\"w-full\" :default-value=\"'3'\">\n      <AccordionItem\n        v-for=\"item in items\"\n        :key=\"item.id\"\n        :value=\"item.id\"\n        class=\"has-focus-visible:border-ring has-focus-visible:ring-ring/50 outline-none has-focus-visible:ring-[3px]\"\n      >\n        <AccordionTrigger\n          class=\"justify-start gap-3 rounded-md text-[15px] leading-6 outline-none hover:no-underline focus-visible:ring-0 [&>svg]:-order-1\"\n        >\n          <span class=\"flex items-center gap-3\">\n            <component\n              :is=\"item.icon\"\n              class=\"size-4 shrink-0 opacity-60\"\n              aria-hidden=\"true\"\n            />\n            <span>{{ item.title }}</span>\n          </span>\n        </AccordionTrigger>\n        <AccordionContent class=\"p-0\">\n          <Collapsible\n            v-for=\"(collapsible, index) in item.collapsibles\"\n            :key=\"index\"\n            class=\"border-t py-3 ps-6 pe-4\"\n            :default-open=\"collapsible.open\"\n          >\n            <CollapsibleTrigger\n              class=\"flex gap-2 text-[15px] leading-6 font-semibold [&[data-state=open]>svg]:rotate-180\"\n            >\n              <LucideChevronDown\n                class=\"mt-1 size-4 shrink-0 opacity-60 transition-transform duration-200\"\n                aria-hidden=\"true\"\n              />\n              <span class=\"flex items-center gap-3\">\n                <component\n                  :is=\"collapsible.icon\"\n                  class=\"size-4 shrink-0 opacity-60\"\n                  aria-hidden=\"true\"\n                />\n                <span>{{ collapsible.title }}</span>\n              </span>\n            </CollapsibleTrigger>\n            <CollapsibleContent\n              class=\"text-muted-foreground data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down mt-1 overflow-hidden ps-6 text-sm transition-all\"\n            >\n              {{ collapsible.content }}\n            </CollapsibleContent>\n          </Collapsible>\n        </AccordionContent>\n      </AccordionItem>\n    </Accordion>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["accordion", "collapsible", "radix"],
+    "tags": [
+      "accordion",
+      "collapsible",
+      "radix"
+    ],
     "colSpan": 2
   }
 }

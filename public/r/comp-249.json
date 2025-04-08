@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-249",
   "type": "registry:component",
   "registryDependencies": [
@@ -8,13 +8,18 @@
   ],
   "files": [
     {
-      "path": "components/comp-249.vue",
+      "path": "app/registry/default/components/comp-249.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport { ref } from \"vue\";\n\nconst value = ref([50]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Slider with labels and tooltip</Label>\n    <div>\n      <span\n        class=\"text-muted-foreground mb-3 flex w-full items-center justify-between gap-2 text-xs font-medium\"\n        aria-hidden=\"true\"\n      >\n        <span>Low</span>\n        <span>High</span>\n      </span>\n      <Slider\n        v-model=\"value\"\n        :step=\"10\"\n        :show-tooltip=\"true\"\n        aria-label=\"Slider with labels and tooltip\"\n      />\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["slider", "label", "tooltip", "radix"]
+    "tags": [
+      "slider",
+      "label",
+      "tooltip",
+      "radix"
+    ]
   }
 }

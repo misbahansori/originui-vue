@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-297",
   "type": "registry:component",
   "registryDependencies": [
@@ -7,14 +7,18 @@
   ],
   "files": [
     {
-      "path": "components/comp-297.vue",
+      "path": "app/registry/default/components/comp-297.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\n// TODO: Implement this component\n</script>\n\n<template>\n  <Button variant=\"outline\">Show toast</Button>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["notification", "toast", "radix"],
+    "tags": [
+      "notification",
+      "toast",
+      "radix"
+    ],
     "colSpan": 2,
     "style": 1
   }
