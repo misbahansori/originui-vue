@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
 import { Switch } from "@/registry/default/ui/switch";
-import { ref } from "vue";
+import { ref, useId } from "vue";
 
 const id = useId();
 const checked = ref(true);

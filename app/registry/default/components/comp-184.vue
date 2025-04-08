@@ -2,7 +2,7 @@
 import { Label } from "@/registry/default/ui/label";
 import { Switch } from "@/registry/default/ui/switch";
 import { LucideMoon, LucideSun } from "lucide-vue-next";
-import { ref } from "vue";
+import { ref, useId } from "vue";
 
 const id = useId();
 const checked = ref(true);

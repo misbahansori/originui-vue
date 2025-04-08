@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
 import { Star } from "lucide-vue-next";
-import { ref } from "vue";
+import { ref, useId } from "vue";
 
 const id = useId();
 const hoverRating = ref("");
