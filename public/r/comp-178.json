@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-178.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Switch } from \"@/registry/default/ui/switch\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"inline-flex items-center gap-2\">\n    <Switch\n      :id=\"id\"\n      class=\"data-[state=unchecked]:border-input data-[state=unchecked]:[&_span]:bg-input data-[state=unchecked]:bg-transparent [&_span]:transition-all data-[state=unchecked]:[&_span]:size-4 data-[state=unchecked]:[&_span]:translate-x-0.5 data-[state=unchecked]:[&_span]:shadow-none data-[state=unchecked]:[&_span]:rtl:-translate-x-0.5\"\n    />\n    <Label :for=\"id\" class=\"sr-only\">M3-style switch</Label>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Switch } from \"@/registry/default/ui/switch\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"inline-flex items-center gap-2\">\n    <Switch\n      :id=\"id\"\n      class=\"data-[state=unchecked]:border-input data-[state=unchecked]:[&_span]:bg-input data-[state=unchecked]:bg-transparent [&_span]:transition-all data-[state=unchecked]:[&_span]:size-4 data-[state=unchecked]:[&_span]:translate-x-0.5 data-[state=unchecked]:[&_span]:shadow-none data-[state=unchecked]:[&_span]:rtl:-translate-x-0.5\"\n    />\n    <Label :for=\"id\" class=\"sr-only\">M3-style switch</Label>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }

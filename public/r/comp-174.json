@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "app/registry/default/components/comp-174.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Switch } from \"@/registry/default/ui/switch\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div\n    class=\"inline-flex items-center gap-2 [--primary:var(--color-indigo-500)] [--ring:var(--color-indigo-300)] in-[.dark]:[--primary:var(--color-indigo-500)] in-[.dark]:[--ring:var(--color-indigo-900)]\"\n  >\n    <Switch :id=\"id\" :default-checked=\"true\" />\n    <Label :for=\"id\" class=\"sr-only\">Colored switch</Label>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Switch } from \"@/registry/default/ui/switch\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div\n    class=\"inline-flex items-center gap-2 [--primary:var(--color-indigo-500)] [--ring:var(--color-indigo-300)] in-[.dark]:[--primary:var(--color-indigo-500)] in-[.dark]:[--ring:var(--color-indigo-900)]\"\n  >\n    <Switch :id=\"id\" :default-checked=\"true\" />\n    <Label :for=\"id\" class=\"sr-only\">Colored switch</Label>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
