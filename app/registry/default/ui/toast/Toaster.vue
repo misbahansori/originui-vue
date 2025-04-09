@@ -16,21 +16,29 @@ const { toasts } = useToast();
 <template>
   <ToastProvider>
     <Toast v-for="toast in toasts" :key="toast.id" v-bind="toast">
-      <div class="grid gap-1">
-        <ToastTitle v-if="toast.title">
-          {{ toast.title }}
-        </ToastTitle>
-        <template v-if="toast.description">
-          <ToastDescription v-if="isVNode(toast.description)">
-            <component :is="toast.description" />
-          </ToastDescription>
-          <ToastDescription v-else>
-            {{ toast.description }}
-          </ToastDescription>
-        </template>
-        <ToastClose />
+      <div class="flex w-full justify-between gap-2">
+        <div class="flex flex-col gap-3">
+          <div class="space-y-1">
+            <ToastTitle v-if="toast.title">
+              {{ toast.title }}
+            </ToastTitle>
+            <template v-if="toast.description">
+              <ToastDescription v-if="isVNode(toast.description)">
+                <component :is="toast.description" />
+              </ToastDescription>
+              <ToastDescription v-else>
+                {{ toast.description }}
+              </ToastDescription>
+            </template>
+          </div>
+          <div>
+            <component :is="toast.action" />
+          </div>
+        </div>
+        <div>
+          <ToastClose />
+        </div>
       </div>
-      <component :is="toast.action" />
     </Toast>
     <ToastViewport />
   </ToastProvider>

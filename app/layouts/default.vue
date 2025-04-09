@@ -24,7 +24,5 @@ useHead({
         <Footer />
       </div>
     </div>
-
-    <Toaster />
   </div>
 </template>
