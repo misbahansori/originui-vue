@@ -39,7 +39,7 @@ const handleOpenChange = (value: boolean) => {
 const handleButtonClick = () => {
   if (open.value) {
     open.value = false;
-    window.setTimeout(() => {
+    setTimeout(() => {
       handleOpenChange(true);
     }, 150);
   } else {
