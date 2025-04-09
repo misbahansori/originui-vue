@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "utils",
   "type": "registry:lib",
   "dependencies": [

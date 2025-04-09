@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import type { RegistryItem } from "shadcn/registry";
+import type { RegistryItem } from "shadcn-vue/registry";
 
 interface Props {
   component: RegistryItem;

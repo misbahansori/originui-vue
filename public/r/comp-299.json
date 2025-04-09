@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-299",
   "type": "registry:component",
   "registryDependencies": [
@@ -7,14 +7,19 @@
   ],
   "files": [
     {
-      "path": "components/comp-299.vue",
+      "path": "app/registry/default/components/comp-299.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\n// TODO: Implement this component\n</script>\n\n<template>\n  <Button variant=\"outline\">Show sonner</Button>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["notification", "toast", "sonner", "radix"],
+    "tags": [
+      "notification",
+      "toast",
+      "sonner",
+      "radix"
+    ],
     "colSpan": 2,
     "style": 1
   }

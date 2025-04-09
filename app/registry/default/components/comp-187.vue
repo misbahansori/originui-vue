@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
 import { Switch } from "@/registry/default/ui/switch";
+import { useId } from "vue";
 
 const id = useId();
 </script>

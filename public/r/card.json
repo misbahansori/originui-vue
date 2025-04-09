@@ -1,47 +1,49 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "card",
   "type": "registry:ui",
-  "dependencies": ["reka-ui"],
+  "dependencies": [
+    "reka-ui"
+  ],
   "files": [
     {
-      "path": "ui/card/Card.vue",
+      "path": "app/registry/default/ui/card/Card.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    :class=\"\n      cn(\n        'bg-card text-card-foreground rounded-lg border shadow-sm',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "ui/card/CardContent.vue",
+      "path": "app/registry/default/ui/card/CardContent.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div :class=\"cn('p-6 pt-0', props.class)\">\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "ui/card/CardDescription.vue",
+      "path": "app/registry/default/ui/card/CardDescription.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <p :class=\"cn('text-muted-foreground text-sm', props.class)\">\n    <slot />\n  </p>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "ui/card/CardFooter.vue",
+      "path": "app/registry/default/ui/card/CardFooter.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div :class=\"cn('flex items-center p-6 pt-0', props.class)\">\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "ui/card/CardHeader.vue",
+      "path": "app/registry/default/ui/card/CardHeader.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div :class=\"cn('flex flex-col gap-y-1.5 p-6', props.class)\">\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "ui/card/CardTitle.vue",
+      "path": "app/registry/default/ui/card/CardTitle.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <h3\n    :class=\"\n      cn('text-2xl leading-none font-semibold tracking-tight', props.class)\n    \"\n  >\n    <slot />\n  </h3>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "ui/card/index.ts",
+      "path": "app/registry/default/ui/card/index.ts",
       "content": "export { default as Card } from \"./Card.vue\";\nexport { default as CardContent } from \"./CardContent.vue\";\nexport { default as CardDescription } from \"./CardDescription.vue\";\nexport { default as CardFooter } from \"./CardFooter.vue\";\nexport { default as CardHeader } from \"./CardHeader.vue\";\nexport { default as CardTitle } from \"./CardTitle.vue\";\n",
       "type": "registry:ui",
       "target": ""

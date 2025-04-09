@@ -1,8 +1,10 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-230",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/command.json",
@@ -11,7 +13,7 @@
   ],
   "files": [
     {
-      "path": "components/comp-230.vue",
+      "path": "app/registry/default/components/comp-230.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n  CommandSeparator,\n} from \"@/registry/default/ui/command\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@/registry/default/ui/popover\";\nimport { LucideCheck, LucideChevronDown, LucidePlus } from \"lucide-vue-next\";\nimport { computed, ref, useId } from \"vue\";\n\nconst id = useId();\nconst open = ref(false);\nconst value = ref(\"originui\");\n\nconst organizations = [\n  {\n    value: \"originui\",\n    label: \"Origin UI\",\n  },\n  {\n    value: \"cruip\",\n    label: \"Cruip\",\n  },\n];\n\nconst selectedOrganization = computed(() => {\n  return organizations.find(\n    (organization) => organization.value === value.value,\n  )?.label;\n});\n\nfunction handleSelect(currentValue: string) {\n  value.value = currentValue === value.value ? \"\" : currentValue;\n  open.value = false;\n}\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Select with search and button</Label>\n    <Popover v-model:open=\"open\">\n      <PopoverTrigger as-child>\n        <Button\n          :id=\"id\"\n          variant=\"outline\"\n          role=\"combobox\"\n          :aria-expanded=\"open\"\n          class=\"bg-background hover:bg-background border-input w-full justify-between px-3 font-normal outline-offset-0 outline-none focus-visible:outline-[3px]\"\n        >\n          <span :class=\"cn('truncate', !value && 'text-muted-foreground')\">\n            {{ selectedOrganization || \"Select organization\" }}\n          </span>\n          <LucideChevronDown\n            :size=\"16\"\n            class=\"text-muted-foreground/80 shrink-0\"\n            aria-hidden=\"true\"\n          />\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent\n        class=\"border-input w-full min-w-[var(--reka-popper-anchor-width)] p-0\"\n        align=\"start\"\n      >\n        <Command>\n          <CommandInput placeholder=\"Find organization\" />\n          <CommandList>\n            <CommandEmpty>No organization found.</CommandEmpty>\n            <CommandGroup>\n              <CommandItem\n                v-for=\"organization in organizations\"\n                :key=\"organization.value\"\n                :value=\"organization.value\"\n                @select=\"handleSelect(organization.value)\"\n              >\n                {{ organization.label }}\n                <LucideCheck\n                  v-if=\"value === organization.value\"\n                  :size=\"16\"\n                  class=\"ml-auto\"\n                />\n              </CommandItem>\n            </CommandGroup>\n            <CommandSeparator />\n            <CommandGroup>\n              <Button variant=\"ghost\" class=\"w-full justify-start font-normal\">\n                <LucidePlus\n                  :size=\"16\"\n                  class=\"-ms-2 opacity-60\"\n                  aria-hidden=\"true\"\n                />\n                New organization\n              </Button>\n            </CommandGroup>\n          </CommandList>\n        </Command>\n      </PopoverContent>\n    </Popover>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""

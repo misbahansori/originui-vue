@@ -1,17 +1,19 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "input",
   "type": "registry:ui",
-  "dependencies": ["@vueuse/core"],
+  "dependencies": [
+    "@vueuse/core"
+  ],
   "files": [
     {
-      "path": "ui/input/Input.vue",
+      "path": "app/registry/default/ui/input/Input.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { useVModel } from \"@vueuse/core\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  defaultValue?: string | number;\n  modelValue?: string | number;\n  class?: HTMLAttributes[\"class\"];\n  type?: HTMLInputElement[\"type\"];\n}>();\n\nconst emits = defineEmits<{\n  (e: \"update:modelValue\", payload: string | number): void;\n}>();\n\nconst modelValue = useVModel(props, \"modelValue\", emits, {\n  passive: true,\n  defaultValue: props.defaultValue,\n});\n</script>\n\n<template>\n  <input\n    v-model=\"modelValue\"\n    :class=\"\n      cn(\n        'border-input file:text-foreground placeholder:text-muted-foreground/70 flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-sm shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50',\n        'focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]',\n        'aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive',\n        props.type === 'search' &&\n          '[&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none',\n        props.type === 'file' &&\n          'text-muted-foreground/70 file:border-input file:text-foreground p-0 pr-3 italic file:me-3 file:h-full file:border-0 file:border-r file:border-solid file:bg-transparent file:px-3 file:text-sm file:font-medium file:not-italic',\n        props.class,\n      )\n    \"\n    :type=\"type\"\n  />\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "ui/input/index.ts",
+      "path": "app/registry/default/ui/input/index.ts",
       "content": "export { default as Input } from \"./Input.vue\";\n",
       "type": "registry:ui",
       "target": ""

@@ -1,15 +1,23 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-273",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "files": [
     {
-      "path": "components/comp-273.vue",
+      "path": "app/registry/default/components/comp-273.vue",
       "content": "<script setup lang=\"ts\">\nimport { LucideInfo } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <div class=\"rounded-md border px-4 py-3\">\n    <p class=\"flex items-center text-sm\">\n      <LucideInfo\n        class=\"me-3 -mt-0.5 inline-flex size-4 shrink-0 text-blue-500\"\n        aria-hidden=\"true\"\n      />\n      Just a quick note!\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": { "tags": ["alert", "info"], "colSpan": 2 }
+  "meta": {
+    "tags": [
+      "alert",
+      "info"
+    ],
+    "colSpan": 2
+  }
 }

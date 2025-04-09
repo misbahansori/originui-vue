@@ -1,15 +1,17 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-252",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/label.json",
     "https://originui-vue.com/r/slider.json"
   ],
   "files": [
     {
-      "path": "components/comp-252.vue",
+      "path": "app/registry/default/components/comp-252.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport { LucideVolume2, LucideVolumeX } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nconst value = ref([25]);\n</script>\n\n<template>\n  <div class=\"space-y-3\">\n    <div class=\"flex items-center justify-between gap-2\">\n      <Label class=\"leading-6\">Volume</Label>\n      <span class=\"text-sm font-medium tabular-nums\">{{ value[0] }}</span>\n    </div>\n    <div class=\"flex items-center gap-2\">\n      <LucideVolumeX\n        class=\"shrink-0 opacity-60\"\n        :size=\"16\"\n        aria-hidden=\"true\"\n      />\n      <Slider v-model=\"value\" aria-label=\"Volume slider\" />\n      <LucideVolume2\n        class=\"shrink-0 opacity-60\"\n        :size=\"16\"\n        aria-hidden=\"true\"\n      />\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""

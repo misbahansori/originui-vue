@@ -1,14 +1,20 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-405",
   "type": "registry:component",
   "files": [
     {
-      "path": "components/comp-405.vue",
+      "path": "app/registry/default/components/comp-405.vue",
       "content": "<template>\n  <div class=\"flex -space-x-3\">\n    <img\n      class=\"ring-background rounded-full ring-2\"\n      src=\"/avatar-80-03.jpg\"\n      width=\"40\"\n      height=\"40\"\n    />\n    <img\n      class=\"ring-background rounded-full ring-2\"\n      src=\"/avatar-80-04.jpg\"\n      width=\"40\"\n      height=\"40\"\n    />\n    <img\n      class=\"ring-background rounded-full ring-2\"\n      src=\"/avatar-80-05.jpg\"\n      width=\"40\"\n      height=\"40\"\n    />\n    <img\n      class=\"ring-background rounded-full ring-2\"\n      src=\"/avatar-80-06.jpg\"\n      width=\"40\"\n      height=\"40\"\n    />\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": { "tags": ["avatar", "avatar group"], "style": 1 }
+  "meta": {
+    "tags": [
+      "avatar",
+      "avatar group"
+    ],
+    "style": 1
+  }
 }

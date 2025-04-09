@@ -1,22 +1,28 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-447",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/breadcrumb.json",
     "https://originui-vue.com/r/dropdown-menu.json"
   ],
   "files": [
     {
-      "path": "components/comp-447.vue",
+      "path": "app/registry/default/components/comp-447.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@/registry/default/ui/breadcrumb\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger,\n} from \"@/registry/default/ui/dropdown-menu\";\nimport { LucideFolders } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Breadcrumb>\n    <BreadcrumbList>\n      <BreadcrumbItem>\n        <BreadcrumbLink href=\"#\">Home</BreadcrumbLink>\n      </BreadcrumbItem>\n      <BreadcrumbSeparator />\n      <BreadcrumbItem>\n        <DropdownMenu>\n          <DropdownMenuTrigger class=\"hover:text-foreground\">\n            <span\n              role=\"presentation\"\n              aria-hidden=\"true\"\n              class=\"flex size-5 items-center justify-center\"\n            >\n              <LucideFolders class=\"size-4\" />\n            </span>\n            <span class=\"sr-only\">Toggle menu</span>\n          </DropdownMenuTrigger>\n          <DropdownMenuContent align=\"start\">\n            <DropdownMenuItem asChild>\n              <a href=\"#\">Documentation</a>\n            </DropdownMenuItem>\n            <DropdownMenuItem asChild>\n              <a href=\"#\">Themes</a>\n            </DropdownMenuItem>\n            <DropdownMenuItem asChild>\n              <a href=\"#\">GitHub</a>\n            </DropdownMenuItem>\n          </DropdownMenuContent>\n        </DropdownMenu>\n      </BreadcrumbItem>\n      <BreadcrumbSeparator />\n      <BreadcrumbItem>\n        <BreadcrumbPage>Breadcrumb</BreadcrumbPage>\n      </BreadcrumbItem>\n    </BreadcrumbList>\n  </Breadcrumb>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["breadcrumb", "dropdown", "radix"],
+    "tags": [
+      "breadcrumb",
+      "dropdown",
+      "radix"
+    ],
     "colSpan": 2,
     "style": 1
   }

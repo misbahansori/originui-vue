@@ -1,14 +1,17 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-28",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next", "reka-ui"],
+  "dependencies": [
+    "lucide-vue-next",
+    "reka-ui"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/label.json"
   ],
   "files": [
     {
-      "path": "components/comp-28.vue",
+      "path": "app/registry/default/components/comp-28.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { LucideMinus, LucidePlus } from \"lucide-vue-next\";\nimport {\n  NumberFieldDecrement,\n  NumberFieldIncrement,\n  NumberFieldInput,\n  NumberFieldRoot,\n} from \"reka-ui\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst value = ref(2048);\n</script>\n\n<template>\n  <div>\n    <div class=\"*:not-first:mt-2\">\n      <Label :for=\"id\">Number input with plus/minus buttons</Label>\n      <NumberFieldRoot\n        :id=\"id\"\n        :min=\"0\"\n        v-model=\"value\"\n        class=\"border-input data-focus-within:border-ring data-focus-within:ring-ring/50 data-focus-within:has-aria-invalid:ring-destructive/20 dark:data-focus-within:has-aria-invalid:ring-destructive/40 data-focus-within:has-aria-invalid:border-destructive relative inline-flex h-9 w-full items-center overflow-hidden rounded-md border text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none data-disabled:opacity-50 data-focus-within:ring-[3px]\"\n      >\n        <NumberFieldDecrement\n          class=\"border-input bg-background text-muted-foreground/80 hover:bg-accent hover:text-foreground -ms-px flex aspect-square h-[inherit] items-center justify-center rounded-s-md border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50\"\n        >\n          <LucideMinus :size=\"16\" aria-hidden=\"true\" />\n        </NumberFieldDecrement>\n        <NumberFieldInput\n          v-model.number=\"value\"\n          class=\"bg-background text-foreground w-full grow px-3 py-2 text-center tabular-nums\"\n        />\n        <NumberFieldIncrement\n          class=\"border-input bg-background text-muted-foreground/80 hover:bg-accent hover:text-foreground -me-px flex aspect-square h-[inherit] items-center justify-center rounded-e-md border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50\"\n        >\n          <LucidePlus :size=\"16\" aria-hidden=\"true\" />\n        </NumberFieldIncrement>\n      </NumberFieldRoot>\n    </div>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with reka-ui\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/docs/components/number-field\"\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n      >\n        NumberField\n      </a>\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""

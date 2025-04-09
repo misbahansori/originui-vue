@@ -1,8 +1,10 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-382",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/badge.json",
     "https://originui-vue.com/r/button.json",
@@ -10,14 +12,18 @@
   ],
   "files": [
     {
-      "path": "components/comp-382.vue",
+      "path": "app/registry/default/components/comp-382.vue",
       "content": "<script setup lang=\"ts\">\nimport { Badge } from \"@/registry/default/ui/badge\";\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@/registry/default/ui/popover\";\nimport { LucideBell } from \"lucide-vue-next\";\nimport { computed, ref } from \"vue\";\n\ninterface Notification {\n  id: number;\n  user: string;\n  action: string;\n  target: string;\n  timestamp: string;\n  unread: boolean;\n}\n\nconst initialNotifications: Notification[] = [\n  {\n    id: 1,\n    user: \"Chris Tompson\",\n    action: \"requested review on\",\n    target: \"PR #42: Feature implementation\",\n    timestamp: \"15 minutes ago\",\n    unread: true,\n  },\n  {\n    id: 2,\n    user: \"Emma Davis\",\n    action: \"shared\",\n    target: \"New component library\",\n    timestamp: \"45 minutes ago\",\n    unread: true,\n  },\n  {\n    id: 3,\n    user: \"James Wilson\",\n    action: \"assigned you to\",\n    target: \"API integration task\",\n    timestamp: \"4 hours ago\",\n    unread: false,\n  },\n  {\n    id: 4,\n    user: \"Alex Morgan\",\n    action: \"replied to your comment in\",\n    target: \"Authentication flow\",\n    timestamp: \"12 hours ago\",\n    unread: false,\n  },\n  {\n    id: 5,\n    user: \"Sarah Chen\",\n    action: \"commented on\",\n    target: \"Dashboard redesign\",\n    timestamp: \"2 days ago\",\n    unread: false,\n  },\n  {\n    id: 6,\n    user: \"Miky Derya\",\n    action: \"mentioned you in\",\n    target: \"Origin UI open graph image\",\n    timestamp: \"2 weeks ago\",\n    unread: false,\n  },\n];\n\nconst notifications = ref<Notification[]>(initialNotifications);\nconst unreadCount = computed(\n  () => notifications.value.filter((n) => n.unread).length,\n);\n\nconst handleMarkAllAsRead = () => {\n  notifications.value = notifications.value.map((notification) => ({\n    ...notification,\n    unread: false,\n  }));\n};\n\nconst handleNotificationClick = (id: number) => {\n  notifications.value = notifications.value.map((notification) =>\n    notification.id === id ? { ...notification, unread: false } : notification,\n  );\n};\n</script>\n\n<template>\n  <Popover>\n    <PopoverTrigger asChild>\n      <Button\n        size=\"icon\"\n        variant=\"outline\"\n        class=\"relative\"\n        aria-label=\"Open notifications\"\n      >\n        <LucideBell class=\"size-4\" aria-hidden=\"true\" />\n        <Badge\n          v-if=\"unreadCount > 0\"\n          class=\"absolute -top-2 left-full min-w-5 -translate-x-1/2 px-1\"\n        >\n          {{ unreadCount > 99 ? \"99+\" : unreadCount }}\n        </Badge>\n      </Button>\n    </PopoverTrigger>\n    <PopoverContent class=\"w-80 p-1\">\n      <div class=\"flex items-baseline justify-between gap-4 px-3 py-2\">\n        <div class=\"text-sm font-semibold\">Notifications</div>\n        <button\n          v-if=\"unreadCount > 0\"\n          class=\"text-xs font-medium hover:underline\"\n          @click=\"handleMarkAllAsRead\"\n        >\n          Mark all as read\n        </button>\n      </div>\n      <div\n        role=\"separator\"\n        aria-orientation=\"horizontal\"\n        class=\"bg-border -mx-1 my-1 h-px\"\n      ></div>\n      <div\n        v-for=\"notification in notifications\"\n        :key=\"notification.id\"\n        class=\"hover:bg-accent rounded-md px-3 py-2 text-sm transition-colors\"\n      >\n        <div class=\"relative flex items-start pe-3\">\n          <div class=\"flex-1 space-y-1\">\n            <button\n              class=\"text-foreground/80 text-left after:absolute after:inset-0\"\n              @click=\"() => handleNotificationClick(notification.id)\"\n            >\n              <span class=\"text-foreground font-medium hover:underline\">\n                {{ notification.user }}\n              </span>\n              {{ notification.action }}\n              <span class=\"text-foreground font-medium hover:underline\">\n                {{ notification.target }}\n              </span>\n              .\n            </button>\n            <div class=\"text-muted-foreground text-xs\">\n              {{ notification.timestamp }}\n            </div>\n          </div>\n          <div v-if=\"notification.unread\" class=\"absolute end-0 self-center\">\n            <span class=\"sr-only\">Unread</span>\n            <svg\n              width=\"6\"\n              height=\"6\"\n              fill=\"currentColor\"\n              viewBox=\"0 0 6 6\"\n              xmlns=\"http://www.w3.org/2000/svg\"\n              aria-hidden=\"true\"\n            >\n              <circle cx=\"3\" cy=\"3\" r=\"3\" />\n            </svg>\n          </div>\n        </div>\n      </div>\n    </PopoverContent>\n  </Popover>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["popover", "notification", "radix"],
+    "tags": [
+      "popover",
+      "notification",
+      "radix"
+    ],
     "style": 1
   }
 }

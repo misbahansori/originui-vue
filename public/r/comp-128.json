@@ -1,18 +1,25 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-128",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json"
   ],
   "files": [
     {
-      "path": "components/comp-128.vue",
+      "path": "app/registry/default/components/comp-128.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideChevronRight } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Button class=\"group h-auto gap-4 py-3 text-left\" variant=\"outline\">\n    <div class=\"space-y-1\">\n      <h3>Talent Agency</h3>\n      <p class=\"text-muted-foreground font-normal whitespace-break-spaces\">\n        Matches for your roster\n      </p>\n    </div>\n    <LucideChevronRight\n      class=\"opacity-60 transition-transform group-hover:translate-x-0.5\"\n      :size=\"16\"\n      aria-hidden=\"true\"\n    />\n  </Button>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": { "tags": ["button"], "style": 2 }
+  "meta": {
+    "tags": [
+      "button"
+    ],
+    "style": 2
+  }
 }

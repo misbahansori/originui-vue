@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-196",
   "type": "registry:component",
   "registryDependencies": [
@@ -8,13 +8,18 @@
   ],
   "files": [
     {
-      "path": "components/comp-196.vue",
+      "path": "app/registry/default/components/comp-196.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { SelectNative } from \"@/registry/default/ui/select-native\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Disabled select (native)</Label>\n    <SelectNative :id=\"id\" disabled>\n      <option value=\"1\">Vue</option>\n      <option value=\"2\">Nuxt</option>\n      <option value=\"3\">Astro</option>\n      <option value=\"4\">Vitesse</option>\n    </SelectNative>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["label", "select", "native select", "disabled"]
+    "tags": [
+      "label",
+      "select",
+      "native select",
+      "disabled"
+    ]
   }
 }

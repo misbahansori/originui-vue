@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-250",
   "type": "registry:component",
   "registryDependencies": [
@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "components/comp-250.vue",
+      "path": "app/registry/default/components/comp-250.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport { ref } from \"vue\";\n\nconst value = ref([25, 75]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Dual range slider</Label>\n    <Slider v-model=\"value\" :step=\"10\" aria-label=\"Dual range slider\" />\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-261",
   "type": "registry:component",
   "registryDependencies": [
@@ -8,13 +8,18 @@
   ],
   "files": [
     {
-      "path": "components/comp-261.vue",
+      "path": "app/registry/default/components/comp-261.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport { ref } from \"vue\";\n\nconst value = ref([5]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Vertical slider</Label>\n    <div class=\"flex h-40 justify-center\">\n      <Slider\n        v-model=\"value\"\n        :max=\"10\"\n        orientation=\"vertical\"\n        aria-label=\"Vertical slider\"\n      />\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["slider", "vertical slider", "label", "radix"]
+    "tags": [
+      "slider",
+      "vertical slider",
+      "label",
+      "radix"
+    ]
   }
 }

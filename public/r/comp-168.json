@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-168",
   "type": "registry:component",
   "registryDependencies": [
@@ -7,13 +7,19 @@
   ],
   "files": [
     {
-      "path": "components/comp-168.vue",
+      "path": "app/registry/default/components/comp-168.vue",
       "content": "<script setup lang=\"ts\">\nimport { RadioGroup, RadioGroupItem } from \"@/registry/default/ui/radio-group\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst selectedValue = ref(\"0\");\nconst values = [\"0\", \"1\", \"2\", \"3\", \"4\", \"5\"];\n</script>\n\n<template>\n  <div>\n    <fieldset class=\"space-y-4\">\n      <legend class=\"text-foreground text-sm leading-none font-medium\">\n        How likely are you to recommend us?\n      </legend>\n      <RadioGroup\n        class=\"flex gap-0 -space-x-px rounded-md shadow-xs\"\n        v-model=\"selectedValue\"\n      >\n        <label\n          v-for=\"value in values\"\n          :key=\"`${id}-${value}`\"\n          class=\"border-input has-data-[state=checked]:border-primary/50 focus-within:border-ring focus-within:ring-ring/50 relative flex size-9 flex-1 cursor-pointer flex-col items-center justify-center gap-3 border text-center text-sm font-medium transition-[color,box-shadow] outline-none first:rounded-s-md last:rounded-e-md focus-within:ring-[3px] has-data-disabled:cursor-not-allowed has-data-disabled:opacity-50 has-data-[state=checked]:z-10\"\n        >\n          <RadioGroupItem\n            :id=\"`${id}-${value}`\"\n            :value=\"value\"\n            class=\"sr-only after:absolute after:inset-0\"\n          />\n          {{ value }}\n        </label>\n      </RadioGroup>\n    </fieldset>\n    <div class=\"mt-1 flex justify-between text-xs font-medium\">\n      <p>\n        <span class=\"text-base\">😡</span>\n        Not likely\n      </p>\n      <p>\n        Very Likely\n        <span class=\"text-base\">😍</span>\n      </p>\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["radio", "label", "rating", "vote", "radix"]
+    "tags": [
+      "radio",
+      "label",
+      "rating",
+      "vote",
+      "radix"
+    ]
   }
 }

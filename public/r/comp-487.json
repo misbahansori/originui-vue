@@ -1,21 +1,27 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-487",
   "type": "registry:component",
-  "dependencies": ["@internationalized/date"],
+  "dependencies": [
+    "@internationalized/date"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/calendar.json"
   ],
   "files": [
     {
-      "path": "components/comp-487.vue",
+      "path": "app/registry/default/components/comp-487.vue",
       "content": "<script setup lang=\"ts\">\nimport { Calendar } from \"@/registry/default/ui/calendar\";\nimport {\n  type DateValue,\n  getLocalTimeZone,\n  today,\n} from \"@internationalized/date\";\nimport type { Ref } from \"vue\";\nimport { ref } from \"vue\";\n\nconst value = ref(today(getLocalTimeZone())) as Ref<DateValue>;\n</script>\n\n<template>\n  <Calendar\n    v-model=\"value\"\n    :weekday-format=\"'short'\"\n    class=\"rounded-md border\"\n  />\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["calendar", "date", "react aria"],
+    "tags": [
+      "calendar",
+      "date",
+      "react aria"
+    ],
     "style": 1
   }
 }

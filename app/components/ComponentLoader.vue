@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { LucideLoader } from "lucide-vue-next";
-import type { RegistryItem } from "shadcn/registry";
+import type { RegistryItem } from "shadcn-vue/registry";
 defineProps<{
   component: RegistryItem;
 }>();

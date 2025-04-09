@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-30",
   "type": "registry:component",
   "registryDependencies": [
@@ -8,11 +8,17 @@
   ],
   "files": [
     {
-      "path": "components/comp-30.vue",
+      "path": "app/registry/default/components/comp-30.vue",
       "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">File input</Label>\n    <Input\n      :id=\"id\"\n      class=\"p-0 pe-3 file:me-3 file:border-0 file:border-e\"\n      type=\"file\"\n    />\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": { "tags": ["input", "label", "file"] }
+  "meta": {
+    "tags": [
+      "input",
+      "label",
+      "file"
+    ]
+  }
 }

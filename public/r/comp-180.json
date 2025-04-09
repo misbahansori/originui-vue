@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-180",
   "type": "registry:component",
   "registryDependencies": [
@@ -7,14 +7,18 @@
   ],
   "files": [
     {
-      "path": "components/comp-180.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Switch } from \"@/registry/default/ui/switch\";\nimport { ref } from \"vue\";\n\nconst id = useId();\nconst checked = ref(false);\n</script>\n\n<template>\n  <div\n    class=\"group inline-flex items-center gap-2\"\n    :data-state=\"checked ? 'checked' : 'unchecked'\"\n  >\n    <span\n      :id=\"`${id}-off`\"\n      class=\"group-data-[state=checked]:text-muted-foreground/70 flex-1 cursor-pointer text-right text-sm font-medium\"\n      :aria-controls=\"id\"\n      @click=\"checked = false\"\n    >\n      Off\n    </span>\n    <Switch\n      :id=\"id\"\n      v-model=\"checked\"\n      :aria-labelledby=\"`${id}-off ${id}-on`\"\n    />\n    <span\n      :id=\"`${id}-on`\"\n      class=\"group-data-[state=unchecked]:text-muted-foreground/70 flex-1 cursor-pointer text-left text-sm font-medium\"\n      :aria-controls=\"id\"\n      @click=\"checked = true\"\n    >\n      On\n    </span>\n  </div>\n</template>\n",
+      "path": "app/registry/default/components/comp-180.vue",
+      "content": "<script setup lang=\"ts\">\nimport { Switch } from \"@/registry/default/ui/switch\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst checked = ref(false);\n</script>\n\n<template>\n  <div\n    class=\"group inline-flex items-center gap-2\"\n    :data-state=\"checked ? 'checked' : 'unchecked'\"\n  >\n    <span\n      :id=\"`${id}-off`\"\n      class=\"group-data-[state=checked]:text-muted-foreground/70 flex-1 cursor-pointer text-right text-sm font-medium\"\n      :aria-controls=\"id\"\n      @click=\"checked = false\"\n    >\n      Off\n    </span>\n    <Switch\n      :id=\"id\"\n      v-model=\"checked\"\n      :aria-labelledby=\"`${id}-off ${id}-on`\"\n    />\n    <span\n      :id=\"`${id}-on`\"\n      class=\"group-data-[state=unchecked]:text-muted-foreground/70 flex-1 cursor-pointer text-left text-sm font-medium\"\n      :aria-controls=\"id\"\n      @click=\"checked = true\"\n    >\n      On\n    </span>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": ["switch", "label", "radix"],
+    "tags": [
+      "switch",
+      "label",
+      "radix"
+    ],
     "style": 1
   }
 }
