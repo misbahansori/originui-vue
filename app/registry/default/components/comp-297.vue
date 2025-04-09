@@ -3,6 +3,7 @@ import { Button } from "@/registry/default/ui/button";
 import ToastAction from "@/registry/default/ui/toast/ToastAction.vue";
 import { useToast } from "@/registry/default/ui/toast/use-toast";
 import { h } from "vue";
+import Toaster from "~/registry/default/ui/toast/Toaster.vue";
 
 const { toast } = useToast();
 </script>
@@ -20,7 +21,7 @@ const { toast } = useToast();
             {
               altText: 'Try again',
             },
-            'Try again',
+            () => 'Try again',
           ),
         });
       }
@@ -28,4 +29,6 @@ const { toast } = useToast();
   >
     Show toast
   </Button>
+  <!-- Place the Toaster at the end of the body -->
+  <Toaster />
 </template>
