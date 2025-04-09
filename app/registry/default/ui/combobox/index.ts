@@ -11,4 +11,5 @@ export {
   ComboboxCancel,
   ComboboxItemIndicator,
   ComboboxTrigger,
+  ComboboxLabel,
 } from "reka-ui";
