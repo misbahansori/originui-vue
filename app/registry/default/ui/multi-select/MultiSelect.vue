@@ -31,6 +31,7 @@ interface MultySelectProps {
   /** manually controlled options */
   options: Option[];
   placeholder?: string;
+  hideClearAllButton?: boolean;
 }
 
 const query = defineModel<string>("query", {
@@ -80,6 +81,9 @@ const removeTag = (index: number) => {
         @removeTag="() => console.log('removeTag')"
         delimiter=""
         class="border-input focus-within:border-ring focus-within:ring-ring/50 has-aria-invalid:ring-destructive/20 dark:has-aria-invalid:ring-destructive/40 has-aria-invalid:border-destructive relative min-h-[38px] cursor-text rounded-md border p-1 text-sm transition-[color,box-shadow] outline-none focus-within:ring-[3px] has-disabled:pointer-events-none has-disabled:cursor-not-allowed has-disabled:opacity-50"
+        :class="{
+          'pe-9': !hideClearAllButton,
+        }"
       >
         <div class="flex flex-wrap gap-1">
           <TagsInputItem
@@ -108,6 +112,15 @@ const removeTag = (index: number) => {
             />
           </ComboboxInput>
         </div>
+        <button
+          v-if="!hideClearAllButton && modelValue.length"
+          type="button"
+          class="text-muted-foreground/80 hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 absolute end-0 top-0 flex size-9 items-center justify-center rounded-md border border-transparent transition-[color,box-shadow] outline-none focus-visible:ring-[3px]"
+          aria-label="Clear all"
+          @click="() => (modelValue = [])"
+        >
+          <LucideX class="size-4" aria-hidden="true" />
+        </button>
       </TagsInputRoot>
     </ComboboxAnchor>
 

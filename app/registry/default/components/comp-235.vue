@@ -1,13 +1,11 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
+import type { Option } from "@/registry/default/ui/multi-select/MultiSelect.vue";
+import MultiSelect from "@/registry/default/ui/multi-select/MultiSelect.vue";
 import { ref } from "vue";
 
-// TODO: Implement this in the original ui
-interface Option {
-  value: string;
-  label: string;
-  disable?: boolean;
-}
+const query = ref("");
+const value = ref<Option[]>([]);
 
 const frameworks: Option[] = [
   {
@@ -75,26 +73,13 @@ const frameworks: Option[] = [
     label: "Lit",
   },
 ];
-
-const value = ref([]);
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
     <Label>Multiselect with placeholder and clear</Label>
-    <MultipleSelector
-      :command-props="{
-        label: 'Select frameworks',
-      }"
-      v-model="value"
-      :default-options="frameworks"
-      placeholder="Select frameworks"
-      :empty-indicator="true"
-    >
-      <template #empty-indicator>
-        <p class="text-center text-sm">No results found</p>
-      </template>
-    </MultipleSelector>
+    <MultiSelect :options="frameworks" v-model="value" v-model:query="query" />
+
     <p
       class="text-muted-foreground mt-2 text-xs"
       role="region"

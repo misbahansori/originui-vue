@@ -1,10 +1,8 @@
 <script setup lang="ts">
+import { Label } from "@/registry/default/ui/label";
 import type { Option } from "@/registry/default/ui/multi-select/MultiSelect.vue";
 import MultiSelect from "@/registry/default/ui/multi-select/MultiSelect.vue";
-import { useFilter } from "reka-ui";
 import { ref } from "vue";
-
-const { contains } = useFilter({ sensitivity: "base" });
 
 const query = ref("");
 const values = ref<Option[]>([
@@ -85,5 +83,28 @@ const options = [
 </script>
 
 <template>
-  <MultiSelect :options="options" v-model="values" v-model:query="query" />
+  <div class="*:not-first:mt-2">
+    <Label>Multiselect</Label>
+    <MultiSelect
+      :options="options"
+      v-model="values"
+      v-model:query="query"
+      hideClearAllButton
+    />
+    <p
+      class="text-muted-foreground mt-2 text-xs"
+      role="region"
+      aria-live="polite"
+    >
+      Built with reka-ui
+      <a
+        class="hover:text-foreground underline"
+        href="https://reka-ui.com/examples/combobox-tags-input"
+        target="_blank"
+        rel="noopener nofollow"
+      >
+        Combobox with TagsInput
+      </a>
+    </p>
+  </div>
 </template>
