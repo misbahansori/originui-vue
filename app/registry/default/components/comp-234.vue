@@ -85,5 +85,5 @@ const options = [
 </script>
 
 <template>
-  <MultiSelect :options="options" v-model="values" :query="query" />
+  <MultiSelect :options="options" v-model="values" v-model:query="query" />
 </template>
