@@ -85,14 +85,14 @@ const frameworks: Option[] = [
       role="region"
       aria-live="polite"
     >
-      Inspired by
+      Built with reka-ui
       <a
         class="hover:text-foreground underline"
-        href="https://shadcnui-expansions.typeart.cc/docs/multiple-selector"
+        href="https://reka-ui.com/examples/combobox-tags-input"
         target="_blank"
         rel="noopener nofollow"
       >
-        shadcn/ui expansions
+        Combobox with TagsInput
       </a>
     </p>
   </div>
