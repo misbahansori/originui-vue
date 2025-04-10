@@ -1232,6 +1232,26 @@
       ]
     },
     {
+      "name": "multi-select",
+      "type": "registry:ui",
+      "dependencies": ["reka-ui", "lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/combobox.json"
+      ],
+      "files": [
+        {
+          "target": "",
+          "path": "app/registry/default/ui/multi-select/MultiSelect.vue",
+          "type": "registry:ui"
+        },
+        {
+          "target": "",
+          "path": "app/registry/default/ui/multi-select/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "separator",
       "type": "registry:ui",
       "dependencies": ["reka-ui"],
@@ -5968,7 +5988,8 @@
       "name": "comp-234",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/multi-select.json"
       ],
       "files": [
         {
@@ -5994,7 +6015,8 @@
       "name": "comp-235",
       "type": "registry:component",
       "registryDependencies": [
-        "https://originui-vue.com/r/label.json"
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/multi-select.json"
       ],
       "files": [
         {
