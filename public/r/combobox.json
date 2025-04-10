@@ -62,7 +62,7 @@
     },
     {
       "path": "app/registry/default/ui/combobox/index.ts",
-      "content": "export { default as Combobox } from \"./Combobox.vue\";\nexport { default as ComboboxAnchor } from \"./ComboboxAnchor.vue\";\nexport { default as ComboboxEmpty } from \"./ComboboxEmpty.vue\";\nexport { default as ComboboxGroup } from \"./ComboboxGroup.vue\";\nexport { default as ComboboxInput } from \"./ComboboxInput.vue\";\nexport { default as ComboboxItem } from \"./ComboboxItem.vue\";\nexport { default as ComboboxList } from \"./ComboboxList.vue\";\nexport { default as ComboboxSeparator } from \"./ComboboxSeparator.vue\";\n\nexport {\n  ComboboxCancel,\n  ComboboxItemIndicator,\n  ComboboxTrigger,\n} from \"reka-ui\";\n",
+      "content": "export { default as Combobox } from \"./Combobox.vue\";\nexport { default as ComboboxAnchor } from \"./ComboboxAnchor.vue\";\nexport { default as ComboboxEmpty } from \"./ComboboxEmpty.vue\";\nexport { default as ComboboxGroup } from \"./ComboboxGroup.vue\";\nexport { default as ComboboxInput } from \"./ComboboxInput.vue\";\nexport { default as ComboboxItem } from \"./ComboboxItem.vue\";\nexport { default as ComboboxList } from \"./ComboboxList.vue\";\nexport { default as ComboboxSeparator } from \"./ComboboxSeparator.vue\";\n\nexport {\n  ComboboxCancel,\n  ComboboxItemIndicator,\n  ComboboxTrigger,\n  ComboboxLabel,\n} from \"reka-ui\";\n",
       "type": "registry:ui",
       "target": ""
     }

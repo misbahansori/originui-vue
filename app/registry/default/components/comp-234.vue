@@ -1,15 +1,18 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
+import type { Option } from "@/registry/default/ui/multi-select/MultiSelect.vue";
+import MultiSelect from "@/registry/default/ui/multi-select/MultiSelect.vue";
 import { ref } from "vue";
 
-// TODO: Implement this in the original ui
-interface Option {
-  value: string;
-  label: string;
-  disable?: boolean;
-}
+const query = ref("");
+const values = ref<Option[]>([
+  {
+    value: "Apple",
+    label: "Apple",
+  },
+]);
 
-const frameworks: Option[] = [
+const options = [
   {
     value: "next.js",
     label: "Next.js",
@@ -21,7 +24,7 @@ const frameworks: Option[] = [
   {
     value: "nuxt.js",
     label: "Nuxt.js",
-    disable: true,
+    disabled: true,
   },
   {
     value: "remix",
@@ -54,7 +57,7 @@ const frameworks: Option[] = [
   {
     value: "eleventy",
     label: "Eleventy",
-    disable: true,
+    disabled: true,
   },
   {
     value: "solid",
@@ -77,41 +80,30 @@ const frameworks: Option[] = [
     label: "Lit",
   },
 ];
-
-const value = ref(frameworks.slice(0, 2));
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
     <Label>Multiselect</Label>
-    <MultipleSelector
-      :command-props="{
-        label: 'Select frameworks',
-      }"
-      v-model="value"
-      :default-options="frameworks"
-      placeholder="Select frameworks"
-      hide-clear-all-button
-      hide-placeholder-when-selected
-      :empty-indicator="true"
-    >
-      <template #empty-indicator>
-        <p class="text-center text-sm">No results found</p>
-      </template>
-    </MultipleSelector>
+    <MultiSelect
+      :options="options"
+      v-model="values"
+      v-model:query="query"
+      hideClearAllButton
+    />
     <p
       class="text-muted-foreground mt-2 text-xs"
       role="region"
       aria-live="polite"
     >
-      Inspired by
+      Built with reka-ui
       <a
         class="hover:text-foreground underline"
-        href="https://shadcnui-expansions.typeart.cc/docs/multiple-selector"
+        href="https://reka-ui.com/examples/combobox-tags-input"
         target="_blank"
         rel="noopener nofollow"
       >
-        shadcn/ui expansions
+        Combobox with TagsInput
       </a>
     </p>
   </div>
