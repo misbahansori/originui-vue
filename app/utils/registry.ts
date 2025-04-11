@@ -1,6 +1,6 @@
 import type { RegistryTag } from "@/registry/registry-tags";
 import registry from "~~/registry.json";
-import type { RegistryItem } from "shadcn-vue/registry";
+import type { RegistryItem } from "shadcn/registry";
 
 // Define registry interfaces
 export interface ComponentFile {
@@ -25,6 +25,10 @@ export function getComponentsByNames(names: string[]): RegistryItem[] {
   return names
     .map((name) => componentsMap.get(name))
     .filter((comp): comp is RegistryItem => comp !== undefined);
+}
+
+export function getComponentByName(name: string): RegistryItem | undefined {
+  return components.find((comp) => comp.name === name);
 }
 
 export const getAvailableTags = (

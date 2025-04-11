@@ -32,6 +32,7 @@
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "reka-ui": "^2.0.2",
+    "shadcn": "^2.4.0",
     "shadcn-nuxt": "^1.0.2",
     "shadcn-vue": "^2.0.1",
     "shiki": "^3.2.1",

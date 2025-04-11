@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { RegistryItem } from "shadcn-vue/registry";
+import type { RegistryItem } from "shadcn/registry";
 const props = defineProps<{
   component: RegistryItem;
 }>();
