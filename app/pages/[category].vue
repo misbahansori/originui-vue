@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { LucideLoader } from "lucide-vue-next";
 import { useRoute } from "vue-router";
 import { categories } from "~/config/components";
 
@@ -50,7 +51,16 @@ useSeoMeta({
         :key="component.name"
         :component="component"
       >
-        <ComponentLoader :component="component" />
+        <Suspense>
+          <template #default>
+            <ComponentLoader :component="component" />
+          </template>
+          <template #fallback>
+            <div class="flex items-center justify-center p-4">
+              <LucideLoader class="mx-auto size-4 animate-spin" />
+            </div>
+          </template>
+        </Suspense>
 
         <ComponentDetails :component="component" />
       </ComponentCard>
