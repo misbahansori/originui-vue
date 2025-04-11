@@ -8,18 +8,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-179.vue",
+      "path": "components/comp-179.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Switch } from \"@/registry/default/ui/switch\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst checked = ref(true);\n</script>\n\n<template>\n  <div class=\"inline-flex items-center gap-2\">\n    <Switch :id=\"id\" v-model=\"checked\" aria-label=\"Toggle switch\" />\n    <Label :for=\"id\" class=\"text-sm font-medium\">\n      {{ checked ? \"On\" : \"Off\" }}\n    </Label>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "switch",
-      "label",
-      "radix"
-    ],
+    "tags": ["switch", "label", "radix"],
     "style": 1
   }
 }

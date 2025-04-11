@@ -8,17 +8,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-439.vue",
+      "path": "components/comp-439.vue",
       "content": "<script setup lang=\"ts\">\nimport { Badge } from \"@/registry/default/ui/badge\";\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@/registry/default/ui/tabs\";\n</script>\n\n<template>\n  <Tabs defaultValue=\"tab-1\">\n    <TabsList class=\"mx-auto flex w-full max-w-xs bg-transparent\">\n      <TabsTrigger\n        value=\"tab-1\"\n        class=\"group data-[state=active]:bg-muted flex-1 flex-col p-3 text-xs data-[state=active]:shadow-none\"\n      >\n        <Badge\n          class=\"mb-1.5 min-w-5 px-1 transition-opacity group-data-[state=inactive]:opacity-50\"\n        >\n          3\n        </Badge>\n        Overview\n      </TabsTrigger>\n      <TabsTrigger\n        value=\"tab-2\"\n        class=\"group data-[state=active]:bg-muted flex-1 flex-col p-3 text-xs data-[state=active]:shadow-none\"\n      >\n        <Badge\n          class=\"mb-1.5 min-w-5 px-1 transition-opacity group-data-[state=inactive]:opacity-50\"\n        >\n          0\n        </Badge>\n        Projects\n      </TabsTrigger>\n      <TabsTrigger\n        value=\"tab-3\"\n        class=\"group data-[state=active]:bg-muted flex-1 flex-col p-3 text-xs data-[state=active]:shadow-none\"\n      >\n        <Badge\n          class=\"mb-1.5 min-w-5 px-1 transition-opacity group-data-[state=inactive]:opacity-50\"\n        >\n          7\n        </Badge>\n        Packages\n      </TabsTrigger>\n    </TabsList>\n    <TabsContent value=\"tab-1\">\n      <p class=\"text-muted-foreground p-4 text-center text-xs\">\n        Content for Tab 1\n      </p>\n    </TabsContent>\n    <TabsContent value=\"tab-2\">\n      <p class=\"text-muted-foreground p-4 text-center text-xs\">\n        Content for Tab 2\n      </p>\n    </TabsContent>\n    <TabsContent value=\"tab-3\">\n      <p class=\"text-muted-foreground p-4 text-center text-xs\">\n        Content for Tab 3\n      </p>\n    </TabsContent>\n  </Tabs>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "tabs",
-      "radix"
-    ],
+    "tags": ["tabs", "radix"],
     "colSpan": 2,
     "style": 2
   }

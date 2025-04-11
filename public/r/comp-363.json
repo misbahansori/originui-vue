@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-363.vue",
+      "path": "components/comp-363.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@/registry/default/ui/hover-card\";\n</script>\n\n<template>\n  <HoverCard>\n    <HoverCardTrigger as-child>\n      <Button\n        class=\"size-auto overflow-hidden rounded-full bg-transparent p-0 hover:bg-transparent\"\n        aria-label=\"My profile\"\n        as-child\n      >\n        <a href=\"#\">\n          <img src=\"/avatar-40-04.jpg\" width=\"40\" height=\"40\" alt=\"Avatar\" />\n        </a>\n      </Button>\n    </HoverCardTrigger>\n    <HoverCardContent class=\"w-[340px]\">\n      <div class=\"flex items-start gap-3\">\n        <img\n          class=\"shrink-0 rounded-full\"\n          src=\"/avatar-40-04.jpg\"\n          width=\"40\"\n          height=\"40\"\n          alt=\"Avatar\"\n        />\n        <div class=\"space-y-1\">\n          <p class=\"text-sm font-medium\">@Origin_UI</p>\n          <p class=\"text-muted-foreground text-sm\">\n            Beautiful UI components built with Tailwind CSS and Next.js.\n          </p>\n        </div>\n      </div>\n    </HoverCardContent>\n  </HoverCard>\n</template>\n",
       "type": "registry:component",
       "target": ""

@@ -8,17 +8,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-527.vue",
+      "path": "components/comp-527.vue",
       "content": "<script lang=\"ts\" setup>\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Stepper,\n  StepperIndicator,\n  StepperItem,\n  StepperSeparator,\n  StepperTrigger,\n} from \"@/registry/default/ui/stepper\";\nimport { ref } from \"vue\";\n\nconst steps = [1, 2, 3, 4];\nconst currentStep = ref(1);\n</script>\n\n<template>\n  <div class=\"space-y-8 text-center\">\n    <Stepper v-model=\"currentStep\" orientation=\"vertical\">\n      <StepperItem\n        v-for=\"step in steps\"\n        :key=\"step\"\n        :step=\"step\"\n        class=\"not-last:flex-1\"\n      >\n        <StepperTrigger as-child>\n          <StepperIndicator />\n        </StepperTrigger>\n        <StepperSeparator v-if=\"step < steps.length\" />\n      </StepperItem>\n    </Stepper>\n    <div class=\"flex justify-center space-x-4\">\n      <Button\n        variant=\"outline\"\n        class=\"w-32\"\n        @click=\"currentStep = currentStep - 1\"\n        :disabled=\"currentStep === 1\"\n      >\n        Prev step\n      </Button>\n      <Button\n        variant=\"outline\"\n        class=\"w-32\"\n        @click=\"currentStep = currentStep + 1\"\n        :disabled=\"currentStep > steps.length\"\n      >\n        Next step\n      </Button>\n    </div>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Controlled vertical stepper with checkmarks\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "stepper",
-      "vertical stepper"
-    ],
+    "tags": ["stepper", "vertical stepper"],
     "colSpan": 2
   }
 }

@@ -9,19 +9,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-324.vue",
+      "path": "components/comp-324.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Dialog,\n  DialogClose,\n  DialogContent,\n  DialogDescription,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@/registry/default/ui/dialog\";\nimport {\n  PinInput,\n  PinInputGroup,\n  PinInputInput,\n} from \"@/registry/default/ui/pin-input\";\nimport { ref, watch } from \"vue\";\n\nconst CORRECT_CODE = \"6548\";\nconst otpValues = ref([\"\", \"\", \"\", \"\"]);\nconst hasGuessed = ref<boolean | undefined>(undefined);\nconst inputRef = useTemplateRef(\"inputRef\");\nconst closeButtonRef = useTemplateRef(\"closeButtonRef\");\n\nwatch(hasGuessed, (value) => {\n  if (value) {\n    closeButtonRef.value?.$el?.focus();\n  }\n});\n\nasync function onSubmit() {\n  hasGuessed.value = otpValues.value.join(\"\") === CORRECT_CODE;\n\n  otpValues.value = [\"\", \"\", \"\", \"\"];\n\n  setTimeout(() => {\n    inputRef.value?.at(0)?.$el?.focus();\n  }, 20);\n}\n</script>\n\n<template>\n  <Dialog>\n    <DialogTrigger asChild>\n      <Button variant=\"outline\">OTP code</Button>\n    </DialogTrigger>\n    <DialogContent>\n      <div class=\"flex flex-col items-center gap-2\">\n        <div\n          class=\"flex size-11 shrink-0 items-center justify-center rounded-full border\"\n          aria-hidden=\"true\"\n        >\n          <svg\n            class=\"stroke-zinc-800 dark:stroke-zinc-100\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n            width=\"20\"\n            height=\"20\"\n            viewBox=\"0 0 32 32\"\n            aria-hidden=\"true\"\n          >\n            <circle cx=\"16\" cy=\"16\" r=\"12\" fill=\"none\" stroke-width=\"8\" />\n          </svg>\n        </div>\n        <DialogHeader>\n          <DialogTitle class=\"sm:text-center\">\n            {{ hasGuessed ? \"Code verified!\" : \"Enter confirmation code\" }}\n          </DialogTitle>\n          <DialogDescription class=\"sm:text-center\">\n            {{\n              hasGuessed\n                ? \"Your code has been successfully verified.\"\n                : `Check your email and enter the code - Try ${CORRECT_CODE}`\n            }}\n          </DialogDescription>\n        </DialogHeader>\n      </div>\n\n      <template v-if=\"hasGuessed\">\n        <div class=\"text-center\">\n          <DialogClose asChild>\n            <Button type=\"button\" ref=\"closeButtonRef\">Close</Button>\n          </DialogClose>\n        </div>\n      </template>\n      <template v-else>\n        <div class=\"space-y-4\">\n          <div class=\"flex justify-center\">\n            <PinInput\n              v-model=\"otpValues\"\n              @complete=\"onSubmit\"\n              class=\"flex items-center gap-3\"\n            >\n              <PinInputGroup class=\"flex items-center gap-3\">\n                <PinInputInput\n                  v-for=\"(id, index) in 4\"\n                  :key=\"id\"\n                  :index=\"index\"\n                  ref=\"inputRef\"\n                  class=\"focus:border-ring focus:ring-ring/50 border-input size-9 rounded-md border font-medium shadow-xs transition-[color,box-shadow] focus:ring-[3px]\"\n                ></PinInputInput>\n              </PinInputGroup>\n            </PinInput>\n          </div>\n          <p\n            v-if=\"hasGuessed === false\"\n            class=\"text-muted-foreground text-center text-xs\"\n            role=\"alert\"\n            aria-live=\"polite\"\n          >\n            Invalid code. Please try again.\n          </p>\n          <p class=\"text-center text-sm\">\n            <a class=\"underline hover:no-underline\" href=\"#\">Resend code</a>\n          </p>\n        </div>\n      </template>\n    </DialogContent>\n  </Dialog>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "dialog",
-      "modal",
-      "otp",
-      "radix"
-    ],
+    "tags": ["dialog", "modal", "otp", "radix"],
     "style": 1
   }
 }

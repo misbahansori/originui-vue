@@ -8,17 +8,11 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-192.vue",
+      "path": "components/comp-192.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { SelectNative } from \"@/registry/default/ui/select-native\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Select with helper text (native)</Label>\n    <SelectNative :id=\"id\">\n      <option value=\"1\">Vue</option>\n      <option value=\"2\">Nuxt</option>\n      <option value=\"3\">Astro</option>\n      <option value=\"4\">Vitesse</option>\n    </SelectNative>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Tell us what's your favorite Select framework\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": {
-    "tags": [
-      "label",
-      "select",
-      "native select"
-    ]
-  }
+  "meta": { "tags": ["label", "select", "native select"] }
 }

@@ -8,18 +8,13 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-266.vue",
+      "path": "components/comp-266.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport { reactive } from \"vue\";\n\nconst values = reactive({\n  \"60Hz\": [2],\n  \"250Hz\": [1],\n  \"1kHz\": [-1],\n  \"4kHz\": [-3],\n  \"16kHz\": [2],\n});\n</script>\n\n<template>\n  <div class=\"space-y-4\">\n    <legend class=\"text-foreground text-sm font-medium\">Equalizer</legend>\n    <div class=\"flex h-48 justify-center gap-8\">\n      <div class=\"flex flex-col items-center gap-2\">\n        <Slider\n          v-model=\"values['60Hz']\"\n          :min=\"-5\"\n          :max=\"5\"\n          orientation=\"vertical\"\n          class=\"[&>:last-child]:h-6 [&>:last-child]:w-4 [&>:last-child]:rounded\"\n          aria-label=\"60 Hz\"\n          show-tooltip\n        />\n        <Label class=\"text-muted-foreground flex w-0 justify-center text-xs\">\n          60\n        </Label>\n      </div>\n      <div class=\"flex flex-col items-center gap-2\">\n        <Slider\n          v-model=\"values['250Hz']\"\n          :min=\"-5\"\n          :max=\"5\"\n          orientation=\"vertical\"\n          class=\"[&>:last-child]:h-6 [&>:last-child]:w-4 [&>:last-child]:rounded\"\n          aria-label=\"250 Hz\"\n          show-tooltip\n        />\n        <Label class=\"text-muted-foreground flex w-0 justify-center text-xs\">\n          250\n        </Label>\n      </div>\n      <div class=\"flex flex-col items-center gap-2\">\n        <Slider\n          v-model=\"values['1kHz']\"\n          :min=\"-5\"\n          :max=\"5\"\n          orientation=\"vertical\"\n          class=\"[&>:last-child]:h-6 [&>:last-child]:w-4 [&>:last-child]:rounded\"\n          aria-label=\"1k\"\n          show-tooltip\n        />\n        <Label class=\"text-muted-foreground flex w-0 justify-center text-xs\">\n          1k\n        </Label>\n      </div>\n      <div class=\"flex flex-col items-center gap-2\">\n        <Slider\n          v-model=\"values['4kHz']\"\n          :min=\"-5\"\n          :max=\"5\"\n          orientation=\"vertical\"\n          class=\"[&>:last-child]:h-6 [&>:last-child]:w-4 [&>:last-child]:rounded\"\n          aria-label=\"4k\"\n          show-tooltip\n        />\n        <Label class=\"text-muted-foreground flex w-0 justify-center text-xs\">\n          4k\n        </Label>\n      </div>\n      <div class=\"flex flex-col items-center gap-2\">\n        <Slider\n          v-model=\"values['16kHz']\"\n          :min=\"-5\"\n          :max=\"5\"\n          orientation=\"vertical\"\n          class=\"[&>:last-child]:h-6 [&>:last-child]:w-4 [&>:last-child]:rounded\"\n          aria-label=\"16k\"\n          show-tooltip\n        />\n        <Label class=\"text-muted-foreground flex w-0 justify-center text-xs\">\n          16K\n        </Label>\n      </div>\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "slider",
-      "label",
-      "equalizer",
-      "radix"
-    ]
+    "tags": ["slider", "label", "equalizer", "radix"]
   }
 }

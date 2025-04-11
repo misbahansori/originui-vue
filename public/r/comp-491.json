@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-491.vue",
+      "path": "components/comp-491.vue",
       "content": "<template></template>\n",
       "type": "registry:component",
       "target": ""

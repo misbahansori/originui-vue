@@ -2,25 +2,17 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-98",
   "type": "registry:component",
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json"
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-98.vue",
+      "path": "components/comp-98.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucidePlus } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nconst open = ref(false);\n\nfunction toggleOpen() {\n  open.value = !open.value;\n}\n</script>\n\n<template>\n  <Button\n    class=\"group rounded-full\"\n    variant=\"outline\"\n    size=\"icon\"\n    @click=\"toggleOpen\"\n    :aria-expanded=\"open\"\n    :aria-label=\"open ? 'Close menu' : 'Open menu'\"\n  >\n    <LucidePlus\n      class=\"transition-transform duration-500 [transition-timing-function:cubic-bezier(0.68,-0.6,0.32,1.6)]\"\n      :class=\"{ 'rotate-[135deg]': open }\"\n      :size=\"16\"\n      aria-hidden=\"true\"\n    />\n  </Button>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": {
-    "tags": [
-      "button",
-      "menu"
-    ],
-    "style": 2
-  }
+  "meta": { "tags": ["button", "menu"], "style": 2 }
 }

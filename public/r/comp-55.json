@@ -2,27 +2,18 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-55",
   "type": "registry:component",
-  "dependencies": [
-    "vue-the-mask"
-  ],
+  "dependencies": ["vue-the-mask"],
   "registryDependencies": [
     "https://originui-vue.com/r/input.json",
     "https://originui-vue.com/r/label.json"
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-55.vue",
+      "path": "components/comp-55.vue",
       "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { ref } from \"vue\";\nimport { mask as vMask } from \"vue-the-mask\";\n\nconst inputValue = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"timestamp-input\">Timestamp</Label>\n    <Input\n      id=\"timestamp-input\"\n      placeholder=\"00:00:00\"\n      type=\"text\"\n      v-model=\"inputValue\"\n      v-mask=\"'##:##:##'\"\n      maxlength=\"8\"\n    />\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://vuejs-tips.github.io/vue-the-mask\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        vue-the-mask\n      </a>\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": {
-    "tags": [
-      "input",
-      "label",
-      "mask",
-      "time"
-    ]
-  }
+  "meta": { "tags": ["input", "label", "mask", "time"] }
 }

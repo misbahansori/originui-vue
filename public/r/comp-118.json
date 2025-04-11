@@ -2,26 +2,20 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-118",
   "type": "registry:component",
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json"
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-118.vue",
+      "path": "components/comp-118.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideStar } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Button>\n    <LucideStar class=\"-ms-1 opacity-60\" :size=\"16\" aria-hidden=\"true\" />\n    <span class=\"flex items-baseline gap-2\">\n      Star\n      <span class=\"text-primary-foreground/60 text-xs\">729</span>\n    </span>\n  </Button>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "like",
-      "counter"
-    ],
+    "tags": ["button", "like", "counter"],
     "style": 2
   }
 }

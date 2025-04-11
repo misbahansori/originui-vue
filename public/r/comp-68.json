@@ -9,17 +9,11 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-68.vue",
+      "path": "components/comp-68.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Textarea } from \"@/registry/default/ui/textarea\";\nimport { ref, useId } from \"vue\";\n\nconst textValue = ref(\"\");\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Textarea with left button</Label>\n    <Textarea :id=\"id\" v-model=\"textValue\" placeholder=\"Leave a comment\" />\n    <Button variant=\"outline\">Send</Button>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": {
-    "tags": [
-      "label",
-      "textarea",
-      "button"
-    ]
-  }
+  "meta": { "tags": ["label", "textarea", "button"] }
 }

@@ -2,27 +2,21 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-100",
   "type": "registry:component",
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/tooltip.json"
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-100.vue",
+      "path": "components/comp-100.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/registry/default/ui/tooltip\";\nimport { LucidePlus } from \"lucide-vue-next\";\n\nconst open = ref(false);\n\nfunction toggleOpen() {\n  open.value = !open.value;\n}\n</script>\n\n<template>\n  <TooltipProvider>\n    <Tooltip>\n      <TooltipTrigger as-child>\n        <Button\n          class=\"rounded-full\"\n          variant=\"outline\"\n          size=\"icon\"\n          aria-label=\"Add new item\"\n        >\n          <LucidePlus :size=\"16\" aria-hidden=\"true\" />\n        </Button>\n      </TooltipTrigger>\n      <TooltipContent class=\"px-2 py-1 text-xs\">Tooltip</TooltipContent>\n    </Tooltip>\n  </TooltipProvider>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "menu",
-      "hamburger"
-    ],
+    "tags": ["button", "menu", "hamburger"],
     "style": 2
   }
 }

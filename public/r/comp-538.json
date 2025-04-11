@@ -7,17 +7,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-538.vue",
+      "path": "components/comp-538.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  Timeline,\n  TimelineContent,\n  TimelineDate,\n  TimelineItem,\n} from \"@/registry/default/ui/timeline\";\n\nconst items = [\n  {\n    id: 1,\n    date: new Date(\"2024-01-09T10:55:00\"),\n    description: \"System backup completed successfully.\",\n  },\n  {\n    id: 2,\n    date: new Date(\"2024-01-09T10:50:00\"),\n    description:\n      \"User authentication service restarted due to configuration update.\",\n  },\n  {\n    id: 3,\n    date: new Date(\"2024-01-09T10:45:00\"),\n    description: \"Warning: High CPU usage detected on worker node-03.\",\n  },\n  {\n    id: 4,\n    date: new Date(\"2024-01-09T10:40:00\"),\n    description: \"New deployment initiated for api-service v2.1.0.\",\n  },\n];\n</script>\n\n<template>\n  <Timeline class=\"divide-y rounded-lg border\">\n    <TimelineItem\n      v-for=\"item in items\"\n      :key=\"item.id\"\n      :step=\"item.id\"\n      class=\"m-0! px-4! py-3!\"\n    >\n      <TimelineContent class=\"text-foreground\">\n        {{ item.description }}\n        <TimelineDate class=\"mt-1\">\n          {{\n            item.date.toLocaleDateString(\"en-US\", {\n              year: \"numeric\",\n              month: \"long\",\n              day: \"numeric\",\n            })\n          }}\n          at\n          {{\n            item.date.toLocaleTimeString(\"en-US\", {\n              hour: \"numeric\",\n              minute: \"2-digit\",\n              hour12: true,\n            })\n          }}\n        </TimelineDate>\n      </TimelineContent>\n    </TimelineItem>\n  </Timeline>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "timeline",
-      "vertical timeline"
-    ],
+    "tags": ["timeline", "vertical timeline"],
     "colSpan": 2
   }
 }

@@ -2,25 +2,17 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-124",
   "type": "registry:component",
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json"
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-124.vue",
+      "path": "components/comp-124.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideChevronLeft } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Button variant=\"link\" class=\"gap-1\">\n    <LucideChevronLeft class=\"opacity-60\" :size=\"16\" aria-hidden=\"true\" />\n    Go back\n  </Button>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": {
-    "tags": [
-      "button",
-      "back"
-    ],
-    "style": 2
-  }
+  "meta": { "tags": ["button", "back"], "style": 2 }
 }

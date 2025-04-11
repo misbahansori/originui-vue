@@ -8,18 +8,11 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-148.vue",
+      "path": "components/comp-148.vue",
       "content": "<script setup lang=\"ts\">\nimport { Checkbox } from \"@/registry/default/ui/checkbox\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { ref, useId } from \"vue\";\n\n// TODO: Implement CheckboxTree component\ninterface TreeNode {\n  id: string;\n  label: string;\n  defaultChecked?: boolean;\n  children?: TreeNode[];\n}\n\nconst id = useId();\n\nconst initialTree: TreeNode = {\n  id: \"1\",\n  label: \"Natural Wonders\",\n  children: [\n    { id: \"2\", label: \"Mountains\", defaultChecked: true },\n    {\n      id: \"3\",\n      label: \"Waterfalls\",\n      children: [\n        { id: \"4\", label: \"Niagara Falls\" },\n        { id: \"5\", label: \"Angel Falls\", defaultChecked: true },\n      ],\n    },\n    { id: \"6\", label: \"Grand Canyon\" },\n  ],\n};\n\nconst checkedNodes = ref<Record<string, boolean>>({\n  \"2\": true,\n  \"5\": true,\n});\n</script>\n\n<template>\n  <div class=\"space-y-3\">\n    <!-- Since we don't have a CheckboxTree component, we'll render the tree manually -->\n    <div class=\"flex items-center gap-2\">\n      <Checkbox\n        :id=\"`${id}-${initialTree.id}`\"\n        v-model=\"checkedNodes[initialTree.id]\"\n      />\n      <Label :for=\"`${id}-${initialTree.id}`\">{{ initialTree.label }}</Label>\n    </div>\n    <div v-if=\"initialTree.children\" class=\"ms-6 space-y-3\">\n      <template\n        v-for=\"childNode in initialTree.children\"\n        :key=\"`${id}-${childNode.id}`\"\n      >\n        <div class=\"flex items-center gap-2\">\n          <Checkbox\n            :id=\"`${id}-${childNode.id}`\"\n            v-model=\"checkedNodes[childNode.id]\"\n          />\n          <Label :for=\"`${id}-${childNode.id}`\">{{ childNode.label }}</Label>\n        </div>\n        <div v-if=\"childNode.children\" class=\"ms-6 space-y-3\">\n          <template\n            v-for=\"grandChild in childNode.children\"\n            :key=\"`${id}-${grandChild.id}`\"\n          >\n            <div class=\"flex items-center gap-2\">\n              <Checkbox\n                :id=\"`${id}-${grandChild.id}`\"\n                v-model=\"checkedNodes[grandChild.id]\"\n              />\n              <Label :for=\"`${id}-${grandChild.id}`\">\n                {{ grandChild.label }}\n              </Label>\n            </div>\n          </template>\n        </div>\n      </template>\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": {
-    "tags": [
-      "checkbox",
-      "label",
-      "tree",
-      "radix"
-    ]
-  }
+  "meta": { "tags": ["checkbox", "label", "tree", "radix"] }
 }

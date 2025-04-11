@@ -9,19 +9,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-388.vue",
+      "path": "components/comp-388.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@/registry/default/ui/popover\";\nimport { Textarea } from \"@/registry/default/ui/textarea\";\n</script>\n\n<template>\n  <div class=\"flex flex-col gap-4\">\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant=\"outline\">Feedback</Button>\n      </PopoverTrigger>\n      <PopoverContent class=\"w-72\">\n        <h2 class=\"mb-2 text-sm font-semibold\">Send us feedback</h2>\n        <form class=\"space-y-3\">\n          <Textarea\n            id=\"feedback\"\n            placeholder=\"How can we improve Origin UI?\"\n            aria-label=\"Send feedback\"\n          />\n          <div class=\"flex flex-col sm:flex-row sm:justify-end\">\n            <Button size=\"sm\">Send feedback</Button>\n          </div>\n        </form>\n      </PopoverContent>\n    </Popover>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "popover",
-      "feedback",
-      "form",
-      "radix"
-    ],
+    "tags": ["popover", "feedback", "form", "radix"],
     "style": 1
   }
 }

@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-505.vue",
+      "path": "components/comp-505.vue",
       "content": "<template></template>\n",
       "type": "registry:component",
       "target": ""

@@ -2,25 +2,17 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-88",
   "type": "registry:component",
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json"
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-88.vue",
+      "path": "components/comp-88.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideChevronDown } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Button>\n    Button\n    <LucideChevronDown class=\"-me-1 opacity-60\" :size=\"16\" aria-hidden=\"true\" />\n  </Button>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": {
-    "tags": [
-      "button",
-      "dropdown"
-    ],
-    "style": 2
-  }
+  "meta": { "tags": ["button", "dropdown"], "style": 2 }
 }

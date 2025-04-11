@@ -2,25 +2,17 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-107",
   "type": "registry:component",
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/toggle-group.json"
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-107.vue",
+      "path": "components/comp-107.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@/registry/default/ui/toggle-group\";\nimport {\n  LucideAlignCenter,\n  LucideAlignJustify,\n  LucideAlignLeft,\n  LucideAlignRight,\n} from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nconst value = ref(\"center\");\n</script>\n\n<template>\n  <ToggleGroup\n    class=\"divide-background inline-flex divide-x\"\n    type=\"single\"\n    v-model=\"value\"\n  >\n    <ToggleGroupItem\n      class=\"bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground\"\n      aria-label=\"Align Left\"\n      value=\"left\"\n    >\n      <LucideAlignLeft :size=\"16\" aria-hidden=\"true\" />\n    </ToggleGroupItem>\n    <ToggleGroupItem\n      class=\"bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground\"\n      aria-label=\"Align Center\"\n      value=\"center\"\n    >\n      <LucideAlignCenter :size=\"16\" aria-hidden=\"true\" />\n    </ToggleGroupItem>\n    <ToggleGroupItem\n      class=\"bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground\"\n      aria-label=\"Align Right\"\n      value=\"right\"\n    >\n      <LucideAlignRight :size=\"16\" aria-hidden=\"true\" />\n    </ToggleGroupItem>\n    <ToggleGroupItem\n      class=\"bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground\"\n      aria-label=\"Align Justify\"\n      value=\"justify\"\n    >\n      <LucideAlignJustify :size=\"16\" aria-hidden=\"true\" />\n    </ToggleGroupItem>\n  </ToggleGroup>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": {
-    "tags": [
-      "button",
-      "toggle group"
-    ],
-    "style": 2
-  }
+  "meta": { "tags": ["button", "toggle group"], "style": 2 }
 }

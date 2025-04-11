@@ -7,19 +7,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-394.vue",
+      "path": "components/comp-394.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n} from \"@/registry/default/ui/avatar\";\n</script>\n\n<template>\n  <div class=\"relative\">\n    <Avatar>\n      <AvatarImage src=\"./avatar-80-07.jpg\" alt=\"Kelly King\" />\n      <AvatarFallback>KK</AvatarFallback>\n    </Avatar>\n    <span\n      class=\"border-background absolute -end-0.5 -bottom-0.5 size-3 rounded-full border-2 bg-emerald-500\"\n    >\n      <span class=\"sr-only\">Online</span>\n    </span>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "avatar",
-      "user",
-      "profile",
-      "status"
-    ],
+    "tags": ["avatar", "user", "profile", "status"],
     "style": 1
   }
 }
