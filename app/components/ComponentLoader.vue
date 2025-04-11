@@ -1,20 +1,14 @@
 <script setup lang="ts">
-import { LucideLoader } from "lucide-vue-next";
 import type { RegistryItem } from "shadcn/registry";
 
-defineProps<{
+const props = defineProps<{
   component: RegistryItem;
 }>();
+
+const component = await import(
+  `~/registry/default/components/${props.component.name}.vue`
+).then((res) => res.default);
 </script>
 <template>
-  <Suspense>
-    <template #default>
-      <component :is="component.name" />
-    </template>
-    <template #fallback>
-      <div class="flex items-center justify-center p-4">
-        <LucideLoader class="mx-auto size-4 animate-spin" />
-      </div>
-    </template>
-  </Suspense>
+  <component :is="component" />
 </template>

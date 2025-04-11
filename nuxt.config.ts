@@ -64,13 +64,6 @@ export default defineNuxtConfig({
     componentDir: "./app/registry/default/ui",
   },
 
-  components: {
-    dirs: [
-      { path: "~/components" },
-      { path: "~/registry/default/components", global: true },
-    ],
-  },
-
   icon: {
     cssLayer: "icon",
     mode: "svg",
