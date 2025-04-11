@@ -7,19 +7,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-299.vue",
+      "path": "components/comp-299.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Toaster } from \"@/registry/default/ui/sonner\";\nimport { toast } from \"vue-sonner\";\n</script>\n\n<template>\n  <Button\n    variant=\"outline\"\n    @click=\"\n      () => {\n        toast('Your request was completed!', {\n          description: 'It was a long journey, but we made it!',\n          action: {\n            label: 'Undo',\n            onClick: () => console.log('Undo'),\n          },\n        });\n      }\n    \"\n  >\n    Show sonner\n  </Button>\n  <Toaster />\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "notification",
-      "toast",
-      "sonner",
-      "radix"
-    ],
+    "tags": ["notification", "toast", "sonner", "radix"],
     "colSpan": 2,
     "style": 1
   }

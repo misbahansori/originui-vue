@@ -2,30 +2,28 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "collapsible",
   "type": "registry:ui",
-  "dependencies": [
-    "reka-ui"
-  ],
+  "dependencies": ["reka-ui"],
   "files": [
     {
-      "path": "app/registry/default/ui/collapsible/Collapsible.vue",
+      "path": "ui/collapsible/Collapsible.vue",
       "content": "<script setup lang=\"ts\">\nimport type { CollapsibleRootEmits, CollapsibleRootProps } from \"reka-ui\";\nimport { CollapsibleRoot, useForwardPropsEmits } from \"reka-ui\";\n\nconst props = defineProps<CollapsibleRootProps>();\nconst emits = defineEmits<CollapsibleRootEmits>();\n\nconst forwarded = useForwardPropsEmits(props, emits);\n</script>\n\n<template>\n  <CollapsibleRoot v-slot=\"{ open }\" v-bind=\"forwarded\">\n    <slot :open=\"open\" />\n  </CollapsibleRoot>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/collapsible/CollapsibleContent.vue",
+      "path": "ui/collapsible/CollapsibleContent.vue",
       "content": "<script setup lang=\"ts\">\nimport { CollapsibleContent, type CollapsibleContentProps } from \"reka-ui\";\n\nconst props = defineProps<CollapsibleContentProps>();\n</script>\n\n<template>\n  <CollapsibleContent\n    v-bind=\"props\"\n    class=\"data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down overflow-hidden transition-all\"\n  >\n    <slot />\n  </CollapsibleContent>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/collapsible/CollapsibleTrigger.vue",
+      "path": "ui/collapsible/CollapsibleTrigger.vue",
       "content": "<script setup lang=\"ts\">\nimport { CollapsibleTrigger, type CollapsibleTriggerProps } from \"reka-ui\";\n\nconst props = defineProps<CollapsibleTriggerProps>();\n</script>\n\n<template>\n  <CollapsibleTrigger v-bind=\"props\">\n    <slot />\n  </CollapsibleTrigger>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/collapsible/index.ts",
+      "path": "ui/collapsible/index.ts",
       "content": "export { default as Collapsible } from \"./Collapsible.vue\";\nexport { default as CollapsibleContent } from \"./CollapsibleContent.vue\";\nexport { default as CollapsibleTrigger } from \"./CollapsibleTrigger.vue\";\n",
       "type": "registry:ui",
       "target": ""

@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-42.vue",
+      "path": "components/comp-42.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { ref, useId } from \"vue\";\n\nconst startId = useId();\nconst endId = useId();\n\nconst startDate = ref(\"\");\nconst endDate = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"startId\" class=\"text-foreground text-sm font-medium\">\n      Date range picker\n    </Label>\n    <div class=\"relative\">\n      <div\n        class=\"border-input bg-background text-foreground focus-within:border-ring focus-within:ring-ring/50 flex h-9 items-center rounded-md border px-3 shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px]\"\n      >\n        <input\n          :id=\"startId\"\n          v-model=\"startDate\"\n          type=\"date\"\n          class=\"w-full bg-transparent text-sm focus:outline-none\"\n        />\n        <span aria-hidden=\"true\" class=\"text-muted-foreground/70 px-2\">-</span>\n        <input\n          :id=\"endId\"\n          v-model=\"endDate\"\n          type=\"date\"\n          class=\"w-full bg-transparent text-sm focus:outline-none\"\n        />\n      </div>\n    </div>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with native date inputs\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""

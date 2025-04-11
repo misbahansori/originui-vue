@@ -8,17 +8,11 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-58.vue",
+      "path": "components/comp-58.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  PinInput,\n  PinInputGroup,\n  PinInputInput,\n} from \"@/registry/default/ui/pin-input\";\nimport { ref, useId } from \"vue\";\n\nconst inputId = useId();\nconst otpValues = ref([\"\", \"\", \"\", \"\"]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"inputId\">OTP input (spaced)</Label>\n    <PinInput :id=\"inputId\" class=\"flex items-center gap-3\">\n      <PinInputGroup class=\"flex items-center gap-3\">\n        <PinInputInput\n          v-for=\"(id, index) in otpValues\"\n          :key=\"id\"\n          :index=\"index\"\n          class=\"focus:border-ring focus:ring-ring/50 border-input size-9 rounded-md border font-medium shadow-xs transition-[color,box-shadow] focus:ring-[3px]\"\n        ></PinInputInput>\n      </PinInputGroup>\n    </PinInput>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with shadcn-vue\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://www.shadcn-vue.com/docs/components/pin-input.html\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        PinInput\n      </a>\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": {
-    "tags": [
-      "input",
-      "label",
-      "otp"
-    ]
-  }
+  "meta": { "tags": ["input", "label", "otp"] }
 }

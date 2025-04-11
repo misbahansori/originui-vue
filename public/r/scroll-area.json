@@ -2,24 +2,22 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "scroll-area",
   "type": "registry:ui",
-  "dependencies": [
-    "reka-ui"
-  ],
+  "dependencies": ["reka-ui"],
   "files": [
     {
-      "path": "app/registry/default/ui/scroll-area/ScrollArea.vue",
+      "path": "ui/scroll-area/ScrollArea.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport {\n  ScrollAreaCorner,\n  ScrollAreaRoot,\n  type ScrollAreaRootProps,\n  ScrollAreaViewport,\n} from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport ScrollBar from \"./ScrollBar.vue\";\n\nconst props = defineProps<\n  ScrollAreaRootProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <ScrollAreaRoot\n    v-bind=\"delegatedProps\"\n    :class=\"cn('relative overflow-hidden', props.class)\"\n  >\n    <ScrollAreaViewport class=\"h-full w-full rounded-[inherit]\">\n      <slot />\n    </ScrollAreaViewport>\n    <ScrollBar />\n    <ScrollAreaCorner />\n  </ScrollAreaRoot>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/scroll-area/ScrollBar.vue",
+      "path": "ui/scroll-area/ScrollBar.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport {\n  ScrollAreaScrollbar,\n  type ScrollAreaScrollbarProps,\n  ScrollAreaThumb,\n} from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = withDefaults(\n  defineProps<ScrollAreaScrollbarProps & { class?: HTMLAttributes[\"class\"] }>(),\n  {\n    orientation: \"vertical\",\n  },\n);\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <ScrollAreaScrollbar\n    v-bind=\"delegatedProps\"\n    :class=\"\n      cn(\n        'flex touch-none transition-colors select-none',\n        orientation === 'vertical' &&\n          'h-full w-2.5 border-l border-l-transparent p-px',\n        orientation === 'horizontal' &&\n          'h-2.5 flex-col border-t border-t-transparent p-px',\n        props.class,\n      )\n    \"\n  >\n    <ScrollAreaThumb class=\"bg-border relative flex-1 rounded-full\" />\n  </ScrollAreaScrollbar>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/scroll-area/index.ts",
+      "path": "ui/scroll-area/index.ts",
       "content": "export { default as ScrollArea } from \"./ScrollArea.vue\";\nexport { default as ScrollBar } from \"./ScrollBar.vue\";\n",
       "type": "registry:ui",
       "target": ""

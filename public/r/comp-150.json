@@ -2,13 +2,10 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-150",
   "type": "registry:component",
-  "dependencies": [
-    "@vueuse/core",
-    "lucide-vue-next"
-  ],
+  "dependencies": ["@vueuse/core", "lucide-vue-next"],
   "files": [
     {
-      "path": "app/registry/default/components/comp-150.vue",
+      "path": "components/comp-150.vue",
       "content": "<script setup lang=\"ts\">\nimport { useColorMode } from \"@vueuse/core\";\nimport { LucideMoon, LucideSun } from \"lucide-vue-next\";\nimport { useId } from \"vue\";\n\nconst id = useId();\nconst colorMode = useColorMode();\n\nconst toggleColorMode = () => {\n  colorMode.value = colorMode.value === \"dark\" ? \"light\" : \"dark\";\n};\n</script>\n\n<template>\n  <div class=\"space-y-4\">\n    <legend class=\"text-foreground text-sm leading-none font-medium\">\n      Dark mode toggle checkbox\n    </legend>\n    <div class=\"flex flex-col justify-center\">\n      <input\n        type=\"checkbox\"\n        :name=\"id\"\n        :id=\"id\"\n        class=\"peer sr-only\"\n        :checked=\"colorMode === 'dark'\"\n        @change=\"toggleColorMode\"\n      />\n      <label\n        class=\"group border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground peer-focus-visible:border-ring peer-focus-visible:ring-ring/50 relative inline-flex size-9 items-center justify-center rounded-md border shadow-xs transition-[color,box-shadow] outline-none peer-focus-visible:ring-[3px]\"\n        :for=\"id\"\n        :aria-label=\"`Switch to ${colorMode === 'dark' ? 'light' : 'dark'} mode`\"\n      >\n        <LucideMoon\n          :size=\"16\"\n          class=\"shrink-0 scale-0 opacity-0 transition-all\"\n          :class=\"{ 'scale-100 opacity-100': colorMode === 'dark' }\"\n          aria-hidden=\"true\"\n        />\n        <LucideSun\n          :size=\"16\"\n          class=\"absolute shrink-0 transition-all\"\n          :class=\"{\n            'scale-100 opacity-100': colorMode === 'light',\n            'scale-0 opacity-0': colorMode === 'dark',\n          }\"\n          aria-hidden=\"true\"\n        />\n      </label>\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""

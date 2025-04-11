@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-300.vue",
+      "path": "components/comp-300.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\n// TODO: Implement the component\n</script>\n\n<template>\n  <Button variant=\"outline\">Custom sonner</Button>\n</template>\n",
       "type": "registry:component",
       "target": ""

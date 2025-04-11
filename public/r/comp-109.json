@@ -7,17 +7,11 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-109.vue",
+      "path": "components/comp-109.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@/registry/default/ui/toggle-group\";\nimport { ref } from \"vue\";\n\nconst value = ref(\"center\");\n</script>\n\n<template>\n  <ToggleGroup\n    variant=\"outline\"\n    class=\"inline-flex\"\n    type=\"single\"\n    v-model=\"value\"\n  >\n    <ToggleGroupItem value=\"left\">Left</ToggleGroupItem>\n    <ToggleGroupItem value=\"center\">Center</ToggleGroupItem>\n    <ToggleGroupItem value=\"right\">Right</ToggleGroupItem>\n  </ToggleGroup>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": {
-    "tags": [
-      "button",
-      "toggle group"
-    ],
-    "style": 2
-  }
+  "meta": { "tags": ["button", "toggle group"], "style": 2 }
 }

@@ -7,18 +7,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-418.vue",
+      "path": "components/comp-418.vue",
       "content": "<script setup lang=\"ts\">\nimport { Badge } from \"@/registry/default/ui/badge\";\n</script>\n\n<template>\n  <Badge class=\"items-baseline gap-1.5\">\n    Badge\n    <span class=\"text-primary-foreground/60 text-[0.625rem] font-medium\">\n      73\n    </span>\n  </Badge>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "badge",
-      "chip",
-      "counter"
-    ],
+    "tags": ["badge", "chip", "counter"],
     "style": 1
   }
 }

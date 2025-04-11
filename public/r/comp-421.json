@@ -7,18 +7,14 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-421.vue",
+      "path": "components/comp-421.vue",
       "content": "<script setup lang=\"ts\">\nimport { Badge } from \"@/registry/default/ui/badge\";\n</script>\n\n<template>\n  <Badge variant=\"outline\" class=\"gap-1.5\">\n    <span class=\"size-1.5 rounded-full bg-amber-500\" aria-hidden=\"true\"></span>\n    Badge\n  </Badge>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "badge",
-      "chip",
-      "status"
-    ],
+    "tags": ["badge", "chip", "status"],
     "style": 1
   }
 }

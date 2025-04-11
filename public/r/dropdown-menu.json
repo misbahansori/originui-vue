@@ -2,96 +2,94 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "dropdown-menu",
   "type": "registry:ui",
-  "dependencies": [
-    "reka-ui"
-  ],
+  "dependencies": ["reka-ui"],
   "files": [
     {
-      "path": "app/registry/default/ui/dropdown-menu/DropdownMenu.vue",
+      "path": "ui/dropdown-menu/DropdownMenu.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  DropdownMenuRoot,\n  type DropdownMenuRootEmits,\n  type DropdownMenuRootProps,\n  useForwardPropsEmits,\n} from \"reka-ui\";\n\nconst props = defineProps<DropdownMenuRootProps>();\nconst emits = defineEmits<DropdownMenuRootEmits>();\n\nconst forwarded = useForwardPropsEmits(props, emits);\n</script>\n\n<template>\n  <DropdownMenuRoot v-bind=\"forwarded\">\n    <slot />\n  </DropdownMenuRoot>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/dropdown-menu/index.ts",
+      "path": "ui/dropdown-menu/index.ts",
       "content": "export { default as DropdownMenu } from \"./DropdownMenu.vue\";\n\nexport { default as DropdownMenuCheckboxItem } from \"./DropdownMenuCheckboxItem.vue\";\nexport { default as DropdownMenuContent } from \"./DropdownMenuContent.vue\";\nexport { default as DropdownMenuGroup } from \"./DropdownMenuGroup.vue\";\nexport { default as DropdownMenuItem } from \"./DropdownMenuItem.vue\";\nexport { default as DropdownMenuLabel } from \"./DropdownMenuLabel.vue\";\nexport { default as DropdownMenuRadioGroup } from \"./DropdownMenuRadioGroup.vue\";\nexport { default as DropdownMenuRadioItem } from \"./DropdownMenuRadioItem.vue\";\nexport { default as DropdownMenuSeparator } from \"./DropdownMenuSeparator.vue\";\nexport { default as DropdownMenuShortcut } from \"./DropdownMenuShortcut.vue\";\nexport { default as DropdownMenuSub } from \"./DropdownMenuSub.vue\";\nexport { default as DropdownMenuSubContent } from \"./DropdownMenuSubContent.vue\";\nexport { default as DropdownMenuSubTrigger } from \"./DropdownMenuSubTrigger.vue\";\nexport { default as DropdownMenuTrigger } from \"./DropdownMenuTrigger.vue\";\nexport { DropdownMenuPortal } from \"reka-ui\";\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/dropdown-menu/DropdownMenuCheckboxItem.vue",
+      "path": "ui/dropdown-menu/DropdownMenuCheckboxItem.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { Check } from \"lucide-vue-next\";\nimport {\n  DropdownMenuCheckboxItem,\n  type DropdownMenuCheckboxItemEmits,\n  type DropdownMenuCheckboxItemProps,\n  DropdownMenuItemIndicator,\n  useForwardPropsEmits,\n} from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  DropdownMenuCheckboxItemProps & { class?: HTMLAttributes[\"class\"] }\n>();\nconst emits = defineEmits<DropdownMenuCheckboxItemEmits>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwarded = useForwardPropsEmits(delegatedProps, emits);\n</script>\n\n<template>\n  <DropdownMenuCheckboxItem\n    v-bind=\"forwarded\"\n    :class=\"\n      cn(\n        'focus:bg-accent focus:text-accent-foreground relative flex cursor-default items-center rounded-sm py-1.5 pr-2 pl-8 text-sm transition-colors outline-none select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',\n        props.class,\n      )\n    \"\n  >\n    <span class=\"absolute left-2 flex h-3.5 w-3.5 items-center justify-center\">\n      <DropdownMenuItemIndicator>\n        <Check class=\"h-4 w-4\" />\n      </DropdownMenuItemIndicator>\n    </span>\n    <slot />\n  </DropdownMenuCheckboxItem>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/dropdown-menu/DropdownMenuContent.vue",
+      "path": "ui/dropdown-menu/DropdownMenuContent.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport {\n  DropdownMenuContent,\n  type DropdownMenuContentEmits,\n  type DropdownMenuContentProps,\n  DropdownMenuPortal,\n  useForwardPropsEmits,\n} from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = withDefaults(\n  defineProps<DropdownMenuContentProps & { class?: HTMLAttributes[\"class\"] }>(),\n  {\n    sideOffset: 4,\n  },\n);\nconst emits = defineEmits<DropdownMenuContentEmits>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwarded = useForwardPropsEmits(delegatedProps, emits);\n</script>\n\n<template>\n  <DropdownMenuPortal>\n    <DropdownMenuContent\n      v-bind=\"forwarded\"\n      :class=\"\n        cn(\n          'bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-40 overflow-hidden rounded-md border p-1 shadow-lg',\n          props.class,\n        )\n      \"\n    >\n      <slot />\n    </DropdownMenuContent>\n  </DropdownMenuPortal>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/dropdown-menu/DropdownMenuGroup.vue",
+      "path": "ui/dropdown-menu/DropdownMenuGroup.vue",
       "content": "<script setup lang=\"ts\">\nimport { DropdownMenuGroup, type DropdownMenuGroupProps } from \"reka-ui\";\n\nconst props = defineProps<DropdownMenuGroupProps>();\n</script>\n\n<template>\n  <DropdownMenuGroup v-bind=\"props\">\n    <slot />\n  </DropdownMenuGroup>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/dropdown-menu/DropdownMenuItem.vue",
+      "path": "ui/dropdown-menu/DropdownMenuItem.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport {\n  DropdownMenuItem,\n  type DropdownMenuItemProps,\n  useForwardProps,\n} from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  DropdownMenuItemProps & { class?: HTMLAttributes[\"class\"]; inset?: boolean }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwardedProps = useForwardProps(delegatedProps);\n</script>\n\n<template>\n  <DropdownMenuItem\n    v-bind=\"forwardedProps\"\n    :class=\"\n      cn(\n        'focus:bg-accent focus:text-accent-foreground relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm transition-colors outline-none select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&>svg]:size-4 [&>svg]:shrink-0',\n        inset && 'pl-8',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </DropdownMenuItem>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/dropdown-menu/DropdownMenuLabel.vue",
+      "path": "ui/dropdown-menu/DropdownMenuLabel.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport {\n  DropdownMenuLabel,\n  type DropdownMenuLabelProps,\n  useForwardProps,\n} from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  DropdownMenuLabelProps & { class?: HTMLAttributes[\"class\"]; inset?: boolean }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwardedProps = useForwardProps(delegatedProps);\n</script>\n\n<template>\n  <DropdownMenuLabel\n    v-bind=\"forwardedProps\"\n    :class=\"\n      cn('px-2 py-1.5 text-sm font-semibold', inset && 'pl-8', props.class)\n    \"\n  >\n    <slot />\n  </DropdownMenuLabel>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/dropdown-menu/DropdownMenuRadioGroup.vue",
+      "path": "ui/dropdown-menu/DropdownMenuRadioGroup.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  DropdownMenuRadioGroup,\n  type DropdownMenuRadioGroupEmits,\n  type DropdownMenuRadioGroupProps,\n  useForwardPropsEmits,\n} from \"reka-ui\";\n\nconst props = defineProps<DropdownMenuRadioGroupProps>();\nconst emits = defineEmits<DropdownMenuRadioGroupEmits>();\n\nconst forwarded = useForwardPropsEmits(props, emits);\n</script>\n\n<template>\n  <DropdownMenuRadioGroup v-bind=\"forwarded\">\n    <slot />\n  </DropdownMenuRadioGroup>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/dropdown-menu/DropdownMenuRadioItem.vue",
+      "path": "ui/dropdown-menu/DropdownMenuRadioItem.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { Circle } from \"lucide-vue-next\";\nimport {\n  DropdownMenuItemIndicator,\n  DropdownMenuRadioItem,\n  type DropdownMenuRadioItemEmits,\n  type DropdownMenuRadioItemProps,\n  useForwardPropsEmits,\n} from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  DropdownMenuRadioItemProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst emits = defineEmits<DropdownMenuRadioItemEmits>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwarded = useForwardPropsEmits(delegatedProps, emits);\n</script>\n\n<template>\n  <DropdownMenuRadioItem\n    v-bind=\"forwarded\"\n    :class=\"\n      cn(\n        'focus:bg-accent focus:text-accent-foreground relative flex cursor-default items-center rounded-sm py-1.5 pr-2 pl-8 text-sm transition-colors outline-none select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',\n        props.class,\n      )\n    \"\n  >\n    <span class=\"absolute left-2 flex h-3.5 w-3.5 items-center justify-center\">\n      <DropdownMenuItemIndicator>\n        <Circle class=\"h-2 w-2 fill-current\" />\n      </DropdownMenuItemIndicator>\n    </span>\n    <slot />\n  </DropdownMenuRadioItem>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/dropdown-menu/DropdownMenuSeparator.vue",
+      "path": "ui/dropdown-menu/DropdownMenuSeparator.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport {\n  DropdownMenuSeparator,\n  type DropdownMenuSeparatorProps,\n} from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  DropdownMenuSeparatorProps & {\n    class?: HTMLAttributes[\"class\"];\n  }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <DropdownMenuSeparator\n    v-bind=\"delegatedProps\"\n    :class=\"cn('bg-muted -mx-1 my-1 h-px', props.class)\"\n  />\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/dropdown-menu/DropdownMenuShortcut.vue",
+      "path": "ui/dropdown-menu/DropdownMenuShortcut.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <span :class=\"cn('ml-auto text-xs tracking-widest opacity-60', props.class)\">\n    <slot />\n  </span>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/dropdown-menu/DropdownMenuSub.vue",
+      "path": "ui/dropdown-menu/DropdownMenuSub.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  DropdownMenuSub,\n  type DropdownMenuSubEmits,\n  type DropdownMenuSubProps,\n  useForwardPropsEmits,\n} from \"reka-ui\";\n\nconst props = defineProps<DropdownMenuSubProps>();\nconst emits = defineEmits<DropdownMenuSubEmits>();\n\nconst forwarded = useForwardPropsEmits(props, emits);\n</script>\n\n<template>\n  <DropdownMenuSub v-bind=\"forwarded\">\n    <slot />\n  </DropdownMenuSub>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/dropdown-menu/DropdownMenuSubContent.vue",
+      "path": "ui/dropdown-menu/DropdownMenuSubContent.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport {\n  DropdownMenuSubContent,\n  type DropdownMenuSubContentEmits,\n  type DropdownMenuSubContentProps,\n  useForwardPropsEmits,\n} from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  DropdownMenuSubContentProps & { class?: HTMLAttributes[\"class\"] }\n>();\nconst emits = defineEmits<DropdownMenuSubContentEmits>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwarded = useForwardPropsEmits(delegatedProps, emits);\n</script>\n\n<template>\n  <DropdownMenuSubContent\n    v-bind=\"forwarded\"\n    :class=\"\n      cn(\n        'bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-32 overflow-hidden rounded-md border p-1 shadow-lg',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </DropdownMenuSubContent>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/dropdown-menu/DropdownMenuSubTrigger.vue",
+      "path": "ui/dropdown-menu/DropdownMenuSubTrigger.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { ChevronRight } from \"lucide-vue-next\";\nimport {\n  DropdownMenuSubTrigger,\n  type DropdownMenuSubTriggerProps,\n  useForwardProps,\n} from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  DropdownMenuSubTriggerProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwardedProps = useForwardProps(delegatedProps);\n</script>\n\n<template>\n  <DropdownMenuSubTrigger\n    v-bind=\"forwardedProps\"\n    :class=\"\n      cn(\n        'focus:bg-accent data-[state=open]:bg-accent flex cursor-default items-center rounded-sm px-2 py-1.5 text-sm outline-none select-none',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n    <ChevronRight class=\"ml-auto h-4 w-4\" />\n  </DropdownMenuSubTrigger>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/dropdown-menu/DropdownMenuTrigger.vue",
+      "path": "ui/dropdown-menu/DropdownMenuTrigger.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  DropdownMenuTrigger,\n  type DropdownMenuTriggerProps,\n  useForwardProps,\n} from \"reka-ui\";\n\nconst props = defineProps<DropdownMenuTriggerProps>();\n\nconst forwardedProps = useForwardProps(props);\n</script>\n\n<template>\n  <DropdownMenuTrigger class=\"outline-none\" v-bind=\"forwardedProps\">\n    <slot />\n  </DropdownMenuTrigger>\n</template>\n",
       "type": "registry:ui",
       "target": ""

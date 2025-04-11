@@ -2,66 +2,64 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "combobox",
   "type": "registry:ui",
-  "dependencies": [
-    "reka-ui"
-  ],
+  "dependencies": ["reka-ui"],
   "files": [
     {
-      "path": "app/registry/default/ui/combobox/Combobox.vue",
+      "path": "ui/combobox/Combobox.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  ComboboxRoot,\n  type ComboboxRootEmits,\n  type ComboboxRootProps,\n  useForwardPropsEmits,\n} from \"reka-ui\";\n\nconst props = defineProps<ComboboxRootProps>();\nconst emits = defineEmits<ComboboxRootEmits>();\n\nconst forwarded = useForwardPropsEmits(props, emits);\n</script>\n\n<template>\n  <ComboboxRoot v-bind=\"forwarded\">\n    <slot />\n  </ComboboxRoot>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/combobox/ComboboxAnchor.vue",
+      "path": "ui/combobox/ComboboxAnchor.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { ComboboxAnchorProps } from \"reka-ui\";\nimport { ComboboxAnchor, useForwardProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  ComboboxAnchorProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwarded = useForwardProps(delegatedProps);\n</script>\n\n<template>\n  <ComboboxAnchor v-bind=\"forwarded\" :class=\"cn('w-[200px]', props.class)\">\n    <slot />\n  </ComboboxAnchor>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/combobox/ComboboxEmpty.vue",
+      "path": "ui/combobox/ComboboxEmpty.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { ComboboxEmptyProps } from \"reka-ui\";\nimport { ComboboxEmpty } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  ComboboxEmptyProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <ComboboxEmpty\n    v-bind=\"delegatedProps\"\n    :class=\"cn('py-6 text-center text-sm', props.class)\"\n  >\n    <slot />\n  </ComboboxEmpty>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/combobox/ComboboxGroup.vue",
+      "path": "ui/combobox/ComboboxGroup.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { ComboboxGroupProps } from \"reka-ui\";\nimport { ComboboxGroup, ComboboxLabel } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  ComboboxGroupProps & {\n    class?: HTMLAttributes[\"class\"];\n    heading?: string;\n  }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <ComboboxGroup\n    v-bind=\"delegatedProps\"\n    :class=\"\n      cn(\n        'text-foreground [&_[cmdk-group-heading]]:text-muted-foreground overflow-hidden p-1 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium',\n        props.class,\n      )\n    \"\n  >\n    <ComboboxLabel\n      v-if=\"heading\"\n      class=\"text-muted-foreground px-2 py-1.5 text-xs font-medium\"\n    >\n      {{ heading }}\n    </ComboboxLabel>\n    <slot />\n  </ComboboxGroup>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/combobox/ComboboxInput.vue",
+      "path": "ui/combobox/ComboboxInput.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport {\n  ComboboxInput,\n  type ComboboxInputEmits,\n  type ComboboxInputProps,\n  useForwardPropsEmits,\n} from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  ComboboxInputProps & {\n    class?: HTMLAttributes[\"class\"];\n  }\n>();\n\nconst emits = defineEmits<ComboboxInputEmits>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwarded = useForwardPropsEmits(delegatedProps, emits);\n</script>\n\n<template>\n  <ComboboxInput\n    v-bind=\"forwarded\"\n    :class=\"\n      cn(\n        'border-input placeholder:text-muted-foreground focus-visible:ring-ring flex h-9 w-full rounded-md border bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:ring-1 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </ComboboxInput>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/combobox/ComboboxItem.vue",
+      "path": "ui/combobox/ComboboxItem.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { ComboboxItemEmits, ComboboxItemProps } from \"reka-ui\";\nimport { ComboboxItem, useForwardPropsEmits } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  ComboboxItemProps & { class?: HTMLAttributes[\"class\"] }\n>();\nconst emits = defineEmits<ComboboxItemEmits>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwarded = useForwardPropsEmits(delegatedProps, emits);\n</script>\n\n<template>\n  <ComboboxItem\n    v-bind=\"forwarded\"\n    :class=\"\n      cn(\n        'data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground relative flex cursor-default items-center justify-between gap-2 rounded-sm px-2 py-1.5 text-sm outline-none select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:size-4 [&_svg]:shrink-0',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </ComboboxItem>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/combobox/ComboboxList.vue",
+      "path": "ui/combobox/ComboboxList.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { ComboboxContentEmits, ComboboxContentProps } from \"reka-ui\";\nimport {\n  ComboboxContent,\n  ComboboxPortal,\n  ComboboxViewport,\n  useForwardPropsEmits,\n} from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = withDefaults(\n  defineProps<ComboboxContentProps & { class?: HTMLAttributes[\"class\"] }>(),\n  {\n    position: \"popper\",\n    align: \"center\",\n    sideOffset: 4,\n  },\n);\nconst emits = defineEmits<ComboboxContentEmits>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwarded = useForwardPropsEmits(delegatedProps, emits);\n</script>\n\n<template>\n  <ComboboxPortal>\n    <ComboboxContent\n      v-bind=\"forwarded\"\n      :class=\"\n        cn(\n          'bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-[200px] rounded-md border shadow-md outline-none',\n          props.class,\n        )\n      \"\n    >\n      <ComboboxViewport>\n        <slot />\n      </ComboboxViewport>\n    </ComboboxContent>\n  </ComboboxPortal>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/combobox/ComboboxSeparator.vue",
+      "path": "ui/combobox/ComboboxSeparator.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { ComboboxSeparatorProps } from \"reka-ui\";\nimport { ComboboxSeparator } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  ComboboxSeparatorProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <ComboboxSeparator\n    v-bind=\"delegatedProps\"\n    :class=\"cn('bg-border -mx-1 h-px', props.class)\"\n  >\n    <slot />\n  </ComboboxSeparator>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/combobox/ComboboxTrigger.vue",
+      "path": "ui/combobox/ComboboxTrigger.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { ComboboxTriggerProps } from \"reka-ui\";\nimport { ComboboxTrigger, useForwardProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  ComboboxTriggerProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwarded = useForwardProps(delegatedProps);\n</script>\n\n<template>\n  <ComboboxTrigger v-bind=\"forwarded\" :class=\"cn('', props.class)\" tabindex=\"0\">\n    <slot />\n  </ComboboxTrigger>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
     {
-      "path": "app/registry/default/ui/combobox/index.ts",
+      "path": "ui/combobox/index.ts",
       "content": "export { default as Combobox } from \"./Combobox.vue\";\nexport { default as ComboboxAnchor } from \"./ComboboxAnchor.vue\";\nexport { default as ComboboxEmpty } from \"./ComboboxEmpty.vue\";\nexport { default as ComboboxGroup } from \"./ComboboxGroup.vue\";\nexport { default as ComboboxInput } from \"./ComboboxInput.vue\";\nexport { default as ComboboxItem } from \"./ComboboxItem.vue\";\nexport { default as ComboboxList } from \"./ComboboxList.vue\";\nexport { default as ComboboxSeparator } from \"./ComboboxSeparator.vue\";\n\nexport {\n  ComboboxCancel,\n  ComboboxItemIndicator,\n  ComboboxTrigger,\n  ComboboxLabel,\n} from \"reka-ui\";\n",
       "type": "registry:ui",
       "target": ""

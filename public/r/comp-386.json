@@ -2,27 +2,21 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-386",
   "type": "registry:component",
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/popover.json"
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-386.vue",
+      "path": "components/comp-386.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@/registry/default/ui/popover\";\nimport { LucideArrowLeft, LucideArrowRight } from \"lucide-vue-next\";\nimport { computed, ref } from \"vue\";\n\nconst tips = [\n  {\n    title: \"Welcome to Dashboard\",\n    description:\n      \"This is your new workspace. Here you'll find all your projects, recent activities, settings, and more.\",\n  },\n  {\n    title: \"Quick Actions\",\n    description:\n      \"Use the toolbar above to create new projects, invite team members, or access settings.\",\n  },\n  {\n    title: \"Need Help?\",\n    description:\n      \"Click the support icon in the top right corner to access our help center and documentation.\",\n  },\n  {\n    title: \"Keyboard Shortcuts\",\n    description:\n      \"Press ⌘K to open the command palette. Use arrow keys to navigate and Enter to select an action.\",\n  },\n  {\n    title: \"Stay Updated\",\n    description:\n      \"Enable notifications to receive updates about your projects, team activity, and important deadlines.\",\n  },\n];\n\nconst currentTip = ref(0);\n\nconst handleNext = () => {\n  if (currentTip.value < tips.length - 1) {\n    currentTip.value++;\n  }\n};\n\nconst handlePrev = () => {\n  if (currentTip.value > 0) {\n    currentTip.value--;\n  }\n};\n\nconst isFirstTip = computed(() => currentTip.value === 0);\nconst isLastTip = computed(() => currentTip.value === tips.length - 1);\n</script>\n\n<template>\n  <Popover>\n    <PopoverTrigger asChild>\n      <Button variant=\"outline\">Tooltip-like with nav</Button>\n    </PopoverTrigger>\n    <PopoverContent class=\"max-w-[280px] py-3 shadow-none\" side=\"top\">\n      <div class=\"space-y-3\">\n        <div class=\"space-y-1\">\n          <p class=\"text-[13px] font-medium\">\n            {{ tips[currentTip]?.title }}\n          </p>\n          <p class=\"text-muted-foreground text-xs\">\n            {{ tips[currentTip]?.description }}\n          </p>\n        </div>\n        <div class=\"flex items-center justify-between\">\n          <span class=\"text-muted-foreground text-xs\">\n            {{ currentTip + 1 }}/{{ tips.length }}\n          </span>\n          <div class=\"flex gap-0.5\">\n            <Button\n              size=\"icon\"\n              variant=\"ghost\"\n              class=\"size-6\"\n              @click=\"handlePrev\"\n              :disabled=\"isFirstTip\"\n              aria-label=\"Previous tip\"\n            >\n              <LucideArrowLeft class=\"size-4\" aria-hidden=\"true\" />\n            </Button>\n            <Button\n              size=\"icon\"\n              variant=\"ghost\"\n              class=\"size-6\"\n              @click=\"handleNext\"\n              :disabled=\"isLastTip\"\n              aria-label=\"Next tip\"\n            >\n              <LucideArrowRight class=\"size-4\" aria-hidden=\"true\" />\n            </Button>\n          </div>\n        </div>\n      </div>\n    </PopoverContent>\n  </Popover>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "popover",
-      "tooltip",
-      "radix"
-    ],
+    "tags": ["popover", "tooltip", "radix"],
     "style": 1
   }
 }

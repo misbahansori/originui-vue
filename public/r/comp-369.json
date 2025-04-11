@@ -2,26 +2,18 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-369",
   "type": "registry:component",
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/dropdown-menu.json"
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-369.vue",
+      "path": "components/comp-369.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/registry/default/ui/dropdown-menu\";\nimport {\n  LucideBolt,\n  LucideChevronDown,\n  LucideCopyPlus,\n  LucideFiles,\n  LucideLayers2,\n  LucideTrash,\n} from \"lucide-vue-next\";\n</script>\n\n<template>\n  <DropdownMenu>\n    <DropdownMenuTrigger asChild>\n      <Button variant=\"outline\">\n        Grouped items\n        <LucideChevronDown class=\"-me-1 size-4 opacity-60\" aria-hidden=\"true\" />\n      </Button>\n    </DropdownMenuTrigger>\n    <DropdownMenuContent>\n      <DropdownMenuGroup>\n        <DropdownMenuItem>\n          <LucideCopyPlus class=\"size-4 opacity-60\" aria-hidden=\"true\" />\n          Copy\n        </DropdownMenuItem>\n        <DropdownMenuItem>\n          <LucideBolt class=\"size-4 opacity-60\" aria-hidden=\"true\" />\n          Edit\n        </DropdownMenuItem>\n      </DropdownMenuGroup>\n      <DropdownMenuSeparator />\n      <DropdownMenuGroup>\n        <DropdownMenuItem>\n          <LucideLayers2 class=\"size-4 opacity-60\" aria-hidden=\"true\" />\n          Group\n        </DropdownMenuItem>\n        <DropdownMenuItem>\n          <LucideFiles class=\"size-4 opacity-60\" aria-hidden=\"true\" />\n          Clone\n        </DropdownMenuItem>\n        <DropdownMenuItem variant=\"destructive\">\n          <LucideTrash class=\"size-4\" aria-hidden=\"true\" />\n          Delete\n        </DropdownMenuItem>\n      </DropdownMenuGroup>\n    </DropdownMenuContent>\n  </DropdownMenu>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": {
-    "tags": [
-      "dropdown",
-      "radix"
-    ],
-    "style": 1
-  }
+  "meta": { "tags": ["dropdown", "radix"], "style": 1 }
 }

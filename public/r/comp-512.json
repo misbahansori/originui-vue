@@ -10,7 +10,7 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-512.vue",
+      "path": "components/comp-512.vue",
       "content": "<template></template>\n",
       "type": "registry:component",
       "target": ""

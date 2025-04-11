@@ -2,28 +2,21 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-298",
   "type": "registry:component",
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/toast.json"
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-298.vue",
+      "path": "components/comp-298.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Toast,\n  ToastAction,\n  ToastClose,\n  ToastDescription,\n  ToastProvider,\n  ToastTitle,\n  ToastViewport,\n} from \"@/registry/default/ui/toast\";\nimport { useCountdown } from \"@vueuse/core\";\nimport { LucideCircleCheck, LucideX } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nconst durationInSeconds = 5;\nconst interval = 100;\nconst initialCountdown = (durationInSeconds * 1000) / interval;\n\nconst { pause, resume, start, remaining, reset } = useCountdown(\n  initialCountdown,\n  {\n    interval,\n    onComplete: () => {\n      open.value = false;\n    },\n    immediate: false,\n  },\n);\n\nconst handleOpenChange = (value: boolean) => {\n  open.value = value;\n  if (value) {\n    reset();\n    start();\n  }\n};\n\nconst handleButtonClick = () => {\n  if (open.value) {\n    open.value = false;\n    setTimeout(() => {\n      handleOpenChange(true);\n    }, 150);\n  } else {\n    handleOpenChange(true);\n  }\n};\n\nconst open = ref(false);\n</script>\n\n<template>\n  <ToastProvider>\n    <Button variant=\"outline\" @click=\"handleButtonClick\">Show toast</Button>\n    <Toast\n      :open=\"open\"\n      @openChange=\"handleOpenChange\"\n      @pause=\"pause\"\n      @resume=\"resume\"\n    >\n      <div class=\"flex w-full justify-between gap-3\">\n        <LucideCircleCheck\n          class=\"mt-0.5 size-4 shrink-0 text-emerald-500\"\n          aria-hidden=\"true\"\n        />\n        <div class=\"flex grow flex-col gap-3\">\n          <div class=\"space-y-1\">\n            <ToastTitle>Your request was completed!</ToastTitle>\n            <ToastDescription>\n              It demonstrates that the task or request has been processed.\n            </ToastDescription>\n          </div>\n          <div>\n            <ToastAction altText=\"Undo changes\" asChild>\n              <Button size=\"sm\">Undo changes</Button>\n            </ToastAction>\n          </div>\n        </div>\n        <ToastClose as-child>\n          <Button\n            variant=\"ghost\"\n            class=\"group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent\"\n            aria-label=\"Close notification\"\n          >\n            <LucideX\n              class=\"size-4 opacity-60 transition-opacity group-hover:opacity-100\"\n              aria-hidden=\"true\"\n            />\n          </Button>\n        </ToastClose>\n      </div>\n      <div class=\"contents\" aria-hidden=\"true\">\n        <div\n          class=\"pointer-events-none absolute bottom-0 left-0 h-1 w-full bg-emerald-500 transition-all duration-100\"\n          :style=\"{\n            width: `${(remaining / initialCountdown) * 100}%`,\n            transition: 'width 100ms linear',\n          }\"\n        />\n      </div>\n    </Toast>\n    <ToastViewport />\n  </ToastProvider>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
   "meta": {
-    "tags": [
-      "notification",
-      "toast",
-      "success",
-      "radix"
-    ],
+    "tags": ["notification", "toast", "success", "radix"],
     "colSpan": 2,
     "style": 1
   }

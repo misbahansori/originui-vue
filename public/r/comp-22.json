@@ -9,17 +9,11 @@
   ],
   "files": [
     {
-      "path": "app/registry/default/components/comp-22.vue",
+      "path": "components/comp-22.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with button</Label>\n    <div class=\"flex gap-2\">\n      <Input :id=\"id\" class=\"flex-1\" placeholder=\"Email\" type=\"email\" />\n      <Button variant=\"outline\">Send</Button>\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
   ],
-  "meta": {
-    "tags": [
-      "input",
-      "label",
-      "button"
-    ]
-  }
+  "meta": { "tags": ["input", "label", "button"] }
 }
