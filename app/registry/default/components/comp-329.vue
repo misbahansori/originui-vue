@@ -13,8 +13,8 @@ import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
 import { LucideCreditCard, LucideStore } from "lucide-vue-next";
-import { onMounted, ref } from "vue";
-import { mask as vMask } from "vue-the-mask";
+import { vMaska } from "maska/vue";
+import { onMounted, ref, useTemplateRef } from "vue";
 
 const id = useId();
 const couponInputRef = useTemplateRef("couponInputRef");
@@ -98,7 +98,7 @@ onMounted(() => {
                   class="peer rounded-b-none pe-9 shadow-none [direction:inherit]"
                   id="card-number"
                   v-model="cardNumber"
-                  v-mask="'#### #### #### ####'"
+                  v-maska="'#### #### #### ####'"
                   placeholder="0000 0000 0000 0000"
                   maxlength="19"
                 />
@@ -114,7 +114,7 @@ onMounted(() => {
                     class="rounded-e-none rounded-t-none shadow-none [direction:inherit]"
                     id="expiry-date"
                     v-model="expiryDate"
-                    v-mask="'##/##'"
+                    v-maska="'##/##'"
                     placeholder="MM/YY"
                     maxlength="5"
                   />
@@ -124,7 +124,7 @@ onMounted(() => {
                     class="rounded-s-none rounded-t-none shadow-none [direction:inherit]"
                     id="cvc-code"
                     v-model="cvcCode"
-                    v-mask="'###'"
+                    v-maska="'###'"
                     placeholder="CVC"
                     maxlength="4"
                     type="password"

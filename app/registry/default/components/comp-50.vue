@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Input } from "@/registry/default/ui/input";
 import { LucideCreditCard } from "lucide-vue-next";
+import { vMaska } from "maska/vue";
 import { ref } from "vue";
-import { mask as vMask } from "vue-the-mask";
 
 const cardNumber = ref("");
 const expiryDate = ref("");
@@ -18,7 +18,7 @@ const cvcCode = ref("");
           class="peer rounded-b-none pe-9 shadow-none [direction:inherit]"
           id="card-number"
           v-model="cardNumber"
-          v-mask="'#### #### #### ####'"
+          v-maska="'#### #### #### ####'"
           placeholder="0000 0000 0000 0000"
           maxlength="19"
         />
@@ -34,7 +34,7 @@ const cvcCode = ref("");
             class="rounded-e-none rounded-t-none shadow-none [direction:inherit]"
             id="expiry-date"
             v-model="expiryDate"
-            v-mask="'##/##'"
+            v-maska="'##/##'"
             placeholder="MM/YY"
             maxlength="5"
           />
@@ -44,7 +44,7 @@ const cvcCode = ref("");
             class="rounded-s-none rounded-t-none shadow-none [direction:inherit]"
             id="cvc-code"
             v-model="cvcCode"
-            v-mask="'###'"
+            v-maska="'###'"
             placeholder="CVC"
             maxlength="4"
             type="password"
@@ -60,11 +60,11 @@ const cvcCode = ref("");
       Built with
       <a
         class="hover:text-foreground underline"
-        href="https://vuejs-tips.github.io/vue-the-mask"
+        href="https://beholdr.github.io/maska/v3/#/vue"
         target="_blank"
         rel="noopener nofollow"
       >
-        vue-the-mask
+        maska
       </a>
     </p>
   </div>

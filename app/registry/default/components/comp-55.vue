@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
+import { vMaska } from "maska/vue";
 import { ref } from "vue";
-import { mask as vMask } from "vue-the-mask";
 
 const inputValue = ref("");
 </script>
@@ -15,7 +15,7 @@ const inputValue = ref("");
       placeholder="00:00:00"
       type="text"
       v-model="inputValue"
-      v-mask="'##:##:##'"
+      v-maska="'##:##:##'"
       maxlength="8"
     />
     <p
@@ -26,11 +26,11 @@ const inputValue = ref("");
       Built with
       <a
         class="hover:text-foreground underline"
-        href="https://vuejs-tips.github.io/vue-the-mask"
+        href="https://beholdr.github.io/maska/v3/#/vue"
         target="_blank"
         rel="noopener nofollow"
       >
-        vue-the-mask
+        maska
       </a>
     </p>
   </div>

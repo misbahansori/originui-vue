@@ -2,8 +2,8 @@
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
 import { LucideCreditCard } from "lucide-vue-next";
+import { vMaska } from "maska/vue";
 import { ref } from "vue";
-import { mask as vMask } from "vue-the-mask";
 
 const cardNumber = ref("");
 </script>
@@ -18,7 +18,7 @@ const cardNumber = ref("");
         class="peer ps-9 [direction:inherit]"
         placeholder="0000 0000 0000 0000"
         maxlength="19"
-        v-mask="'#### #### #### ####'"
+        v-maska="'#### #### #### ####'"
       />
       <div
         class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50"
@@ -34,11 +34,11 @@ const cardNumber = ref("");
       Built with
       <a
         class="hover:text-foreground underline"
-        href="https://vuejs-tips.github.io/vue-the-mask"
+        href="https://beholdr.github.io/maska/v3/#/vue"
         target="_blank"
         rel="noopener nofollow"
       >
-        vue-the-mask
+        maska
       </a>
     </p>
   </div>
