@@ -45,6 +45,7 @@ const styleClasses = computed(() => {
         props.isSearchPage
           ? 'col-span-12 grid grid-cols-12'
           : cn(getColSpanClasses(), styleClasses),
+        props.class,
       )
     "
   >

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { LucideLoader } from "lucide-vue-next";
+
 const route = useRoute();
 const componentSlug = route.params.component as string;
 
@@ -12,15 +14,25 @@ if (!component) {
 }
 </script>
 <template>
-  <div>
-    <div
-      class="-m-px grid grid-cols-4 *:px-1 *:py-12 *:not-first:-ms-px *:not-first:-mt-px sm:*:px-8"
+  <PageGrid>
+    <ComponentCard
+      :key="component.name"
+      :component="component"
+      isSearchPage
+      class="border-none"
     >
-      <ComponentCard :key="component.name" :component="component">
-        <ComponentLoader :component="component" />
+      <Suspense>
+        <template #default>
+          <ComponentLoader :component="component" />
+        </template>
+        <template #fallback>
+          <div class="flex items-center justify-center p-4">
+            <LucideLoader class="mx-auto size-4 animate-spin" />
+          </div>
+        </template>
+      </Suspense>
 
-        <ComponentDetails :component="component" />
-      </ComponentCard>
-    </div>
-  </div>
+      <ComponentDetails :component="component" />
+    </ComponentCard>
+  </PageGrid>
 </template>
