@@ -911,6 +911,28 @@
       ]
     },
     {
+      "name": "date-field",
+      "type": "registry:ui",
+      "dependencies": ["reka-ui"],
+      "files": [
+        {
+          "target": "",
+          "path": "app/registry/default/ui/date-field/DateField.vue",
+          "type": "registry:ui"
+        },
+        {
+          "target": "",
+          "path": "app/registry/default/ui/date-field/DateFieldInput.vue",
+          "type": "registry:ui"
+        },
+        {
+          "target": "",
+          "path": "app/registry/default/ui/date-field/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "pagination",
       "type": "registry:ui",
       "dependencies": ["reka-ui"],
@@ -2274,7 +2296,10 @@
       "name": "comp-36",
       "type": "registry:component",
       "dependencies": ["reka-ui"],
-      "registryDependencies": ["https://originui-vue.com/r/label.json"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/date-field.json"
+      ],
       "files": [
         {
           "target": "",
@@ -2337,7 +2362,10 @@
     {
       "name": "comp-40",
       "type": "registry:component",
-      "registryDependencies": ["https://originui-vue.com/r/label.json"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/date-field.json"
+      ],
       "files": [
         {
           "target": "",
