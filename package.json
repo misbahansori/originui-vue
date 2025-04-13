@@ -9,7 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "start": "node .output/server/index.mjs",
-    "registry:build": "shadcn-vue build",
+    "registry:build": "shadcn-vue build && node scripts/update-registry-paths.js",
     "check-imports": "node scripts/check-imports.js",
     "update-registry-paths": "node scripts/update-registry-paths.js"
   },
