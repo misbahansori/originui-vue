@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { cn } from "@/lib/utils";
 import { NumberFieldInput } from "reka-ui";
 import type { HTMLAttributes } from "vue";
+import { cn } from "~/lib/utils";
 
 const props = defineProps<{
   class?: HTMLAttributes["class"];
@@ -13,7 +13,7 @@ const props = defineProps<{
     data-slot="input"
     :class="
       cn(
-        'border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border py-2 text-center text-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50',
+        'bg-background text-foreground flex-1 px-3 py-2 tabular-nums focus:outline-none',
         props.class,
       )
     "

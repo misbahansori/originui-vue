@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { cn } from "@/lib/utils";
 import { Plus } from "lucide-vue-next";
 import type { NumberFieldIncrementProps } from "reka-ui";
 import { NumberFieldIncrement, useForwardProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
+import { cn } from "~/lib/utils";
 
 const props = defineProps<
   NumberFieldIncrementProps & { class?: HTMLAttributes["class"] }
@@ -24,7 +24,7 @@ const forwarded = useForwardProps(delegatedProps);
     v-bind="forwarded"
     :class="
       cn(
-        'absolute top-1/2 right-0 -translate-y-1/2 p-3 disabled:cursor-not-allowed disabled:opacity-20',
+        'border-input bg-background text-muted-foreground/80 hover:bg-accent hover:text-foreground -me-px flex aspect-square h-[inherit] items-center justify-center rounded-e-md border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50',
         props.class,
       )
     "

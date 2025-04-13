@@ -10,11 +10,11 @@
     "prefix": ""
   },
   "aliases": {
-    "components": "~/components",
-    "composables": "~/composables",
-    "utils": "~/utils/utils",
-    "ui": "~/components/ui",
-    "lib": "~/utils"
+    "components": "~/registry/default/components",
+    "composables": "~/registry/default/composables",
+    "utils": "~/lib/utils",
+    "ui": "~/registry/default/components/ui",
+    "lib": "~/lib"
   },
   "iconLibrary": "lucide"
 }
