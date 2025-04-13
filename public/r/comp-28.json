@@ -4,7 +4,8 @@
   "type": "registry:component",
   "dependencies": ["lucide-vue-next", "reka-ui"],
   "registryDependencies": [
-    "https://originui-vue.com/r/label.json"
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/number-field.json"
   ],
   "files": [
     {
