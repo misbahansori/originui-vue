@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
+import { TimeField, TimeFieldInput } from "@/registry/default/ui/time-field";
 import { LucideClock } from "lucide-vue-next";
 import { ref, useId } from "vue";
-import { TimeField, TimeFieldInput } from "~/registry/default/ui/time-field";
 
 const id = useId();
 const time = ref("");
