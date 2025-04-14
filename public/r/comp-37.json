@@ -4,12 +4,13 @@
   "type": "registry:component",
   "dependencies": ["reka-ui"],
   "registryDependencies": [
-    "https://originui-vue.com/r/label.json"
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/time-field.json"
   ],
   "files": [
     {
       "path": "components/comp-37.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { TimeFieldInput, TimeFieldRoot } from \"reka-ui\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst time = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\" class=\"text-foreground text-sm font-medium\">\n      Time input\n    </Label>\n    <TimeFieldRoot\n      :id=\"id\"\n      v-slot=\"{ segments }\"\n      class=\"border-input bg-background text-foreground focus-within:border-ring focus-within:ring-ring/50 flex h-9 items-center rounded-md border px-3 shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px]\"\n    >\n      <template v-for=\"item in segments\" :key=\"item.part\">\n        <TimeFieldInput\n          v-if=\"item.part === 'literal'\"\n          :part=\"item.part\"\n          class=\"text-muted-foreground/70\"\n        >\n          {{ item.value }}\n        </TimeFieldInput>\n        <TimeFieldInput\n          v-else\n          :part=\"item.part\"\n          class=\"data-[placeholder]:text-muted-foreground/70 focus:bg-muted rounded p-0.5 text-sm focus:shadow-black focus:outline-none\"\n        >\n          {{ item.value }}\n        </TimeFieldInput>\n      </template>\n    </TimeFieldRoot>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with reka-ui\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/docs/components/time-field\"\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n      >\n        TimeField\n      </a>\n    </p>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { TimeField, TimeFieldInput } from \"@/registry/default/ui/time-field\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst time = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\" class=\"text-foreground text-sm font-medium\">\n      Time input\n    </Label>\n    <TimeField :id=\"id\" v-slot=\"{ segments }\">\n      <TimeFieldInput v-for=\"item in segments\" :part=\"item.part\">\n        {{ item.value }}\n      </TimeFieldInput>\n    </TimeField>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with reka-ui\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/docs/components/time-field\"\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n      >\n        TimeField\n      </a>\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }

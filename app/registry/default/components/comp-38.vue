@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
+import { TimeField, TimeFieldInput } from "@/registry/default/ui/time-field";
 import { LucideClock } from "lucide-vue-next";
-import { TimeFieldInput, TimeFieldRoot } from "reka-ui";
 import { ref, useId } from "vue";
 
 const id = useId();
@@ -19,28 +19,11 @@ const time = ref("");
       >
         <LucideClock :size="16" aria-hidden="true" />
       </div>
-      <TimeFieldRoot
-        :id="id"
-        v-slot="{ segments }"
-        class="border-input bg-background text-foreground focus-within:border-ring focus-within:ring-ring/50 flex h-9 items-center rounded-md border px-3 ps-9 shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px]"
-      >
-        <template v-for="item in segments" :key="item.part">
-          <TimeFieldInput
-            v-if="item.part === 'literal'"
-            :part="item.part"
-            class="text-muted-foreground/70"
-          >
-            {{ item.value }}
-          </TimeFieldInput>
-          <TimeFieldInput
-            v-else
-            :part="item.part"
-            class="data-[placeholder]:text-muted-foreground/70 focus:bg-muted rounded p-0.5 text-sm focus:shadow-black focus:outline-none"
-          >
-            {{ item.value }}
-          </TimeFieldInput>
-        </template>
-      </TimeFieldRoot>
+      <TimeField :id="id" v-slot="{ segments }" class="ps-9">
+        <TimeFieldInput v-for="item in segments" :part="item.part">
+          {{ item.value }}
+        </TimeFieldInput>
+      </TimeField>
     </div>
     <p
       class="text-muted-foreground mt-2 text-xs"

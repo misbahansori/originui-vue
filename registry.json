@@ -933,6 +933,28 @@
       ]
     },
     {
+      "name": "time-field",
+      "type": "registry:ui",
+      "dependencies": ["reka-ui"],
+      "files": [
+        {
+          "target": "",
+          "path": "app/registry/default/ui/time-field/TimeField.vue",
+          "type": "registry:ui"
+        },
+        {
+          "target": "",
+          "path": "app/registry/default/ui/time-field/TimeFieldInput.vue",
+          "type": "registry:ui"
+        },
+        {
+          "target": "",
+          "path": "app/registry/default/ui/time-field/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "pagination",
       "type": "registry:ui",
       "dependencies": ["reka-ui"],
@@ -2315,7 +2337,10 @@
       "name": "comp-37",
       "type": "registry:component",
       "dependencies": ["reka-ui"],
-      "registryDependencies": ["https://originui-vue.com/r/label.json"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/time-field.json"
+      ],
       "files": [
         {
           "target": "",
@@ -2331,7 +2356,10 @@
       "name": "comp-38",
       "type": "registry:component",
       "dependencies": ["lucide-vue-next", "reka-ui"],
-      "registryDependencies": ["https://originui-vue.com/r/label.json"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/time-field.json"
+      ],
       "files": [
         {
           "target": "",
@@ -2347,7 +2375,10 @@
       "name": "comp-39",
       "type": "registry:component",
       "dependencies": ["lucide-vue-next", "reka-ui"],
-      "registryDependencies": ["https://originui-vue.com/r/label.json"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/time-field.json"
+      ],
       "files": [
         {
           "target": "",
