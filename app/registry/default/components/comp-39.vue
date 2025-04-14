@@ -11,7 +11,7 @@ const time = ref("");
 <template>
   <div class="*:not-first:mt-2">
     <Label :for="id" class="text-foreground text-sm font-medium">
-      Time input with start icon
+      Time input with end icon
     </Label>
     <div class="relative">
       <div
