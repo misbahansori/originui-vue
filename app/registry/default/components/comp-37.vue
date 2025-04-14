@@ -13,11 +13,9 @@ const time = ref("");
       Time input
     </Label>
     <TimeField :id="id" v-slot="{ segments }">
-      <template v-for="item in segments" :key="item.part">
-        <TimeFieldInput :part="item.part">
-          {{ item.value }}
-        </TimeFieldInput>
-      </template>
+      <TimeFieldInput v-for="item in segments" :part="item.part">
+        {{ item.value }}
+      </TimeFieldInput>
     </TimeField>
     <p
       class="text-muted-foreground mt-2 text-xs"
