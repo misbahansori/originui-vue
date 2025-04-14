@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { cn } from "@/lib/utils";
 import type { RegistryItem } from "shadcn/registry";
 import { codeToHtml } from "shiki";
 import { MagicString } from "vue/compiler-sfc";
-import { cn } from "~/lib/utils";
 import { buttonVariants } from "~/registry/default/ui/button";
 
 const props = defineProps<{
