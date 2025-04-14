@@ -1,0 +1,26 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "time-field",
+  "type": "registry:ui",
+  "dependencies": ["reka-ui"],
+  "files": [
+    {
+      "path": "ui/time-field/TimeField.vue",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport {\n  TimeFieldRoot,\n  useForwardPropsEmits,\n  type TimeFieldRootEmits,\n  type TimeFieldRootProps,\n} from \"reka-ui\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  TimeFieldRootProps & {\n    class?: HTMLAttributes[\"class\"];\n  }\n>();\n\nconst emits = defineEmits<TimeFieldRootEmits>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwarded = useForwardPropsEmits(delegatedProps, emits);\n</script>\n<template>\n  <TimeFieldRoot\n    v-bind=\"forwarded\"\n    v-slot=\"slotProps\"\n    :class=\"\n      cn(\n        'border-input bg-background text-foreground focus-within:border-ring focus-within:ring-ring/50 flex h-9 items-center rounded-md border px-3 shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px]',\n        props.class,\n      )\n    \"\n  >\n    <slot v-bind=\"slotProps\" />\n  </TimeFieldRoot>\n</template>\n",
+      "type": "registry:ui",
+      "target": ""
+    },
+    {
+      "path": "ui/time-field/TimeFieldInput.vue",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport {\n  TimeFieldInput,\n  useForwardProps,\n  type TimeFieldInputProps,\n} from \"reka-ui\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  TimeFieldInputProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n\nconst forwarded = useForwardProps(delegatedProps);\n</script>\n<template>\n  <TimeFieldInput\n    v-bind=\"forwarded\"\n    :class=\"\n      cn(\n        props.part === 'literal'\n          ? 'text-muted-foreground/70'\n          : 'data-[placeholder]:text-muted-foreground/70 focus:bg-muted rounded p-0.5 text-sm focus:shadow-black focus:outline-none',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </TimeFieldInput>\n</template>\n",
+      "type": "registry:ui",
+      "target": ""
+    },
+    {
+      "path": "ui/time-field/index.ts",
+      "content": "export { default as TimeField } from \"./TimeField.vue\";\nexport { default as TimeFieldInput } from \"./TimeFieldInput.vue\";\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}
