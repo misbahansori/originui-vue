@@ -1,4 +1,4 @@
-import { ref, reactive, watch, type Ref } from "vue";
+import { ref, watch, type Ref } from "vue";
 
 export type FileMetadata = {
   name: string;
@@ -61,15 +61,15 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
     onFilesChange,
   } = options;
 
-  const state = reactive<FileUploadState>({
-    files: initialFiles.map((file) => ({
+  const files = ref<FileWithPreview[]>(
+    initialFiles.map((file) => ({
       file,
       id: file.id,
       preview: file.url,
     })),
-    isDragging: false,
-    errors: [],
-  });
+  );
+  const isDragging = ref(false);
+  const errors = ref<string[]>([]);
 
   const inputRef = ref<HTMLInputElement | null>(null);
 
@@ -124,7 +124,7 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
 
   const clearFiles = () => {
     // Clean up object URLs
-    state.files.forEach((file) => {
+    files.value.forEach((file) => {
       if (
         file.preview &&
         file.file instanceof File &&
@@ -138,19 +138,19 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
       inputRef.value.value = "";
     }
 
-    state.files = [];
-    state.errors = [];
-    onFilesChange?.(state.files);
+    files.value = [];
+    errors.value = [];
+    onFilesChange?.(files.value);
   };
 
   const addFiles = (newFiles: FileList | File[]) => {
     if (!newFiles || newFiles.length === 0) return;
 
     const newFilesArray = Array.from(newFiles);
-    const errors: string[] = [];
+    const newErrors: string[] = [];
 
     // Clear existing errors when new files are uploaded
-    state.errors = [];
+    errors.value = [];
 
     // In single file mode, clear existing files first
     if (!multiple) {
@@ -161,10 +161,10 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
     if (
       multiple &&
       maxFiles !== Infinity &&
-      state.files.length + newFilesArray.length > maxFiles
+      files.value.length + newFilesArray.length > maxFiles
     ) {
-      errors.push(`You can only upload a maximum of ${maxFiles} files.`);
-      state.errors = errors;
+      newErrors.push(`You can only upload a maximum of ${maxFiles} files.`);
+      errors.value = newErrors;
       return;
     }
 
@@ -172,7 +172,7 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
 
     newFilesArray.forEach((file) => {
       // Check for duplicates
-      const isDuplicate = state.files.some(
+      const isDuplicate = files.value.some(
         (existingFile) =>
           existingFile.file.name === file.name &&
           existingFile.file.size === file.size,
@@ -185,7 +185,7 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
 
       // Check file size
       if (file.size > maxSize) {
-        errors.push(
+        newErrors.push(
           multiple
             ? `Some files exceed the maximum size of ${formatBytes(maxSize)}.`
             : `File exceeds the maximum size of ${formatBytes(maxSize)}.`,
@@ -195,7 +195,7 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
 
       const error = validateFile(file);
       if (error) {
-        errors.push(error);
+        newErrors.push(error);
       } else {
         validFiles.push({
           file,
@@ -207,11 +207,11 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
 
     // Only update state if we have valid files to add
     if (validFiles.length > 0) {
-      state.files = !multiple ? validFiles : [...state.files, ...validFiles];
-      state.errors = errors;
-      onFilesChange?.(state.files);
-    } else if (errors.length > 0) {
-      state.errors = errors;
+      files.value = !multiple ? validFiles : [...files.value, ...validFiles];
+      errors.value = newErrors;
+      onFilesChange?.(files.value);
+    } else if (newErrors.length > 0) {
+      errors.value = newErrors;
     }
 
     // Reset input value after handling files
@@ -220,8 +220,10 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
     }
   };
 
-  const removeFile = (id: string) => {
-    const fileToRemove = state.files.find((file) => file.id === id);
+  const removeFile = (id: string | undefined) => {
+    if (!id) return;
+
+    const fileToRemove = files.value.find((file) => file.id === id);
     if (
       fileToRemove &&
       fileToRemove.preview &&
@@ -231,19 +233,19 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
       URL.revokeObjectURL(fileToRemove.preview);
     }
 
-    state.files = state.files.filter((file) => file.id !== id);
-    state.errors = [];
-    onFilesChange?.(state.files);
+    files.value = files.value.filter((file) => file.id !== id);
+    errors.value = [];
+    onFilesChange?.(files.value);
   };
 
   const clearErrors = () => {
-    state.errors = [];
+    errors.value = [];
   };
 
   const handleDragEnter = (e: DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    state.isDragging = true;
+    isDragging.value = true;
   };
 
   const handleDragLeave = (e: DragEvent) => {
@@ -258,7 +260,7 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
       return;
     }
 
-    state.isDragging = false;
+    isDragging.value = false;
   };
 
   const handleDragOver = (e: DragEvent) => {
@@ -269,7 +271,7 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
   const handleDrop = (e: DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    state.isDragging = false;
+    isDragging.value = false;
 
     // Don't process files if the input is disabled
     if (inputRef.value?.disabled) {
@@ -316,7 +318,7 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
 
   // Watch for changes in files and call onFilesChange if provided
   watch(
-    () => state.files,
+    files,
     (newFiles) => {
       onFilesChange?.(newFiles);
     },
@@ -324,7 +326,9 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
   );
 
   return {
-    state,
+    files,
+    isDragging,
+    errors,
     addFiles,
     removeFile,
     clearFiles,

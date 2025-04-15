@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { LucideAlertCircle, LucideImageUp, LucideX } from "lucide-vue-next";
 import { useFileUpload } from "@/composables/useFileUpload";
+import { LucideAlertCircle, LucideImageUp, LucideX } from "lucide-vue-next";
+import { computed } from "vue";
 
 const maxSizeMB = 5;
 const maxSize = maxSizeMB * 1024 * 1024; // 5MB default
 
 const {
-  state: { files, isDragging, errors },
+  files,
+  isDragging,
+  errors,
   handleDragEnter,
   handleDragLeave,
   handleDragOver,
@@ -20,7 +22,12 @@ const {
   maxSize,
 });
 
-const previewUrl = ref(files.value?.[0]?.preview || null);
+const previewUrl = computed(() => files.value?.[0]?.preview || null);
+const currentFile = computed(() => files.value?.[0]);
+const currentFileId = computed(() => currentFile.value?.id);
+const currentFileName = computed(
+  () => currentFile.value?.file?.name || "Uploaded image",
+);
 </script>
 
 <template>
@@ -41,7 +48,7 @@ const previewUrl = ref(files.value?.[0]?.preview || null);
         <div v-if="previewUrl" class="absolute inset-0">
           <img
             :src="previewUrl"
-            :alt="files[0]?.file?.name || 'Uploaded image'"
+            :alt="currentFileName"
             class="size-full object-cover"
           />
         </div>
@@ -67,7 +74,7 @@ const previewUrl = ref(files.value?.[0]?.preview || null);
         <button
           type="button"
           class="focus-visible:border-ring focus-visible:ring-ring/50 z-50 flex size-8 cursor-pointer items-center justify-center rounded-full bg-black/60 text-white transition-[color,box-shadow] outline-none hover:bg-black/80 focus-visible:ring-[3px]"
-          @click="removeFile(files[0]?.id)"
+          @click="removeFile(currentFileId)"
           aria-label="Remove image"
         >
           <LucideX class="size-4" aria-hidden="true" />
