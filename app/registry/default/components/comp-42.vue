@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import {
+  DateRangePicker,
+  DateRangePickerField,
+  DateRangePickerInput,
+} from "@/registry/default/ui/date-range-picker";
 import { Label } from "@/registry/default/ui/label";
 import { ref, useId } from "vue";
 
@@ -14,25 +19,31 @@ const endDate = ref("");
     <Label :for="startId" class="text-foreground text-sm font-medium">
       Date range picker
     </Label>
-    <div class="relative">
-      <div
-        class="border-input bg-background text-foreground focus-within:border-ring focus-within:ring-ring/50 flex h-9 items-center rounded-md border px-3 shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px]"
-      >
-        <input
-          :id="startId"
-          v-model="startDate"
-          type="date"
-          class="w-full bg-transparent text-sm focus:outline-none"
-        />
+    <DateRangePicker :id="startId" :end-id="endId">
+      <DateRangePickerField v-slot="{ segments }">
+        <DateRangePickerInput
+          v-for="item in segments.start"
+          type="start"
+          :key="item.part"
+          :part="item.part"
+        >
+          {{ item.value }}
+        </DateRangePickerInput>
         <span aria-hidden="true" class="text-muted-foreground/70 px-2">-</span>
-        <input
-          :id="endId"
-          v-model="endDate"
-          type="date"
-          class="w-full bg-transparent text-sm focus:outline-none"
-        />
-      </div>
-    </div>
+        <DateRangePickerInput
+          v-for="item in segments.end"
+          type="end"
+          :key="item.part"
+          :part="item.part"
+        >
+          {{ item.value }}
+        </DateRangePickerInput>
+        <DateRangePickerTrigger />
+      </DateRangePickerField>
+
+      <DateRangePickerCalendar />
+    </DateRangePicker>
+
     <p
       class="text-muted-foreground mt-2 text-xs"
       role="region"
