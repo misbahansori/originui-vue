@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useFileUpload } from "@/composables/useFileUpload";
+import { Button } from "@/registry/default/ui/button";
 import { LucideCircleUserRound, LucideX } from "lucide-vue-next";
 import { computed } from "vue";
 
@@ -53,15 +54,15 @@ const currentFileName = computed(
           <LucideCircleUserRound class="size-4 opacity-60" />
         </div>
       </div>
-      <button
+      <Button
         v-if="previewUrl"
-        type="button"
         @click="removeFile(currentFile?.id)"
+        size="icon"
         class="border-background focus-visible:border-background absolute -top-1 -right-1 size-6 rounded-full border-2 shadow-none"
         aria-label="Remove image"
       >
         <LucideX class="size-3.5" />
-      </button>
+      </Button>
     </div>
     <p
       aria-live="polite"
