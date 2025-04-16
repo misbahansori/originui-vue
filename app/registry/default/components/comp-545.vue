@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useFileUpload } from "@/composables/useFileUpload";
+import { Button } from "@/registry/default/ui/button";
 import {
   LucideAlertCircle,
   LucideImage,
@@ -27,11 +28,7 @@ const {
   maxSize,
 });
 
-const previewUrl = computed(() => files.value?.[0]?.preview || null);
 const currentFile = computed(() => files.value?.[0]);
-const currentFileName = computed(
-  () => currentFile.value?.file?.name || "Uploaded image",
-);
 </script>
 
 <template>
@@ -48,12 +45,12 @@ const currentFileName = computed(
       >
         <input v-bind="getInputProps()" aria-label="Upload image file" />
         <div
-          v-if="previewUrl"
+          v-if="currentFile"
           class="absolute inset-0 flex items-center justify-center p-4"
         >
           <img
-            :src="previewUrl"
-            :alt="currentFileName"
+            :src="currentFile.preview"
+            :alt="currentFile.file.name"
             class="mx-auto max-h-full rounded object-contain"
           />
         </div>
@@ -78,11 +75,11 @@ const currentFileName = computed(
         </div>
       </div>
 
-      <div v-if="previewUrl" class="absolute top-4 right-4">
+      <div v-if="currentFile" class="absolute top-3 right-3">
         <button
           type="button"
           class="focus-visible:border-ring focus-visible:ring-ring/50 z-50 flex size-8 cursor-pointer items-center justify-center rounded-full bg-black/60 text-white transition-[color,box-shadow] outline-none hover:bg-black/80 focus-visible:ring-[3px]"
-          @click="removeFile(currentFile?.id)"
+          @click="removeFile(currentFile.id)"
           aria-label="Remove image"
         >
           <LucideX class="size-4" aria-hidden="true" />

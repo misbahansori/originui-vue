@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useFileUpload } from "@/composables/useFileUpload";
+import { Button } from "@/registry/default/ui/button";
 import {
   LucideAlertCircle,
   LucideImage,
@@ -105,14 +106,14 @@ const {
               :alt="file.file.name"
               class="size-full rounded-[inherit] object-cover"
             />
-            <button
-              type="button"
+            <Button
               @click="removeFile(file.id)"
+              size="icon"
               class="border-background focus-visible:border-background absolute -top-2 -right-2 size-6 rounded-full border-2 shadow-none"
               aria-label="Remove image"
             >
               <LucideX class="size-3.5" />
-            </button>
+            </Button>
           </div>
         </div>
       </div>
