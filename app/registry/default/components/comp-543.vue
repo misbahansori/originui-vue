@@ -18,11 +18,7 @@ const {
   accept: "image/*",
 });
 
-const previewUrl = computed(() => files.value?.[0]?.preview || null);
 const currentFile = computed(() => files.value?.[0]);
-const currentFileName = computed(
-  () => currentFile.value?.file?.name || "Uploaded image",
-);
 </script>
 
 <template>
@@ -37,14 +33,14 @@ const currentFileName = computed(
         @dragover="handleDragOver"
         @drop="handleDrop"
         :data-dragging="isDragging || undefined"
-        :aria-label="previewUrl ? 'Change image' : 'Upload image'"
+        :aria-label="currentFile ? 'Change image' : 'Upload image'"
         class="border-input hover:bg-accent/50 data-[dragging=true]:bg-accent/50 has-[input:focus]:border-ring has-[input:focus]:ring-ring/50 relative flex size-16 items-center justify-center overflow-hidden rounded-full border border-dashed transition-colors has-disabled:pointer-events-none has-disabled:opacity-50 has-[img]:border-none has-[input:focus]:ring-[3px]"
       >
         <input v-bind="getInputProps()" aria-label="Upload image file" />
         <img
-          v-if="previewUrl"
-          :src="previewUrl"
-          :alt="currentFileName"
+          v-if="currentFile"
+          :src="currentFile.preview"
+          :alt="currentFile.file.name"
           class="size-full object-cover"
           width="64"
           height="64"
@@ -55,8 +51,8 @@ const currentFileName = computed(
         </div>
       </div>
       <Button
-        v-if="previewUrl"
-        @click="removeFile(currentFile?.id)"
+        v-if="currentFile"
+        @click="removeFile(currentFile.id)"
         size="icon"
         class="border-background focus-visible:border-background absolute -top-1 -right-1 size-6 rounded-full border-2 shadow-none"
         aria-label="Remove image"
