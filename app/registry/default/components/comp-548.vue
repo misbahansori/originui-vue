@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { formatBytes, useFileUpload } from "@/composables/useFileUpload";
+import { Button } from "@/registry/default/ui/button";
 import {
   LucideAlertCircle,
   LucidePaperclip,
@@ -97,14 +98,15 @@ const currentFile = computed(() => files.value[0]);
           </div>
         </div>
 
-        <button
-          type="button"
+        <Button
+          size="icon"
+          variant="ghost"
           class="text-muted-foreground/80 hover:text-foreground -me-2 size-8 hover:bg-transparent"
           @click="removeFile(currentFile.id)"
           aria-label="Remove file"
         >
           <LucideX class="size-4" aria-hidden="true" />
-        </button>
+        </Button>
       </div>
     </div>
 

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { formatBytes, useFileUpload } from "@/composables/useFileUpload";
+import { Button } from "@/registry/default/ui/button";
 import {
   LucideAlertCircle,
   LucideFile,
@@ -165,25 +166,22 @@ const {
           </div>
         </div>
 
-        <button
-          type="button"
+        <Button
+          size="icon"
+          variant="ghost"
           class="text-muted-foreground/80 hover:text-foreground -me-2 size-8 hover:bg-transparent"
           @click="removeFile(file.id)"
           aria-label="Remove file"
         >
           <LucideX class="size-4" aria-hidden="true" />
-        </button>
+        </Button>
       </div>
 
       <!-- Remove all files button -->
       <div v-if="files.length > 1">
-        <button
-          type="button"
-          class="border-input bg-background ring-offset-background hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring inline-flex h-8 items-center justify-center rounded-md border px-2.5 text-xs font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
-          @click="clearFiles"
-        >
+        <Button size="sm" variant="outline" @click="clearFiles">
           Remove all files
-        </button>
+        </Button>
       </div>
     </div>
 
