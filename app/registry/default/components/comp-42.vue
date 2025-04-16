@@ -1,17 +1,16 @@
 <script setup lang="ts">
 import {
   DateRangePicker,
+  DateRangePickerCalendar,
   DateRangePickerField,
   DateRangePickerInput,
+  DateRangePickerTrigger,
 } from "@/registry/default/ui/date-range-picker";
 import { Label } from "@/registry/default/ui/label";
-import { ref, useId } from "vue";
+import { useId } from "vue";
 
 const startId = useId();
 const endId = useId();
-
-const startDate = ref("");
-const endDate = ref("");
 </script>
 
 <template>

@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import {
   DateRangePicker,
+  DateRangePickerCalendar,
   DateRangePickerField,
   DateRangePickerInput,
+  DateRangePickerTrigger,
 } from "@/registry/default/ui/date-range-picker";
 import { Label } from "@/registry/default/ui/label";
 import {
@@ -10,16 +12,10 @@ import {
   today,
   type DateValue,
 } from "@internationalized/date";
-import type { DateRange } from "reka-ui";
-import { ref, useId } from "vue";
+import { useId } from "vue";
 
 const startId = useId();
 const endId = useId();
-
-const dateRange = ref<DateRange>({
-  start: today(getLocalTimeZone()),
-  end: today(getLocalTimeZone()).add({ days: 20 }),
-});
 
 const now = today(getLocalTimeZone());
 
