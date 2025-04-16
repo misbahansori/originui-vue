@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { formatBytes, useFileUpload } from "@/composables/useFileUpload";
+import { Button } from "@/registry/default/ui/button";
+import { Table } from "@/registry/default/ui/table";
 import {
   LucideAlertCircle,
   LucideDownload,
@@ -126,14 +128,15 @@ const handleDownload = (url: string | undefined) => {
         <p class="text-muted-foreground text-xs">
           Max {{ maxFiles }} files ∙ Up to {{ maxSize }}MB
         </p>
-        <button
-          type="button"
-          class="border-input bg-background ring-offset-background hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring mt-4 inline-flex h-8 items-center justify-center rounded-md border px-2.5 text-xs font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+        <Button
+          size="sm"
+          variant="outline"
           @click="openFileDialog"
+          class="mt-4"
         >
           <LucideFileUp class="-ms-1 opacity-60" aria-hidden="true" />
           Select files
-        </button>
+        </Button>
       </div>
     </div>
 
@@ -142,45 +145,37 @@ const handleDownload = (url: string | undefined) => {
       <div class="flex items-center justify-between gap-2">
         <h3 class="text-sm font-medium">Files ({{ files.length }})</h3>
         <div class="flex gap-2">
-          <button
-            type="button"
-            class="border-input bg-background ring-offset-background hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring inline-flex h-8 items-center justify-center rounded-md border px-2.5 text-xs font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
-            @click="openFileDialog"
-          >
+          <Button size="sm" variant="outline" @click="openFileDialog">
             <LucideFileUp
               class="-ms-0.5 size-3.5 opacity-60"
               aria-hidden="true"
             />
             Add files
-          </button>
-          <button
-            type="button"
-            class="border-input bg-background ring-offset-background hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring inline-flex h-8 items-center justify-center rounded-md border px-2.5 text-xs font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
-            @click="clearFiles"
-          >
+          </Button>
+          <Button size="sm" variant="outline" @click="clearFiles">
             <LucideTrash2
               class="-ms-0.5 size-3.5 opacity-60"
               aria-hidden="true"
             />
             Remove all
-          </button>
+          </Button>
         </div>
       </div>
 
       <!-- Table -->
       <div class="bg-background overflow-hidden rounded-md border">
-        <table class="w-full">
-          <thead class="text-xs">
-            <tr class="bg-muted/50">
-              <th class="h-9 py-2 text-left">Name</th>
-              <th class="h-9 py-2 text-left">Type</th>
-              <th class="h-9 py-2 text-left">Size</th>
-              <th class="h-9 w-0 py-2 text-right">Actions</th>
-            </tr>
-          </thead>
-          <tbody class="text-[13px]">
-            <tr v-for="file in files" :key="file.id">
-              <td class="max-w-48 py-2 font-medium">
+        <Table class="w-full">
+          <TableHeader class="text-xs">
+            <TableRow class="bg-muted/50">
+              <TableHead class="h-9 py-2 text-left">Name</TableHead>
+              <TableHead class="h-9 py-2 text-left">Type</TableHead>
+              <TableHead class="h-9 py-2 text-left">Size</TableHead>
+              <TableHead class="h-9 w-0 py-2 text-right">Actions</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody class="text-[13px]">
+            <TableRow v-for="file in files" :key="file.id">
+              <TableCell class="max-w-48 py-2 font-medium">
                 <span class="flex items-center gap-2">
                   <span class="shrink-0">
                     <component
@@ -190,34 +185,36 @@ const handleDownload = (url: string | undefined) => {
                   </span>
                   <span class="truncate">{{ file.file.name }}</span>
                 </span>
-              </td>
-              <td class="text-muted-foreground py-2">
+              </TableCell>
+              <TableCell class="text-muted-foreground py-2">
                 {{ file.file.type.split("/")[1]?.toUpperCase() || "UNKNOWN" }}
-              </td>
-              <td class="text-muted-foreground py-2">
+              </TableCell>
+              <TableCell class="text-muted-foreground py-2">
                 {{ formatBytes(file.file.size) }}
-              </td>
-              <td class="py-2 text-right whitespace-nowrap">
-                <button
-                  type="button"
+              </TableCell>
+              <TableCell class="py-2 text-right whitespace-nowrap">
+                <Button
+                  size="icon"
+                  variant="ghost"
                   class="text-muted-foreground/80 hover:text-foreground size-8 hover:bg-transparent"
                   aria-label="Download file"
                   @click="handleDownload(file.preview)"
                 >
                   <LucideDownload class="size-4" />
-                </button>
-                <button
-                  type="button"
+                </Button>
+                <Button
+                  size="icon"
+                  variant="ghost"
                   class="text-muted-foreground/80 hover:text-foreground size-8 hover:bg-transparent"
                   aria-label="Remove file"
                   @click="removeFile(file.id)"
                 >
                   <LucideTrash2 class="size-4" />
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                </Button>
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
       </div>
     </div>
 

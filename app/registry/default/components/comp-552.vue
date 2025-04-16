@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { formatBytes, useFileUpload } from "@/composables/useFileUpload";
+import { Button } from "@/registry/default/ui/button";
 import {
   LucideAlertCircle,
   LucideFile,
@@ -160,28 +161,20 @@ const {
             Files ({{ files.length }})
           </h3>
           <div class="flex gap-2">
-            <button
-              type="button"
-              class="border-input bg-background ring-offset-background hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring inline-flex h-8 items-center justify-center rounded-md border px-2.5 text-xs font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
-              @click="openFileDialog"
-            >
+            <Button size="sm" variant="outline" @click="openFileDialog">
               <LucideFileUp
                 class="-ms-0.5 size-3.5 opacity-60"
                 aria-hidden="true"
               />
               Add files
-            </button>
-            <button
-              type="button"
-              class="border-input bg-background ring-offset-background hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring inline-flex h-8 items-center justify-center rounded-md border px-2.5 text-xs font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
-              @click="clearFiles"
-            >
+            </Button>
+            <Button size="sm" variant="outline" @click="clearFiles">
               <LucideTrash2
                 class="-ms-0.5 size-3.5 opacity-60"
                 aria-hidden="true"
               />
               Remove all
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -206,14 +199,14 @@ const {
                 class="size-5 opacity-60"
               />
             </div>
-            <button
-              type="button"
+            <Button
+              size="icon"
               class="border-background focus-visible:border-background absolute -top-2 -right-2 size-6 rounded-full border-2 shadow-none"
               @click="removeFile(file.id)"
               aria-label="Remove file"
             >
               <LucideX class="size-3.5" />
-            </button>
+            </Button>
             <div class="flex min-w-0 flex-col gap-0.5 border-t p-3">
               <p class="truncate text-[13px] font-medium">
                 {{ file.file.name }}
@@ -240,14 +233,15 @@ const {
         <p class="text-muted-foreground text-xs">
           Max {{ maxFiles }} files ∙ Up to {{ maxSizeMB }}MB
         </p>
-        <button
-          type="button"
-          class="border-input bg-background ring-offset-background hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring mt-4 inline-flex h-8 items-center justify-center rounded-md border px-2.5 text-xs font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+        <Button
+          size="sm"
+          variant="outline"
+          class="mt-4"
           @click="openFileDialog"
         >
           <LucideFileUp class="-ms-1 opacity-60" aria-hidden="true" />
           Select images
-        </button>
+        </Button>
       </div>
     </div>
 
