@@ -347,7 +347,6 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
   };
 };
 
-// Helper function to format bytes to human-readable format
 export const formatBytes = (bytes: number, decimals = 2): string => {
   if (bytes === 0) return "0 Bytes";
 
@@ -358,6 +357,6 @@ export const formatBytes = (bytes: number, decimals = 2): string => {
   const i = Math.floor(Math.log(bytes) / Math.log(k));
 
   return (
-    Number.parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i]
+    Number.parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + (sizes[i] || "")
   );
 };

@@ -126,7 +126,7 @@ const handleDownload = (url: string | undefined) => {
         </div>
         <p class="mb-1.5 text-sm font-medium">Upload files</p>
         <p class="text-muted-foreground text-xs">
-          Max {{ maxFiles }} files ∙ Up to {{ maxSize }}MB
+          Max {{ maxFiles }} files ∙ Up to {{ formatBytes(maxSize) }}
         </p>
         <Button
           size="sm"
