@@ -21,6 +21,7 @@ export type FileUploadOptions = {
   multiple?: boolean;
   initialFiles?: FileMetadata[];
   onFilesChange?: (files: FileWithPreview[]) => void;
+  onFilesAdded?: (files: FileWithPreview[]) => void;
 };
 
 export type FileUploadState = {
@@ -59,6 +60,7 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
     multiple = false,
     initialFiles = [],
     onFilesChange,
+    onFilesAdded,
   } = options;
 
   const files = ref<FileWithPreview[]>(
@@ -210,6 +212,7 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
       files.value = !multiple ? validFiles : [...files.value, ...validFiles];
       errors.value = newErrors;
       onFilesChange?.(files.value);
+      onFilesAdded?.(validFiles);
     } else if (newErrors.length > 0) {
       errors.value = newErrors;
     }
@@ -340,6 +343,7 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
     handleFileChange,
     openFileDialog,
     getInputProps,
+    onFilesAdded,
   };
 };
 
