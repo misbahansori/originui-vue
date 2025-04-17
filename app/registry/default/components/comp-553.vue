@@ -16,7 +16,6 @@ import { ref } from "vue";
 
 import { Button } from "@/registry/default/ui/button";
 
-// Create some dummy initial files
 const initialFiles = [
   {
     id: "intro.zip-1744638436563-8u5xuls",
@@ -42,9 +41,6 @@ const initialFiles = [
 ];
 
 const getFileIcon = (file: { file: File | { type: string; name: string } }) => {
-  const fileType = file.file instanceof File ? file.file.type : file.file.type;
-  const fileName = file.file instanceof File ? file.file.name : file.file.name;
-
   const iconMap = {
     pdf: {
       icon: LucideFileText,
@@ -85,7 +81,7 @@ const getFileIcon = (file: { file: File | { type: string; name: string } }) => {
   };
 
   for (const { icon: Icon, conditions } of Object.values(iconMap)) {
-    if (conditions(fileType, fileName)) {
+    if (conditions(file.file.type, file.file.name)) {
       return Icon;
     }
   }
@@ -96,17 +92,14 @@ const getFileIcon = (file: { file: File | { type: string; name: string } }) => {
 const getFilePreview = (file: {
   file: File | { type: string; name: string; url?: string };
 }) => {
-  const fileType = file.file instanceof File ? file.file.type : file.file.type;
-  const fileName = file.file instanceof File ? file.file.name : file.file.name;
-
-  if (fileType.startsWith("image/")) {
+  if (file.file.type.startsWith("image/")) {
     if (file.file instanceof File) {
       const previewUrl = URL.createObjectURL(file.file);
       return {
         type: "img",
         props: {
           src: previewUrl,
-          alt: fileName,
+          alt: file.file.name,
           class: "size-full rounded-t-[inherit] object-cover",
         },
       };
@@ -115,7 +108,7 @@ const getFilePreview = (file: {
         type: "img",
         props: {
           src: file.file.url,
-          alt: fileName,
+          alt: file.file.name,
           class: "size-full rounded-t-[inherit] object-cover",
         },
       };
