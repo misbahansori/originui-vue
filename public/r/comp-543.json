@@ -1,0 +1,13 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "comp-543",
+  "type": "registry:component",
+  "files": [
+    {
+      "path": "components/comp-543.vue",
+      "content": "<script setup lang=\"ts\">\nimport { useFileUpload } from \"@/composables/useFileUpload\";\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideCircleUserRound, LucideX } from \"lucide-vue-next\";\nimport { computed } from \"vue\";\n\nconst {\n  files,\n  isDragging,\n  removeFile,\n  openFileDialog,\n  getInputProps,\n  handleDragEnter,\n  handleDragLeave,\n  handleDragOver,\n  handleDrop,\n} = useFileUpload({\n  accept: \"image/*\",\n});\n\nconst currentFile = computed(() => files.value?.[0]);\n</script>\n\n<template>\n  <div class=\"flex flex-col items-center gap-2\">\n    <div class=\"relative inline-flex\">\n      <!-- Drop area -->\n      <div\n        role=\"button\"\n        @click=\"openFileDialog\"\n        @dragenter=\"handleDragEnter\"\n        @dragleave=\"handleDragLeave\"\n        @dragover=\"handleDragOver\"\n        @drop=\"handleDrop\"\n        :data-dragging=\"isDragging || undefined\"\n        :aria-label=\"currentFile ? 'Change image' : 'Upload image'\"\n        class=\"border-input hover:bg-accent/50 data-[dragging=true]:bg-accent/50 has-[input:focus]:border-ring has-[input:focus]:ring-ring/50 relative flex size-16 items-center justify-center overflow-hidden rounded-full border border-dashed transition-colors has-disabled:pointer-events-none has-disabled:opacity-50 has-[img]:border-none has-[input:focus]:ring-[3px]\"\n      >\n        <input v-bind=\"getInputProps()\" aria-label=\"Upload image file\" />\n        <img\n          v-if=\"currentFile\"\n          :src=\"currentFile.preview\"\n          :alt=\"currentFile.file.name\"\n          class=\"size-full object-cover\"\n          width=\"64\"\n          height=\"64\"\n          style=\"object-fit: cover\"\n        />\n        <div v-else aria-hidden=\"true\">\n          <LucideCircleUserRound class=\"size-4 opacity-60\" />\n        </div>\n      </div>\n      <Button\n        v-if=\"currentFile\"\n        @click=\"removeFile(currentFile.id)\"\n        size=\"icon\"\n        class=\"border-background focus-visible:border-background absolute -top-1 -right-1 size-6 rounded-full border-2 shadow-none\"\n        aria-label=\"Remove image\"\n      >\n        <LucideX class=\"size-3.5\" />\n      </Button>\n    </div>\n    <p\n      aria-live=\"polite\"\n      role=\"region\"\n      class=\"text-muted-foreground mt-2 text-xs\"\n    >\n      Avatar uploader with droppable area\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": { "tags": ["upload", "file"] }
+}
