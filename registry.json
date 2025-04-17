@@ -11222,7 +11222,7 @@
       "type": "registry:component",
       "files": [
         {
-          "path": "registry/default/components/comp-543.tsx",
+          "path": "app/registry/default/components/comp-543.vue",
           "type": "registry:component"
         }
       ],
@@ -11235,7 +11235,7 @@
       "type": "registry:component",
       "files": [
         {
-          "path": "registry/default/components/comp-544.tsx",
+          "path": "app/registry/default/components/comp-544.vue",
           "type": "registry:component"
         }
       ],
@@ -11249,7 +11249,7 @@
       "type": "registry:component",
       "files": [
         {
-          "path": "registry/default/components/comp-545.tsx",
+          "path": "app/registry/default/components/comp-545.vue",
           "type": "registry:component"
         }
       ],
@@ -11263,7 +11263,7 @@
       "type": "registry:component",
       "files": [
         {
-          "path": "registry/default/components/comp-546.tsx",
+          "path": "app/registry/default/components/comp-546.vue",
           "type": "registry:component"
         }
       ],
@@ -11277,7 +11277,7 @@
       "type": "registry:component",
       "files": [
         {
-          "path": "registry/default/components/comp-547.tsx",
+          "path": "app/registry/default/components/comp-547.vue",
           "type": "registry:component"
         }
       ],
@@ -11291,7 +11291,7 @@
       "type": "registry:component",
       "files": [
         {
-          "path": "registry/default/components/comp-548.tsx",
+          "path": "app/registry/default/components/comp-548.vue",
           "type": "registry:component"
         }
       ],
@@ -11305,7 +11305,7 @@
       "type": "registry:component",
       "files": [
         {
-          "path": "registry/default/components/comp-549.tsx",
+          "path": "app/registry/default/components/comp-549.vue",
           "type": "registry:component"
         }
       ],
@@ -11319,7 +11319,7 @@
       "type": "registry:component",
       "files": [
         {
-          "path": "registry/default/components/comp-550.tsx",
+          "path": "app/registry/default/components/comp-550.vue",
           "type": "registry:component"
         }
       ],
@@ -11333,7 +11333,7 @@
       "type": "registry:component",
       "files": [
         {
-          "path": "registry/default/components/comp-551.tsx",
+          "path": "app/registry/default/components/comp-551.vue",
           "type": "registry:component"
         }
       ],
@@ -11347,7 +11347,7 @@
       "type": "registry:component",
       "files": [
         {
-          "path": "registry/default/components/comp-552.tsx",
+          "path": "app/registry/default/components/comp-552.vue",
           "type": "registry:component"
         }
       ],
@@ -11361,7 +11361,7 @@
       "type": "registry:component",
       "files": [
         {
-          "path": "registry/default/components/comp-553.vue",
+          "path": "app/registry/default/components/comp-553.vue",
           "type": "registry:component"
         }
       ],
