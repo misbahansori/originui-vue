@@ -1,40 +1,84 @@
 <script setup lang="ts">
+import {
+  DateRangePicker,
+  DateRangePickerCalendar,
+  DateRangePickerField,
+  DateRangePickerInput,
+  DateRangePickerTrigger,
+} from "@/registry/default/ui/date-range-picker";
 import { Label } from "@/registry/default/ui/label";
-import { ref, useId } from "vue";
+import {
+  getLocalTimeZone,
+  today,
+  type DateValue,
+} from "@internationalized/date";
+import { useId } from "vue";
 
 const startId = useId();
 const endId = useId();
 
-const startDate = ref("");
-const endDate = ref("");
+const now = today(getLocalTimeZone());
 
-// TODO: Implement unavailable dates
+const disabledRanges = [
+  [now, now.add({ days: 5 })],
+  [now.add({ days: 14 }), now.add({ days: 16 })],
+  [now.add({ days: 23 }), now.add({ days: 24 })],
+];
+
+const isDateUnavailable = (date: DateValue) =>
+  disabledRanges.some((interval) => {
+    if (!interval[0] || !interval[1]) return false;
+
+    return date.compare(interval[0]) >= 0 && date.compare(interval[1]) <= 0;
+  });
+
+const validate = (value: { start: DateValue; end: DateValue } | null) =>
+  disabledRanges.some((interval) => {
+    if (!interval[0] || !interval[1]) return false;
+
+    return (
+      value &&
+      value.end.compare(interval[0]) >= 0 &&
+      value.start.compare(interval[1]) <= 0
+    );
+  })
+    ? "Selected date range may not include unavailable dates."
+    : null;
 </script>
-
 <template>
   <div class="*:not-first:mt-2">
     <Label :for="startId" class="text-foreground text-sm font-medium">
       Date range picker (unavailable dates)
     </Label>
-    <div class="relative">
-      <div
-        class="border-input bg-background text-foreground focus-within:border-ring focus-within:ring-ring/50 flex h-9 items-center rounded-md border px-3 shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px]"
-      >
-        <input
-          :id="startId"
-          v-model="startDate"
-          type="date"
-          class="w-full bg-transparent text-sm focus:outline-none"
-        />
+    <DateRangePicker
+      :id="startId"
+      :end-id="endId"
+      :isDateUnavailable="isDateUnavailable"
+      :validate="validate"
+    >
+      <DateRangePickerField v-slot="{ segments }">
+        <DateRangePickerInput
+          v-for="item in segments.start"
+          type="start"
+          :key="item.part"
+          :part="item.part"
+        >
+          {{ item.value }}
+        </DateRangePickerInput>
         <span aria-hidden="true" class="text-muted-foreground/70 px-2">-</span>
-        <input
-          :id="endId"
-          v-model="endDate"
-          type="date"
-          class="w-full bg-transparent text-sm focus:outline-none"
-        />
-      </div>
-    </div>
+        <DateRangePickerInput
+          v-for="item in segments.end"
+          type="end"
+          :key="item.part"
+          :part="item.part"
+        >
+          {{ item.value }}
+        </DateRangePickerInput>
+        <DateRangePickerTrigger />
+      </DateRangePickerField>
+
+      <DateRangePickerCalendar />
+    </DateRangePicker>
     <p
       class="text-muted-foreground mt-2 text-xs"
       role="region"
