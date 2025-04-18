@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import { computed, ref } from "vue";
+import { computed, ref, useId } from "vue";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
@@ -18,8 +18,8 @@ const formState = ref<FormState>({
 
 const isLoading = computed(() => formState.value.status === "loading");
 
-const illustrationId1 = `illustration-${Math.random().toString(36).substring(2, 9)}`;
-const illustrationId2 = `illustration-${Math.random().toString(36).substring(2, 9)}`;
+const illustrationId1 = useId();
+const illustrationId2 = useId();
 
 const handleSubmit = async (e: Event) => {
   e.preventDefault();
