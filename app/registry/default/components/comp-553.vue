@@ -100,7 +100,7 @@ const getFilePreview = (file: {
         props: {
           src: previewUrl,
           alt: file.file.name,
-          class: "size-full rounded-t-[inherit] object-cover",
+          class: "size-full  object-cover",
         },
       };
     } else if (file.file.url) {
@@ -109,7 +109,7 @@ const getFilePreview = (file: {
         props: {
           src: file.file.url,
           alt: file.file.name,
-          class: "size-full rounded-t-[inherit] object-cover",
+          class: "size-full  object-cover",
         },
       };
     } else {
@@ -333,7 +333,7 @@ const {
                 class="flex items-center gap-3 overflow-hidden in-data-[uploading=true]:opacity-50"
               >
                 <div
-                  class="flex aspect-square size-10 shrink-0 items-center justify-center rounded border"
+                  class="flex aspect-square size-10 shrink-0 items-center justify-center overflow-hidden rounded border"
                 >
                   <component
                     :is="getFilePreview(file).type"

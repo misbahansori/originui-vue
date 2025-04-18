@@ -179,25 +179,33 @@ const {
         </div>
 
         <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
-          <div
-            v-for="file in files"
-            :key="file.id"
-            class="bg-background relative flex flex-col rounded-md border"
-          >
+          <div v-for="file in files" :key="file.id" class="relative">
             <div
-              class="bg-accent flex aspect-square items-center justify-center overflow-hidden rounded-t-[inherit]"
+              class="bg-background relative flex flex-col overflow-hidden rounded-md border"
             >
-              <img
-                v-if="getFilePreview(file).type === 'image'"
-                :src="getFilePreview(file).url"
-                :alt="getFilePreview(file).alt"
-                class="size-full rounded-t-[inherit] object-cover"
-              />
-              <component
-                v-else
-                :is="getFilePreview(file).component"
-                class="size-5 opacity-60"
-              />
+              <div
+                class="bg-accent flex aspect-square items-center justify-center overflow-hidden"
+              >
+                <img
+                  v-if="getFilePreview(file).type === 'image'"
+                  :src="getFilePreview(file).url"
+                  :alt="getFilePreview(file).alt"
+                  class="size-full object-cover"
+                />
+                <component
+                  v-else
+                  :is="getFilePreview(file).component"
+                  class="size-5 opacity-60"
+                />
+              </div>
+              <div class="flex min-w-0 flex-col gap-0.5 border-t p-3">
+                <p class="truncate text-[13px] font-medium">
+                  {{ file.file.name }}
+                </p>
+                <p class="text-muted-foreground truncate text-xs">
+                  {{ formatBytes(file.file.size) }}
+                </p>
+              </div>
             </div>
             <Button
               size="icon"
@@ -207,14 +215,6 @@ const {
             >
               <LucideX class="size-3.5" />
             </Button>
-            <div class="flex min-w-0 flex-col gap-0.5 border-t p-3">
-              <p class="truncate text-[13px] font-medium">
-                {{ file.file.name }}
-              </p>
-              <p class="text-muted-foreground truncate text-xs">
-                {{ formatBytes(file.file.size) }}
-              </p>
-            </div>
           </div>
         </div>
       </div>
