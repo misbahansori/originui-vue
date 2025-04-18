@@ -1,6 +1,6 @@
 import type { RegistryTag } from "@/registry/registry-tags";
 import registry from "~~/registry.json";
-import type { RegistryItem } from "shadcn/registry";
+import type { RegistryItem } from "shadcn-vue/registry";
 
 // Define registry interfaces
 export interface ComponentFile {
