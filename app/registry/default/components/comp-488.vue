@@ -12,5 +12,18 @@ const value = ref({
 </script>
 
 <template>
-  <RangeCalendar v-model="value" class="rounded-md border" />
+  <div>
+    <RangeCalendar v-model="value" class="rounded-md border" />
+    <p class="text-muted-foreground mt-4 text-center text-xs">
+      Range calendar -
+      <a
+        class="hover:text-foreground underline"
+        href="https://reka-ui.com/docs/components/calendar#range-calendar"
+        target="_blank"
+        rel="noopener nofollow"
+      >
+        Reka UI
+      </a>
+    </p>
+  </div>
 </template>

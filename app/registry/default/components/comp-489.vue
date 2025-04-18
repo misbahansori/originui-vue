@@ -1,20 +1,27 @@
 <script setup lang="ts">
-import { Calendar } from "@/registry/default/ui/calendar";
+import { RangeCalendar } from "@/registry/default/ui/range-calendar";
 import {
   type DateValue,
   getLocalTimeZone,
   isWeekend,
   today,
 } from "@internationalized/date";
+import type { DateRange } from "reka-ui";
 import type { Ref } from "vue";
 import { ref } from "vue";
 
-const now = ref(today(getLocalTimeZone())) as Ref<DateValue>;
+const start = today(getLocalTimeZone());
+const end = start.add({ days: 7 });
+
+const value = ref({
+  start,
+  end,
+}) as Ref<DateRange>;
 
 const disabledRanges = [
-  [now.value, now.value],
-  [now.value.add({ days: 14 }), now.value.add({ days: 14 })],
-  [now.value.add({ days: 23 }), now.value.add({ days: 23 })],
+  [start, start],
+  [start.add({ days: 14 }), start.add({ days: 14 })],
+  [start.add({ days: 23 }), start.add({ days: 23 })],
 ] as const;
 
 const isDateUnavailable = (date: DateValue) =>
@@ -26,11 +33,24 @@ const isDateUnavailable = (date: DateValue) =>
 </script>
 
 <template>
-  <Calendar
-    v-model="now"
-    :isDateUnavailable="isDateUnavailable"
-    :weekday-format="'short'"
-    :minValue="today(getLocalTimeZone())"
-    class="rounded-md border"
-  />
+  <div>
+    <RangeCalendar
+      v-model="value"
+      :isDateUnavailable="isDateUnavailable"
+      :weekday-format="'short'"
+      :minValue="today(getLocalTimeZone())"
+      class="rounded-md border"
+    />
+    <p class="text-muted-foreground mt-4 text-center text-xs">
+      Disabled dates -
+      <a
+        class="hover:text-foreground underline"
+        href="https://reka-ui.com/docs/components/calendar#calendar"
+        target="_blank"
+        rel="noopener nofollow"
+      >
+        Reka UI
+      </a>
+    </p>
+  </div>
 </template>
