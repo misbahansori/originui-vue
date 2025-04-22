@@ -1,20 +1,11 @@
 <script setup lang="ts">
-import { useRouter } from "vue-router";
-
-const router = useRouter();
-
-useEventListener("keydown", (e) => {
-  if ((e.metaKey || e.ctrlKey) && e.key === "k") {
-    e.preventDefault();
-    router.push("/search");
-  }
-});
+const { openCommandPalette } = useCommandPalette();
 </script>
 
 <template>
-  <NuxtLink
-    to="/search"
+  <button
     class="bg-background text-foreground placeholder:text-muted-foreground/70 focus:border-ring focus:ring-ring/50 inline-flex h-10 w-fit min-w-72 cursor-text rounded-full border px-4 py-2 text-sm outline-none focus:ring-[3px]"
+    @click="openCommandPalette"
   >
     <span class="flex grow items-center gap-2">
       <Icon
@@ -37,5 +28,5 @@ useEventListener("keydown", (e) => {
         </kbd>
       </div>
     </span>
-  </NuxtLink>
+  </button>
 </template>

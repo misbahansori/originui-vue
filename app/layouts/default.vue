@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import CommandPalette from "@/components/CommandPalette.vue";
+
 useHead({
   bodyAttrs: {
     class:
@@ -24,5 +26,7 @@ useHead({
         <Footer />
       </div>
     </div>
+
+    <CommandPalette />
   </div>
 </template>
