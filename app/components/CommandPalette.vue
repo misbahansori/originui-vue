@@ -9,10 +9,9 @@ import {
   CommandList,
 } from "@/registry/default/ui/command";
 import { LucideComponent } from "lucide-vue-next";
-import { computed, ref } from "vue";
+import { computed } from "vue";
 
-const open = ref(false);
-const searchQuery = ref("");
+const { open, searchQuery } = useCommandPalette();
 
 const availableComponents = categories.map((category) => ({
   name: category.name,

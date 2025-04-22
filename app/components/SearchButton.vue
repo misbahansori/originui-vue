@@ -1,22 +1,11 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
-const open = ref(false);
-
-const handleKeyDown = (e: KeyboardEvent) => {
-  if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
-    e.preventDefault();
-    open.value = !open.value;
-  }
-};
-
-useEventListener("keydown", handleKeyDown);
+const { openCommandPalette } = useCommandPalette();
 </script>
 
 <template>
   <button
     class="bg-background text-foreground placeholder:text-muted-foreground/70 focus:border-ring focus:ring-ring/50 inline-flex h-10 w-fit min-w-72 cursor-text rounded-full border px-4 py-2 text-sm outline-none focus:ring-[3px]"
-    @click="open = true"
+    @click="openCommandPalette"
   >
     <span class="flex grow items-center gap-2">
       <Icon
