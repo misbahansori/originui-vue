@@ -24,7 +24,7 @@ const id = useId();
     <Select>
       <SelectTrigger
         :id="id"
-        class="border-none bg-transparent shadow-none focus:ring-0 focus:ring-offset-0"
+        class="border-none bg-transparent shadow-none focus-visible:ring-0 focus-visible:ring-offset-0"
       >
         <SelectValue placeholder="Select framework" />
       </SelectTrigger>
