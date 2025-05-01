@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "components/comp-501.vue",
-      "content": "<template></template>\n",
+      "content": "<template>\n  <div class=\"flex items-center justify-center py-12\">\n    <span class=\"text-muted-foreground text-sm italic\">\n      Component not yet implemented.\n    </span>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }

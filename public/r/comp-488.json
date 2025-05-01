@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "components/comp-488.vue",
-      "content": "<script setup lang=\"ts\">\nimport { getLocalTimeZone, today } from \"@internationalized/date\";\nimport type { DateRange } from \"reka-ui\";\n\nconst start = today(getLocalTimeZone());\nconst end = start.add({ days: 7 });\n\nconst value = ref({\n  start,\n  end,\n}) as Ref<DateRange>;\n</script>\n\n<template>\n  <RangeCalendar v-model=\"value\" class=\"rounded-md border\" />\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { getLocalTimeZone, today } from \"@internationalized/date\";\nimport type { DateRange } from \"reka-ui\";\n\nconst start = today(getLocalTimeZone());\nconst end = start.add({ days: 7 });\n\nconst value = ref({\n  start,\n  end,\n}) as Ref<DateRange>;\n</script>\n\n<template>\n  <div>\n    <RangeCalendar v-model=\"value\" class=\"rounded-md border\" />\n    <p class=\"text-muted-foreground mt-4 text-center text-xs\">\n      Range calendar -\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/docs/components/calendar#range-calendar\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        Reka UI\n      </a>\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component",
       "target": ""
     }
