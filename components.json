@@ -3,18 +3,18 @@
   "style": "new-york",
   "typescript": true,
   "tailwind": {
-    "config": "tailwind.config.js",
+    "config": "",
     "css": "app/assets/css/tailwind.css",
     "baseColor": "neutral",
     "cssVariables": true,
     "prefix": ""
   },
   "aliases": {
-    "components": "~/registry/default/components",
-    "composables": "~/registry/default/composables",
-    "utils": "~/lib/utils",
-    "ui": "~/registry/default/components/ui",
-    "lib": "~/lib"
+    "components": "@/registry/default/components",
+    "composables": "@/registry/default/composables",
+    "utils": "@/lib/utils",
+    "ui": "@/registry/default/ui",
+    "lib": "@/lib"
   },
   "iconLibrary": "lucide"
 }
