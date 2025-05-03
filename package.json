@@ -37,7 +37,7 @@
     "shadcn-vue": "^2.1.0",
     "shiki": "^3.2.1",
     "tailwind-merge": "^3.0.2",
-    "tw-animate-css": "^1.2.8",
+    "tw-animate-css": "^1.2.9",
     "typescript": "^5.8.2",
     "vaul-vue": "^0.4.1",
     "vue": "latest",

@@ -4,6 +4,7 @@ import {
   AccordionContent,
   AccordionHeader,
   AccordionItem,
+  AccordionTrigger,
 } from "@/registry/default/ui/accordion";
 import {
   LucideAtSign,
@@ -12,7 +13,6 @@ import {
   LucidePlus,
   LucideZap,
 } from "lucide-vue-next";
-import { AccordionTrigger } from "reka-ui";
 
 const items = [
   {
@@ -56,7 +56,7 @@ const items = [
         :value="item.id"
         class="py-2"
       >
-        <AccordionHeader class="flex">
+        <AccordionHeader>
           <AccordionTrigger
             class="focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-center justify-between gap-4 rounded-md py-2 text-left text-sm text-[15px] leading-6 font-semibold transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg]:rotate-180 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0"
           >
@@ -68,10 +68,12 @@ const items = [
               />
               <span>{{ item.title }}</span>
             </span>
-            <LucidePlus
-              class="pointer-events-none size-4 shrink-0 opacity-60 transition-transform duration-200"
-              aria-hidden="true"
-            />
+            <template #icon>
+              <LucidePlus
+                class="pointer-events-none size-4 shrink-0 opacity-60 transition-transform duration-200"
+                aria-hidden="true"
+              />
+            </template>
           </AccordionTrigger>
         </AccordionHeader>
         <AccordionContent class="text-muted-foreground ps-7 pb-2">
