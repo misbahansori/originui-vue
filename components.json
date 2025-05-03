@@ -13,7 +13,7 @@
     "components": "@/registry/default/components",
     "composables": "@/registry/default/composables",
     "utils": "@/lib/utils",
-    "ui": "@/registry/default/components/ui",
+    "ui": "@/registry/default/ui",
     "lib": "@/lib"
   },
   "iconLibrary": "lucide"
