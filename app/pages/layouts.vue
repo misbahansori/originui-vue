@@ -1,6 +1,24 @@
 <script setup lang="ts">
 const cards = [
   {
+    id: 7,
+    title: "Schema Visualizer",
+    demoUrl: "https://crafted.is/exp7",
+    repoUrl:
+      "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-07",
+    cmd: "npx shadcn init https://ui-experiment-07.vercel.app/r/experiment-07.json",
+    imgHeight: 700,
+  },
+  {
+    id: 6,
+    title: "Event Calendar",
+    demoUrl: "https://crafted.is/exp6",
+    repoUrl:
+      "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-06",
+    cmd: "npx shadcn init https://ui-experiment-06.vercel.app/r/experiment-06.json",
+    imgHeight: 688,
+  },
+  {
     id: 5,
     title: "Candlestick Chart",
     demoUrl: "https://crafted.is/exp5",
