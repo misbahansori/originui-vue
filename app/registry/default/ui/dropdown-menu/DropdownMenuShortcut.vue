@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { cn } from "@/lib/utils";
 import type { HTMLAttributes } from "vue";
+import { cn } from "@/lib/utils";
 
 const props = defineProps<{
   class?: HTMLAttributes["class"];
@@ -8,7 +8,12 @@ const props = defineProps<{
 </script>
 
 <template>
-  <span :class="cn('ml-auto text-xs tracking-widest opacity-60', props.class)">
+  <span
+    data-slot="dropdown-menu-shortcut"
+    :class="
+      cn('text-muted-foreground ml-auto text-xs tracking-widest', props.class)
+    "
+  >
     <slot />
   </span>
 </template>
