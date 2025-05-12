@@ -3,7 +3,7 @@ import { Label } from "@/registry/default/ui/label";
 import {
   PinInput,
   PinInputGroup,
-  PinInputSlot,
+  PinInputInput,
 } from "@/registry/default/ui/pin-input";
 import { ref, useId } from "vue";
 
@@ -16,12 +16,12 @@ const otpValues = ref(["", "", "", ""]);
     <Label :for="inputId">OTP input (spaced)</Label>
     <PinInput :id="inputId" class="flex items-center gap-3">
       <PinInputGroup class="flex items-center gap-3">
-        <PinInputSlot
+        <PinInputInput
           v-for="(id, index) in otpValues"
           :key="id"
           :index="index"
           class="focus:border-ring focus:ring-ring/50 border-input size-9 rounded-md border font-medium shadow-xs transition-[color,box-shadow] focus:ring-[3px]"
-        ></PinInputSlot>
+        ></PinInputInput>
       </PinInputGroup>
     </PinInput>
     <p

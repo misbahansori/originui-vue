@@ -12,7 +12,7 @@ import {
 import {
   PinInput,
   PinInputGroup,
-  PinInputSlot,
+  PinInputInput,
 } from "@/registry/default/ui/pin-input";
 import { ref, watch } from "vue";
 
@@ -91,13 +91,13 @@ async function onSubmit() {
               class="flex items-center gap-3"
             >
               <PinInputGroup class="flex items-center gap-3">
-                <PinInputSlot
+                <PinInputInput
                   v-for="(id, index) in 4"
                   :key="id"
                   :index="index"
                   ref="inputRef"
                   class="focus:border-ring focus:ring-ring/50 border-input size-9 rounded-md border font-medium shadow-xs transition-[color,box-shadow] focus:ring-[3px]"
-                ></PinInputSlot>
+                ></PinInputInput>
               </PinInputGroup>
             </PinInput>
           </div>
