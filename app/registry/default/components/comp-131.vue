@@ -52,7 +52,7 @@ const selectedOption = computed(() => {
           size="icon"
           aria-label="Options"
         >
-          <LucideChevronDown size="16" aria-hidden="true" />
+          <LucideChevronDown aria-hidden="true" class="size-4" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
