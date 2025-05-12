@@ -7,6 +7,7 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/registry/default/ui/dropdown-menu";
+import { LucideChevronDown } from "lucide-vue-next";
 import { computed, ref } from "vue";
 
 const options = [
