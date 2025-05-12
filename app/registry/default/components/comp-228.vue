@@ -41,7 +41,7 @@ const selectedOption = ref(options[0]);
     <Select v-model="selectedOption">
       <SelectTrigger
         :id="id"
-        class="h-auto ps-2 text-left [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_img]:shrink-0"
+        class="ps-2 text-left data-[size=default]:h-auto [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_img]:shrink-0"
       >
         <SelectValue placeholder="Select user">
           <span v-if="selectedOption" class="flex items-center gap-2">
