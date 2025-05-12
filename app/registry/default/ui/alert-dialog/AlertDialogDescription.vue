@@ -19,6 +19,7 @@ const delegatedProps = computed(() => {
 
 <template>
   <AlertDialogDescription
+    data-slot="alert-dialog-description"
     v-bind="delegatedProps"
     :class="cn('text-muted-foreground text-sm', props.class)"
   >

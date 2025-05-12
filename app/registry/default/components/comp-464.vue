@@ -6,7 +6,7 @@ import {
   PaginationLast,
   PaginationList,
   PaginationNext,
-  PaginationPrev,
+  PaginationPrevious,
 } from "@/registry/default/ui/pagination";
 import {
   Select,
@@ -38,17 +38,17 @@ import {
           <LucideChevronFirst aria-hidden="true" class="size-4" />
         </Button>
       </PaginationFirst>
-      <PaginationPrev asChild>
+      <PaginationPrevious asChild>
         <Button variant="ghost" class="size-9">
           <LucideChevronLeft aria-hidden="true" class="size-4" />
         </Button>
-      </PaginationPrev>
+      </PaginationPrevious>
       <Select defaultValue="10" aria-label="Results per page">
         <SelectTrigger
           id="results-per-page"
           class="w-fit whitespace-break-spaces"
         >
-          <SelectValue placeholder="Select number of results" />
+          <SelectValue placeholder="Please select" />
         </SelectTrigger>
         <SelectContent>
           <SelectItem :value="`${item}`" v-for="item in pageCount">

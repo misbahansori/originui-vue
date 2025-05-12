@@ -89,6 +89,7 @@ provideCommandContext({
 
 <template>
   <ListboxRoot
+    data-slot="command"
     v-bind="forwarded"
     :class="
       cn(

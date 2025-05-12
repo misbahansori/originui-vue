@@ -18,6 +18,7 @@ const forwardedProps = useForwardProps(delegatedProps);
 
 <template>
   <TabsTrigger
+    data-slot="tabs-trigger"
     v-bind="forwardedProps"
     :class="
       cn(

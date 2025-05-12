@@ -8,9 +8,14 @@ import {
 } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
-const props = defineProps<
-  RangeCalendarCellTriggerProps & { class?: HTMLAttributes["class"] }
->();
+const props = withDefaults(
+  defineProps<
+    RangeCalendarCellTriggerProps & { class?: HTMLAttributes["class"] }
+  >(),
+  {
+    as: "button",
+  },
+);
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props;
@@ -23,18 +28,18 @@ const forwardedProps = useForwardProps(delegatedProps);
 
 <template>
   <RangeCalendarCellTrigger
+    data-slot="range-calendar-trigger"
     :class="
       cn(
         buttonVariants({ variant: 'ghost' }),
-        'h-9 w-9 p-0 font-normal data-[selected]:opacity-100',
-        // Today
-        'data-today:after:bg-primary-foreground data-today:not-data-selected:after:bg-primary data-today:data-unavailable:after:bg-muted-foreground data-today:data-disabled:after:bg-muted-foreground data-today:after:absolute data-today:after:bottom-1 data-today:after:left-1/2 data-today:after:z-10 data-today:after:size-[3px] data-today:after:translate-x-[-50%] data-today:after:rounded-full data-today:after:transition-colors data-today:after:content-[\'\']',
+        'h-8 w-8 p-0 font-normal data-[selected]:opacity-100',
+        '[&[data-today]:not([data-selected])]:bg-accent [&[data-today]:not([data-selected])]:text-accent-foreground',
         // Selection Start
         'data-[selection-start]:bg-primary data-[selection-start]:text-primary-foreground data-[selection-start]:hover:bg-primary data-[selection-start]:hover:text-primary-foreground data-[selection-start]:focus:bg-primary data-[selection-start]:focus:text-primary-foreground',
         // Selection End
         'data-[selection-end]:bg-primary data-[selection-end]:text-primary-foreground data-[selection-end]:hover:bg-primary data-[selection-end]:hover:text-primary-foreground data-[selection-end]:focus:bg-primary data-[selection-end]:focus:text-primary-foreground',
         // Outside months
-        'data-[outside-view]:text-muted-foreground [&[data-outside-view][data-selected]]:bg-accent/50 [&[data-outside-view][data-selected]]:text-muted-foreground data-[outside-view]:opacity-50 [&[data-outside-view][data-selected]]:opacity-30',
+        'data-[outside-view]:text-muted-foreground',
         // Disabled
         'data-[disabled]:text-muted-foreground data-[disabled]:opacity-50',
         // Unavailable

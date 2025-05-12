@@ -7,6 +7,7 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/registry/default/ui/dropdown-menu";
+import { LucideChevronDown } from "lucide-vue-next";
 import { computed, ref } from "vue";
 
 const options = [
@@ -51,7 +52,7 @@ const selectedOption = computed(() => {
           size="icon"
           aria-label="Options"
         >
-          <LucideChevronDown size="16" aria-hidden="true" />
+          <LucideChevronDown aria-hidden="true" class="size-4" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent

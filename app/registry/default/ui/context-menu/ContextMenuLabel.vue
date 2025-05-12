@@ -16,11 +16,12 @@ const delegatedProps = computed(() => {
 
 <template>
   <ContextMenuLabel
+    data-slot="context-menu-label"
+    :data-inset="inset ? '' : undefined"
     v-bind="delegatedProps"
     :class="
       cn(
-        'text-foreground px-2 py-1.5 text-sm font-semibold',
-        inset && 'pl-8',
+        'text-foreground px-2 py-1.5 text-sm font-medium data-[inset]:pl-8',
         props.class,
       )
     "

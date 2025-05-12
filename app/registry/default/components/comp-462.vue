@@ -6,7 +6,7 @@ import {
   PaginationList,
   PaginationListItem,
   PaginationNext,
-  PaginationPrev,
+  PaginationPrevious,
 } from "@/registry/default/ui/pagination";
 import {
   Select,
@@ -38,11 +38,11 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
         <span class="text-foreground">{{ pageCount }}</span>
       </p>
       <div class="flex items-center gap-1">
-        <PaginationPrev asChild>
+        <PaginationPrevious asChild>
           <Button variant="ghost" class="size-9">
             <LucideChevronLeft aria-hidden="true" class="size-4" />
           </Button>
-        </PaginationPrev>
+        </PaginationPrevious>
         <template v-for="item in items">
           <PaginationListItem
             v-if="item.type === 'page'"
@@ -70,7 +70,7 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
             id="results-per-page"
             class="w-fit whitespace-break-spaces"
           >
-            <SelectValue placeholder="Select number of results" />
+            <SelectValue placeholder="Please select" />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="10">10 / page</SelectItem>

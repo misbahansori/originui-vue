@@ -39,13 +39,17 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
 <template>
   <RangeCalendarRoot
     v-slot="{ grid, weekDays }"
-    :class="cn('px-3 py-2', props.class)"
+    data-slot="range-calendar"
+    :class="cn('p-3', props.class)"
     v-bind="forwarded"
   >
     <RangeCalendarHeader>
-      <RangeCalendarPrevButton />
       <RangeCalendarHeading />
-      <RangeCalendarNextButton />
+
+      <div class="flex items-center gap-1">
+        <RangeCalendarPrevButton />
+        <RangeCalendarNextButton />
+      </div>
     </RangeCalendarHeader>
 
     <div class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">
@@ -61,7 +65,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
           <RangeCalendarGridRow
             v-for="(weekDates, index) in month.rows"
             :key="`weekDate-${index}`"
-            class="mt-1 w-full"
+            class="mt-2 w-full"
           >
             <RangeCalendarCell
               v-for="weekDate in weekDates"

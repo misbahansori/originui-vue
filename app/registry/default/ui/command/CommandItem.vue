@@ -76,6 +76,7 @@ onUnmounted(() => {
     v-bind="forwarded"
     :id="id"
     ref="itemRef"
+    data-slot="command-item"
     :class="
       cn(
         'data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:size-4 [&_svg]:shrink-0',

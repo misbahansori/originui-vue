@@ -21,6 +21,7 @@ const forwardedProps = useForwardProps(delegatedProps);
 
 <template>
   <PinInputInput
+    data-slot="pin-input-slot"
     v-bind="forwardedProps"
     :class="
       cn(

@@ -30,7 +30,7 @@
     },
     {
       "path": "ui/number-field/index.ts",
-      "content": "export { default as NumberField } from \"./NumberField.vue\";\nexport { default as NumberFieldDecrement } from \"./NumberFieldDecrement.vue\";\nexport { default as NumberFieldIncrement } from \"./NumberFieldIncrement.vue\";\nexport { default as NumberFieldInput } from \"./NumberFieldInput.vue\";\n",
+      "content": "export { default as NumberField } from \"./NumberField.vue\";\nexport { default as NumberFieldContent } from \"./NumberFieldContent.vue\";\nexport { default as NumberFieldDecrement } from \"./NumberFieldDecrement.vue\";\nexport { default as NumberFieldIncrement } from \"./NumberFieldIncrement.vue\";\nexport { default as NumberFieldInput } from \"./NumberFieldInput.vue\";\n",
       "type": "registry:ui",
       "target": ""
     }

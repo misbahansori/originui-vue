@@ -7,7 +7,7 @@ import {
   PaginationLast,
   PaginationList,
   PaginationNext,
-  PaginationPrev,
+  PaginationPrevious,
 } from "@/registry/default/ui/pagination";
 import {
   Select,
@@ -42,9 +42,9 @@ const id = useId();
     >
       <div class="flex items-center gap-3">
         <Label :for="id">Rows per page</Label>
-        <Select defaultValue="25">
+        <Select defaultValue="10">
           <SelectTrigger :id="id" class="w-fit whitespace-nowrap">
-            <SelectValue placeholder="Select number of results" />
+            <SelectValue placeholder="Please select" />
           </SelectTrigger>
           <SelectContent
             className="[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2"
@@ -68,11 +68,11 @@ const id = useId();
             <LucideChevronFirst aria-hidden="true" class="size-4" />
           </Button>
         </PaginationFirst>
-        <PaginationPrev asChild>
+        <PaginationPrevious asChild>
           <Button variant="ghost" class="size-9">
             <LucideChevronLeft aria-hidden="true" class="size-4" />
           </Button>
-        </PaginationPrev>
+        </PaginationPrevious>
         <PaginationNext asChild>
           <Button variant="ghost" class="size-9">
             <LucideChevronRight aria-hidden="true" class="size-4" />

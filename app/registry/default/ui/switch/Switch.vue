@@ -26,8 +26,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
 
 <template>
   <SwitchRoot
-    v-bind="forwarded"
     data-slot="switch"
+    v-bind="forwarded"
     :class="
       cn(
         'peer data-[state=checked]:bg-primary data-[state=unchecked]:bg-input focus-visible:ring-ring/50 inline-flex h-6 w-10 shrink-0 items-center rounded-full border-2 border-transparent transition-all outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50',

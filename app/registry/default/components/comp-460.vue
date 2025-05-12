@@ -8,7 +8,7 @@ import {
   PaginationList,
   PaginationListItem,
   PaginationNext,
-  PaginationPrev,
+  PaginationPrevious,
 } from "@/registry/default/ui/pagination";
 import {
   LucideChevronFirst,
@@ -36,11 +36,11 @@ import {
           <LucideChevronFirst aria-hidden="true" class="size-4" />
         </Button>
       </PaginationFirst>
-      <PaginationPrev asChild>
+      <PaginationPrevious asChild>
         <Button variant="ghost" class="size-9">
           <LucideChevronLeft aria-hidden="true" class="size-4" />
         </Button>
-      </PaginationPrev>
+      </PaginationPrevious>
       <template v-for="item in items">
         <PaginationListItem
           v-if="item.type === 'page'"
