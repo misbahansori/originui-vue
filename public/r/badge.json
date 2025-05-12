@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "ui/badge/Badge.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\nimport { type BadgeVariants, badgeVariants } from \".\";\n\nconst props = defineProps<{\n  variant?: BadgeVariants[\"variant\"];\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div :class=\"cn(badgeVariants({ variant }), props.class)\">\n    <slot />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { PrimitiveProps } from \"reka-ui\";\nimport { Primitive } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport { type BadgeVariants, badgeVariants } from \".\";\n\nconst props = defineProps<\n  PrimitiveProps & {\n    variant?: BadgeVariants[\"variant\"];\n    class?: HTMLAttributes[\"class\"];\n  }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <Primitive\n    data-slot=\"badge\"\n    :class=\"cn(badgeVariants({ variant }), props.class)\"\n    v-bind=\"delegatedProps\"\n  >\n    <slot />\n  </Primitive>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },
