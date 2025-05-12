@@ -6,7 +6,7 @@ import {
   PaginationList,
   PaginationListItem,
   PaginationNext,
-  PaginationPrev,
+  PaginationPrevious,
 } from "@/registry/default/ui/pagination";
 import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
 </script>
@@ -24,12 +24,12 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
       class="flex w-full items-center justify-center gap-1"
       v-slot="{ items }"
     >
-      <PaginationPrev asChild>
+      <PaginationPrevious asChild>
         <Button variant="ghost" class="h-9 w-auto px-4">
           <LucideChevronLeft aria-hidden="true" class="size-4" />
           Previous
         </Button>
-      </PaginationPrev>
+      </PaginationPrevious>
       <template v-for="item in items">
         <PaginationListItem
           v-if="item.type === 'page'"

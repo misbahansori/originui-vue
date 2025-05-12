@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { cn } from "@/lib/utils";
 import type { HtmlHTMLAttributes } from "vue";
+import { cn } from "@/lib/utils";
 
 const props = defineProps<{
   class?: HtmlHTMLAttributes["class"];
@@ -8,7 +8,10 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div :class="cn('grid gap-1.5 p-4 text-center sm:text-left', props.class)">
+  <div
+    data-slot="drawer-header"
+    :class="cn('flex flex-col gap-1.5 p-4', props.class)"
+  >
     <slot />
   </div>
 </template>

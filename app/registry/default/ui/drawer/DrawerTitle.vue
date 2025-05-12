@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { cn } from "@/lib/utils";
 import type { DrawerTitleProps } from "vaul-vue";
+import { cn } from "@/lib/utils";
 import { DrawerTitle } from "vaul-vue";
 import { computed, type HtmlHTMLAttributes } from "vue";
 
@@ -17,10 +17,9 @@ const delegatedProps = computed(() => {
 
 <template>
   <DrawerTitle
+    data-slot="drawer-title"
     v-bind="delegatedProps"
-    :class="
-      cn('text-lg leading-none font-semibold tracking-tight', props.class)
-    "
+    :class="cn('text-foreground font-semibold', props.class)"
   >
     <slot />
   </DrawerTitle>

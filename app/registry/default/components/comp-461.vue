@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
 import {
+  Pagination,
+  PaginationEllipsis,
+  PaginationList,
+  PaginationListItem,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/registry/default/ui/pagination";
+import {
   LucideChevronLeft,
   LucideChevronRight,
   LucideEllipsis,
@@ -20,14 +28,14 @@ import {
       class="flex w-full items-center justify-center gap-0 -space-x-px"
       v-slot="{ items }"
     >
-      <PaginationPrev asChild>
+      <PaginationPrevious asChild>
         <Button
           variant="outline"
           class="size-9 rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10 aria-disabled:pointer-events-none [&[aria-disabled]>svg]:opacity-50"
         >
           <LucideChevronLeft :size="16" aria-hidden="true" />
         </Button>
-      </PaginationPrev>
+      </PaginationPrevious>
       <template v-for="item in items">
         <PaginationListItem
           v-if="item.type === 'page'"

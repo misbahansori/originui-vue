@@ -4,7 +4,7 @@ import {
   Pagination,
   PaginationList,
   PaginationNext,
-  PaginationPrev,
+  PaginationPrevious,
 } from "@/registry/default/ui/pagination";
 </script>
 
@@ -23,9 +23,9 @@ import {
         <span class="text-foreground">{{ pageCount }}</span>
       </p>
       <div class="flex items-center gap-3">
-        <PaginationPrev asChild>
+        <PaginationPrevious asChild>
           <Button variant="outline" class="h-9 w-auto px-4">Previous</Button>
-        </PaginationPrev>
+        </PaginationPrevious>
         <PaginationNext asChild>
           <Button variant="outline" class="h-9 w-auto px-4">Next</Button>
         </PaginationNext>
