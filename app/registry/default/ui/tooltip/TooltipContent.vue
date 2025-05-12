@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
+import { reactiveOmit } from "@vueuse/core";
 import {
-    TooltipContent,
-    type TooltipContentEmits,
-    type TooltipContentProps,
-    TooltipPortal,
-    useForwardPropsEmits,
+  TooltipContent,
+  type TooltipContentEmits,
+  type TooltipContentProps,
+  TooltipPortal,
+  useForwardPropsEmits,
 } from "reka-ui";
-import { computed, type HTMLAttributes } from "vue";
+import type { HTMLAttributes } from "vue";
 
 defineOptions({
   inheritAttrs: false,
@@ -22,18 +23,14 @@ const props = withDefaults(
 
 const emits = defineEmits<TooltipContentEmits>();
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
-
-  return delegated;
-});
-
+const delegatedProps = reactiveOmit(props, "class");
 const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
   <TooltipPortal>
     <TooltipContent
+      data-slot="tooltip-content"
       v-bind="{ ...forwarded, ...$attrs }"
       :class="
         cn(
