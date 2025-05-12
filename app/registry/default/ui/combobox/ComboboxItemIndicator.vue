@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { ComboboxTriggerProps } from "reka-ui";
+import type { ComboboxItemIndicatorProps } from "reka-ui";
 import { cn } from "@/lib/utils";
-import { ComboboxTrigger, useForwardProps } from "reka-ui";
+import { ComboboxItemIndicator, useForwardProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
 const props = defineProps<
-  ComboboxTriggerProps & { class?: HTMLAttributes["class"] }
+  ComboboxItemIndicatorProps & { class?: HTMLAttributes["class"] }
 >();
 
 const delegatedProps = computed(() => {
@@ -18,12 +18,11 @@ const forwarded = useForwardProps(delegatedProps);
 </script>
 
 <template>
-  <ComboboxTrigger
-    data-slot="combobox-trigger"
+  <ComboboxItemIndicator
+    data-slot="combobox-item-indicator"
     v-bind="forwarded"
-    :class="cn('', props.class)"
-    tabindex="0"
+    :class="cn('ml-auto', props.class)"
   >
     <slot />
-  </ComboboxTrigger>
+  </ComboboxItemIndicator>
 </template>

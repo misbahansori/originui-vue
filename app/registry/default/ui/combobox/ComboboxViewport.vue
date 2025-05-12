@@ -1,11 +1,11 @@
 <script setup lang="ts">
+import type { ComboboxViewportProps } from "reka-ui";
 import { cn } from "@/lib/utils";
-import type { ListboxContentProps } from "reka-ui";
-import { ListboxContent, useForwardProps } from "reka-ui";
+import { ComboboxViewport, useForwardProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
 const props = defineProps<
-  ListboxContentProps & { class?: HTMLAttributes["class"] }
+  ComboboxViewportProps & { class?: HTMLAttributes["class"] }
 >();
 
 const delegatedProps = computed(() => {
@@ -18,8 +18,8 @@ const forwarded = useForwardProps(delegatedProps);
 </script>
 
 <template>
-  <ListboxContent
-    data-slot="command-list"
+  <ComboboxViewport
+    data-slot="combobox-viewport"
     v-bind="forwarded"
     :class="
       cn(
@@ -28,8 +28,6 @@ const forwarded = useForwardProps(delegatedProps);
       )
     "
   >
-    <div role="presentation">
-      <slot />
-    </div>
-  </ListboxContent>
+    <slot />
+  </ComboboxViewport>
 </template>

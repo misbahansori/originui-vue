@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { cn } from "@/lib/utils";
 import type { ComboboxGroupProps } from "reka-ui";
+import { cn } from "@/lib/utils";
 import { ComboboxGroup, ComboboxLabel } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
@@ -20,13 +20,9 @@ const delegatedProps = computed(() => {
 
 <template>
   <ComboboxGroup
+    data-slot="combobox-group"
     v-bind="delegatedProps"
-    :class="
-      cn(
-        'text-foreground [&_[cmdk-group-heading]]:text-muted-foreground overflow-hidden p-1 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium',
-        props.class,
-      )
-    "
+    :class="cn('text-foreground overflow-hidden p-1', props.class)"
   >
     <ComboboxLabel
       v-if="heading"

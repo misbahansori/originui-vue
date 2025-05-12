@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { cn } from "@/lib/utils";
 import type { ComboboxSeparatorProps } from "reka-ui";
+import { cn } from "@/lib/utils";
 import { ComboboxSeparator } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
@@ -17,6 +17,7 @@ const delegatedProps = computed(() => {
 
 <template>
   <ComboboxSeparator
+    data-slot="combobox-separator"
     v-bind="delegatedProps"
     :class="cn('bg-border -mx-1 h-px', props.class)"
   >

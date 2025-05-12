@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
+import { reactiveOmit } from "@vueuse/core";
 import {
   Toggle,
   type ToggleEmits,
   type ToggleProps,
   useForwardPropsEmits,
 } from "reka-ui";
-import { computed, type HTMLAttributes } from "vue";
+import type { HTMLAttributes } from "vue";
 import { type ToggleVariants, toggleVariants } from ".";
 
 const props = withDefaults(
@@ -26,17 +27,13 @@ const props = withDefaults(
 
 const emits = defineEmits<ToggleEmits>();
 
-const delegatedProps = computed(() => {
-  const { class: _, size, variant, ...delegated } = props;
-
-  return delegated;
-});
-
+const delegatedProps = reactiveOmit(props, "class", "size", "variant");
 const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
   <Toggle
+    data-slot="toggle"
     v-bind="forwarded"
     :class="cn(toggleVariants({ variant, size }), props.class)"
   >

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import { ContextMenuLabel, type ContextMenuLabelProps } from "reka-ui";
+import { DialogOverlay, type DialogOverlayProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
 const props = defineProps<
-  ContextMenuLabelProps & { class?: HTMLAttributes["class"]; inset?: boolean }
+  DialogOverlayProps & { class?: HTMLAttributes["class"] }
 >();
 
 const delegatedProps = computed(() => {
@@ -15,17 +15,16 @@ const delegatedProps = computed(() => {
 </script>
 
 <template>
-  <ContextMenuLabel
-    data-slot="context-menu-label"
-    :data-inset="inset ? '' : undefined"
+  <DialogOverlay
+    data-slot="dialog-overlay"
     v-bind="delegatedProps"
     :class="
       cn(
-        'text-foreground px-2 py-1.5 text-sm font-medium data-[inset]:pl-8',
+        'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/80',
         props.class,
       )
     "
   >
     <slot />
-  </ContextMenuLabel>
+  </DialogOverlay>
 </template>
