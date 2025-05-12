@@ -3,7 +3,7 @@ import { Label } from "@/registry/default/ui/label";
 import {
   PinInput,
   PinInputGroup,
-  PinInputInput,
+  PinInputSlot,
 } from "@/registry/default/ui/pin-input";
 import { ref, useId } from "vue";
 
@@ -18,7 +18,7 @@ const value = ref(["", "", "", "", ""]);
     </Label>
     <PinInput :id="inputId" v-model="value">
       <PinInputGroup>
-        <PinInputInput
+        <PinInputSlot
           v-for="(id, index) in 5"
           :key="id"
           :index="index"
