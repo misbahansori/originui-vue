@@ -96,6 +96,21 @@
         "tags": ["authentication", "extended", "login", "sign in"],
         "colSpan": 3
       }
+    },
+    {
+      "name": "extended-06",
+      "type": "registry:component",
+      "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-06.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["empty state", "extended", "empty"],
+        "colSpan": 2
+      }
     }
   ]
 }

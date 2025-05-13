@@ -17,4 +17,13 @@ export const extendedCategories: ExtendedComponentCategory[] = [
       { name: "extended-05" },
     ],
   },
+  {
+    slug: "extended/empty-state",
+    name: "Empty State",
+    components: [
+      { name: "extended-06" },
+      { name: "extended-07" },
+      { name: "extended-08" },
+    ],
+  },
 ];
