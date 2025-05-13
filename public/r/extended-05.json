@@ -1,0 +1,26 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "extended-05",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "components/extended-05.vue",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\n</script>\n\n<template>\n  <div class=\"flex items-center justify-center px-4 py-12 sm:px-6 lg:px-8\">\n    <div\n      class=\"flex w-full max-w-md flex-col gap-4 rounded-lg border p-8 shadow-md\"\n    >\n      <div class=\"flex flex-col items-center gap-2 pb-2\">\n        <div\n          class=\"flex size-11 shrink-0 items-center justify-center rounded-full border\"\n          aria-hidden=\"true\"\n        >\n          <svg\n            class=\"stroke-zinc-800 dark:stroke-zinc-100\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n            width=\"20\"\n            height=\"20\"\n            viewBox=\"0 0 32 32\"\n            aria-hidden=\"true\"\n          >\n            <circle cx=\"16\" cy=\"16\" r=\"12\" fill=\"none\" stroke-width=\"8\" />\n          </svg>\n        </div>\n        <div class=\"flex flex-col gap-y-1.5 text-center sm:text-left\">\n          <h1\n            class=\"text-lg leading-none font-semibold tracking-tight sm:text-center\"\n          >\n            Reset your password\n          </h1>\n          <p class=\"text-muted-foreground text-center text-sm\">\n            Enter your new password to reset your account.\n          </p>\n        </div>\n      </div>\n      <form class=\"flex flex-col gap-4\">\n        <div class=\"flex flex-col gap-2\">\n          <Label for=\"password\">Password</Label>\n          <Input\n            id=\"password\"\n            placeholder=\"Enter your password\"\n            type=\"password\"\n            required\n          />\n        </div>\n        <div class=\"flex flex-col gap-2\">\n          <Label for=\"passwordConfirmation\">Password Confirmation</Label>\n          <Input\n            id=\"passwordConfirmation\"\n            placeholder=\"Confirm your password\"\n            type=\"password\"\n            required\n          />\n        </div>\n        <Button type=\"submit\" class=\"w-full\">Reset password</Button>\n      </form>\n    </div>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "authentication",
+      "extended",
+      "login",
+      "sign in"
+    ],
+    "colSpan": 3
+  }
+}

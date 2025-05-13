@@ -31,8 +31,7 @@
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
         "https://originui-vue.com/r/input.json",
-        "https://originui-vue.com/r/label.json",
-        "https://originui-vue.com/r/checkbox.json"
+        "https://originui-vue.com/r/label.json"
       ],
       "files": [
         {
@@ -48,11 +47,7 @@
     {
       "name": "extended-03",
       "type": "registry:component",
-      "registryDependencies": [
-        "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/input.json",
-        "https://originui-vue.com/r/label.json"
-      ],
+      "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
           "path": "app/registry/default/components/extended-03.vue",
@@ -75,6 +70,25 @@
       "files": [
         {
           "path": "app/registry/default/components/extended-04.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["authentication", "extended", "login", "sign in"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "extended-05",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/input.json",
+        "https://originui-vue.com/r/label.json"
+      ],
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-05.vue",
           "type": "registry:component"
         }
       ],

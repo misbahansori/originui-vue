@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
 </script>
 
 <template>
@@ -27,29 +29,33 @@ import { Button } from "@/registry/default/ui/button";
           <h1
             class="text-lg leading-none font-semibold tracking-tight sm:text-center"
           >
-            Thanks for signing up!
+            Reset your password
           </h1>
           <p class="text-muted-foreground text-center text-sm">
-            Please verify your email address before continuing.
+            Enter your new password to reset your account.
           </p>
         </div>
       </div>
       <form class="flex flex-col gap-4">
-        <p class="text-muted-foreground text-sm/relaxed">
-          We've sent a verification link to
-          <a href="#" class="text-foreground font-semibold">
-            example@email.com.
-          </a>
-          Please click the link to verify your email address.
-        </p>
-        <p class="text-muted-foreground text-sm/relaxed">
-          Didn't receive the email? Click the button below to resend the
-          verification link.
-        </p>
-        <div class="flex w-full items-center justify-between gap-4">
-          <Button>Resend verification email</Button>
-          <Button variant="link">Log out</Button>
+        <div class="flex flex-col gap-2">
+          <Label for="password">Password</Label>
+          <Input
+            id="password"
+            placeholder="Enter your password"
+            type="password"
+            required
+          />
         </div>
+        <div class="flex flex-col gap-2">
+          <Label for="passwordConfirmation">Password Confirmation</Label>
+          <Input
+            id="passwordConfirmation"
+            placeholder="Confirm your password"
+            type="password"
+            required
+          />
+        </div>
+        <Button type="submit" class="w-full">Reset password</Button>
       </form>
     </div>
   </div>
