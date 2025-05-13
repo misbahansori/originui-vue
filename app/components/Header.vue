@@ -3,7 +3,8 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/registry/default/ui/button";
 
 const links = [
-  { text: "Layouts", href: "/layouts", isNew: true },
+  { text: "Extended", href: "/extended", isNew: true },
+  { text: "Layouts", href: "/layouts" },
   // { text: "Colors", href: "/colors" },
   {
     text: "Easing Classes",
