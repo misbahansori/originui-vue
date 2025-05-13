@@ -3,9 +3,7 @@
   "name": "extended-03",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json"
+    "https://originui-vue.com/r/button.json"
   ],
   "files": [
     {
