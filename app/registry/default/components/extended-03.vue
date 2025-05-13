@@ -7,7 +7,7 @@ import { Button } from "@/registry/default/ui/button";
     <div
       class="flex w-full max-w-md flex-col gap-4 rounded-lg border p-8 shadow-md"
     >
-      <div class="flex flex-col items-center gap-2">
+      <div class="flex flex-col items-center gap-2 pb-2">
         <div
           class="flex size-11 shrink-0 items-center justify-center rounded-full border"
           aria-hidden="true"

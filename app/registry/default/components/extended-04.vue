@@ -9,7 +9,7 @@ import { Label } from "@/registry/default/ui/label";
     <div
       class="flex w-full max-w-md flex-col gap-4 rounded-lg border p-8 shadow-md"
     >
-      <div class="flex flex-col items-center gap-2">
+      <div class="flex flex-col items-center gap-2 pb-2">
         <div
           class="flex size-11 shrink-0 items-center justify-center rounded-full border"
           aria-hidden="true"
@@ -32,7 +32,7 @@ import { Label } from "@/registry/default/ui/label";
             Forgot your password?
           </h1>
           <p class="text-muted-foreground text-center text-sm">
-            Enter your email below to receive a link to reset your password.
+            Enter your email to reset your password.
           </p>
         </div>
       </div>
