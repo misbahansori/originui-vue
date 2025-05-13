@@ -31,8 +31,7 @@
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
         "https://originui-vue.com/r/input.json",
-        "https://originui-vue.com/r/label.json",
-        "https://originui-vue.com/r/checkbox.json"
+        "https://originui-vue.com/r/label.json"
       ],
       "files": [
         {
@@ -48,11 +47,7 @@
     {
       "name": "extended-03",
       "type": "registry:component",
-      "registryDependencies": [
-        "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/input.json",
-        "https://originui-vue.com/r/label.json"
-      ],
+      "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
           "path": "app/registry/default/components/extended-03.vue",
