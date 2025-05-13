@@ -3,6 +3,7 @@ import { Button } from "@/registry/default/ui/button";
 import { Checkbox } from "@/registry/default/ui/checkbox";
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
+import { RiGithubFill, RiGoogleFill } from "@remixicon/vue";
 </script>
 
 <template>
@@ -61,22 +62,19 @@ import { Label } from "@/registry/default/ui/label";
             <Checkbox id="remember" />
             <Label for="remember" class="font-normal">Remember me</Label>
           </div>
-          <NuxtLink
+          <a
             class="text-sm font-medium hover:underline"
-            to="/forgot-password"
+            href="/forgot-password"
           >
             Forgot password?
-          </NuxtLink>
+          </a>
         </div>
         <Button type="submit" class="w-full">Sign in</Button>
         <p class="text-muted-foreground text-sm">
           Don't have an account?
-          <NuxtLink
-            to="/register"
-            class="text-primary font-medium hover:underline"
-          >
+          <a href="/register" class="text-primary font-medium hover:underline">
             Register
-          </NuxtLink>
+          </a>
         </p>
       </form>
       <div
@@ -84,7 +82,14 @@ import { Label } from "@/registry/default/ui/label";
       >
         <span class="text-muted-foreground text-xs">Or</span>
       </div>
-      <Button variant="outline" class="w-full">Login with Google</Button>
+      <Button variant="outline">
+        <RiGoogleFill class="me-1" size="16" aria-hidden="true" />
+        Login with Google
+      </Button>
+      <Button variant="outline">
+        <RiGithubFill class="me-1" size="16" aria-hidden="true" />
+        Login with GitHub
+      </Button>
     </div>
   </div>
 </template>

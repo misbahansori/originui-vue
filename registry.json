@@ -11373,6 +11373,7 @@
     {
       "name": "extended-01",
       "type": "registry:component",
+      "dependencies": ["@remixicon/vue"],
       "registryDependencies": [
         "https://originui-vue.com/r/button.json",
         "https://originui-vue.com/r/input.json",
