@@ -9,6 +9,6 @@ export const extendedCategories: ExtendedComponentCategory[] = [
   {
     slug: "extended/auth",
     name: "Authentication",
-    components: [{ name: "extended-01" }],
+    components: [{ name: "extended-01" }, { name: "extended-02" }],
   },
 ];

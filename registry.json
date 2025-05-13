@@ -11390,6 +11390,27 @@
         "tags": ["authentication", "extended", "login", "sign in"],
         "colSpan": 3
       }
+    },
+    {
+      "name": "extended-02",
+      "type": "registry:component",
+      "dependencies": ["@remixicon/vue"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/input.json",
+        "https://originui-vue.com/r/label.json",
+        "https://originui-vue.com/r/checkbox.json"
+      ],
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-02.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["authentication", "extended", "login", "sign in"],
+        "colSpan": 3
+      }
     }
   ]
 }
