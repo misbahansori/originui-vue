@@ -100,6 +100,7 @@
     {
       "name": "extended-06",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
@@ -115,6 +116,7 @@
     {
       "name": "extended-07",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
@@ -130,10 +132,27 @@
     {
       "name": "extended-08",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
       "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
           "path": "app/registry/default/components/extended-08.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["empty state", "extended", "empty"],
+        "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-09",
+      "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-09.vue",
           "type": "registry:component"
         }
       ],
