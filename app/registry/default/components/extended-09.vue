@@ -1,4 +1,12 @@
 <script setup lang="ts">
+import { Button } from "@/registry/default/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/registry/default/ui/card";
 import { LucideIdCard, LucideUser } from "lucide-vue-next";
 </script>
 

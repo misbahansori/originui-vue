@@ -149,7 +149,10 @@
       "name": "extended-09",
       "type": "registry:component",
       "dependencies": ["lucide-vue-next"],
-      "registryDependencies": ["https://originui-vue.com/r/button.json"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/card.json"
+      ],
       "files": [
         {
           "path": "app/registry/default/components/extended-09.vue",
