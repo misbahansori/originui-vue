@@ -33,7 +33,7 @@ import { RiGithubFill, RiGoogleFill } from "@remixicon/vue";
           >
             Welcome back
           </h1>
-          <p class="text-muted-foreground text-sm">
+          <p class="text-muted-foreground text-center text-sm">
             Enter your credentials to login to your account.
           </p>
         </div>
