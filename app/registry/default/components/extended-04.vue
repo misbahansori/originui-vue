@@ -29,33 +29,30 @@ import { Label } from "@/registry/default/ui/label";
           <h1
             class="text-lg leading-none font-semibold tracking-tight sm:text-center"
           >
-            Reset your password
+            Forgot your password?
           </h1>
           <p class="text-muted-foreground text-center text-sm">
-            Enter your new password to reset your account.
+            Enter your email below to receive a link to reset your password.
           </p>
         </div>
       </div>
       <form class="flex flex-col gap-4">
         <div class="flex flex-col gap-2">
-          <Label for="password">Password</Label>
+          <Label for="email">Email</Label>
           <Input
-            id="password"
-            placeholder="Enter your password"
-            type="password"
+            id="email"
+            placeholder="Enter your email"
+            type="email"
             required
           />
         </div>
-        <div class="flex flex-col gap-2">
-          <Label for="passwordConfirmation">Password Confirmation</Label>
-          <Input
-            id="passwordConfirmation"
-            placeholder="Confirm your password"
-            type="password"
-            required
-          />
-        </div>
-        <Button type="submit" class="w-full">Reset password</Button>
+        <Button type="submit" class="w-full">Send reset link</Button>
+        <p class="text-muted-foreground text-sm">
+          Remember your password?
+          <a href="/login" class="text-primary font-medium hover:underline">
+            Login
+          </a>
+        </p>
       </form>
     </div>
   </div>

@@ -1,5 +1,6 @@
 import type { RegistryTag } from "@/registry/registry-tags";
 import registry from "~~/registry.json";
+import registryExtended from "~~/registry-extended.json";
 import type { RegistryItem } from "shadcn-vue/registry";
 
 // Define registry interfaces
@@ -16,7 +17,10 @@ export interface TailwindConfig {
   extend?: any;
 }
 
-const components = registry.items as unknown as RegistryItem[];
+const components = [
+  ...registry.items,
+  ...registryExtended.items,
+] as unknown as RegistryItem[];
 
 // Get components by an array of names
 export function getComponentsByNames(names: string[]): RegistryItem[] {

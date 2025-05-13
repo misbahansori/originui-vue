@@ -21,6 +21,8 @@ const components = getComponentsByNames(
   category.components.map((item) => item.name),
 );
 
+console.log(components);
+
 useSeoMeta({
   title: `${category.name} components built with Vue and Tailwind CSS - Origin UI`,
   description: `A collection of beautiful and accessible ${category.name.toLowerCase()} components built with Vue and Tailwind CSS.`,
