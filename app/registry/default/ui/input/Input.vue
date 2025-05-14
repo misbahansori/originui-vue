@@ -36,5 +36,7 @@ const modelValue = useVModel(props, "modelValue", emits, {
         props.class,
       )
     "
+    :type="props.type"
+    v-bind="$attrs"
   />
 </template>
