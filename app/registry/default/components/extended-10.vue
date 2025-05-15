@@ -9,33 +9,35 @@ import { LucideChartNoAxesColumn, LucideInfo } from "lucide-vue-next";
 </script>
 
 <template>
-  <Card>
-    <CardHeader class="gap-2">
-      <div class="flex items-center gap-2">
-        <div class="flex size-8 items-center justify-center rounded-md border">
+  <Card class="gap-4">
+    <CardHeader class="gap-4 px-4">
+      <div class="flex items-center gap-3">
+        <div class="flex size-7 items-center justify-center rounded-md border">
           <LucideChartNoAxesColumn class="text-foreground size-4" />
         </div>
-        <CardTitle class="text-xl/none">Financing overview</CardTitle>
+        <CardTitle class="text-lg/none">Financing overview</CardTitle>
       </div>
-      <CardDescription>
+      <CardDescription class="text-sm/relaxed">
         Preview of the financing options available to the user and the total
         amount of financing available.
       </CardDescription>
     </CardHeader>
-    <CardContent class="grid grid-cols-2 gap-4">
+    <CardContent class="grid grid-cols-2 gap-4 px-4">
       <div class="flex flex-col gap-1">
         <div class="text-muted-foreground flex items-center gap-2">
-          <p class="text-sm font-medium">Total amount</p>
+          <p class="text-xs font-medium">Total amount</p>
           <LucideInfo class="size-4" />
         </div>
-        <p class="text-3xl font-bold">$100,000</p>
+        <p class="text-xl font-semibold tracking-tight tabular-nums">
+          $100,000
+        </p>
       </div>
       <div class="flex flex-col gap-1">
         <div class="text-muted-foreground flex items-center gap-2">
-          <p class="text-sm font-medium">Total Customer</p>
+          <p class="text-xs font-medium">Total Customer</p>
           <LucideInfo class="size-4" />
         </div>
-        <p class="text-3xl font-bold">27,320</p>
+        <p class="text-xl font-semibold tracking-tight tabular-nums">27,320</p>
       </div>
     </CardContent>
   </Card>
