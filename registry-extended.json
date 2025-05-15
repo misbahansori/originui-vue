@@ -178,6 +178,21 @@
         "tags": ["card", "extended", "card"],
         "colSpan": 2
       }
+    },
+    {
+      "name": "extended-11",
+      "type": "registry:component",
+      "registryDependencies": ["https://originui-vue.com/r/card.json"],
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-11.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["card", "extended", "card"],
+        "colSpan": 2
+      }
     }
   ]
 }
