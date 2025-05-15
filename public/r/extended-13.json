@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "extended-13",
+  "type": "registry:component",
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "components/extended-13.vue",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport {\n  Card,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/default/ui/card\";\n\nconst cards = [\n  {\n    title: \"Smart Analytics Dashboard\",\n    description:\n      \"Get real-time insights with customizable widgets and interactive data visualization tools.\",\n    class: \"col-span-1 lg:col-span-2\",\n    img: \"/img/long-jobs.webp\",\n  },\n  {\n    title: \"Cross-Platform Integration\",\n    description:\n      \"Seamlessly connect with your favorite tools and services through our extensive API ecosystem.\",\n    class: \"col-span-1 lg:col-span-2\",\n    img: \"/img/multi-users.webp\",\n  },\n  {\n    title: \"Advanced Security Suite\",\n    description:\n      \"Enterprise-grade security with end-to-end encryption and multi-factor authentication.\",\n    class: \"col-span-1 lg:col-span-2\",\n    img: \"/img/tasks-scheduler.webp\",\n  },\n  {\n    title: \"Automated Workflow Builder\",\n    description:\n      \"Create custom workflows with drag-and-drop interface and no-code automation tools.\",\n    class: \"col-span-1 lg:col-span-3\",\n    img: \"/img/scenarios.webp\",\n  },\n  {\n    title: \"AI-Powered Insights\",\n    description:\n      \"Leverage machine learning to predict trends and provide actionable business recommendations.\",\n    class: \"col-span-1 lg:col-span-3\",\n    img: \"/img/explore.webp\",\n  },\n];\n</script>\n\n<template>\n  <div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6\">\n    <Card\n      v-for=\"card in cards\"\n      :key=\"card.title\"\n      :class=\"cn('gap-2 p-2', card.class)\"\n    >\n      <div\n        class=\"flex h-56 w-full items-center justify-center overflow-hidden rounded-md border bg-stone-900\"\n      >\n        <img\n          :src=\"card.img\"\n          alt=\"card image\"\n          class=\"h-auto w-auto object-cover\"\n        />\n      </div>\n      <CardHeader class=\"p-2\">\n        <CardTitle class=\"text-lg font-semibold\">{{ card.title }}</CardTitle>\n        <CardDescription class=\"text-sm/relaxed\">\n          {{ card.description }}\n        </CardDescription>\n      </CardHeader>\n    </Card>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": ["card", "extended", "card"],
+    "colSpan": 3
+  }
+}

@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "ui/card/Card.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"card\"\n    :class=\"\n      cn(\n        'bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"card\"\n    :class=\"\n      cn(\n        'bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui",
       "target": ""
     },

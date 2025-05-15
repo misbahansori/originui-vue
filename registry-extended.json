@@ -163,6 +163,76 @@
         "tags": ["empty state", "extended", "empty"],
         "colSpan": 2
       }
+    },
+    {
+      "name": "extended-10",
+      "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": ["https://originui-vue.com/r/card.json"],
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-10.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["card", "extended", "card"],
+        "colSpan": 1
+      }
+    },
+    {
+      "name": "extended-11",
+      "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/card.json"
+      ],
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-11.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["card", "extended", "card"],
+        "colSpan": 1
+      }
+    },
+    {
+      "name": "extended-12",
+      "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/card.json"
+      ],
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-12.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["card", "extended", "card"],
+        "colSpan": 1
+      }
+    },
+    {
+      "name": "extended-13",
+      "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": ["https://originui-vue.com/r/card.json"],
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-13.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["card", "extended", "card"],
+        "colSpan": 3
+      }
     }
   ]
 }
