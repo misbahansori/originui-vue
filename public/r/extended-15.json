@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "extended-15",
+  "type": "registry:component",
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "components/extended-15.vue",
+      "content": "<script setup lang=\"ts\">\nimport { Card, CardContent } from \"@/registry/default/ui/card\";\nimport {\n  LucideMoreHorizontal,\n  LucideRocket,\n  LucideUserPlus,\n  LucideVerified,\n} from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Card class=\"py-4\">\n    <CardContent class=\"flex flex-col gap-3 px-4\">\n      <div class=\"flex gap-3\">\n        <div\n          class=\"bg-primary text-primary-foreground flex size-20 items-center justify-center rounded-md border-2\"\n        >\n          <LucideRocket class=\"size-10\" />\n        </div>\n        <div class=\"flex flex-1 flex-col gap-2\">\n          <div class=\"flex items-center justify-between gap-2\">\n            <div class=\"flex items-center gap-1\">\n              <p class=\"text-base font-medium\">SpaceX</p>\n              <LucideVerified class=\"size-4 shrink-0\" />\n            </div>\n            <Badge\n              variant=\"outline\"\n              class=\"text-[0.625rem] font-medium tracking-wide uppercase\"\n            >\n              Aerospace\n            </Badge>\n          </div>\n          <span class=\"text-muted-foreground text-sm/none font-medium\">\n            Space Exploration\n          </span>\n          <div class=\"text-muted-foreground text-sm/none\">\n            <span class=\"font-semibold\">12,000+</span>\n            Employees\n          </div>\n        </div>\n      </div>\n      <p class=\"text-muted-foreground text-sm/relaxed\">\n        SpaceX is revolutionizing space technology with reusable rockets and\n        ambitious missions to make humanity a multi-planetary species.\n      </p>\n      <div class=\"flex flex-wrap gap-2\">\n        <Badge variant=\"outline\">#spacex</Badge>\n        <Badge variant=\"outline\">#aerospace</Badge>\n        <Badge variant=\"outline\">#technology</Badge>\n      </div>\n      <div class=\"flex gap-2\">\n        <Button size=\"lg\" class=\"w-full flex-1 rounded-full\">\n          <LucideUserPlus class=\"size-4\" />\n          <span>Follow</span>\n        </Button>\n        <Button variant=\"outline\" class=\"size-10 rounded-full\">\n          <LucideMoreHorizontal class=\"size-4\" />\n        </Button>\n      </div>\n    </CardContent>\n  </Card>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": ["card", "extended", "card"],
+    "colSpan": 1
+  }
+}
