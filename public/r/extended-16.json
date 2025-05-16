@@ -1,0 +1,20 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "extended-16",
+  "type": "registry:component",
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": [
+    "https://originui-vue.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "components/extended-16.vue",
+      "content": "<script setup lang=\"ts\">\nimport { Card, CardContent } from \"@/registry/default/ui/card\";\nimport { LucideCheckCircle } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Card class=\"ring-border/40 ring-4\">\n    <CardContent class=\"flex flex-col gap-4\">\n      <div class=\"flex flex-col items-center gap-2 text-center\">\n        <div\n          class=\"bg-muted/50 flex size-12 items-center justify-center rounded-md\"\n        >\n          <LucideCheckCircle class=\"text-green-500\" />\n        </div>\n        <CardTitle class=\"text-xl font-semibold\">Import Succesful</CardTitle>\n        <CardDescription>\n          Success! Data from sample.xlsx was imported successfully.\n        </CardDescription>\n      </div>\n      <div class=\"bg-muted flex flex-wrap gap-3 rounded-md p-3\">\n        <div class=\"flex flex-1 flex-col\">\n          <span\n            class=\"text-muted-foreground text-sm font-medium whitespace-nowrap\"\n          >\n            No. of imported rows:\n          </span>\n          <span class=\"text-base font-semibold whitespace-nowrap\">231</span>\n        </div>\n        <div class=\"flex flex-1 flex-col\">\n          <span\n            class=\"text-muted-foreground text-sm font-medium whitespace-nowrap\"\n          >\n            Conflicts found:\n          </span>\n          <div class=\"text-sm font-medium whitespace-nowrap\">\n            <span class=\"text-destructive-foreground\">O errors</span>\n            <span>,&nbsp;</span>\n            <span class=\"text-yellow-600 dark:text-yellow-500\">2 warning</span>\n          </div>\n        </div>\n      </div>\n    </CardContent>\n  </Card>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": ["card", "extended", "card"],
+    "colSpan": 1
+  }
+}
