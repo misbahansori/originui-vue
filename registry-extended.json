@@ -285,6 +285,45 @@
         "tags": ["card", "extended", "card"],
         "colSpan": 1
       }
+    },
+    {
+      "name": "extended-17",
+      "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/card.json",
+        "https://originui-vue.com/r/separator.json"
+      ],
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-17.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["card", "extended", "card"],
+        "colSpan": 1
+      }
+    },
+    {
+      "name": "extended-18",
+      "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/card.json",
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/separator.json"
+      ],
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-18.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["card", "extended", "card"],
+        "colSpan": 1
+      }
     }
   ]
 }
