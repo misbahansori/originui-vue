@@ -962,6 +962,16 @@
       "files": [
         {
           "target": "",
+          "path": "app/registry/default/ui/pagination/Pagination.vue",
+          "type": "registry:ui"
+        },
+        {
+          "target": "",
+          "path": "app/registry/default/ui/pagination/PaginationContent.vue",
+          "type": "registry:ui"
+        },
+        {
+          "target": "",
           "path": "app/registry/default/ui/pagination/PaginationEllipsis.vue",
           "type": "registry:ui"
         },
