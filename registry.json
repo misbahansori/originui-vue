@@ -11369,6 +11369,34 @@
         "tags": ["upload", "file"],
         "colSpan": 2
       }
+    },
+    {
+      "name": "comp-565",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-565.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["tree"],
+        "colSpan": 0.75
+      }
+    },
+    {
+      "name": "comp-566",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-566.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["tree"],
+        "colSpan": 0.75
+      }
     }
   ]
 }
