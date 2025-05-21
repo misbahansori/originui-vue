@@ -972,6 +972,11 @@
         },
         {
           "target": "",
+          "path": "app/registry/default/ui/pagination/PaginationItem.vue",
+          "type": "registry:ui"
+        },
+        {
+          "target": "",
           "path": "app/registry/default/ui/pagination/PaginationEllipsis.vue",
           "type": "registry:ui"
         },

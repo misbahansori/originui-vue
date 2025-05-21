@@ -18,6 +18,12 @@
       "target": ""
     },
     {
+      "path": "ui/pagination/PaginationItem.vue",
+      "content": "<script setup lang=\"ts\">\nimport type { HTMLAttributes } from 'vue'\nimport { cn } from '@/lib/utils'\nimport { buttonVariants, type ButtonVariants } from '@/registry/default/ui/button'\nimport { reactiveOmit } from '@vueuse/core'\nimport { PaginationListItem, type PaginationListItemProps } from 'reka-ui'\n\nconst props = withDefaults(defineProps<PaginationListItemProps & {\n  size?: ButtonVariants['size']\n  class?: HTMLAttributes['class']\n  isActive?: boolean\n}>(), {\n  size: 'icon',\n})\n\nconst delegatedProps = reactiveOmit(props, 'class', 'size', 'isActive')\n</script>\n\n<template>\n  <PaginationListItem\n    data-slot=\"pagination-item\"\n    v-bind=\"delegatedProps\"\n    :class=\"cn(\n      buttonVariants({\n        variant: isActive ? 'outline' : 'ghost',\n        size,\n      }),\n      props.class)\"\n  >\n    <slot />\n  </PaginationListItem>\n</template>\n",
+      "type": "registry:ui",
+      "target": ""
+    },
+    {
       "path": "ui/pagination/PaginationEllipsis.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from '@/lib/utils'\nimport { MoreHorizontal } from 'lucide-vue-next'\nimport { PaginationEllipsis, type PaginationEllipsisProps } from 'reka-ui'\nimport { computed, type HTMLAttributes } from 'vue'\n\nconst props = defineProps<PaginationEllipsisProps & { class?: HTMLAttributes['class'] }>()\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props\n\n  return delegated\n})\n</script>\n\n<template>\n  <PaginationEllipsis\n    data-slot=\"pagination-ellipsis\"\n    v-bind=\"delegatedProps\"\n    :class=\"cn('flex size-9 items-center justify-center', props.class)\"\n  >\n    <slot>\n      <MoreHorizontal class=\"size-4\" />\n      <span class=\"sr-only\">More pages</span>\n    </slot>\n  </PaginationEllipsis>\n</template>\n",
       "type": "registry:ui",
