@@ -11,7 +11,7 @@
   },
   "aliases": {
     "components": "@/registry/default/components",
-    "composables": "@/registry/default/composables",
+    "composables": "@/composables",
     "utils": "@/lib/utils",
     "ui": "@/registry/default/ui",
     "lib": "@/lib"

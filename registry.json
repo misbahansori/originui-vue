@@ -1751,6 +1751,16 @@
       ]
     },
     {
+      "name": "use-file-upload",
+      "type": "registry:hook",
+      "files": [
+        {
+          "path": "app/composables/useFileUpload.ts",
+          "type": "registry:hook"
+        }
+      ]
+    },
+    {
       "name": "comp-01",
       "type": "registry:component",
       "registryDependencies": [
@@ -11248,6 +11258,10 @@
     {
       "name": "comp-544",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/use-file-upload.json"
+      ],
       "files": [
         {
           "path": "app/registry/default/components/comp-544.vue",
@@ -11262,6 +11276,11 @@
     {
       "name": "comp-545",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/use-file-upload.json",
+        "https://originui-vue.com/r/button.json"
+      ],
       "files": [
         {
           "path": "app/registry/default/components/comp-545.vue",
@@ -11276,6 +11295,11 @@
     {
       "name": "comp-546",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/use-file-upload.json",
+        "https://originui-vue.com/r/button.json"
+      ],
       "files": [
         {
           "path": "app/registry/default/components/comp-546.vue",
@@ -11290,6 +11314,11 @@
     {
       "name": "comp-547",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/use-file-upload.json",
+        "https://originui-vue.com/r/button.json"
+      ],
       "files": [
         {
           "path": "app/registry/default/components/comp-547.vue",
@@ -11304,6 +11333,11 @@
     {
       "name": "comp-548",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/use-file-upload.json",
+        "https://originui-vue.com/r/button.json"
+      ],
       "files": [
         {
           "path": "app/registry/default/components/comp-548.vue",
@@ -11318,6 +11352,11 @@
     {
       "name": "comp-549",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/use-file-upload.json",
+        "https://originui-vue.com/r/button.json"
+      ],
       "files": [
         {
           "path": "app/registry/default/components/comp-549.vue",
@@ -11332,6 +11371,11 @@
     {
       "name": "comp-550",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/use-file-upload.json",
+        "https://originui-vue.com/r/button.json"
+      ],
       "files": [
         {
           "path": "app/registry/default/components/comp-550.vue",
@@ -11346,6 +11390,12 @@
     {
       "name": "comp-551",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/use-file-upload.json",
+        "https://originui-vue.com/r/button.json",
+        "https://originui-vue.com/r/table.json"
+      ],
       "files": [
         {
           "path": "app/registry/default/components/comp-551.vue",
@@ -11360,6 +11410,11 @@
     {
       "name": "comp-552",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/use-file-upload.json",
+        "https://originui-vue.com/r/button.json"
+      ],
       "files": [
         {
           "path": "app/registry/default/components/comp-552.vue",
@@ -11374,6 +11429,11 @@
     {
       "name": "comp-553",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/use-file-upload.json",
+        "https://originui-vue.com/r/button.json"
+      ],
       "files": [
         {
           "path": "app/registry/default/components/comp-553.vue",
