@@ -11245,6 +11245,11 @@
     {
       "name": "comp-543",
       "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": [
+        "https://originui-vue.com/r/use-file-upload.json",
+        "https://originui-vue.com/r/button.json"
+      ],
       "files": [
         {
           "path": "app/registry/default/components/comp-543.vue",
