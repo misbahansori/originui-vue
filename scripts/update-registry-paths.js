@@ -80,17 +80,13 @@ function logResults(updatedFiles) {
   );
 }
 
-async function updateRegistryPaths() {
+export async function updateRegistryPaths() {
   try {
     const files = await glob("public/r/**/*.json");
     const results = await Promise.all(files.map(processRegistryFile));
     const updatedFiles = results.filter((result) => result.updates.length > 0);
-
-    logResults(updatedFiles);
   } catch (error) {
     console.error("❌ Error updating registry paths:", error);
     process.exit(1);
   }
 }
-
-updateRegistryPaths();

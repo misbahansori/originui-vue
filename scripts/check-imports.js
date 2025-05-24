@@ -2,9 +2,11 @@ import fs from "fs";
 import path from "path";
 import { glob } from "glob";
 import prettier from "prettier";
+import { exit } from "process";
 
 const CONFIG = {
-  componentsDir: "app/registry/default/components",
+  componentsDir: path.resolve("app/registry/default/components"),
+  registryDir: path.resolve("public/r"),
   registryFile: "registry.json",
   ignoredDependencies: ["vue"],
   prettier: {
@@ -12,6 +14,7 @@ const CONFIG = {
     printWidth: 60,
     htmlWhitespaceSensitivity: "ignore",
   },
+  supportedExtensions: [".vue", ".ts"],
 };
 
 const REGISTRY_PATTERNS = [
@@ -30,12 +33,12 @@ function getRegistryUrl(importPath) {
   return null;
 }
 
-function extractImports(scriptContent) {
+function extractImports(content) {
   const dependencies = new Set();
   const registryDeps = new Set();
 
   const importBlocks =
-    scriptContent.match(
+    content.match(
       /import\s+{[\s\S]*?}.*?from\s+['"](.*?)['"];?|import\s+.*?from\s+['"](.*?)['"];?/g,
     ) || [];
 
@@ -64,83 +67,118 @@ function extractImports(scriptContent) {
   return { dependencies, registryDeps };
 }
 
-function updateRegistry(registry, componentName, dependencies, registryDeps) {
-  const componentIndex = registry.items.findIndex(
-    (item) => item.name === componentName,
+async function updateRegistryFile(componentName, dependencies, registryDeps) {
+  const registryFilePath = path.join(
+    CONFIG.registryDir,
+    `${componentName}.json`,
   );
-  if (componentIndex === -1) return null;
 
-  const component = registry.items[componentIndex];
-  const depsArray = Array.from(dependencies);
-  const registryDepsArray = Array.from(registryDeps);
-
-  const updatedComponent = { ...component };
-
-  if (depsArray.length > 0) {
-    updatedComponent.dependencies = depsArray;
-  } else {
-    delete updatedComponent.dependencies;
-  }
-
-  if (registryDepsArray.length > 0) {
-    updatedComponent.registryDependencies = registryDepsArray;
-  } else {
-    delete updatedComponent.registryDependencies;
-  }
-
-  if (JSON.stringify(component) !== JSON.stringify(updatedComponent)) {
-    registry.items[componentIndex] = updatedComponent;
-    return {
-      componentName,
-      dependencies: depsArray,
-      registryDeps: registryDepsArray,
-    };
-  }
-
-  return null;
-}
-
-async function processComponent(file, registry) {
-  const content = fs.readFileSync(file, "utf8");
-  const componentName = path.basename(file, ".vue");
-  const scriptMatch = content.match(/<script[^>]*>([\s\S]*?)<\/script>/);
-
-  if (!scriptMatch) return null;
-
-  const { dependencies, registryDeps } = extractImports(scriptMatch[1]);
-  return updateRegistry(registry, componentName, dependencies, registryDeps);
-}
-
-async function checkImports() {
   try {
-    const registry = JSON.parse(fs.readFileSync(CONFIG.registryFile, "utf8"));
-    const files = await glob(`${CONFIG.componentsDir}/**/*.vue`);
-    const updates = [];
-    const dependencyMap = new Map();
+    const registry = JSON.parse(fs.readFileSync(registryFilePath, "utf8"));
 
-    for (const file of files) {
-      const result = await processComponent(file, registry);
-      if (result) {
-        updates.push(result);
-        if (result.dependencies?.length) {
-          dependencyMap.set(result.componentName, result.dependencies);
+    // Extract dependencies from all files in the registry
+    const allDependencies = new Set();
+    const allRegistryDeps = new Set();
+
+    // Process each file's content in the registry
+    if (registry.files) {
+      for (const file of registry.files) {
+        if (file.content) {
+          const { dependencies: fileDeps, registryDeps: fileRegistryDeps } =
+            extractImports(file.content);
+
+          fileDeps.forEach((dep) => allDependencies.add(dep));
+          fileRegistryDeps.forEach((dep) => allRegistryDeps.add(dep));
         }
       }
+    }
+
+    // Update the registry with all found dependencies
+    if (allDependencies.size > 0) {
+      registry.dependencies = Array.from(allDependencies);
+    } else {
+      delete registry.dependencies;
+    }
+
+    if (allRegistryDeps.size > 0) {
+      registry.registryDependencies = Array.from(allRegistryDeps);
+    } else {
+      delete registry.registryDependencies;
     }
 
     const formattedRegistry = await prettier.format(
       JSON.stringify(registry),
       CONFIG.prettier,
     );
-    fs.writeFileSync(CONFIG.registryFile, formattedRegistry);
+    fs.writeFileSync(registryFilePath, formattedRegistry);
 
-    console.log(
-      `\n✅ Processed ${files.length} components, updated ${updates.length} entries`,
-    );
+    return true;
   } catch (error) {
-    console.error("❌ Error checking imports:", error);
-    process.exit(1);
+    return false;
   }
 }
 
-checkImports();
+async function processComponent(file) {
+  const content = fs.readFileSync(file, "utf8");
+  const componentName = path.basename(file, path.extname(file));
+
+  let scriptContent = content;
+  if (file.endsWith(".vue")) {
+    const scriptMatch = content.match(/<script[^>]*>([\s\S]*?)<\/script>/);
+    if (!scriptMatch) return null;
+    scriptContent = scriptMatch[1];
+  }
+
+  const { dependencies, registryDeps } = extractImports(scriptContent);
+  return updateRegistryFile(componentName, dependencies, registryDeps);
+}
+
+export async function checkImports() {
+  try {
+    console.log("🚀 Starting import check process...");
+
+    if (!fs.existsSync(CONFIG.componentsDir)) {
+      throw new Error(
+        `Components directory does not exist: ${CONFIG.componentsDir}`,
+      );
+    }
+
+    const pattern = path.join(CONFIG.componentsDir, "**/*.{vue,ts}");
+    const files = await glob(pattern);
+
+    console.log(`📊 Found ${files.length} files to process`);
+
+    if (files.length === 0) {
+      console.log("⚠️ No files found to process");
+      return;
+    }
+
+    let updatedCount = 0;
+    let errorCount = 0;
+    let skippedCount = 0;
+
+    for (const file of files) {
+      const result = await processComponent(file);
+      if (result === null) {
+        skippedCount++;
+      } else if (result) {
+        updatedCount++;
+      } else {
+        errorCount++;
+      }
+    }
+
+    console.log("\n📈 Final Results:");
+    console.log(`- Total files processed: ${files.length}`);
+    console.log(`- Successfully updated: ${updatedCount}`);
+    console.log(`- Skipped: ${skippedCount}`);
+    console.log(`- Errors: ${errorCount}`);
+
+    if (errorCount > 0) {
+      console.log("\n⚠️ Some files had errors during processing");
+    }
+  } catch (error) {
+    console.error("❌ Fatal error during import check:", error);
+    process.exit(1);
+  }
+}
