@@ -2,17 +2,23 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-245",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/slider.json"
-  ],
   "files": [
     {
       "path": "components/comp-245.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport { ref } from \"vue\";\n\nconst value = ref([15]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Slider with reference labels</Label>\n    <div>\n      <Slider\n        v-model=\"value\"\n        :min=\"5\"\n        :max=\"35\"\n        aria-label=\"Slider with reference labels\"\n      />\n      <span\n        class=\"text-muted-foreground mt-4 flex w-full items-center justify-between gap-1 text-xs font-medium\"\n        aria-hidden=\"true\"\n      >\n        <span>5 GB</span>\n        <span>20 GB</span>\n        <span>35 GB</span>\n      </span>\n    </div>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["slider", "label", "radix"] }
+  "meta": {
+    "tags": [
+      "slider",
+      "label",
+      "radix"
+    ]
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/slider.json"
+  ]
 }

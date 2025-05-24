@@ -2,15 +2,11 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-300",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
   "files": [
     {
       "path": "components/comp-300.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\n// TODO: Implement the component\n</script>\n\n<template>\n  <Button variant=\"outline\">Custom sonner</Button>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
@@ -23,5 +19,9 @@
     ],
     "colSpan": 2,
     "style": 1
-  }
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ]
 }

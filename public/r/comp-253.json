@@ -2,16 +2,11 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-253",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/slider.json"
-  ],
   "files": [
     {
       "path": "components/comp-253.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport { ref } from \"vue\";\n\nconst value = ref([25, 50, 100]);\n\nconst formatTooltip = (val: number) => `${val}%`;\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Slider with multiple thumbs</Label>\n    <Slider\n      v-model=\"value\"\n      aria-label=\"Slider with multiple thumbs\"\n      :show-tooltip=\"true\"\n      :tooltip-content=\"formatTooltip\"\n    />\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
@@ -22,5 +17,10 @@
       "range",
       "radix"
     ]
-  }
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/slider.json"
+  ]
 }

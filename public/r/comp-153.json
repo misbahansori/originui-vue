@@ -2,17 +2,23 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-153",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/radio-group.json"
-  ],
   "files": [
     {
       "path": "components/comp-153.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { RadioGroup, RadioGroupItem } from \"@/registry/default/ui/radio-group\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst selectedValue = ref(\"1\");\n</script>\n\n<template>\n  <RadioGroup\n    v-model=\"selectedValue\"\n    class=\"[--primary:var(--color-indigo-500)] [--ring:var(--color-indigo-300)] in-[.dark]:[--primary:var(--color-indigo-500)] in-[.dark]:[--ring:var(--color-indigo-900)]\"\n  >\n    <div class=\"flex items-center gap-2\">\n      <RadioGroupItem value=\"1\" :id=\"`${id}-1`\" />\n      <Label :for=\"`${id}-1`\">Option 1</Label>\n    </div>\n    <div class=\"flex items-center gap-2\">\n      <RadioGroupItem value=\"2\" :id=\"`${id}-2`\" />\n      <Label :for=\"`${id}-2`\">Option 2</Label>\n    </div>\n    <div class=\"flex items-center gap-2\">\n      <RadioGroupItem value=\"3\" :id=\"`${id}-3`\" />\n      <Label :for=\"`${id}-3`\">Option 3</Label>\n    </div>\n  </RadioGroup>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["radio", "label", "radix"] }
+  "meta": {
+    "tags": [
+      "radio",
+      "label",
+      "radix"
+    ]
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/radio-group.json"
+  ]
 }

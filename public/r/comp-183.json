@@ -2,21 +2,27 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-183",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/switch.json"
-  ],
   "files": [
     {
       "path": "components/comp-183.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Switch } from \"@/registry/default/ui/switch\";\nimport { LucideMoon, LucideSun } from \"lucide-vue-next\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst checked = ref(true);\n</script>\n\n<template>\n  <div>\n    <div\n      class=\"relative inline-grid h-9 grid-cols-[1fr_1fr] items-center text-sm font-medium\"\n    >\n      <Switch\n        :id=\"id\"\n        v-model=\"checked\"\n        class=\"peer data-[state=checked]:bg-input/50 data-[state=unchecked]:bg-input/50 absolute inset-0 h-[inherit] w-auto [&_span]:h-full [&_span]:w-1/2 [&_span]:transition-transform [&_span]:duration-300 [&_span]:[transition-timing-function:cubic-bezier(0.16,1,0.3,1)] [&_span]:data-[state=checked]:translate-x-full [&_span]:data-[state=checked]:rtl:-translate-x-full\"\n      />\n      <span\n        class=\"peer-data-[state=checked]:text-muted-foreground/70 pointer-events-none relative ms-0.5 flex min-w-8 items-center justify-center text-center\"\n      >\n        <LucideMoon :size=\"16\" aria-hidden=\"true\" />\n      </span>\n      <span\n        class=\"peer-data-[state=unchecked]:text-muted-foreground/70 pointer-events-none relative me-0.5 flex min-w-8 items-center justify-center text-center\"\n      >\n        <LucideSun :size=\"16\" aria-hidden=\"true\" />\n      </span>\n    </div>\n    <Label :for=\"id\" class=\"sr-only\">Labeled switch</Label>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": ["switch", "label", "darkmode", "radix"],
+    "tags": [
+      "switch",
+      "label",
+      "darkmode",
+      "radix"
+    ],
     "style": 1
-  }
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/switch.json"
+  ]
 }

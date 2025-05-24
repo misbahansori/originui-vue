@@ -2,20 +2,25 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-392",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/avatar.json"
-  ],
   "files": [
     {
       "path": "components/comp-392.vue",
       "content": "<script setup lang=\"ts\">\nimport { Avatar, AvatarFallback } from \"@/registry/default/ui/avatar\";\nimport { LucideUserRound } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Avatar>\n    <AvatarFallback>\n      <LucideUserRound class=\"size-4 opacity-60\" aria-hidden=\"true\" />\n    </AvatarFallback>\n  </Avatar>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": ["avatar", "user", "profile"],
+    "tags": [
+      "avatar",
+      "user",
+      "profile"
+    ],
     "style": 1
-  }
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/avatar.json"
+  ]
 }

@@ -2,15 +2,11 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-364",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/hover-card.json"
-  ],
   "files": [
     {
       "path": "components/comp-364.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@/registry/default/ui/hover-card\";\n</script>\n\n<template>\n  <HoverCard>\n    <div class=\"flex items-center gap-3\">\n      <img\n        class=\"shrink-0 rounded-full\"\n        src=\"/avatar-40-05.jpg\"\n        width=\"40\"\n        height=\"40\"\n        alt=\"Avatar\"\n      />\n      <div class=\"space-y-0.5\">\n        <HoverCardTrigger as-child>\n          <p>\n            <a class=\"text-sm font-medium hover:underline\" href=\"#\">\n              Keith Kennedy\n            </a>\n          </p>\n        </HoverCardTrigger>\n        <p class=\"text-muted-foreground text-xs\">@k.kennedy</p>\n      </div>\n    </div>\n    <HoverCardContent>\n      <div class=\"space-y-3\">\n        <div class=\"flex items-center gap-3\">\n          <img\n            class=\"shrink-0 rounded-full\"\n            src=\"/avatar-40-05.jpg\"\n            width=\"40\"\n            height=\"40\"\n            alt=\"Avatar\"\n          />\n          <div class=\"space-y-0.5\">\n            <p class=\"text-sm font-medium\">Keith Kennedy</p>\n            <p class=\"text-muted-foreground text-xs\">@k.kennedy</p>\n          </div>\n        </div>\n        <p class=\"text-muted-foreground text-sm\">\n          Designer at\n          <strong class=\"text-foreground font-medium\">@Origin UI</strong>\n          . Crafting web experiences with Tailwind CSS.\n        </p>\n        <div class=\"flex items-center gap-2\">\n          <div class=\"flex -space-x-1.5\">\n            <img\n              class=\"ring-background rounded-full ring-1\"\n              src=\"/avatar-20-04.jpg\"\n              width=\"20\"\n              height=\"20\"\n              alt=\"Friend 01\"\n            />\n            <img\n              class=\"ring-background rounded-full ring-1\"\n              src=\"/avatar-20-05.jpg\"\n              width=\"20\"\n              height=\"20\"\n              alt=\"Friend 02\"\n            />\n            <img\n              class=\"ring-background rounded-full ring-1\"\n              src=\"/avatar-20-06.jpg\"\n              width=\"20\"\n              height=\"20\"\n              alt=\"Friend 03\"\n            />\n          </div>\n          <div class=\"text-muted-foreground text-xs\">3 mutual friends</div>\n        </div>\n      </div>\n    </HoverCardContent>\n  </HoverCard>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
@@ -23,5 +19,9 @@
       "radix"
     ],
     "style": 1
-  }
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/hover-card.json"
+  ]
 }

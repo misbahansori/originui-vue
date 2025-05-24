@@ -2,17 +2,23 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-06",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json"
-  ],
   "files": [
     {
       "path": "components/comp-06.vue",
       "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with error</Label>\n    <Input\n      :id=\"id\"\n      class=\"peer\"\n      placeholder=\"Email\"\n      type=\"email\"\n      value=\"invalid@email.com\"\n      aria-invalid=\"true\"\n    />\n    <p\n      class=\"peer-aria-invalid:text-destructive mt-2 text-xs\"\n      role=\"alert\"\n      aria-live=\"polite\"\n    >\n      Email is invalid\n    </p>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["input", "label", "error"] }
+  "meta": {
+    "tags": [
+      "input",
+      "label",
+      "error"
+    ]
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json"
+  ]
 }

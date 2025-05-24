@@ -2,19 +2,11 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-233",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/command.json",
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/popover.json"
-  ],
   "files": [
     {
       "path": "components/comp-233.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n} from \"@/registry/default/ui/command\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@/registry/default/ui/popover\";\nimport {\n  LucideBrain,\n  LucideChevronDown,\n  LucideCpu,\n  LucideDatabase,\n  LucideGlobe,\n  LucideHelpCircle,\n  LucideLayout,\n  LucideLineChart,\n  LucideNetwork,\n  LucideSearch,\n  LucideServer,\n} from \"lucide-vue-next\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst open = ref(false);\nconst value = ref(\"\");\n\nconst items = [\n  {\n    value: \"analytics platform\",\n    label: \"Analytics Platform\",\n    icon: LucideLineChart,\n    number: 2451,\n  },\n  {\n    value: \"ai services\",\n    label: \"AI Services\",\n    icon: LucideBrain,\n    number: 1832,\n  },\n  {\n    value: \"database systems\",\n    label: \"Database Systems\",\n    icon: LucideDatabase,\n    number: 1654,\n  },\n  {\n    value: \"compute resources\",\n    label: \"Compute Resources\",\n    icon: LucideCpu,\n    number: 943,\n  },\n  {\n    value: \"network services\",\n    label: \"Network Services\",\n    icon: LucideNetwork,\n    number: 832,\n  },\n  {\n    value: \"web services\",\n    label: \"Web Services\",\n    icon: LucideGlobe,\n    number: 654,\n  },\n  {\n    value: \"monitoring tools\",\n    label: \"Monitoring Tools\",\n    icon: LucideSearch,\n    number: 432,\n  },\n  {\n    value: \"server management\",\n    label: \"Server Management\",\n    icon: LucideServer,\n    number: 321,\n  },\n  {\n    value: \"infrastructure\",\n    label: \"Infrastructure\",\n    icon: \"Lucide:Blocks\",\n    number: 234,\n  },\n  {\n    value: \"frontend services\",\n    label: \"Frontend Services\",\n    icon: LucideLayout,\n    number: 123,\n  },\n];\n\nfunction handleSelect(currentValue: string) {\n  value.value = currentValue === value.value ? \"\" : currentValue;\n  open.value = false;\n}\n\nfunction getSelectedItem() {\n  return items.find((item) => item.value === value.value);\n}\n\nfunction getSelectedItemIcon() {\n  return getSelectedItem()?.icon || LucideHelpCircle;\n}\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Options with icon and number</Label>\n    <Popover v-model:open=\"open\">\n      <PopoverTrigger as-child>\n        <Button\n          :id=\"id\"\n          variant=\"outline\"\n          role=\"combobox\"\n          :aria-expanded=\"open\"\n          class=\"bg-background hover:bg-background border-input w-full justify-between px-3 font-normal outline-offset-0 outline-none focus-visible:outline-[3px]\"\n        >\n          <span v-if=\"value\" class=\"flex min-w-0 items-center gap-2\">\n            <component\n              :is=\"getSelectedItemIcon()\"\n              :size=\"16\"\n              class=\"text-muted-foreground\"\n            />\n            <span class=\"truncate\">{{ getSelectedItem()?.label }}</span>\n          </span>\n          <span v-else class=\"text-muted-foreground\">\n            Select service category\n          </span>\n          <LucideChevronDown\n            :size=\"16\"\n            class=\"text-muted-foreground/80 shrink-0\"\n            aria-hidden=\"true\"\n          />\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent\n        class=\"border-input w-full min-w-[var(--reka-popper-anchor-width)] p-0\"\n        align=\"start\"\n      >\n        <Command>\n          <CommandInput placeholder=\"Search services...\" />\n          <CommandList>\n            <CommandEmpty>No service found.</CommandEmpty>\n            <CommandGroup>\n              <CommandItem\n                v-for=\"item in items\"\n                :key=\"item.value\"\n                :value=\"item.value\"\n                @select=\"handleSelect(item.value)\"\n                class=\"flex items-center justify-between\"\n              >\n                <div class=\"flex items-center gap-2\">\n                  <component\n                    :is=\"item.icon\"\n                    :size=\"16\"\n                    class=\"text-muted-foreground\"\n                  />\n                  {{ item.label }}\n                </div>\n                <span class=\"text-muted-foreground text-xs\">\n                  {{ item.number.toLocaleString() }}\n                </span>\n              </CommandItem>\n            </CommandGroup>\n          </CommandList>\n        </Command>\n      </PopoverContent>\n    </Popover>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
@@ -28,5 +20,14 @@
       "autocomplete",
       "radix"
     ]
-  }
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/command.json",
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/popover.json"
+  ]
 }

@@ -2,21 +2,27 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-373",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/dropdown-menu.json"
-  ],
   "files": [
     {
       "path": "components/comp-373.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuPortal,\n  DropdownMenuSeparator,\n  DropdownMenuShortcut,\n  DropdownMenuSub,\n  DropdownMenuSubContent,\n  DropdownMenuSubTrigger,\n  DropdownMenuTrigger,\n} from \"@/registry/default/ui/dropdown-menu\";\nimport { LucideChevronDown } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <DropdownMenu>\n    <DropdownMenuTrigger asChild>\n      <Button variant=\"outline\">\n        Rich menu\n        <LucideChevronDown class=\"-me-1 size-4 opacity-60\" aria-hidden=\"true\" />\n      </Button>\n    </DropdownMenuTrigger>\n    <DropdownMenuContent>\n      <DropdownMenuGroup>\n        <DropdownMenuItem>\n          <span>Edit</span>\n          <DropdownMenuShortcut>⌘E</DropdownMenuShortcut>\n        </DropdownMenuItem>\n        <DropdownMenuItem>\n          <span>Duplicate</span>\n          <DropdownMenuShortcut>⌘D</DropdownMenuShortcut>\n        </DropdownMenuItem>\n      </DropdownMenuGroup>\n      <DropdownMenuSeparator />\n      <DropdownMenuGroup>\n        <DropdownMenuItem>\n          <span>Archive</span>\n          <DropdownMenuShortcut>⌘A</DropdownMenuShortcut>\n        </DropdownMenuItem>\n        <DropdownMenuSub>\n          <DropdownMenuSubTrigger>More</DropdownMenuSubTrigger>\n          <DropdownMenuPortal>\n            <DropdownMenuSubContent>\n              <DropdownMenuItem>Move to project</DropdownMenuItem>\n              <DropdownMenuItem>Move to folder</DropdownMenuItem>\n              <DropdownMenuSeparator />\n              <DropdownMenuItem>Advanced options</DropdownMenuItem>\n            </DropdownMenuSubContent>\n          </DropdownMenuPortal>\n        </DropdownMenuSub>\n      </DropdownMenuGroup>\n      <DropdownMenuSeparator />\n      <DropdownMenuGroup>\n        <DropdownMenuItem>Share</DropdownMenuItem>\n        <DropdownMenuItem>Add to favorites</DropdownMenuItem>\n      </DropdownMenuGroup>\n      <DropdownMenuSeparator />\n      <DropdownMenuItem variant=\"destructive\">\n        <span>Delete</span>\n        <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>\n      </DropdownMenuItem>\n    </DropdownMenuContent>\n  </DropdownMenu>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": ["dropdown", "kbd", "delete", "radix"],
+    "tags": [
+      "dropdown",
+      "kbd",
+      "delete",
+      "radix"
+    ],
     "style": 1
-  }
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/dropdown-menu.json"
+  ]
 }

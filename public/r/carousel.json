@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "carousel",
   "type": "registry:ui",
-  "dependencies": ["reka-ui", "embla-carousel-vue", "@vueuse/core"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "files": [
     {
       "path": "ui/carousel/Carousel.vue",
@@ -34,5 +36,8 @@
       "content": "export { default as Carousel } from \"./Carousel.vue\";\nexport { default as CarouselContent } from \"./CarouselContent.vue\";\nexport { default as CarouselItem } from \"./CarouselItem.vue\";\nexport { default as CarouselNext } from \"./CarouselNext.vue\";\nexport { default as CarouselPrevious } from \"./CarouselPrevious.vue\";\nexport type { UnwrapRefCarouselApi as CarouselApi } from \"./interface\";\n\nexport { useCarousel } from \"./useCarousel\";\n",
       "type": "registry:ui"
     }
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
   ]
 }

@@ -2,17 +2,24 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-116",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
   "files": [
     {
       "path": "components/comp-116.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideChevronRight } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Button class=\"relative pe-12\">\n    Next\n    <span\n      class=\"bg-primary-foreground/15 pointer-events-none absolute inset-y-0 end-0 flex w-9 items-center justify-center\"\n    >\n      <LucideChevronRight class=\"opacity-60\" :size=\"16\" aria-hidden=\"true\" />\n    </span>\n  </Button>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["button", "next"], "style": 2 }
+  "meta": {
+    "tags": [
+      "button",
+      "next"
+    ],
+    "style": 2
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ]
 }

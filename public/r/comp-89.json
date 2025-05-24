@@ -2,16 +2,21 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-89",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
   "files": [
     {
       "path": "components/comp-89.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\n</script>\n\n<template>\n  <div class=\"inline-flex items-center gap-2\">\n    <Button variant=\"ghost\">Cancel</Button>\n    <Button>Save</Button>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["button"], "style": 2 }
+  "meta": {
+    "tags": [
+      "button"
+    ],
+    "style": 2
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ]
 }

@@ -2,17 +2,24 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-91",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
   "files": [
     {
       "path": "components/comp-91.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideLoaderCircle } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nconst isLoading = ref(false);\n\nfunction handleClick() {\n  isLoading.value = true;\n  // Simulate an async operation\n  setTimeout(() => {\n    isLoading.value = false;\n  }, 1000); // Reset after 1 second\n}\n</script>\n\n<template>\n  <Button\n    @click=\"handleClick\"\n    :disabled=\"isLoading\"\n    :data-loading=\"isLoading || undefined\"\n    class=\"group relative disabled:opacity-100\"\n  >\n    <span class=\"group-data-loading:text-transparent\">Click me</span>\n    <div\n      v-if=\"isLoading\"\n      class=\"absolute inset-0 flex items-center justify-center\"\n    >\n      <LucideLoaderCircle class=\"animate-spin\" :size=\"16\" aria-hidden=\"true\" />\n    </div>\n  </Button>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["button", "loading"], "style": 2 }
+  "meta": {
+    "tags": [
+      "button",
+      "loading"
+    ],
+    "style": 2
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ]
 }

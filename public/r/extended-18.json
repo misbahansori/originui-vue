@@ -2,10 +2,12 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "extended-18",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
-    "https://originui-vue.com/r/card.json",
     "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/card.json",
     "https://originui-vue.com/r/separator.json"
   ],
   "files": [
@@ -16,7 +18,11 @@
     }
   ],
   "meta": {
-    "tags": ["card", "extended", "card"],
+    "tags": [
+      "card",
+      "extended",
+      "card"
+    ],
     "colSpan": 1
   }
 }

@@ -2,12 +2,6 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-551",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/use-file-upload.json",
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/table.json"
-  ],
   "files": [
     {
       "path": "components/comp-551.vue",
@@ -15,5 +9,19 @@
       "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["upload", "file"], "colSpan": 2 }
+  "meta": {
+    "tags": [
+      "upload",
+      "file"
+    ],
+    "colSpan": 2
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/useFileUpload.json",
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/table.json"
+  ]
 }

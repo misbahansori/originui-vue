@@ -2,17 +2,11 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-260",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/slider.json"
-  ],
   "files": [
     {
       "path": "components/comp-260.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport { ref } from \"vue\";\n\nconst min_price = 5;\nconst max_price = 1240;\nconst value = ref([min_price, max_price]);\n\nconst formatPrice = (price: number) => {\n  return price === max_price\n    ? `$${price.toLocaleString()}+`\n    : `$${price.toLocaleString()}`;\n};\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-3\">\n    <Label class=\"tabular-nums\">\n      From {{ formatPrice(value[0] || min_price) }} to\n      {{ formatPrice(value[1] || max_price) }}\n    </Label>\n    <div class=\"flex items-center gap-4\">\n      <Slider\n        v-model=\"value\"\n        :min=\"min_price\"\n        :max=\"max_price\"\n        aria-label=\"Price range slider\"\n      />\n      <Button variant=\"outline\">Go</Button>\n    </div>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
@@ -23,5 +17,11 @@
       "button",
       "radix"
     ]
-  }
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/slider.json"
+  ]
 }

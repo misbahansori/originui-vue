@@ -2,19 +2,27 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-53",
   "type": "registry:component",
-  "dependencies": ["@vueuse/core", "lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/tooltip.json"
-  ],
   "files": [
     {
       "path": "components/comp-53.vue",
       "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/registry/default/ui/tooltip\";\nimport { useClipboard } from \"@vueuse/core\";\nimport { LucideCheck, LucideCopy } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nconst inputValue = ref(\"pnpm install origin-ui\");\nconst inputRef = ref<HTMLInputElement | null>(null);\n\nconst { copy, copied } = useClipboard();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"copy-input\">Copy to clipboard</Label>\n    <div class=\"relative\">\n      <Input\n        ref=\"inputRef\"\n        id=\"copy-input\"\n        class=\"pe-9\"\n        type=\"text\"\n        v-model=\"inputValue\"\n        readonly\n      />\n      <TooltipProvider>\n        <Tooltip :delay-duration=\"0\">\n          <TooltipTrigger as-child>\n            <button\n              @click=\"copy(inputValue)\"\n              class=\"text-muted-foreground/80 hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-md transition-[color,box-shadow] outline-none focus:z-10 focus-visible:ring-[3px] disabled:pointer-events-none disabled:cursor-not-allowed\"\n              :aria-label=\"copied ? 'Copied' : 'Copy to clipboard'\"\n              :disabled=\"copied\"\n            >\n              <div\n                :class=\"\n                  cn(\n                    'transition-all',\n                    copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0',\n                  )\n                \"\n              >\n                <LucideCheck\n                  class=\"stroke-emerald-500\"\n                  :size=\"16\"\n                  aria-hidden=\"true\"\n                />\n              </div>\n              <div\n                :class=\"\n                  cn(\n                    'absolute transition-all',\n                    copied ? 'scale-0 opacity-0' : 'scale-100 opacity-100',\n                  )\n                \"\n              >\n                <LucideCopy :size=\"16\" aria-hidden=\"true\" />\n              </div>\n            </button>\n          </TooltipTrigger>\n          <TooltipContent class=\"px-2 py-1 text-xs\">\n            Copy to clipboard\n          </TooltipContent>\n        </Tooltip>\n      </TooltipProvider>\n    </div>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["input", "label", "copy"] }
+  "meta": {
+    "tags": [
+      "input",
+      "label",
+      "copy"
+    ]
+  },
+  "dependencies": [
+    "@vueuse",
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/tooltip.json"
+  ]
 }

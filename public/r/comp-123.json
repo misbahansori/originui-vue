@@ -2,17 +2,24 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-123",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
   "files": [
     {
       "path": "components/comp-123.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideChevronDown, LucideChevronUp } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nconst isExpanded = ref(false);\n\nfunction toggleExpand() {\n  isExpanded.value = !isExpanded.value;\n}\n</script>\n\n<template>\n  <Button\n    class=\"gap-1\"\n    variant=\"ghost\"\n    @click=\"toggleExpand\"\n    :aria-expanded=\"isExpanded\"\n    aria-controls=\"expandable-content\"\n  >\n    {{ isExpanded ? \"Show less\" : \"Show more\" }}\n    <LucideChevronUp\n      v-if=\"isExpanded\"\n      class=\"-me-1\"\n      :size=\"16\"\n      aria-hidden=\"true\"\n    />\n    <LucideChevronDown v-else class=\"-me-1\" :size=\"16\" aria-hidden=\"true\" />\n  </Button>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["button", "collapsible"], "style": 2 }
+  "meta": {
+    "tags": [
+      "button",
+      "collapsible"
+    ],
+    "style": 2
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ]
 }

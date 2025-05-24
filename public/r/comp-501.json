@@ -2,16 +2,11 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-501",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/calendar.json"
-  ],
   "files": [
     {
       "path": "components/comp-501.vue",
       "content": "<template>\n  <div class=\"flex items-center justify-center py-12\">\n    <span class=\"text-muted-foreground text-sm italic\">\n      Component not yet implemented.\n    </span>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
@@ -22,5 +17,7 @@
       "react daypicker"
     ],
     "style": 1
-  }
+  },
+  "dependencies": [],
+  "registryDependencies": []
 }
