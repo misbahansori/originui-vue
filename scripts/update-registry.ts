@@ -3,6 +3,7 @@ import { join } from "path";
 import { glob } from "glob";
 import prettier from "prettier";
 
+// Types
 interface RegistryFile {
   path: string;
   content: string;
@@ -19,37 +20,23 @@ interface RegistryItem {
   files: RegistryFile[];
 }
 
-interface PathUpdate {
-  index: number;
-  from: string;
-  to: string;
-}
-
-interface FileUpdate {
-  fileName: string;
-  updates: PathUpdate[];
-}
-
-// List of known path aliases and internal imports to exclude from npm dependencies
+// Configuration
 const EXCLUDED_IMPORTS = new Set([
   "@",
   "vue",
   "utils",
   "class-variance-authority",
 ]);
-
-// Map of package names to their actual npm package names
 const DEPENDENCY_MAPPINGS: Record<string, string> = {
   "@remixicon": "@remixicon/vue",
 };
 
-// Map of paths to their new paths
 const PATH_MAPPINGS = [
   { from: "app/registry/default/ui/", to: "ui/" },
   { from: "app/registry/default/components/", to: "components/" },
   { from: "registry/default/ui/", to: "ui/" },
   { from: "registry/default/components/", to: "components/" },
-];
+] as const;
 
 const PRETTIER_CONFIG = {
   parser: "json",
@@ -57,86 +44,104 @@ const PRETTIER_CONFIG = {
   htmlWhitespaceSensitivity: "ignore",
 } satisfies prettier.Options;
 
+// Main functions
 export async function updateRegistryImports(): Promise<void> {
   try {
     const registryItems = await getRegistryFiles();
     console.log(`\nTotal components found: ${registryItems.length}`);
-    console.log("Registry updated successfully");
 
     for (const item of registryItems) {
       const filePath = join(process.cwd(), "public", "r", `${item.name}.json`);
       await writeFile(filePath, JSON.stringify(item, null, 2));
     }
+    console.log("✅ Registry updated successfully");
   } catch (error) {
-    console.error("Error processing registry files:", error);
+    console.error("❌ Error updating registry:", error);
   }
 }
 
 export async function updateRegistryPaths(): Promise<void> {
   try {
     const files = await glob("public/r/**/*.json");
-    const results = await Promise.all(files.map(processRegistryFile));
-    const updatedFiles = results.filter((result) => result.updates.length > 0);
+    const updatedFiles = await Promise.all(files.map(updateFilePaths));
+    const changedFiles = updatedFiles.filter((file) => file.updates.length > 0);
 
-    console.log(
-      `\n✅ Updated ${updatedFiles.length} paths in ${updatedFiles.length} files`,
-    );
+    if (changedFiles.length === 0) {
+      console.log("✨ No paths needed updating");
+      return;
+    }
+
+    console.log(`\n✅ Updated ${changedFiles.length} files`);
   } catch (error) {
-    console.error("❌ Error updating registry paths:", error);
+    console.error("❌ Error updating paths:", error);
     process.exit(1);
   }
 }
 
+// Helper functions
 async function getRegistryFiles(): Promise<RegistryItem[]> {
   const registryDir = join(process.cwd(), "public", "r");
   const files = await readdir(registryDir);
   const registryItems: RegistryItem[] = [];
+
   for (const file of files) {
-    if (file.endsWith(".json")) {
-      const filePath = join(registryDir, file);
-      const content = await readFile(filePath, "utf-8");
-      const registryItem = JSON.parse(content) as RegistryItem;
-      const allImports = new Set<string>();
-      const allRegistryDeps = new Set<string>();
-      registryItem.files.forEach((file) => {
-        if (file.content) {
-          extractImports(file.content!).forEach((imp) => allImports.add(imp));
-          extractRegistryDependencies(file.content!).forEach((dep) =>
-            allRegistryDeps.add(dep),
-          );
-        }
-      });
-      registryItem.dependencies = Array.from(allImports);
-      registryItem.registryDependencies = Array.from(allRegistryDeps);
-      registryItems.push(registryItem);
+    if (!file.endsWith(".json")) continue;
+
+    const filePath = join(registryDir, file);
+    const content = await readFile(filePath, "utf-8");
+    const item = JSON.parse(content) as RegistryItem;
+
+    // Extract dependencies from all files
+    const dependencies = new Set<string>();
+    const registryDeps = new Set<string>();
+
+    for (const file of item.files) {
+      if (!file.content) continue;
+
+      // Add npm dependencies
+      for (const dep of extractDependencies(file.content)) {
+        dependencies.add(dep);
+      }
+
+      // Add registry dependencies
+      for (const dep of extractRegistryDependencies(file.content)) {
+        registryDeps.add(dep);
+      }
     }
+
+    item.dependencies = Array.from(dependencies);
+    item.registryDependencies = Array.from(registryDeps);
+    registryItems.push(item);
   }
+
   return registryItems;
 }
 
-async function processRegistryFile(filePath: string): Promise<FileUpdate> {
+async function updateFilePaths(
+  filePath: string,
+): Promise<{ updates: { from: string; to: string }[] }> {
   const content = await readFile(filePath, "utf8");
   const data = JSON.parse(content) as RegistryItem;
-  const updates: PathUpdate[] = [];
+  const updates: { from: string; to: string }[] = [];
 
   if (!Array.isArray(data.files)) {
-    return { fileName: filePath, updates };
+    return { updates };
   }
 
-  let fileWasUpdated = false;
+  let hasChanges = false;
 
-  for (const [index, fileEntry] of data.files.entries()) {
-    if (!fileEntry.path) continue;
+  for (const file of data.files) {
+    if (!file.path) continue;
 
-    const { newPath, wasUpdated } = updatePath(fileEntry.path);
-    if (wasUpdated) {
-      updates.push({ index, from: fileEntry.path, to: newPath });
-      fileEntry.path = newPath;
-      fileWasUpdated = true;
+    const newPath = updatePath(file.path);
+    if (newPath !== file.path) {
+      updates.push({ from: file.path, to: newPath });
+      file.path = newPath;
+      hasChanges = true;
     }
   }
 
-  if (fileWasUpdated) {
+  if (hasChanges) {
     const formattedJson = await prettier.format(
       JSON.stringify(data),
       PRETTIER_CONFIG,
@@ -144,56 +149,53 @@ async function processRegistryFile(filePath: string): Promise<FileUpdate> {
     await writeFile(filePath, formattedJson);
   }
 
-  return { fileName: filePath, updates };
+  return { updates };
 }
 
-// Utility functions
-function updatePath(path: string): { newPath: string; wasUpdated: boolean } {
+function updatePath(path: string): string {
   for (const { from, to } of PATH_MAPPINGS) {
     if (path.startsWith(from)) {
-      return { newPath: path.replace(from, to), wasUpdated: true };
+      return path.replace(from, to);
     }
   }
-  return { newPath: path, wasUpdated: false };
+  return path;
 }
 
-function extractImports(content: string): string[] {
-  const imports: string[] = [];
+function extractDependencies(content: string): string[] {
+  const imports = new Set<string>();
   const importRegex =
     /import\s+(?:{[^}]*}|\*\s+as\s+\w+|\w+)\s+from\s+['"]([^'"]+)['"]/g;
+
   let match;
+
   while ((match = importRegex.exec(content)) !== null) {
     const importPath = match[1];
-    if (
-      importPath &&
-      !importPath.startsWith(".") &&
-      !importPath.startsWith("/")
-    ) {
-      const packageName = importPath.split("/")[0];
-      if (
-        packageName &&
-        !EXCLUDED_IMPORTS.has(packageName) &&
-        !imports.includes(packageName)
-      ) {
-        const mappedPackage = DEPENDENCY_MAPPINGS[packageName] || packageName;
-        imports.push(mappedPackage);
-      }
+    if (!importPath || importPath.startsWith(".") || importPath.startsWith("/"))
+      continue;
+
+    const packageName = importPath.split("/")[0];
+
+    if (packageName && !EXCLUDED_IMPORTS.has(packageName)) {
+      const mappedPackage = DEPENDENCY_MAPPINGS[packageName] || packageName;
+      imports.add(mappedPackage);
     }
   }
-  return imports;
+
+  return Array.from(imports);
 }
 
 function extractRegistryDependencies(content: string): string[] {
-  const registryDeps: Set<string> = new Set();
+  const deps = new Set<string>();
   const importRegex =
     /import\s+(?:{[^}]*}|\*\s+as\s+\w+|\w+)\s+from\s+['"]([^'"]+)['"]/g;
+
   let match;
 
   const pathMappings = {
     "@/registry/": (path: string) => path.replace("default/ui/", ""),
     "@/composables/": (path: string) => path.replace("/", "-"),
     "@/lib/": (path: string) => path.replace("/", "-"),
-  };
+  } as const;
 
   while ((match = importRegex.exec(content)) !== null) {
     const importPath = match[1];
@@ -202,10 +204,11 @@ function extractRegistryDependencies(content: string): string[] {
     for (const [prefix, transform] of Object.entries(pathMappings)) {
       if (importPath.startsWith(prefix)) {
         const path = importPath.replace(prefix, "");
-        registryDeps.add(`https://originui-vue.com/r/${transform(path)}.json`);
+        deps.add(`https://originui-vue.com/r/${transform(path)}.json`);
         break;
       }
     }
   }
-  return Array.from(registryDeps);
+
+  return Array.from(deps);
 }
