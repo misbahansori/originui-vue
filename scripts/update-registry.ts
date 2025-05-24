@@ -54,16 +54,64 @@ const PATH_MAPPINGS = [
 const PRETTIER_CONFIG = {
   parser: "json",
   printWidth: 60,
-  htmlWhitespaceSensitivity: "ignore" as const,
-};
+  htmlWhitespaceSensitivity: "ignore",
+} satisfies prettier.Options;
 
-function updatePath(path: string): { newPath: string; wasUpdated: boolean } {
-  for (const { from, to } of PATH_MAPPINGS) {
-    if (path.startsWith(from)) {
-      return { newPath: path.replace(from, to), wasUpdated: true };
+export async function updateRegistryImports(): Promise<void> {
+  try {
+    const registryItems = await getRegistryFiles();
+    console.log(`\nTotal components found: ${registryItems.length}`);
+    console.log("Registry updated successfully");
+
+    for (const item of registryItems) {
+      const filePath = join(process.cwd(), "public", "r", `${item.name}.json`);
+      await writeFile(filePath, JSON.stringify(item, null, 2));
+    }
+  } catch (error) {
+    console.error("Error processing registry files:", error);
+  }
+}
+
+export async function updateRegistryPaths(): Promise<void> {
+  try {
+    const files = await glob("public/r/**/*.json");
+    const results = await Promise.all(files.map(processRegistryFile));
+    const updatedFiles = results.filter((result) => result.updates.length > 0);
+
+    console.log(
+      `\n✅ Updated ${updatedFiles.length} paths in ${updatedFiles.length} files`,
+    );
+  } catch (error) {
+    console.error("❌ Error updating registry paths:", error);
+    process.exit(1);
+  }
+}
+
+async function getRegistryFiles(): Promise<RegistryItem[]> {
+  const registryDir = join(process.cwd(), "public", "r");
+  const files = await readdir(registryDir);
+  const registryItems: RegistryItem[] = [];
+  for (const file of files) {
+    if (file.endsWith(".json")) {
+      const filePath = join(registryDir, file);
+      const content = await readFile(filePath, "utf-8");
+      const registryItem = JSON.parse(content) as RegistryItem;
+      const allImports = new Set<string>();
+      const allRegistryDeps = new Set<string>();
+      registryItem.files.forEach((file) => {
+        if (file.content) {
+          extractImports(file.content!).forEach((imp) => allImports.add(imp));
+          extractRegistryDependencies(file.content!).forEach((dep) =>
+            allRegistryDeps.add(dep),
+          );
+        }
+      });
+      registryItem.dependencies = Array.from(allImports);
+      registryItem.registryDependencies = Array.from(allRegistryDeps);
+      registryItems.push(registryItem);
     }
   }
-  return { newPath: path, wasUpdated: false };
+  return registryItems;
 }
 
 async function processRegistryFile(filePath: string): Promise<FileUpdate> {
@@ -99,27 +147,14 @@ async function processRegistryFile(filePath: string): Promise<FileUpdate> {
   return { fileName: filePath, updates };
 }
 
-function logResults(updatedFiles: FileUpdate[]): void {
-  const totalUpdates = updatedFiles.reduce(
-    (sum, file) => sum + file.updates.length,
-    0,
-  );
-
-  if (totalUpdates === 0) {
-    console.log("✨ No paths needed updating");
-    return;
-  }
-
-  console.log("\n📝 Path updates summary:");
-  for (const { fileName, updates } of updatedFiles) {
-    console.log(`\n${fileName}:`);
-    for (const { index, from, to } of updates) {
-      console.log(`  [${index}] ${from} → ${to}`);
+// Utility functions
+function updatePath(path: string): { newPath: string; wasUpdated: boolean } {
+  for (const { from, to } of PATH_MAPPINGS) {
+    if (path.startsWith(from)) {
+      return { newPath: path.replace(from, to), wasUpdated: true };
     }
   }
-  console.log(
-    `\n✅ Updated ${totalUpdates} paths in ${updatedFiles.length} files`,
-  );
+  return { newPath: path, wasUpdated: false };
 }
 
 function extractImports(content: string): string[] {
@@ -173,58 +208,4 @@ function extractRegistryDependencies(content: string): string[] {
     }
   }
   return Array.from(registryDeps);
-}
-
-async function getRegistryFiles(): Promise<RegistryItem[]> {
-  const registryDir = join(process.cwd(), "public", "r");
-  const files = await readdir(registryDir);
-  const registryItems: RegistryItem[] = [];
-  for (const file of files) {
-    if (file.endsWith(".json")) {
-      const filePath = join(registryDir, file);
-      const content = await readFile(filePath, "utf-8");
-      const registryItem = JSON.parse(content) as RegistryItem;
-      const allImports = new Set<string>();
-      const allRegistryDeps = new Set<string>();
-      registryItem.files.forEach((file) => {
-        if (file.content) {
-          extractImports(file.content!).forEach((imp) => allImports.add(imp));
-          extractRegistryDependencies(file.content!).forEach((dep) =>
-            allRegistryDeps.add(dep),
-          );
-        }
-      });
-      registryItem.dependencies = Array.from(allImports);
-      registryItem.registryDependencies = Array.from(allRegistryDeps);
-      registryItems.push(registryItem);
-    }
-  }
-  return registryItems;
-}
-
-export async function updateRegistryImports(): Promise<void> {
-  try {
-    const registryItems = await getRegistryFiles();
-    console.log(`\nTotal components found: ${registryItems.length}`);
-    console.log("Registry updated successfully");
-
-    for (const item of registryItems) {
-      const filePath = join(process.cwd(), "public", "r", `${item.name}.json`);
-      await writeFile(filePath, JSON.stringify(item, null, 2));
-    }
-  } catch (error) {
-    console.error("Error processing registry files:", error);
-  }
-}
-
-export async function updateRegistryPaths(): Promise<void> {
-  try {
-    const files = await glob("public/r/**/*.json");
-    const results = await Promise.all(files.map(processRegistryFile));
-    const updatedFiles = results.filter((result) => result.updates.length > 0);
-    logResults(updatedFiles);
-  } catch (error) {
-    console.error("❌ Error updating registry paths:", error);
-    process.exit(1);
-  }
 }
