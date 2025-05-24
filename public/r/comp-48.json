@@ -2,18 +2,11 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-48",
   "type": "registry:component",
-  "dependencies": ["vue-the-mask"],
-  "devDependencies": ["@types/react-payment-inputs"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json"
-  ],
   "files": [
     {
       "path": "components/comp-48.vue",
       "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { vMaska } from \"maska/vue\";\nimport { ref } from \"vue\";\n\nconst expiryDate = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"expiry-date\">Expiry date</Label>\n    <Input\n      id=\"expiry-date\"\n      v-model=\"expiryDate\"\n      class=\"[direction:inherit]\"\n      placeholder=\"MM/YY\"\n      maxlength=\"5\"\n      v-maska=\"'##/##'\"\n    />\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://beholdr.github.io/maska/v3/#/vue\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        maska\n      </a>\n    </p>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
@@ -25,5 +18,12 @@
       "credit card",
       "form"
     ]
-  }
+  },
+  "dependencies": [
+    "maska"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json"
+  ]
 }

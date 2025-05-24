@@ -2,21 +2,27 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-380",
   "type": "registry:component",
-  "dependencies": ["@vueuse/core", "lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/dropdown-menu.json"
-  ],
   "files": [
     {
       "path": "components/comp-380.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger,\n} from \"@/registry/default/ui/dropdown-menu\";\nimport { useColorMode } from \"@vueuse/core\";\nimport { LucideMonitor, LucideMoon, LucideSun } from \"lucide-vue-next\";\nimport { computed } from \"vue\";\n\nconst { system, store } = useColorMode();\n\nconst colorMode = computed(() =>\n  store.value === \"auto\" ? system.value : store.value,\n);\n</script>\n\n<template>\n  <div>\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button size=\"icon\" variant=\"outline\" aria-label=\"Select theme\">\n          <LucideSun\n            v-if=\"colorMode === 'light'\"\n            class=\"size-4\"\n            aria-hidden=\"true\"\n          />\n          <LucideMoon\n            v-if=\"colorMode === 'dark'\"\n            class=\"size-4\"\n            aria-hidden=\"true\"\n          />\n        </Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent class=\"min-w-32\">\n        <DropdownMenuItem @click=\"store = 'light'\">\n          <LucideSun class=\"size-4 opacity-60\" aria-hidden=\"true\" />\n          <span>Light</span>\n        </DropdownMenuItem>\n        <DropdownMenuItem @click=\"store = 'dark'\">\n          <LucideMoon class=\"size-4 opacity-60\" aria-hidden=\"true\" />\n          <span>Dark</span>\n        </DropdownMenuItem>\n        <DropdownMenuItem @click=\"store = 'auto'\">\n          <LucideMonitor class=\"size-4 opacity-60\" aria-hidden=\"true\" />\n          <span>System</span>\n        </DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": ["dropdown", "darkmode", "radix"],
+    "tags": [
+      "dropdown",
+      "darkmode",
+      "radix"
+    ],
     "style": 1
-  }
+  },
+  "dependencies": [
+    "@vueuse",
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/dropdown-menu.json"
+  ]
 }

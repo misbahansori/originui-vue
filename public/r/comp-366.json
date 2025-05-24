@@ -2,18 +2,25 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-366",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/dropdown-menu.json"
-  ],
   "files": [
     {
       "path": "components/comp-366.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger,\n} from \"@/registry/default/ui/dropdown-menu\";\nimport { LucideEllipsis } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <DropdownMenu>\n    <DropdownMenuTrigger asChild>\n      <Button\n        size=\"icon\"\n        variant=\"ghost\"\n        class=\"rounded-full shadow-none\"\n        aria-label=\"Open edit menu\"\n      >\n        <LucideEllipsis :size=\"16\" aria-hidden=\"true\" />\n      </Button>\n    </DropdownMenuTrigger>\n    <DropdownMenuContent>\n      <DropdownMenuItem>Option 1</DropdownMenuItem>\n      <DropdownMenuItem>Option 2</DropdownMenuItem>\n      <DropdownMenuItem>Option 3</DropdownMenuItem>\n      <DropdownMenuItem>Option 4</DropdownMenuItem>\n    </DropdownMenuContent>\n  </DropdownMenu>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["dropdown", "radix"], "style": 1 }
+  "meta": {
+    "tags": [
+      "dropdown",
+      "radix"
+    ],
+    "style": 1
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/dropdown-menu.json"
+  ]
 }

@@ -2,17 +2,23 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-305",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
   "files": [
     {
       "path": "components/comp-305.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideArrowRight, LucideEclipse, LucideX } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nconst isVisible = ref(true);\n\nconst hideBanner = () => {\n  isVisible.value = false;\n};\n</script>\n\n<template>\n  <div v-if=\"isVisible\" class=\"dark bg-muted text-foreground px-4 py-3\">\n    <div class=\"flex gap-2\">\n      <div class=\"flex grow gap-3\">\n        <LucideEclipse\n          class=\"mt-0.5 size-4 shrink-0 opacity-60\"\n          aria-hidden=\"true\"\n        />\n        <div class=\"flex grow flex-col justify-between gap-2 md:flex-row\">\n          <p class=\"text-sm\">\n            We just added something awesome to make your experience even better.\n          </p>\n          <a href=\"#\" class=\"group text-sm font-medium whitespace-nowrap\">\n            Learn more\n            <LucideArrowRight\n              class=\"ms-1 -mt-0.5 inline-flex size-4 opacity-60 transition-transform group-hover:translate-x-0.5\"\n              aria-hidden=\"true\"\n            />\n          </a>\n        </div>\n      </div>\n      <Button\n        variant=\"ghost\"\n        class=\"group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent\"\n        @click=\"hideBanner\"\n        aria-label=\"Close banner\"\n      >\n        <LucideX\n          class=\"size-4 opacity-60 transition-opacity group-hover:opacity-100\"\n          aria-hidden=\"true\"\n        />\n      </Button>\n    </div>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["banner"], "colSpan": 3 }
+  "meta": {
+    "tags": [
+      "banner"
+    ],
+    "colSpan": 3
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ]
 }

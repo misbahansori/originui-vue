@@ -2,20 +2,27 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-297",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
   "files": [
     {
       "path": "components/comp-297.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport ToastAction from \"@/registry/default/ui/toast/ToastAction.vue\";\nimport Toaster from \"@/registry/default/ui/toast/Toaster.vue\";\nimport { useToast } from \"@/registry/default/ui/toast/use-toast\";\nimport { h } from \"vue\";\n\nconst { toast } = useToast();\n</script>\n\n<template>\n  <Button\n    variant=\"outline\"\n    @click=\"\n      () => {\n        toast({\n          title: 'We couldn\\'t complete your request!',\n          description: 'There was a problem with your request.',\n          action: h(\n            ToastAction,\n            {\n              altText: 'Try again',\n            },\n            () => 'Try again',\n          ),\n        });\n      }\n    \"\n  >\n    Show toast\n  </Button>\n  <!-- Place the Toaster at the end of the body -->\n  <Toaster />\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": ["notification", "toast", "radix"],
+    "tags": [
+      "notification",
+      "toast",
+      "radix"
+    ],
     "colSpan": 2,
     "style": 1
-  }
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/toast/ToastAction.vue.json",
+    "https://originui-vue.com/r/toast/Toaster.vue.json",
+    "https://originui-vue.com/r/toast/use-toast.json"
+  ]
 }

@@ -2,17 +2,24 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-225",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/select.json"
-  ],
   "files": [
     {
       "path": "components/comp-225.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/default/ui/select\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\n\ninterface Option {\n  continent: string;\n  items: Country[];\n}\n\ninterface Country {\n  value: string;\n  label: string;\n  flag: string;\n}\n\nconst options: Option[] = [\n  {\n    continent: \"America\",\n    items: [\n      { value: \"1\", label: \"United States\", flag: \"🇺🇸\" },\n      { value: \"2\", label: \"Canada\", flag: \"🇨🇦\" },\n      { value: \"3\", label: \"Mexico\", flag: \"🇲🇽\" },\n    ],\n  },\n  {\n    continent: \"Africa\",\n    items: [\n      { value: \"4\", label: \"South Africa\", flag: \"🇿🇦\" },\n      { value: \"5\", label: \"Nigeria\", flag: \"🇳🇬\" },\n      { value: \"6\", label: \"Morocco\", flag: \"🇲🇦\" },\n    ],\n  },\n  {\n    continent: \"Asia\",\n    items: [\n      { value: \"7\", label: \"China\", flag: \"🇨🇳\" },\n      { value: \"8\", label: \"Japan\", flag: \"🇯🇵\" },\n      { value: \"9\", label: \"India\", flag: \"🇮🇳\" },\n    ],\n  },\n  {\n    continent: \"Europe\",\n    items: [\n      { value: \"10\", label: \"United Kingdom\", flag: \"🇬🇧\" },\n      { value: \"11\", label: \"France\", flag: \"🇫🇷\" },\n      { value: \"12\", label: \"Germany\", flag: \"🇩🇪\" },\n    ],\n  },\n  {\n    continent: \"Oceania\",\n    items: [\n      { value: \"13\", label: \"Australia\", flag: \"🇦🇺\" },\n      { value: \"14\", label: \"New Zealand\", flag: \"🇳🇿\" },\n    ],\n  },\n];\n\nconst selectedOption = ref<Country | undefined>(options[0]?.items[0]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Options with flag</Label>\n    <Select v-model=\"selectedOption\">\n      <SelectTrigger\n        :id=\"id\"\n        class=\"[&>span_svg]:text-muted-foreground/80 [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_svg]:shrink-0\"\n      >\n        <SelectValue placeholder=\"Select country\">\n          <template v-if=\"selectedOption\">\n            <span class=\"text-lg leading-none\">{{ selectedOption.flag }}</span>\n            <span class=\"truncate\">{{ selectedOption.label }}</span>\n          </template>\n        </SelectValue>\n      </SelectTrigger>\n      <SelectContent\n        class=\"[&_*[role=option]>span>svg]:text-muted-foreground/80 [&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2 [&_*[role=option]>span]:flex [&_*[role=option]>span]:items-center [&_*[role=option]>span]:gap-2 [&_*[role=option]>span>svg]:shrink-0\"\n      >\n        <SelectGroup v-for=\"continent in options\" :key=\"continent.continent\">\n          <SelectLabel class=\"ps-2\">{{ continent.continent }}</SelectLabel>\n          <SelectItem\n            v-for=\"country in continent.items\"\n            :key=\"country.value\"\n            :value=\"country\"\n          >\n            <span class=\"text-lg leading-none\">{{ country.flag }}</span>\n            <span class=\"truncate\">{{ country.label }}</span>\n          </SelectItem>\n        </SelectGroup>\n      </SelectContent>\n    </Select>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["label", "select", "flag", "radix"] }
+  "meta": {
+    "tags": [
+      "label",
+      "select",
+      "flag",
+      "radix"
+    ]
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/select.json"
+  ]
 }

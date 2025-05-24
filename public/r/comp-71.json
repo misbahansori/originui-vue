@@ -2,17 +2,22 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-71",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/textarea.json"
-  ],
   "files": [
     {
       "path": "components/comp-71.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Textarea } from \"@/registry/default/ui/textarea\";\nimport { ref, useId } from \"vue\";\n\nconst textValue = ref(\"\");\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"group relative\">\n    <Label\n      :for=\"id\"\n      class=\"bg-background text-foreground absolute start-1 top-0 z-10 block -translate-y-1/2 px-2 text-xs font-medium group-has-disabled:opacity-50\"\n    >\n      Textarea with overlapping label\n    </Label>\n    <Textarea :id=\"id\" v-model=\"textValue\" />\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["label", "textarea"] }
+  "meta": {
+    "tags": [
+      "label",
+      "textarea"
+    ]
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/textarea.json"
+  ]
 }

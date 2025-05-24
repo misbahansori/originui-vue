@@ -2,17 +2,23 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-44",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/pin-input.json"
-  ],
   "files": [
     {
       "path": "components/comp-44.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  PinInput,\n  PinInputGroup,\n  PinInputInput,\n} from \"@/registry/default/ui/pin-input\";\nimport { ref, useId } from \"vue\";\n\nconst inputId = useId();\nconst value = ref([\"\", \"\", \"\", \"\", \"\"]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"inputId\" class=\"text-foreground text-sm font-medium\">\n      OTP input single\n    </Label>\n    <PinInput :id=\"inputId\" v-model=\"value\">\n      <PinInputGroup>\n        <PinInputInput\n          v-for=\"(id, index) in 5\"\n          :key=\"id\"\n          :index=\"index\"\n          class=\"focus:border-ring focus:ring-ring/50 size-9 font-medium shadow-xs transition-[color,box-shadow] focus:ring-[3px]\"\n        />\n      </PinInputGroup>\n    </PinInput>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with shadcn-vue\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://www.shadcn-vue.com/docs/components/pin-input.html\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        PinInput\n      </a>\n    </p>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["input", "label", "otp"] }
+  "meta": {
+    "tags": [
+      "input",
+      "label",
+      "otp"
+    ]
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/pin-input.json"
+  ]
 }

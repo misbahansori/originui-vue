@@ -2,16 +2,11 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-235",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/multi-select.json"
-  ],
   "files": [
     {
       "path": "components/comp-235.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport type { Option } from \"@/registry/default/ui/multi-select/MultiSelect.vue\";\nimport MultiSelect from \"@/registry/default/ui/multi-select/MultiSelect.vue\";\nimport { ref } from \"vue\";\n\nconst query = ref(\"\");\nconst value = ref<Option[]>([]);\n\nconst frameworks: Option[] = [\n  {\n    value: \"next.js\",\n    label: \"Next.js\",\n  },\n  {\n    value: \"sveltekit\",\n    label: \"SvelteKit\",\n  },\n  {\n    value: \"nuxt.js\",\n    label: \"Nuxt.js\",\n  },\n  {\n    value: \"remix\",\n    label: \"Remix\",\n  },\n  {\n    value: \"astro\",\n    label: \"Astro\",\n  },\n  {\n    value: \"angular\",\n    label: \"Angular\",\n  },\n  {\n    value: \"vue\",\n    label: \"Vue.js\",\n  },\n  {\n    value: \"react\",\n    label: \"React\",\n  },\n  {\n    value: \"ember\",\n    label: \"Ember.js\",\n  },\n  {\n    value: \"gatsby\",\n    label: \"Gatsby\",\n  },\n  {\n    value: \"eleventy\",\n    label: \"Eleventy\",\n  },\n  {\n    value: \"solid\",\n    label: \"SolidJS\",\n  },\n  {\n    value: \"preact\",\n    label: \"Preact\",\n  },\n  {\n    value: \"qwik\",\n    label: \"Qwik\",\n  },\n  {\n    value: \"alpine\",\n    label: \"Alpine.js\",\n  },\n  {\n    value: \"lit\",\n    label: \"Lit\",\n  },\n];\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label>Multiselect with placeholder and clear</Label>\n    <MultiSelect :options=\"frameworks\" v-model=\"value\" v-model:query=\"query\" />\n\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with reka-ui\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/examples/combobox-tags-input\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        Combobox with TagsInput\n      </a>\n    </p>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { MultiSelect, type Option } from \"@/registry/default/ui/multi-select\";\nimport { ref } from \"vue\";\n\nconst query = ref(\"\");\nconst value = ref<Option[]>([]);\n\nconst frameworks: Option[] = [\n  {\n    value: \"next.js\",\n    label: \"Next.js\",\n  },\n  {\n    value: \"sveltekit\",\n    label: \"SvelteKit\",\n  },\n  {\n    value: \"nuxt.js\",\n    label: \"Nuxt.js\",\n  },\n  {\n    value: \"remix\",\n    label: \"Remix\",\n  },\n  {\n    value: \"astro\",\n    label: \"Astro\",\n  },\n  {\n    value: \"angular\",\n    label: \"Angular\",\n  },\n  {\n    value: \"vue\",\n    label: \"Vue.js\",\n  },\n  {\n    value: \"react\",\n    label: \"React\",\n  },\n  {\n    value: \"ember\",\n    label: \"Ember.js\",\n  },\n  {\n    value: \"gatsby\",\n    label: \"Gatsby\",\n  },\n  {\n    value: \"eleventy\",\n    label: \"Eleventy\",\n  },\n  {\n    value: \"solid\",\n    label: \"SolidJS\",\n  },\n  {\n    value: \"preact\",\n    label: \"Preact\",\n  },\n  {\n    value: \"qwik\",\n    label: \"Qwik\",\n  },\n  {\n    value: \"alpine\",\n    label: \"Alpine.js\",\n  },\n  {\n    value: \"lit\",\n    label: \"Lit\",\n  },\n];\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label>Multiselect with placeholder and clear</Label>\n    <MultiSelect :options=\"frameworks\" v-model=\"value\" v-model:query=\"query\" />\n\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with reka-ui\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/examples/combobox-tags-input\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        Combobox with TagsInput\n      </a>\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
     }
   ],
   "meta": {
@@ -25,5 +20,10 @@
       "autocomplete",
       "radix"
     ]
-  }
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/multi-select.json"
+  ]
 }

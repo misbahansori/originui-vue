@@ -2,20 +2,24 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-40",
   "type": "registry:component",
-  "dependencies": ["reka-ui"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/date-field.json"
-  ],
   "files": [
     {
       "path": "components/comp-40.vue",
       "content": "<script setup lang=\"ts\">\nimport { DateField, DateFieldInput } from \"@/registry/default/ui/date-field\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\" class=\"text-foreground text-sm font-medium\">\n      Date and time input\n    </Label>\n    <DateField\n      :id=\"id\"\n      granularity=\"minute\"\n      :hourCycle=\"24\"\n      v-slot=\"{ segments }\"\n    >\n      <template v-for=\"item in segments\" :key=\"item.part\">\n        <DateFieldInput :part=\"item.part\">\n          {{ item.value }}\n        </DateFieldInput>\n      </template>\n    </DateField>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with reka-ui\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/docs/components/date-field\"\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n      >\n        DateField\n      </a>\n    </p>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": ["input", "label", "date", "react aria"]
-  }
+    "tags": [
+      "input",
+      "label",
+      "date",
+      "react aria"
+    ]
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/date-field.json",
+    "https://originui-vue.com/r/label.json"
+  ]
 }

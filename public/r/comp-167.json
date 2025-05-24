@@ -2,18 +2,24 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-167",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/radio-group.json"
-  ],
   "files": [
     {
       "path": "components/comp-167.vue",
       "content": "<script setup lang=\"ts\">\nimport { RadioGroup, RadioGroupItem } from \"@/registry/default/ui/radio-group\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst selectedValue = ref(\"3\");\n\nconst items = [\n  { value: \"1\", label: \"Angry\", icon: \"😠\" },\n  { value: \"2\", label: \"Sad\", icon: \"🙁\" },\n  { value: \"3\", label: \"Neutral\", icon: \"😐\" },\n  { value: \"4\", label: \"Happy\", icon: \"🙂\" },\n  { value: \"5\", label: \"Laughing\", icon: \"😀\" },\n];\n</script>\n\n<template>\n  <fieldset class=\"space-y-4\">\n    <legend class=\"text-foreground text-sm leading-none font-medium\">\n      How did it go?\n    </legend>\n    <RadioGroup class=\"flex gap-1.5\" v-model=\"selectedValue\">\n      <label\n        v-for=\"item in items\"\n        :key=\"`${id}-${item.value}`\"\n        class=\"border-input has-data-[state=checked]:border-primary/50 focus-within:border-ring focus-within:ring-ring/50 relative flex size-9 cursor-pointer flex-col items-center justify-center rounded-full border text-center text-xl shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px] has-data-disabled:cursor-not-allowed has-data-disabled:opacity-50\"\n      >\n        <RadioGroupItem\n          :id=\"`${id}-${item.value}`\"\n          :value=\"item.value\"\n          class=\"sr-only after:absolute after:inset-0\"\n        />\n        {{ item.icon }}\n      </label>\n    </RadioGroup>\n  </fieldset>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": ["radio", "label", "rating", "vote", "radix"]
-  }
+    "tags": [
+      "radio",
+      "label",
+      "rating",
+      "vote",
+      "radix"
+    ]
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/radio-group.json"
+  ]
 }

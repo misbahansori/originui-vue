@@ -2,7 +2,9 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "extended-02",
   "type": "registry:component",
-  "dependencies": ["@remixicon/vue"],
+  "dependencies": [
+    "@remixicon/vue"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/input.json",

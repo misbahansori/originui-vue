@@ -2,18 +2,26 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-157",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/radio-group.json"
-  ],
   "files": [
     {
       "path": "components/comp-157.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { RadioGroup, RadioGroupItem } from \"@/registry/default/ui/radio-group\";\nimport { LucideStar } from \"lucide-vue-next\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst selectedValue = ref(\"all\");\n\nconst starRatings = [\n  { value: \"all\", label: \"All reviews\", count: 12921, stars: 0 },\n  { value: \"5-stars\", label: \"5 stars\", count: 5168, stars: 5 },\n  { value: \"4-stars\", label: \"4 stars\", count: 4726, stars: 4 },\n  { value: \"3-stars\", label: \"3 stars\", count: 3234, stars: 3 },\n  { value: \"2-stars\", label: \"2 stars\", count: 1842, stars: 2 },\n  { value: \"1-star\", label: \"1 star\", count: 452, stars: 1 },\n];\n</script>\n\n<template>\n  <RadioGroup v-model=\"selectedValue\">\n    <div\n      v-for=\"(rating, index) in starRatings\"\n      :key=\"rating.value\"\n      class=\"flex items-center gap-2\"\n    >\n      <RadioGroupItem :value=\"rating.value\" :id=\"`${id}-${index + 1}`\" />\n      <Label :for=\"`${id}-${index + 1}`\" class=\"inline-flex items-center gap-1\">\n        <template v-if=\"rating.stars > 0\">\n          <span\n            class=\"inline-flex items-center text-amber-500\"\n            aria-hidden=\"true\"\n          >\n            <LucideStar\n              v-for=\"star in 5\"\n              :key=\"star\"\n              :size=\"16\"\n              :class=\"{ 'opacity-30': star > rating.stars }\"\n            />\n          </span>\n          <span class=\"sr-only\">{{ rating.label }}</span>\n        </template>\n        <template v-else>\n          {{ rating.label }}\n        </template>\n        <span\n          class=\"text-muted-foreground text-xs leading-[inherit] font-normal\"\n        >\n          ({{ rating.count.toLocaleString() }})\n        </span>\n      </Label>\n    </div>\n  </RadioGroup>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["radio", "label", "rating", "radix"] }
+  "meta": {
+    "tags": [
+      "radio",
+      "label",
+      "rating",
+      "radix"
+    ]
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/radio-group.json"
+  ]
 }

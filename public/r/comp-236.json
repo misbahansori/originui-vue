@@ -2,16 +2,11 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-236",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/select-native.json"
-  ],
   "files": [
     {
       "path": "components/comp-236.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { SelectNative } from \"@/registry/default/ui/select-native\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Multiple select (native)</Label>\n    <div class=\"border-input overflow-hidden rounded-md border\">\n      <SelectNative :id=\"id\" multiple class=\"rounded-none border-none\">\n        <option value=\"1\">React</option>\n        <option value=\"2\">Next.js</option>\n        <option value=\"3\">Astro</option>\n        <option value=\"4\">Gatsby</option>\n        <option value=\"5\">Vue</option>\n        <option value=\"6\">Angular</option>\n      </SelectNative>\n    </div>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
@@ -21,5 +16,10 @@
       "multiselect",
       "native select"
     ]
-  }
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/select-native.json"
+  ]
 }

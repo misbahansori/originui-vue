@@ -2,17 +2,22 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-74",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/textarea.json"
-  ],
   "files": [
     {
       "path": "components/comp-74.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Textarea } from \"@/registry/default/ui/textarea\";\nimport { computed, ref, useId } from \"vue\";\n\nconst maxLength = 180;\nconst textValue = ref(\"\");\nconst id = useId();\n\nconst characterCount = computed(() => {\n  return textValue.value.length;\n});\n\nconst charactersLeft = computed(() => {\n  return maxLength - characterCount.value;\n});\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Textarea with characters left</Label>\n    <Textarea\n      :id=\"id\"\n      v-model=\"textValue\"\n      :maxlength=\"maxLength\"\n      aria-describedby=\"character-count-description\"\n    />\n    <p\n      id=\"character-count-description\"\n      class=\"text-muted-foreground mt-2 text-right text-xs\"\n      role=\"status\"\n      aria-live=\"polite\"\n    >\n      <span class=\"tabular-nums\">{{ charactersLeft }}</span>\n      characters left\n    </p>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["label", "textarea"] }
+  "meta": {
+    "tags": [
+      "label",
+      "textarea"
+    ]
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/textarea.json"
+  ]
 }

@@ -2,17 +2,11 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-28",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next", "reka-ui"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/number-field.json"
-  ],
   "files": [
     {
       "path": "components/comp-28.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst value = ref(2048);\n</script>\n\n<template>\n  <div>\n    <div class=\"*:not-first:mt-2\">\n      <Label :for=\"id\">Number input with plus/minus buttons</Label>\n      <NumberField :id=\"id\" :min=\"0\" v-model=\"value\">\n        <NumberFieldDecrement />\n        <NumberFieldInput class=\"text-center\" />\n        <NumberFieldIncrement />\n      </NumberField>\n    </div>\n\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with reka-ui\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/docs/components/number-field\"\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n      >\n        NumberField\n      </a>\n    </p>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
@@ -23,5 +17,9 @@
       "number",
       "react aria"
     ]
-  }
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json"
+  ]
 }

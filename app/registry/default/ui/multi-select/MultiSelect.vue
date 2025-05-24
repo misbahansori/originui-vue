@@ -17,14 +17,7 @@ import {
   useFilter,
 } from "reka-ui";
 import { computed } from "vue";
-
-export interface Option {
-  value: string;
-  label: string;
-  disabled?: boolean;
-  fixed?: boolean;
-  [key: string]: string | boolean | undefined;
-}
+import type { Option } from "~/registry/default/ui/multi-select";
 
 interface MultySelectProps {
   defaultOptions?: Option[];

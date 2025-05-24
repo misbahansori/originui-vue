@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
-import type { Option } from "@/registry/default/ui/multi-select/MultiSelect.vue";
-import MultiSelect from "@/registry/default/ui/multi-select/MultiSelect.vue";
+import { MultiSelect, type Option } from "@/registry/default/ui/multi-select";
 import { ref } from "vue";
 
 const query = ref("");

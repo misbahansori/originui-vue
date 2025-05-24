@@ -2,14 +2,22 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-269",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
   "files": [
     {
       "path": "components/comp-269.vue",
       "content": "<script setup lang=\"ts\">\nimport { LucideCircleAlert } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <div class=\"rounded-md border px-4 py-3\">\n    <p class=\"flex items-center text-sm\">\n      <LucideCircleAlert\n        :size=\"16\"\n        class=\"me-3 -mt-0.5 inline-flex shrink-0 text-red-500\"\n        aria-hidden=\"true\"\n      />\n      An error occurred!\n    </p>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["alert", "error"], "colSpan": 2 }
+  "meta": {
+    "tags": [
+      "alert",
+      "error"
+    ],
+    "colSpan": 2
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": []
 }

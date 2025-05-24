@@ -2,18 +2,25 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-51",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json"
-  ],
   "files": [
     {
       "path": "components/comp-51.vue",
       "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { LucideCheck, LucideEye, LucideEyeOff, LucideX } from \"lucide-vue-next\";\nimport { computed, ref } from \"vue\";\n\nconst password = ref(\"\");\nconst isVisible = ref(false);\n\nfunction toggleVisibility() {\n  isVisible.value = !isVisible.value;\n}\n\nfunction checkStrength(pass: string) {\n  const requirements = [\n    { regex: /.{8,}/, text: \"At least 8 characters\" },\n    { regex: /[0-9]/, text: \"At least 1 number\" },\n    { regex: /[a-z]/, text: \"At least 1 lowercase letter\" },\n    { regex: /[A-Z]/, text: \"At least 1 uppercase letter\" },\n  ];\n\n  return requirements.map((req) => ({\n    met: req.regex.test(pass),\n    text: req.text,\n  }));\n}\n\nconst strength = computed(() => checkStrength(password.value));\n\nconst strengthScore = computed(() => {\n  return strength.value.filter((req) => req.met).length;\n});\n\nfunction getStrengthColor(score: number) {\n  if (score === 0) return \"bg-border\";\n  if (score <= 1) return \"bg-red-500\";\n  if (score <= 2) return \"bg-orange-500\";\n  if (score === 3) return \"bg-amber-500\";\n  return \"bg-emerald-500\";\n}\n\nfunction getStrengthText(score: number) {\n  if (score === 0) return \"Enter a password\";\n  if (score <= 2) return \"Weak password\";\n  if (score === 3) return \"Medium password\";\n  return \"Strong password\";\n}\n</script>\n\n<template>\n  <div>\n    <!-- Password input field with toggle visibility button -->\n    <div class=\"*:not-first:mt-2\">\n      <Label for=\"password-input\">Input with password strength indicator</Label>\n      <div class=\"relative\">\n        <Input\n          id=\"password-input\"\n          class=\"pe-9\"\n          placeholder=\"Password\"\n          :type=\"isVisible ? 'text' : 'password'\"\n          v-model=\"password\"\n          aria-describedby=\"password-description\"\n        />\n        <button\n          class=\"text-muted-foreground/80 hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-md transition-[color,box-shadow] outline-none focus:z-10 focus-visible:ring-[3px] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50\"\n          type=\"button\"\n          @click=\"toggleVisibility\"\n          :aria-label=\"isVisible ? 'Hide password' : 'Show password'\"\n          :aria-pressed=\"isVisible\"\n          aria-controls=\"password\"\n        >\n          <LucideEyeOff v-if=\"isVisible\" :size=\"16\" aria-hidden=\"true\" />\n          <LucideEye v-else :size=\"16\" aria-hidden=\"true\" />\n        </button>\n      </div>\n    </div>\n\n    <!-- Password strength indicator -->\n    <div\n      class=\"bg-border mt-3 mb-4 h-1 w-full overflow-hidden rounded-full\"\n      role=\"progressbar\"\n      :aria-valuenow=\"strengthScore\"\n      aria-valuemin=\"0\"\n      aria-valuemax=\"4\"\n      aria-label=\"Password strength\"\n    >\n      <div\n        :class=\"`h-full ${getStrengthColor(strengthScore)} transition-all duration-500 ease-out`\"\n        :style=\"{ width: `${(strengthScore / 4) * 100}%` }\"\n      ></div>\n    </div>\n\n    <!-- Password strength description -->\n    <p\n      id=\"password-description\"\n      class=\"text-foreground mb-2 text-sm font-medium\"\n    >\n      {{ getStrengthText(strengthScore) }}. Must contain:\n    </p>\n\n    <!-- Password requirements list -->\n    <ul class=\"space-y-1.5\" aria-label=\"Password requirements\">\n      <li\n        v-for=\"(req, index) in strength\"\n        :key=\"index\"\n        class=\"flex items-center gap-2\"\n      >\n        <LucideCheck\n          v-if=\"req.met\"\n          :size=\"16\"\n          class=\"text-emerald-500\"\n          aria-hidden=\"true\"\n        />\n        <LucideX\n          v-else\n          :size=\"16\"\n          class=\"text-muted-foreground/80\"\n          aria-hidden=\"true\"\n        />\n        <span\n          :class=\"`text-xs ${req.met ? 'text-emerald-600' : 'text-muted-foreground'}`\"\n        >\n          {{ req.text }}\n          <span class=\"sr-only\">\n            {{ req.met ? \" - Requirement met\" : \" - Requirement not met\" }}\n          </span>\n        </span>\n      </li>\n    </ul>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["input", "label", "password"] }
+  "meta": {
+    "tags": [
+      "input",
+      "label",
+      "password"
+    ]
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json"
+  ]
 }

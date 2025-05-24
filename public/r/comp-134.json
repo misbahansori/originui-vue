@@ -2,17 +2,23 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-134",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/checkbox.json",
-    "https://originui-vue.com/r/label.json"
-  ],
   "files": [
     {
       "path": "components/comp-134.vue",
       "content": "<script setup lang=\"ts\">\nimport { Checkbox } from \"@/registry/default/ui/checkbox\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst checked = ref(true);\n</script>\n\n<template>\n  <div\n    class=\"flex items-center gap-2 [--primary:var(--color-indigo-500)] [--ring:var(--color-indigo-300)] in-[.dark]:[--primary:var(--color-indigo-500)] in-[.dark]:[--ring:var(--color-indigo-900)]\"\n  >\n    <Checkbox :id=\"id\" v-model=\"checked\" />\n    <Label :for=\"id\">Colored checkbox</Label>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["checkbox", "label", "radix"] }
+  "meta": {
+    "tags": [
+      "checkbox",
+      "label",
+      "radix"
+    ]
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/checkbox.json",
+    "https://originui-vue.com/r/label.json"
+  ]
 }

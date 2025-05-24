@@ -2,23 +2,28 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-463",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "files": [
+    {
+      "path": "components/comp-463.vue",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  Pagination,\n  PaginationFirst,\n  PaginationLast,\n  PaginationList,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/registry/default/ui/pagination\";\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/default/ui/select\";\nimport {\n  LucideChevronFirst,\n  LucideChevronLast,\n  LucideChevronLeft,\n  LucideChevronRight,\n} from \"lucide-vue-next\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <Pagination\n    :defaultPage=\"1\"\n    :itemsPerPage=\"10\"\n    :total=\"100\"\n    v-slot=\"{ page, pageCount }\"\n    :showEdges=\"true\"\n    :siblingCount=\"0\"\n  >\n    <PaginationList\n      class=\"flex w-full items-center justify-between gap-1\"\n      v-slot=\"{ items }\"\n    >\n      <div class=\"flex items-center gap-3\">\n        <Label :for=\"id\">Rows per page</Label>\n        <Select defaultValue=\"10\">\n          <SelectTrigger :id=\"id\" class=\"w-fit whitespace-nowrap\">\n            <SelectValue placeholder=\"Please select\" />\n          </SelectTrigger>\n          <SelectContent\n            className=\"[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2\"\n          >\n            <SelectItem value=\"10\">10</SelectItem>\n            <SelectItem value=\"25\">25</SelectItem>\n            <SelectItem value=\"50\">50</SelectItem>\n            <SelectItem value=\"100\">100</SelectItem>\n          </SelectContent>\n        </Select>\n      </div>\n      <p class=\"text-muted-foreground text-sm\" aria-live=\"polite\">\n        Page\n        <span class=\"text-foreground\">{{ page }}</span>\n        of\n        <span class=\"text-foreground\">{{ pageCount }}</span>\n      </p>\n      <div class=\"flex items-center gap-1\">\n        <PaginationFirst asChild>\n          <Button variant=\"ghost\" class=\"size-9\">\n            <LucideChevronFirst aria-hidden=\"true\" class=\"size-4\" />\n          </Button>\n        </PaginationFirst>\n        <PaginationPrevious asChild>\n          <Button variant=\"ghost\" class=\"size-9\">\n            <LucideChevronLeft aria-hidden=\"true\" class=\"size-4\" />\n          </Button>\n        </PaginationPrevious>\n        <PaginationNext asChild>\n          <Button variant=\"ghost\" class=\"size-9\">\n            <LucideChevronRight aria-hidden=\"true\" class=\"size-4\" />\n          </Button>\n        </PaginationNext>\n        <PaginationLast asChild>\n          <Button variant=\"ghost\" class=\"size-9\">\n            <LucideChevronLast aria-hidden=\"true\" class=\"size-4\" />\n          </Button>\n        </PaginationLast>\n      </div>\n    </PaginationList>\n  </Pagination>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "pagination",
+      "select",
+      "radix"
+    ],
+    "colSpan": 2
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/label.json",
     "https://originui-vue.com/r/pagination.json",
     "https://originui-vue.com/r/select.json"
-  ],
-  "files": [
-    {
-      "path": "components/comp-463.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  Pagination,\n  PaginationFirst,\n  PaginationLast,\n  PaginationList,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/registry/default/ui/pagination\";\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/default/ui/select\";\nimport {\n  LucideChevronFirst,\n  LucideChevronLast,\n  LucideChevronLeft,\n  LucideChevronRight,\n} from \"lucide-vue-next\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <Pagination\n    :defaultPage=\"1\"\n    :itemsPerPage=\"10\"\n    :total=\"100\"\n    v-slot=\"{ page, pageCount }\"\n    :showEdges=\"true\"\n    :siblingCount=\"0\"\n  >\n    <PaginationList\n      class=\"flex w-full items-center justify-between gap-1\"\n      v-slot=\"{ items }\"\n    >\n      <div class=\"flex items-center gap-3\">\n        <Label :for=\"id\">Rows per page</Label>\n        <Select defaultValue=\"10\">\n          <SelectTrigger :id=\"id\" class=\"w-fit whitespace-nowrap\">\n            <SelectValue placeholder=\"Please select\" />\n          </SelectTrigger>\n          <SelectContent\n            className=\"[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2\"\n          >\n            <SelectItem value=\"10\">10</SelectItem>\n            <SelectItem value=\"25\">25</SelectItem>\n            <SelectItem value=\"50\">50</SelectItem>\n            <SelectItem value=\"100\">100</SelectItem>\n          </SelectContent>\n        </Select>\n      </div>\n      <p class=\"text-muted-foreground text-sm\" aria-live=\"polite\">\n        Page\n        <span class=\"text-foreground\">{{ page }}</span>\n        of\n        <span class=\"text-foreground\">{{ pageCount }}</span>\n      </p>\n      <div class=\"flex items-center gap-1\">\n        <PaginationFirst asChild>\n          <Button variant=\"ghost\" class=\"size-9\">\n            <LucideChevronFirst aria-hidden=\"true\" class=\"size-4\" />\n          </Button>\n        </PaginationFirst>\n        <PaginationPrevious asChild>\n          <Button variant=\"ghost\" class=\"size-9\">\n            <LucideChevronLeft aria-hidden=\"true\" class=\"size-4\" />\n          </Button>\n        </PaginationPrevious>\n        <PaginationNext asChild>\n          <Button variant=\"ghost\" class=\"size-9\">\n            <LucideChevronRight aria-hidden=\"true\" class=\"size-4\" />\n          </Button>\n        </PaginationNext>\n        <PaginationLast asChild>\n          <Button variant=\"ghost\" class=\"size-9\">\n            <LucideChevronLast aria-hidden=\"true\" class=\"size-4\" />\n          </Button>\n        </PaginationLast>\n      </div>\n    </PaginationList>\n  </Pagination>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
-    }
-  ],
-  "meta": {
-    "tags": ["pagination", "select", "radix"],
-    "colSpan": 2
-  }
+  ]
 }

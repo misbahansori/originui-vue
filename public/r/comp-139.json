@@ -2,17 +2,23 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-139",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/checkbox.json",
-    "https://originui-vue.com/r/label.json"
-  ],
   "files": [
     {
       "path": "components/comp-139.vue",
       "content": "<script setup lang=\"ts\">\nimport { Checkbox } from \"@/registry/default/ui/checkbox\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst checked1 = ref(false);\nconst checked2 = ref(false);\nconst checked3 = ref(false);\n</script>\n\n<template>\n  <div class=\"flex gap-6\">\n    <div class=\"flex items-center gap-2\">\n      <Checkbox :id=\"`${id}-a`\" v-model=\"checked1\" />\n      <Label :for=\"`${id}-a`\">Vue</Label>\n    </div>\n    <div class=\"flex items-center gap-2\">\n      <Checkbox :id=\"`${id}-b`\" v-model=\"checked2\" />\n      <Label :for=\"`${id}-b`\">Nuxt</Label>\n    </div>\n    <div class=\"flex items-center gap-2\">\n      <Checkbox :id=\"`${id}-c`\" v-model=\"checked3\" />\n      <Label :for=\"`${id}-c`\">Astro</Label>\n    </div>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["checkbox", "label", "radix"] }
+  "meta": {
+    "tags": [
+      "checkbox",
+      "label",
+      "radix"
+    ]
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/checkbox.json",
+    "https://originui-vue.com/r/label.json"
+  ]
 }

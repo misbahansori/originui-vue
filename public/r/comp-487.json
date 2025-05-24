@@ -2,20 +2,25 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-487",
   "type": "registry:component",
-  "dependencies": ["@internationalized/date"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/calendar.json"
-  ],
   "files": [
     {
       "path": "components/comp-487.vue",
       "content": "<script setup lang=\"ts\">\nimport { Calendar } from \"@/registry/default/ui/calendar\";\nimport {\n  type DateValue,\n  getLocalTimeZone,\n  today,\n} from \"@internationalized/date\";\nimport type { Ref } from \"vue\";\nimport { ref } from \"vue\";\n\nconst value = ref(today(getLocalTimeZone())) as Ref<DateValue>;\n</script>\n\n<template>\n  <div>\n    <Calendar\n      v-model=\"value\"\n      :weekday-format=\"'short'\"\n      class=\"rounded-md border\"\n    />\n    <p class=\"text-muted-foreground mt-4 text-center text-xs\">\n      Calendar -\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/docs/components/calendar#calendar\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        Reka UI\n      </a>\n    </p>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": ["calendar", "date", "react aria"],
+    "tags": [
+      "calendar",
+      "date",
+      "react aria"
+    ],
     "style": 1
-  }
+  },
+  "dependencies": [
+    "@internationalized"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/calendar.json"
+  ]
 }

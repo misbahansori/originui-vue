@@ -2,20 +2,25 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-117",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
   "files": [
     {
       "path": "components/comp-117.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideThumbsUp } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Button class=\"py-0 pe-0\" variant=\"outline\">\n    <LucideThumbsUp class=\"opacity-60\" :size=\"16\" aria-hidden=\"true\" />\n    Like\n    <span\n      class=\"text-muted-foreground before:bg-input relative ms-1 inline-flex h-full items-center justify-center rounded-full px-3 text-xs font-medium before:absolute before:inset-0 before:left-0 before:w-px\"\n    >\n      86\n    </span>\n  </Button>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": ["button", "like", "counter"],
+    "tags": [
+      "button",
+      "like",
+      "counter"
+    ],
     "style": 2
-  }
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ]
 }

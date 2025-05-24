@@ -2,21 +2,11 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-484",
   "type": "registry:component",
-  "dependencies": ["@tanstack/react-table"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/badge.json",
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/checkbox.json",
-    "https://originui-vue.com/r/pagination.json",
-    "https://originui-vue.com/r/select.json",
-    "https://originui-vue.com/r/table.json"
-  ],
   "files": [
     {
       "path": "components/comp-484.vue",
       "content": "<template>\n  <div class=\"flex items-center justify-center py-12\">\n    <span class=\"text-muted-foreground text-sm italic\">\n      Component not yet implemented.\n    </span>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
@@ -31,5 +21,7 @@
       "pagination"
     ],
     "colSpan": 3
-  }
+  },
+  "dependencies": [],
+  "registryDependencies": []
 }

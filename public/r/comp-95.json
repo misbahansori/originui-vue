@@ -2,17 +2,11 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-95",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/avatar.json",
-    "https://originui-vue.com/r/button.json"
-  ],
   "files": [
     {
       "path": "components/comp-95.vue",
       "content": "<script setup lang=\"ts\">\nimport {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n} from \"@/registry/default/ui/avatar\";\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideChevronDown } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Button variant=\"ghost\" class=\"h-auto p-0 hover:bg-transparent\">\n    <Avatar>\n      <AvatarImage src=\"/avatar.jpg\" alt=\"Profile image\" />\n      <AvatarFallback>KK</AvatarFallback>\n    </Avatar>\n    <LucideChevronDown :size=\"16\" class=\"opacity-60\" aria-hidden=\"true\" />\n  </Button>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
@@ -24,5 +18,12 @@
       "dropdown"
     ],
     "style": 2
-  }
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/avatar.json",
+    "https://originui-vue.com/r/button.json"
+  ]
 }

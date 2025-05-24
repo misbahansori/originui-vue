@@ -2,17 +2,22 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-63",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/textarea.json"
-  ],
   "files": [
     {
       "path": "components/comp-63.vue",
       "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Textarea } from \"@/registry/default/ui/textarea\";\nimport { ref, useId } from \"vue\";\n\nconst textValue = ref(\"\");\nconst id = useId();\n</script>\n\n<template>\n  <div\n    class=\"[--ring:var(--color-indigo-300)] *:not-first:mt-2 in-[.dark]:[--ring:var(--color-indigo-900)]\"\n  >\n    <Label :for=\"id\">Textarea with colored border and ring</Label>\n    <Textarea :id=\"id\" v-model=\"textValue\" placeholder=\"Leave a comment\" />\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["label", "textarea"] }
+  "meta": {
+    "tags": [
+      "label",
+      "textarea"
+    ]
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/textarea.json"
+  ]
 }

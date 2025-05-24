@@ -2,19 +2,21 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-493",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/calendar.json"
-  ],
   "files": [
     {
       "path": "components/comp-493.vue",
       "content": "<template>\n  <template>\n    <div class=\"flex items-center justify-center py-12\">\n      <span class=\"text-muted-foreground text-sm italic\">\n        Component not yet implemented.\n      </span>\n    </div>\n  </template>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": ["calendar", "date", "react daypicker"],
+    "tags": [
+      "calendar",
+      "date",
+      "react daypicker"
+    ],
     "style": 1
-  }
+  },
+  "dependencies": [],
+  "registryDependencies": []
 }

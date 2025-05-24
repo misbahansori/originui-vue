@@ -2,18 +2,24 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-456",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/pagination.json"
-  ],
   "files": [
     {
       "path": "components/comp-456.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Pagination,\n  PaginationList,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/registry/default/ui/pagination\";\nimport { LucideChevronLeft, LucideChevronRight } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Pagination\n    :defaultPage=\"1\"\n    :itemsPerPage=\"10\"\n    :total=\"100\"\n    v-slot=\"{ page, pageCount }\"\n  >\n    <PaginationList class=\"flex w-full items-center justify-between gap-3\">\n      <PaginationPrevious asChild>\n        <Button variant=\"outline\" class=\"size-9\">\n          <LucideChevronLeft aria-hidden=\"true\" class=\"size-4\" />\n        </Button>\n      </PaginationPrevious>\n      <p class=\"text-muted-foreground text-sm\" aria-live=\"polite\">\n        Page\n        <span class=\"text-foreground\">{{ page }}</span>\n        of\n        <span class=\"text-foreground\">{{ pageCount }}</span>\n      </p>\n      <PaginationNext asChild>\n        <Button variant=\"outline\" class=\"size-9\">\n          <LucideChevronRight aria-hidden=\"true\" class=\"size-4\" />\n        </Button>\n      </PaginationNext>\n    </PaginationList>\n  </Pagination>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["pagination"], "colSpan": 2 }
+  "meta": {
+    "tags": [
+      "pagination"
+    ],
+    "colSpan": 2
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/pagination.json"
+  ]
 }

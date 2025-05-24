@@ -2,20 +2,26 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-23",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json"
-  ],
   "files": [
     {
       "path": "components/comp-23.vue",
       "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { LucideEye, LucideEyeOff } from \"lucide-vue-next\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst isVisible = ref(false);\n\nconst toggleVisibility = () => {\n  isVisible.value = !isVisible.value;\n};\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Show/hide password input</Label>\n    <div class=\"relative\">\n      <Input\n        :id=\"id\"\n        class=\"pe-9\"\n        placeholder=\"Password\"\n        :type=\"isVisible ? 'text' : 'password'\"\n      />\n      <button\n        class=\"text-muted-foreground/80 hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-md transition-[color,box-shadow] outline-none focus:z-10 focus-visible:ring-[3px] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50\"\n        type=\"button\"\n        @click=\"toggleVisibility\"\n        :aria-label=\"isVisible ? 'Hide password' : 'Show password'\"\n        :aria-pressed=\"isVisible\"\n        aria-controls=\"password\"\n      >\n        <LucideEyeOff v-if=\"isVisible\" :size=\"16\" aria-hidden=\"true\" />\n        <LucideEye v-else :size=\"16\" aria-hidden=\"true\" />\n      </button>\n    </div>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": ["input", "label", "button", "password"]
-  }
+    "tags": [
+      "input",
+      "label",
+      "button",
+      "password"
+    ]
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json"
+  ]
 }

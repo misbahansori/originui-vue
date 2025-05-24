@@ -2,18 +2,11 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-259",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/slider.json"
-  ],
   "files": [
     {
       "path": "components/comp-259.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport { LucideMinus, LucidePlus } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nconst minValue = 0;\nconst maxValue = 200;\nconst steps = 5;\nconst value = ref<number[]>([100]);\n\nconst decreaseValue = () => {\n  const currentValue = value.value?.[0] ?? minValue;\n  value.value = [Math.max(minValue, currentValue - steps)];\n};\n\nconst increaseValue = () => {\n  const currentValue = value.value?.[0] ?? minValue;\n  value.value = [Math.min(maxValue, currentValue + steps)];\n};\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-3\">\n    <Label class=\"tabular-nums\">{{ value[0] || 0 }} credits/mo</Label>\n    <div class=\"flex items-center gap-4\">\n      <div>\n        <Button\n          variant=\"outline\"\n          size=\"icon\"\n          class=\"size-8\"\n          aria-label=\"Decrease value\"\n          @click=\"decreaseValue\"\n          :disabled=\"(value[0] || 0) === 0\"\n        >\n          <LucideMinus :size=\"16\" aria-hidden=\"true\" />\n        </Button>\n      </div>\n      <Slider\n        class=\"grow\"\n        v-model=\"value\"\n        :min=\"minValue\"\n        :max=\"maxValue\"\n        :step=\"steps\"\n        aria-label=\"Dual range slider with buttons\"\n      />\n      <div>\n        <Button\n          variant=\"outline\"\n          size=\"icon\"\n          class=\"size-8\"\n          aria-label=\"Increase value\"\n          @click=\"increaseValue\"\n          :disabled=\"(value[0] || 0) === 200\"\n        >\n          <LucidePlus :size=\"16\" aria-hidden=\"true\" />\n        </Button>\n      </div>\n    </div>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
@@ -24,5 +17,13 @@
       "pricing",
       "radix"
     ]
-  }
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/label.json",
+    "https://originui-vue.com/r/slider.json"
+  ]
 }

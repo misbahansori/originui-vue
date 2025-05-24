@@ -2,23 +2,27 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-441",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": [
-    "https://originui-vue.com/r/badge.json",
-    "https://originui-vue.com/r/tabs.json",
-    "https://originui-vue.com/r/tooltip.json"
-  ],
   "files": [
     {
       "path": "components/comp-441.vue",
       "content": "<script setup lang=\"ts\">\nimport { Badge } from \"@/registry/default/ui/badge\";\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@/registry/default/ui/tabs\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/registry/default/ui/tooltip\";\nimport { LucideBox, LucideHome, LucidePanelsTopLeft } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Tabs defaultValue=\"tab-1\" orientation=\"vertical\" class=\"w-full flex-row\">\n    <TabsList class=\"flex-col\">\n      <TooltipProvider :delay-duration=\"0\">\n        <Tooltip>\n          <TooltipTrigger as-child>\n            <span>\n              <TabsTrigger value=\"tab-1\" class=\"py-3\">\n                <LucideHome class=\"size-4\" aria-hidden=\"true\" />\n              </TabsTrigger>\n            </span>\n          </TooltipTrigger>\n          <TooltipContent side=\"right\" class=\"px-2 py-1 text-xs\">\n            Overview\n          </TooltipContent>\n        </Tooltip>\n      </TooltipProvider>\n      <TooltipProvider :delay-duration=\"0\">\n        <Tooltip>\n          <TooltipTrigger as-child>\n            <span>\n              <TabsTrigger value=\"tab-2\" class=\"group py-3\">\n                <span class=\"relative\">\n                  <LucidePanelsTopLeft class=\"size-4\" aria-hidden=\"true\" />\n                  <Badge\n                    class=\"border-background absolute -top-2.5 left-full min-w-4 -translate-x-1.5 px-0.5 text-[10px]/[.875rem] transition-opacity group-data-[state=inactive]:opacity-50\"\n                  >\n                    3\n                  </Badge>\n                </span>\n              </TabsTrigger>\n            </span>\n          </TooltipTrigger>\n          <TooltipContent side=\"right\" class=\"px-2 py-1 text-xs\">\n            Projects\n          </TooltipContent>\n        </Tooltip>\n      </TooltipProvider>\n      <TooltipProvider :delay-duration=\"0\">\n        <Tooltip>\n          <TooltipTrigger as-child>\n            <span>\n              <TabsTrigger value=\"tab-3\" class=\"py-3\">\n                <LucideBox class=\"size-4\" aria-hidden=\"true\" />\n              </TabsTrigger>\n            </span>\n          </TooltipTrigger>\n          <TooltipContent side=\"right\" class=\"px-2 py-1 text-xs\">\n            Packages\n          </TooltipContent>\n        </Tooltip>\n      </TooltipProvider>\n    </TabsList>\n    <div class=\"grow rounded-md border text-start\">\n      <TabsContent value=\"tab-1\">\n        <p class=\"text-muted-foreground px-4 py-3 text-xs\">Content for Tab 1</p>\n      </TabsContent>\n      <TabsContent value=\"tab-2\">\n        <p class=\"text-muted-foreground px-4 py-3 text-xs\">Content for Tab 2</p>\n      </TabsContent>\n      <TabsContent value=\"tab-3\">\n        <p class=\"text-muted-foreground px-4 py-3 text-xs\">Content for Tab 3</p>\n      </TabsContent>\n    </div>\n  </Tabs>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": ["tabs", "radix"],
+    "tags": [
+      "tabs",
+      "radix"
+    ],
     "colSpan": 2,
     "style": 2
-  }
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/badge.json",
+    "https://originui-vue.com/r/tabs.json",
+    "https://originui-vue.com/r/tooltip.json"
+  ]
 }

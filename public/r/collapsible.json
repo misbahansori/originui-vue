@@ -2,31 +2,30 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "collapsible",
   "type": "registry:ui",
-  "dependencies": ["reka-ui"],
   "files": [
     {
       "path": "ui/collapsible/Collapsible.vue",
       "content": "<script setup lang=\"ts\">\nimport type { CollapsibleRootEmits, CollapsibleRootProps } from \"reka-ui\";\nimport { CollapsibleRoot, useForwardPropsEmits } from \"reka-ui\";\n\nconst props = defineProps<CollapsibleRootProps>();\nconst emits = defineEmits<CollapsibleRootEmits>();\n\nconst forwarded = useForwardPropsEmits(props, emits);\n</script>\n\n<template>\n  <CollapsibleRoot v-slot=\"{ open }\" data-slot=\"collapsible\" v-bind=\"forwarded\">\n    <slot :open=\"open\" />\n  </CollapsibleRoot>\n</template>\n",
-      "type": "registry:ui",
-      "target": ""
+      "type": "registry:ui"
     },
     {
       "path": "ui/collapsible/CollapsibleContent.vue",
       "content": "<script setup lang=\"ts\">\nimport { CollapsibleContent, type CollapsibleContentProps } from \"reka-ui\";\n\nconst props = defineProps<CollapsibleContentProps>();\n</script>\n\n<template>\n  <CollapsibleContent data-slot=\"collapsible-content\" v-bind=\"props\">\n    <slot />\n  </CollapsibleContent>\n</template>\n",
-      "type": "registry:ui",
-      "target": ""
+      "type": "registry:ui"
     },
     {
       "path": "ui/collapsible/CollapsibleTrigger.vue",
       "content": "<script setup lang=\"ts\">\nimport { CollapsibleTrigger, type CollapsibleTriggerProps } from \"reka-ui\";\n\nconst props = defineProps<CollapsibleTriggerProps>();\n</script>\n\n<template>\n  <CollapsibleTrigger data-slot=\"collapsible-trigger\" v-bind=\"props\">\n    <slot />\n  </CollapsibleTrigger>\n</template>\n",
-      "type": "registry:ui",
-      "target": ""
+      "type": "registry:ui"
     },
     {
       "path": "ui/collapsible/index.ts",
       "content": "export { default as Collapsible } from \"./Collapsible.vue\";\nexport { default as CollapsibleContent } from \"./CollapsibleContent.vue\";\nexport { default as CollapsibleTrigger } from \"./CollapsibleTrigger.vue\";\n",
-      "type": "registry:ui",
-      "target": ""
+      "type": "registry:ui"
     }
-  ]
+  ],
+  "dependencies": [
+    "reka-ui"
+  ],
+  "registryDependencies": []
 }

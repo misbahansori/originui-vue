@@ -2,17 +2,22 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-14",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json"
-  ],
   "files": [
     {
       "path": "components/comp-14.vue",
       "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with start add-on</Label>\n    <div class=\"flex rounded-md shadow-xs\">\n      <span\n        class=\"border-input bg-background text-muted-foreground -z-10 inline-flex items-center rounded-s-md border px-3 text-sm\"\n      >\n        https://\n      </span>\n      <Input\n        :id=\"id\"\n        class=\"-ms-px rounded-s-none shadow-none\"\n        placeholder=\"google.com\"\n        type=\"text\"\n      />\n    </div>\n  </div>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["input", "label"] }
+  "meta": {
+    "tags": [
+      "input",
+      "label"
+    ]
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json"
+  ]
 }

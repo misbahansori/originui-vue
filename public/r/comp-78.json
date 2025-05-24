@@ -2,16 +2,21 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-78",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
   "files": [
     {
       "path": "components/comp-78.vue",
       "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\n</script>\n\n<template>\n  <Button>Button</Button>\n</template>\n",
-      "type": "registry:component",
-      "target": ""
+      "type": "registry:component"
     }
   ],
-  "meta": { "tags": ["button"], "style": 2 }
+  "meta": {
+    "tags": [
+      "button"
+    ],
+    "style": 2
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ]
 }

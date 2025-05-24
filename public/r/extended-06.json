@@ -2,7 +2,9 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "extended-06",
   "type": "registry:component",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/button.json"
   ],
@@ -14,7 +16,11 @@
     }
   ],
   "meta": {
-    "tags": ["empty state", "extended", "empty"],
+    "tags": [
+      "empty state",
+      "extended",
+      "empty"
+    ],
     "colSpan": 2
   }
 }
