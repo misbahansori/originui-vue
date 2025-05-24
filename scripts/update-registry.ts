@@ -18,14 +18,19 @@ interface RegistryItem {
 }
 
 // List of known path aliases and internal imports to exclude from npm dependencies
-const EXCLUDED_IMPORTS = new Set(["@", "vue"]);
+const EXCLUDED_IMPORTS = new Set([
+  "@",
+  "vue",
+  "utils",
+  "class-variance-authority",
+]);
 
 // Map of package names to their actual npm package names
 const DEPENDENCY_MAPPINGS: Record<string, string> = {
   "@remixicon": "@remixicon/vue",
 };
 
-async function main() {
+export async function updateRegistryImports() {
   try {
     const registryItems = await getRegistryFiles();
 
@@ -107,14 +112,14 @@ function extractRegistryDependencies(content: string): string[] {
   let match;
 
   const pathMappings = {
-    "@/registry/": (path: string) => path,
+    "@/registry/": (path: string) => path.replace("default/ui/", ""),
     "@/composables/": (path: string) => path.replace("/", "-"),
     "@/lib/": (path: string) => path.replace("/", "-"),
   };
 
   while ((match = importRegex.exec(content)) !== null) {
     const importPath = match[1];
-    if (!importPath) continue;
+    if (!importPath || importPath.includes("utils")) continue;
 
     for (const [prefix, transform] of Object.entries(pathMappings)) {
       if (importPath.startsWith(prefix)) {
@@ -126,5 +131,3 @@ function extractRegistryDependencies(content: string): string[] {
   }
   return Array.from(registryDeps);
 }
-
-main();
