@@ -9,9 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "start": "node .output/server/index.mjs",
-    "registry:build": "npx shadcn-vue@latest build registry.json && npx shadcn-vue@latest build registry-extended.json && node scripts/post-build.js",
-    "check-imports": "node scripts/check-imports.js",
-    "update-registry-paths": "node scripts/update-registry-paths.js"
+    "registry:build": "npx shadcn-vue@latest build registry.json && npx shadcn-vue@latest build registry-extended.json && npx tsx scripts/post-build.ts"
   },
   "dependencies": {
     "@internationalized/date": "^3.8.0",
