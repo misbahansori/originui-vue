@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/misbahansori/originui-vue/compare/v0.1.1...v0.1.3) (2025-05-29)
+
+
+### 📦 Chores
+
+* add release workflow ([0b40be2](https://github.com/misbahansori/originui-vue/commit/0b40be27e05c1edb6d4f3acf68a77af9ddfb2704))
+* **release:** 0.1.2 ([8bb9b4d](https://github.com/misbahansori/originui-vue/commit/8bb9b4d1229a0d97b5431a978736740e8e95e4b1))
+
 ### [0.1.2](https://github.com/misbahansori/originui-vue/compare/v0.1.1...v0.1.2) (2025-05-29)
 
 ### 0.1.1 (2025-05-29)
