@@ -1,0 +1,27 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "extended-19",
+  "type": "registry:component",
+  "dependencies": [
+    "@remixicon/vue"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "components/extended-19.vue",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Card, CardContent } from \"@/registry/default/ui/card\";\nimport { RiBankLine, RiNoCreditCardLine, RiPaypalLine } from \"@remixicon/vue\";\n\nconst id = useId();\nconst paymentMethods = [\n  {\n    name: \"Credit Card\",\n    description: \"Pay with your credit card\",\n    icon: RiNoCreditCardLine,\n  },\n  {\n    name: \"PayPal\",\n    description: \"Pay with your PayPal account\",\n    icon: RiPaypalLine,\n  },\n  {\n    name: \"Bank Transfer\",\n    description: \"Pay with your bank transfer\",\n    icon: RiBankLine,\n  },\n];\n</script>\n\n<template>\n  <Card>\n    <CardHeader>\n      <CardTitle>Select payment method</CardTitle>\n      <CardDescription>\n        Choose your preferred payment method to complete your purchase.\n      </CardDescription>\n    </CardHeader>\n    <CardContent>\n      <form>\n        <RadioGroup class=\"gap-2\">\n          <div\n            v-for=\"paymentMethod in paymentMethods\"\n            :key=\"paymentMethod.name\"\n            class=\"border-input has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-accent relative flex w-full items-center gap-2 rounded-md border px-4 py-3 shadow-xs outline-none\"\n          >\n            <RadioGroupItem\n              :value=\"paymentMethod.name\"\n              :id=\"`${id}-${paymentMethod.name}`\"\n              :aria-describedby=\"`${id}-${paymentMethod.name}-description`\"\n              class=\"order-1 after:absolute after:inset-0\"\n            />\n            <div\n              class=\"bg-primary/10 flex size-9 items-center justify-center rounded-full\"\n            >\n              <component :is=\"paymentMethod.icon\" class=\"text-primary size-5\" />\n            </div>\n            <div class=\"grid grow gap-1\">\n              <Label :htmlFor=\"`${id}-${paymentMethod.name}`\">\n                {{ paymentMethod.name }}\n              </Label>\n              <p\n                :id=\"`${id}-${paymentMethod.name}-description`\"\n                class=\"text-muted-foreground text-xs\"\n              >\n                {{ paymentMethod.description }}\n              </p>\n            </div>\n          </div>\n        </RadioGroup>\n      </form>\n    </CardContent>\n    <CardFooter class=\"gap-2\">\n      <Button variant=\"default\" class=\"flex-1\">\n        <span>Proceed to checkout</span>\n      </Button>\n      <Button variant=\"outline\" class=\"flex-1\">\n        <span>Cancel</span>\n      </Button>\n    </CardFooter>\n  </Card>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "card",
+      "extended",
+      "card"
+    ],
+    "colSpan": 1
+  }
+}
