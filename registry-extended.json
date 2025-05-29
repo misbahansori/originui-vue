@@ -324,6 +324,22 @@
         "tags": ["card", "extended", "card"],
         "colSpan": 1
       }
+    },
+    {
+      "name": "extended-19",
+      "type": "registry:component",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": ["https://originui-vue.com/r/card.json"],
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-19.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["card", "extended", "card"],
+        "colSpan": 1
+      }
     }
   ]
 }
