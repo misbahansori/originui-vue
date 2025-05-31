@@ -31,7 +31,7 @@ const placeholder = computed(
 );
 
 const monthNames = Array.from({ length: 12 }, (_, i) =>
-  new CalendarDate(2024, i + 1, 1)
+  new CalendarDate(todayDate.year, i + 1, 1)
     .toDate(getLocalTimeZone())
     .toLocaleString("en-US", { month: "long" }),
 );
