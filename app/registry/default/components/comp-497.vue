@@ -26,9 +26,16 @@ const selectedDate = ref({
   year: todayDate.year,
 });
 
-const placeholder = computed(
-  () => new CalendarDate(selectedDate.value.year, selectedDate.value.month, 1),
-);
+const placeholder = computed({
+  get: () =>
+    new CalendarDate(selectedDate.value.year, selectedDate.value.month, 1),
+  set: (newDate: DateValue) => {
+    selectedDate.value = {
+      year: newDate.year,
+      month: newDate.month,
+    };
+  },
+});
 
 const monthNames = Array.from({ length: 12 }, (_, i) =>
   new CalendarDate(todayDate.year, i + 1, 1)
