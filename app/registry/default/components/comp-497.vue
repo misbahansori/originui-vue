@@ -17,31 +17,32 @@ import {
 } from "@internationalized/date";
 import { CalendarRoot } from "reka-ui";
 
-const value = ref(today(getLocalTimeZone())) as Ref<DateValue>;
-const monthNames = Array.from({ length: 12 }, (_, i) => {
-  const date = new CalendarDate(2024, i + 1, 1);
-  return date
-    .toDate(getLocalTimeZone())
-    .toLocaleString("en-US", { month: "long" });
-});
-
 const todayDate = today(getLocalTimeZone());
-const currentYear = todayDate.year;
-const currentMonth = todayDate.month;
-const years = Array.from({ length: 40 }, (_, i) => currentYear - 20 + i);
 
-const selectedMonth = ref(currentMonth);
-const selectedYear = ref(currentYear);
+const modelValue = ref(todayDate) as Ref<DateValue>;
 
-const placeholder = computed(() => {
-  return new CalendarDate(selectedYear.value, selectedMonth.value, 1);
+const selectedDate = ref({
+  month: todayDate.month,
+  year: todayDate.year,
 });
+
+const placeholder = computed(
+  () => new CalendarDate(selectedDate.value.year, selectedDate.value.month, 1),
+);
+
+const monthNames = Array.from({ length: 12 }, (_, i) =>
+  new CalendarDate(2024, i + 1, 1)
+    .toDate(getLocalTimeZone())
+    .toLocaleString("en-US", { month: "long" }),
+);
+
+const years = Array.from({ length: 40 }, (_, i) => todayDate.year - 20 + i);
 </script>
 
 <template>
   <div>
     <CalendarRoot
-      v-model="value"
+      v-model="modelValue"
       :placeholder="placeholder"
       v-slot="{ grid, weekDays }"
       data-slot="calendar"
@@ -49,9 +50,9 @@ const placeholder = computed(() => {
     >
       <CalendarHeader class="flex justify-between">
         <div class="flex w-full items-center gap-2">
-          <Select v-model="selectedMonth" class="w-full flex-1">
+          <Select v-model="selectedDate.month" class="w-full flex-1">
             <SelectTrigger size="sm">
-              <SelectValue placeholder="Select a month" />
+              <SelectValue />
             </SelectTrigger>
             <SelectContent>
               <SelectItem
@@ -63,9 +64,9 @@ const placeholder = computed(() => {
               </SelectItem>
             </SelectContent>
           </Select>
-          <Select v-model="selectedYear">
-            <SelectTrigger size="sm">
-              <SelectValue placeholder="Select a year" />
+          <Select v-model="selectedDate.year">
+            <SelectTrigger size="sm" class="flex-1">
+              <SelectValue />
             </SelectTrigger>
             <SelectContent>
               <SelectItem v-for="year in years" :key="year" :value="year">
