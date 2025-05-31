@@ -105,7 +105,7 @@ const years = Array.from({ length: 40 }, (_, i) => todayDate.year - 20 + i);
       </div>
     </CalendarRoot>
     <p class="text-muted-foreground mt-4 text-center text-xs">
-      Right navigation -
+      Yearly select + nav -
       <a
         class="hover:text-foreground underline"
         href="https://reka-ui.com/docs/components/calendar#calendar"
