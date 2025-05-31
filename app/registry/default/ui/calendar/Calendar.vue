@@ -43,8 +43,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
       <CalendarHeading />
 
       <div class="flex items-center gap-1">
-        <CalendarPrevButton />
-        <CalendarNextButton />
+        <CalendarPrevButton class="absolute left-1" />
+        <CalendarNextButton class="absolute right-1" />
       </div>
     </CalendarHeader>
 

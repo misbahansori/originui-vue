@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { cn } from "@/lib/utils";
 import {
   CalendarCell,
   CalendarCellTrigger,
@@ -10,15 +9,15 @@ import {
   CalendarHeadCell,
   CalendarHeader,
   CalendarHeading,
+  CalendarNextButton,
+  CalendarPrevButton,
 } from "@/registry/default/ui/calendar";
 import {
   getLocalTimeZone,
   today,
   type DateValue,
 } from "@internationalized/date";
-import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
-import { CalendarNext, CalendarPrev, CalendarRoot } from "reka-ui";
-import { buttonVariants } from "~/registry/default/ui/button";
+import { CalendarRoot } from "reka-ui";
 
 const value = ref(today(getLocalTimeZone())) as Ref<DateValue>;
 </script>
@@ -34,16 +33,8 @@ const value = ref(today(getLocalTimeZone())) as Ref<DateValue>;
       <CalendarHeader class="flex justify-between">
         <CalendarHeading class="flex-1 pl-2" />
         <div class="flex items-center gap-1">
-          <CalendarPrev
-            :class="cn(buttonVariants({ variant: 'ghost', size: 'icon' }))"
-          >
-            <LucideChevronLeft class="size-4" />
-          </CalendarPrev>
-          <CalendarNext
-            :class="cn(buttonVariants({ variant: 'ghost', size: 'icon' }))"
-          >
-            <LucideChevronRight class="size-4" />
-          </CalendarNext>
+          <CalendarPrevButton />
+          <CalendarNextButton />
         </div>
       </CalendarHeader>
       <div class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">
