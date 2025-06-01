@@ -23,6 +23,7 @@ import {
   today,
   type DateValue,
 } from "@internationalized/date";
+import { useTimeoutFn } from "@vueuse/core";
 import { LucideChevronDown } from "lucide-vue-next";
 import { CalendarRoot } from "reka-ui";
 
@@ -43,6 +44,27 @@ const isCurrentYear = (year: number) => {
 };
 
 const collapsibleOpen = ref(false);
+
+const scrollToCurrentYear = () => {
+  const currentYearElement = document.querySelector(
+    `[data-year="${modelValue.value.year}"]`,
+  );
+
+  if (currentYearElement) {
+    currentYearElement.scrollIntoView({
+      behavior: "instant",
+      block: "start",
+    });
+  }
+};
+
+const { start } = useTimeoutFn(scrollToCurrentYear, 0);
+
+watch(collapsibleOpen, (isOpen) => {
+  if (isOpen) {
+    start();
+  }
+});
 
 const selectMonth = (year: number, month: number) => {
   modelValue.value = new CalendarDate(year, month, modelValue.value.day);
@@ -81,7 +103,7 @@ const selectMonth = (year: number, month: number) => {
                 v-for="year in years"
                 :key="year"
                 class="border-t px-2 py-1.5"
-                :open="isCurrentYear(year)"
+                :defaultOpen="isCurrentYear(year)"
                 :data-year="year"
               >
                 <CollapsibleTrigger asChild>
