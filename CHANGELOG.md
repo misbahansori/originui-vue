@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/misbahansori/originui-vue/compare/v0.1.3...v0.1.4) (2025-06-01)
+
+
+### 📦 Chores
+
+* update the base calendar component ([97e8181](https://github.com/misbahansori/originui-vue/commit/97e8181d7629c3d7cbd81282fe575144e0f92e9f))
+
+
+### ✨ Features
+
+* add appointment picker component ([93b3c5c](https://github.com/misbahansori/originui-vue/commit/93b3c5cb5575c8b93fa019f6dfb796f2e46f01ed))
+* add calendar with presets ([d31d359](https://github.com/misbahansori/originui-vue/commit/d31d359fc8102c11b9b9c16537c22d133fa98692))
+* add comp 496 ([c970c34](https://github.com/misbahansori/originui-vue/commit/c970c343bb3ab46119800728caae98b602e669dc))
+* add comp 497 ([2511d91](https://github.com/misbahansori/originui-vue/commit/2511d91bab623251a7cf8bf7bef091705332d9a2))
+* add comp 502 and 503 ([5b0c552](https://github.com/misbahansori/originui-vue/commit/5b0c552c3ad4162ef58543b6cb611e96effd972e))
+* build registry ([591d2ae](https://github.com/misbahansori/originui-vue/commit/591d2ae2484359d8a561426c783a84f48cca4dde))
+* build the registry ([ee8aa15](https://github.com/misbahansori/originui-vue/commit/ee8aa15ff710beaf2efa49ca0d4cfa5a907425ca))
+* implement calendar component with week numbers ([a5d2cb9](https://github.com/misbahansori/originui-vue/commit/a5d2cb9214fbeae9cc6a81efb4e8171da232605f))
+
+
+### 🐛 Bug Fixes
+
+* add scroll to current year functionality ([52ed4cf](https://github.com/misbahansori/originui-vue/commit/52ed4cf0136a436cf820c119afd8a42e79dbe59d))
+* base calendar ([bc42e43](https://github.com/misbahansori/originui-vue/commit/bc42e43df3f9a43c844edf738965c6b84f3cb1b9))
+* build registry ([68386be](https://github.com/misbahansori/originui-vue/commit/68386be68762e1c535dcb7764799ed068e35d6f1))
+* calendar cell size ([cd43c0f](https://github.com/misbahansori/originui-vue/commit/cd43c0ffca5ca41b0d893eac979194289bb9a654))
+* update dependencies from "[@internationalized](https://github.com/internationalized)" to "@internationalized/date" ([de51e0e](https://github.com/misbahansori/originui-vue/commit/de51e0e471b1dd14ae19f848bce775b4bcc71968))
+* update dependencies from "[@vueuse](https://github.com/vueuse)" to "@vueuse/core" ([9e494eb](https://github.com/misbahansori/originui-vue/commit/9e494eb187f39b54dfea718e38f5fcf4e2cae4ff))
+
 ### [0.1.3](https://github.com/misbahansori/originui-vue/compare/v0.1.1...v0.1.3) (2025-05-29)
 
 
