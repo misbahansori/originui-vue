@@ -177,7 +177,7 @@ const selectMonth = (year: number, month: number) => {
       </div>
     </CalendarRoot>
     <p class="text-muted-foreground mt-4 text-center text-xs">
-      Right navigation -
+      Advanced selection -
       <a
         class="hover:text-foreground underline"
         href="https://reka-ui.com/docs/components/calendar#calendar"

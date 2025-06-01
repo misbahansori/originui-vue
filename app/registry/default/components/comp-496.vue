@@ -19,13 +19,15 @@ import {
 } from "@internationalized/date";
 import { CalendarRoot } from "reka-ui";
 
-const value = ref(today(getLocalTimeZone())) as Ref<DateValue>;
+const todayDate = today(getLocalTimeZone());
+
+const modelValue = ref(todayDate) as Ref<DateValue>;
 </script>
 
 <template>
   <div>
     <CalendarRoot
-      v-model="value"
+      v-model="modelValue"
       v-slot="{ grid, weekDays }"
       data-slot="calendar"
       class="rounded-md border p-3"
