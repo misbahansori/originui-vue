@@ -24,12 +24,17 @@ const todayDate = today(getLocalTimeZone());
 const modelValue = ref(todayDate) as Ref<DateValue>;
 
 const getWeeksInYear = (date: DateValue) => {
-  const d = date.toDate(getLocalTimeZone());
-  const start = new Date(d.getFullYear(), 0, 1);
-  const days = Math.floor(
-    (d.getTime() - start.getTime()) / (24 * 60 * 60 * 1000),
+  const currentDate = date.toDate(getLocalTimeZone());
+  const yearStart = new Date(currentDate.getFullYear(), 0, 1);
+
+  const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
+  const daysSinceYearStart = Math.floor(
+    (currentDate.getTime() - yearStart.getTime()) / MILLISECONDS_PER_DAY,
   );
-  return Math.ceil((days + start.getDay()) / 7);
+
+  const weekNumber = Math.ceil((daysSinceYearStart + yearStart.getDay()) / 7);
+
+  return weekNumber;
 };
 </script>
 

@@ -66,5 +66,15 @@ const modelValue = ref(todayDate) as Ref<DateValue>;
         </CalendarGrid>
       </div>
     </CalendarRoot>
+    <p class="text-muted-foreground mt-4 text-center text-xs">
+      Calendar -
+      <a
+        class="hover:text-foreground underline"
+        href="https://reka-ui.com/docs/components/calendar#calendar"
+        target="_blank"
+      >
+        reka-ui.com
+      </a>
+    </p>
   </div>
 </template>
