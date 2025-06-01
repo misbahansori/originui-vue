@@ -1,12 +1,13 @@
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
+import { reactiveOmit } from "@vueuse/core";
 import {
   CalendarRoot,
   type CalendarRootEmits,
   type CalendarRootProps,
   useForwardPropsEmits,
 } from "reka-ui";
-import { computed, type HTMLAttributes } from "vue";
+import type { HTMLAttributes } from "vue";
 import {
   CalendarCell,
   CalendarCellTrigger,
@@ -26,11 +27,7 @@ const props = defineProps<
 >();
 const emits = defineEmits<CalendarRootEmits>();
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
-
-  return delegated;
-});
+const delegatedProps = reactiveOmit(props, "class");
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
@@ -46,8 +43,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
       <CalendarHeading />
 
       <div class="flex items-center gap-1">
-        <CalendarPrevButton />
-        <CalendarNextButton />
+        <CalendarPrevButton class="absolute left-1" />
+        <CalendarNextButton class="absolute right-1" />
       </div>
     </CalendarHeader>
 
