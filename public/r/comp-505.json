@@ -21,7 +21,7 @@
     "style": 1
   },
   "dependencies": [
-    "@internationalized",
+    "@internationalized/date",
     "@vueuse/core",
     "reka-ui"
   ],

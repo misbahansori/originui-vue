@@ -20,7 +20,7 @@
     "style": 1
   },
   "dependencies": [
-    "@internationalized",
+    "@internationalized/date",
     "@vueuse/core",
     "lucide-vue-next",
     "reka-ui"

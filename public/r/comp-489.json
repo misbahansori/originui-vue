@@ -20,7 +20,7 @@
     "style": 1
   },
   "dependencies": [
-    "@internationalized"
+    "@internationalized/date"
   ],
   "registryDependencies": [
     "https://originui-vue.com/r/range-calendar.json"

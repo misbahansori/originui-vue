@@ -21,7 +21,7 @@
     ]
   },
   "dependencies": [
-    "@internationalized"
+    "@internationalized/date"
   ],
   "registryDependencies": [
     "https://originui-vue.com/r/date-range-picker.json",
