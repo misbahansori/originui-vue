@@ -50,7 +50,7 @@
     }
   ],
   "dependencies": [
-    "@vueuse",
+    "@vueuse/core",
     "reka-ui",
     "lucide-vue-next"
   ],

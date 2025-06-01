@@ -15,7 +15,7 @@
     }
   ],
   "dependencies": [
-    "@vueuse"
+    "@vueuse/core"
   ],
   "registryDependencies": []
 }

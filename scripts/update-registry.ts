@@ -29,6 +29,7 @@ const EXCLUDED_IMPORTS = new Set([
 ]);
 const DEPENDENCY_MAPPINGS: Record<string, string> = {
   "@remixicon": "@remixicon/vue",
+  "@vueuse": "@vueuse/core",
 };
 
 const PATH_MAPPINGS = [

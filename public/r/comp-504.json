@@ -21,7 +21,7 @@
   },
   "dependencies": [
     "@internationalized",
-    "@vueuse",
+    "@vueuse/core",
     "lucide-vue-next",
     "reka-ui"
   ],

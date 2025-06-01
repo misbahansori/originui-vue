@@ -31,7 +31,7 @@
   ],
   "dependencies": [
     "reka-ui",
-    "@vueuse"
+    "@vueuse/core"
   ],
   "registryDependencies": []
 }

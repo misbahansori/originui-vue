@@ -17,7 +17,7 @@
     ]
   },
   "dependencies": [
-    "@vueuse",
+    "@vueuse/core",
     "lucide-vue-next"
   ],
   "registryDependencies": [

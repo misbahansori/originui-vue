@@ -57,7 +57,7 @@
   "dependencies": [
     "reka-ui",
     "lucide-vue-next",
-    "@vueuse"
+    "@vueuse/core"
   ],
   "registryDependencies": [
     "https://originui-vue.com/r/dialog.json"
