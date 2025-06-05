@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Logo from "@/registry/default/components/navbar-components/Logo.vue";
+import Logo from "@/registry/default/components/NavbarComponents/Logo.vue";
 import { Button } from "@/registry/default/ui/button";
 import {
   NavigationMenu,

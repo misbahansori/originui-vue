@@ -4,7 +4,7 @@ import {
   LucideMessageCircleDashed,
 } from "lucide-vue-next";
 
-import UserMenu from "@/registry/default/components/navbar-components/UserMenu.vue";
+import UserMenu from "@/registry/default/components/NavbarComponents/UserMenu.vue";
 import { Button } from "@/registry/default/ui/button";
 import {
   Select,

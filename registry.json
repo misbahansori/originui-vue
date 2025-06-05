@@ -8760,7 +8760,7 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/logo.tsx",
+          "path": "registry/default/components/NavbarComponents/logo.tsx",
           "type": "registry:component"
         }
       ],
@@ -8778,7 +8778,7 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/logo.tsx",
+          "path": "registry/default/components/NavbarComponents/logo.tsx",
           "type": "registry:component"
         }
       ],
@@ -8796,7 +8796,7 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/logo.tsx",
+          "path": "registry/default/components/NavbarComponents/logo.tsx",
           "type": "registry:component"
         }
       ],
@@ -8814,19 +8814,19 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/info-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/info-menu.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/logo.tsx",
+          "path": "registry/default/components/NavbarComponents/logo.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/notification-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/notification-menu.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/user-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/user-menu.tsx",
           "type": "registry:component"
         }
       ],
@@ -8844,15 +8844,15 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/logo.tsx",
+          "path": "registry/default/components/NavbarComponents/logo.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/theme-toggle.tsx",
+          "path": "registry/default/components/NavbarComponents/theme-toggle.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/user-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/user-menu.tsx",
           "type": "registry:component"
         }
       ],
@@ -8870,15 +8870,15 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/logo.tsx",
+          "path": "registry/default/components/NavbarComponents/logo.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/notification-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/notification-menu.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/user-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/user-menu.tsx",
           "type": "registry:component"
         }
       ],
@@ -8896,15 +8896,15 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/logo.tsx",
+          "path": "registry/default/components/NavbarComponents/logo.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/notification-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/notification-menu.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/user-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/user-menu.tsx",
           "type": "registry:component"
         }
       ],
@@ -8922,15 +8922,15 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/logo.tsx",
+          "path": "registry/default/components/NavbarComponents/logo.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/notification-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/notification-menu.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/user-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/user-menu.tsx",
           "type": "registry:component"
         }
       ],
@@ -8948,11 +8948,11 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/logo.tsx",
+          "path": "registry/default/components/NavbarComponents/logo.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/theme-toggle.tsx",
+          "path": "registry/default/components/NavbarComponents/theme-toggle.tsx",
           "type": "registry:component"
         }
       ],
@@ -8970,7 +8970,7 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/logo.tsx",
+          "path": "registry/default/components/NavbarComponents/logo.tsx",
           "type": "registry:component"
         }
       ],
@@ -8993,11 +8993,11 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/logo.tsx",
+          "path": "registry/default/components/NavbarComponents/logo.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/user-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/user-menu.tsx",
           "type": "registry:component"
         }
       ],
@@ -9015,11 +9015,11 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/settings-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/settings-menu.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/user-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/user-menu.tsx",
           "type": "registry:component"
         }
       ],
@@ -9037,15 +9037,15 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/notification-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/notification-menu.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/team-switcher.tsx",
+          "path": "registry/default/components/NavbarComponents/team-switcher.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/user-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/user-menu.tsx",
           "type": "registry:component"
         }
       ],
@@ -9063,7 +9063,7 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/user-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/user-menu.tsx",
           "type": "registry:component"
         }
       ],
@@ -9081,15 +9081,15 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/info-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/info-menu.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/notification-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/notification-menu.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/settings-menu.tsx",
+          "path": "registry/default/components/NavbarComponents/settings-menu.tsx",
           "type": "registry:component"
         }
       ],
@@ -9107,11 +9107,11 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/date-picker.tsx",
+          "path": "registry/default/components/NavbarComponents/date-picker.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/filters.tsx",
+          "path": "registry/default/components/NavbarComponents/filters.tsx",
           "type": "registry:component"
         }
       ],
@@ -9129,11 +9129,11 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/app-toggle.tsx",
+          "path": "registry/default/components/NavbarComponents/app-toggle.tsx",
           "type": "registry:component"
         },
         {
-          "path": "registry/default/components/navbar-components/team-switcher.tsx",
+          "path": "registry/default/components/NavbarComponents/team-switcher.tsx",
           "type": "registry:component"
         }
       ],

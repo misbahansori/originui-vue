@@ -7,7 +7,7 @@ import {
 } from "lucide-vue-next";
 import { useId } from "vue";
 
-import Logo from "@/registry/default/components/navbar-components/Logo.vue";
+import Logo from "@/registry/default/components/NavbarComponents/Logo.vue";
 import { Button } from "@/registry/default/ui/button";
 import { Input } from "@/registry/default/ui/input";
 import {
