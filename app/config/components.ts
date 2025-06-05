@@ -301,7 +301,7 @@ export const categories: ComponentCategory[] = [
   {
     slug: "file-upload",
     name: "File upload",
-    isNew: true,
+    isNew: false,
     components: [
       { name: "comp-125" },
       { name: "comp-126" },
@@ -382,6 +382,33 @@ export const categories: ComponentCategory[] = [
       { name: "comp-56" },
       { name: "comp-57" },
     ],
+  },
+  {
+    slug: "navbar",
+    name: "Navbar",
+    components: [
+      { name: "comp-577" },
+      { name: "comp-578" },
+      { name: "comp-579" },
+      { name: "comp-580" },
+      { name: "comp-581" },
+      { name: "comp-582" },
+      { name: "comp-583" },
+      { name: "comp-584" },
+      { name: "comp-585" },
+      { name: "comp-586" },
+      { name: "comp-587" },
+      { name: "comp-588" },
+      { name: "comp-589" },
+      { name: "comp-590" },
+      { name: "comp-591" },
+      { name: "comp-592" },
+      { name: "comp-593" },
+      { name: "comp-594" },
+      { name: "comp-595" },
+      { name: "comp-596" },
+    ],
+    isNew: true,
   },
   {
     slug: "notification",
@@ -686,7 +713,7 @@ export const categories: ComponentCategory[] = [
   {
     slug: "timeline",
     name: "Timeline",
-    isNew: true,
+    isNew: false,
     components: [
       { name: "comp-530" },
       { name: "comp-531" },

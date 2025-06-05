@@ -8735,6 +8735,20 @@
         }
       ],
       "meta": { "tags": ["upload", "file"], "colSpan": 2 }
+    },
+    {
+      "name": "comp-577",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-577.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
     }
   ]
 }
