@@ -11,12 +11,12 @@ import {
 } from "@/registry/default/ui/dropdown-menu";
 
 interface Props {
-  teams: readonly string[];
-  defaultTeam: string;
+  teams: string[];
+  defaultTeam?: string;
 }
 
 const props = defineProps<Props>();
-const selectedProject = ref(props.defaultTeam);
+const selectedProject = ref(props.defaultTeam ?? props.teams[0]);
 </script>
 
 <template>
@@ -26,7 +26,7 @@ const selectedProject = ref(props.defaultTeam);
         <span
           class="bg-primary text-primary-foreground flex size-8 items-center justify-center rounded-full"
         >
-          {{ selectedProject.charAt(0).toUpperCase() }}
+          {{ selectedProject?.charAt(0).toUpperCase() }}
         </span>
         <div class="flex flex-col gap-0.5 leading-none">
           <span>{{ selectedProject }}</span>
