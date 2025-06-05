@@ -7,9 +7,9 @@ import {
   LucideSearch,
 } from "lucide-vue-next";
 
-import NotificationMenu from "@/registry/default/components/NavbarComponents/NotificationMenu.vue";
-import TeamSwitcher from "@/registry/default/components/NavbarComponents/TeamSwitcher.vue";
-import UserMenu from "@/registry/default/components/NavbarComponents/UserMenu.vue";
+import NotificationMenu from "@/registry/default/components/navbar-components/NotificationMenu.vue";
+import TeamSwitcher from "@/registry/default/components/navbar-components/TeamSwitcher.vue";
+import UserMenu from "@/registry/default/components/navbar-components/UserMenu.vue";
 import { Button } from "@/registry/default/ui/button";
 import {
   NavigationMenu,

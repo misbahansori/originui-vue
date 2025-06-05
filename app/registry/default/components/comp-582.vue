@@ -8,9 +8,9 @@ import {
 } from "lucide-vue-next";
 import { useId } from "vue";
 
-import Logo from "@/registry/default/components/NavbarComponents/Logo.vue";
-import ThemeToggle from "@/registry/default/components/NavbarComponents/ThemeToggle.vue";
-import UserMenu from "@/registry/default/components/NavbarComponents/UserMenu.vue";
+import Logo from "@/registry/default/components/navbar-components/Logo.vue";
+import ThemeToggle from "@/registry/default/components/navbar-components/ThemeToggle.vue";
+import UserMenu from "@/registry/default/components/navbar-components/UserMenu.vue";
 import { Button } from "@/registry/default/ui/button";
 import {
   NavigationMenu,

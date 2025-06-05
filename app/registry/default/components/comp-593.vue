@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import DatePicker from "@/registry/default/components/NavbarComponents/DatePicker.vue";
-import Filters from "@/registry/default/components/NavbarComponents/Filters.vue";
+import DatePicker from "@/registry/default/components/navbar-components/DatePicker.vue";
+import Filters from "@/registry/default/components/navbar-components/Filters.vue";
 import {
   Breadcrumb,
   BreadcrumbItem,

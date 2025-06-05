@@ -2,9 +2,9 @@
 import { LucideLayoutGrid, LucidePlus, LucideSearch } from "lucide-vue-next";
 import { ref, useId } from "vue";
 
-import InfoMenu from "@/registry/default/components/NavbarComponents/InfoMenu.vue";
-import NotificationMenu from "@/registry/default/components/NavbarComponents/NotificationMenu.vue";
-import SettingsMenu from "@/registry/default/components/NavbarComponents/SettingsMenu.vue";
+import InfoMenu from "@/registry/default/components/navbar-components/InfoMenu.vue";
+import NotificationMenu from "@/registry/default/components/navbar-components/NotificationMenu.vue";
+import SettingsMenu from "@/registry/default/components/navbar-components/SettingsMenu.vue";
 import { Button } from "@/registry/default/ui/button";
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";

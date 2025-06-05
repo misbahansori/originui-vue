@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { LucideChevronsUpDown } from "lucide-vue-next";
 
-import SettingsMenu from "@/registry/default/components/NavbarComponents/SettingsMenu.vue";
-import UserMenu from "@/registry/default/components/NavbarComponents/UserMenu.vue";
+import SettingsMenu from "@/registry/default/components/navbar-components/SettingsMenu.vue";
+import UserMenu from "@/registry/default/components/navbar-components/UserMenu.vue";
 import {
   Breadcrumb,
   BreadcrumbItem,

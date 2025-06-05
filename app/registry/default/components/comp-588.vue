@@ -6,8 +6,8 @@ import {
   LucideZap,
 } from "lucide-vue-next";
 
-import Logo from "@/registry/default/components/NavbarComponents/Logo.vue";
-import UserMenu from "@/registry/default/components/NavbarComponents/UserMenu.vue";
+import Logo from "@/registry/default/components/navbar-components/Logo.vue";
+import UserMenu from "@/registry/default/components/navbar-components/UserMenu.vue";
 import { Button } from "@/registry/default/ui/button";
 import {
   NavigationMenu,

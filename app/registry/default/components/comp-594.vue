@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import AppToggle from "@/registry/default/components/NavbarComponents/AppToggle.vue";
-import TeamSwitcher from "@/registry/default/components/NavbarComponents/TeamSwitcher.vue";
+import AppToggle from "@/registry/default/components/navbar-components/AppToggle.vue";
+import TeamSwitcher from "@/registry/default/components/navbar-components/TeamSwitcher.vue";
 import { Button } from "@/registry/default/ui/button";
 import { SparklesIcon, UploadIcon } from "lucide-vue-next";
 

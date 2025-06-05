@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import InfoMenu from "@/registry/default/components/NavbarComponents/InfoMenu.vue";
-import Logo from "@/registry/default/components/NavbarComponents/Logo.vue";
-import NotificationMenu from "@/registry/default/components/NavbarComponents/NotificationMenu.vue";
-import UserMenu from "@/registry/default/components/NavbarComponents/UserMenu.vue";
+import InfoMenu from "@/registry/default/components/navbar-components/InfoMenu.vue";
+import Logo from "@/registry/default/components/navbar-components/Logo.vue";
+import NotificationMenu from "@/registry/default/components/navbar-components/NotificationMenu.vue";
+import UserMenu from "@/registry/default/components/navbar-components/UserMenu.vue";
 import { Button } from "@/registry/default/ui/button";
 import {
   NavigationMenu,
