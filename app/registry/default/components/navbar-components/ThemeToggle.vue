@@ -1,38 +1,37 @@
 <script setup lang="ts">
-import { Button } from "@/registry/default/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu";
-import { usePreferredColorScheme } from "@vueuse/core";
-import { MoonIcon, SunIcon } from "lucide-vue-next";
+import { LucideMoon, LucideSun } from "lucide-vue-next";
+import { ref } from "vue";
 
-const preferredColor = usePreferredColorScheme();
+import { Toggle } from "@/registry/default/ui/toggle";
+
+const theme = ref<string>("light");
+
+const toggleTheme = () => {
+  theme.value = theme.value === "dark" ? "light" : "dark";
+};
 </script>
 
 <template>
-  <DropdownMenu>
-    <DropdownMenuTrigger as-child>
-      <Button variant="ghost" size="icon">
-        <SunIcon
-          class="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90"
-        />
-        <MoonIcon
-          class="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0"
-        />
-        <span class="sr-only">Toggle theme</span>
-      </Button>
-    </DropdownMenuTrigger>
-    <DropdownMenuContent align="end">
-      <DropdownMenuItem @click="preferredColor = 'light'">
-        Light
-      </DropdownMenuItem>
-      <DropdownMenuItem @click="preferredColor = 'dark'">Dark</DropdownMenuItem>
-      <DropdownMenuItem @click="preferredColor = 'no-preference'">
-        System
-      </DropdownMenuItem>
-    </DropdownMenuContent>
-  </DropdownMenu>
+  <div>
+    <Toggle
+      variant="outline"
+      size="xs"
+      class="group data-[state=on]:hover:bg-muted text-muted-foreground data-[state=on]:text-muted-foreground data-[state=on]:hover:text-foreground size-8 rounded-full border-none shadow-none data-[state=on]:bg-transparent"
+      :pressed="theme === 'dark'"
+      @pressed-change="toggleTheme"
+      :aria-label="`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`"
+    >
+      <!-- Note: After dark mode implementation, rely on dark: prefix rather than group-data-[state=on]: -->
+      <LucideMoon
+        :size="16"
+        class="shrink-0 scale-0 opacity-0 transition-all group-data-[state=on]:scale-100 group-data-[state=on]:opacity-100"
+        aria-hidden="true"
+      />
+      <LucideSun
+        :size="16"
+        class="absolute shrink-0 scale-100 opacity-100 transition-all group-data-[state=on]:scale-0 group-data-[state=on]:opacity-0"
+        aria-hidden="true"
+      />
+    </Toggle>
+  </div>
 </template>
