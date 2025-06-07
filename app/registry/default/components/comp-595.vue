@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import {
-  ChevronLeftIcon,
-  HistoryIcon,
-  MessageSquareText,
-  UserRoundPlus,
+  LucideChevronLeft,
+  LucideHistory,
+  LucideMessageSquareText,
+  LucideUserRoundPlus,
 } from "lucide-vue-next";
 
 import {
@@ -27,7 +27,7 @@ import { Button } from "@/registry/default/ui/button";
           as-child
         >
           <a href="#">
-            <ChevronLeftIcon />
+            <LucideChevronLeft :size="16" aria-hidden="true" />
           </a>
         </Button>
         <h1 class="text-sm font-medium">Basic UI</h1>
@@ -41,7 +41,7 @@ import { Button } from "@/registry/default/ui/button";
           class="text-muted-foreground size-8 rounded-full shadow-none"
           aria-label="History"
         >
-          <HistoryIcon :size="16" aria-hidden="true" />
+          <LucideHistory :size="16" aria-hidden="true" />
         </Button>
         <!-- Comments button -->
         <Button
@@ -50,7 +50,7 @@ import { Button } from "@/registry/default/ui/button";
           class="text-muted-foreground size-8 rounded-full shadow-none"
           aria-label="Save"
         >
-          <MessageSquareText :size="16" aria-hidden="true" />
+          <LucideMessageSquareText :size="16" aria-hidden="true" />
         </Button>
         <!-- Add user -->
         <Button
@@ -59,7 +59,7 @@ import { Button } from "@/registry/default/ui/button";
           class="text-muted-foreground size-8 rounded-full shadow-none"
           aria-label="Add user"
         >
-          <UserRoundPlus :size="16" aria-hidden="true" />
+          <LucideUserRoundPlus :size="16" aria-hidden="true" />
         </Button>
         <!-- Online users -->
         <div class="ml-2 flex items-center gap-2">

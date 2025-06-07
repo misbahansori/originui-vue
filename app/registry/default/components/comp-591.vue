@@ -64,7 +64,11 @@ const selectedModel = computed(() => {
             class="[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2"
           >
             <SelectGroup>
-              <SelectLabel class="ps-2">Models</SelectLabel>
+              <SelectLabel
+                class="text-muted-foreground ps-2 text-xs font-medium"
+              >
+                Models
+              </SelectLabel>
               <SelectItem
                 v-for="model in models"
                 :key="model.value"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ChevronsUpDown } from "lucide-vue-next";
+import { LucideChevronsUpDown } from "lucide-vue-next";
 import { ref } from "vue";
 
 import { Button } from "@/registry/default/ui/button";
@@ -31,7 +31,7 @@ const selectedProject = ref(props.defaultTeam ?? props.teams[0]);
         <div class="flex flex-col gap-0.5 leading-none">
           <span>{{ selectedProject }}</span>
         </div>
-        <ChevronsUpDown :size="14" class="text-muted-foreground/80" />
+        <LucideChevronsUpDown :size="14" class="text-muted-foreground/80" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent align="start">
