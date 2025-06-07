@@ -6,6 +6,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/registry/default/ui/popover";
+import { RangeCalendar } from "@/registry/default/ui/range-calendar";
 import { getLocalTimeZone } from "@internationalized/date";
 import { formatDate } from "@vueuse/core";
 import { CalendarIcon } from "lucide-vue-next";
@@ -32,14 +33,22 @@ const date = ref<DateRange | undefined>();
           <template v-if="date?.start">
             <template v-if="date.end">
               {{
-                formatDate(date.start.toDate(getLocalTimeZone()), "LLL dd, y")
+                formatDate(
+                  date.start.toDate(getLocalTimeZone()),
+                  "MMM DD, YYYY",
+                )
               }}
               -
-              {{ formatDate(date.end.toDate(getLocalTimeZone()), "LLL dd, y") }}
+              {{
+                formatDate(date.end.toDate(getLocalTimeZone()), "MMM DD, YYYY")
+              }}
             </template>
             <template v-else>
               {{
-                formatDate(date.start.toDate(getLocalTimeZone()), "LLL dd, y")
+                formatDate(
+                  date.start.toDate(getLocalTimeZone()),
+                  "MMM DD, YYYY",
+                )
               }}
             </template>
           </template>
@@ -47,8 +56,8 @@ const date = ref<DateRange | undefined>();
         </span>
       </Button>
     </PopoverTrigger>
-    <PopoverContent class="w-auto p-2" align="start">
-      <RekaCalendar mode="range" v-model="date" />
+    <PopoverContent class="w-auto p-0" align="start">
+      <RangeCalendar v-model="date" />
     </PopoverContent>
   </Popover>
 </template>
