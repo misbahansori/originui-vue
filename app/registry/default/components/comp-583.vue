@@ -23,9 +23,9 @@ import {
   Select,
   SelectContent,
   SelectItem,
-  SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
+import { SelectTrigger } from "reka-ui";
 </script>
 
 <template>

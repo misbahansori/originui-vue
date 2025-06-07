@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BellIcon } from "lucide-vue-next";
+import { LucideBell } from "lucide-vue-next";
 import { ref } from "vue";
 
 import { Button } from "@/registry/default/ui/button";
@@ -97,7 +97,7 @@ const handleNotificationClick = (id: number) => {
         class="text-muted-foreground relative size-8 rounded-full shadow-none"
         aria-label="Open notifications"
       >
-        <BellIcon :size="16" aria-hidden="true" />
+        <LucideBell :size="16" aria-hidden="true" />
         <div
           v-if="unreadCount > 0"
           aria-hidden="true"
