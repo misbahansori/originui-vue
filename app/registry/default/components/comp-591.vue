@@ -15,6 +15,35 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
+
+const models = [
+  {
+    value: "orion-alpha-45",
+    label: "Orion-Alpha 4.5",
+    description: "Balanced performance and creativity",
+  },
+  {
+    value: "orion-code-4",
+    label: "Orion-Code 4",
+    description: "Optimized for code generation and understanding",
+  },
+  {
+    value: "nova-chat-4",
+    label: "Nova-Chat 4",
+    description: "Excels at natural, engaging conversations",
+  },
+  {
+    value: "galaxy-max-4",
+    label: "Galaxy-Max 4",
+    description: "Most powerful model for complex tasks",
+  },
+];
+
+const selectValue = ref("orion-alpha-45");
+
+const selectedModel = computed(() => {
+  return models.find((model) => model.value === selectValue.value);
+});
 </script>
 
 <template>
@@ -22,53 +51,34 @@ import {
     <div class="flex h-16 items-center justify-between gap-4">
       <!-- Left side -->
       <div>
-        <Select default-value="orion-alpha-45" aria-label="Select AI model">
+        <Select v-model="selectValue">
           <SelectTrigger
             class="[&>svg]:text-muted-foreground/80 **:data-desc:hidden [&>svg]:shrink-0"
           >
             <LucideBotMessageSquare :size="16" aria-hidden="true" />
-            <SelectValue placeholder="Choose an AI model" />
+            <SelectValue aria-label="Select AI model">
+              {{ selectedModel ? selectedModel.label : "Choose an AI model" }}
+            </SelectValue>
           </SelectTrigger>
           <SelectContent
             class="[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2"
           >
             <SelectGroup>
               <SelectLabel class="ps-2">Models</SelectLabel>
-              <SelectItem value="orion-alpha-45">
-                Orion-Alpha 4.5
-                <span
-                  class="text-muted-foreground mt-1 block text-xs"
-                  data-desc
-                >
-                  Balanced performance and creativity
-                </span>
-              </SelectItem>
-              <SelectItem value="orion-code-4">
-                Orion-Code 4
-                <span
-                  class="text-muted-foreground mt-1 block text-xs"
-                  data-desc
-                >
-                  Optimized for code generation and understanding
-                </span>
-              </SelectItem>
-              <SelectItem value="nova-chat-4">
-                Nova-Chat 4
-                <span
-                  class="text-muted-foreground mt-1 block text-xs"
-                  data-desc
-                >
-                  Excels at natural, engaging conversations
-                </span>
-              </SelectItem>
-              <SelectItem value="galaxy-max-4">
-                Galaxy-Max 4
-                <span
-                  class="text-muted-foreground mt-1 block text-xs"
-                  data-desc
-                >
-                  Most powerful model for complex tasks
-                </span>
+              <SelectItem
+                v-for="model in models"
+                :key="model.value"
+                :value="model.value"
+              >
+                <div class="flex flex-col">
+                  <span>{{ model.label }}</span>
+                  <span
+                    class="text-muted-foreground mt-1 block text-xs"
+                    data-desc
+                  >
+                    {{ model.description }}
+                  </span>
+                </div>
               </SelectItem>
             </SelectGroup>
           </SelectContent>
