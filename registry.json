@@ -8785,6 +8785,10 @@
         {
           "path": "app/registry/default/components/comp-577.vue",
           "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/Logo.vue",
+          "type": "registry:component"
         }
       ],
       "meta": {
