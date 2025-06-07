@@ -34,9 +34,6 @@
     "lucide-vue-next"
   ],
   "registryDependencies": [
-    "https://originui-vue.com/r/default/components/navbar-components/InfoMenu.vue.json",
-    "https://originui-vue.com/r/default/components/navbar-components/NotificationMenu.vue.json",
-    "https://originui-vue.com/r/default/components/navbar-components/SettingsMenu.vue.json",
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/input.json",
     "https://originui-vue.com/r/label.json",

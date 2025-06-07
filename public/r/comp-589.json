@@ -30,8 +30,6 @@
     "reka-ui"
   ],
   "registryDependencies": [
-    "https://originui-vue.com/r/default/components/navbar-components/SettingsMenu.vue.json",
-    "https://originui-vue.com/r/default/components/navbar-components/UserMenu.vue.json",
     "https://originui-vue.com/r/breadcrumb.json",
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/navigation-menu.json",

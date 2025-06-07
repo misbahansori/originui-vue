@@ -32,8 +32,6 @@
     "reka-ui"
   ],
   "registryDependencies": [
-    "https://originui-vue.com/r/default/components/navbar-components/DatePicker.vue.json",
-    "https://originui-vue.com/r/default/components/navbar-components/Filters.vue.json",
     "https://originui-vue.com/r/breadcrumb.json",
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/popover.json",

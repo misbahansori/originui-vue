@@ -29,8 +29,6 @@
     "lucide-vue-next"
   ],
   "registryDependencies": [
-    "https://originui-vue.com/r/default/components/navbar-components/Logo.vue.json",
-    "https://originui-vue.com/r/default/components/navbar-components/ThemeToggle.vue.json",
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/input.json",
     "https://originui-vue.com/r/toggle.json"

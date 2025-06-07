@@ -29,8 +29,6 @@
     "lucide-vue-next"
   ],
   "registryDependencies": [
-    "https://originui-vue.com/r/default/components/navbar-components/AppToggle.vue.json",
-    "https://originui-vue.com/r/default/components/navbar-components/TeamSwitcher.vue.json",
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/radio-group.json",
     "https://originui-vue.com/r/dropdown-menu.json"

@@ -35,9 +35,6 @@
     "reka-ui"
   ],
   "registryDependencies": [
-    "https://originui-vue.com/r/default/components/navbar-components/Logo.vue.json",
-    "https://originui-vue.com/r/default/components/navbar-components/NotificationMenu.vue.json",
-    "https://originui-vue.com/r/default/components/navbar-components/UserMenu.vue.json",
     "https://originui-vue.com/r/breadcrumb.json",
     "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/dropdown-menu.json",
