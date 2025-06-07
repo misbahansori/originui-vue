@@ -27,6 +27,7 @@ import {
   SelectItem,
   SelectValue,
 } from "@/registry/default/ui/select";
+import { SelectTrigger } from "reka-ui";
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [

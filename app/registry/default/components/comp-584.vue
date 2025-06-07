@@ -106,7 +106,7 @@ const id = useId();
           <div
             class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-2 peer-disabled:opacity-50"
           >
-            <LucideSearch size="16" />
+            <LucideSearch :size="16" />
           </div>
           <div
             class="text-muted-foreground pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-2"

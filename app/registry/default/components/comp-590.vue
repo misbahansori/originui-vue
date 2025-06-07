@@ -23,7 +23,7 @@ import {
   PopoverTrigger,
 } from "@/registry/default/ui/popover";
 
-const teams = ["Acme Inc.", "Origin UI", "Junon"] as const;
+const teams = ["Acme Inc.", "Origin UI", "Junon"];
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
