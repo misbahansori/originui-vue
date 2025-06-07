@@ -8735,6 +8735,435 @@
         }
       ],
       "meta": { "tags": ["upload", "file"], "colSpan": 2 }
+    },
+    {
+      "name": "comp-577",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-577.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+
+    {
+      "name": "comp-578",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-578.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/Logo.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-579",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-579.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/Logo.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-580",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-580.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/Logo.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-581",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-581.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/InfoMenu.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/Logo.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/NotificationMenu.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/UserMenu.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-582",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-582.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/Logo.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/ThemeToggle.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/UserMenu.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-583",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-583.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/Logo.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/NotificationMenu.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/UserMenu.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-584",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-584.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/Logo.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/NotificationMenu.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/UserMenu.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-585",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-585.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/Logo.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/NotificationMenu.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/UserMenu.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-586",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-586.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/Logo.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/ThemeToggle.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-587",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-587.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/Logo.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-588",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-588.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/Logo.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/UserMenu.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-589",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-589.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/SettingsMenu.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/UserMenu.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-590",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-590.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/NotificationMenu.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/TeamSwitcher.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/UserMenu.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-591",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-591.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/UserMenu.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-592",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-592.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/InfoMenu.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/NotificationMenu.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/SettingsMenu.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-593",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-593.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/DatePicker.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/Filters.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-594",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-594.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/AppToggle.vue",
+          "type": "registry:component"
+        },
+        {
+          "path": "app/registry/default/components/navbar-components/TeamSwitcher.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-595",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-595.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "comp-596",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-596.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["navbar, navigation"],
+        "colSpan": 3
+      }
     }
   ]
 }

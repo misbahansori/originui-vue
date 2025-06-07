@@ -194,7 +194,13 @@ function extractRegistryDependencies(content: string): string[] {
   let match;
 
   const pathMappings = {
-    "@/registry/": (path: string) => path.replace("default/ui/", ""),
+    "@/registry/": (path: string) => {
+      // Skip paths that start with default/components
+      if (path.startsWith("default/components/")) {
+        return null;
+      }
+      return path.replace("default/ui/", "");
+    },
     "@/composables/": (path: string) => path.replace("/", "-"),
     "@/lib/": (path: string) => path.replace("/", "-"),
   } as const;
@@ -206,7 +212,10 @@ function extractRegistryDependencies(content: string): string[] {
     for (const [prefix, transform] of Object.entries(pathMappings)) {
       if (importPath.startsWith(prefix)) {
         const path = importPath.replace(prefix, "");
-        deps.add(`https://originui-vue.com/r/${transform(path)}.json`);
+        const transformedPath = transform(path);
+        if (transformedPath) {
+          deps.add(`https://originui-vue.com/r/${transformedPath}.json`);
+        }
         break;
       }
     }

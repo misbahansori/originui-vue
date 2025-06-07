@@ -20,7 +20,7 @@
     },
     {
       "path": "ui/avatar/index.ts",
-      "content": "import { cva, type VariantProps } from \"class-variance-authority\";\n\nexport { default as Avatar } from \"./Avatar.vue\";\nexport { default as AvatarFallback } from \"./AvatarFallback.vue\";\nexport { default as AvatarImage } from \"./AvatarImage.vue\";\n\nexport const avatarVariant = cva(\n  \"inline-flex items-center justify-center font-normal text-foreground select-none shrink-0 bg-secondary overflow-hidden\",\n  {\n    variants: {\n      size: {\n        sm: \"h-10 w-10 text-xs\",\n        base: \"h-16 w-16 text-2xl\",\n        lg: \"h-32 w-32 text-5xl\",\n      },\n      shape: {\n        circle: \"rounded-full\",\n        square: \"rounded-md\",\n      },\n    },\n  },\n);\n\nexport type AvatarVariants = VariantProps<typeof avatarVariant>;\n",
+      "content": "import { cva, type VariantProps } from \"class-variance-authority\";\n\nexport { default as Avatar } from \"./Avatar.vue\";\nexport { default as AvatarFallback } from \"./AvatarFallback.vue\";\nexport { default as AvatarImage } from \"./AvatarImage.vue\";\n\nexport const avatarVariant = cva(\n  \"inline-flex items-center justify-center font-normal text-foreground select-none shrink-0 bg-secondary overflow-hidden\",\n  {\n    variants: {\n      size: {\n        xs: \"h-8 w-8 text-xs\",\n        sm: \"h-10 w-10 text-xs\",\n        base: \"h-16 w-16 text-2xl\",\n        lg: \"h-32 w-32 text-5xl\",\n      },\n      shape: {\n        circle: \"rounded-full\",\n        square: \"rounded-md\",\n      },\n    },\n  },\n);\n\nexport type AvatarVariants = VariantProps<typeof avatarVariant>;\n",
       "type": "registry:ui"
     }
   ],
