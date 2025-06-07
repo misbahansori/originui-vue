@@ -1058,6 +1058,48 @@
       ]
     },
     {
+      "name": "navigation-menu",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "app/registry/default/ui/navigation-menu/NavigationMenu.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/navigation-menu/NavigationMenuContent.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/navigation-menu/NavigationMenuIndicator.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/navigation-menu/NavigationMenuItem.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/navigation-menu/NavigationMenuLink.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/navigation-menu/NavigationMenuList.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/navigation-menu/NavigationMenuTrigger.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/navigation-menu/NavigationMenuViewport.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/navigation-menu/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "separator",
       "type": "registry:ui",
       "files": [
