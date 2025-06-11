@@ -2,14 +2,20 @@
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/registry/default/ui/button";
 
-const links = [
+interface Link {
+  text: string;
+  href: string;
+  isNew?: boolean;
+  external?: boolean;
+}
+
+const links: Link[] = [
   { text: "Extended", href: "/extended", isNew: true },
   { text: "Layouts", href: "/layouts" },
   // { text: "Colors", href: "/colors" },
   {
     text: "Easing Classes",
-    href: "https://originui.com/easings",
-    external: true,
+    href: "/easings",
   },
 ];
 
