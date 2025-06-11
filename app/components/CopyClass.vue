@@ -1,21 +1,14 @@
 <script setup lang="ts">
-interface CopyClassProps {
+import { useClipboard } from "@vueuse/core";
+
+const props = defineProps<{
   value: string;
-}
+}>();
 
-const props = defineProps<CopyClassProps>();
-
-const copied = ref<boolean>(false);
-
-const handleCopy = async () => {
-  try {
-    await navigator.clipboard.writeText(props.value);
-    copied.value = true;
-    setTimeout(() => (copied.value = false), 1500);
-  } catch (err) {
-    console.error("Failed to copy text: ", err);
-  }
-};
+const { copy, copied } = useClipboard({
+  source: props.value,
+  copiedDuring: 1500,
+});
 </script>
 
 <template>
@@ -23,7 +16,7 @@ const handleCopy = async () => {
     <Button
       variant="ghost"
       class="text-muted-foreground/80 hover:text-foreground h-7 max-w-full text-xs font-normal whitespace-normal hover:bg-transparent disabled:opacity-100"
-      @click="handleCopy"
+      @click="copy()"
       :aria-label="copied ? 'Copied' : 'Copy Tailwind class'"
       :disabled="copied"
     >
