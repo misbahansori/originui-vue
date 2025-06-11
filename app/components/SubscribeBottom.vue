@@ -26,28 +26,23 @@ const handleSubmit = async (e: Event) => {
   formState.value = { ...formState.value, status: "loading", message: "" };
 
   try {
-    // Simulate API call (replace with actual API call)
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    const success = Math.random() > 0.3; // Simulate success/failure
+    const response = await $fetch("/api/subscriptions", {
+      method: "POST",
+      body: {
+        email: formState.value.email,
+      },
+    });
 
-    if (!success) {
-      formState.value = {
-        ...formState.value,
-        status: "error",
-        message: "Failed to subscribe. Please try again.",
-      };
-    } else {
-      formState.value = {
-        email: "",
-        status: "success",
-        message: "Thanks for subscribing!",
-      };
-    }
-  } catch (error) {
+    formState.value = {
+      email: "",
+      status: "success",
+      message: response.message || "Thanks for subscribing!",
+    };
+  } catch (error: any) {
     formState.value = {
       ...formState.value,
       status: "error",
-      message: error instanceof Error ? error.message : "Failed to subscribe",
+      message: error.data?.message || "Failed to subscribe. Please try again.",
     };
   }
 };
@@ -192,7 +187,7 @@ const handleSubmit = async (e: Event) => {
                 'absolute mt-2 text-xs',
                 formState.status === 'error'
                   ? 'text-destructive'
-                  : 'text-muted-foreground',
+                  : 'text-foreground',
               )
             "
             role="alert"
