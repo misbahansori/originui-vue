@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ChevronDownIcon } from "lucide-vue-next";
+import { LucideChevronDown } from "lucide-vue-next";
 import type { HTMLAttributes } from "vue";
 import { cn } from "~/lib/utils";
 
@@ -20,7 +20,7 @@ const props = defineProps<{
     "
   >
     <template v-if="hasChildren">
-      <ChevronDownIcon
+      <LucideChevronDown
         class="text-muted-foreground size-4 in-aria-[expanded=false]:-rotate-90"
       />
     </template>
