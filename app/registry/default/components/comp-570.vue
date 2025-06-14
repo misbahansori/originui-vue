@@ -1,13 +1,15 @@
 <script setup lang="ts">
+import { Input } from "@/registry/default/ui/input";
 import { Tree, TreeItem, TreeItemLabel } from "@/registry/default/ui/tree";
-import { LucideFolder, LucideFolderOpen } from "lucide-vue-next";
+import { LucideFile, LucideFolder, LucideFolderOpen } from "lucide-vue-next";
+import { ref } from "vue";
 
 interface Item {
   name: string;
   children?: Item[];
 }
 
-const items: Item[] = [
+const items = ref<Item[]>([
   {
     name: "Engineering",
     children: [
@@ -40,7 +42,33 @@ const items: Item[] = [
     name: "Operations",
     children: [{ name: "HR" }, { name: "Finance" }],
   },
-];
+]);
+
+const renamingItem = ref<string | null>(null);
+const renameValue = ref("");
+
+const startRenaming = (item: Item) => {
+  renamingItem.value = item.name;
+  renameValue.value = item.name;
+};
+
+const handleRename = (item: Item) => {
+  if (renamingItem.value === item.name) {
+    item.name = renameValue.value;
+    renamingItem.value = null;
+  }
+};
+
+const handleKeyDown = (e: KeyboardEvent, item: Item) => {
+  if (e.key === "F2") {
+    e.preventDefault();
+    startRenaming(item);
+  } else if (e.key === "Enter" && renamingItem.value === item.name) {
+    handleRename(item);
+  } else if (e.key === "Escape") {
+    renamingItem.value = null;
+  }
+};
 </script>
 
 <template>
@@ -51,13 +79,12 @@ const items: Item[] = [
         :getKey="(item) => item.name"
         v-slot="{ flattenItems }"
         :defaultExpanded="['Engineering', 'Frontend', 'Design System']"
-        class="relative before:absolute before:inset-0 before:-ms-1 before:bg-[repeating-linear-gradient(to_right,transparent_0,transparent_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)))]"
-        multiple
       >
         <TreeItem
           v-for="item in flattenItems"
           v-bind="item"
           v-slot="{ isExpanded }"
+          @keydown="(e: KeyboardEvent) => handleKeyDown(e, item.value)"
         >
           <TreeItemLabel
             :hasChildren="item.hasChildren"
@@ -74,7 +101,23 @@ const items: Item[] = [
                   class="text-muted-foreground pointer-events-none size-4"
                 />
               </template>
-              {{ item.value.name }}
+              <LucideFile
+                v-else
+                class="text-muted-foreground pointer-events-none size-4"
+              />
+              <template v-if="renamingItem === item.value.name">
+                <Input
+                  v-model="renameValue"
+                  class="-my-0.5 h-6 px-1"
+                  @blur="handleRename(item.value)"
+                  @keydown.enter="handleRename(item.value)"
+                  @keydown.escape="renamingItem = null"
+                  autofocus
+                />
+              </template>
+              <template v-else>
+                {{ item.value.name }}
+              </template>
             </span>
           </TreeItemLabel>
         </TreeItem>
@@ -85,7 +128,7 @@ const items: Item[] = [
       role="region"
       class="text-muted-foreground mt-2 text-xs"
     >
-      Tree with multi-select∙
+      Tree with renaming (press F2 to rename) ∙
       <a
         href="https://reka-ui.com/docs/components/tree"
         class="hover:text-foreground underline"
