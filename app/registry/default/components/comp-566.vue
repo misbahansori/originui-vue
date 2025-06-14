@@ -49,6 +49,7 @@ const items: Item[] = [
       :getKey="(item) => item.name"
       v-slot="{ flattenItems }"
       :defaultExpanded="['Engineering', 'Frontend', 'Design System']"
+      class="relative before:absolute before:inset-0 before:-ms-1 before:bg-[repeating-linear-gradient(to_right,transparent_0,transparent_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)))]"
     >
       <TreeItem v-for="item in flattenItems" v-bind="item">
         {{ item.value.name }}
@@ -59,7 +60,7 @@ const items: Item[] = [
       role="region"
       class="text-muted-foreground mt-2 text-xs"
     >
-      Basic tree with no extra features ∙
+      Basic tree with vertical lines ∙
       <a
         href="https://reka-ui.com/docs/components/tree"
         class="hover:text-foreground underline"

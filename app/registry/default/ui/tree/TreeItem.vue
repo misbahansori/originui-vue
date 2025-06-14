@@ -18,7 +18,7 @@ const props = defineProps<
       )
     "
     :style="{
-      '--tree-padding': `calc(${props.level} * var(--tree-indent))`,
+      '--tree-padding': `calc(${props.level - 1} * var(--tree-indent))`,
     }"
     :data-folder="props.hasChildren ?? false"
     v-bind="props"
