@@ -52,15 +52,9 @@ const items: Item[] = [
     <Tree
       :items="items"
       :getKey="(item) => item.name"
-      :getChildren="(item) => item.children"
       v-slot="{ flattenItems }"
     >
-      <TreeItem
-        v-for="item in flattenItems"
-        :value="item.value"
-        :level="item.level"
-        :hasChildren="item.hasChildren"
-      >
+      <TreeItem v-for="item in flattenItems" v-bind="item">
         {{ item.value.name }}
       </TreeItem>
     </Tree>
