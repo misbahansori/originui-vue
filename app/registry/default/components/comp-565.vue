@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { TreeItem, TreeRoot, TreeVirtualizer } from "reka-ui";
-import { ref } from "vue";
+import { Tree, TreeItem, TreeVirtualizer } from "@/registry/default/ui/tree";
 
 interface Item {
   name: string;
@@ -46,27 +45,20 @@ const items: Item[] = [
     ],
   },
 ];
-
-const expanded = ref<string[]>(["Engineering", "Frontend", "Design System"]);
-const selected = ref<string[]>(["Components"]);
 </script>
 
 <template>
   <div class="flex h-full flex-col gap-2">
-    <TreeRoot
-      v-model:expanded="expanded"
-      v-model="selected"
+    <Tree
       :items="items"
-      :get-key="(item) => item.name"
-      :get-children="(item) => item.children"
-      multiple
-      propagate-select
+      :getKey="(item) => item.name"
+      :getChildren="(item) => item.children"
     >
-      <TreeVirtualizer v-slot="{ item }" :text-content="(opt) => opt.name">
-        <TreeItem v-bind="item.bind">
+      <TreeVirtualizer v-slot="{ item }">
+        <TreeItem v-bind="item">
           {{ item.value.name }}
         </TreeItem>
       </TreeVirtualizer>
-    </TreeRoot>
+    </Tree>
   </div>
 </template>
