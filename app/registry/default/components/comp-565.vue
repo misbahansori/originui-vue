@@ -43,7 +43,7 @@ const items: Item[] = [
 </script>
 
 <template>
-  <div>
+  <div class="flex h-full flex-col gap-2 *:first:grow">
     <Tree
       :items="items"
       :getKey="(item) => item.name"
@@ -51,7 +51,7 @@ const items: Item[] = [
       :defaultExpanded="['Engineering', 'Frontend', 'Design System']"
     >
       <TreeItem v-for="item in flattenItems" v-bind="item">
-        <TreeItemLabel>
+        <TreeItemLabel :hasChildren="item.hasChildren">
           {{ item.value.name }}
         </TreeItemLabel>
       </TreeItem>

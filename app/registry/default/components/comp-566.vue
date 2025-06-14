@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Tree, TreeItem } from "@/registry/default/ui/tree";
+import { Tree, TreeItem, TreeItemLabel } from "@/registry/default/ui/tree";
 
 interface Item {
   name: string;
@@ -43,18 +43,22 @@ const items: Item[] = [
 </script>
 
 <template>
-  <div>
-    <Tree
-      :items="items"
-      :getKey="(item) => item.name"
-      v-slot="{ flattenItems }"
-      :defaultExpanded="['Engineering', 'Frontend', 'Design System']"
-      class="relative before:absolute before:inset-0 before:-ms-1 before:bg-[repeating-linear-gradient(to_right,transparent_0,transparent_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)))]"
-    >
-      <TreeItem v-for="item in flattenItems" v-bind="item">
-        {{ item.value.name }}
-      </TreeItem>
-    </Tree>
+  <div class="flex h-full flex-col gap-2 *:first:grow">
+    <div>
+      <Tree
+        :items="items"
+        :getKey="(item) => item.name"
+        v-slot="{ flattenItems }"
+        :defaultExpanded="['Engineering', 'Frontend', 'Design System']"
+        class="relative before:absolute before:inset-0 before:-ms-1 before:bg-[repeating-linear-gradient(to_right,transparent_0,transparent_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)))]"
+      >
+        <TreeItem v-for="item in flattenItems" v-bind="item">
+          <TreeItemLabel :hasChildren="item.hasChildren">
+            {{ item.value.name }}
+          </TreeItemLabel>
+        </TreeItem>
+      </Tree>
+    </div>
     <p
       aria-live="polite"
       role="region"

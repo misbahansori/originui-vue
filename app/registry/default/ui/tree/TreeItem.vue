@@ -21,7 +21,8 @@ const props = defineProps<
     }"
     :data-folder="props.hasChildren ?? false"
     v-bind="props"
+    v-slot="slotProps"
   >
-    <slot />
+    <slot v-bind="slotProps" />
   </TreeItem>
 </template>

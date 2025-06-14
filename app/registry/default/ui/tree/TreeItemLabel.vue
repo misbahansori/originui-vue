@@ -1,8 +1,12 @@
 <script setup lang="ts">
+import { ChevronDownIcon } from "lucide-vue-next";
 import type { HTMLAttributes } from "vue";
 import { cn } from "~/lib/utils";
 
-const props = defineProps<{ class?: HTMLAttributes["class"] }>();
+const props = defineProps<{
+  hasChildren?: boolean;
+  class?: HTMLAttributes["class"];
+}>();
 </script>
 
 <template>
@@ -15,7 +19,7 @@ const props = defineProps<{ class?: HTMLAttributes["class"] }>();
       )
     "
   >
-    <template>
+    <template v-if="hasChildren">
       <ChevronDownIcon
         class="text-muted-foreground size-4 in-aria-[expanded=false]:-rotate-90"
       />
