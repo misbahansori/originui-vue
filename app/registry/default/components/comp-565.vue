@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Tree, TreeItem, TreeVirtualizer } from "@/registry/default/ui/tree";
+import { Tree, TreeItem } from "@/registry/default/ui/tree";
 
 interface Item {
   name: string;
@@ -53,12 +53,16 @@ const items: Item[] = [
       :items="items"
       :getKey="(item) => item.name"
       :getChildren="(item) => item.children"
+      v-slot="{ flattenItems }"
     >
-      <TreeVirtualizer v-slot="{ item }">
-        <TreeItem v-bind="item">
-          {{ item.value.name }}
-        </TreeItem>
-      </TreeVirtualizer>
+      <TreeItem
+        v-for="item in flattenItems"
+        :value="item.value"
+        :level="item.level"
+        :hasChildren="item.hasChildren"
+      >
+        {{ item.value.name }}
+      </TreeItem>
     </Tree>
   </div>
 </template>

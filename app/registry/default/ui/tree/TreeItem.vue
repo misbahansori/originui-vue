@@ -1,10 +1,8 @@
 <script setup lang="ts" generic="T">
 import { cn } from "@/lib/utils";
 import { ChevronDownIcon } from "lucide-vue-next";
-import { injectTreeRootContext, TreeItem, type TreeItemProps } from "reka-ui";
+import { TreeItem, type TreeItemProps } from "reka-ui";
 import type { HTMLAttributes } from "vue";
-
-const treeRootContext = injectTreeRootContext();
 
 const props = defineProps<
   TreeItemProps<T> & { hasChildren?: boolean; class?: HTMLAttributes["class"] }
@@ -20,7 +18,7 @@ const props = defineProps<
       )
     "
     :style="{
-      '--tree-padding': `${props.level * 20}px`,
+      '--tree-padding': `calc(${props.level} * var(--tree-indent))`,
     }"
     :data-folder="props.hasChildren ?? false"
     v-bind="props"
