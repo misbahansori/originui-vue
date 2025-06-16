@@ -79,8 +79,4 @@ export default defineNuxtConfig({
   umami: {
     ignoreLocalhost: true,
   },
-
-  experimental: {
-    buildCache: true,
-  },
 });
