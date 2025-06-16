@@ -9,6 +9,8 @@ const sortedCategories = computed(() => {
   });
 });
 
+console.log(sortedCategories.value);
+
 useSeoMeta({
   title: "Origin UI - Beautiful UI components built with Tailwind CSS and Vue",
   description:
