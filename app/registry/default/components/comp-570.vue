@@ -46,10 +46,15 @@ const items = ref<Item[]>([
 
 const renamingItem = ref<string | null>(null);
 const renameValue = ref("");
+const inputRefs = ref<InstanceType<typeof Input>[]>([]);
 
 const startRenaming = (item: Item) => {
   renamingItem.value = item.name;
   renameValue.value = item.name;
+
+  nextTick(() => {
+    inputRefs.value[0]?.$el.focus();
+  });
 };
 
 const handleRename = (item: Item) => {
@@ -69,14 +74,6 @@ const handleKeyDown = (e: KeyboardEvent, item: Item) => {
     renamingItem.value = null;
   }
 };
-
-const inputRef = useTemplateRef("inputRef");
-
-watch(renamingItem, (newVal) => {
-  if (newVal && inputRef.value) {
-    inputRef.value?.$el.focus();
-  }
-});
 </script>
 
 <template>
@@ -115,7 +112,7 @@ watch(renamingItem, (newVal) => {
               />
               <template v-if="renamingItem === item.value.name">
                 <Input
-                  ref="inputRef"
+                  ref="inputRefs"
                   v-model="renameValue"
                   class="-my-0.5 h-6 px-1"
                   @blur="handleRename(item.value)"
