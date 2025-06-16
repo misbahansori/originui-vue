@@ -69,6 +69,14 @@ const handleKeyDown = (e: KeyboardEvent, item: Item) => {
     renamingItem.value = null;
   }
 };
+
+const inputRef = useTemplateRef("inputRef");
+
+watch(renamingItem, (newVal) => {
+  if (newVal && inputRef.value) {
+    inputRef.value?.$el.focus();
+  }
+});
 </script>
 
 <template>
@@ -107,6 +115,7 @@ const handleKeyDown = (e: KeyboardEvent, item: Item) => {
               />
               <template v-if="renamingItem === item.value.name">
                 <Input
+                  ref="inputRef"
                   v-model="renameValue"
                   class="-my-0.5 h-6 px-1"
                   @blur="handleRename(item.value)"
