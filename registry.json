@@ -8895,6 +8895,20 @@
       }
     },
     {
+      "name": "comp-572",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/comp-572.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["tree"],
+        "colSpan": 1
+      }
+    },
+    {
       "name": "comp-579",
       "type": "registry:component",
       "files": [

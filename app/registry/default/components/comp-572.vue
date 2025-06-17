@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { Tree, TreeItem, TreeItemLabel } from "@/registry/default/ui/tree";
 import {
+  LucideCircleX,
   LucideFile,
+  LucideFilter,
   LucideFolder,
   LucideFolderOpen,
-  LucideSearch,
 } from "lucide-vue-next";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 interface Item {
   name: string;
@@ -80,6 +81,30 @@ watch(searchQuery, (value) => {
     expandedItems.value = initialExpanded;
   }
 });
+
+// Function to filter items based on search query
+const filteredItems = computed(() => {
+  if (!searchQuery.value) return items;
+
+  const filterItems = (items: Item[]): Item[] => {
+    return items.reduce((acc: Item[], item) => {
+      const matches = matchesSearch(item);
+      const filteredChildren = item.children
+        ? filterItems(item.children)
+        : undefined;
+
+      if (matches || (filteredChildren && filteredChildren.length > 0)) {
+        acc.push({
+          ...item,
+          children: filteredChildren,
+        });
+      }
+      return acc;
+    }, []);
+  };
+
+  return filterItems(items);
+});
 </script>
 
 <template>
@@ -89,17 +114,25 @@ watch(searchQuery, (value) => {
         <Input
           class="peer ps-9"
           type="search"
-          placeholder="Quick search..."
+          placeholder="Filter items..."
           v-model="searchQuery"
         />
         <div
           class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50"
         >
-          <LucideSearch class="size-4" aria-hidden="true" />
+          <LucideFilter class="size-4" aria-hidden="true" />
         </div>
+        <button
+          v-if="searchQuery"
+          class="text-muted-foreground/80 hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-md transition-[color,box-shadow] outline-none focus:z-10 focus-visible:ring-[3px] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
+          aria-label="Clear search"
+          @click="searchQuery = ''"
+        >
+          <LucideCircleX class="size-4" aria-hidden="true" />
+        </button>
       </div>
       <Tree
-        :items="items"
+        :items="filteredItems"
         :getKey="(item) => item.name"
         v-slot="{ flattenItems }"
         v-model:expanded="expandedItems"
@@ -142,7 +175,7 @@ watch(searchQuery, (value) => {
       role="region"
       class="text-muted-foreground mt-2 text-xs"
     >
-      Tree with search highlight ∙
+      Tree with search and filter ∙
       <a
         href="https://reka-ui.com/docs/components/tree"
         class="hover:text-foreground underline"
