@@ -144,7 +144,7 @@ function getFileIcon(extension: string | undefined) {
         :items="items"
         :getKey="(item) => item.name"
         v-slot="{ flattenItems }"
-        :defaultExpanded="['Engineering', 'Frontend', 'Design System']"
+        :defaultExpanded="['app', '(dashboard)']"
         class="relative before:absolute before:inset-0 before:-ms-1 before:bg-[repeating-linear-gradient(to_right,transparent_0,transparent_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)))]"
       >
         <TreeItem
@@ -173,7 +173,7 @@ function getFileIcon(extension: string | undefined) {
       role="region"
       class="text-muted-foreground mt-2 text-xs"
     >
-      Basic tree with icons ∙
+      File editor ∙
       <a
         href="https://reka-ui.com/docs/components/tree"
         class="hover:text-foreground underline"
