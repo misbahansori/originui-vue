@@ -87,7 +87,6 @@ const collapseAll = () => {
         :getKey="(item) => item.name"
         v-slot="{ flattenItems }"
         v-model:expanded="expandedItems"
-        class="relative before:absolute before:inset-0 before:-ms-1 before:bg-[repeating-linear-gradient(to_right,transparent_0,transparent_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)))]"
       >
         <TreeItem
           v-for="item in flattenItems"
@@ -114,6 +113,9 @@ const collapseAll = () => {
                 class="text-muted-foreground pointer-events-none size-4"
               />
               {{ item.value.name }}
+              <span v-if="item.hasChildren" class="text-muted-foreground -ms-1">
+                {{ `(${item.value.children?.length ?? 0})` }}
+              </span>
             </span>
           </TreeItemLabel>
         </TreeItem>
