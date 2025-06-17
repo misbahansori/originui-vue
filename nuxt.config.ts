@@ -79,4 +79,10 @@ export default defineNuxtConfig({
   umami: {
     ignoreLocalhost: true,
   },
+
+  routeRules: {
+    "/": {
+      prerender: true,
+    },
+  },
 });
