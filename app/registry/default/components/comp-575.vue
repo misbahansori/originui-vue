@@ -1,46 +1,140 @@
 <script setup lang="ts">
 import { Tree, TreeItem, TreeItemLabel } from "@/registry/default/ui/tree";
-import { LucideFile, LucideFolder, LucideFolderOpen } from "lucide-vue-next";
+import {
+  RiBracesLine,
+  RiCodeSSlashLine,
+  RiFileTextLine,
+  RiImageLine,
+  RiReactjsLine,
+} from "@remixicon/vue";
 
 interface Item {
   name: string;
   children?: Item[];
+  fileExtension?: string;
 }
 
 const items: Item[] = [
   {
-    name: "Engineering",
+    name: "app",
     children: [
       {
-        name: "Frontend",
+        name: "(dashboard)",
         children: [
           {
-            name: "Design System",
+            name: "dashboard",
             children: [
-              { name: "Components" },
-              { name: "Tokens" },
-              { name: "Guidelines" },
+              {
+                name: "page.tsx",
+                fileExtension: "tsx",
+              },
             ],
           },
-          { name: "Web Platform" },
         ],
       },
       {
-        name: "Backend",
-        children: [{ name: "APIs" }, { name: "Infrastructure" }],
+        name: "api",
+        children: [
+          {
+            name: "hello",
+            children: [
+              {
+                name: "route.ts",
+                fileExtension: "ts",
+              },
+            ],
+          },
+        ],
       },
-      { name: "Platform Team" },
+      {
+        name: "layout.tsx",
+        fileExtension: "tsx",
+      },
+      {
+        name: "page.tsx",
+        fileExtension: "tsx",
+      },
     ],
   },
   {
-    name: "Marketing",
-    children: [{ name: "Content" }, { name: "SEO" }],
+    name: "components",
+    children: [
+      {
+        name: "button.tsx",
+        fileExtension: "tsx",
+      },
+      {
+        name: "card.tsx",
+        fileExtension: "tsx",
+      },
+    ],
   },
   {
-    name: "Operations",
-    children: [{ name: "HR" }, { name: "Finance" }],
+    name: "lib",
+    children: [
+      {
+        name: "utils.ts",
+        fileExtension: "ts",
+      },
+    ],
+  },
+  {
+    name: "public",
+    children: [
+      {
+        name: "favicon.ico",
+        fileExtension: "ico",
+      },
+      {
+        name: "vercel.svg",
+        fileExtension: "svg",
+      },
+    ],
+  },
+  {
+    name: "package.json",
+    fileExtension: "json",
+  },
+  {
+    name: "tailwind.config.ts",
+    fileExtension: "ts",
+  },
+  {
+    name: "tsconfig.json",
+    fileExtension: "json",
+  },
+  {
+    name: "next.config.mjs",
+    fileExtension: "mjs",
+  },
+  {
+    name: "README.md",
+    fileExtension: "md",
   },
 ];
+
+function getFileIcon(extension: string | undefined) {
+  switch (extension) {
+    case "tsx":
+    case "jsx":
+      return RiReactjsLine;
+    case "ts":
+    case "js":
+    case "mjs":
+      return RiCodeSSlashLine;
+    case "json":
+      return RiBracesLine;
+    case "svg":
+    case "ico":
+    case "png":
+    case "jpg":
+      return RiImageLine;
+    case "md":
+      return RiFileTextLine;
+    default:
+      return null;
+  }
+}
 </script>
 
 <template>
@@ -63,18 +157,9 @@ const items: Item[] = [
             class="before:bg-background relative before:absolute before:inset-x-0 before:-inset-y-0.5 before:-z-10"
           >
             <span class="flex items-center gap-2">
-              <template v-if="item.hasChildren">
-                <LucideFolderOpen
-                  v-if="isExpanded"
-                  class="text-muted-foreground pointer-events-none size-4"
-                />
-                <LucideFolder
-                  v-else
-                  class="text-muted-foreground pointer-events-none size-4"
-                />
-              </template>
-              <LucideFile
-                v-else
+              <component
+                v-if="getFileIcon(item.value.fileExtension)"
+                :is="getFileIcon(item.value.fileExtension)"
                 class="text-muted-foreground pointer-events-none size-4"
               />
               {{ item.value.name }}
