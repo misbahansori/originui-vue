@@ -1,0 +1,24 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "comp-573",
+  "type": "registry:component",
+  "files": [
+    {
+      "path": "components/comp-573.vue",
+      "content": "<script setup lang=\"ts\">\nimport { Tree, TreeItem, TreeItemLabel } from \"@/registry/default/ui/tree\";\nimport { LucideFile, LucideFolder, LucideFolderOpen } from \"lucide-vue-next\";\n\ninterface Item {\n  name: string;\n  children?: Item[];\n}\n\nconst items: Item[] = [\n  {\n    name: \"Engineering\",\n    children: [\n      {\n        name: \"Frontend\",\n        children: [\n          {\n            name: \"Design System\",\n            children: [\n              { name: \"Components\" },\n              { name: \"Tokens\" },\n              { name: \"Guidelines\" },\n            ],\n          },\n          { name: \"Web Platform\" },\n        ],\n      },\n      {\n        name: \"Backend\",\n        children: [{ name: \"APIs\" }, { name: \"Infrastructure\" }],\n      },\n      { name: \"Platform Team\" },\n    ],\n  },\n  {\n    name: \"Marketing\",\n    children: [{ name: \"Content\" }, { name: \"SEO\" }],\n  },\n  {\n    name: \"Operations\",\n    children: [{ name: \"HR\" }, { name: \"Finance\" }],\n  },\n];\n</script>\n\n<template>\n  <div class=\"flex h-full flex-col gap-2 *:first:grow\">\n    <div>\n      <Tree\n        :items=\"items\"\n        :getKey=\"(item) => item.name\"\n        v-slot=\"{ flattenItems }\"\n        :defaultExpanded=\"['Engineering', 'Frontend', 'Design System']\"\n      >\n        <TreeItem\n          v-for=\"item in flattenItems\"\n          v-bind=\"item\"\n          v-slot=\"{ isExpanded, handleToggle }\"\n          @toggle.prevent\n        >\n          <TreeItemLabel\n            :hasChildren=\"item.hasChildren\"\n            class=\"before:bg-background relative before:absolute before:inset-x-0 before:-inset-y-0.5 before:-z-10\"\n            @dblclick=\"handleToggle\"\n          >\n            <span class=\"flex items-center gap-2\">\n              <template v-if=\"item.hasChildren\">\n                <LucideFolderOpen\n                  v-if=\"isExpanded\"\n                  class=\"text-muted-foreground pointer-events-none size-4\"\n                />\n                <LucideFolder\n                  v-else\n                  class=\"text-muted-foreground pointer-events-none size-4\"\n                />\n              </template>\n              <LucideFile\n                v-else\n                class=\"text-muted-foreground pointer-events-none size-4\"\n              />\n              {{ item.value.name }}\n            </span>\n          </TreeItemLabel>\n        </TreeItem>\n      </Tree>\n    </div>\n    <p\n      aria-live=\"polite\"\n      role=\"region\"\n      class=\"text-muted-foreground mt-2 text-xs\"\n    >\n      Tree with items expandable on double click ∙\n      <a\n        href=\"https://reka-ui.com/docs/components/tree\"\n        class=\"hover:text-foreground underline\"\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n      >\n        Reka UI Tree\n      </a>\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "tree"
+    ],
+    "colSpan": 1
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/tree.json"
+  ]
+}
