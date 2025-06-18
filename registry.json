@@ -1456,6 +1456,28 @@
       ]
     },
     {
+      "name": "tree",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "app/registry/default/ui/tree/Tree.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/tree/TreeItem.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/tree/TreeItemLabel.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/tree/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "utils",
       "type": "registry:lib",
       "files": [

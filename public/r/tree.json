@@ -1,0 +1,32 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "tree",
+  "type": "registry:ui",
+  "files": [
+    {
+      "path": "ui/tree/Tree.vue",
+      "content": "<script setup lang=\"ts\" generic=\"T extends Record<string, any>\">\nimport { cn } from \"@/lib/utils\";\nimport type { TreeRootEmits, TreeRootProps } from \"reka-ui\";\nimport { TreeRoot, useForwardPropsEmits } from \"reka-ui\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = withDefaults(\n  defineProps<\n    TreeRootProps<T> & {\n      indent?: number;\n      class?: HTMLAttributes[\"class\"];\n    }\n  >(),\n  { indent: 20 },\n);\nconst delegatedProps = reactiveOmit(props, \"class\");\nconst emits = defineEmits<TreeRootEmits>();\n\nconst forwarded = useForwardPropsEmits(delegatedProps, emits);\n</script>\n\n<template>\n  <TreeRoot\n    data-slot=\"tree\"\n    :style=\"{\n      '--tree-indent': `${props.indent}px`,\n    }\"\n    :class=\"cn('flex flex-col', props.class)\"\n    v-bind=\"forwarded\"\n    v-slot=\"slotProps\"\n  >\n    <slot v-bind=\"slotProps\" />\n  </TreeRoot>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "ui/tree/TreeItem.vue",
+      "content": "<script setup lang=\"ts\" generic=\"T\">\nimport { cn } from \"@/lib/utils\";\nimport { TreeItem, type TreeItemProps } from \"reka-ui\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  TreeItemProps<T> & { hasChildren?: boolean; class?: HTMLAttributes[\"class\"] }\n>();\n</script>\n\n<template>\n  <TreeItem\n    :class=\"\n      cn(\n        'z-10 ps-(--tree-padding) outline-hidden select-none not-last:pb-0.5 focus:z-20 data-[disabled]:pointer-events-none data-[disabled]:opacity-50',\n        props.class,\n      )\n    \"\n    :style=\"{\n      '--tree-padding': `calc(${props.level - 1} * var(--tree-indent))`,\n    }\"\n    :data-folder=\"props.hasChildren ?? false\"\n    v-bind=\"props\"\n    v-slot=\"slotProps\"\n  >\n    <slot v-bind=\"slotProps\" />\n  </TreeItem>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "ui/tree/TreeItemLabel.vue",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { LucideChevronDown } from \"lucide-vue-next\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  hasChildren?: boolean;\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <span\n    data-slot=\"tree-item-label\"\n    :class=\"\n      cn(\n        'in-focus-visible:ring-ring/50 bg-background hover:bg-accent in-data-[selected]:bg-accent in-data-[selected]:text-accent-foreground in-data-[drag-target=true]:bg-accent flex items-center gap-1 rounded-sm px-2 py-1.5 text-sm transition-colors not-in-data-[folder=true]:ps-7 in-focus-visible:ring-[3px] in-data-[search-match=true]:bg-blue-50! [&_svg]:pointer-events-none [&_svg]:shrink-0',\n        props.class,\n      )\n    \"\n  >\n    <template v-if=\"hasChildren\">\n      <LucideChevronDown\n        class=\"text-muted-foreground size-4 in-aria-[expanded=false]:-rotate-90\"\n      />\n    </template>\n    <slot />\n  </span>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "ui/tree/index.ts",
+      "content": "export { default as Tree } from \"./Tree.vue\";\nexport { default as TreeItem } from \"./TreeItem.vue\";\nexport { default as TreeItemLabel } from \"./TreeItemLabel.vue\";\nexport { TreeVirtualizer } from \"reka-ui\";\n",
+      "type": "registry:ui"
+    }
+  ],
+  "dependencies": [
+    "reka-ui",
+    "lucide-vue-next"
+  ],
+  "registryDependencies": []
+}
