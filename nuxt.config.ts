@@ -80,7 +80,9 @@ export default defineNuxtConfig({
     ignoreLocalhost: true,
   },
 
-  experimental: {
-    inlineRouteRules: true,
+  routeRules: {
+    "/": {
+      prerender: true,
+    },
   },
 });

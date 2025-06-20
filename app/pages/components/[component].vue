@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { LucideLoader } from "lucide-vue-next";
 
-defineRouteRules({
-  prerender: false,
-});
-
 const route = useRoute();
 const componentSlug = route.params.component as string;
 

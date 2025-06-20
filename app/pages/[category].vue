@@ -3,10 +3,6 @@ import { LucideLoader } from "lucide-vue-next";
 import { useRoute } from "vue-router";
 import { categories } from "~/config/components";
 
-defineRouteRules({
-  prerender: false,
-});
-
 const route = useRoute();
 const categorySlug = route.params.category as string;
 
