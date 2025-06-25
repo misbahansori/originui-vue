@@ -16,7 +16,7 @@ const value = ref({
     <RangeCalendar
       v-model="value"
       class="rounded-md border"
-      :numberOfMonths="3"
+      :numberOfMonths="2"
     />
     <p class="text-muted-foreground mt-4 text-center text-xs">
       Two months calendar -
