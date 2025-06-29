@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-508.vue",
-      "content": "<template>\n  <div class=\"flex items-center justify-center py-12\">\n    <span class=\"text-muted-foreground text-sm italic\">\n      Component not yet implemented.\n    </span>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { getLocalTimeZone, today } from \"@internationalized/date\";\nimport type { DateRange } from \"reka-ui\";\n\nconst start = today(getLocalTimeZone());\nconst end = start.add({ days: 7 });\n\nconst value = ref({\n  start,\n  end,\n}) as Ref<DateRange>;\n</script>\n\n<template>\n  <div>\n    <RangeCalendar\n      v-model=\"value\"\n      class=\"rounded-md border\"\n      :numberOfMonths=\"2\"\n    />\n    <p class=\"text-muted-foreground mt-4 text-center text-xs\">\n      Two months calendar -\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/docs/components/calendar#range-calendar\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        Reka UI\n      </a>\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
@@ -19,6 +19,8 @@
     "colSpan": 3,
     "style": 1
   },
-  "dependencies": [],
+  "dependencies": [
+    "@internationalized/date"
+  ],
   "registryDependencies": []
 }
