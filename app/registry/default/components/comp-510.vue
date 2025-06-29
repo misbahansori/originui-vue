@@ -103,6 +103,7 @@ const isGoodPrice = (date: DateValue) => {
                   v-for="weekDate in weekDates"
                   :key="weekDate.toString()"
                   :date="weekDate"
+                  class="has-data-[outside-view]:invisible"
                 >
                   <RangeCalendarCellTrigger
                     :day="weekDate"
