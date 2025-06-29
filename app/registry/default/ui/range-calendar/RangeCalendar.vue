@@ -53,30 +53,39 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
     </RangeCalendarHeader>
 
     <div class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">
-      <RangeCalendarGrid v-for="month in grid" :key="month.value.toString()">
-        <RangeCalendarGridHead>
-          <RangeCalendarGridRow>
-            <RangeCalendarHeadCell v-for="day in weekDays" :key="day">
-              {{ day }}
-            </RangeCalendarHeadCell>
-          </RangeCalendarGridRow>
-        </RangeCalendarGridHead>
-        <RangeCalendarGridBody>
-          <RangeCalendarGridRow
-            v-for="(weekDates, index) in month.rows"
-            :key="`weekDate-${index}`"
-            class="mt-2 w-full"
-          >
-            <RangeCalendarCell
-              v-for="weekDate in weekDates"
-              :key="weekDate.toString()"
-              :date="weekDate"
+      <div
+        v-for="month in grid"
+        :key="month.value.toString()"
+        class="not-first:border-l not-first:ps-4"
+      >
+        <RangeCalendarGrid>
+          <RangeCalendarGridHead>
+            <RangeCalendarGridRow>
+              <RangeCalendarHeadCell v-for="day in weekDays" :key="day">
+                {{ day }}
+              </RangeCalendarHeadCell>
+            </RangeCalendarGridRow>
+          </RangeCalendarGridHead>
+          <RangeCalendarGridBody>
+            <RangeCalendarGridRow
+              v-for="(weekDates, index) in month.rows"
+              :key="`weekDate-${index}`"
+              class="mt-2 w-full"
             >
-              <RangeCalendarCellTrigger :day="weekDate" :month="month.value" />
-            </RangeCalendarCell>
-          </RangeCalendarGridRow>
-        </RangeCalendarGridBody>
-      </RangeCalendarGrid>
+              <RangeCalendarCell
+                v-for="weekDate in weekDates"
+                :key="weekDate.toString()"
+                :date="weekDate"
+              >
+                <RangeCalendarCellTrigger
+                  :day="weekDate"
+                  :month="month.value"
+                />
+              </RangeCalendarCell>
+            </RangeCalendarGridRow>
+          </RangeCalendarGridBody>
+        </RangeCalendarGrid>
+      </div>
     </div>
   </RangeCalendarRoot>
 </template>

@@ -1,7 +1,33 @@
+<script setup lang="ts">
+import { getLocalTimeZone, today } from "@internationalized/date";
+import type { DateRange } from "reka-ui";
+
+const start = today(getLocalTimeZone());
+const end = start.add({ days: 7 });
+
+const value = ref({
+  start,
+  end,
+}) as Ref<DateRange>;
+</script>
+
 <template>
-  <div class="flex items-center justify-center py-12">
-    <span class="text-muted-foreground text-sm italic">
-      Component not yet implemented.
-    </span>
+  <div>
+    <RangeCalendar
+      v-model="value"
+      class="rounded-md border"
+      :numberOfMonths="2"
+    />
+    <p class="text-muted-foreground mt-4 text-center text-xs">
+      Two months calendar -
+      <a
+        class="hover:text-foreground underline"
+        href="https://reka-ui.com/docs/components/calendar#range-calendar"
+        target="_blank"
+        rel="noopener nofollow"
+      >
+        Reka UI
+      </a>
+    </p>
   </div>
 </template>
