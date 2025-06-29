@@ -107,7 +107,7 @@ const isGoodPrice = (date: DateValue) => {
                   <RangeCalendarCellTrigger
                     :day="weekDate"
                     :month="month.value"
-                    class="flex size-12 flex-col items-center justify-center gap-1"
+                    class="flex size-12 flex-col items-center justify-center gap-1 data-[outside-view]:invisible"
                   >
                     <span>
                       {{ formatDate(weekDate.toDate(getLocalTimeZone()), "D") }}
