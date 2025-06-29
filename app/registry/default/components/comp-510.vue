@@ -1,24 +1,26 @@
 <script lang="ts" setup>
 import {
+  CalendarCell,
+  CalendarCellTrigger,
+  CalendarGrid,
+  CalendarGridBody,
+  CalendarGridHead,
+  CalendarGridRow,
+  CalendarHeadCell,
+  CalendarHeader,
+  CalendarHeading,
+  CalendarNextButton,
+  CalendarPrevButton,
+} from "@/registry/default/ui/calendar";
+import {
   getLocalTimeZone,
   today,
   type DateValue,
 } from "@internationalized/date";
 import { formatDate } from "@vueuse/core";
-import { RangeCalendarRoot, type DateRange } from "reka-ui";
-import {
-  RangeCalendarHeader,
-  RangeCalendarHeading,
-  RangeCalendarNextButton,
-  RangeCalendarPrevButton,
-} from "~/registry/default/ui/range-calendar";
+import { CalendarRoot } from "reka-ui";
 
 const todayDate = today(getLocalTimeZone());
-
-const modelValue = ref({
-  start: todayDate,
-  end: todayDate,
-}) as Ref<DateRange>;
 
 const generateMockPriceData = () => {
   const data: Record<string, number> = {};
@@ -58,80 +60,67 @@ const isGoodPrice = (date: DateValue) => {
 
 <template>
   <div>
-    <RangeCalendarRoot
+    <CalendarRoot
       v-slot="{ grid, weekDays }"
-      data-slot="range-calendar"
-      v-model="modelValue"
-      class="rounded-md border p-3"
+      data-slot="calendar"
       :numberOfMonths="2"
       :isDateDisabled="isDateDisabled"
+      class="rounded-md border p-3"
     >
-      <RangeCalendarHeader>
-        <RangeCalendarHeading />
-
+      <CalendarHeader>
+        <CalendarHeading />
         <div class="flex items-center gap-1">
-          <RangeCalendarPrevButton />
-          <RangeCalendarNextButton />
+          <CalendarPrevButton class="absolute left-1" />
+          <CalendarNextButton class="absolute right-1" />
         </div>
-      </RangeCalendarHeader>
-
+      </CalendarHeader>
       <div class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">
-        <div
-          v-for="month in grid"
-          :key="month.value.toString()"
-          class="not-first:border-l not-first:ps-4"
-        >
-          <RangeCalendarGrid>
-            <RangeCalendarGridHead>
-              <RangeCalendarGridRow>
-                <RangeCalendarHeadCell
-                  v-for="day in weekDays"
-                  :key="day"
-                  class="w-12"
-                >
-                  {{ day }}
-                </RangeCalendarHeadCell>
-              </RangeCalendarGridRow>
-            </RangeCalendarGridHead>
-            <RangeCalendarGridBody>
-              <RangeCalendarGridRow
-                v-for="(weekDates, index) in month.rows"
-                :key="`weekDate-${index}`"
-                class="mt-2 w-full"
+        <CalendarGrid v-for="month in grid" :key="month.value.toString()">
+          <CalendarGridHead>
+            <CalendarGridRow>
+              <CalendarHeadCell v-for="day in weekDays" :key="day" class="w-12">
+                {{ day }}
+              </CalendarHeadCell>
+            </CalendarGridRow>
+          </CalendarGridHead>
+          <CalendarGridBody>
+            <CalendarGridRow
+              v-for="(weekDates, index) in month.rows"
+              :key="`weekDate-${index}`"
+              class="mt-2 w-full"
+            >
+              <CalendarCell
+                v-for="weekDate in weekDates"
+                :key="weekDate.toString()"
+                :date="weekDate"
+                class="has-data-[outside-view]:invisible"
               >
-                <RangeCalendarCell
-                  v-for="weekDate in weekDates"
-                  :key="weekDate.toString()"
-                  :date="weekDate"
-                  class="has-data-[outside-view]:invisible"
+                <CalendarCellTrigger
+                  :day="weekDate"
+                  :month="month.value"
+                  class="flex size-12 flex-col items-center justify-center gap-1 data-[outside-view]:invisible"
                 >
-                  <RangeCalendarCellTrigger
-                    :day="weekDate"
-                    :month="month.value"
-                    class="flex size-12 flex-col items-center justify-center gap-1 data-[outside-view]:invisible"
+                  <span>
+                    {{ formatDate(weekDate.toDate(getLocalTimeZone()), "D") }}
+                  </span>
+                  <span
+                    v-if="getPriceData(weekDate)"
+                    class="text-[10px] font-medium"
+                    :class="{
+                      'text-emerald-500': isGoodPrice(weekDate),
+                      'text-muted-foreground group-data-selected:text-primary-foreground/70':
+                        !isGoodPrice(weekDate),
+                    }"
                   >
-                    <span>
-                      {{ formatDate(weekDate.toDate(getLocalTimeZone()), "D") }}
-                    </span>
-                    <span
-                      v-if="getPriceData(weekDate)"
-                      class="text-[10px] font-medium"
-                      :class="{
-                        'text-emerald-500': isGoodPrice(weekDate),
-                        'text-muted-foreground group-data-selected:text-primary-foreground/70':
-                          !isGoodPrice(weekDate),
-                      }"
-                    >
-                      ${{ getPriceData(weekDate) }}
-                    </span>
-                  </RangeCalendarCellTrigger>
-                </RangeCalendarCell>
-              </RangeCalendarGridRow>
-            </RangeCalendarGridBody>
-          </RangeCalendarGrid>
-        </div>
+                    ${{ getPriceData(weekDate) }}
+                  </span>
+                </CalendarCellTrigger>
+              </CalendarCell>
+            </CalendarGridRow>
+          </CalendarGridBody>
+        </CalendarGrid>
       </div>
-    </RangeCalendarRoot>
+    </CalendarRoot>
     <p class="text-muted-foreground mt-4 text-center text-xs">
       Pricing Calendar -
       <a
