@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "nuxt-umami",
     "@nuxtjs/seo",
+    "vue-sonner/nuxt",
   ],
 
   future: {
