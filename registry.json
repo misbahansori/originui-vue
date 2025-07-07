@@ -1488,7 +1488,7 @@
       ]
     },
     {
-      "name": "use-file-upload",
+      "name": "useFileUpload",
       "type": "registry:hook",
       "files": [
         {
