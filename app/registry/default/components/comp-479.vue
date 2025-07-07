@@ -108,11 +108,8 @@ const sorting = ref<SortingState>([
 ]);
 
 onMounted(async () => {
-  const res = await fetch(
-    "https://res.cloudinary.com/dlzlfasou/raw/upload/users-01_fertyx.json",
-  );
-  const json = await res.json();
-  data.value = json.slice(0, 5); // Limit to 5 items
+  const res = await $fetch("/api/users");
+  data.value = res.slice(0, 5);
 });
 
 const table = useVueTable({
