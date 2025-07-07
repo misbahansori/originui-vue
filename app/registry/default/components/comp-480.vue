@@ -42,7 +42,7 @@ type Item = {
   role: string;
   joinDate: string;
   lastActive: string;
-  performance: "Good" | "Very Good" | "Excellent" | "Outstanding";
+  performance: "Excellent" | "Good" | "Average" | "Poor";
 };
 
 const columns: ColumnDef<Item>[] = [
@@ -111,11 +111,9 @@ const data = ref<Item[]>([]);
 const sorting = ref<SortingState>([]);
 
 onMounted(async () => {
-  const res = await fetch(
-    "https://res.cloudinary.com/dlzlfasou/raw/upload/users-01_fertyx.json",
-  );
-  const jsonData = await res.json();
-  data.value = jsonData.slice(0, 5); // Limit to 5 items
+  const res = await $fetch("/api/users");
+
+  data.value = res.slice(0, 5);
 });
 
 const table = useVueTable({
