@@ -38,16 +38,13 @@ const maxFiles = 6;
 
 const {
   files,
-  isDragging,
+
   errors,
-  handleDragEnter,
-  handleDragLeave,
-  handleDragOver,
-  handleDrop,
   openFileDialog,
   removeFile,
   clearFiles,
-  getInputProps,
+  dropzoneRef,
+  inputRef,
 } = useFileUpload({
   accept: "image/svg+xml,image/png,image/jpeg,image/jpg,image/gif",
   maxSize,
@@ -61,15 +58,11 @@ const {
   <div class="flex flex-col gap-2">
     <!-- Drop area -->
     <div
-      @dragenter="handleDragEnter"
-      @dragleave="handleDragLeave"
-      @dragover="handleDragOver"
-      @drop="handleDrop"
-      :data-dragging="isDragging || undefined"
+      ref="dropzoneRef"
       :data-files="files.length > 0 || undefined"
       class="border-input data-[dragging=true]:bg-accent/50 has-[input:focus]:border-ring has-[input:focus]:ring-ring/50 relative flex min-h-52 flex-col items-center overflow-hidden rounded-xl border border-dashed p-4 transition-colors not-data-[files]:justify-center has-[input:focus]:ring-[3px]"
     >
-      <input v-bind="getInputProps()" aria-label="Upload image file" />
+      <input ref="inputRef" aria-label="Upload image file" />
       <div
         class="flex flex-col items-center justify-center px-4 py-3 text-center"
       >

@@ -6,21 +6,11 @@ import { computed } from "vue";
 const maxSizeMB = 5;
 const maxSize = maxSizeMB * 1024 * 1024; // 5MB default
 
-const {
-  files,
-  isDragging,
-  errors,
-  handleDragEnter,
-  handleDragLeave,
-  handleDragOver,
-  handleDrop,
-  openFileDialog,
-  removeFile,
-  getInputProps,
-} = useFileUpload({
-  accept: "image/*",
-  maxSize,
-});
+const { files, errors, openFileDialog, removeFile, dropzoneRef, inputRef } =
+  useFileUpload({
+    accept: "image/*",
+    maxSize,
+  });
 
 const currentFile = computed(() => files.value?.[0]);
 </script>
@@ -30,16 +20,12 @@ const currentFile = computed(() => files.value?.[0]);
     <div class="relative">
       <!-- Drop area -->
       <div
+        ref="dropzoneRef"
         role="button"
         @click="openFileDialog"
-        @dragenter="handleDragEnter"
-        @dragleave="handleDragLeave"
-        @dragover="handleDragOver"
-        @drop="handleDrop"
-        :data-dragging="isDragging || undefined"
         class="border-input hover:bg-accent/50 data-[dragging=true]:bg-accent/50 has-[input:focus]:border-ring has-[input:focus]:ring-ring/50 relative flex min-h-52 flex-col items-center justify-center overflow-hidden rounded-xl border border-dashed p-4 transition-colors has-disabled:pointer-events-none has-disabled:opacity-50 has-[img]:border-none has-[input:focus]:ring-[3px]"
       >
-        <input v-bind="getInputProps()" aria-label="Upload file" />
+        <input ref="inputRef" aria-label="Upload file" />
         <div v-if="currentFile" class="absolute inset-0">
           <img
             :src="currentFile.preview"

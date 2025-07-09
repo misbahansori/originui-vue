@@ -1,4 +1,4 @@
-import { ref, watch, type Ref } from "vue";
+import { ref, watch, shallowRef, computed } from "vue";
 
 export type FileMetadata = {
   name: string;
@@ -24,34 +24,6 @@ export type FileUploadOptions = {
   onFilesAdded?: (files: FileWithPreview[]) => void;
 };
 
-export type FileUploadState = {
-  files: FileWithPreview[];
-  isDragging: boolean;
-  errors: string[];
-};
-
-export type FileUploadActions = {
-  addFiles: (files: FileList | File[]) => void;
-  removeFile: (id: string) => void;
-  clearFiles: () => void;
-  clearErrors: () => void;
-  handleDragEnter: (e: DragEvent) => void;
-  handleDragLeave: (e: DragEvent) => void;
-  handleDragOver: (e: DragEvent) => void;
-  handleDrop: (e: DragEvent) => void;
-  handleFileChange: (e: Event) => void;
-  openFileDialog: () => void;
-  getInputProps: (props?: { disabled?: boolean }) => {
-    type: string;
-    class: string;
-    onChange: (e: Event) => void;
-    accept: string;
-    multiple: boolean;
-    disabled?: boolean;
-    ref: Ref<HTMLInputElement | null>;
-  };
-};
-
 export const useFileUpload = (options: FileUploadOptions = {}) => {
   const {
     maxFiles = Infinity,
@@ -70,10 +42,52 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
       preview: file.url,
     })),
   );
-  const isDragging = ref(false);
+
   const errors = ref<string[]>([]);
 
-  const inputRef = ref<HTMLInputElement | null>(null);
+  const ariaLabel = computed(() => {
+    if (files.value.length > 0) {
+      return multiple ? "Change files" : "Change file";
+    }
+    return multiple ? "Upload files" : "Upload file";
+  });
+
+  const inputRef = shallowRef<HTMLInputElement | null>(null);
+  const dropzoneRef = shallowRef<HTMLElement | null>(null);
+
+  watch(inputRef, (newInput) => {
+    if (!newInput) return;
+    configureInput();
+  });
+
+  const configureInput = () => {
+    if (!inputRef.value) return;
+    inputRef.value.type = "file";
+    inputRef.value.className = "sr-only";
+    inputRef.value.accept = accept;
+    inputRef.value.multiple = multiple;
+    inputRef.value.addEventListener("change", handleFileChange);
+  };
+
+  watch(dropzoneRef, (newDropzone) => {
+    if (!newDropzone) return;
+    configureDropzone();
+  });
+
+  const configureDropzone = () => {
+    if (!dropzoneRef.value) return;
+    dropzoneRef.value.addEventListener("dragenter", handleDragEnter);
+    dropzoneRef.value.addEventListener("dragleave", handleDragLeave);
+    dropzoneRef.value.addEventListener("dragover", handleDragOver);
+    dropzoneRef.value.addEventListener("drop", handleDrop);
+
+    dropzoneRef.value.setAttribute("aria-label", ariaLabel.value);
+  };
+
+  watch(ariaLabel, (newValue) => {
+    if (!dropzoneRef.value) return;
+    dropzoneRef.value.setAttribute("aria-label", newValue);
+  });
 
   const validateFile = (file: File | FileMetadata): string | null => {
     if (file instanceof File) {
@@ -125,7 +139,6 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
   };
 
   const clearFiles = () => {
-    // Clean up object URLs
     files.value.forEach((file) => {
       if (
         file.preview &&
@@ -151,15 +164,12 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
     const newFilesArray = Array.from(newFiles);
     const newErrors: string[] = [];
 
-    // Clear existing errors when new files are uploaded
     errors.value = [];
 
-    // In single file mode, clear existing files first
     if (!multiple) {
       clearFiles();
     }
 
-    // Check if adding these files would exceed maxFiles (only in multiple mode)
     if (
       multiple &&
       maxFiles !== Infinity &&
@@ -173,19 +183,16 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
     const validFiles: FileWithPreview[] = [];
 
     newFilesArray.forEach((file) => {
-      // Check for duplicates
       const isDuplicate = files.value.some(
         (existingFile) =>
           existingFile.file.name === file.name &&
           existingFile.file.size === file.size,
       );
 
-      // Skip duplicate files silently
       if (isDuplicate) {
         return;
       }
 
-      // Check file size
       if (file.size > maxSize) {
         newErrors.push(
           multiple
@@ -207,7 +214,6 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
       }
     });
 
-    // Only update state if we have valid files to add
     if (validFiles.length > 0) {
       files.value = !multiple ? validFiles : [...files.value, ...validFiles];
       errors.value = newErrors;
@@ -217,7 +223,6 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
       errors.value = newErrors;
     }
 
-    // Reset input value after handling files
     if (inputRef.value) {
       inputRef.value.value = "";
     }
@@ -248,7 +253,10 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
   const handleDragEnter = (e: DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    isDragging.value = true;
+
+    if (dropzoneRef.value) {
+      dropzoneRef.value.setAttribute("data-dragging", "true");
+    }
   };
 
   const handleDragLeave = (e: DragEvent) => {
@@ -263,7 +271,9 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
       return;
     }
 
-    isDragging.value = false;
+    if (dropzoneRef.value) {
+      dropzoneRef.value.removeAttribute("data-dragging");
+    }
   };
 
   const handleDragOver = (e: DragEvent) => {
@@ -274,15 +284,16 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
   const handleDrop = (e: DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    isDragging.value = false;
 
-    // Don't process files if the input is disabled
+    if (dropzoneRef.value) {
+      dropzoneRef.value.removeAttribute("data-dragging");
+    }
+
     if (inputRef.value?.disabled) {
       return;
     }
 
     if (e.dataTransfer?.files && e.dataTransfer.files.length > 0) {
-      // In single file mode, only use the first file
       if (!multiple) {
         const file = e.dataTransfer.files[0];
         if (file) {
@@ -307,19 +318,6 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
     }
   };
 
-  const getInputProps = (props: { disabled?: boolean } = {}) => {
-    return {
-      type: "file",
-      class: "sr-only",
-      onChange: handleFileChange,
-      accept,
-      multiple,
-      disabled: props.disabled,
-      ref: inputRef,
-    };
-  };
-
-  // Watch for changes in files and call onFilesChange if provided
   watch(
     files,
     (newFiles) => {
@@ -330,20 +328,16 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
 
   return {
     files,
-    isDragging,
     errors,
     addFiles,
     removeFile,
     clearFiles,
     clearErrors,
-    handleDragEnter,
-    handleDragLeave,
-    handleDragOver,
-    handleDrop,
     handleFileChange,
     openFileDialog,
-    getInputProps,
     onFilesAdded,
+    inputRef,
+    dropzoneRef,
   };
 };
 
