@@ -42,7 +42,7 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
       preview: file.url,
     })),
   );
-  const isDragging = ref(false);
+
   const errors = ref<string[]>([]);
 
   const ariaLabel = computed(() => {
@@ -81,17 +81,8 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
     dropzoneRef.value.addEventListener("dragover", handleDragOver);
     dropzoneRef.value.addEventListener("drop", handleDrop);
 
-    dropzoneRef.value.setAttribute(
-      "data-dragging",
-      isDragging.value ? "true" : "",
-    );
     dropzoneRef.value.setAttribute("aria-label", ariaLabel.value);
   };
-
-  watch(isDragging, (newValue) => {
-    if (!dropzoneRef.value) return;
-    dropzoneRef.value.setAttribute("data-dragging", newValue ? "true" : "");
-  });
 
   watch(ariaLabel, (newValue) => {
     if (!dropzoneRef.value) return;
@@ -262,7 +253,10 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
   const handleDragEnter = (e: DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    isDragging.value = true;
+
+    if (dropzoneRef.value) {
+      dropzoneRef.value.setAttribute("data-dragging", "true");
+    }
   };
 
   const handleDragLeave = (e: DragEvent) => {
@@ -277,7 +271,9 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
       return;
     }
 
-    isDragging.value = false;
+    if (dropzoneRef.value) {
+      dropzoneRef.value.removeAttribute("data-dragging");
+    }
   };
 
   const handleDragOver = (e: DragEvent) => {
@@ -288,7 +284,10 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
   const handleDrop = (e: DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    isDragging.value = false;
+
+    if (dropzoneRef.value) {
+      dropzoneRef.value.removeAttribute("data-dragging");
+    }
 
     if (inputRef.value?.disabled) {
       return;
