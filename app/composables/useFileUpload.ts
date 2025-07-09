@@ -24,21 +24,6 @@ export type FileUploadOptions = {
   onFilesAdded?: (files: FileWithPreview[]) => void;
 };
 
-export type FileUploadState = {
-  files: FileWithPreview[];
-  isDragging: boolean;
-  errors: string[];
-};
-
-export type FileUploadActions = {
-  addFiles: (files: FileList | File[]) => void;
-  removeFile: (id: string) => void;
-  clearFiles: () => void;
-  clearErrors: () => void;
-  handleFileChange: (e: Event) => void;
-  openFileDialog: () => void;
-};
-
 export const useFileUpload = (options: FileUploadOptions = {}) => {
   const {
     maxFiles = Infinity,
@@ -60,7 +45,6 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
   const isDragging = ref(false);
   const errors = ref<string[]>([]);
 
-  const dataDragging = computed(() => isDragging.value || undefined);
   const ariaLabel = computed(() => {
     if (files.value.length > 0) {
       return multiple ? "Change files" : "Change file";
@@ -99,12 +83,12 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
 
     dropzoneRef.value.setAttribute(
       "data-dragging",
-      dataDragging.value ? "true" : "",
+      isDragging.value ? "true" : "",
     );
     dropzoneRef.value.setAttribute("aria-label", ariaLabel.value);
   };
 
-  watch(dataDragging, (newValue) => {
+  watch(isDragging, (newValue) => {
     if (!dropzoneRef.value) return;
     dropzoneRef.value.setAttribute("data-dragging", newValue ? "true" : "");
   });
