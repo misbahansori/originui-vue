@@ -249,16 +249,12 @@ const handleFileRemoved = (fileId: string) => {
 
 const {
   files,
-  isDragging,
   errors,
-  handleDragEnter,
-  handleDragLeave,
-  handleDragOver,
-  handleDrop,
+  dropzoneRef,
   openFileDialog,
   removeFile,
   clearFiles,
-  getInputProps,
+  inputRef,
 } = useFileUpload({
   multiple: true,
   maxFiles,
@@ -272,19 +268,13 @@ const {
   <div class="flex flex-col gap-2">
     <!-- Drop area -->
     <div
-      @dragenter="handleDragEnter"
-      @dragleave="handleDragLeave"
-      @dragover="handleDragOver"
-      @drop="handleDrop"
-      :data-dragging="isDragging || undefined"
+      ref="dropzoneRef"
+      role="button"
+      @click="openFileDialog"
       :data-files="files.length > 0 || undefined"
       class="border-input data-[dragging=true]:bg-accent/50 has-[input:focus]:border-ring has-[input:focus]:ring-ring/50 relative flex min-h-52 flex-col items-center overflow-hidden rounded-xl border border-dashed p-4 transition-colors not-data-[files]:justify-center has-[input:focus]:ring-[3px]"
     >
-      <input
-        v-bind="getInputProps()"
-        class="sr-only"
-        aria-label="Upload image file"
-      />
+      <input ref="inputRef" class="sr-only" aria-label="Upload image file" />
       <div v-if="files.length > 0" class="flex w-full flex-col gap-3">
         <div class="flex items-center justify-between gap-2">
           <h3 class="truncate text-sm font-medium">

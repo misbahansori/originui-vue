@@ -4,19 +4,10 @@ import { Button } from "@/registry/default/ui/button";
 import { LucideCircleUserRound, LucideX } from "lucide-vue-next";
 import { computed } from "vue";
 
-const {
-  files,
-  isDragging,
-  removeFile,
-  openFileDialog,
-  getInputProps,
-  handleDragEnter,
-  handleDragLeave,
-  handleDragOver,
-  handleDrop,
-} = useFileUpload({
-  accept: "image/*",
-});
+const { files, removeFile, openFileDialog, dropzoneRef, inputRef } =
+  useFileUpload({
+    accept: "image/*",
+  });
 
 const currentFile = computed(() => files.value?.[0]);
 </script>
@@ -26,17 +17,12 @@ const currentFile = computed(() => files.value?.[0]);
     <div class="relative inline-flex">
       <!-- Drop area -->
       <div
+        ref="dropzoneRef"
         role="button"
         @click="openFileDialog"
-        @dragenter="handleDragEnter"
-        @dragleave="handleDragLeave"
-        @dragover="handleDragOver"
-        @drop="handleDrop"
-        :data-dragging="isDragging || undefined"
-        :aria-label="currentFile ? 'Change image' : 'Upload image'"
         class="border-input hover:bg-accent/50 data-[dragging=true]:bg-accent/50 has-[input:focus]:border-ring has-[input:focus]:ring-ring/50 relative flex size-16 items-center justify-center overflow-hidden rounded-full border border-dashed transition-colors has-disabled:pointer-events-none has-disabled:opacity-50 has-[img]:border-none has-[input:focus]:ring-[3px]"
       >
-        <input v-bind="getInputProps()" aria-label="Upload image file" />
+        <input ref="inputRef" aria-label="Upload image file" />
         <img
           v-if="currentFile"
           :src="currentFile.preview"

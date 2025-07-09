@@ -20,21 +20,11 @@ const initialFiles = [
   },
 ];
 
-const {
-  files,
-  isDragging,
-  errors,
-  handleDragEnter,
-  handleDragLeave,
-  handleDragOver,
-  handleDrop,
-  openFileDialog,
-  removeFile,
-  getInputProps,
-} = useFileUpload({
-  maxSize,
-  initialFiles,
-});
+const { files, errors, openFileDialog, removeFile, dropzoneRef, inputRef } =
+  useFileUpload({
+    maxSize,
+    initialFiles,
+  });
 
 const currentFile = computed(() => files.value[0]);
 </script>
@@ -43,17 +33,13 @@ const currentFile = computed(() => files.value[0]);
   <div class="flex flex-col gap-2">
     <!-- Drop area -->
     <div
+      ref="dropzoneRef"
       role="button"
       @click="openFileDialog"
-      @dragenter="handleDragEnter"
-      @dragleave="handleDragLeave"
-      @dragover="handleDragOver"
-      @drop="handleDrop"
-      :data-dragging="isDragging || undefined"
       class="border-input hover:bg-accent/50 data-[dragging=true]:bg-accent/50 has-[input:focus]:border-ring has-[input:focus]:ring-ring/50 flex min-h-40 flex-col items-center justify-center rounded-xl border border-dashed p-4 transition-colors has-disabled:pointer-events-none has-disabled:opacity-50 has-[input:focus]:ring-[3px]"
     >
       <input
-        v-bind="getInputProps()"
+        ref="inputRef"
         aria-label="Upload file"
         :disabled="Boolean(currentFile)"
       />
