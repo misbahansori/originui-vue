@@ -1,4 +1,4 @@
-import { ref, watch, shallowRef, computed, type Ref } from "vue";
+import { ref, watch, shallowRef, computed } from "vue";
 
 export type FileMetadata = {
   name: string;
