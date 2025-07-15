@@ -25,7 +25,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/color-mode",
     "nuxt-umami",
-    "@nuxtjs/seo",
+    "@nuxtjs/sitemap",
     "vue-sonner/nuxt",
   ],
 
