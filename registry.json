@@ -520,24 +520,6 @@
       ]
     },
     {
-      "name": "date-field",
-      "type": "registry:ui",
-      "files": [
-        {
-          "path": "app/registry/default/ui/date-field/DateField.vue",
-          "type": "registry:ui"
-        },
-        {
-          "path": "app/registry/default/ui/date-field/DateFieldInput.vue",
-          "type": "registry:ui"
-        },
-        {
-          "path": "app/registry/default/ui/date-field/index.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "date-picker",
       "type": "registry:ui",
       "files": [
@@ -1585,10 +1567,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -1601,11 +1580,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "required"
-        ]
+        "tags": ["input", "label", "required"]
       }
     },
     {
@@ -1618,11 +1593,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "helper"
-        ]
+        "tags": ["input", "label", "helper"]
       }
     },
     {
@@ -1635,11 +1606,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "hint"
-        ]
+        "tags": ["input", "label", "hint"]
       }
     },
     {
@@ -1652,10 +1619,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -1668,11 +1632,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "error"
-        ]
+        "tags": ["input", "label", "error"]
       }
     },
     {
@@ -1685,10 +1645,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -1701,11 +1658,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "disabled"
-        ]
+        "tags": ["input", "label", "disabled"]
       }
     },
     {
@@ -1718,10 +1671,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -1734,10 +1684,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -1750,10 +1697,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -1766,10 +1710,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -1782,10 +1723,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -1798,10 +1736,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -1814,10 +1749,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -1830,10 +1762,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -1846,12 +1775,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "select",
-          "native select"
-        ]
+        "tags": ["input", "label", "select", "native select"]
       }
     },
     {
@@ -1864,12 +1788,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "select",
-          "native select"
-        ]
+        "tags": ["input", "label", "select", "native select"]
       }
     },
     {
@@ -1882,11 +1801,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "button"
-        ]
+        "tags": ["input", "label", "button"]
       }
     },
     {
@@ -1899,11 +1814,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "button"
-        ]
+        "tags": ["input", "label", "button"]
       }
     },
     {
@@ -1916,11 +1827,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "button"
-        ]
+        "tags": ["input", "label", "button"]
       }
     },
     {
@@ -1933,11 +1840,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "button"
-        ]
+        "tags": ["input", "label", "button"]
       }
     },
     {
@@ -1950,12 +1853,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "button",
-          "password"
-        ]
+        "tags": ["input", "label", "button", "password"]
       }
     },
     {
@@ -1968,11 +1866,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "button"
-        ]
+        "tags": ["input", "label", "button"]
       }
     },
     {
@@ -1985,12 +1879,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "search",
-          "kbd"
-        ]
+        "tags": ["input", "label", "search", "kbd"]
       }
     },
     {
@@ -2003,12 +1892,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "button",
-          "search"
-        ]
+        "tags": ["input", "label", "button", "search"]
       }
     },
     {
@@ -2021,12 +1905,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "button",
-          "search"
-        ]
+        "tags": ["input", "label", "button", "search"]
       }
     },
     {
@@ -2039,13 +1918,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "button",
-          "number",
-          "react aria"
-        ]
+        "tags": ["input", "label", "button", "number", "react aria"]
       }
     },
     {
@@ -2058,13 +1931,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "button",
-          "number",
-          "react aria"
-        ]
+        "tags": ["input", "label", "button", "number", "react aria"]
       }
     },
     {
@@ -2077,11 +1944,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "file"
-        ]
+        "tags": ["input", "label", "file"]
       }
     },
     {
@@ -2094,10 +1957,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -2110,10 +1970,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -2126,10 +1983,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -2142,10 +1996,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -2158,10 +2009,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label"
-        ]
+        "tags": ["input", "label"]
       }
     },
     {
@@ -2174,12 +2022,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "date",
-          "react aria"
-        ]
+        "tags": ["input", "label", "date", "react aria"]
       }
     },
     {
@@ -2192,12 +2035,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "date",
-          "react aria"
-        ]
+        "tags": ["input", "label", "date", "react aria"]
       }
     },
     {
@@ -2210,12 +2048,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "date",
-          "react aria"
-        ]
+        "tags": ["input", "label", "date", "react aria"]
       }
     },
     {
@@ -2228,12 +2061,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "date",
-          "react aria"
-        ]
+        "tags": ["input", "label", "date", "react aria"]
       }
     },
     {
@@ -2246,12 +2074,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "date",
-          "react aria"
-        ]
+        "tags": ["input", "label", "date", "react aria"]
       }
     },
     {
@@ -2264,14 +2087,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "date",
-          "calendar",
-          "picker",
-          "react aria"
-        ]
+        "tags": ["input", "label", "date", "calendar", "picker", "react aria"]
       }
     },
     {
@@ -2326,11 +2142,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "otp"
-        ]
+        "tags": ["input", "label", "otp"]
       }
     },
     {
@@ -2343,11 +2155,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "otp"
-        ]
+        "tags": ["input", "label", "otp"]
       }
     },
     {
@@ -2360,11 +2168,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "phone"
-        ]
+        "tags": ["input", "label", "phone"]
       }
     },
     {
@@ -2377,14 +2181,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "checkout",
-          "payment",
-          "credit card",
-          "form"
-        ]
+        "tags": ["input", "label", "checkout", "payment", "credit card", "form"]
       }
     },
     {
@@ -2397,14 +2194,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "checkout",
-          "payment",
-          "credit card",
-          "form"
-        ]
+        "tags": ["input", "label", "checkout", "payment", "credit card", "form"]
       }
     },
     {
@@ -2417,14 +2207,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "checkout",
-          "payment",
-          "credit card",
-          "form"
-        ]
+        "tags": ["input", "label", "checkout", "payment", "credit card", "form"]
       }
     },
     {
@@ -2437,14 +2220,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "checkout",
-          "payment",
-          "credit card",
-          "form"
-        ]
+        "tags": ["input", "label", "checkout", "payment", "credit card", "form"]
       }
     },
     {
@@ -2457,11 +2233,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "password"
-        ]
+        "tags": ["input", "label", "password"]
       }
     },
     {
@@ -2474,11 +2246,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "read-only"
-        ]
+        "tags": ["input", "label", "read-only"]
       }
     },
     {
@@ -2491,11 +2259,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "copy"
-        ]
+        "tags": ["input", "label", "copy"]
       }
     },
     {
@@ -2508,11 +2272,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "mask"
-        ]
+        "tags": ["input", "label", "mask"]
       }
     },
     {
@@ -2525,12 +2285,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "mask",
-          "time"
-        ]
+        "tags": ["input", "label", "mask", "time"]
       }
     },
     {
@@ -2543,12 +2298,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "tag",
-          "emblor"
-        ]
+        "tags": ["input", "label", "tag", "emblor"]
       }
     },
     {
@@ -2561,12 +2311,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "tag",
-          "emblor"
-        ]
+        "tags": ["input", "label", "tag", "emblor"]
       }
     },
     {
@@ -2579,11 +2324,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "otp"
-        ]
+        "tags": ["input", "label", "otp"]
       }
     },
     {
@@ -2596,10 +2337,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea"
-        ]
+        "tags": ["label", "textarea"]
       }
     },
     {
@@ -2612,11 +2350,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea",
-          "required"
-        ]
+        "tags": ["label", "textarea", "required"]
       }
     },
     {
@@ -2629,11 +2363,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea",
-          "helper"
-        ]
+        "tags": ["label", "textarea", "helper"]
       }
     },
     {
@@ -2646,11 +2376,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea",
-          "hint"
-        ]
+        "tags": ["label", "textarea", "hint"]
       }
     },
     {
@@ -2663,10 +2389,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea"
-        ]
+        "tags": ["label", "textarea"]
       }
     },
     {
@@ -2679,11 +2402,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea",
-          "error"
-        ]
+        "tags": ["label", "textarea", "error"]
       }
     },
     {
@@ -2696,10 +2415,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea"
-        ]
+        "tags": ["label", "textarea"]
       }
     },
     {
@@ -2712,10 +2428,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea"
-        ]
+        "tags": ["label", "textarea"]
       }
     },
     {
@@ -2728,11 +2441,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea",
-          "disabled"
-        ]
+        "tags": ["label", "textarea", "disabled"]
       }
     },
     {
@@ -2745,11 +2454,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea",
-          "button"
-        ]
+        "tags": ["label", "textarea", "button"]
       }
     },
     {
@@ -2762,11 +2467,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea",
-          "button"
-        ]
+        "tags": ["label", "textarea", "button"]
       }
     },
     {
@@ -2779,11 +2480,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea",
-          "button"
-        ]
+        "tags": ["label", "textarea", "button"]
       }
     },
     {
@@ -2796,10 +2493,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea"
-        ]
+        "tags": ["label", "textarea"]
       }
     },
     {
@@ -2812,10 +2506,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea"
-        ]
+        "tags": ["label", "textarea"]
       }
     },
     {
@@ -2828,10 +2519,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea"
-        ]
+        "tags": ["label", "textarea"]
       }
     },
     {
@@ -2844,10 +2532,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea"
-        ]
+        "tags": ["label", "textarea"]
       }
     },
     {
@@ -2860,10 +2545,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea"
-        ]
+        "tags": ["label", "textarea"]
       }
     },
     {
@@ -2876,11 +2558,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea",
-          "read-only"
-        ]
+        "tags": ["label", "textarea", "read-only"]
       }
     },
     {
@@ -2893,10 +2571,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "textarea"
-        ]
+        "tags": ["label", "textarea"]
       }
     },
     {
@@ -2909,9 +2584,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button"
-        ],
+        "tags": ["button"],
         "style": 2
       }
     },
@@ -2925,10 +2598,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "disabled"
-        ],
+        "tags": ["button", "disabled"],
         "style": 2
       }
     },
@@ -2942,9 +2612,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button"
-        ],
+        "tags": ["button"],
         "style": 2
       }
     },
@@ -2958,9 +2626,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button"
-        ],
+        "tags": ["button"],
         "style": 2
       }
     },
@@ -2974,10 +2640,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "delete"
-        ],
+        "tags": ["button", "delete"],
         "style": 2
       }
     },
@@ -2991,9 +2654,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button"
-        ],
+        "tags": ["button"],
         "style": 2
       }
     },
@@ -3007,9 +2668,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button"
-        ],
+        "tags": ["button"],
         "style": 2
       }
     },
@@ -3023,10 +2682,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "back"
-        ],
+        "tags": ["button", "back"],
         "style": 2
       }
     },
@@ -3040,10 +2696,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "next"
-        ],
+        "tags": ["button", "next"],
         "style": 2
       }
     },
@@ -3057,9 +2710,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button"
-        ],
+        "tags": ["button"],
         "style": 2
       }
     },
@@ -3073,10 +2724,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "dropdown"
-        ],
+        "tags": ["button", "dropdown"],
         "style": 2
       }
     },
@@ -3090,9 +2738,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button"
-        ],
+        "tags": ["button"],
         "style": 2
       }
     },
@@ -3106,10 +2752,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "loading"
-        ],
+        "tags": ["button", "loading"],
         "style": 2
       }
     },
@@ -3123,10 +2766,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "loading"
-        ],
+        "tags": ["button", "loading"],
         "style": 2
       }
     },
@@ -3140,10 +2780,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "counter"
-        ],
+        "tags": ["button", "counter"],
         "style": 2
       }
     },
@@ -3157,10 +2794,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "kbd"
-        ],
+        "tags": ["button", "kbd"],
         "style": 2
       }
     },
@@ -3174,12 +2808,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "user",
-          "avatar",
-          "profile"
-        ],
+        "tags": ["button", "user", "avatar", "profile"],
         "style": 2
       }
     },
@@ -3193,13 +2822,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "user",
-          "avatar",
-          "profile",
-          "dropdown"
-        ],
+        "tags": ["button", "user", "avatar", "profile", "dropdown"],
         "style": 2
       }
     },
@@ -3213,9 +2836,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button"
-        ],
+        "tags": ["button"],
         "style": 2
       }
     },
@@ -3229,9 +2850,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button"
-        ],
+        "tags": ["button"],
         "style": 2
       }
     },
@@ -3245,10 +2864,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "menu"
-        ],
+        "tags": ["button", "menu"],
         "style": 2
       }
     },
@@ -3262,10 +2878,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "tooltip"
-        ],
+        "tags": ["button", "tooltip"],
         "style": 2
       }
     },
@@ -3279,11 +2892,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "menu",
-          "hamburger"
-        ],
+        "tags": ["button", "menu", "hamburger"],
         "style": 2
       }
     },
@@ -3297,10 +2906,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "toggle"
-        ],
+        "tags": ["button", "toggle"],
         "style": 2
       }
     },
@@ -3314,11 +2920,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "vote",
-          "counter"
-        ],
+        "tags": ["button", "vote", "counter"],
         "style": 2
       }
     },
@@ -3332,11 +2934,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "vote",
-          "counter"
-        ],
+        "tags": ["button", "vote", "counter"],
         "style": 2
       }
     },
@@ -3350,11 +2948,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "volume",
-          "controls"
-        ],
+        "tags": ["button", "volume", "controls"],
         "style": 2
       }
     },
@@ -3368,10 +2962,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "copy"
-        ],
+        "tags": ["button", "copy"],
         "style": 2
       }
     },
@@ -3385,10 +2976,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "toggle group"
-        ],
+        "tags": ["button", "toggle group"],
         "style": 2
       }
     },
@@ -3402,10 +2990,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "toggle group"
-        ],
+        "tags": ["button", "toggle group"],
         "style": 2
       }
     },
@@ -3419,11 +3004,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "toggle group",
-          "dropdown"
-        ],
+        "tags": ["button", "toggle group", "dropdown"],
         "style": 2
       }
     },
@@ -3437,10 +3018,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "toggle group"
-        ],
+        "tags": ["button", "toggle group"],
         "style": 2
       }
     },
@@ -3454,10 +3032,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "toggle group"
-        ],
+        "tags": ["button", "toggle group"],
         "style": 2
       }
     },
@@ -3471,9 +3046,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button"
-        ],
+        "tags": ["button"],
         "style": 2
       }
     },
@@ -3487,9 +3060,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button"
-        ],
+        "tags": ["button"],
         "style": 2
       }
     },
@@ -3503,10 +3074,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "dropdown"
-        ],
+        "tags": ["button", "dropdown"],
         "style": 2
       }
     },
@@ -3520,11 +3088,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "dropdown",
-          "counter"
-        ],
+        "tags": ["button", "dropdown", "counter"],
         "style": 2
       }
     },
@@ -3538,10 +3102,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "previous"
-        ],
+        "tags": ["button", "previous"],
         "style": 2
       }
     },
@@ -3555,10 +3116,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "next"
-        ],
+        "tags": ["button", "next"],
         "style": 2
       }
     },
@@ -3572,11 +3130,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "like",
-          "counter"
-        ],
+        "tags": ["button", "like", "counter"],
         "style": 2
       }
     },
@@ -3590,11 +3144,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "like",
-          "counter"
-        ],
+        "tags": ["button", "like", "counter"],
         "style": 2
       }
     },
@@ -3608,12 +3158,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "social",
-          "login",
-          "authentication"
-        ],
+        "tags": ["button", "social", "login", "authentication"],
         "style": 2
       }
     },
@@ -3627,12 +3172,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "social",
-          "login",
-          "authentication"
-        ],
+        "tags": ["button", "social", "login", "authentication"],
         "style": 2
       }
     },
@@ -3646,12 +3186,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "social",
-          "login",
-          "authentication"
-        ],
+        "tags": ["button", "social", "login", "authentication"],
         "style": 2
       }
     },
@@ -3665,12 +3200,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "social",
-          "login",
-          "authentication"
-        ],
+        "tags": ["button", "social", "login", "authentication"],
         "style": 2
       }
     },
@@ -3684,10 +3214,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "collapsible"
-        ],
+        "tags": ["button", "collapsible"],
         "style": 2
       }
     },
@@ -3701,10 +3228,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "back"
-        ],
+        "tags": ["button", "back"],
         "style": 2
       }
     },
@@ -3718,14 +3242,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "upload",
-          "user",
-          "avatar",
-          "profile",
-          "image"
-        ],
+        "tags": ["button", "upload", "user", "avatar", "profile", "image"],
         "style": 2
       }
     },
@@ -3739,14 +3256,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "upload",
-          "user",
-          "avatar",
-          "profile",
-          "image"
-        ],
+        "tags": ["button", "upload", "user", "avatar", "profile", "image"],
         "style": 2
       }
     },
@@ -3760,9 +3270,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button"
-        ],
+        "tags": ["button"],
         "style": 2
       }
     },
@@ -3776,9 +3284,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button"
-        ],
+        "tags": ["button"],
         "style": 2
       }
     },
@@ -3792,11 +3298,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "dropdown",
-          "notification"
-        ],
+        "tags": ["button", "dropdown", "notification"],
         "style": 2
       }
     },
@@ -3810,11 +3312,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "toggle",
-          "darkmode"
-        ],
+        "tags": ["button", "toggle", "darkmode"],
         "style": 2
       }
     },
@@ -3828,10 +3326,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "button",
-          "dropdown"
-        ],
+        "tags": ["button", "dropdown"],
         "style": 2
       }
     },
@@ -3845,11 +3340,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "radix"]
       }
     },
     {
@@ -3862,11 +3353,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "radix"]
       }
     },
     {
@@ -3879,11 +3366,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "radix"]
       }
     },
     {
@@ -3896,12 +3379,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "disabled",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "disabled", "radix"]
       }
     },
     {
@@ -3914,11 +3392,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "radix"]
       }
     },
     {
@@ -3931,11 +3405,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "radix"]
       }
     },
     {
@@ -3948,13 +3418,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "login",
-          "authentication",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "login", "authentication", "radix"]
       }
     },
     {
@@ -3967,11 +3431,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "radix"]
       }
     },
     {
@@ -3984,11 +3444,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "radix"]
       }
     },
     {
@@ -4001,11 +3457,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "radix"]
       }
     },
     {
@@ -4018,12 +3470,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "collapsible",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "collapsible", "radix"]
       }
     },
     {
@@ -4036,11 +3483,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "radix"]
       }
     },
     {
@@ -4053,12 +3496,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "card",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "card", "radix"]
       }
     },
     {
@@ -4071,12 +3509,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "card",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "card", "radix"]
       }
     },
     {
@@ -4089,12 +3522,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "card",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "card", "radix"]
       }
     },
     {
@@ -4107,12 +3535,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "card",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "card", "radix"]
       }
     },
     {
@@ -4125,12 +3548,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "tree",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "tree", "radix"]
       }
     },
     {
@@ -4143,13 +3561,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "week",
-          "calendar",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "week", "calendar", "radix"]
       }
     },
     {
@@ -4162,13 +3574,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "toggle",
-          "darkmode",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "toggle", "darkmode", "radix"]
       }
     },
     {
@@ -4181,11 +3587,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "checkbox",
-          "label",
-          "radix"
-        ]
+        "tags": ["checkbox", "label", "radix"]
       }
     },
     {
@@ -4198,11 +3600,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "radix"
-        ]
+        "tags": ["radio", "label", "radix"]
       }
     },
     {
@@ -4215,11 +3613,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "radix"
-        ]
+        "tags": ["radio", "label", "radix"]
       }
     },
     {
@@ -4232,11 +3626,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "radix"
-        ]
+        "tags": ["radio", "label", "radix"]
       }
     },
     {
@@ -4249,11 +3639,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "radix"
-        ]
+        "tags": ["radio", "label", "radix"]
       }
     },
     {
@@ -4266,12 +3652,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "collapsible",
-          "radix"
-        ]
+        "tags": ["radio", "label", "collapsible", "radix"]
       }
     },
     {
@@ -4284,12 +3665,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "rating",
-          "radix"
-        ]
+        "tags": ["radio", "label", "rating", "radix"]
       }
     },
     {
@@ -4302,13 +3678,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "color",
-          "picker",
-          "radix"
-        ]
+        "tags": ["radio", "label", "color", "picker", "radix"]
       }
     },
     {
@@ -4321,12 +3691,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "card",
-          "radix"
-        ]
+        "tags": ["radio", "label", "card", "radix"]
       }
     },
     {
@@ -4339,12 +3704,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "card",
-          "radix"
-        ]
+        "tags": ["radio", "label", "card", "radix"]
       }
     },
     {
@@ -4357,12 +3717,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "card",
-          "radix"
-        ]
+        "tags": ["radio", "label", "card", "radix"]
       }
     },
     {
@@ -4375,12 +3730,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "card",
-          "radix"
-        ]
+        "tags": ["radio", "label", "card", "radix"]
       }
     },
     {
@@ -4393,14 +3743,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "card",
-          "checkout",
-          "payment",
-          "radix"
-        ]
+        "tags": ["radio", "label", "card", "checkout", "payment", "radix"]
       }
     },
     {
@@ -4413,13 +3756,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "card",
-          "pricing",
-          "radix"
-        ]
+        "tags": ["radio", "label", "card", "pricing", "radix"]
       }
     },
     {
@@ -4432,12 +3769,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "card",
-          "radix"
-        ]
+        "tags": ["radio", "label", "card", "radix"]
       }
     },
     {
@@ -4450,12 +3782,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "pricing",
-          "radix"
-        ]
+        "tags": ["radio", "label", "pricing", "radix"]
       }
     },
     {
@@ -4468,13 +3795,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "rating",
-          "vote",
-          "radix"
-        ]
+        "tags": ["radio", "label", "rating", "vote", "radix"]
       }
     },
     {
@@ -4487,13 +3808,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "rating",
-          "vote",
-          "radix"
-        ]
+        "tags": ["radio", "label", "rating", "vote", "radix"]
       }
     },
     {
@@ -4506,12 +3821,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "darkmode",
-          "radix"
-        ]
+        "tags": ["radio", "label", "darkmode", "radix"]
       }
     },
     {
@@ -4524,13 +3834,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "pricing",
-          "switch",
-          "radix"
-        ],
+        "tags": ["radio", "label", "pricing", "switch", "radix"],
         "style": 1
       }
     },
@@ -4544,13 +3848,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "radio",
-          "label",
-          "rating",
-          "vote",
-          "radix"
-        ],
+        "tags": ["radio", "label", "rating", "vote", "radix"],
         "style": 1
       }
     },
@@ -4564,10 +3862,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "radix"
-        ],
+        "tags": ["switch", "radix"],
         "style": 1
       }
     },
@@ -4581,10 +3876,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "radix"
-        ],
+        "tags": ["switch", "radix"],
         "style": 1
       }
     },
@@ -4598,10 +3890,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "radix"
-        ],
+        "tags": ["switch", "radix"],
         "style": 1
       }
     },
@@ -4615,10 +3904,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "radix"
-        ],
+        "tags": ["switch", "radix"],
         "style": 1
       }
     },
@@ -4632,10 +3918,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "radix"
-        ],
+        "tags": ["switch", "radix"],
         "style": 1
       }
     },
@@ -4649,10 +3932,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "radix"
-        ],
+        "tags": ["switch", "radix"],
         "style": 1
       }
     },
@@ -4666,10 +3946,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "radix"
-        ],
+        "tags": ["switch", "radix"],
         "style": 1
       }
     },
@@ -4683,11 +3960,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "label",
-          "radix"
-        ],
+        "tags": ["switch", "label", "radix"],
         "style": 1
       }
     },
@@ -4701,11 +3974,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "label",
-          "radix"
-        ],
+        "tags": ["switch", "label", "radix"],
         "style": 1
       }
     },
@@ -4719,12 +3988,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "label",
-          "darkmode",
-          "radix"
-        ],
+        "tags": ["switch", "label", "darkmode", "radix"],
         "style": 1
       }
     },
@@ -4738,12 +4002,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "label",
-          "darkmode",
-          "radix"
-        ],
+        "tags": ["switch", "label", "darkmode", "radix"],
         "style": 1
       }
     },
@@ -4757,12 +4016,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "label",
-          "darkmode",
-          "radix"
-        ],
+        "tags": ["switch", "label", "darkmode", "radix"],
         "style": 1
       }
     },
@@ -4776,12 +4030,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "label",
-          "darkmode",
-          "radix"
-        ],
+        "tags": ["switch", "label", "darkmode", "radix"],
         "style": 1
       }
     },
@@ -4795,11 +4044,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "label",
-          "radix"
-        ],
+        "tags": ["switch", "label", "radix"],
         "style": 1
       }
     },
@@ -4813,12 +4058,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "label",
-          "card",
-          "radix"
-        ],
+        "tags": ["switch", "label", "card", "radix"],
         "style": 1
       }
     },
@@ -4832,12 +4072,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "label",
-          "card",
-          "radix"
-        ],
+        "tags": ["switch", "label", "card", "radix"],
         "style": 1
       }
     },
@@ -4851,12 +4086,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "switch",
-          "label",
-          "card",
-          "radix"
-        ],
+        "tags": ["switch", "label", "card", "radix"],
         "style": 1
       }
     },
@@ -4870,11 +4100,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "native select"
-        ]
+        "tags": ["label", "select", "native select"]
       }
     },
     {
@@ -4887,11 +4113,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "native select"
-        ]
+        "tags": ["label", "select", "native select"]
       }
     },
     {
@@ -4904,12 +4126,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "native select",
-          "time"
-        ]
+        "tags": ["label", "select", "native select", "time"]
       }
     },
     {
@@ -4922,11 +4139,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "native select"
-        ]
+        "tags": ["label", "select", "native select"]
       }
     },
     {
@@ -4939,11 +4152,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "native select"
-        ]
+        "tags": ["label", "select", "native select"]
       }
     },
     {
@@ -4956,12 +4165,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "native select",
-          "error"
-        ]
+        "tags": ["label", "select", "native select", "error"]
       }
     },
     {
@@ -4974,11 +4178,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "native select"
-        ]
+        "tags": ["label", "select", "native select"]
       }
     },
     {
@@ -4991,12 +4191,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "native select",
-          "disabled"
-        ]
+        "tags": ["label", "select", "native select", "disabled"]
       }
     },
     {
@@ -5009,11 +4204,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "native select"
-        ]
+        "tags": ["label", "select", "native select"]
       }
     },
     {
@@ -5026,11 +4217,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "native select"
-        ]
+        "tags": ["label", "select", "native select"]
       }
     },
     {
@@ -5043,11 +4230,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "native select"
-        ]
+        "tags": ["label", "select", "native select"]
       }
     },
     {
@@ -5060,13 +4243,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "native select",
-          "timezone",
-          "time"
-        ]
+        "tags": ["label", "select", "native select", "timezone", "time"]
       }
     },
     {
@@ -5079,11 +4256,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "native select"
-        ]
+        "tags": ["label", "select", "native select"]
       }
     },
     {
@@ -5096,11 +4269,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "native select"
-        ]
+        "tags": ["label", "select", "native select"]
       }
     },
     {
@@ -5113,11 +4282,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5130,11 +4295,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5147,11 +4308,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5164,12 +4321,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "helper",
-          "radix"
-        ]
+        "tags": ["label", "select", "helper", "radix"]
       }
     },
     {
@@ -5182,11 +4334,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5199,11 +4347,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5216,11 +4360,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5233,12 +4373,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "disabled",
-          "radix"
-        ]
+        "tags": ["label", "select", "disabled", "radix"]
       }
     },
     {
@@ -5251,12 +4386,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "required",
-          "radix"
-        ]
+        "tags": ["label", "select", "required", "radix"]
       }
     },
     {
@@ -5269,11 +4399,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5286,11 +4412,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5303,11 +4425,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5320,12 +4438,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "disabled",
-          "radix"
-        ]
+        "tags": ["label", "select", "disabled", "radix"]
       }
     },
     {
@@ -5338,11 +4451,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5355,11 +4464,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5372,13 +4477,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "timezone",
-          "time",
-          "radix"
-        ]
+        "tags": ["label", "select", "timezone", "time", "radix"]
       }
     },
     {
@@ -5391,11 +4490,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5408,12 +4503,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "status",
-          "radix"
-        ]
+        "tags": ["label", "select", "status", "radix"]
       }
     },
     {
@@ -5426,11 +4516,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5443,11 +4529,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5460,11 +4542,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5477,11 +4555,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "radix"
-        ]
+        "tags": ["label", "select", "radix"]
       }
     },
     {
@@ -5494,12 +4568,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "flag",
-          "radix"
-        ]
+        "tags": ["label", "select", "flag", "radix"]
       }
     },
     {
@@ -5512,14 +4581,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "user",
-          "avatar",
-          "profile",
-          "radix"
-        ]
+        "tags": ["label", "select", "user", "avatar", "profile", "radix"]
       }
     },
     {
@@ -5532,14 +4594,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "user",
-          "avatar",
-          "profile",
-          "radix"
-        ]
+        "tags": ["label", "select", "user", "avatar", "profile", "radix"]
       }
     },
     {
@@ -5552,14 +4607,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "user",
-          "avatar",
-          "profile",
-          "radix"
-        ]
+        "tags": ["label", "select", "user", "avatar", "profile", "radix"]
       }
     },
     {
@@ -5729,12 +4777,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "multiselect",
-          "native select"
-        ]
+        "tags": ["label", "select", "multiselect", "native select"]
       }
     },
     {
@@ -5747,12 +4790,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "multiselect",
-          "react aria"
-        ]
+        "tags": ["label", "select", "multiselect", "react aria"]
       }
     },
     {
@@ -5765,12 +4803,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "multiselect",
-          "react aria"
-        ]
+        "tags": ["label", "select", "multiselect", "react aria"]
       }
     },
     {
@@ -5783,12 +4816,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "label",
-          "select",
-          "multiselect",
-          "react aria"
-        ]
+        "tags": ["label", "select", "multiselect", "react aria"]
       }
     },
     {
@@ -5801,11 +4829,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "radix"
-        ]
+        "tags": ["slider", "label", "radix"]
       }
     },
     {
@@ -5818,12 +4842,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "disabled",
-          "radix"
-        ]
+        "tags": ["slider", "label", "disabled", "radix"]
       }
     },
     {
@@ -5836,11 +4855,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "radix"
-        ]
+        "tags": ["slider", "label", "radix"]
       }
     },
     {
@@ -5853,11 +4868,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "radix"
-        ]
+        "tags": ["slider", "label", "radix"]
       }
     },
     {
@@ -5870,11 +4881,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "radix"
-        ]
+        "tags": ["slider", "label", "radix"]
       }
     },
     {
@@ -5887,11 +4894,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "radix"
-        ]
+        "tags": ["slider", "label", "radix"]
       }
     },
     {
@@ -5904,11 +4907,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "radix"
-        ]
+        "tags": ["slider", "label", "radix"]
       }
     },
     {
@@ -5921,11 +4920,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "radix"
-        ]
+        "tags": ["slider", "label", "radix"]
       }
     },
     {
@@ -5938,11 +4933,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "radix"
-        ]
+        "tags": ["slider", "label", "radix"]
       }
     },
     {
@@ -5955,12 +4946,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "tooltip",
-          "radix"
-        ]
+        "tags": ["slider", "label", "tooltip", "radix"]
       }
     },
     {
@@ -5973,13 +4959,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "range slider",
-          "label",
-          "range",
-          "radix"
-        ]
+        "tags": ["slider", "range slider", "label", "range", "radix"]
       }
     },
     {
@@ -5992,13 +4972,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "range slider",
-          "label",
-          "range",
-          "radix"
-        ]
+        "tags": ["slider", "range slider", "label", "range", "radix"]
       }
     },
     {
@@ -6011,13 +4985,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "volume",
-          "controls",
-          "radix"
-        ]
+        "tags": ["slider", "label", "volume", "controls", "radix"]
       }
     },
     {
@@ -6030,13 +4998,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "range slider",
-          "label",
-          "range",
-          "radix"
-        ]
+        "tags": ["slider", "range slider", "label", "range", "radix"]
       }
     },
     {
@@ -6078,12 +5040,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "input",
-          "radix"
-        ]
+        "tags": ["slider", "label", "input", "radix"]
       }
     },
     {
@@ -6096,13 +5053,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "vote",
-          "rating",
-          "radix"
-        ]
+        "tags": ["slider", "label", "vote", "rating", "radix"]
       }
     },
     {
@@ -6115,13 +5066,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "vote",
-          "rating",
-          "radix"
-        ]
+        "tags": ["slider", "label", "vote", "rating", "radix"]
       }
     },
     {
@@ -6138,14 +5083,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "range slider",
-          "label",
-          "input",
-          "range",
-          "radix"
-        ]
+        "tags": ["slider", "range slider", "label", "input", "range", "radix"]
       }
     },
     {
@@ -6158,13 +5096,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "button",
-          "pricing",
-          "radix"
-        ]
+        "tags": ["slider", "label", "button", "pricing", "radix"]
       }
     },
     {
@@ -6177,13 +5109,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "range slider",
-          "label",
-          "button",
-          "radix"
-        ]
+        "tags": ["slider", "range slider", "label", "button", "radix"]
       }
     },
     {
@@ -6196,12 +5122,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "vertical slider",
-          "label",
-          "radix"
-        ]
+        "tags": ["slider", "vertical slider", "label", "radix"]
       }
     },
     {
@@ -6218,13 +5139,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "vertical slider",
-          "label",
-          "input",
-          "radix"
-        ]
+        "tags": ["slider", "vertical slider", "label", "input", "radix"]
       }
     },
     {
@@ -6237,13 +5152,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "vertical slider",
-          "range slider",
-          "label",
-          "radix"
-        ]
+        "tags": ["slider", "vertical slider", "range slider", "label", "radix"]
       }
     },
     {
@@ -6260,14 +5169,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "input",
-          "button",
-          "reset",
-          "radix"
-        ]
+        "tags": ["slider", "label", "input", "button", "reset", "radix"]
       }
     },
     {
@@ -6284,13 +5186,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "input",
-          "button",
-          "radix"
-        ]
+        "tags": ["slider", "label", "input", "button", "radix"]
       }
     },
     {
@@ -6303,12 +5199,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "equalizer",
-          "radix"
-        ]
+        "tags": ["slider", "label", "equalizer", "radix"]
       }
     },
     {
@@ -6321,10 +5212,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "alert",
-          "warning"
-        ],
+        "tags": ["alert", "warning"],
         "colSpan": 2
       }
     },
@@ -6338,10 +5226,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "alert",
-          "warning"
-        ],
+        "tags": ["alert", "warning"],
         "colSpan": 2
       }
     },
@@ -6355,10 +5240,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "alert",
-          "error"
-        ],
+        "tags": ["alert", "error"],
         "colSpan": 2
       }
     },
@@ -6372,10 +5254,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "alert",
-          "error"
-        ],
+        "tags": ["alert", "error"],
         "colSpan": 2
       }
     },
@@ -6389,10 +5268,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "alert",
-          "success"
-        ],
+        "tags": ["alert", "success"],
         "colSpan": 2
       }
     },
@@ -6406,10 +5282,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "alert",
-          "success"
-        ],
+        "tags": ["alert", "success"],
         "colSpan": 2
       }
     },
@@ -6423,10 +5296,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "alert",
-          "info"
-        ],
+        "tags": ["alert", "info"],
         "colSpan": 2
       }
     },
@@ -6440,10 +5310,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "alert",
-          "info"
-        ],
+        "tags": ["alert", "info"],
         "colSpan": 2
       }
     },
@@ -6457,10 +5324,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "alert",
-          "warning"
-        ],
+        "tags": ["alert", "warning"],
         "colSpan": 2
       }
     },
@@ -6474,10 +5338,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "alert",
-          "warning"
-        ],
+        "tags": ["alert", "warning"],
         "colSpan": 2
       }
     },
@@ -6491,12 +5352,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "alert",
-          "error",
-          "signup",
-          "authentication"
-        ],
+        "tags": ["alert", "error", "signup", "authentication"],
         "colSpan": 2
       }
     },
@@ -6510,12 +5366,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "alert",
-          "error",
-          "signup",
-          "authentication"
-        ],
+        "tags": ["alert", "error", "signup", "authentication"],
         "colSpan": 2
       }
     },
@@ -6529,10 +5380,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "warning"
-        ],
+        "tags": ["notification", "warning"],
         "colSpan": 2,
         "style": 1
       }
@@ -6547,10 +5395,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "error"
-        ],
+        "tags": ["notification", "error"],
         "colSpan": 2,
         "style": 1
       }
@@ -6565,10 +5410,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "success"
-        ],
+        "tags": ["notification", "success"],
         "colSpan": 2,
         "style": 1
       }
@@ -6583,10 +5425,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "info"
-        ],
+        "tags": ["notification", "info"],
         "colSpan": 2,
         "style": 1
       }
@@ -6601,10 +5440,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "warning"
-        ],
+        "tags": ["notification", "warning"],
         "colSpan": 2,
         "style": 1
       }
@@ -6619,10 +5455,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "error"
-        ],
+        "tags": ["notification", "error"],
         "colSpan": 2,
         "style": 1
       }
@@ -6637,10 +5470,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "success"
-        ],
+        "tags": ["notification", "success"],
         "colSpan": 2,
         "style": 1
       }
@@ -6655,10 +5485,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "info"
-        ],
+        "tags": ["notification", "info"],
         "colSpan": 2,
         "style": 1
       }
@@ -6673,11 +5500,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "button",
-          "success"
-        ],
+        "tags": ["notification", "button", "success"],
         "colSpan": 2,
         "style": 1
       }
@@ -6692,10 +5515,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "success"
-        ],
+        "tags": ["notification", "success"],
         "colSpan": 2,
         "style": 1
       }
@@ -6710,11 +5530,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "button",
-          "warning"
-        ],
+        "tags": ["notification", "button", "warning"],
         "colSpan": 2,
         "style": 1
       }
@@ -6729,11 +5545,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "button",
-          "error"
-        ],
+        "tags": ["notification", "button", "error"],
         "colSpan": 2,
         "style": 1
       }
@@ -6748,11 +5560,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "button",
-          "success"
-        ],
+        "tags": ["notification", "button", "success"],
         "colSpan": 2,
         "style": 1
       }
@@ -6767,11 +5575,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "button",
-          "info"
-        ],
+        "tags": ["notification", "button", "info"],
         "colSpan": 2,
         "style": 1
       }
@@ -6786,13 +5590,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "button",
-          "cookies",
-          "gdpr",
-          "privacy"
-        ],
+        "tags": ["notification", "button", "cookies", "gdpr", "privacy"],
         "colSpan": 2,
         "style": 1
       }
@@ -6807,11 +5605,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "button",
-          "info"
-        ],
+        "tags": ["notification", "button", "info"],
         "colSpan": 2,
         "style": 1
       }
@@ -6826,10 +5620,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "button"
-        ],
+        "tags": ["notification", "button"],
         "colSpan": 2,
         "style": 1
       }
@@ -6844,10 +5635,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "button"
-        ],
+        "tags": ["notification", "button"],
         "colSpan": 2,
         "style": 1
       }
@@ -6862,11 +5650,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "toast",
-          "radix"
-        ],
+        "tags": ["notification", "toast", "radix"],
         "colSpan": 2,
         "style": 1
       }
@@ -6881,12 +5665,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "toast",
-          "success",
-          "radix"
-        ],
+        "tags": ["notification", "toast", "success", "radix"],
         "colSpan": 2,
         "style": 1
       }
@@ -6901,12 +5680,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "toast",
-          "sonner",
-          "radix"
-        ],
+        "tags": ["notification", "toast", "sonner", "radix"],
         "colSpan": 2,
         "style": 1
       }
@@ -6921,13 +5695,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "notification",
-          "toast",
-          "sonner",
-          "success",
-          "radix"
-        ],
+        "tags": ["notification", "toast", "sonner", "success", "radix"],
         "colSpan": 2,
         "style": 1
       }
@@ -6942,12 +5710,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "banner",
-          "cookies",
-          "gdpr",
-          "privacy"
-        ],
+        "tags": ["banner", "cookies", "gdpr", "privacy"],
         "colSpan": 3
       }
     },
@@ -6961,9 +5724,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "banner"
-        ],
+        "tags": ["banner"],
         "colSpan": 3
       }
     },
@@ -6977,9 +5738,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "banner"
-        ],
+        "tags": ["banner"],
         "colSpan": 3
       }
     },
@@ -6993,9 +5752,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "banner"
-        ],
+        "tags": ["banner"],
         "colSpan": 3
       }
     },
@@ -7009,9 +5766,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "banner"
-        ],
+        "tags": ["banner"],
         "colSpan": 3
       }
     },
@@ -7025,9 +5780,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "banner"
-        ],
+        "tags": ["banner"],
         "colSpan": 3
       }
     },
@@ -7041,9 +5794,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "banner"
-        ],
+        "tags": ["banner"],
         "colSpan": 3
       }
     },
@@ -7057,9 +5808,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "banner"
-        ],
+        "tags": ["banner"],
         "colSpan": 3
       }
     },
@@ -7073,9 +5822,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "banner"
-        ],
+        "tags": ["banner"],
         "colSpan": 3
       }
     },
@@ -7089,11 +5836,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "banner",
-          "countdown",
-          "sale"
-        ],
+        "tags": ["banner", "countdown", "sale"],
         "colSpan": 3
       }
     },
@@ -7107,11 +5850,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "banner",
-          "newsletter",
-          "subscribe"
-        ],
+        "tags": ["banner", "newsletter", "subscribe"],
         "colSpan": 3
       }
     },
@@ -7125,9 +5864,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "banner"
-        ],
+        "tags": ["banner"],
         "colSpan": 3
       }
     },
@@ -7141,13 +5878,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "alert",
-          "alert dialog",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "alert", "alert dialog", "radix"],
         "style": 1
       }
     },
@@ -7161,13 +5892,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "alert",
-          "alert dialog",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "alert", "alert dialog", "radix"],
         "style": 1
       }
     },
@@ -7181,11 +5906,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "radix"],
         "style": 1
       }
     },
@@ -7199,11 +5920,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "radix"],
         "style": 1
       }
     },
@@ -7217,11 +5934,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "radix"],
         "style": 1
       }
     },
@@ -7235,11 +5948,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "radix"],
         "style": 1
       }
     },
@@ -7253,11 +5962,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "radix"],
         "style": 1
       }
     },
@@ -7271,12 +5976,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "delete",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "delete", "radix"],
         "style": 1
       }
     },
@@ -7290,14 +5990,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "newsletter",
-          "subscribe",
-          "form",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "newsletter", "subscribe", "form", "radix"],
         "style": 1
       }
     },
@@ -7311,13 +6004,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "feedback",
-          "form",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "feedback", "form", "radix"],
         "style": 1
       }
     },
@@ -7331,14 +6018,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "rating",
-          "feedback",
-          "form",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "rating", "feedback", "form", "radix"],
         "style": 1
       }
     },
@@ -7352,12 +6032,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "otp",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "otp", "radix"],
         "style": 1
       }
     },
@@ -7392,14 +6067,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "login",
-          "authentication",
-          "form",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "login", "authentication", "form", "radix"],
         "style": 1
       }
     },
@@ -7413,14 +6081,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "form",
-          "user",
-          "team",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "form", "user", "team", "radix"],
         "style": 1
       }
     },
@@ -7478,12 +6139,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "user",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "user", "radix"],
         "style": 1
       }
     },
@@ -7520,12 +6176,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "onboarding",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "onboarding", "radix"],
         "style": 1
       }
     },
@@ -7563,10 +6214,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7580,10 +6228,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7597,10 +6242,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7614,10 +6256,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7631,10 +6270,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7648,10 +6284,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7665,10 +6298,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7682,10 +6312,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7699,10 +6326,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7716,10 +6340,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7733,10 +6354,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7750,10 +6368,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7767,10 +6382,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7784,10 +6396,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7801,10 +6410,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7818,10 +6424,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7835,10 +6438,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7852,10 +6452,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "radix"
-        ],
+        "tags": ["accordion", "radix"],
         "colSpan": 2
       }
     },
@@ -7869,11 +6466,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "collapsible",
-          "radix"
-        ],
+        "tags": ["accordion", "collapsible", "radix"],
         "colSpan": 2
       }
     },
@@ -7887,11 +6480,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "accordion",
-          "collapsible",
-          "radix"
-        ],
+        "tags": ["accordion", "collapsible", "radix"],
         "colSpan": 2
       }
     },
@@ -7905,10 +6494,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tooltip",
-          "radix"
-        ],
+        "tags": ["tooltip", "radix"],
         "style": 1
       }
     },
@@ -7922,10 +6508,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tooltip",
-          "radix"
-        ],
+        "tags": ["tooltip", "radix"],
         "style": 1
       }
     },
@@ -7939,10 +6522,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tooltip",
-          "radix"
-        ],
+        "tags": ["tooltip", "radix"],
         "style": 1
       }
     },
@@ -7956,10 +6536,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tooltip",
-          "radix"
-        ],
+        "tags": ["tooltip", "radix"],
         "style": 1
       }
     },
@@ -7973,10 +6550,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tooltip",
-          "radix"
-        ],
+        "tags": ["tooltip", "radix"],
         "style": 1
       }
     },
@@ -7990,11 +6564,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tooltip",
-          "image",
-          "radix"
-        ],
+        "tags": ["tooltip", "image", "radix"],
         "style": 1
       }
     },
@@ -8008,12 +6578,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tooltip",
-          "button",
-          "kbd",
-          "radix"
-        ],
+        "tags": ["tooltip", "button", "kbd", "radix"],
         "style": 1
       }
     },
@@ -8027,10 +6592,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tooltip",
-          "radix"
-        ],
+        "tags": ["tooltip", "radix"],
         "style": 1
       }
     },
@@ -8044,11 +6606,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tooltip",
-          "chart",
-          "radix"
-        ],
+        "tags": ["tooltip", "chart", "radix"],
         "style": 1
       }
     },
@@ -8062,14 +6620,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tooltip",
-          "hover card",
-          "user",
-          "avatar",
-          "profile",
-          "radix"
-        ],
+        "tags": ["tooltip", "hover card", "user", "avatar", "profile", "radix"],
         "style": 1
       }
     },
@@ -8083,14 +6634,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tooltip",
-          "hover card",
-          "user",
-          "avatar",
-          "profile",
-          "radix"
-        ],
+        "tags": ["tooltip", "hover card", "user", "avatar", "profile", "radix"],
         "style": 1
       }
     },
@@ -8104,12 +6648,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tooltip",
-          "hover card",
-          "image",
-          "radix"
-        ],
+        "tags": ["tooltip", "hover card", "image", "radix"],
         "style": 1
       }
     },
@@ -8123,10 +6662,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dropdown",
-          "radix"
-        ],
+        "tags": ["dropdown", "radix"],
         "style": 1
       }
     },
@@ -8140,10 +6676,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dropdown",
-          "radix"
-        ],
+        "tags": ["dropdown", "radix"],
         "style": 1
       }
     },
@@ -8157,10 +6690,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dropdown",
-          "radix"
-        ],
+        "tags": ["dropdown", "radix"],
         "style": 1
       }
     },
@@ -8174,10 +6704,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dropdown",
-          "radix"
-        ],
+        "tags": ["dropdown", "radix"],
         "style": 1
       }
     },
@@ -8191,10 +6718,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dropdown",
-          "radix"
-        ],
+        "tags": ["dropdown", "radix"],
         "style": 1
       }
     },
@@ -8208,11 +6732,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dropdown",
-          "checkbox",
-          "radix"
-        ],
+        "tags": ["dropdown", "checkbox", "radix"],
         "style": 1
       }
     },
@@ -8226,11 +6746,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dropdown",
-          "radio",
-          "radix"
-        ],
+        "tags": ["dropdown", "radio", "radix"],
         "style": 1
       }
     },
@@ -8244,12 +6760,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dropdown",
-          "kbd",
-          "delete",
-          "radix"
-        ],
+        "tags": ["dropdown", "kbd", "delete", "radix"],
         "style": 1
       }
     },
@@ -8263,13 +6774,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dropdown",
-          "checkbox",
-          "radio",
-          "delete",
-          "radix"
-        ],
+        "tags": ["dropdown", "checkbox", "radio", "delete", "radix"],
         "style": 1
       }
     },
@@ -8283,12 +6788,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dropdown",
-          "user",
-          "profile",
-          "radix"
-        ],
+        "tags": ["dropdown", "user", "profile", "radix"],
         "style": 1
       }
     },
@@ -8302,13 +6802,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dropdown",
-          "user",
-          "profile",
-          "avatar",
-          "radix"
-        ],
+        "tags": ["dropdown", "user", "profile", "avatar", "radix"],
         "style": 1
       }
     },
@@ -8322,13 +6816,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dropdown",
-          "user",
-          "avatar",
-          "profile",
-          "radix"
-        ],
+        "tags": ["dropdown", "user", "avatar", "profile", "radix"],
         "style": 1
       }
     },
@@ -8342,11 +6830,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dropdown",
-          "info",
-          "radix"
-        ],
+        "tags": ["dropdown", "info", "radix"],
         "style": 1
       }
     },
@@ -8360,11 +6844,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dropdown",
-          "text editor",
-          "radix"
-        ],
+        "tags": ["dropdown", "text editor", "radix"],
         "style": 1
       }
     },
@@ -8378,11 +6858,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dropdown",
-          "darkmode",
-          "radix"
-        ],
+        "tags": ["dropdown", "darkmode", "radix"],
         "style": 1
       }
     },
@@ -8396,11 +6872,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "popover",
-          "filter",
-          "radix"
-        ],
+        "tags": ["popover", "filter", "radix"],
         "style": 1
       }
     },
@@ -8414,11 +6886,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "popover",
-          "notification",
-          "radix"
-        ],
+        "tags": ["popover", "notification", "radix"],
         "style": 1
       }
     },
@@ -8432,12 +6900,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "popover",
-          "notification",
-          "user",
-          "radix"
-        ],
+        "tags": ["popover", "notification", "user", "radix"],
         "style": 1
       }
     },
@@ -8451,11 +6914,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "popover",
-          "tooltip",
-          "radix"
-        ],
+        "tags": ["popover", "tooltip", "radix"],
         "style": 1
       }
     },
@@ -8469,11 +6928,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "popover",
-          "tooltip",
-          "radix"
-        ],
+        "tags": ["popover", "tooltip", "radix"],
         "style": 1
       }
     },
@@ -8487,11 +6942,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "popover",
-          "tooltip",
-          "radix"
-        ],
+        "tags": ["popover", "tooltip", "radix"],
         "style": 1
       }
     },
@@ -8505,13 +6956,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "popover",
-          "share",
-          "social",
-          "copy",
-          "radix"
-        ],
+        "tags": ["popover", "share", "social", "copy", "radix"],
         "style": 1
       }
     },
@@ -8525,12 +6970,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "popover",
-          "feedback",
-          "form",
-          "radix"
-        ],
+        "tags": ["popover", "feedback", "form", "radix"],
         "style": 1
       }
     },
@@ -8544,11 +6984,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "popover",
-          "tour",
-          "radix"
-        ],
+        "tags": ["popover", "tour", "radix"],
         "style": 1
       }
     },
@@ -8562,11 +6998,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "user",
-          "profile"
-        ],
+        "tags": ["avatar", "user", "profile"],
         "style": 1
       }
     },
@@ -8580,11 +7012,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "user",
-          "profile"
-        ],
+        "tags": ["avatar", "user", "profile"],
         "style": 1
       }
     },
@@ -8598,11 +7026,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "user",
-          "profile"
-        ],
+        "tags": ["avatar", "user", "profile"],
         "style": 1
       }
     },
@@ -8616,11 +7040,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "user",
-          "profile"
-        ],
+        "tags": ["avatar", "user", "profile"],
         "style": 1
       }
     },
@@ -8634,12 +7054,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "user",
-          "profile",
-          "status"
-        ],
+        "tags": ["avatar", "user", "profile", "status"],
         "style": 1
       }
     },
@@ -8653,12 +7068,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "user",
-          "profile",
-          "status"
-        ],
+        "tags": ["avatar", "user", "profile", "status"],
         "style": 1
       }
     },
@@ -8672,12 +7082,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "user",
-          "profile",
-          "status"
-        ],
+        "tags": ["avatar", "user", "profile", "status"],
         "style": 1
       }
     },
@@ -8691,13 +7096,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "user",
-          "profile",
-          "badge",
-          "chip"
-        ],
+        "tags": ["avatar", "user", "profile", "badge", "chip"],
         "style": 1
       }
     },
@@ -8711,13 +7110,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "user",
-          "profile",
-          "badge",
-          "chip"
-        ],
+        "tags": ["avatar", "user", "profile", "badge", "chip"],
         "style": 1
       }
     },
@@ -8731,13 +7124,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "user",
-          "profile",
-          "badge",
-          "chip"
-        ],
+        "tags": ["avatar", "user", "profile", "badge", "chip"],
         "style": 1
       }
     },
@@ -8751,11 +7138,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "user",
-          "profile"
-        ],
+        "tags": ["avatar", "user", "profile"],
         "style": 1
       }
     },
@@ -8769,10 +7152,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "avatar group"
-        ],
+        "tags": ["avatar", "avatar group"],
         "style": 1
       }
     },
@@ -8786,10 +7166,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "avatar group"
-        ],
+        "tags": ["avatar", "avatar group"],
         "style": 1
       }
     },
@@ -8803,10 +7180,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "avatar group"
-        ],
+        "tags": ["avatar", "avatar group"],
         "style": 1
       }
     },
@@ -8820,10 +7194,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "avatar group"
-        ],
+        "tags": ["avatar", "avatar group"],
         "style": 1
       }
     },
@@ -8837,10 +7208,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "avatar group"
-        ],
+        "tags": ["avatar", "avatar group"],
         "style": 1
       }
     },
@@ -8854,10 +7222,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "avatar group"
-        ],
+        "tags": ["avatar", "avatar group"],
         "style": 1
       }
     },
@@ -8871,10 +7236,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "avatar group"
-        ],
+        "tags": ["avatar", "avatar group"],
         "style": 1
       }
     },
@@ -8888,10 +7250,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "avatar group"
-        ],
+        "tags": ["avatar", "avatar group"],
         "style": 1
       }
     },
@@ -8905,10 +7264,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "avatar group"
-        ],
+        "tags": ["avatar", "avatar group"],
         "style": 1
       }
     },
@@ -8922,10 +7278,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "avatar group"
-        ],
+        "tags": ["avatar", "avatar group"],
         "style": 1
       }
     },
@@ -8939,10 +7292,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "avatar group"
-        ],
+        "tags": ["avatar", "avatar group"],
         "style": 1
       }
     },
@@ -8956,10 +7306,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "avatar",
-          "avatar group"
-        ],
+        "tags": ["avatar", "avatar group"],
         "style": 1
       }
     },
@@ -8973,10 +7320,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "badge",
-          "chip"
-        ],
+        "tags": ["badge", "chip"],
         "style": 1
       }
     },
@@ -8990,10 +7334,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "badge",
-          "chip"
-        ],
+        "tags": ["badge", "chip"],
         "style": 1
       }
     },
@@ -9007,10 +7348,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "badge",
-          "chip"
-        ],
+        "tags": ["badge", "chip"],
         "style": 1
       }
     },
@@ -9024,11 +7362,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "badge",
-          "chip",
-          "counter"
-        ],
+        "tags": ["badge", "chip", "counter"],
         "style": 1
       }
     },
@@ -9042,10 +7376,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "badge",
-          "chip"
-        ],
+        "tags": ["badge", "chip"],
         "style": 1
       }
     },
@@ -9059,11 +7390,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "badge",
-          "chip",
-          "counter"
-        ],
+        "tags": ["badge", "chip", "counter"],
         "style": 1
       }
     },
@@ -9077,11 +7404,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "badge",
-          "chip",
-          "status"
-        ],
+        "tags": ["badge", "chip", "status"],
         "style": 1
       }
     },
@@ -9095,11 +7418,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "badge",
-          "chip",
-          "status"
-        ],
+        "tags": ["badge", "chip", "status"],
         "style": 1
       }
     },
@@ -9113,11 +7432,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "badge",
-          "chip",
-          "status"
-        ],
+        "tags": ["badge", "chip", "status"],
         "style": 1
       }
     },
@@ -9131,11 +7446,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "badge",
-          "chip",
-          "status"
-        ],
+        "tags": ["badge", "chip", "status"],
         "style": 1
       }
     },
@@ -9149,11 +7460,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "badge",
-          "chip",
-          "checkbox"
-        ],
+        "tags": ["badge", "chip", "checkbox"],
         "style": 1
       }
     },
@@ -9167,10 +7474,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "badge",
-          "chip"
-        ],
+        "tags": ["badge", "chip"],
         "style": 1
       }
     },
@@ -9184,11 +7488,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "badge",
-          "chip",
-          "tag"
-        ],
+        "tags": ["badge", "chip", "tag"],
         "style": 1
       }
     },
@@ -9202,10 +7502,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9220,10 +7517,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9238,10 +7532,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9256,10 +7547,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9274,10 +7562,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9292,10 +7577,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9310,10 +7592,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9328,10 +7607,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9346,10 +7622,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9364,10 +7637,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9382,10 +7652,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9400,10 +7667,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9418,10 +7682,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9436,10 +7697,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9454,10 +7712,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9472,10 +7727,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9490,11 +7742,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "vertical tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "vertical tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9509,11 +7757,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "vertical tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "vertical tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9528,11 +7772,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "vertical tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "vertical tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9547,11 +7787,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tabs",
-          "vertical tabs",
-          "radix"
-        ],
+        "tags": ["tabs", "vertical tabs", "radix"],
         "colSpan": 2,
         "style": 2
       }
@@ -9566,10 +7802,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "breadcrumb",
-          "radix"
-        ],
+        "tags": ["breadcrumb", "radix"],
         "colSpan": 2,
         "style": 1
       }
@@ -9584,11 +7817,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "breadcrumb",
-          "dropdown",
-          "radix"
-        ],
+        "tags": ["breadcrumb", "dropdown", "radix"],
         "colSpan": 2,
         "style": 1
       }
@@ -9603,10 +7832,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "breadcrumb",
-          "radix"
-        ],
+        "tags": ["breadcrumb", "radix"],
         "colSpan": 2,
         "style": 1
       }
@@ -9621,10 +7847,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "breadcrumb",
-          "radix"
-        ],
+        "tags": ["breadcrumb", "radix"],
         "colSpan": 2,
         "style": 1
       }
@@ -9639,10 +7862,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "breadcrumb",
-          "radix"
-        ],
+        "tags": ["breadcrumb", "radix"],
         "colSpan": 2,
         "style": 1
       }
@@ -9657,10 +7877,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "breadcrumb",
-          "radix"
-        ],
+        "tags": ["breadcrumb", "radix"],
         "colSpan": 2,
         "style": 1
       }
@@ -9675,10 +7892,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "breadcrumb",
-          "radix"
-        ],
+        "tags": ["breadcrumb", "radix"],
         "colSpan": 2,
         "style": 1
       }
@@ -9693,11 +7907,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "breadcrumb",
-          "select",
-          "radix"
-        ],
+        "tags": ["breadcrumb", "select", "radix"],
         "colSpan": 2,
         "style": 1
       }
@@ -9712,9 +7922,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "pagination"
-        ],
+        "tags": ["pagination"],
         "colSpan": 2
       }
     },
@@ -9728,9 +7936,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "pagination"
-        ],
+        "tags": ["pagination"],
         "colSpan": 2
       }
     },
@@ -9744,9 +7950,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "pagination"
-        ],
+        "tags": ["pagination"],
         "colSpan": 2
       }
     },
@@ -9760,9 +7964,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "pagination"
-        ],
+        "tags": ["pagination"],
         "colSpan": 2
       }
     },
@@ -9776,9 +7978,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "pagination"
-        ],
+        "tags": ["pagination"],
         "colSpan": 2
       }
     },
@@ -9792,9 +7992,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "pagination"
-        ],
+        "tags": ["pagination"],
         "colSpan": 2
       }
     },
@@ -9808,9 +8006,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "pagination"
-        ],
+        "tags": ["pagination"],
         "colSpan": 2
       }
     },
@@ -9824,9 +8020,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "pagination"
-        ],
+        "tags": ["pagination"],
         "colSpan": 2
       }
     },
@@ -9840,9 +8034,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "pagination"
-        ],
+        "tags": ["pagination"],
         "colSpan": 2
       }
     },
@@ -9856,11 +8048,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "pagination",
-          "select",
-          "radix"
-        ],
+        "tags": ["pagination", "select", "radix"],
         "colSpan": 2
       }
     },
@@ -9874,11 +8062,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "pagination",
-          "select",
-          "radix"
-        ],
+        "tags": ["pagination", "select", "radix"],
         "colSpan": 2
       }
     },
@@ -9892,10 +8076,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "pagination",
-          "input"
-        ],
+        "tags": ["pagination", "input"],
         "colSpan": 2
       }
     },
@@ -9909,9 +8090,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table"
-        ],
+        "tags": ["table"],
         "colSpan": 3
       }
     },
@@ -9925,11 +8104,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table",
-          "user",
-          "avatar"
-        ],
+        "tags": ["table", "user", "avatar"],
         "colSpan": 3
       }
     },
@@ -9943,9 +8118,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table"
-        ],
+        "tags": ["table"],
         "colSpan": 3
       }
     },
@@ -9959,9 +8132,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table"
-        ],
+        "tags": ["table"],
         "colSpan": 3
       }
     },
@@ -9975,9 +8146,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table"
-        ],
+        "tags": ["table"],
         "colSpan": 3
       }
     },
@@ -9991,9 +8160,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table"
-        ],
+        "tags": ["table"],
         "colSpan": 3
       }
     },
@@ -10007,10 +8174,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table",
-          "checkbox"
-        ],
+        "tags": ["table", "checkbox"],
         "colSpan": 3
       }
     },
@@ -10024,11 +8188,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table",
-          "checkbox",
-          "card"
-        ],
+        "tags": ["table", "checkbox", "card"],
         "colSpan": 3
       }
     },
@@ -10042,10 +8202,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table",
-          "vertical table"
-        ],
+        "tags": ["table", "vertical table"],
         "colSpan": 3
       }
     },
@@ -10059,10 +8216,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table",
-          "sticky"
-        ],
+        "tags": ["table", "sticky"],
         "colSpan": 3
       }
     },
@@ -10076,9 +8230,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table"
-        ],
+        "tags": ["table"],
         "colSpan": 3
       }
     },
@@ -10092,14 +8244,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table",
-          "tanstack",
-          "checkbox",
-          "badge",
-          "chip",
-          "flag"
-        ],
+        "tags": ["table", "tanstack", "checkbox", "badge", "chip", "flag"],
         "colSpan": 3
       }
     },
@@ -10137,13 +8282,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table",
-          "tanstack",
-          "flag",
-          "sort",
-          "resize"
-        ],
+        "tags": ["table", "tanstack", "flag", "sort", "resize"],
         "colSpan": 3
       }
     },
@@ -10157,13 +8296,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table",
-          "tanstack",
-          "flag",
-          "sticky",
-          "resize"
-        ],
+        "tags": ["table", "tanstack", "flag", "sticky", "resize"],
         "colSpan": 3
       }
     },
@@ -10177,13 +8310,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table",
-          "tanstack",
-          "flag",
-          "sort",
-          "drag and drop"
-        ],
+        "tags": ["table", "tanstack", "flag", "sort", "drag and drop"],
         "colSpan": 3
       }
     },
@@ -10290,11 +8417,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "range"
-        ]
+        "tags": ["input", "label", "range"]
       }
     },
     {
@@ -10307,11 +8430,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "react aria"
-        ],
+        "tags": ["calendar", "date", "react aria"],
         "style": 1
       }
     },
@@ -10325,12 +8444,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "range calendar",
-          "date",
-          "react aria"
-        ],
+        "tags": ["calendar", "range calendar", "date", "react aria"],
         "style": 1
       }
     },
@@ -10364,11 +8478,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "date", "react daypicker"],
         "style": 1
       }
     },
@@ -10382,12 +8492,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "range calendar",
-          "date",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "range calendar", "date", "react daypicker"],
         "style": 1
       }
     },
@@ -10421,11 +8526,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "date", "react daypicker"],
         "style": 1
       }
     },
@@ -10439,11 +8540,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "date", "react daypicker"],
         "style": 1
       }
     },
@@ -10457,12 +8554,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "range calendar",
-          "date",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "range calendar", "date", "react daypicker"],
         "style": 1
       }
     },
@@ -10476,11 +8568,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "date", "react daypicker"],
         "style": 1
       }
     },
@@ -10494,11 +8582,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "date", "react daypicker"],
         "style": 1
       }
     },
@@ -10512,11 +8596,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "date", "react daypicker"],
         "style": 1
       }
     },
@@ -10530,12 +8610,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "week",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "date", "week", "react daypicker"],
         "style": 1
       }
     },
@@ -10549,12 +8624,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "button",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "date", "button", "react daypicker"],
         "style": 1
       }
     },
@@ -10568,12 +8638,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "button",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "date", "button", "react daypicker"],
         "style": 1
       }
     },
@@ -10587,12 +8652,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "input",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "date", "input", "react daypicker"],
         "style": 1
       }
     },
@@ -10606,13 +8666,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "input",
-          "time",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "date", "input", "time", "react daypicker"],
         "style": 1
       }
     },
@@ -10626,13 +8680,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "collapsible",
-          "react daypicker",
-          "radix"
-        ],
+        "tags": ["calendar", "date", "collapsible", "react daypicker", "radix"],
         "style": 1
       }
     },
@@ -10646,13 +8694,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "time",
-          "button",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "date", "time", "button", "react daypicker"],
         "colSpan": 3,
         "style": 1
       }
@@ -10667,12 +8709,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "button",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "date", "button", "react daypicker"],
         "colSpan": 3,
         "style": 1
       }
@@ -10708,12 +8745,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "range calendar",
-          "date",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "range calendar", "date", "react daypicker"],
         "colSpan": 3,
         "style": 1
       }
@@ -10728,12 +8760,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "range calendar",
-          "date",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "range calendar", "date", "react daypicker"],
         "colSpan": 3,
         "style": 1
       }
@@ -10748,11 +8775,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "date", "react daypicker"],
         "colSpan": 3,
         "style": 1
       }
@@ -10767,13 +8790,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "button",
-          "picker",
-          "react daypicker"
-        ]
+        "tags": ["calendar", "date", "button", "picker", "react daypicker"]
       }
     },
     {
@@ -10786,13 +8803,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "date",
-          "button",
-          "picker",
-          "react daypicker"
-        ]
+        "tags": ["calendar", "date", "button", "picker", "react daypicker"]
       }
     },
     {
@@ -10805,9 +8816,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper"
-        ],
+        "tags": ["stepper"],
         "colSpan": 3
       }
     },
@@ -10821,9 +8830,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper"
-        ],
+        "tags": ["stepper"],
         "colSpan": 3
       }
     },
@@ -10837,9 +8844,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper"
-        ],
+        "tags": ["stepper"],
         "colSpan": 3
       }
     },
@@ -10853,9 +8858,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper"
-        ],
+        "tags": ["stepper"],
         "colSpan": 3
       }
     },
@@ -10869,9 +8872,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper"
-        ],
+        "tags": ["stepper"],
         "colSpan": 3
       }
     },
@@ -10885,9 +8886,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper"
-        ],
+        "tags": ["stepper"],
         "colSpan": 3
       }
     },
@@ -10901,9 +8900,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper"
-        ],
+        "tags": ["stepper"],
         "colSpan": 3
       }
     },
@@ -10917,9 +8914,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper"
-        ],
+        "tags": ["stepper"],
         "colSpan": 3
       }
     },
@@ -10933,9 +8928,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper"
-        ],
+        "tags": ["stepper"],
         "colSpan": 3
       }
     },
@@ -10949,9 +8942,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper"
-        ],
+        "tags": ["stepper"],
         "colSpan": 3
       }
     },
@@ -10965,9 +8956,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper"
-        ],
+        "tags": ["stepper"],
         "colSpan": 3
       }
     },
@@ -10981,9 +8970,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper"
-        ],
+        "tags": ["stepper"],
         "colSpan": 3
       }
     },
@@ -10997,9 +8984,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper"
-        ],
+        "tags": ["stepper"],
         "colSpan": 3
       }
     },
@@ -11013,10 +8998,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper",
-          "vertical stepper"
-        ],
+        "tags": ["stepper", "vertical stepper"],
         "colSpan": 2
       }
     },
@@ -11030,10 +9012,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper",
-          "vertical stepper"
-        ],
+        "tags": ["stepper", "vertical stepper"],
         "colSpan": 2
       }
     },
@@ -11047,10 +9026,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper",
-          "vertical stepper"
-        ],
+        "tags": ["stepper", "vertical stepper"],
         "colSpan": 2
       }
     },
@@ -11064,10 +9040,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "stepper",
-          "vertical stepper"
-        ],
+        "tags": ["stepper", "vertical stepper"],
         "colSpan": 2
       }
     },
@@ -11081,10 +9054,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "timeline",
-          "vertical timeline"
-        ],
+        "tags": ["timeline", "vertical timeline"],
         "colSpan": 2
       }
     },
@@ -11098,10 +9068,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "timeline",
-          "vertical timeline"
-        ],
+        "tags": ["timeline", "vertical timeline"],
         "colSpan": 2
       }
     },
@@ -11115,10 +9082,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "timeline",
-          "vertical timeline"
-        ],
+        "tags": ["timeline", "vertical timeline"],
         "colSpan": 2
       }
     },
@@ -11132,10 +9096,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "timeline",
-          "vertical timeline"
-        ],
+        "tags": ["timeline", "vertical timeline"],
         "colSpan": 2
       }
     },
@@ -11149,10 +9110,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "timeline",
-          "vertical timeline"
-        ],
+        "tags": ["timeline", "vertical timeline"],
         "colSpan": 2
       }
     },
@@ -11166,10 +9124,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "timeline",
-          "vertical timeline"
-        ],
+        "tags": ["timeline", "vertical timeline"],
         "colSpan": 2
       }
     },
@@ -11183,10 +9138,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "timeline",
-          "vertical timeline"
-        ],
+        "tags": ["timeline", "vertical timeline"],
         "colSpan": 2
       }
     },
@@ -11200,10 +9152,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "timeline",
-          "vertical timeline"
-        ],
+        "tags": ["timeline", "vertical timeline"],
         "colSpan": 2
       }
     },
@@ -11217,10 +9166,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "timeline",
-          "vertical timeline"
-        ],
+        "tags": ["timeline", "vertical timeline"],
         "colSpan": 2
       }
     },
@@ -11234,10 +9180,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "timeline",
-          "vertical timeline"
-        ],
+        "tags": ["timeline", "vertical timeline"],
         "colSpan": 2
       }
     },
@@ -11251,9 +9194,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "timeline"
-        ],
+        "tags": ["timeline"],
         "colSpan": 3
       }
     },
@@ -11267,9 +9208,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "timeline"
-        ],
+        "tags": ["timeline"],
         "colSpan": 3
       }
     },
@@ -11283,10 +9222,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "upload",
-          "file"
-        ]
+        "tags": ["upload", "file"]
       }
     },
     {
@@ -11299,10 +9235,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "upload",
-          "file"
-        ],
+        "tags": ["upload", "file"],
         "colSpan": 2
       }
     },
@@ -11316,10 +9249,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "upload",
-          "file"
-        ],
+        "tags": ["upload", "file"],
         "colSpan": 2
       }
     },
@@ -11333,10 +9263,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "upload",
-          "file"
-        ],
+        "tags": ["upload", "file"],
         "colSpan": 2
       }
     },
@@ -11350,10 +9277,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "upload",
-          "file"
-        ],
+        "tags": ["upload", "file"],
         "colSpan": 2
       }
     },
@@ -11367,10 +9291,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "upload",
-          "file"
-        ],
+        "tags": ["upload", "file"],
         "colSpan": 2
       }
     },
@@ -11384,10 +9305,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "upload",
-          "file"
-        ],
+        "tags": ["upload", "file"],
         "colSpan": 2
       }
     },
@@ -11401,10 +9319,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "upload",
-          "file"
-        ],
+        "tags": ["upload", "file"],
         "colSpan": 2
       }
     },
@@ -11418,10 +9333,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "upload",
-          "file"
-        ],
+        "tags": ["upload", "file"],
         "colSpan": 2
       }
     },
@@ -11435,10 +9347,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "upload",
-          "file"
-        ],
+        "tags": ["upload", "file"],
         "colSpan": 2
       }
     },
@@ -11452,10 +9361,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "upload",
-          "file"
-        ],
+        "tags": ["upload", "file"],
         "colSpan": 2
       }
     },
@@ -11473,9 +9379,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -11489,9 +9393,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tree"
-        ],
+        "tags": ["tree"],
         "colSpan": 1
       }
     },
@@ -11505,9 +9407,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tree"
-        ],
+        "tags": ["tree"],
         "colSpan": 1
       }
     },
@@ -11521,9 +9421,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tree"
-        ],
+        "tags": ["tree"],
         "colSpan": 1
       }
     },
@@ -11537,9 +9435,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tree"
-        ],
+        "tags": ["tree"],
         "colSpan": 1
       }
     },
@@ -11553,9 +9449,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tree"
-        ],
+        "tags": ["tree"],
         "colSpan": 1
       }
     },
@@ -11569,9 +9463,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tree"
-        ],
+        "tags": ["tree"],
         "colSpan": 1
       }
     },
@@ -11585,9 +9477,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tree"
-        ],
+        "tags": ["tree"],
         "colSpan": 1
       }
     },
@@ -11601,9 +9491,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tree"
-        ],
+        "tags": ["tree"],
         "colSpan": 1
       }
     },
@@ -11617,9 +9505,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tree"
-        ],
+        "tags": ["tree"],
         "colSpan": 1
       }
     },
@@ -11633,9 +9519,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tree"
-        ],
+        "tags": ["tree"],
         "colSpan": 1
       }
     },
@@ -11649,9 +9533,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tree"
-        ],
+        "tags": ["tree"],
         "colSpan": 1
       }
     },
@@ -11665,9 +9547,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "tree"
-        ],
+        "tags": ["tree"],
         "colSpan": 1
       }
     },
@@ -11685,9 +9565,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -11705,9 +9583,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -11737,9 +9613,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -11765,9 +9639,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -11793,9 +9665,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -11821,9 +9691,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -11849,9 +9717,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -11873,9 +9739,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -11893,9 +9757,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -11917,9 +9779,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -11941,9 +9801,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -11969,9 +9827,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -11989,9 +9845,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -12017,9 +9871,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -12041,9 +9893,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -12065,9 +9915,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -12081,9 +9929,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     },
@@ -12097,9 +9943,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "navbar, navigation"
-        ],
+        "tags": ["navbar, navigation"],
         "colSpan": 3
       }
     }
