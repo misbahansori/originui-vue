@@ -870,7 +870,7 @@
           "type": "registry:ui"
         },
         {
-          "path": "app/registry/default/ui/pagination/PaginationPrev.vue",
+          "path": "app/registry/default/ui/pagination/PaginationPrevious.vue",
           "type": "registry:ui"
         },
         {
