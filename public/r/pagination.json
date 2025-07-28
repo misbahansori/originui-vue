@@ -39,8 +39,8 @@
       "type": "registry:ui"
     },
     {
-      "path": "ui/pagination/PaginationPrev.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { PaginationPrev, type PaginationPrevProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = withDefaults(\n  defineProps<PaginationPrevProps & { class?: HTMLAttributes[\"class\"] }>(),\n  {\n    asChild: true,\n  },\n);\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <PaginationPrev v-bind=\"delegatedProps\">\n    <slot>\n      <Button :class=\"cn('h-9 w-9 p-0', props.class)\" variant=\"outline\">\n        <Icon name=\"lucide:chevron-left\" aria-hidden=\"true\" class=\"size-4\" />\n      </Button>\n    </slot>\n  </PaginationPrev>\n</template>\n",
+      "path": "ui/pagination/PaginationPrevious.vue",
+      "content": "<script setup lang=\"ts\">\nimport type { PaginationPrevProps } from 'reka-ui'\nimport type { HTMLAttributes } from 'vue'\nimport { cn } from '@/lib/utils'\nimport { buttonVariants, type ButtonVariants } from '@/registry/default/ui/button'\nimport { reactiveOmit } from '@vueuse/core'\nimport { ChevronLeftIcon } from 'lucide-vue-next'\nimport { PaginationPrev, useForwardProps } from 'reka-ui'\n\nconst props = withDefaults(defineProps<PaginationPrevProps & {\n  size?: ButtonVariants['size']\n  class?: HTMLAttributes['class']\n}>(), {\n  size: 'default',\n})\n\nconst delegatedProps = reactiveOmit(props, 'class', 'size')\nconst forwarded = useForwardProps(delegatedProps)\n</script>\n\n<template>\n  <PaginationPrev\n    data-slot=\"pagination-previous\"\n    :class=\"cn(buttonVariants({ variant: 'ghost', size }), 'gap-1 px-2.5 sm:pr-2.5', props.class)\"\n    v-bind=\"forwarded\"\n  >\n    <slot>\n      <ChevronLeftIcon />\n      <span class=\"hidden sm:block\">Previous</span>\n    </slot>\n  </PaginationPrev>\n</template>\n",
       "type": "registry:ui"
     },
     {
