@@ -604,6 +604,10 @@
           "type": "registry:ui"
         },
         {
+          "path": "app/registry/default/ui/dialog/DialogOverlay.vue",
+          "type": "registry:ui"
+        },
+        {
           "path": "app/registry/default/ui/dialog/DialogScrollContent.vue",
           "type": "registry:ui"
         },
