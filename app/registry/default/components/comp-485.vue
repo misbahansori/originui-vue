@@ -163,11 +163,15 @@ const columns: ColumnDef<Item>[] = [
     size: 180,
     filterFn: multiColumnFilterFn,
     enableHiding: false,
+    sortUndefined: "last",
+    sortDescFirst: false,
   },
   {
     header: "Email",
     accessorKey: "email",
     size: 220,
+    sortUndefined: "last",
+    sortDescFirst: false,
   },
   {
     header: "Location",
@@ -183,6 +187,8 @@ const columns: ColumnDef<Item>[] = [
         row.getValue("location") as string,
       ]),
     size: 180,
+    sortUndefined: "last",
+    sortDescFirst: false,
   },
   {
     header: "Status",
@@ -200,10 +206,14 @@ const columns: ColumnDef<Item>[] = [
       ),
     size: 100,
     filterFn: statusFilterFn,
+    sortUndefined: "last",
+    sortDescFirst: false,
   },
   {
     header: "Performance",
     accessorKey: "performance",
+    sortUndefined: "last",
+    sortDescFirst: false,
   },
   {
     header: "Balance",
@@ -217,6 +227,8 @@ const columns: ColumnDef<Item>[] = [
       return formatted;
     },
     size: 120,
+    sortUndefined: "last",
+    sortDescFirst: false,
   },
   {
     id: "actions",
@@ -240,37 +252,14 @@ const table = useVueTable({
   get data() {
     return data.value;
   },
-  columns,
+  get columns() {
+    return columns;
+  },
   getCoreRowModel: getCoreRowModel(),
   getSortedRowModel: getSortedRowModel(),
   getPaginationRowModel: getPaginationRowModel(),
   getFilteredRowModel: getFilteredRowModel(),
   getFacetedUniqueValues: getFacetedUniqueValues(),
-  onSortingChange: (updaterOrValue) => {
-    sorting.value =
-      typeof updaterOrValue === "function"
-        ? updaterOrValue(sorting.value)
-        : updaterOrValue;
-  },
-  onPaginationChange: (updaterOrValue) => {
-    pagination.value =
-      typeof updaterOrValue === "function"
-        ? updaterOrValue(pagination.value)
-        : updaterOrValue;
-  },
-  onColumnFiltersChange: (updaterOrValue) => {
-    columnFilters.value =
-      typeof updaterOrValue === "function"
-        ? updaterOrValue(columnFilters.value)
-        : updaterOrValue;
-  },
-  onColumnVisibilityChange: (updaterOrValue) => {
-    columnVisibility.value =
-      typeof updaterOrValue === "function"
-        ? updaterOrValue(columnVisibility.value)
-        : updaterOrValue;
-  },
-  enableSortingRemoval: false,
   state: {
     get rowSelection() {
       return rowSelection.value;
@@ -288,12 +277,27 @@ const table = useVueTable({
       return columnVisibility.value;
     },
   },
-  onRowSelectionChange: (updaterOrValue) => {
-    rowSelection.value =
-      typeof updaterOrValue === "function"
-        ? updaterOrValue(rowSelection.value)
-        : updaterOrValue;
+  onSortingChange: (updater) => {
+    sorting.value =
+      typeof updater === "function" ? updater(sorting.value) : updater;
   },
+  onPaginationChange: (updater) => {
+    pagination.value =
+      typeof updater === "function" ? updater(pagination.value) : updater;
+  },
+  onColumnFiltersChange: (updater) => {
+    columnFilters.value =
+      typeof updater === "function" ? updater(columnFilters.value) : updater;
+  },
+  onColumnVisibilityChange: (updater) => {
+    columnVisibility.value =
+      typeof updater === "function" ? updater(columnVisibility.value) : updater;
+  },
+  onRowSelectionChange: (updater) => {
+    rowSelection.value =
+      typeof updater === "function" ? updater(rowSelection.value) : updater;
+  },
+  enableSortingRemoval: false,
 });
 
 // Get unique status values
@@ -520,7 +524,9 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Toggle columns</DropdownMenuLabel>
+            <DropdownMenuLabel class="text-muted-foreground text-xs">
+              Toggle columns
+            </DropdownMenuLabel>
             <DropdownMenuCheckboxItem
               v-for="column in table
                 .getAllColumns()
@@ -745,7 +751,11 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
         >
           <PaginationContent>
             <!-- First page button -->
-            <PaginationItem :value="1">
+            <PaginationItem
+              :value="1"
+              :disabled="!table.getCanPreviousPage()"
+              asChild
+            >
               <Button
                 size="icon"
                 variant="outline"
@@ -758,7 +768,11 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
               </Button>
             </PaginationItem>
             <!-- Previous page button -->
-            <PaginationItem :value="table.getState().pagination.pageIndex - 1">
+            <PaginationItem
+              :value="table.getState().pagination.pageIndex - 1"
+              :disabled="!table.getCanPreviousPage()"
+              asChild
+            >
               <Button
                 size="icon"
                 variant="outline"
@@ -771,7 +785,11 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
               </Button>
             </PaginationItem>
             <!-- Next page button -->
-            <PaginationItem :value="table.getState().pagination.pageIndex + 1">
+            <PaginationItem
+              :value="table.getState().pagination.pageIndex + 1"
+              :disabled="!table.getCanNextPage()"
+              asChild
+            >
               <Button
                 size="icon"
                 variant="outline"
@@ -787,6 +805,7 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
             <PaginationItem
               :value="table.getPageCount() - 1"
               :disabled="!table.getCanNextPage()"
+              asChild
             >
               <Button
                 size="icon"
