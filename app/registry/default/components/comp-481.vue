@@ -16,7 +16,11 @@ import {
   type ColumnDef,
   type SortingState,
 } from "@tanstack/vue-table";
-import { ChevronDownIcon, ChevronUpIcon } from "lucide-vue-next";
+import {
+  ChevronDownIcon,
+  ChevronUpIcon,
+  GripVerticalIcon,
+} from "lucide-vue-next";
 import { h, onMounted, ref } from "vue";
 
 type Item = {
@@ -127,6 +131,18 @@ const table = useVueTable({
             "
           >
             <div class="flex items-center justify-start gap-0.5">
+              <Button
+                size="icon"
+                variant="ghost"
+                class="-ml-2 size-7 shadow-none"
+                aria-label="Drag to reorder"
+              >
+                <GripVerticalIcon
+                  class="opacity-60"
+                  :size="16"
+                  aria-hidden="true"
+                />
+              </Button>
               <span class="grow truncate" v-if="!header.isPlaceholder">
                 <FlexRender
                   :render="header.column.columnDef.header"
