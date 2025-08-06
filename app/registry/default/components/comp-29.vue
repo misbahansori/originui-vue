@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
+import {
+  NumberField,
+  NumberFieldDecrement,
+  NumberFieldIncrement,
+  NumberFieldInput,
+} from "@/registry/default/ui/number-field";
 import { LucideChevronDown, LucideChevronUp } from "lucide-vue-next";
 import { ref, useId } from "vue";
 
