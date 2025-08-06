@@ -76,17 +76,18 @@ const columns: ColumnDef<Item>[] = [
     id: "select",
     header: ({ table }) =>
       h(Checkbox, {
-        checked:
+        modelValue:
           table.getIsAllPageRowsSelected() ||
           (table.getIsSomePageRowsSelected() && "indeterminate"),
-        onCheckedChange: (value: boolean) =>
+        "onUpdate:modelValue": (value: boolean | "indeterminate") =>
           table.toggleAllPageRowsSelected(!!value),
         "aria-label": "Select all",
       }),
     cell: ({ row }) =>
       h(Checkbox, {
-        checked: row.getIsSelected(),
-        onCheckedChange: (value: boolean) => row.toggleSelected(!!value),
+        modelValue: row.getIsSelected(),
+        "onUpdate:modelValue": (value: boolean | "indeterminate") =>
+          row.toggleSelected(!!value),
         "aria-label": "Select row",
       }),
   },

@@ -217,7 +217,7 @@ const table = useVueTable({
       </TableBody>
     </Table>
     <p class="text-muted-foreground mt-4 text-center text-sm">
-      Draggable columns made with
+      (work in progress) Draggable columns made with
       <a
         class="hover:text-foreground underline"
         href="https://tanstack.com/table"
@@ -227,7 +227,12 @@ const table = useVueTable({
         TanStack Table
       </a>
       and
-      <a href="https://dndkit.com/" target="_blank" rel="noopener noreferrer">
+      <a
+        class="hover:text-foreground underline"
+        href="https://dndkit.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         dnd kit
       </a>
     </p>
