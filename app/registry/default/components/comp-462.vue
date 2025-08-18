@@ -2,9 +2,9 @@
 import { Button } from "@/registry/default/ui/button";
 import {
   Pagination,
+  PaginationContent,
   PaginationEllipsis,
-  PaginationList,
-  PaginationListItem,
+  PaginationItem,
   PaginationNext,
   PaginationPrevious,
 } from "@/registry/default/ui/pagination";
@@ -27,7 +27,7 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
     :showEdges="true"
     :siblingCount="0"
   >
-    <PaginationList
+    <PaginationContent
       class="flex w-full items-center justify-center gap-1"
       v-slot="{ items }"
     >
@@ -38,13 +38,11 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
         <span class="text-foreground">{{ pageCount }}</span>
       </p>
       <div class="flex items-center gap-1">
-        <PaginationPrevious asChild>
-          <Button variant="ghost" class="size-9">
-            <LucideChevronLeft aria-hidden="true" class="size-4" />
-          </Button>
+        <PaginationPrevious>
+          <LucideChevronLeft aria-hidden="true" class="size-4" />
         </PaginationPrevious>
         <template v-for="item in items">
-          <PaginationListItem
+          <PaginationItem
             v-if="item.type === 'page'"
             :value="item.value"
             asChild
@@ -55,13 +53,11 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
             >
               {{ item.value }}
             </Button>
-          </PaginationListItem>
+          </PaginationItem>
           <PaginationEllipsis v-if="item.type === 'ellipsis'" />
         </template>
-        <PaginationNext asChild>
-          <Button variant="ghost" class="size-9">
-            <LucideChevronRight aria-hidden="true" class="size-4" />
-          </Button>
+        <PaginationNext>
+          <LucideChevronRight aria-hidden="true" class="size-4" />
         </PaginationNext>
       </div>
       <div className="flex flex-1 justify-end">
@@ -70,7 +66,7 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
             id="results-per-page"
             class="w-fit whitespace-break-spaces"
           >
-            <SelectValue placeholder="Please select" />
+            <SelectValue />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="10">10 / page</SelectItem>
@@ -80,6 +76,6 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
           </SelectContent>
         </Select>
       </div>
-    </PaginationList>
+    </PaginationContent>
   </Pagination>
 </template>

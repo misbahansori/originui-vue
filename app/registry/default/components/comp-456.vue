@@ -2,7 +2,7 @@
 import { Button } from "@/registry/default/ui/button";
 import {
   Pagination,
-  PaginationList,
+  PaginationContent,
   PaginationNext,
   PaginationPrevious,
 } from "@/registry/default/ui/pagination";
@@ -16,7 +16,7 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
     :total="100"
     v-slot="{ page, pageCount }"
   >
-    <PaginationList class="flex w-full items-center justify-between gap-3">
+    <PaginationContent class="flex w-full items-center justify-between gap-3">
       <PaginationPrevious asChild>
         <Button variant="outline" class="size-9">
           <LucideChevronLeft aria-hidden="true" class="size-4" />
@@ -33,6 +33,6 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
           <LucideChevronRight aria-hidden="true" class="size-4" />
         </Button>
       </PaginationNext>
-    </PaginationList>
+    </PaginationContent>
   </Pagination>
 </template>

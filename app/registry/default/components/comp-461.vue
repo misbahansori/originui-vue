@@ -2,9 +2,9 @@
 import { Button } from "@/registry/default/ui/button";
 import {
   Pagination,
+  PaginationContent,
   PaginationEllipsis,
-  PaginationList,
-  PaginationListItem,
+  PaginationItem,
   PaginationNext,
   PaginationPrevious,
 } from "@/registry/default/ui/pagination";
@@ -20,11 +20,11 @@ import {
     :defaultPage="1"
     :itemsPerPage="10"
     :total="100"
-    v-slot="{ page, pageCount }"
+    v-slot="{ page }"
     :showEdges="true"
     :siblingCount="0"
   >
-    <PaginationList
+    <PaginationContent
       class="flex w-full items-center justify-center gap-0 -space-x-px"
       v-slot="{ items }"
     >
@@ -37,11 +37,7 @@ import {
         </Button>
       </PaginationPrevious>
       <template v-for="item in items">
-        <PaginationListItem
-          v-if="item.type === 'page'"
-          :value="item.value"
-          asChild
-        >
+        <PaginationItem v-if="item.type === 'page'" :value="item.value" asChild>
           <Button
             variant="outline"
             class="size-9 rounded-none shadow-none focus-visible:z-10 aria-disabled:pointer-events-none [&[aria-disabled]>svg]:opacity-50"
@@ -49,7 +45,7 @@ import {
           >
             {{ item.value }}
           </Button>
-        </PaginationListItem>
+        </PaginationItem>
         <PaginationEllipsis v-if="item.type === 'ellipsis'" asChild>
           <Button
             variant="outline"
@@ -67,6 +63,6 @@ import {
           <LucideChevronRight :size="16" aria-hidden="true" />
         </Button>
       </PaginationNext>
-    </PaginationList>
+    </PaginationContent>
   </Pagination>
 </template>
