@@ -53,13 +53,11 @@ type Item = {
   balance: number;
 };
 
-const pageSize = 5;
-
 const data = ref<Item[]>([]);
 const rowSelection = ref<RowSelectionState>({});
 const pagination = ref<PaginationState>({
   pageIndex: 0,
-  pageSize: pageSize,
+  pageSize: 5,
 });
 const sorting = ref<SortingState>([
   {
@@ -278,9 +276,9 @@ const table = useVueTable({
     </div>
 
     <Pagination
-      :defaultPage="1"
-      :itemsPerPage="10"
-      :total="100"
+      :defaultPage="table.getState().pagination.pageIndex + 1"
+      :itemsPerPage="table.getState().pagination.pageSize"
+      :total="table.getRowCount()"
       v-slot="{ page, pageCount }"
       :showEdges="true"
       :siblingCount="0"
@@ -297,7 +295,12 @@ const table = useVueTable({
         </p>
         <div class="flex items-center gap-1">
           <PaginationPrevious asChild>
-            <Button variant="outline" class="size-9">
+            <Button
+              variant="outline"
+              class="size-9"
+              @click="table.previousPage()"
+              :disabled="!table.getCanPreviousPage()"
+            >
               <LucideChevronLeft aria-hidden="true" class="size-4" />
             </Button>
           </PaginationPrevious>
@@ -305,25 +308,29 @@ const table = useVueTable({
             <PaginationItem
               v-if="item.type === 'page'"
               :value="item.value"
-              asChild
+              :isActive="item.value === page"
+              @click="table.setPageIndex(item.value - 1)"
             >
-              <Button
-                :variant="item.value === page ? 'outline' : 'ghost'"
-                class="size-9"
-              >
-                {{ item.value }}
-              </Button>
+              {{ item.value }}
             </PaginationItem>
             <PaginationEllipsis v-if="item.type === 'ellipsis'" />
           </template>
           <PaginationNext asChild>
-            <Button variant="outline" class="size-9">
+            <Button
+              variant="outline"
+              class="size-9"
+              @click="table.nextPage()"
+              :disabled="!table.getCanNextPage()"
+            >
               <LucideChevronRight aria-hidden="true" class="size-4" />
             </Button>
           </PaginationNext>
         </div>
         <div>
-          <Select defaultValue="10" aria-label="Results per page">
+          <Select
+            :model-value="table.getState().pagination.pageSize.toString()"
+            @update:model-value="(value) => table.setPageSize(Number(value))"
+          >
             <SelectTrigger
               id="results-per-page"
               class="w-fit whitespace-break-spaces"
@@ -331,6 +338,7 @@ const table = useVueTable({
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
+              <SelectItem value="5">5 / page</SelectItem>
               <SelectItem value="10">10 / page</SelectItem>
               <SelectItem value="20">20 / page</SelectItem>
               <SelectItem value="50">50 / page</SelectItem>

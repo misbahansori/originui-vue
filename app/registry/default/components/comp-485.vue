@@ -33,7 +33,6 @@ import { Label } from "@/registry/default/ui/label";
 import {
   Pagination,
   PaginationContent,
-  PaginationItem,
 } from "@/registry/default/ui/pagination";
 import {
   Popover,
@@ -73,20 +72,20 @@ import {
   type VisibilityState,
 } from "@tanstack/vue-table";
 import {
-  ChevronDownIcon,
-  ChevronFirstIcon,
-  ChevronLastIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  ChevronUpIcon,
-  CircleAlertIcon,
-  CircleXIcon,
-  Columns3Icon,
-  EllipsisIcon,
-  FilterIcon,
-  ListFilterIcon,
-  PlusIcon,
-  TrashIcon,
+  Ellipsis,
+  LucideChevronDown,
+  LucideChevronFirst,
+  LucideChevronLast,
+  LucideChevronLeft,
+  LucideChevronRight,
+  LucideChevronUp,
+  LucideCircleAlert,
+  LucideCircleX,
+  LucideColumns3,
+  LucideFilter,
+  LucideListFilter,
+  LucidePlus,
+  LucideTrash,
 } from "lucide-vue-next";
 import { computed, h, onMounted, ref } from "vue";
 
@@ -364,7 +363,7 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
                 class: "shadow-none",
                 "aria-label": "Edit item",
               },
-              () => h(EllipsisIcon, { size: 16, "aria-hidden": "true" }),
+              () => h(Ellipsis, { size: 16, "aria-hidden": "true" }),
             ),
           ]),
         ),
@@ -422,10 +421,8 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
 
 <template>
   <div class="space-y-4">
-    <!-- Filters -->
     <div class="flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-3">
-        <!-- Filter by name or email -->
         <div class="relative">
           <Input
             class="peer min-w-60 ps-9"
@@ -445,7 +442,7 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
           <div
             class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50"
           >
-            <ListFilterIcon :size="16" aria-hidden="true" />
+            <LucideListFilter :size="16" aria-hidden="true" />
           </div>
           <button
             v-if="Boolean(table.getColumn('name')?.getFilterValue())"
@@ -457,14 +454,13 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
               }
             "
           >
-            <CircleXIcon :size="16" aria-hidden="true" />
+            <LucideCircleX :size="16" aria-hidden="true" />
           </button>
         </div>
-        <!-- Filter by status -->
         <Popover>
           <PopoverTrigger asChild>
             <Button variant="outline">
-              <FilterIcon
+              <LucideFilter
                 class="-ms-1 opacity-60"
                 :size="16"
                 aria-hidden="true"
@@ -511,11 +507,10 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
             </div>
           </PopoverContent>
         </Popover>
-        <!-- Toggle columns visibility -->
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline">
-              <Columns3Icon
+              <LucideColumns3
                 class="-ms-1 opacity-60"
                 :size="16"
                 aria-hidden="true"
@@ -543,11 +538,10 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
         </DropdownMenu>
       </div>
       <div class="flex items-center gap-3">
-        <!-- Delete button -->
         <AlertDialog v-if="table.getSelectedRowModel().rows.length > 0">
           <AlertDialogTrigger asChild>
             <Button class="ml-auto" variant="outline">
-              <TrashIcon
+              <LucideTrash
                 class="-ms-1 opacity-60"
                 :size="16"
                 aria-hidden="true"
@@ -568,7 +562,7 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
                 class="flex size-9 shrink-0 items-center justify-center rounded-full border"
                 aria-hidden="true"
               >
-                <CircleAlertIcon class="opacity-80" :size="16" />
+                <LucideCircleAlert class="opacity-80" :size="16" />
               </div>
               <AlertDialogHeader>
                 <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
@@ -591,15 +585,13 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
-        <!-- Add user button -->
         <Button class="ml-auto" variant="outline">
-          <PlusIcon class="-ms-1 opacity-60" :size="16" aria-hidden="true" />
+          <LucidePlus class="-ms-1 opacity-60" :size="16" aria-hidden="true" />
           Add user
         </Button>
       </div>
     </div>
 
-    <!-- Table -->
     <div class="bg-background overflow-hidden rounded-md border">
       <Table class="table-fixed">
         <TableHeader>
@@ -636,13 +628,13 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
                     :render="header.column.columnDef.header"
                     :props="header.getContext()"
                   />
-                  <ChevronUpIcon
+                  <LucideChevronUp
                     v-if="header.column.getIsSorted() === 'asc'"
                     class="shrink-0 opacity-60"
                     :size="16"
                     aria-hidden="true"
                   />
-                  <ChevronDownIcon
+                  <LucideChevronDown
                     v-else-if="header.column.getIsSorted() === 'desc'"
                     class="shrink-0 opacity-60"
                     :size="16"
@@ -686,9 +678,7 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
       </Table>
     </div>
 
-    <!-- Pagination -->
     <div class="flex items-center justify-between gap-8">
-      <!-- Results per page -->
       <div class="flex items-center gap-3">
         <Label class="max-sm:sr-only">Rows per page</Label>
         <Select
@@ -711,7 +701,6 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
           </SelectContent>
         </Select>
       </div>
-      <!-- Page number information -->
       <div
         class="text-muted-foreground flex grow justify-end text-sm whitespace-nowrap"
       >
@@ -743,81 +732,53 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
         </p>
       </div>
 
-      <!-- Pagination buttons -->
       <div>
         <Pagination
+          :default-page="table.getState().pagination.pageIndex + 1"
           :items-per-page="table.getState().pagination.pageSize"
           :total="table.getRowCount()"
         >
           <PaginationContent>
-            <!-- First page button -->
-            <PaginationItem
-              :value="1"
-              :disabled="!table.getCanPreviousPage()"
-              asChild
-            >
+            <PaginationFirst asChild>
               <Button
-                size="icon"
                 variant="outline"
-                class="disabled:pointer-events-none disabled:opacity-50"
+                class="size-9"
                 @click="table.firstPage()"
                 :disabled="!table.getCanPreviousPage()"
-                aria-label="Go to first page"
               >
-                <ChevronFirstIcon :size="16" aria-hidden="true" />
+                <LucideChevronFirst :size="16" aria-hidden="true" />
               </Button>
-            </PaginationItem>
-            <!-- Previous page button -->
-            <PaginationItem
-              :value="table.getState().pagination.pageIndex - 1"
-              :disabled="!table.getCanPreviousPage()"
-              asChild
-            >
+            </PaginationFirst>
+            <PaginationPrevious asChild>
               <Button
-                size="icon"
                 variant="outline"
-                class="disabled:pointer-events-none disabled:opacity-50"
+                class="size-9"
                 @click="table.previousPage()"
                 :disabled="!table.getCanPreviousPage()"
-                aria-label="Go to previous page"
               >
-                <ChevronLeftIcon :size="16" aria-hidden="true" />
+                <LucideChevronLeft :size="16" aria-hidden="true" />
               </Button>
-            </PaginationItem>
-            <!-- Next page button -->
-            <PaginationItem
-              :value="table.getState().pagination.pageIndex + 1"
-              :disabled="!table.getCanNextPage()"
-              asChild
-            >
+            </PaginationPrevious>
+            <PaginationNext asChild>
               <Button
-                size="icon"
                 variant="outline"
-                class="disabled:pointer-events-none disabled:opacity-50"
+                class="size-9"
                 @click="table.nextPage()"
                 :disabled="!table.getCanNextPage()"
-                aria-label="Go to next page"
               >
-                <ChevronRightIcon :size="16" aria-hidden="true" />
+                <LucideChevronRight :size="16" aria-hidden="true" />
               </Button>
-            </PaginationItem>
-            <!-- Last page button -->
-            <PaginationItem
-              :value="table.getPageCount() - 1"
-              :disabled="!table.getCanNextPage()"
-              asChild
-            >
+            </PaginationNext>
+            <PaginationLast asChild>
               <Button
-                size="icon"
                 variant="outline"
-                class="disabled:pointer-events-none disabled:opacity-50"
+                class="size-9"
                 @click="table.lastPage()"
                 :disabled="!table.getCanNextPage()"
-                aria-label="Go to last page"
               >
-                <ChevronLastIcon :size="16" aria-hidden="true" />
+                <LucideChevronLast :size="16" aria-hidden="true" />
               </Button>
-            </PaginationItem>
+            </PaginationLast>
           </PaginationContent>
         </Pagination>
       </div>

@@ -53,6 +53,7 @@ type Item = {
 
 const data = ref<Item[]>([]);
 const rowSelection = ref<RowSelectionState>({});
+
 const pagination = ref<PaginationState>({
   pageIndex: 0,
   pageSize: 5,
@@ -278,9 +279,7 @@ const table = useVueTable({
       </Table>
     </div>
 
-    <!-- Pagination -->
     <div class="flex items-center justify-between gap-8">
-      <!-- Results per page -->
       <div class="flex items-center gap-3">
         <Label class="max-sm:sr-only">Rows per page</Label>
         <Select
@@ -303,7 +302,6 @@ const table = useVueTable({
           </SelectContent>
         </Select>
       </div>
-      <!-- Page number information -->
       <div
         class="text-muted-foreground flex grow justify-end text-sm whitespace-nowrap"
       >
@@ -334,14 +332,14 @@ const table = useVueTable({
           </span>
         </p>
       </div>
-      <!-- Pagination buttons -->
+
       <div>
         <Pagination
+          :default-page="table.getState().pagination.pageIndex + 1"
           :items-per-page="table.getState().pagination.pageSize"
           :total="table.getRowCount()"
         >
           <PaginationContent>
-            <!-- First page button -->
             <PaginationFirst asChild>
               <Button
                 variant="outline"
@@ -352,7 +350,6 @@ const table = useVueTable({
                 <LucideChevronFirst :size="16" aria-hidden="true" />
               </Button>
             </PaginationFirst>
-            <!-- Previous page button -->
             <PaginationPrevious asChild>
               <Button
                 variant="outline"
@@ -363,7 +360,6 @@ const table = useVueTable({
                 <LucideChevronLeft :size="16" aria-hidden="true" />
               </Button>
             </PaginationPrevious>
-            <!-- Next page button -->
             <PaginationNext asChild>
               <Button
                 variant="outline"
@@ -374,7 +370,6 @@ const table = useVueTable({
                 <LucideChevronRight :size="16" aria-hidden="true" />
               </Button>
             </PaginationNext>
-            <!-- Last page button -->
             <PaginationLast asChild>
               <Button
                 variant="outline"
