@@ -24,6 +24,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/registry/default/ui/table";
+import { valueUpdater } from "@/registry/default/ui/table/utils";
 import {
   FlexRender,
   getCoreRowModel,
@@ -174,18 +175,9 @@ const table = useVueTable({
       return sorting.value;
     },
   },
-  onSortingChange: (updater) => {
-    sorting.value =
-      typeof updater === "function" ? updater(sorting.value) : updater;
-  },
-  onPaginationChange: (updater) => {
-    pagination.value =
-      typeof updater === "function" ? updater(pagination.value) : updater;
-  },
-  onRowSelectionChange: (updater) => {
-    rowSelection.value =
-      typeof updater === "function" ? updater(rowSelection.value) : updater;
-  },
+  onSortingChange: (updater) => valueUpdater(updater, sorting),
+  onPaginationChange: (updater) => valueUpdater(updater, pagination),
+  onRowSelectionChange: (updater) => valueUpdater(updater, rowSelection),
   enableSortingRemoval: false,
 });
 </script>
