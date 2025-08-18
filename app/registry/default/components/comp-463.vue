@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { Button } from "@/registry/default/ui/button";
 import { Label } from "@/registry/default/ui/label";
 import {
   Pagination,
+  PaginationContent,
   PaginationFirst,
   PaginationLast,
-  PaginationList,
   PaginationNext,
   PaginationPrevious,
 } from "@/registry/default/ui/pagination";
@@ -36,15 +35,12 @@ const id = useId();
     :showEdges="true"
     :siblingCount="0"
   >
-    <PaginationList
-      class="flex w-full items-center justify-between gap-1"
-      v-slot="{ items }"
-    >
+    <PaginationContent class="flex w-full items-center justify-between gap-1">
       <div class="flex items-center gap-3">
         <Label :for="id">Rows per page</Label>
         <Select defaultValue="10">
           <SelectTrigger :id="id" class="w-fit whitespace-nowrap">
-            <SelectValue placeholder="Please select" />
+            <SelectValue />
           </SelectTrigger>
           <SelectContent
             className="[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2"
@@ -63,27 +59,19 @@ const id = useId();
         <span class="text-foreground">{{ pageCount }}</span>
       </p>
       <div class="flex items-center gap-1">
-        <PaginationFirst asChild>
-          <Button variant="ghost" class="size-9">
-            <LucideChevronFirst aria-hidden="true" class="size-4" />
-          </Button>
+        <PaginationFirst>
+          <LucideChevronFirst aria-hidden="true" class="size-4" />
         </PaginationFirst>
-        <PaginationPrevious asChild>
-          <Button variant="ghost" class="size-9">
-            <LucideChevronLeft aria-hidden="true" class="size-4" />
-          </Button>
+        <PaginationPrevious>
+          <LucideChevronLeft aria-hidden="true" class="size-4" />
         </PaginationPrevious>
-        <PaginationNext asChild>
-          <Button variant="ghost" class="size-9">
-            <LucideChevronRight aria-hidden="true" class="size-4" />
-          </Button>
+        <PaginationNext>
+          <LucideChevronRight aria-hidden="true" class="size-4" />
         </PaginationNext>
-        <PaginationLast asChild>
-          <Button variant="ghost" class="size-9">
-            <LucideChevronLast aria-hidden="true" class="size-4" />
-          </Button>
+        <PaginationLast>
+          <LucideChevronLast aria-hidden="true" class="size-4" />
         </PaginationLast>
       </div>
-    </PaginationList>
+    </PaginationContent>
   </Pagination>
 </template>

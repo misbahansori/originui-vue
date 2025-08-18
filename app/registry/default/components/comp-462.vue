@@ -66,7 +66,7 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
             id="results-per-page"
             class="w-fit whitespace-break-spaces"
           >
-            <SelectValue placeholder="Please select" />
+            <SelectValue />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="10">10 / page</SelectItem>

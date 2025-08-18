@@ -4,9 +4,9 @@ import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
 import {
   Pagination,
+  PaginationContent,
   PaginationEllipsis,
-  PaginationList,
-  PaginationListItem,
+  PaginationItem,
   PaginationNext,
   PaginationPrevious,
 } from "@/registry/default/ui/pagination";
@@ -25,18 +25,16 @@ const id = useId();
     :showEdges="true"
     :siblingCount="0"
   >
-    <PaginationList
+    <PaginationContent
       class="flex w-full items-center justify-between gap-1"
       v-slot="{ items }"
     >
       <div class="flex items-center gap-1">
-        <PaginationPrevious asChild>
-          <Button variant="ghost" class="size-9">
-            <LucideChevronLeft aria-hidden="true" class="size-4" />
-          </Button>
+        <PaginationPrevious>
+          <LucideChevronLeft aria-hidden="true" class="size-4" />
         </PaginationPrevious>
         <template v-for="item in items">
-          <PaginationListItem
+          <PaginationItem
             v-if="item.type === 'page'"
             :value="item.value"
             asChild
@@ -47,19 +45,17 @@ const id = useId();
             >
               {{ item.value }}
             </Button>
-          </PaginationListItem>
+          </PaginationItem>
           <PaginationEllipsis v-if="item.type === 'ellipsis'" />
         </template>
-        <PaginationNext asChild>
-          <Button variant="ghost" class="size-9">
-            <LucideChevronRight aria-hidden="true" class="size-4" />
-          </Button>
+        <PaginationNext>
+          <LucideChevronRight aria-hidden="true" class="size-4" />
         </PaginationNext>
       </div>
       <div class="flex items-center gap-3">
         <Label :for="id" class="whitespace-nowrap">Go to page</Label>
         <Input :id="id" type="text" class="w-14" :defaultValue="page" />
       </div>
-    </PaginationList>
+    </PaginationContent>
   </Pagination>
 </template>
