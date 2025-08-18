@@ -8,6 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/registry/default/ui/table";
+import { valueUpdater } from "@/registry/default/ui/table/utils";
 import {
   FlexRender,
   getCoreRowModel,
@@ -91,20 +92,17 @@ const table = useVueTable({
   get data() {
     return data.value;
   },
-  columns,
-  getCoreRowModel: getCoreRowModel(),
-  getSortedRowModel: getSortedRowModel(),
+  get columns() {
+    return columns;
+  },
   state: {
     get sorting() {
       return sorting.value;
     },
   },
-  onSortingChange: (updaterOrValue) => {
-    sorting.value =
-      typeof updaterOrValue === "function"
-        ? updaterOrValue(sorting.value)
-        : updaterOrValue;
-  },
+  getCoreRowModel: getCoreRowModel(),
+  getSortedRowModel: getSortedRowModel(),
+  onSortingChange: (updater) => valueUpdater(updater, sorting),
   enableSortingRemoval: false,
 });
 </script>
