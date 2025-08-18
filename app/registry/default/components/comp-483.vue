@@ -6,7 +6,6 @@ import { Label } from "@/registry/default/ui/label";
 import {
   Pagination,
   PaginationContent,
-  PaginationItem,
 } from "@/registry/default/ui/pagination";
 import {
   Select,
@@ -35,12 +34,10 @@ import {
   type SortingState,
 } from "@tanstack/vue-table";
 import {
-  ChevronDownIcon,
-  ChevronFirstIcon,
-  ChevronLastIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  ChevronUpIcon,
+  LucideChevronFirst,
+  LucideChevronLast,
+  LucideChevronLeft,
+  LucideChevronRight,
 } from "lucide-vue-next";
 import { h, onMounted, ref } from "vue";
 
@@ -56,6 +53,7 @@ type Item = {
 
 const data = ref<Item[]>([]);
 const rowSelection = ref<RowSelectionState>({});
+
 const pagination = ref<PaginationState>({
   pageIndex: 0,
   pageSize: 5,
@@ -281,9 +279,7 @@ const table = useVueTable({
       </Table>
     </div>
 
-    <!-- Pagination -->
     <div class="flex items-center justify-between gap-8">
-      <!-- Results per page -->
       <div class="flex items-center gap-3">
         <Label class="max-sm:sr-only">Rows per page</Label>
         <Select
@@ -306,7 +302,6 @@ const table = useVueTable({
           </SelectContent>
         </Select>
       </div>
-      <!-- Page number information -->
       <div
         class="text-muted-foreground flex grow justify-end text-sm whitespace-nowrap"
       >
@@ -337,68 +332,54 @@ const table = useVueTable({
           </span>
         </p>
       </div>
-      <!-- Pagination buttons -->
+
       <div>
         <Pagination
+          :default-page="table.getState().pagination.pageIndex + 1"
           :items-per-page="table.getState().pagination.pageSize"
           :total="table.getRowCount()"
         >
           <PaginationContent>
-            <!-- First page button -->
-            <PaginationItem :value="1">
+            <PaginationFirst asChild>
               <Button
-                size="icon"
                 variant="outline"
-                class="disabled:pointer-events-none disabled:opacity-50"
+                class="size-9"
                 @click="table.firstPage()"
                 :disabled="!table.getCanPreviousPage()"
-                aria-label="Go to first page"
               >
-                <ChevronFirstIcon :size="16" aria-hidden="true" />
+                <LucideChevronFirst :size="16" aria-hidden="true" />
               </Button>
-            </PaginationItem>
-            <!-- Previous page button -->
-            <PaginationItem :value="table.getState().pagination.pageIndex - 1">
+            </PaginationFirst>
+            <PaginationPrevious asChild>
               <Button
-                size="icon"
                 variant="outline"
-                class="disabled:pointer-events-none disabled:opacity-50"
+                class="size-9"
                 @click="table.previousPage()"
                 :disabled="!table.getCanPreviousPage()"
-                aria-label="Go to previous page"
               >
-                <ChevronLeftIcon :size="16" aria-hidden="true" />
+                <LucideChevronLeft :size="16" aria-hidden="true" />
               </Button>
-            </PaginationItem>
-            <!-- Next page button -->
-            <PaginationItem :value="table.getState().pagination.pageIndex + 1">
+            </PaginationPrevious>
+            <PaginationNext asChild>
               <Button
-                size="icon"
                 variant="outline"
-                class="disabled:pointer-events-none disabled:opacity-50"
+                class="size-9"
                 @click="table.nextPage()"
                 :disabled="!table.getCanNextPage()"
-                aria-label="Go to next page"
               >
-                <ChevronRightIcon :size="16" aria-hidden="true" />
+                <LucideChevronRight :size="16" aria-hidden="true" />
               </Button>
-            </PaginationItem>
-            <!-- Last page button -->
-            <PaginationItem
-              :value="table.getPageCount() - 1"
-              :disabled="!table.getCanNextPage()"
-            >
+            </PaginationNext>
+            <PaginationLast asChild>
               <Button
-                size="icon"
                 variant="outline"
-                class="disabled:pointer-events-none disabled:opacity-50"
+                class="size-9"
                 @click="table.lastPage()"
                 :disabled="!table.getCanNextPage()"
-                aria-label="Go to last page"
               >
-                <ChevronLastIcon :size="16" aria-hidden="true" />
+                <LucideChevronLast :size="16" aria-hidden="true" />
               </Button>
-            </PaginationItem>
+            </PaginationLast>
           </PaginationContent>
         </Pagination>
       </div>
