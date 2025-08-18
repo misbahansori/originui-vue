@@ -16,8 +16,8 @@ import { LucideArrowLeft, LucideArrowRight } from "lucide-vue-next";
         <span class="hidden sm:block">Previous</span>
       </PaginationPrevious>
       <PaginationNext>
-        <LucideArrowRight />
         <span class="hidden sm:block">Next</span>
+        <LucideArrowRight />
       </PaginationNext>
     </PaginationContent>
   </Pagination>

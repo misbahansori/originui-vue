@@ -2,7 +2,7 @@
 import { Button } from "@/registry/default/ui/button";
 import {
   Pagination,
-  PaginationList,
+  PaginationContent,
   PaginationNext,
   PaginationPrevious,
 } from "@/registry/default/ui/pagination";
@@ -15,7 +15,7 @@ import {
     :total="100"
     v-slot="{ page, pageCount }"
   >
-    <PaginationList class="flex w-full items-center justify-between gap-3">
+    <PaginationContent class="flex w-full items-center justify-between gap-3">
       <p class="text-muted-foreground text-sm" aria-live="polite">
         Page
         <span class="text-foreground">{{ page }}</span>
@@ -30,6 +30,6 @@ import {
           <Button variant="outline" class="h-9 w-auto px-4">Next</Button>
         </PaginationNext>
       </div>
-    </PaginationList>
+    </PaginationContent>
   </Pagination>
 </template>
