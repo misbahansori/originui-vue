@@ -27,7 +27,7 @@ import {
     :defaultPage="1"
     :itemsPerPage="10"
     :total="100"
-    v-slot="{ page, pageCount }"
+    v-slot="{ pageCount }"
     :showEdges="false"
     :siblingCount="0"
   >
