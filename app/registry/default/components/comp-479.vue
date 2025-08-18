@@ -8,6 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/registry/default/ui/table";
+import { valueUpdater } from "@/registry/default/ui/table/utils";
 import {
   FlexRender,
   getCoreRowModel,
@@ -119,18 +120,15 @@ const table = useVueTable({
   get columns() {
     return columns;
   },
-  columnResizeMode: "onChange",
-  getCoreRowModel: getCoreRowModel(),
-  getSortedRowModel: getSortedRowModel(),
   state: {
     get sorting() {
       return sorting.value;
     },
   },
-  onSortingChange: (updater) => {
-    sorting.value =
-      typeof updater === "function" ? updater(sorting.value) : updater;
-  },
+  columnResizeMode: "onChange",
+  getCoreRowModel: getCoreRowModel(),
+  getSortedRowModel: getSortedRowModel(),
+  onSortingChange: (updater) => valueUpdater(updater, sorting),
   enableSortingRemoval: false,
 });
 </script>
@@ -152,6 +150,9 @@ const table = useVueTable({
           <TableHead
             v-for="header in headerGroup.headers"
             :key="header.id"
+            :style="{
+              width: header.getSize() + 'px',
+            }"
             class="relative h-10 border-t select-none last:[&>.cursor-col-resize]:opacity-0"
             :aria-sort="
               header.column.getIsSorted() === 'asc'
@@ -161,9 +162,6 @@ const table = useVueTable({
                   : 'none'
             "
             :colSpan="header.colSpan"
-            :style="{
-              width: header.getSize() + 'px',
-            }"
           >
             <template v-if="!header.isPlaceholder">
               <div
