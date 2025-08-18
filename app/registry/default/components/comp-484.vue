@@ -86,7 +86,6 @@ const columns: ColumnDef<Item>[] = [
         "aria-label": "Select row",
       }),
     size: 28,
-    enableSorting: false,
   },
   {
     header: "Name",
@@ -205,13 +204,21 @@ const table = useVueTable({
               v-for="header in headerGroup.headers"
               :key="header.id"
               :style="{ width: `${header.getSize()}px` }"
-              class="h-11"
+              class="relative h-11 select-none last:[&>.cursor-col-resize]:opacity-0"
+              :aria-sort="
+                header.column.getIsSorted() === 'asc'
+                  ? 'ascending'
+                  : header.column.getIsSorted() === 'desc'
+                    ? 'descending'
+                    : 'none'
+              "
+              :colSpan="header.colSpan"
             >
               <template v-if="!header.isPlaceholder">
                 <div
                   v-if="header.column.getCanSort()"
                   class="flex h-full cursor-pointer items-center justify-between gap-2 select-none"
-                  @click="header.column.getToggleSortingHandler()"
+                  @click="header.column.getToggleSortingHandler()?.($event)"
                   @keydown="
                     (e) => {
                       if (
