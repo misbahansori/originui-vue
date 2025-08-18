@@ -610,7 +610,7 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
                 <div
                   v-if="header.column.getCanSort()"
                   class="flex h-full cursor-pointer items-center justify-between gap-2 select-none"
-                  @click="header.column.getToggleSortingHandler()"
+                  @click="header.column.getToggleSortingHandler()?.($event)"
                   @keydown="
                     (e) => {
                       if (
