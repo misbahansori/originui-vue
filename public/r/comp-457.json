@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-457.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Pagination,\n  PaginationList,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/registry/default/ui/pagination\";\nimport { LucideChevronLeft, LucideChevronRight } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Pagination\n    :defaultPage=\"1\"\n    :itemsPerPage=\"10\"\n    :total=\"100\"\n    v-slot=\"{ page, pageCount }\"\n  >\n    <PaginationList class=\"flex w-full items-center justify-center gap-3\">\n      <PaginationPrevious asChild>\n        <Button variant=\"ghost\" class=\"size-9\">\n          <LucideChevronLeft aria-hidden=\"true\" class=\"size-4\" />\n        </Button>\n      </PaginationPrevious>\n      <p class=\"text-muted-foreground text-sm\" aria-live=\"polite\">\n        Page\n        <span class=\"text-foreground\">{{ page }}</span>\n        of\n        <span class=\"text-foreground\">{{ pageCount }}</span>\n      </p>\n      <PaginationNext asChild>\n        <Button variant=\"ghost\" class=\"size-9\">\n          <LucideChevronRight aria-hidden=\"true\" class=\"size-4\" />\n        </Button>\n      </PaginationNext>\n    </PaginationList>\n  </Pagination>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/registry/default/ui/pagination\";\nimport { LucideChevronLeft, LucideChevronRight } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Pagination\n    :defaultPage=\"1\"\n    :itemsPerPage=\"10\"\n    :total=\"100\"\n    v-slot=\"{ page, pageCount }\"\n  >\n    <PaginationContent class=\"flex w-full items-center justify-center gap-3\">\n      <PaginationPrevious>\n        <LucideChevronLeft aria-hidden=\"true\" class=\"size-4\" />\n      </PaginationPrevious>\n      <p class=\"text-muted-foreground text-sm\" aria-live=\"polite\">\n        Page\n        <span class=\"text-foreground\">{{ page }}</span>\n        of\n        <span class=\"text-foreground\">{{ pageCount }}</span>\n      </p>\n      <PaginationNext>\n        <LucideChevronRight aria-hidden=\"true\" class=\"size-4\" />\n      </PaginationNext>\n    </PaginationContent>\n  </Pagination>\n</template>\n",
       "type": "registry:component"
     }
   ],
@@ -19,7 +19,6 @@
     "lucide-vue-next"
   ],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
     "https://originui-vue.com/r/pagination.json"
   ]
 }
