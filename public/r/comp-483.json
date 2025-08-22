@@ -23,7 +23,7 @@
     "colSpan": 3
   },
   "dependencies": [
-    "@tanstack",
+    "@tanstack/vue-table",
     "lucide-vue-next"
   ],
   "registryDependencies": [
