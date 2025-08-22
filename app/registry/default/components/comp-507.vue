@@ -1,7 +1,5 @@
 <script lang="ts" setup>
 import { Button } from "@/registry/default/ui/button";
-import { getLocalTimeZone, today } from "@internationalized/date";
-import { RangeCalendarRoot, type DateRange } from "reka-ui";
 import {
   RangeCalendarCell,
   RangeCalendarCellTrigger,
@@ -14,7 +12,9 @@ import {
   RangeCalendarHeading,
   RangeCalendarNextButton,
   RangeCalendarPrevButton,
-} from "~/registry/default/ui/range-calendar";
+} from "@/registry/default/ui/range-calendar";
+import { getLocalTimeZone, today } from "@internationalized/date";
+import { RangeCalendarRoot, type DateRange } from "reka-ui";
 
 const todayDate = today(getLocalTimeZone());
 

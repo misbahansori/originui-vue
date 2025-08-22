@@ -20,7 +20,7 @@
     ]
   },
   "dependencies": [
-    "maska"
+    "maska/vue"
   ],
   "registryDependencies": [
     "https://originui-vue.com/r/input.json",
