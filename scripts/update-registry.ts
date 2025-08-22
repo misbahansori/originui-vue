@@ -27,12 +27,6 @@ const EXCLUDED_IMPORTS = new Set([
   "utils",
   "class-variance-authority",
 ]);
-const DEPENDENCY_MAPPINGS: Record<string, string> = {
-  "@tanstack": "@tanstack/vue-table",
-  "@remixicon": "@remixicon/vue",
-  "@vueuse": "@vueuse/core",
-  "@internationalized": "@internationalized/date",
-};
 
 const PATH_MAPPINGS = [
   { from: "app/registry/default/ui/", to: "ui/" },
@@ -173,14 +167,18 @@ function extractDependencies(content: string): string[] {
 
   while ((match = importRegex.exec(content)) !== null) {
     const importPath = match[1];
-    if (!importPath || importPath.startsWith(".") || importPath.startsWith("/"))
+    // Skip relative paths (local project imports) and absolute paths
+    if (
+      !importPath ||
+      importPath.startsWith(".") ||
+      importPath.startsWith("/") ||
+      importPath.startsWith("@/")
+    ) {
       continue;
+    }
 
-    const packageName = importPath.split("/")[0];
-
-    if (packageName && !EXCLUDED_IMPORTS.has(packageName)) {
-      const mappedPackage = DEPENDENCY_MAPPINGS[packageName] || packageName;
-      imports.add(mappedPackage);
+    if (importPath && !EXCLUDED_IMPORTS.has(importPath)) {
+      imports.add(importPath);
     }
   }
 
