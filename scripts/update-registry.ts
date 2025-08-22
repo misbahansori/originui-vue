@@ -28,6 +28,7 @@ const EXCLUDED_IMPORTS = new Set([
   "class-variance-authority",
 ]);
 const DEPENDENCY_MAPPINGS: Record<string, string> = {
+  "@tanstack": "@tanstack/vue-table",
   "@remixicon": "@remixicon/vue",
   "@vueuse": "@vueuse/core",
   "@internationalized": "@internationalized/date",
