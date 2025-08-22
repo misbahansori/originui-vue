@@ -14,6 +14,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/registry/default/ui/table";
+import { valueUpdater } from "@/registry/default/ui/table/utils";
 import {
   FlexRender,
   getCoreRowModel,
@@ -120,21 +121,18 @@ const table = useVueTable({
   get data() {
     return data.value;
   },
-  columns,
-  columnResizeMode: "onChange",
-  getCoreRowModel: getCoreRowModel(),
-  getSortedRowModel: getSortedRowModel(),
+  get columns() {
+    return columns;
+  },
   state: {
     get sorting() {
       return sorting.value;
     },
   },
-  onSortingChange: (updaterOrValue) => {
-    sorting.value =
-      typeof updaterOrValue === "function"
-        ? updaterOrValue(sorting.value)
-        : updaterOrValue;
-  },
+  columnResizeMode: "onChange",
+  getCoreRowModel: getCoreRowModel(),
+  getSortedRowModel: getSortedRowModel(),
+  onSortingChange: (updater) => valueUpdater(updater, sorting),
   enableSortingRemoval: false,
   enableColumnPinning: true,
 });
@@ -170,7 +168,6 @@ const table = useVueTable({
                   :props="header.getContext()"
                 />
               </span>
-              <!-- Pin/Unpin column controls with enhanced accessibility -->
               <template
                 v-if="!header.isPlaceholder && header.column.getCanPin()"
               >
@@ -259,7 +256,3 @@ const table = useVueTable({
     </p>
   </div>
 </template>
-
-<style scoped>
-/* Remove the old dropdown styles since we're using the DropdownMenu component */
-</style>

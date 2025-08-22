@@ -21,7 +21,7 @@
     "colSpan": 3
   },
   "dependencies": [
-    "@tanstack"
+    "@tanstack/vue-table"
   ],
   "registryDependencies": [
     "https://originui-vue.com/r/badge.json",

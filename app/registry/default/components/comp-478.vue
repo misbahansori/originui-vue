@@ -10,6 +10,7 @@ import {
   TableRow,
 } from "@/registry/default/ui/table";
 import TableFilter from "@/registry/default/ui/table/TableFilter.vue";
+import { valueUpdater } from "@/registry/default/ui/table/utils";
 import {
   FlexRender,
   getCoreRowModel,
@@ -68,6 +69,7 @@ const columns: ColumnDef<Item>[] = [
     accessorKey: "keyword",
     cell: ({ row }) =>
       h("div", { class: "font-medium" }, row.getValue("keyword")),
+    enableSorting: false,
   },
   {
     header: "Intents",
@@ -264,45 +266,33 @@ const table = useVueTable({
       return columnFilters.value;
     },
   },
-  onColumnFiltersChange: (updater) => {
-    columnFilters.value =
-      typeof updater === "function" ? updater(columnFilters.value) : updater;
-  },
   getCoreRowModel: getCoreRowModel(),
   getFilteredRowModel: getFilteredRowModel(),
   getSortedRowModel: getSortedRowModel(),
   getFacetedRowModel: getFacetedRowModel(),
   getFacetedUniqueValues: getFacetedUniqueValues(),
   getFacetedMinMaxValues: getFacetedMinMaxValues(),
-  onSortingChange: (updater) => {
-    sorting.value =
-      typeof updater === "function" ? updater(sorting.value) : updater;
-  },
+  onSortingChange: (updater) => valueUpdater(updater, sorting),
+  onColumnFiltersChange: (updater) => valueUpdater(updater, columnFilters),
   enableSortingRemoval: false,
 });
 </script>
 
 <template>
   <div class="space-y-6">
-    <!-- Filters -->
     <div class="flex flex-wrap gap-3">
-      <!-- Search input -->
       <div class="w-44">
         <TableFilter :column="table.getColumn('keyword')!" />
       </div>
-      <!-- Intents select -->
       <div class="w-36">
         <TableFilter :column="table.getColumn('intents')!" />
       </div>
-      <!-- Volume inputs -->
       <div class="w-36">
         <TableFilter :column="table.getColumn('volume')!" />
       </div>
-      <!-- CPC inputs -->
       <div class="w-36">
         <TableFilter :column="table.getColumn('cpc')!" />
       </div>
-      <!-- Traffic inputs -->
       <div class="w-36">
         <TableFilter :column="table.getColumn('traffic')!" />
       </div>
@@ -318,6 +308,7 @@ const table = useVueTable({
           <TableHead
             v-for="header in headerGroup.headers"
             :key="header.id"
+            :style="{ width: `${header.getSize()}px` }"
             class="relative h-10 border-t select-none"
             :aria-sort="
               header.column.getIsSorted() === 'asc'
@@ -326,17 +317,13 @@ const table = useVueTable({
                   ? 'descending'
                   : 'none'
             "
+            :colSpan="header.colSpan"
           >
             <template v-if="!header.isPlaceholder">
               <div
                 v-if="header.column.getCanSort()"
-                :class="
-                  cn(
-                    header.column.getCanSort() &&
-                      'flex h-full cursor-pointer items-center justify-between gap-2 select-none',
-                  )
-                "
-                @click="header.column.getToggleSortingHandler()"
+                class="flex h-full cursor-pointer items-center justify-between gap-2 select-none"
+                @click="header.column.getToggleSortingHandler()?.($event)"
                 @keydown="
                   (e) => {
                     if (

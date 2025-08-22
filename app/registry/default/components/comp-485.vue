@@ -54,6 +54,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/registry/default/ui/table";
+import { valueUpdater } from "@/registry/default/ui/table/utils";
 import {
   FlexRender,
   getCoreRowModel,
@@ -88,7 +89,6 @@ import {
   LucideTrash,
 } from "lucide-vue-next";
 import { computed, h, onMounted, ref } from "vue";
-
 type Item = {
   id: string;
   name: string;
@@ -276,26 +276,12 @@ const table = useVueTable({
       return columnVisibility.value;
     },
   },
-  onSortingChange: (updater) => {
-    sorting.value =
-      typeof updater === "function" ? updater(sorting.value) : updater;
-  },
-  onPaginationChange: (updater) => {
-    pagination.value =
-      typeof updater === "function" ? updater(pagination.value) : updater;
-  },
-  onColumnFiltersChange: (updater) => {
-    columnFilters.value =
-      typeof updater === "function" ? updater(columnFilters.value) : updater;
-  },
-  onColumnVisibilityChange: (updater) => {
-    columnVisibility.value =
-      typeof updater === "function" ? updater(columnVisibility.value) : updater;
-  },
-  onRowSelectionChange: (updater) => {
-    rowSelection.value =
-      typeof updater === "function" ? updater(rowSelection.value) : updater;
-  },
+  onSortingChange: (updater) => valueUpdater(updater, sorting),
+  onPaginationChange: (updater) => valueUpdater(updater, pagination),
+  onColumnFiltersChange: (updater) => valueUpdater(updater, columnFilters),
+  onColumnVisibilityChange: (updater) =>
+    valueUpdater(updater, columnVisibility),
+  onRowSelectionChange: (updater) => valueUpdater(updater, rowSelection),
   enableSortingRemoval: false,
 });
 
