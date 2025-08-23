@@ -2,7 +2,6 @@
 import {
   Accordion,
   AccordionContent,
-  AccordionHeader,
   AccordionItem,
   AccordionTrigger,
 } from "@/registry/default/ui/accordion";
@@ -59,31 +58,29 @@ const items = [
         :value="item.id"
         class="py-2"
       >
-        <AccordionHeader>
-          <AccordionTrigger
-            class="focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-center justify-between rounded-md py-2 text-left text-[15px] leading-6 font-semibold transition-all outline-none focus-visible:ring-[3px] [&[data-state=open]>svg]:rotate-180"
-          >
-            <span class="flex items-center gap-3">
-              <span
-                class="flex size-10 shrink-0 items-center justify-center rounded-full border"
+        <AccordionTrigger
+          class="focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-center justify-between rounded-md py-2 text-left text-[15px] leading-6 font-semibold transition-all outline-none focus-visible:ring-[3px] [&[data-state=open]>svg]:rotate-180"
+        >
+          <span class="flex items-center gap-3">
+            <span
+              class="flex size-10 shrink-0 items-center justify-center rounded-full border"
+              aria-hidden="true"
+            >
+              <component
+                :is="item.icon"
+                :size="16"
+                class="opacity-60"
                 aria-hidden="true"
-              >
-                <component
-                  :is="item.icon"
-                  :size="16"
-                  class="opacity-60"
-                  aria-hidden="true"
-                />
-              </span>
-              <span class="flex flex-col space-y-1">
-                <span>{{ item.title }}</span>
-                <span v-if="item.sub" class="text-sm font-normal">
-                  {{ item.sub }}
-                </span>
+              />
+            </span>
+            <span class="flex flex-col space-y-1">
+              <span>{{ item.title }}</span>
+              <span v-if="item.sub" class="text-sm font-normal">
+                {{ item.sub }}
               </span>
             </span>
-          </AccordionTrigger>
-        </AccordionHeader>
+          </span>
+        </AccordionTrigger>
         <AccordionContent class="text-muted-foreground ms-3 ps-10 pb-2">
           {{ item.content }}
         </AccordionContent>

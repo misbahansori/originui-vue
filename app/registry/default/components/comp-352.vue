@@ -2,7 +2,6 @@
 import {
   Accordion,
   AccordionContent,
-  AccordionHeader,
   AccordionItem,
   AccordionTrigger,
 } from "@/registry/default/ui/accordion";
@@ -97,13 +96,11 @@ const items = [
         :value="item.id"
         class="bg-background has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative border outline-none first:rounded-t-md last:rounded-b-md last:border-b has-focus-visible:z-10 has-focus-visible:ring-[3px]"
       >
-        <AccordionHeader>
-          <AccordionTrigger
-            class="rounded-md px-4 py-3 text-[15px] leading-6 outline-none hover:no-underline focus-visible:ring-0"
-          >
-            {{ item.title }}
-          </AccordionTrigger>
-        </AccordionHeader>
+        <AccordionTrigger
+          class="rounded-md px-4 py-3 text-[15px] leading-6 outline-none hover:no-underline focus-visible:ring-0"
+        >
+          {{ item.title }}
+        </AccordionTrigger>
         <AccordionContent class="p-0">
           <Collapsible
             v-for="(collapsible, index) in item.collapsibles"

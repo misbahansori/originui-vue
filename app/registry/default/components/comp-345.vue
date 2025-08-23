@@ -2,7 +2,6 @@
 import {
   Accordion,
   AccordionContent,
-  AccordionHeader,
   AccordionItem,
   AccordionTrigger,
 } from "@/registry/default/ui/accordion";
@@ -51,19 +50,17 @@ const items = [
         :value="item.id"
         class="bg-background has-focus-visible:border-ring has-focus-visible:ring-ring/50 rounded-md border px-4 py-1 outline-none last:border-b has-focus-visible:ring-[3px]"
       >
-        <AccordionHeader>
-          <AccordionTrigger
-            class="ocus-visible:ring-0 flex flex-1 items-center justify-between rounded-md py-2 text-left text-[15px] leading-6 font-semibold transition-all outline-none [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg]:rotate-180 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0"
-          >
-            {{ item.title }}
-            <template #icon>
-              <LucidePlus
-                class="pointer-events-none size-4 shrink-0 opacity-60 transition-transform duration-200"
-                aria-hidden="true"
-              />
-            </template>
-          </AccordionTrigger>
-        </AccordionHeader>
+        <AccordionTrigger
+          class="ocus-visible:ring-0 flex flex-1 items-center justify-between rounded-md py-2 text-left text-[15px] leading-6 font-semibold transition-all outline-none [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg]:rotate-180 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0"
+        >
+          {{ item.title }}
+          <template #icon>
+            <LucidePlus
+              class="pointer-events-none size-4 shrink-0 opacity-60 transition-transform duration-200"
+              aria-hidden="true"
+            />
+          </template>
+        </AccordionTrigger>
         <AccordionContent class="text-muted-foreground pb-2">
           {{ item.content }}
         </AccordionContent>

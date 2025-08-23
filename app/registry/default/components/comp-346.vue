@@ -2,7 +2,6 @@
 import {
   Accordion,
   AccordionContent,
-  AccordionHeader,
   AccordionItem,
   AccordionTrigger,
 } from "@/registry/default/ui/accordion";
@@ -50,13 +49,11 @@ const items = [
         :value="item.id"
         class="bg-background has-focus-visible:border-ring has-focus-visible:ring-ring/50 rounded-md border px-4 py-1 outline-none last:border-b has-focus-visible:ring-[3px]"
       >
-        <AccordionHeader>
-          <AccordionTrigger
-            class="justify-start gap-3 py-2 text-[15px] leading-6 hover:no-underline focus-visible:ring-0 [&>svg]:-order-1"
-          >
-            {{ item.title }}
-          </AccordionTrigger>
-        </AccordionHeader>
+        <AccordionTrigger
+          class="justify-start gap-3 py-2 text-[15px] leading-6 hover:no-underline focus-visible:ring-0 [&>svg]:-order-1"
+        >
+          {{ item.title }}
+        </AccordionTrigger>
         <AccordionContent class="text-muted-foreground ps-7 pb-2">
           {{ item.content }}
         </AccordionContent>

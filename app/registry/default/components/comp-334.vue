@@ -44,13 +44,9 @@ const items = [
         :value="item.id"
         class="py-2"
       >
-        <AccordionHeader>
-          <AccordionTrigger
-            class="py-2 text-[15px] leading-6 hover:no-underline"
-          >
-            {{ item.title }}
-          </AccordionTrigger>
-        </AccordionHeader>
+        <AccordionTrigger class="py-2 text-[15px] leading-6 hover:no-underline">
+          {{ item.title }}
+        </AccordionTrigger>
         <AccordionContent class="text-muted-foreground pb-2">
           {{ item.content }}
         </AccordionContent>
