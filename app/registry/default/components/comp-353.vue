@@ -112,7 +112,7 @@ const items = [
         class="has-focus-visible:border-ring has-focus-visible:ring-ring/50 outline-none has-focus-visible:ring-[3px]"
       >
         <AccordionTrigger
-          class="justify-start gap-3 rounded-md text-[15px] leading-6 outline-none hover:no-underline focus-visible:ring-0 [&>svg]:-order-1"
+          class="justify-start gap-3 text-[15px] leading-6 font-semibold outline-none hover:no-underline [&>svg]:-order-1"
         >
           <span class="flex items-center gap-3">
             <component
