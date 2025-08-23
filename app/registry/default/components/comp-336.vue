@@ -45,7 +45,7 @@ const items = [
         class="py-2"
       >
         <AccordionTrigger
-          class="justify-start gap-3 py-2 text-[15px] leading-6 hover:no-underline [&>svg]:-order-1"
+          class="justify-start gap-3 py-2 text-[15px] leading-6 font-semibold hover:no-underline [&>svg]:-order-1"
         >
           {{ item.title }}
         </AccordionTrigger>
