@@ -2,7 +2,6 @@
 import {
   Accordion,
   AccordionContent,
-  AccordionHeader,
   AccordionItem,
   AccordionTrigger,
 } from "@/registry/default/ui/accordion";
@@ -51,19 +50,17 @@ const items = [
         :value="item.id"
         class="bg-background has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative border px-4 py-1 outline-none first:rounded-t-md last:rounded-b-md last:border-b has-focus-visible:z-10 has-focus-visible:ring-[3px]"
       >
-        <AccordionHeader class="flex">
-          <AccordionTrigger
-            class="flex flex-1 items-center gap-4 rounded-md py-2 text-left text-sm text-[15px] leading-6 font-semibold transition-all outline-none focus-visible:ring-0 [&>svg]:-order-1 [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg]:rotate-180 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0"
-          >
-            {{ item.title }}
-            <template #icon>
-              <LucidePlus
-                class="pointer-events-none size-4 shrink-0 opacity-60 transition-transform duration-200"
-                aria-hidden="true"
-              />
-            </template>
-          </AccordionTrigger>
-        </AccordionHeader>
+        <AccordionTrigger
+          class="items-center justify-start gap-3 py-2 text-[15px] leading-6 font-semibold outline-none hover:no-underline [&>svg]:-order-1"
+        >
+          {{ item.title }}
+          <template #icon>
+            <LucidePlus
+              class="pointer-events-none size-4 shrink-0 opacity-60 transition-transform duration-200"
+              aria-hidden="true"
+            />
+          </template>
+        </AccordionTrigger>
         <AccordionContent class="text-muted-foreground ps-7 pb-2">
           {{ item.content }}
         </AccordionContent>

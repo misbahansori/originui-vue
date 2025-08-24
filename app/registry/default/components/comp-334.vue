@@ -44,13 +44,11 @@ const items = [
         :value="item.id"
         class="py-2"
       >
-        <AccordionHeader>
-          <AccordionTrigger
-            class="py-2 text-[15px] leading-6 hover:no-underline"
-          >
-            {{ item.title }}
-          </AccordionTrigger>
-        </AccordionHeader>
+        <AccordionTrigger
+          class="items-center py-2 text-left text-[15px] leading-6 font-semibold hover:no-underline [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg]:rotate-180 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0"
+        >
+          {{ item.title }}
+        </AccordionTrigger>
         <AccordionContent class="text-muted-foreground pb-2">
           {{ item.content }}
         </AccordionContent>

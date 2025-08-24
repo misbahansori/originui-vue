@@ -2,7 +2,6 @@
 import {
   Accordion,
   AccordionContent,
-  AccordionHeader,
   AccordionItem,
   AccordionTrigger,
 } from "@/registry/default/ui/accordion";
@@ -49,18 +48,16 @@ const items = [
         :value="item.id"
         class="py-2"
       >
-        <AccordionHeader>
-          <AccordionTrigger
-            class="focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-center justify-between rounded-md py-2 text-left text-[15px] leading-6 font-semibold transition-all outline-none focus-visible:ring-[3px] [&[data-state=open]>svg]:rotate-180"
-          >
-            <span class="flex flex-col space-y-1">
-              <span>{{ item.title }}</span>
-              <span v-if="item.sub" class="text-sm font-normal">
-                {{ item.sub }}
-              </span>
+        <AccordionTrigger
+          class="items-center py-2 text-left text-[15px] leading-6 font-semibold transition-all hover:no-underline [&[data-state=open]>svg]:rotate-180"
+        >
+          <span class="flex flex-col space-y-1">
+            <span>{{ item.title }}</span>
+            <span v-if="item.sub" class="text-sm font-normal">
+              {{ item.sub }}
             </span>
-          </AccordionTrigger>
-        </AccordionHeader>
+          </span>
+        </AccordionTrigger>
         <AccordionContent class="text-muted-foreground pb-2">
           {{ item.content }}
         </AccordionContent>
