@@ -6,13 +6,6 @@
     {
       "name": "extended-01",
       "type": "registry:component",
-      "dependencies": ["@remixicon/vue"],
-      "registryDependencies": [
-        "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/input.json",
-        "https://originui-vue.com/r/label.json",
-        "https://originui-vue.com/r/checkbox.json"
-      ],
       "files": [
         {
           "path": "app/registry/default/components/extended-01.vue",
@@ -27,12 +20,6 @@
     {
       "name": "extended-02",
       "type": "registry:component",
-      "dependencies": ["@remixicon/vue"],
-      "registryDependencies": [
-        "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/input.json",
-        "https://originui-vue.com/r/label.json"
-      ],
       "files": [
         {
           "path": "app/registry/default/components/extended-02.vue",
@@ -47,7 +34,6 @@
     {
       "name": "extended-03",
       "type": "registry:component",
-      "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
           "path": "app/registry/default/components/extended-03.vue",
@@ -62,11 +48,6 @@
     {
       "name": "extended-04",
       "type": "registry:component",
-      "registryDependencies": [
-        "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/input.json",
-        "https://originui-vue.com/r/label.json"
-      ],
       "files": [
         {
           "path": "app/registry/default/components/extended-04.vue",
@@ -81,11 +62,6 @@
     {
       "name": "extended-05",
       "type": "registry:component",
-      "registryDependencies": [
-        "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/input.json",
-        "https://originui-vue.com/r/label.json"
-      ],
       "files": [
         {
           "path": "app/registry/default/components/extended-05.vue",
@@ -100,8 +76,6 @@
     {
       "name": "extended-06",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
-      "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
           "path": "app/registry/default/components/extended-06.vue",
@@ -116,8 +90,6 @@
     {
       "name": "extended-07",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
-      "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
           "path": "app/registry/default/components/extended-07.vue",
@@ -132,8 +104,6 @@
     {
       "name": "extended-08",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
-      "registryDependencies": ["https://originui-vue.com/r/button.json"],
       "files": [
         {
           "path": "app/registry/default/components/extended-08.vue",
@@ -148,11 +118,6 @@
     {
       "name": "extended-09",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
-      "registryDependencies": [
-        "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/card.json"
-      ],
       "files": [
         {
           "path": "app/registry/default/components/extended-09.vue",
@@ -167,8 +132,6 @@
     {
       "name": "extended-10",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
-      "registryDependencies": ["https://originui-vue.com/r/card.json"],
       "files": [
         {
           "path": "app/registry/default/components/extended-10.vue",
@@ -183,11 +146,6 @@
     {
       "name": "extended-11",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
-      "registryDependencies": [
-        "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/card.json"
-      ],
       "files": [
         {
           "path": "app/registry/default/components/extended-11.vue",
@@ -202,11 +160,6 @@
     {
       "name": "extended-12",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
-      "registryDependencies": [
-        "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/card.json"
-      ],
       "files": [
         {
           "path": "app/registry/default/components/extended-12.vue",
@@ -221,8 +174,6 @@
     {
       "name": "extended-13",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
-      "registryDependencies": ["https://originui-vue.com/r/card.json"],
       "files": [
         {
           "path": "app/registry/default/components/extended-13.vue",
@@ -237,12 +188,6 @@
     {
       "name": "extended-14",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
-      "registryDependencies": [
-        "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/badge.json",
-        "https://originui-vue.com/r/card.json"
-      ],
       "files": [
         {
           "path": "app/registry/default/components/extended-14.vue",
@@ -257,8 +202,6 @@
     {
       "name": "extended-15",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
-      "registryDependencies": ["https://originui-vue.com/r/card.json"],
       "files": [
         {
           "path": "app/registry/default/components/extended-15.vue",
@@ -273,8 +216,6 @@
     {
       "name": "extended-16",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
-      "registryDependencies": ["https://originui-vue.com/r/card.json"],
       "files": [
         {
           "path": "app/registry/default/components/extended-16.vue",
@@ -289,11 +230,6 @@
     {
       "name": "extended-17",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
-      "registryDependencies": [
-        "https://originui-vue.com/r/card.json",
-        "https://originui-vue.com/r/separator.json"
-      ],
       "files": [
         {
           "path": "app/registry/default/components/extended-17.vue",
@@ -308,12 +244,6 @@
     {
       "name": "extended-18",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
-      "registryDependencies": [
-        "https://originui-vue.com/r/card.json",
-        "https://originui-vue.com/r/button.json",
-        "https://originui-vue.com/r/separator.json"
-      ],
       "files": [
         {
           "path": "app/registry/default/components/extended-18.vue",
@@ -328,8 +258,6 @@
     {
       "name": "extended-19",
       "type": "registry:component",
-      "dependencies": ["lucide-vue-next"],
-      "registryDependencies": ["https://originui-vue.com/r/card.json"],
       "files": [
         {
           "path": "app/registry/default/components/extended-19.vue",
@@ -339,6 +267,20 @@
       "meta": {
         "tags": ["card", "extended", "card"],
         "colSpan": 1
+      }
+    },
+    {
+      "name": "extended-20",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-20.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["statistic-card", "extended", "card"],
+        "colSpan": 3
       }
     }
   ]
