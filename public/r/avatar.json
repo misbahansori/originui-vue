@@ -5,27 +5,28 @@
   "files": [
     {
       "path": "ui/avatar/Avatar.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { AvatarRoot } from \"reka-ui\";\nimport type { HTMLAttributes } from \"vue\";\nimport { avatarVariant, type AvatarVariants } from \".\";\n\nconst props = withDefaults(\n  defineProps<{\n    class?: HTMLAttributes[\"class\"];\n    size?: AvatarVariants[\"size\"];\n    shape?: AvatarVariants[\"shape\"];\n  }>(),\n  {\n    size: \"sm\",\n    shape: \"circle\",\n  },\n);\n</script>\n\n<template>\n  <AvatarRoot :class=\"cn(avatarVariant({ size, shape }), props.class)\">\n    <slot />\n  </AvatarRoot>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\r\nimport { cn } from \"@/lib/utils\";\r\nimport { AvatarRoot } from \"reka-ui\";\r\nimport type { HTMLAttributes } from \"vue\";\r\n\r\nconst props = defineProps<{\r\n  class?: HTMLAttributes[\"class\"];\r\n}>();\r\n</script>\r\n\r\n<template>\r\n  <AvatarRoot\r\n    data-slot=\"avatar\"\r\n    :class=\"\r\n      cn(\r\n        'relative flex size-8 shrink-0 overflow-hidden rounded-full',\r\n        props.class,\r\n      )\r\n    \"\r\n  >\r\n    <slot />\r\n  </AvatarRoot>\r\n</template>\r\n",
       "type": "registry:ui"
     },
     {
       "path": "ui/avatar/AvatarFallback.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { AvatarFallback, type AvatarFallbackProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<\n  AvatarFallbackProps & { class?: HTMLAttributes[\"class\"] }\n>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <AvatarFallback\n    data-slot=\"avatar-fallback\"\n    v-bind=\"delegatedProps\"\n    :class=\"\n      cn(\n        'bg-muted flex size-full items-center justify-center rounded-full',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </AvatarFallback>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\r\nimport { cn } from \"@/lib/utils\";\r\nimport { reactiveOmit } from \"@vueuse/core\";\r\nimport type { AvatarFallbackProps } from \"reka-ui\";\r\nimport { AvatarFallback } from \"reka-ui\";\r\nimport type { HTMLAttributes } from \"vue\";\r\n\r\nconst props = defineProps<\r\n  AvatarFallbackProps & { class?: HTMLAttributes[\"class\"] }\r\n>();\r\n\r\nconst delegatedProps = reactiveOmit(props, \"class\");\r\n</script>\r\n\r\n<template>\r\n  <AvatarFallback\r\n    data-slot=\"avatar-fallback\"\r\n    v-bind=\"delegatedProps\"\r\n    :class=\"\r\n      cn(\r\n        'bg-muted flex size-full items-center justify-center rounded-full text-xs',\r\n        props.class,\r\n      )\r\n    \"\r\n  >\r\n    <slot />\r\n  </AvatarFallback>\r\n</template>\r\n",
       "type": "registry:ui"
     },
     {
       "path": "ui/avatar/AvatarImage.vue",
-      "content": "<script setup lang=\"ts\">\nimport type { AvatarImageProps } from \"reka-ui\";\nimport { AvatarImage } from \"reka-ui\";\n\nconst props = defineProps<AvatarImageProps>();\n</script>\n\n<template>\n  <AvatarImage\n    data-slot=\"avatar-image\"\n    v-bind=\"props\"\n    class=\"h-full w-full object-cover\"\n  >\n    <slot />\n  </AvatarImage>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\r\nimport type { AvatarImageProps } from \"reka-ui\";\r\nimport { AvatarImage } from \"reka-ui\";\r\n\r\nconst props = defineProps<AvatarImageProps>();\r\n</script>\r\n\r\n<template>\r\n  <AvatarImage\r\n    data-slot=\"avatar-image\"\r\n    v-bind=\"props\"\r\n    class=\"aspect-square size-full\"\r\n  >\r\n    <slot />\r\n  </AvatarImage>\r\n</template>\r\n",
       "type": "registry:ui"
     },
     {
       "path": "ui/avatar/index.ts",
-      "content": "import { cva, type VariantProps } from \"class-variance-authority\";\n\nexport { default as Avatar } from \"./Avatar.vue\";\nexport { default as AvatarFallback } from \"./AvatarFallback.vue\";\nexport { default as AvatarImage } from \"./AvatarImage.vue\";\n\nexport const avatarVariant = cva(\n  \"inline-flex items-center justify-center font-normal text-foreground select-none shrink-0 bg-secondary overflow-hidden\",\n  {\n    variants: {\n      size: {\n        xs: \"h-8 w-8 text-xs\",\n        sm: \"h-10 w-10 text-xs\",\n        base: \"h-16 w-16 text-2xl\",\n        lg: \"h-32 w-32 text-5xl\",\n      },\n      shape: {\n        circle: \"rounded-full\",\n        square: \"rounded-md\",\n      },\n    },\n  },\n);\n\nexport type AvatarVariants = VariantProps<typeof avatarVariant>;\n",
+      "content": "export { default as Avatar } from \"./Avatar.vue\"\nexport { default as AvatarFallback } from \"./AvatarFallback.vue\"\nexport { default as AvatarImage } from \"./AvatarImage.vue\"\n",
       "type": "registry:ui"
     }
   ],
   "dependencies": [
-    "reka-ui"
+    "reka-ui",
+    "@vueuse/core"
   ],
   "registryDependencies": []
 }
