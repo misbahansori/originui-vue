@@ -46,6 +46,10 @@ export const extendedCategories: ExtendedComponentCategory[] = [
   {
     slug: "extended/statistic-card",
     name: "Statistic Card",
-    components: [{ name: "extended-20" }, { name: "extended-21" }],
+    components: [
+      { name: "extended-20" },
+      { name: "extended-21" },
+      { name: "extended-22" },
+    ],
   },
 ];
