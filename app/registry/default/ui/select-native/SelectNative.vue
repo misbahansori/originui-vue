@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
+import type { HTMLAttributes } from "vue";
 
 interface SelectNativeProps {
-  class?: string;
+  class?: HTMLAttributes["class"];
   multiple?: boolean;
-  [key: string]: any;
 }
 
 const props = defineProps<SelectNativeProps>();

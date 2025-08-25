@@ -8,7 +8,7 @@ import {
   SelectValue,
 } from "@/registry/default/ui/select";
 import { RiReactjsLine, RiSvelteLine, RiVuejsLine } from "@remixicon/vue";
-import { ref, useId } from "vue";
+import { shallowRef, useId } from "vue";
 
 const id = useId();
 
@@ -30,7 +30,7 @@ const options = [
   },
 ];
 
-const selectedOption = ref(options[0]);
+const selectedOption = shallowRef(options[0]);
 </script>
 
 <template>

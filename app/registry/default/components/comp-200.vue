@@ -35,13 +35,15 @@ const formattedTimezones = computed(() => {
   <div class="*:not-first:mt-2">
     <Label :for="id">Timezone select (native)</Label>
     <SelectNative :id="id" default-value="Europe/London">
-      <option
-        v-for="{ value, label } in formattedTimezones"
-        :key="value"
-        :value="value"
-      >
-        {{ label }}
-      </option>
+      <ClientOnly>
+        <option
+          v-for="{ value, label } in formattedTimezones"
+          :key="value"
+          :value="value"
+        >
+          {{ label }}
+        </option>
+      </ClientOnly>
     </SelectNative>
   </div>
 </template>
