@@ -338,6 +338,20 @@
         "tags": ["statistic-card", "extended", "card"],
         "colSpan": 2
       }
+    },
+    {
+      "name": "extended-25",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-25.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["statistic-card", "extended", "card"],
+        "colSpan": 2
+      }
     }
   ]
 }
