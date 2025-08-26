@@ -2,13 +2,6 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "extended-19",
   "type": "registry:component",
-  "dependencies": [
-    "@remixicon/vue"
-  ],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/card.json"
-  ],
   "files": [
     {
       "path": "components/extended-19.vue",
@@ -23,5 +16,12 @@
       "card"
     ],
     "colSpan": 1
-  }
+  },
+  "dependencies": [
+    "@remixicon/vue"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/card.json"
+  ]
 }

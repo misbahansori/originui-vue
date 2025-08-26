@@ -2,10 +2,6 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "extended-13",
   "type": "registry:component",
-  "dependencies": [],
-  "registryDependencies": [
-    "https://originui-vue.com/r/card.json"
-  ],
   "files": [
     {
       "path": "components/extended-13.vue",
@@ -20,5 +16,9 @@
       "card"
     ],
     "colSpan": 3
-  }
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/card.json"
+  ]
 }

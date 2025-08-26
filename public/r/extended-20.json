@@ -1,0 +1,29 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "extended-20",
+  "type": "registry:component",
+  "files": [
+    {
+      "path": "components/extended-20.vue",
+      "content": "<script setup lang=\"ts\">\nimport { Badge } from \"@/registry/default/ui/badge\";\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Card,\n  CardContent,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/default/ui/card\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/registry/default/ui/dropdown-menu\";\nimport {\n  LucideArrowDown,\n  LucideArrowUp,\n  LucideMoreHorizontal,\n  LucidePin,\n  LucideSettings,\n  LucideShare2,\n  LucideTrash,\n  LucideTriangleAlert,\n} from \"lucide-vue-next\";\n\nconst stats = [\n  {\n    title: \"All Orders\",\n    value: 122380,\n    delta: 15.1,\n    lastMonth: 105922,\n    positive: true,\n    prefix: \"\",\n    suffix: \"\",\n  },\n  {\n    title: \"Order Created\",\n    value: 1902380,\n    delta: -2.0,\n    lastMonth: 2002098,\n    positive: false,\n    prefix: \"\",\n    suffix: \"\",\n  },\n  {\n    title: \"Organic Sales\",\n    value: 98100000,\n    delta: 0.4,\n    lastMonth: 97800000,\n    positive: true,\n    prefix: \"$\",\n    suffix: \"M\",\n    format: (v: number) => `$${(v / 1_000_000).toFixed(1)}M`,\n    lastFormat: (v: number) => `$${(v / 1_000_000).toFixed(1)}M`,\n  },\n  {\n    title: \"Active Users\",\n    value: 48210,\n    delta: 3.7,\n    lastMonth: 46480,\n    positive: true,\n    prefix: \"\",\n    suffix: \"\",\n  },\n];\n\nfunction formatNumber(n: number) {\n  if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + \"M\";\n  if (n >= 1_000) return n.toLocaleString();\n  return n.toString();\n}\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <div class=\"grid grow grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4\">\n      <Card v-for=\"(stat, index) in stats\" :key=\"index\" class=\"py-4\">\n        <CardHeader class=\"flex items-center justify-between border-0\">\n          <CardTitle class=\"text-muted-foreground text-sm font-medium\">\n            {{ stat.title }}\n          </CardTitle>\n          <div class=\"ml-auto\">\n            <DropdownMenu>\n              <DropdownMenuTrigger as-child>\n                <Button variant=\"ghost\" size=\"sm\" mode=\"icon\" class=\"-me-1.5\">\n                  <LucideMoreHorizontal />\n                </Button>\n              </DropdownMenuTrigger>\n              <DropdownMenuContent align=\"end\" side=\"bottom\">\n                <DropdownMenuItem>\n                  <LucideSettings />\n                  Settings\n                </DropdownMenuItem>\n                <DropdownMenuItem>\n                  <LucideTriangleAlert />\n                  Add Alert\n                </DropdownMenuItem>\n                <DropdownMenuItem>\n                  <LucidePin />\n                  Pin to Dashboard\n                </DropdownMenuItem>\n                <DropdownMenuItem>\n                  <LucideShare2 />\n                  Share\n                </DropdownMenuItem>\n                <DropdownMenuSeparator />\n                <DropdownMenuItem variant=\"destructive\">\n                  <LucideTrash />\n                  Remove\n                </DropdownMenuItem>\n              </DropdownMenuContent>\n            </DropdownMenu>\n          </div>\n        </CardHeader>\n        <CardContent class=\"space-y-2.5\">\n          <div class=\"flex items-center gap-2.5\">\n            <span class=\"text-foreground text-2xl font-medium tracking-tight\">\n              {{\n                stat.format\n                  ? stat.format(stat.value)\n                  : stat.prefix + formatNumber(stat.value) + stat.suffix\n              }}\n            </span>\n            <Badge :variant=\"stat.positive ? 'default' : 'destructive'\">\n              <LucideArrowUp v-if=\"stat.delta > 0\" class=\"size-4\" />\n              <LucideArrowDown v-else class=\"size-4\" />\n              {{ stat.delta }}%\n            </Badge>\n          </div>\n          <div class=\"text-muted-foreground mt-2 border-t pt-2.5 text-xs\">\n            Vs last month:\n            <span class=\"text-foreground font-medium\">\n              {{\n                stat.lastFormat\n                  ? stat.lastFormat(stat.lastMonth)\n                  : stat.prefix + formatNumber(stat.lastMonth) + stat.suffix\n              }}\n            </span>\n          </div>\n        </CardContent>\n      </Card>\n    </div>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Ported from reui.io statistic cards\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reui.io/blocks/cards\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        reui.io\n      </a>\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "statistic-card",
+      "extended",
+      "card"
+    ],
+    "colSpan": 3
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/badge.json",
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/card.json",
+    "https://originui-vue.com/r/dropdown-menu.json"
+  ]
+}

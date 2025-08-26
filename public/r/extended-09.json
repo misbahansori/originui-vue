@@ -2,13 +2,6 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "extended-09",
   "type": "registry:component",
-  "dependencies": [
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/card.json"
-  ],
   "files": [
     {
       "path": "components/extended-09.vue",
@@ -23,5 +16,12 @@
       "empty"
     ],
     "colSpan": 2
-  }
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/card.json"
+  ]
 }

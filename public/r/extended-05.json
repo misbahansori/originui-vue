@@ -2,11 +2,6 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "extended-05",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json"
-  ],
   "files": [
     {
       "path": "components/extended-05.vue",
@@ -23,5 +18,10 @@
     ],
     "colSpan": 3
   },
-  "dependencies": []
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json"
+  ]
 }

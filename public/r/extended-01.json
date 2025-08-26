@@ -2,16 +2,6 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "extended-01",
   "type": "registry:component",
-  "dependencies": [
-    "@remixicon/vue",
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/checkbox.json",
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json"
-  ],
   "files": [
     {
       "path": "components/extended-01.vue",
@@ -27,5 +17,15 @@
       "sign in"
     ],
     "colSpan": 3
-  }
+  },
+  "dependencies": [
+    "@remixicon/vue",
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/checkbox.json",
+    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/label.json"
+  ]
 }
