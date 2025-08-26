@@ -2,9 +2,6 @@
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "extended-03",
   "type": "registry:component",
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ],
   "files": [
     {
       "path": "components/extended-03.vue",
@@ -21,5 +18,8 @@
     ],
     "colSpan": 3
   },
-  "dependencies": []
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json"
+  ]
 }

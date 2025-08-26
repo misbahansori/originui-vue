@@ -1,0 +1,27 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "extended-23",
+  "type": "registry:component",
+  "files": [
+    {
+      "path": "components/extended-23.vue",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { Badge } from \"@/registry/default/ui/badge\";\nimport { Card, CardContent } from \"@/registry/default/ui/card\";\nimport {\n  LucideBriefcase,\n  LucideShoppingCart,\n  LucideTrendingDown,\n  LucideTrendingUp,\n  LucideUsers,\n} from \"lucide-vue-next\";\n\nconst cards = [\n  {\n    icon: LucideBriefcase,\n    iconColor: \"text-green-600\",\n    title: \"Active Projects\",\n    badge: {\n      color:\n        \"bg-green-100 text-green-600 dark:bg-green-950 dark:text-green-400\",\n      icon: LucideTrendingUp,\n      iconColor: \"text-green-500\",\n      text: \"+12.8%\",\n    },\n    value: 17,\n    dateRange: \"From Jan 01 - Jul 30, 2024\",\n  },\n  {\n    icon: LucideShoppingCart,\n    iconColor: \"text-blue-600\",\n    title: \"Orders Processed\",\n    badge: {\n      color: \"bg-blue-100 text-blue-600 dark:bg-blue-950 dark:text-blue-400\",\n      icon: LucideTrendingUp,\n      iconColor: \"text-blue-500\",\n      text: \"+3.7%\",\n    },\n    value: 3421,\n    dateRange: \"From Jan 01 - Jul 30, 2024\",\n  },\n  {\n    icon: LucideUsers,\n    iconColor: \"text-pink-600\",\n    title: \"Churned Users\",\n    badge: {\n      color: \"bg-pink-100 text-pink-600 dark:bg-pink-950 dark:text-pink-400\",\n      icon: LucideTrendingDown,\n      iconColor: \"text-pink-500\",\n      text: \"-2.1%\",\n    },\n    value: 89,\n    dateRange: \"From Jan 01 - Jul 30, 2024\",\n  },\n];\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <div class=\"@container w-full grow\">\n      <div class=\"grid grid-cols-1 gap-6 @3xl:grid-cols-3\">\n        <Card v-for=\"(card, i) in cards\" :key=\"i\" class=\"py-4\">\n          <CardContent class=\"flex h-full flex-col\">\n            <div class=\"mb-4 flex items-center justify-between\">\n              <component\n                :is=\"card.icon\"\n                :class=\"cn('size-6', card.iconColor)\"\n              />\n\n              <Badge :class=\"cn('rounded-full px-2 py-1', card.badge.color)\">\n                <component\n                  :is=\"card.badge.icon\"\n                  :class=\"`h-3 w-3 ${card.badge.iconColor}`\"\n                />\n                {{ card.badge.text }}\n              </Badge>\n            </div>\n\n            <div class=\"flex flex-1 grow flex-col justify-between\">\n              <div>\n                <div class=\"text-muted-foreground mb-1 text-xs font-medium\">\n                  {{ card.title }}\n                </div>\n                <div class=\"text-foreground mb-2 text-2xl font-bold\">\n                  {{ card.value.toLocaleString() }}\n                </div>\n              </div>\n              <div\n                class=\"border-muted text-muted-foreground border-t pt-3 text-xs font-medium\"\n              >\n                {{ card.dateRange }}\n              </div>\n            </div>\n          </CardContent>\n        </Card>\n      </div>\n    </div>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Ported from reui.io icon statistic cards\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reui.io/blocks/cards\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        reui.io\n      </a>\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "statistic-card",
+      "extended",
+      "card"
+    ],
+    "colSpan": 3
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/badge.json",
+    "https://originui-vue.com/r/card.json"
+  ]
+}
