@@ -30,9 +30,7 @@ const passing = 20;
 <template>
   <div class="*:not-first:mt-2">
     <Card class="mx-auto w-full max-w-sm">
-      <CardHeader
-        class="flex min-h-auto items-center justify-between border-0 py-5"
-      >
+      <CardHeader class="flex min-h-auto items-center justify-between border-0">
         <CardTitle class="flex items-center gap-2.5">
           <LucideShieldCheck class="text-primary h-5 w-5" />
           <span class="text-foreground text-sm font-semibold">
@@ -42,7 +40,7 @@ const passing = 20;
         <div class="ml-auto">
           <DropdownMenu>
             <DropdownMenuTrigger as-child>
-              <Button variant="ghost" size="sm" mode="icon" class="-me-1.5">
+              <Button variant="ghost" size="icon" class="-me-1.5">
                 <LucideMoreVertical />
               </Button>
             </DropdownMenuTrigger>
@@ -74,7 +72,6 @@ const passing = 20;
       </CardHeader>
 
       <CardContent class="space-y-2.5">
-        <!-- Progress Bar -->
         <div class="flex grow gap-1">
           <span
             v-for="i in total"
@@ -90,7 +87,6 @@ const passing = 20;
           />
         </div>
 
-        <!-- Passing Checks -->
         <div
           class="text-muted-foreground mt-1 flex items-center justify-between text-xs"
         >

@@ -50,12 +50,10 @@ const cards = [
           <CardContent
             class="relative flex flex-col justify-end overflow-hidden px-0 py-6 pb-0"
           >
-            <!-- Icon -->
             <div class="mb-3.5 px-6">
               <component :is="card.icon" class="size-8 text-white/60" />
             </div>
 
-            <!-- Main content -->
             <div class="flex flex-1 flex-col items-start justify-center px-6">
               <div class="mb-6 text-4xl font-bold text-white">
                 {{ card.value }}
@@ -66,7 +64,6 @@ const cards = [
               <div class="mb-2 text-sm text-white/80">{{ card.desc }}</div>
             </div>
 
-            <!-- Bottom bar -->
             <a
               href="#"
               class="group/card mt-6 flex w-full items-center justify-between bg-black/90 px-6 py-4 dark:bg-zinc-800"

@@ -20,9 +20,7 @@ import { LucideBarChart2, LucideMoreHorizontal } from "lucide-vue-next";
 <template>
   <div class="*:not-first:mt-2">
     <Card class="mx-auto w-full max-w-md">
-      <CardHeader
-        class="flex min-h-auto items-center justify-between border-0 py-6"
-      >
+      <CardHeader class="flex min-h-auto items-center justify-between border-0">
         <CardTitle class="inline-flex items-center gap-2">
           <LucideBarChart2 class="text-primary size-8" />
           Total Revenue
@@ -30,7 +28,7 @@ import { LucideBarChart2, LucideMoreHorizontal } from "lucide-vue-next";
         <div class="ml-auto">
           <DropdownMenu>
             <DropdownMenuTrigger as-child>
-              <Button variant="ghost" size="sm" mode="icon">
+              <Button variant="ghost" size="icon">
                 <LucideMoreHorizontal class="size-4" />
               </Button>
             </DropdownMenuTrigger>
@@ -46,7 +44,6 @@ import { LucideBarChart2, LucideMoreHorizontal } from "lucide-vue-next";
       </CardHeader>
       <CardContent class="flex flex-col justify-between gap-3.5">
         <div class="space-y-3.5">
-          <!-- Revenue -->
           <div class="mb-2.5 flex items-center gap-2.5">
             <span class="text-foreground text-3xl font-bold tracking-tight">
               $ 1,120,500
@@ -58,7 +55,6 @@ import { LucideBarChart2, LucideMoreHorizontal } from "lucide-vue-next";
             </span>
           </div>
 
-          <!-- Revenue trend -->
           <div class="mb-4 flex items-center gap-2">
             <Badge variant="destructive">
               <svg

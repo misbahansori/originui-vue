@@ -84,7 +84,7 @@ function formatNumber(n: number) {
           <div class="ml-auto">
             <DropdownMenu>
               <DropdownMenuTrigger as-child>
-                <Button variant="ghost" size="sm" mode="icon" class="-me-1.5">
+                <Button variant="ghost" size="icon" class="-me-1.5">
                   <LucideMoreHorizontal />
                 </Button>
               </DropdownMenuTrigger>

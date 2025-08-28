@@ -49,9 +49,8 @@ const cards = [
   <div class="*:not-first:mt-2">
     <div class="@container w-full grow">
       <div class="grid max-w-5xl grow grid-cols-1 gap-5 @3xl:grid-cols-3">
-        <Card v-for="(card, i) in cards" :key="i">
-          <CardContent class="flex flex-col items-start gap-6">
-            <!-- Icon -->
+        <Card v-for="(card, i) in cards" :key="i" class="py-4">
+          <CardContent class="flex flex-col items-start gap-4 px-4">
             <div
               :class="
                 cn(
@@ -62,8 +61,6 @@ const cards = [
             >
               <component :is="card.icon" class="size-6" />
             </div>
-
-            <!-- Value & Label -->
             <div class="space-y-0.5">
               <div class="text-foreground text-2xl leading-none font-bold">
                 {{ card.value }}

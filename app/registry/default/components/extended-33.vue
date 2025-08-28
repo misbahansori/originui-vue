@@ -98,9 +98,7 @@ function getBarColor(direction: string, j: number, height: number) {
 <template>
   <div class="*:not-first:mt-2">
     <Card class="mx-auto w-full max-w-sm">
-      <CardHeader
-        class="flex min-h-auto items-center justify-between border-0 pt-5 pb-0"
-      >
+      <CardHeader class="flex min-h-auto items-center justify-between border-0">
         <CardTitle class="flex flex-col items-start gap-0.5">
           <div class="text-foreground text-lg leading-none font-semibold">
             Feature Adoption
@@ -112,7 +110,7 @@ function getBarColor(direction: string, j: number, height: number) {
         <div class="ml-auto">
           <DropdownMenu>
             <DropdownMenuTrigger as-child>
-              <Button variant="ghost" size="sm" mode="icon" class="-me-1.5">
+              <Button variant="ghost" size="icon" class="-me-1.5">
                 <LucideMoreVertical />
               </Button>
             </DropdownMenuTrigger>
@@ -143,10 +141,8 @@ function getBarColor(direction: string, j: number, height: number) {
         </div>
       </CardHeader>
       <CardContent class="space-y-5">
-        <!-- Value -->
         <div class="text-foreground text-5xl font-bold">84%</div>
 
-        <!-- Bars -->
         <div class="relative mt-2 flex h-32 w-full items-end gap-2">
           <div
             v-for="(height, i) in bars"

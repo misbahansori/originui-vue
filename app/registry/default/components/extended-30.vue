@@ -17,9 +17,7 @@ const percent = (used / total) * 100;
 <template>
   <div class="*:not-first:mt-2">
     <Card class="mx-auto w-full max-w-lg">
-      <CardHeader
-        class="flex min-h-auto items-center justify-between border-0 pt-6 pb-4"
-      >
+      <CardHeader class="flex min-h-auto items-center justify-between border-0">
         <CardTitle>API Call Quota</CardTitle>
         <div class="ml-auto">
           <Button variant="outline" size="sm" class="font-medium">
