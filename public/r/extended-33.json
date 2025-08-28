@@ -1,0 +1,31 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "extended-33",
+  "type": "registry:component",
+  "files": [
+    {
+      "path": "components/extended-33.vue",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Card,\n  CardContent,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/default/ui/card\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/registry/default/ui/dropdown-menu\";\nimport {\n  LucideMoreVertical,\n  LucidePin,\n  LucideSettings,\n  LucideShare2,\n  LucideShieldCheck,\n  LucideTriangleAlert,\n} from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nconst bars = [6, 6, 5, 5, 4, 4, 3, 0];\nconst maxBars = Math.max(...bars);\n\nconst barInsights = [\n  {\n    date: \"24 Feb 2025\",\n    growth: 8.2,\n    direction: \"up\",\n    note: \"Feature launch week. Strong adoption spike.\",\n  },\n  {\n    date: \"08 Mar 2025\",\n    growth: 7.5,\n    direction: \"up\",\n    note: \"Onboarding improvements led to a 7.5% boost in adoption.\",\n  },\n  {\n    date: \"15 Mar 2025\",\n    growth: 2.1,\n    direction: \"up\",\n    note: \"Steady growth as more teams enabled the feature.\",\n  },\n  {\n    date: \"22 Apr 2025\",\n    growth: 0.0,\n    direction: \"neutral\",\n    note: \"Temporary plateau after a minor bug was reported.\",\n  },\n  {\n    date: \"29 May 2025\",\n    growth: 0.0,\n    direction: \"neutral\",\n    note: \"Seasonal dip, many users on vacation.\",\n  },\n  {\n    date: \"06 Jun 2025\",\n    growth: 0.0,\n    direction: \"neutral\",\n    note: \"No significant change, awaiting next release.\",\n  },\n  {\n    date: \"13 Jul 2025\",\n    growth: 1.4,\n    direction: \"up\",\n    note: \"Beta feature feedback positive, slight increase.\",\n  },\n  {\n    date: \"20 Jul 2025\",\n    growth: 0.0,\n    direction: \"neutral\",\n    note: \"Stable week, engagement holding steady.\",\n  },\n] as const;\n\nconst barRefs = ref<(HTMLDivElement | null)[]>([]);\n\nfunction getBarColor(direction: string, j: number, height: number) {\n  if (height === 0) return \"bg-muted\";\n\n  // Even color progression from intense to neutral\n  const barColors = [\n    \"bg-indigo-600\",\n    \"bg-indigo-500\",\n    \"bg-indigo-400\",\n    \"bg-indigo-300\",\n    \"bg-indigo-200\",\n    \"bg-indigo-100\",\n  ];\n  return j < height ? barColors[j] : \"bg-muted\";\n}\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Card class=\"mx-auto w-full max-w-sm\">\n      <CardHeader class=\"flex min-h-auto items-center justify-between border-0\">\n        <CardTitle class=\"flex flex-col items-start gap-0.5\">\n          <div class=\"text-foreground text-lg leading-none font-semibold\">\n            Feature Adoption\n          </div>\n          <div class=\"text-muted-foreground text-sm font-medium\">\n            Best adoption report\n          </div>\n        </CardTitle>\n        <div class=\"ml-auto\">\n          <DropdownMenu>\n            <DropdownMenuTrigger as-child>\n              <Button variant=\"ghost\" size=\"icon\" class=\"-me-1.5\">\n                <LucideMoreVertical />\n              </Button>\n            </DropdownMenuTrigger>\n            <DropdownMenuContent align=\"end\" side=\"bottom\">\n              <DropdownMenuItem>\n                <LucideSettings />\n                View Details\n              </DropdownMenuItem>\n              <DropdownMenuItem>\n                <LucideTriangleAlert />\n                Export Report\n              </DropdownMenuItem>\n              <DropdownMenuItem>\n                <LucidePin />\n                Configure Alerts\n              </DropdownMenuItem>\n              <DropdownMenuSeparator />\n              <DropdownMenuItem>\n                <LucideShare2 />\n                Run Manual Check\n              </DropdownMenuItem>\n              <DropdownMenuItem>\n                <LucideShieldCheck />\n                View History\n              </DropdownMenuItem>\n            </DropdownMenuContent>\n          </DropdownMenu>\n        </div>\n      </CardHeader>\n      <CardContent class=\"space-y-5\">\n        <div class=\"text-foreground text-5xl font-bold\">84%</div>\n\n        <div class=\"relative mt-2 flex h-32 w-full items-end gap-2\">\n          <div\n            v-for=\"(height, i) in bars\"\n            :key=\"i\"\n            :ref=\"\n              (el) => {\n                barRefs[i] = el as HTMLDivElement | null;\n              }\n            \"\n            class=\"flex min-w-0 flex-1 cursor-pointer flex-col justify-end transition-all\"\n          >\n            <div\n              v-for=\"j in maxBars\"\n              :key=\"j - 1\"\n              :class=\"`my-0.5 h-3 rounded ${getBarColor(barInsights.at(i)?.direction ?? 'neutral', j - 1, height)}`\"\n            />\n          </div>\n        </div>\n      </CardContent>\n    </Card>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Ported from reui.io feature adoption card\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reui.io/blocks/cards\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        reui.io\n      </a>\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "statistic-card",
+      "extended",
+      "card",
+      "feature",
+      "adoption",
+      "chart"
+    ],
+    "colSpan": 2
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/card.json",
+    "https://originui-vue.com/r/dropdown-menu.json"
+  ]
+}

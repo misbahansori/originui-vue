@@ -1,0 +1,28 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "extended-34",
+  "type": "registry:component",
+  "files": [
+    {
+      "path": "components/extended-34.vue",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { Card, CardContent } from \"@/registry/default/ui/card\";\nimport {\n  LucideArrowRight,\n  LucideChartNoAxesCombined,\n  LucideTrendingUp,\n  LucideUsers,\n} from \"lucide-vue-next\";\n\nconst cards = [\n  {\n    color: \"bg-blue-600\",\n    icon: LucideChartNoAxesCombined,\n    value: \"27.3%\",\n    title: \"NPS Improvement\",\n    desc: \"Our new onboarding flow increased Net Promoter Score by 27.3% in Q2.\",\n    cta: \"Read full story\",\n  },\n  {\n    color: \"bg-emerald-600\",\n    icon: LucideUsers,\n    value: \"8,200\",\n    title: \"Active Users\",\n    desc: \"Highest monthly active users since launch. Engagement up 12% MoM.\",\n    cta: \"See user insights\",\n  },\n  {\n    color: \"bg-fuchsia-700\",\n    icon: LucideTrendingUp,\n    value: \"$1.4M\",\n    title: \"ARR Growth\",\n    desc: \"Annual recurring revenue grew by $1.4M in the last quarter.\",\n    cta: \"View ARR breakdown\",\n  },\n];\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <div class=\"@container w-full grow\">\n      <div class=\"grid w-full grid-cols-1 gap-8 @3xl:grid-cols-3\">\n        <Card\n          v-for=\"(card, i) in cards\"\n          :key=\"i\"\n          :class=\"\n            cn('overflow-hidden rounded-2xl border-0 p-0 shadow-lg', card.color)\n          \"\n        >\n          <CardContent\n            class=\"relative flex flex-col justify-end overflow-hidden px-0 py-6 pb-0\"\n          >\n            <div class=\"mb-3.5 px-6\">\n              <component :is=\"card.icon\" class=\"size-8 text-white/60\" />\n            </div>\n\n            <div class=\"flex flex-1 flex-col items-start justify-center px-6\">\n              <div class=\"mb-6 text-4xl font-bold text-white\">\n                {{ card.value }}\n              </div>\n              <div class=\"mb-1 text-lg font-semibold text-white\">\n                {{ card.title }}\n              </div>\n              <div class=\"mb-2 text-sm text-white/80\">{{ card.desc }}</div>\n            </div>\n\n            <a\n              href=\"#\"\n              class=\"group/card mt-6 flex w-full items-center justify-between bg-black/90 px-6 py-4 dark:bg-zinc-800\"\n            >\n              <span class=\"text-sm font-medium text-white\">{{ card.cta }}</span>\n              <LucideArrowRight\n                class=\"h-5 w-5 text-white transition-transform duration-300 group-hover/card:translate-x-1\"\n              />\n            </a>\n          </CardContent>\n        </Card>\n      </div>\n    </div>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Ported from reui.io statistic showcase cards\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reui.io/blocks/cards\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        reui.io\n      </a>\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "statistic-card",
+      "extended",
+      "card",
+      "showcase",
+      "metrics"
+    ],
+    "colSpan": 3
+  },
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/card.json"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "extended-30",
+  "type": "registry:component",
+  "files": [
+    {
+      "path": "components/extended-30.vue",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Card,\n  CardContent,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/default/ui/card\";\nimport { Progress } from \"@/registry/default/ui/progress\";\n\nconst used = 2000;\nconst total = 5000;\nconst remaining = total - used;\nconst percent = (used / total) * 100;\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Card class=\"mx-auto w-full max-w-lg\">\n      <CardHeader class=\"flex min-h-auto items-center justify-between border-0\">\n        <CardTitle>API Call Quota</CardTitle>\n        <div class=\"ml-auto\">\n          <Button variant=\"outline\" size=\"sm\" class=\"font-medium\">\n            View API usage\n          </Button>\n        </div>\n      </CardHeader>\n      <CardContent class=\"flex flex-col space-y-6\">\n        <div class=\"grow space-y-2\">\n          <div class=\"flex items-center justify-between\">\n            <span class=\"text-muted-foreground text-sm\">\n              Used calls:\n              <span class=\"text-foreground font-semibold\">{{ used }}</span>\n            </span>\n            <span class=\"text-foreground text-base font-semibold\">\n              ${{ (used * 0.002).toFixed(2) }}\n            </span>\n          </div>\n\n          <div>\n            <Progress\n              :modelValue=\"percent\"\n              class=\"bg-muted\"\n              indicatorClassName=\"bg-indigo-500\"\n            />\n          </div>\n\n          <div class=\"flex items-center justify-between\">\n            <span class=\"text-foreground text-sm font-semibold\">\n              {{ remaining }} free calls left\n            </span>\n            <span class=\"text-muted-foreground text-xs\">\n              of {{ total }} monthly quota\n            </span>\n          </div>\n        </div>\n\n        <div\n          class=\"bg-muted/60 text-muted-foreground flex items-center justify-between gap-2 rounded-xl px-4 py-2.5 text-xs\"\n        >\n          <span>Quota renews on</span>\n          <span class=\"text-foreground font-medium\">September 1, 2025</span>\n        </div>\n      </CardContent>\n    </Card>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Ported from reui.io API quota card\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reui.io/blocks/cards\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        reui.io\n      </a>\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "statistic-card",
+      "extended",
+      "card",
+      "api",
+      "quota"
+    ],
+    "colSpan": 2
+  },
+  "dependencies": [],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/card.json",
+    "https://originui-vue.com/r/progress.json"
+  ]
+}

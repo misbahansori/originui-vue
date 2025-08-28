@@ -15,7 +15,7 @@
       "extended",
       "card"
     ],
-    "colSpan": 2
+    "colSpan": 3
   },
   "dependencies": [
     "lucide-vue-next"

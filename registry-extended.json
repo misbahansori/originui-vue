@@ -364,7 +364,7 @@
       ],
       "meta": {
         "tags": ["statistic-card", "extended", "card"],
-        "colSpan": 2
+        "colSpan": 3
       }
     },
     {
@@ -379,6 +379,111 @@
       "meta": {
         "tags": ["statistic-card", "extended", "card"],
         "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-28",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-28.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["statistic-card", "extended", "card", "tasks", "overview"],
+        "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-29",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-29.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["statistic-card", "extended", "card", "revenue"],
+        "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-30",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-30.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["statistic-card", "extended", "card", "api", "quota"],
+        "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-31",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-31.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["statistic-card", "extended", "card", "support", "metrics"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "extended-32",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-32.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["statistic-card", "extended", "card", "compliance", "checks"],
+        "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-33",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-33.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": [
+          "statistic-card",
+          "extended",
+          "card",
+          "feature",
+          "adoption",
+          "chart"
+        ],
+        "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-34",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-34.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["statistic-card", "extended", "card", "showcase", "metrics"],
+        "colSpan": 3
       }
     }
   ]
