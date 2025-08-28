@@ -448,7 +448,7 @@
       ],
       "meta": {
         "tags": ["statistic-card", "extended", "card", "compliance", "checks"],
-        "colSpan": 1
+        "colSpan": 2
       }
     },
     {
@@ -469,7 +469,7 @@
           "adoption",
           "chart"
         ],
-        "colSpan": 1
+        "colSpan": 2
       }
     }
   ]

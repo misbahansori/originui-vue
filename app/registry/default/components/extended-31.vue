@@ -42,7 +42,7 @@ const cards = [
       text: "Avg. (out of 5)",
     },
   },
-];
+] as const;
 </script>
 
 <template>

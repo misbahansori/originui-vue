@@ -75,7 +75,7 @@ const barInsights = [
     direction: "neutral",
     note: "Stable week, engagement holding steady.",
   },
-];
+] as const;
 
 const barRefs = ref<(HTMLDivElement | null)[]>([]);
 
@@ -161,7 +161,7 @@ function getBarColor(direction: string, j: number, height: number) {
             <div
               v-for="j in maxBars"
               :key="j - 1"
-              :class="`my-0.5 h-3 rounded ${getBarColor(barInsights[i].direction, j - 1, height)}`"
+              :class="`my-0.5 h-3 rounded ${getBarColor(barInsights.at(i)?.direction ?? 'neutral', j - 1, height)}`"
             />
           </div>
         </div>
