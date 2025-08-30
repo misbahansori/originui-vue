@@ -36,25 +36,42 @@ const activeCommand = computed(() =>
 </script>
 
 <template>
-  <Snippet v-model="activeTab">
-    <SnippetHeader>
-      <SnippetTabsList>
-        <SnippetTabsTrigger
-          v-for="command in commands"
-          :key="command.label"
-          :value="command.label"
-        >
-          {{ command.label }}
-        </SnippetTabsTrigger>
-      </SnippetTabsList>
-      <SnippetCopyButton :value="activeCommand?.code || ''" />
-    </SnippetHeader>
-    <SnippetTabsContent
-      v-for="command in commands"
-      :key="command.label"
-      :value="command.label"
+  <div class="*:not-first:mt-2">
+    <Snippet v-model="activeTab">
+      <SnippetHeader>
+        <SnippetTabsList>
+          <SnippetTabsTrigger
+            v-for="command in commands"
+            :key="command.label"
+            :value="command.label"
+          >
+            {{ command.label }}
+          </SnippetTabsTrigger>
+        </SnippetTabsList>
+        <SnippetCopyButton :value="activeCommand?.code || ''" />
+      </SnippetHeader>
+      <SnippetTabsContent
+        v-for="command in commands"
+        :key="command.label"
+        :value="command.label"
+      >
+        <pre class="truncate">{{ command.code }}</pre>
+      </SnippetTabsContent>
+    </Snippet>
+    <p
+      class="text-muted-foreground mt-2 text-xs"
+      role="region"
+      aria-live="polite"
     >
-      <pre class="truncate">{{ command.code }}</pre>
-    </SnippetTabsContent>
-  </Snippet>
+      Based on Kibo Snippet component
+      <a
+        class="hover:text-foreground underline"
+        href="https://www.kibo-ui.com/components/snippet"
+        target="_blank"
+        rel="noopener nofollow"
+      >
+        Kibo UI
+      </a>
+    </p>
+  </div>
 </template>
