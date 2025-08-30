@@ -15,7 +15,7 @@ const delegatedProps = reactiveOmit(props, "class");
   <TabsContent
     data-slot="snippet-tabs-content"
     v-bind="delegatedProps"
-    :class="cn('bg-background mt-0 p-4 text-sm', props.class)"
+    :class="cn('bg-background mt-0 p-4 text-sm outline-none', props.class)"
   >
     <slot />
   </TabsContent>
