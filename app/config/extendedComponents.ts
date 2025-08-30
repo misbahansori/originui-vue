@@ -68,7 +68,7 @@ export const extendedCategories: ExtendedComponentCategory[] = [
   {
     slug: "extended/snippet",
     name: "Snippet",
-    components: [{ name: "extended-35" }],
+    components: [{ name: "extended-35" }, { name: "extended-36" }],
     isNew: true,
   },
 ];

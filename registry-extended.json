@@ -499,6 +499,29 @@
         "tags": ["snippet", "extended", "code", "copy", "tabs", "command"],
         "colSpan": 2
       }
+    },
+    {
+      "name": "extended-36",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-36.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": [
+          "snippet",
+          "extended",
+          "code",
+          "copy",
+          "tabs",
+          "command",
+          "cli",
+          "dark"
+        ],
+        "colSpan": 2
+      }
     }
   ]
 }
