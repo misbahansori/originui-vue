@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
+import type { ButtonVariants } from "@/registry/default/ui/button";
+import { buttonVariants } from "@/registry/default/ui/button";
+import { useClipboard } from "@vueuse/core";
 import { CheckIcon, CopyIcon } from "lucide-vue-next";
 import type { PrimitiveProps } from "reka-ui";
 import { Primitive } from "reka-ui";
-import { ref, type HTMLAttributes } from "vue";
-import type { ButtonVariants } from "../button";
-import { buttonVariants } from "../button";
+import { type HTMLAttributes } from "vue";
 
 interface Props extends PrimitiveProps {
   variant?: ButtonVariants["variant"];
@@ -22,33 +23,9 @@ const props = withDefaults(defineProps<Props>(), {
   timeout: 2000,
 });
 
-const emits = defineEmits<{
-  copy: [];
-  error: [error: Error];
-}>();
-
-const isCopied = ref(false);
-
-const copyToClipboard = async () => {
-  if (
-    typeof window === "undefined" ||
-    !navigator.clipboard?.writeText ||
-    !props.value
-  ) {
-    return;
-  }
-
-  try {
-    await navigator.clipboard.writeText(props.value);
-    isCopied.value = true;
-    emits("copy");
-    setTimeout(() => {
-      isCopied.value = false;
-    }, props.timeout);
-  } catch (error) {
-    emits("error", error as Error);
-  }
-};
+const { copy, copied } = useClipboard({
+  copiedDuring: props.timeout,
+});
 </script>
 
 <template>
@@ -63,11 +40,21 @@ const copyToClipboard = async () => {
         props.class,
       )
     "
-    @click="copyToClipboard"
+    @click="copy(props.value)"
   >
     <slot>
-      <CheckIcon v-if="isCopied" :size="14" />
-      <CopyIcon v-else :size="14" />
+      <div
+        class="transition-all"
+        :class="!copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0'"
+      >
+        <CopyIcon class="text-foreground/90 size-4" aria-hidden="true" />
+      </div>
+      <div
+        class="absolute transition-all"
+        :class="copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0'"
+      >
+        <CheckIcon class="text-foreground/90 size-4" aria-hidden="true" />
+      </div>
     </slot>
   </Primitive>
 </template>

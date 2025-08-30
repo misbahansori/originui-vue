@@ -26,31 +26,17 @@ const commands = [
     label: "bun",
     code: "bunx next-forge@latest init",
   },
-];
+] as const;
 
-const value = ref(commands[0]?.label || "npm");
+const activeTab = ref(commands[0]?.label);
 
 const activeCommand = computed(() =>
-  commands.find((command) => command.label === value.value),
+  commands.find((command) => command.label === activeTab.value),
 );
-
-const handleCopy = () => {
-  const command = activeCommand.value;
-  if (command) {
-    console.log(`Copied "${command.code}" to clipboard`);
-  }
-};
-
-const handleError = () => {
-  const command = activeCommand.value;
-  if (command) {
-    console.error(`Failed to copy "${command.code}" to clipboard`);
-  }
-};
 </script>
 
 <template>
-  <Snippet v-model="value">
+  <Snippet v-model="activeTab">
     <SnippetHeader>
       <SnippetTabsList>
         <SnippetTabsTrigger
@@ -61,12 +47,7 @@ const handleError = () => {
           {{ command.label }}
         </SnippetTabsTrigger>
       </SnippetTabsList>
-      <SnippetCopyButton
-        v-if="activeCommand"
-        :value="activeCommand.code"
-        @copy="handleCopy"
-        @error="handleError"
-      />
+      <SnippetCopyButton :value="activeCommand?.code || ''" />
     </SnippetHeader>
     <SnippetTabsContent
       v-for="command in commands"
