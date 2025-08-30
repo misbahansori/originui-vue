@@ -41,7 +41,7 @@ const activeCommand = computed(() =>
   <div class="relative">
     <Snippet v-model="activeTab" class="rounded-xl">
       <SnippetHeader class="p-0">
-        <SnippetTabsList>
+        <SnippetTabsList class="bg-transparent">
           <SnippetTabsTrigger
             v-for="command in commands"
             :key="command.label"
