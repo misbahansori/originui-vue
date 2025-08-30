@@ -47,13 +47,13 @@ const { copy, copied } = useClipboard({
         class="transition-all"
         :class="!copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0'"
       >
-        <CopyIcon class="text-foreground/90 size-4" aria-hidden="true" />
+        <CopyIcon class="size-4" aria-hidden="true" />
       </div>
       <div
         class="absolute transition-all"
         :class="copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0'"
       >
-        <CheckIcon class="text-foreground/90 size-4" aria-hidden="true" />
+        <CheckIcon class="size-4" aria-hidden="true" />
       </div>
     </slot>
   </Primitive>

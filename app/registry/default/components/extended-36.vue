@@ -30,19 +30,17 @@ const commands = [
   },
 ] as const;
 
-type PackageManager = "pnpm" | "npm" | "yarn" | "bun";
-
-const packageManager = ref<PackageManager>("pnpm");
+const activeTab = ref(commands[0]?.label);
 
 const activeCommand = computed(() =>
-  commands.find((command) => command.label === packageManager.value),
+  commands.find((command) => command.label === activeTab.value),
 );
 </script>
 
 <template>
   <div class="dark relative">
     <Snippet
-      v-model="packageManager"
+      v-model="activeTab"
       class="rounded-md border-0 bg-zinc-950 dark:bg-zinc-900"
     >
       <SnippetHeader class="border-0 bg-transparent p-0">
@@ -61,7 +59,7 @@ const activeCommand = computed(() =>
         <SnippetCopyButton
           v-if="activeCommand"
           :value="activeCommand.code"
-          class="absolute top-1 right-1 opacity-100"
+          class="text-muted-foreground absolute top-1 right-1 opacity-100"
         />
       </SnippetHeader>
       <SnippetTabsContent
