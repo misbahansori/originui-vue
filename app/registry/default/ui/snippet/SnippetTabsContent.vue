@@ -17,8 +17,6 @@ const delegatedProps = reactiveOmit(props, "class");
     v-bind="delegatedProps"
     :class="cn('bg-background mt-0 p-4 text-sm', props.class)"
   >
-    <pre class="truncate">
-      <slot />
-    </pre>
+    <slot />
   </TabsContent>
 </template>

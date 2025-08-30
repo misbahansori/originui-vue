@@ -66,11 +66,12 @@ const activeCommand = computed(() =>
         v-for="command in commands"
         :key="command.label"
         :value="command.label"
-        class="m-0 bg-transparent p-4"
+        class="m-0 bg-transparent p-0"
       >
-        <span class="font-mono text-[12.8px] text-zinc-100">
-          {{ command.code }}
-        </span>
+        <pre
+          class="overflow-x-auto p-4 font-mono text-[12.8px] text-zinc-100"
+          >{{ command.code }}</pre
+        >
       </SnippetTabsContent>
     </Snippet>
   </div>

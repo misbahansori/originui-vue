@@ -54,7 +54,7 @@ const activeCommand = computed(() =>
       :key="command.label"
       :value="command.label"
     >
-      {{ command.code }}
+      <pre class="truncate">{{ command.code }}</pre>
     </SnippetTabsContent>
   </Snippet>
 </template>
