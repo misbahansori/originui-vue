@@ -522,6 +522,20 @@
         ],
         "colSpan": 2
       }
+    },
+    {
+      "name": "extended-37",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-37.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["snippet", "extended", "code", "copy", "tabs", "command"],
+        "colSpan": 2
+      }
     }
   ]
 }
