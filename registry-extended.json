@@ -4,6 +4,44 @@
   "homepage": "https://originui-vue.com",
   "items": [
     {
+      "name": "snippet",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "app/registry/default/ui/snippet/Snippet.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/snippet/SnippetCopyButton.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/snippet/SnippetHeader.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/snippet/SnippetTabsContent.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/snippet/SnippetTabsList.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/snippet/SnippetTabsTrigger.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/snippet/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "meta": {
+        "tags": ["snippet", "extended", "code", "copy", "tabs", "command"],
+        "colSpan": 2
+      }
+    },
+    {
       "name": "extended-01",
       "type": "registry:component",
       "files": [
