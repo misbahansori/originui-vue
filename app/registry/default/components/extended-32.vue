@@ -29,7 +29,7 @@ const passing = 20;
 
 <template>
   <div class="*:not-first:mt-2">
-    <Card class="mx-auto w-full max-w-sm">
+    <Card class="mx-auto w-full max-w-sm py-4">
       <CardHeader class="flex min-h-auto items-center justify-between border-0">
         <CardTitle class="flex items-center gap-2.5">
           <LucideShieldCheck class="text-primary h-5 w-5" />
@@ -71,7 +71,7 @@ const passing = 20;
         </div>
       </CardHeader>
 
-      <CardContent class="space-y-2.5">
+      <CardContent class="space-y-2.5 px-4">
         <div class="flex grow gap-1">
           <span
             v-for="i in total"
