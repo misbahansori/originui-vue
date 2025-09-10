@@ -300,6 +300,10 @@
           "type": "registry:ui"
         },
         {
+          "path": "app/registry/default/ui/card/CardAction.vue",
+          "type": "registry:ui"
+        },
+        {
           "path": "app/registry/default/ui/card/CardDescription.vue",
           "type": "registry:ui"
         },
