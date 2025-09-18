@@ -21,7 +21,7 @@ import { LucideActivity, LucideArrowUpRight } from "lucide-vue-next";
       </Button>
     </div>
 
-    <Card class="rounded-lg py-4">
+    <Card class="rounded-lg py-4 shadow-md shadow-black/5">
       <CardContent class="h-full w-full px-4">
         <div class="flex items-start justify-between gap-4 pb-6">
           <div class="flex flex-col gap-2">
@@ -90,4 +90,5 @@ import { LucideActivity, LucideArrowUpRight } from "lucide-vue-next";
       </CardContent>
     </Card>
   </Card>
+  Car
 </template>
