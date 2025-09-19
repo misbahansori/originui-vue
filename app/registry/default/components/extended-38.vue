@@ -90,5 +90,4 @@ import { LucideActivity, LucideArrowUpRight } from "lucide-vue-next";
       </CardContent>
     </Card>
   </Card>
-  Car
 </template>
