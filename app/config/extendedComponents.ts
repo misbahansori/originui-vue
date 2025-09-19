@@ -41,6 +41,7 @@ export const extendedCategories: ExtendedComponentCategory[] = [
       { name: "extended-17" },
       { name: "extended-18" },
       { name: "extended-19" },
+      { name: "extended-38" },
     ],
   },
   {
