@@ -13,9 +13,9 @@ import { LucideActivity, LucideArrowUpRight } from "lucide-vue-next";
         >
           <LucideActivity class="size-4" />
         </span>
-        <CardTitle class="text-sm font-medium">Activity</CardTitle>
+        <CardTitle class="text-sm font-normal">Activity</CardTitle>
       </div>
-      <Button variant="outline" class="h-8 whitespace-nowrap">
+      <Button variant="outline" class="h-8 font-normal whitespace-nowrap">
         <span>Requests</span>
         <LucideArrowUpRight />
       </Button>
