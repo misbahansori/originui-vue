@@ -7,20 +7,27 @@ import {
   CardHeader,
   CardTitle,
 } from "@/registry/default/ui/card";
+import {
+  Empty,
+  EmptyContent,
+  EmptyDescription,
+  EmptyHeader,
+  EmptyTitle,
+} from "@/registry/default/ui/empty";
 import { LucideIdCard, LucideUser } from "lucide-vue-next";
 </script>
 
 <template>
-  <div class="flex items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
-    <div class="flex w-full max-w-md flex-col gap-6">
-      <div class="flex flex-col gap-2 self-center text-center">
-        <h1 class="text-lg font-bold">No data found</h1>
-        <p class="text-muted-foreground text-sm">
-          It looks like there's no data in this page. Please create a new one
-          using the buttons below.
-        </p>
-      </div>
-      <Card class="relative overflow-hidden">
+  <Empty>
+    <EmptyHeader>
+      <EmptyTitle class="font-semibold">No data found</EmptyTitle>
+      <EmptyDescription>
+        It looks like there's no data in this page. Please create a new one
+        using the buttons below.
+      </EmptyDescription>
+    </EmptyHeader>
+    <EmptyContent class="w-full max-w-md">
+      <Card class="relative w-full overflow-hidden text-left">
         <CardHeader>
           <CardTitle>Create new account</CardTitle>
           <CardDescription>
@@ -34,7 +41,7 @@ import { LucideIdCard, LucideUser } from "lucide-vue-next";
           <LucideUser class="text-muted size-32" />
         </div>
       </Card>
-      <Card class="relative overflow-hidden">
+      <Card class="relative w-full overflow-hidden text-left">
         <CardHeader>
           <CardTitle>Add new card</CardTitle>
           <CardDescription>
@@ -48,6 +55,6 @@ import { LucideIdCard, LucideUser } from "lucide-vue-next";
           <LucideIdCard class="text-muted size-32" />
         </div>
       </Card>
-    </div>
-  </div>
+    </EmptyContent>
+  </Empty>
 </template>

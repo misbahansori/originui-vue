@@ -1,13 +1,20 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
+import {
+  Empty,
+  EmptyContent,
+  EmptyDescription,
+  EmptyHeader,
+  EmptyTitle,
+} from "@/registry/default/ui/empty";
 import { LucidePlus } from "lucide-vue-next";
 </script>
 
 <template>
-  <div class="flex items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
-    <div class="flex w-full max-w-md flex-col items-center gap-6 text-center">
+  <Empty>
+    <EmptyHeader>
       <svg
-        class="w-full max-w-[12rem]"
+        class="w-48"
         viewBox="0 0 238 190"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -66,19 +73,17 @@ import { LucidePlus } from "lucide-vue-next";
           </filter>
         </defs>
       </svg>
-
-      <div class="flex flex-col gap-2">
-        <h1 class="text-lg font-bold">You don't have any cards</h1>
-        <p class="text-muted-foreground text-sm">
-          Please add a new card to your account to get started.
-        </p>
-      </div>
-      <div class="flex items-center gap-2">
-        <Button>
-          <LucidePlus class="size-4" />
-          <span>Add card</span>
-        </Button>
-      </div>
-    </div>
-  </div>
+      <EmptyTitle class="font-semibold">You don't have any cards</EmptyTitle>
+      <EmptyDescription>
+        It looks like there's no data in this page. You can create a new one or
+        refresh the page.
+      </EmptyDescription>
+    </EmptyHeader>
+    <EmptyContent>
+      <Button>
+        <LucidePlus class="size-4" />
+        <span>Add card</span>
+      </Button>
+    </EmptyContent>
+  </Empty>
 </template>
