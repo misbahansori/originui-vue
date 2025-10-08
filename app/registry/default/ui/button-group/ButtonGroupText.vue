@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import { cn } from "@/lib/utils";
 import type { PrimitiveProps } from "reka-ui";
+import { Primitive } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 import type { ButtonGroupVariants } from ".";
-import { Primitive } from "reka-ui";
-import { cn } from "@/lib/utils";
 
 interface Props extends PrimitiveProps {
   class?: HTMLAttributes["class"];
@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <Primitive
     role="group"
-    data-slot="button-group"
+    data-slot="button-group-text"
     :data-orientation="props.orientation"
     :as="as"
     :as-child="asChild"
