@@ -230,6 +230,28 @@
       ]
     },
     {
+      "name": "button-group",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "app/registry/default/ui/button-group/ButtonGroup.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/button-group/ButtonGroupSeparator.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/button-group/ButtonGroupText.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/button-group/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "calendar",
       "type": "registry:ui",
       "files": [
