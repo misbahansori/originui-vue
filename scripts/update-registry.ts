@@ -92,6 +92,10 @@ async function getRegistryFiles(): Promise<RegistryItem[]> {
     const dependencies = new Set<string>();
     const registryDeps = new Set<string>();
 
+    if (!Array.isArray(item.files)) {
+      continue;
+    }
+
     for (const file of item.files) {
       if (!file.content) continue;
 
