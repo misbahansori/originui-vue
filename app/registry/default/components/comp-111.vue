@@ -1,23 +1,20 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
+import {
+  ButtonGroup,
+  ButtonGroupSeparator,
+} from "@/registry/default/ui/button-group";
 import { LucideQrCode } from "lucide-vue-next";
 </script>
 
 <template>
-  <div
-    class="divide-primary-foreground/30 inline-flex divide-x rounded-md shadow-xs rtl:space-x-reverse"
-  >
-    <Button
-      class="rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10"
-      size="icon"
-      aria-label="QR code"
-    >
-      <LucideQrCode :size="16" aria-hidden="true" />
-    </Button>
-    <Button
-      class="rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10"
-    >
-      Sign in
-    </Button>
+  <div class="flex items-center justify-center">
+    <ButtonGroup>
+      <Button size="icon" aria-label="QR code">
+        <LucideQrCode :size="16" aria-hidden="true" />
+      </Button>
+      <ButtonGroupSeparator class="bg-primary/70" />
+      <Button>Sign in</Button>
+    </ButtonGroup>
   </div>
 </template>
