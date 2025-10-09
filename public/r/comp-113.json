@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-113.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideChevronDown, LucidePin } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <div\n    class=\"divide-primary-foreground/30 inline-flex divide-x rounded-md shadow-xs rtl:space-x-reverse\"\n  >\n    <Button\n      class=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\"\n      size=\"icon\"\n      aria-label=\"Options\"\n    >\n      <LucideChevronDown :size=\"16\" aria-hidden=\"true\" />\n    </Button>\n    <Button\n      class=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\"\n    >\n      <LucidePin class=\"-ms-1 opacity-60\" :size=\"16\" aria-hidden=\"true\" />\n      Pinned\n    </Button>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  ButtonGroup,\n  ButtonGroupSeparator,\n} from \"@/registry/default/ui/button-group\";\nimport { LucideChevronDown, LucidePin } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <div class=\"flex items-center justify-center\">\n    <ButtonGroup>\n      <Button size=\"icon\" aria-label=\"Options\">\n        <LucideChevronDown :size=\"16\" aria-hidden=\"true\" />\n      </Button>\n      <ButtonGroupSeparator class=\"bg-primary/70\" />\n      <Button>\n        <LucidePin class=\"-ms-1 opacity-60\" :size=\"16\" aria-hidden=\"true\" />\n        Pinned\n      </Button>\n    </ButtonGroup>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
@@ -20,6 +20,7 @@
     "lucide-vue-next"
   ],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/button-group.json"
   ]
 }
