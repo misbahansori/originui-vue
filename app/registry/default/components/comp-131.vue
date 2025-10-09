@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
 import {
+  ButtonGroup,
+  ButtonGroupSeparator,
+} from "@/registry/default/ui/button-group";
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuRadioGroup,
@@ -37,46 +41,41 @@ const selectedOption = computed(() => {
 </script>
 
 <template>
-  <div
-    class="divide-primary-foreground/30 inline-flex divide-x rounded-md shadow-xs rtl:space-x-reverse"
-  >
-    <Button
-      class="rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10"
-    >
-      {{ selectedOption?.label }}
-    </Button>
-    <DropdownMenu>
-      <DropdownMenuTrigger as-child>
-        <Button
-          class="rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10"
-          size="icon"
-          aria-label="Options"
+  <div class="flex items-center justify-center">
+    <ButtonGroup>
+      <Button>
+        {{ selectedOption?.label }}
+      </Button>
+      <ButtonGroupSeparator class="bg-primary/70" />
+      <DropdownMenu>
+        <DropdownMenuTrigger as-child>
+          <Button size="icon" aria-label="Options">
+            <LucideChevronDown aria-hidden="true" class="size-4" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent
+          class="max-w-64 md:max-w-xs"
+          side="bottom"
+          :side-offset="4"
+          align="end"
         >
-          <LucideChevronDown aria-hidden="true" class="size-4" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent
-        class="max-w-64 md:max-w-xs"
-        side="bottom"
-        :side-offset="4"
-        align="end"
-      >
-        <DropdownMenuRadioGroup v-model="selectedIndex">
-          <DropdownMenuRadioItem
-            v-for="(option, index) in options"
-            :key="option.label"
-            :value="String(index)"
-            class="items-start [&>span]:pt-1.5"
-          >
-            <div class="flex flex-col gap-1">
-              <span class="text-sm font-medium">{{ option.label }}</span>
-              <span class="text-muted-foreground text-xs">
-                {{ option.description }}
-              </span>
-            </div>
-          </DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
-      </DropdownMenuContent>
-    </DropdownMenu>
+          <DropdownMenuRadioGroup v-model="selectedIndex">
+            <DropdownMenuRadioItem
+              v-for="(option, index) in options"
+              :key="option.label"
+              :value="String(index)"
+              class="items-start [&>span]:pt-1.5"
+            >
+              <div class="flex flex-col gap-1">
+                <span class="text-sm font-medium">{{ option.label }}</span>
+                <span class="text-muted-foreground text-xs">
+                  {{ option.description }}
+                </span>
+              </div>
+            </DropdownMenuRadioItem>
+          </DropdownMenuRadioGroup>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </ButtonGroup>
   </div>
 </template>
