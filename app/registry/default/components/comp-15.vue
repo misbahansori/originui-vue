@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-  InputGroupText,
-} from "@/registry/default/ui/input-group";
+  ButtonGroup,
+  ButtonGroupText,
+} from "@/registry/default/ui/button-group";
+import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
 import { useId } from "vue";
 
@@ -14,11 +13,13 @@ const id = useId();
 <template>
   <div class="*:not-first:mt-2">
     <Label :for="id">Input with end add-on</Label>
-    <InputGroup>
-      <InputGroupInput :id="id" placeholder="google" type="text" />
-      <InputGroupAddon align="inline-end">
-        <InputGroupText class="font-normal">.com</InputGroupText>
-      </InputGroupAddon>
-    </InputGroup>
+    <ButtonGroup class="w-full">
+      <Input :id="id" placeholder="google" type="text" />
+      <ButtonGroupText
+        class="text-muted-foreground bg-background border-input px-3"
+      >
+        .com
+      </ButtonGroupText>
+    </ButtonGroup>
   </div>
 </template>
