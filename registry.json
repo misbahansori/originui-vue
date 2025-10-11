@@ -1602,6 +1602,24 @@
       ]
     },
     {
+      "name": "kbd",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "app/registry/default/ui/kbd/index.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/kbd/Kbd.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/kbd/KbdGroup.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "utils",
       "type": "registry:lib",
       "files": [
