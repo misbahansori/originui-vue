@@ -9,6 +9,7 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from "@/registry/default/ui/command";
+import { Kbd } from "@/registry/default/ui/kbd";
 import {
   LucideArrowUpRight,
   LucideCircleFadingPlus,
@@ -50,11 +51,11 @@ onUnmounted(() => {
         />
         <span class="text-muted-foreground/70 font-normal">Search</span>
       </span>
-      <kbd
-        class="bg-background text-muted-foreground/70 ms-12 -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium"
+      <Kbd
+        class="text-muted-foreground/70 bg-background ms-12 -me-1 border text-[0.625rem]"
       >
         ⌘K
-      </kbd>
+      </Kbd>
     </button>
     <CommandDialog v-model:open="open">
       <CommandInput placeholder="Type a command or search..." />
