@@ -57,10 +57,5 @@
     "nuxt-umami": "^3.2.1",
     "tailwindcss": "^4.1.14"
   },
-  "packageManager": "pnpm@10.18.1",
-  "pnpm": {
-    "overrides": {
-      "vite": "npm:rolldown-vite@latest"
-    }
-  }
+  "packageManager": "pnpm@10.18.2"
 }
