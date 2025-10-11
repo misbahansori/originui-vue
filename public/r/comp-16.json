@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-16.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with inline start and end add-on</Label>\n    <div class=\"relative flex rounded-md shadow-xs\">\n      <span\n        class=\"text-muted-foreground pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-sm\"\n      >\n        €\n      </span>\n      <Input\n        :id=\"id\"\n        class=\"-me-px rounded-e-none ps-6 shadow-none\"\n        placeholder=\"0.00\"\n        type=\"text\"\n      />\n      <span\n        class=\"border-input bg-background text-muted-foreground -z-10 inline-flex items-center rounded-e-md border px-3 text-sm\"\n      >\n        EUR\n      </span>\n    </div>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@/registry/default/ui/input-group\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with inline start and end add-on</Label>\n    <InputGroup>\n      <InputGroupInput :id=\"id\" placeholder=\"0.00\" type=\"text\" />\n      <InputGroupAddon>\n        <InputGroupText class=\"font-normal\">€</InputGroupText>\n      </InputGroupAddon>\n      <InputGroupAddon align=\"inline-end\">\n        <InputGroupText class=\"font-normal\">EUR</InputGroupText>\n      </InputGroupAddon>\n    </InputGroup>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
@@ -17,7 +17,7 @@
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/input-group.json",
     "https://originui-vue.com/r/label.json"
   ]
 }
