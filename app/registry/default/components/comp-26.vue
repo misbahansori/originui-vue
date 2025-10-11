@@ -17,7 +17,7 @@ const id = useId();
     <Label :for="id">Search input with icon and button</Label>
     <InputGroup>
       <InputGroupInput :id="id" placeholder="Search..." type="search" />
-      <InputGroupAddon align="inline-start">
+      <InputGroupAddon>
         <LucideSearch :size="16" />
       </InputGroupAddon>
       <InputGroupAddon align="inline-end">

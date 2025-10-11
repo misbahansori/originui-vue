@@ -36,7 +36,7 @@ watchEffect(() => {
         type="search"
         v-model="inputValue"
       />
-      <InputGroupAddon align="inline-start">
+      <InputGroupAddon>
         <LucideLoaderCircle
           v-if="isLoading"
           class="animate-spin"

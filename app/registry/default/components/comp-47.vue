@@ -26,7 +26,7 @@ const id = useId();
         maxlength="19"
         v-maska="'#### #### #### ####'"
       />
-      <InputGroupAddon align="inline-start">
+      <InputGroupAddon>
         <LucideCreditCard :size="16" aria-hidden="true" />
       </InputGroupAddon>
     </InputGroup>
