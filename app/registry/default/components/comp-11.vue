@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import { Input } from "@/registry/default/ui/input";
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupInput,
+  InputGroupText,
+} from "@/registry/default/ui/input-group";
 import { Label } from "@/registry/default/ui/label";
 import { useId } from "vue";
 
@@ -9,13 +14,11 @@ const id = useId();
 <template>
   <div class="*:not-first:mt-2">
     <Label :for="id">Input with start inline add-on</Label>
-    <div class="relative">
-      <Input :id="id" class="peer ps-16" placeholder="google.com" type="text" />
-      <span
-        class="text-muted-foreground pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-sm peer-disabled:opacity-50"
-      >
-        https://
-      </span>
-    </div>
+    <InputGroup>
+      <InputGroupInput :id="id" placeholder="google.com" type="text" />
+      <InputGroupAddon>
+        <InputGroupText class="font-normal">https://</InputGroupText>
+      </InputGroupAddon>
+    </InputGroup>
   </div>
 </template>

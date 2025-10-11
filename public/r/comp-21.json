@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-21.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with end button</Label>\n    <div class=\"flex rounded-md shadow-xs\">\n      <Input\n        :id=\"id\"\n        class=\"-me-px flex-1 rounded-e-none shadow-none focus-visible:z-10\"\n        placeholder=\"Email\"\n        type=\"email\"\n      />\n      <button\n        class=\"border-input bg-background text-foreground hover:bg-accent hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 inline-flex items-center rounded-e-md border px-3 text-sm font-medium transition-[color,box-shadow] outline-none focus:z-10 focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50\"\n      >\n        Send\n      </button>\n    </div>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { ButtonGroup } from \"@/registry/default/ui/button-group\";\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with end button</Label>\n    <ButtonGroup class=\"w-full\">\n      <Input :id=\"id\" placeholder=\"Email\" type=\"email\" />\n      <Button\n        class=\"border-input bg-background text-foreground hover:bg-accent hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 inline-flex items-center rounded-e-md border px-3 text-sm font-medium transition-[color,box-shadow] outline-none focus:z-10 focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50\"\n      >\n        Send\n      </Button>\n    </ButtonGroup>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
@@ -18,6 +18,8 @@
   },
   "dependencies": [],
   "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/button-group.json",
     "https://originui-vue.com/r/input.json",
     "https://originui-vue.com/r/label.json"
   ]

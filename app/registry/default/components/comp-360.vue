@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
+import { Kbd } from "@/registry/default/ui/kbd";
 import {
   Tooltip,
   TooltipContent,
@@ -31,11 +32,11 @@ import {
         </TooltipTrigger>
         <TooltipContent side="top" class="px-2 py-1 text-xs">
           Pan top
-          <kbd
-            class="bg-background text-muted-foreground/70 ms-2 -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium"
+          <Kbd
+            class="text-muted-foreground/70 bg-background ms-2 -me-1 border text-[0.625rem]"
           >
             ⌘T
-          </kbd>
+          </Kbd>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
@@ -53,11 +54,11 @@ import {
         </TooltipTrigger>
         <TooltipContent side="left" class="px-2 py-1 text-xs">
           Pan left
-          <kbd
-            class="bg-background text-muted-foreground/70 ms-2 -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium"
+          <Kbd
+            class="text-muted-foreground/70 bg-background ms-2 -me-1 border text-[0.625rem]"
           >
             ⌘L
-          </kbd>
+          </Kbd>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
@@ -73,11 +74,11 @@ import {
         </TooltipTrigger>
         <TooltipContent side="right" class="px-2 py-1 text-xs">
           Pan right
-          <kbd
-            class="bg-background text-muted-foreground/70 ms-2 -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium"
+          <Kbd
+            class="text-muted-foreground/70 bg-background ms-2 -me-1 border text-[0.625rem]"
           >
             ⌘R
-          </kbd>
+          </Kbd>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
@@ -95,11 +96,11 @@ import {
         </TooltipTrigger>
         <TooltipContent side="bottom" class="px-2 py-1 text-xs">
           Pan bottom
-          <kbd
-            class="bg-background text-muted-foreground/70 ms-2 -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium"
+          <Kbd
+            class="text-muted-foreground/70 bg-background ms-2 -me-1 border text-[0.625rem]"
           >
             ⌘B
-          </kbd>
+          </Kbd>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

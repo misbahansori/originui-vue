@@ -792,6 +792,40 @@
       ]
     },
     {
+      "name": "input-group",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "app/registry/default/ui/input-group/index.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/input-group/InputGroup.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/input-group/InputGroupAddon.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/input-group/InputGroupButton.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/input-group/InputGroupInput.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/input-group/InputGroupText.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/input-group/InputGroupTextarea.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "label",
       "type": "registry:ui",
       "files": [
@@ -1563,6 +1597,24 @@
         },
         {
           "path": "app/registry/default/ui/tree/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "kbd",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "app/registry/default/ui/kbd/index.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/kbd/Kbd.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/kbd/KbdGroup.vue",
           "type": "registry:ui"
         }
       ]

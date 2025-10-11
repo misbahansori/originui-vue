@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ButtonGroup } from "@/registry/default/ui/button-group";
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
 import { SelectNative } from "@/registry/default/ui/select-native";
@@ -10,7 +11,7 @@ const id = useId();
 <template>
   <div class="*:not-first:mt-2">
     <Label :for="id">Input with start select</Label>
-    <div class="flex rounded-md shadow-xs">
+    <ButtonGroup>
       <SelectNative
         class="text-muted-foreground hover:text-foreground w-fit rounded-e-none shadow-none"
       >
@@ -27,6 +28,6 @@ const id = useId();
         placeholder="192.168.1.1"
         type="text"
       />
-    </div>
+    </ButtonGroup>
   </div>
 </template>

@@ -7,6 +7,7 @@ import NotificationMenu from "@/registry/default/components/navbar-components/No
 import UserMenu from "@/registry/default/components/navbar-components/UserMenu.vue";
 import { Button } from "@/registry/default/ui/button";
 import { Input } from "@/registry/default/ui/input";
+import { Kbd } from "@/registry/default/ui/kbd";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -111,11 +112,11 @@ const id = useId();
           <div
             class="text-muted-foreground pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-2"
           >
-            <kbd
-              class="text-muted-foreground/70 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium"
+            <Kbd
+              class="text-muted-foreground/70 bg-background border text-[0.625rem]"
             >
               ⌘K
-            </kbd>
+            </Kbd>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-13.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with inline add-ons</Label>\n    <div class=\"relative\">\n      <Input :id=\"id\" class=\"peer ps-6 pe-12\" placeholder=\"0.00\" type=\"text\" />\n      <span\n        class=\"text-muted-foreground pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-sm peer-disabled:opacity-50\"\n      >\n        €\n      </span>\n      <span\n        class=\"text-muted-foreground pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 text-sm peer-disabled:opacity-50\"\n      >\n        EUR\n      </span>\n    </div>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@/registry/default/ui/input-group\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with inline add-ons</Label>\n    <InputGroup>\n      <InputGroupInput :id=\"id\" placeholder=\"0.00\" type=\"text\" />\n      <InputGroupAddon>\n        <InputGroupText class=\"font-normal\">€</InputGroupText>\n      </InputGroupAddon>\n      <InputGroupAddon align=\"inline-end\">\n        <InputGroupText class=\"font-normal\">EUR</InputGroupText>\n      </InputGroupAddon>\n    </InputGroup>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
@@ -17,7 +17,7 @@
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/input.json",
+    "https://originui-vue.com/r/input-group.json",
     "https://originui-vue.com/r/label.json"
   ]
 }
