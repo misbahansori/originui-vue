@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { Input } from "@/registry/default/ui/input";
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupInput,
+} from "@/registry/default/ui/input-group";
 import { Label } from "@/registry/default/ui/label";
 import { LucideCreditCard } from "lucide-vue-next";
 import { vMaska } from "maska/vue";
@@ -13,21 +17,19 @@ const id = useId();
 <template>
   <div class="*:not-first:mt-2">
     <Label :for="`card-number-${id}`">Card Number</Label>
-    <div class="relative">
-      <Input
+    <InputGroup>
+      <InputGroupInput
         :id="`card-number-${id}`"
         v-model="cardNumber"
-        class="peer ps-9 [direction:inherit]"
+        class="[direction:inherit]"
         placeholder="0000 0000 0000 0000"
         maxlength="19"
         v-maska="'#### #### #### ####'"
       />
-      <div
-        class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50"
-      >
+      <InputGroupAddon align="inline-start">
         <LucideCreditCard :size="16" aria-hidden="true" />
-      </div>
-    </div>
+      </InputGroupAddon>
+    </InputGroup>
     <p
       class="text-muted-foreground mt-2 text-xs"
       role="region"

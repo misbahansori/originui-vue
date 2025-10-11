@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ButtonGroup } from "@/registry/default/ui/button-group";
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
 import { SelectNative } from "@/registry/default/ui/select-native";
@@ -21,8 +22,9 @@ const countries = [
 <template>
   <div class="*:not-first:mt-2" dir="ltr">
     <Label>Phone number input</Label>
-    <div class="flex rounded-md shadow-xs">
+    <ButtonGroup>
       <SelectNative
+        v-model="selectedCountry"
         class="text-muted-foreground hover:text-foreground w-fit rounded-e-none shadow-none"
       >
         <option
@@ -39,7 +41,7 @@ const countries = [
         placeholder="Enter phone number"
         type="tel"
       />
-    </div>
+    </ButtonGroup>
     <p
       class="text-muted-foreground mt-2 text-xs"
       role="region"
