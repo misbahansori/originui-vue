@@ -3,17 +3,19 @@ import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
 import { LucideCreditCard } from "lucide-vue-next";
 import { vMaska } from "maska/vue";
-import { ref } from "vue";
+import { ref, useId } from "vue";
 
 const cardNumber = ref("");
+
+const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="card-number">Card Number</Label>
+    <Label :for="`card-number-${id}`">Card Number</Label>
     <div class="relative">
       <Input
-        id="card-number"
+        :id="`card-number-${id}`"
         v-model="cardNumber"
         class="peer ps-9 [direction:inherit]"
         placeholder="0000 0000 0000 0000"
