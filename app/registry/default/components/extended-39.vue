@@ -46,14 +46,28 @@ const getLevel = (count: number) => {
 </script>
 
 <template>
-  <ContributionGraph class="flex gap-1">
-    <ContributionGraphGroup v-for="(week, weekIndex) in weeks" :key="weekIndex">
-      <ContributionGraphBlock
-        v-for="(day, dayIndex) in week"
-        :key="dayIndex"
-        :level="getLevel(day.count)"
-        :title="`${day.count} contributions on ${day.date}`"
-      />
-    </ContributionGraphGroup>
-  </ContributionGraph>
+  <div class="flex flex-col items-center justify-center">
+    <div>
+      <ContributionGraph class="flex gap-1">
+        <ContributionGraphGroup
+          v-for="(week, weekIndex) in weeks"
+          :key="weekIndex"
+        >
+          <ContributionGraphBlock
+            v-for="(day, dayIndex) in week"
+            :key="dayIndex"
+            :level="getLevel(day.count)"
+            :title="`${day.count} contributions on ${day.date}`"
+          />
+        </ContributionGraphGroup>
+      </ContributionGraph>
+    </div>
+    <p
+      class="text-muted-foreground mt-2 text-xs"
+      role="region"
+      aria-live="polite"
+    >
+      Default
+    </p>
+  </div>
 </template>
