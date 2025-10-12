@@ -79,7 +79,12 @@ export const extendedCategories: ExtendedComponentCategory[] = [
   {
     slug: "extended/contribution-graph",
     name: "Contribution Graph",
-    components: [{ name: "extended-39" }],
+    components: [
+      { name: "extended-39" },
+      { name: "extended-40" },
+      { name: "extended-41" },
+      { name: "extended-42" },
+    ],
     isNew: true,
   },
 ];

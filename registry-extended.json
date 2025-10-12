@@ -666,6 +666,48 @@
         "tags": ["contribution-graph", "extended", "graph"],
         "colSpan": 3
       }
+    },
+    {
+      "name": "extended-40",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-40.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["contribution-graph", "extended", "graph", "blue"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "extended-41",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-41.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["contribution-graph", "extended", "graph", "purple"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "extended-42",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-42.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["contribution-graph", "extended", "graph", "orange"],
+        "colSpan": 3
+      }
     }
   ]
 }
