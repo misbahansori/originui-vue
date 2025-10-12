@@ -76,4 +76,10 @@ export const extendedCategories: ExtendedComponentCategory[] = [
     ],
     isNew: true,
   },
+  {
+    slug: "extended/contribution-graph",
+    name: "Contribution Graph",
+    components: [{ name: "extended-39" }],
+    isNew: true,
+  },
 ];
