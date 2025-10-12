@@ -44,28 +44,92 @@ const getLevel = (count: number) => {
   return 6;
 };
 
-// Custom orange color scheme
-const orangeColors = [
+const colors = [
   "bg-muted",
-  "bg-orange-100 dark:bg-orange-900/30",
-  "bg-orange-200 dark:bg-orange-900/50",
-  "bg-orange-300 dark:bg-orange-800/60",
-  "bg-orange-400 dark:bg-orange-600/70",
-  "bg-orange-500 dark:bg-orange-500/80",
-  "bg-orange-600 dark:bg-orange-400",
+  "bg-fuchsia-100 dark:bg-fuchsia-900/30",
+  "bg-fuchsia-200 dark:bg-fuchsia-900/50",
+  "bg-fuchsia-300 dark:bg-fuchsia-800/60",
+  "bg-fuchsia-400 dark:bg-fuchsia-600/70",
+  "bg-fuchsia-500 dark:bg-fuchsia-500/80",
+  "bg-fuchsia-600 dark:bg-fuchsia-400",
 ];
+
+const monthLabels = computed(() => {
+  let lastMonth = -1;
+
+  return weeks.value.map((week) => {
+    const firstDay = week[0];
+    if (firstDay?.date) {
+      const firstDayOfWeek = new Date(firstDay.date);
+      const month = firstDayOfWeek.getMonth();
+
+      if (month !== lastMonth) {
+        lastMonth = month;
+        return firstDayOfWeek.toLocaleString("en-US", { month: "short" });
+      }
+    }
+    return "";
+  });
+});
+
+const totalActivities = computed(() => {
+  return data.value.reduce((sum, day) => sum + day.count, 0);
+});
 </script>
 
 <template>
-  <ContributionGraph class="flex gap-1">
-    <ContributionGraphGroup v-for="(week, weekIndex) in weeks" :key="weekIndex">
-      <ContributionGraphBlock
-        v-for="(day, dayIndex) in week"
-        :key="dayIndex"
-        :colors="orangeColors"
-        :level="getLevel(day.count)"
-        :title="`${day.count} contributions on ${day.date}`"
-      />
-    </ContributionGraphGroup>
-  </ContributionGraph>
+  <div class="flex flex-col items-center justify-center">
+    <div>
+      <div class="mb-1 flex gap-1">
+        <div
+          v-for="(label, index) in monthLabels"
+          :key="index"
+          class="text-muted-foreground w-3 text-xs"
+        >
+          {{ label }}
+        </div>
+      </div>
+      <ContributionGraph class="flex gap-1">
+        <ContributionGraphGroup
+          v-for="(week, weekIndex) in weeks"
+          :key="weekIndex"
+        >
+          <ContributionGraphBlock
+            v-for="(day, dayIndex) in week"
+            :key="dayIndex"
+            :colors="colors"
+            :level="getLevel(day.count)"
+            :title="`${day.count} contributions on ${day.date}`"
+            class="rounded-full"
+          />
+        </ContributionGraphGroup>
+      </ContributionGraph>
+      <div class="flex w-full items-center justify-between gap-4 py-2">
+        <div class="text-muted-foreground text-sm">
+          <span class="text-foreground font-medium">{{ totalActivities }}</span>
+          activities in the last year
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-muted-foreground text-xs">Less</span>
+          <div class="flex gap-1">
+            <ContributionGraphBlock
+              v-for="(_, index) in colors"
+              :key="index"
+              :colors="colors"
+              :level="index"
+              class="rounded-full"
+            />
+          </div>
+          <span class="text-muted-foreground text-xs">More</span>
+        </div>
+      </div>
+    </div>
+    <p
+      class="text-muted-foreground mt-2 text-xs"
+      role="region"
+      aria-live="polite"
+    >
+      With Custom Legend and Rounded Full
+    </p>
+  </div>
 </template>

@@ -4,8 +4,6 @@ import {
   ContributionGraphBlock,
   ContributionGraphGroup,
 } from "@/registry/default/ui/contribution-graph";
-import { Label } from "@/registry/default/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
 
 const generateData = () => {
   const days = [];
@@ -46,27 +44,7 @@ const getLevel = (count: number) => {
   return 6;
 };
 
-const indigoColors = [
-  "bg-muted",
-  "bg-indigo-100 dark:bg-indigo-900/30",
-  "bg-indigo-200 dark:bg-indigo-900/50",
-  "bg-indigo-300 dark:bg-indigo-800/60",
-  "bg-indigo-400 dark:bg-indigo-600/70",
-  "bg-indigo-500 dark:bg-indigo-500/80",
-  "bg-indigo-600 dark:bg-indigo-400",
-];
-
-const emeraldColors = [
-  "bg-muted",
-  "bg-emerald-100 dark:bg-emerald-900/30",
-  "bg-emerald-200 dark:bg-emerald-900/50",
-  "bg-emerald-300 dark:bg-emerald-800/60",
-  "bg-emerald-400 dark:bg-emerald-600/70",
-  "bg-emerald-500 dark:bg-emerald-500/80",
-  "bg-emerald-600 dark:bg-emerald-400",
-];
-
-const amberColors = [
+const colors = [
   "bg-muted",
   "bg-amber-100 dark:bg-amber-900/30",
   "bg-amber-200 dark:bg-amber-900/50",
@@ -75,15 +53,6 @@ const amberColors = [
   "bg-amber-500 dark:bg-amber-500/80",
   "bg-amber-600 dark:bg-amber-400",
 ];
-
-const selectedColor = ref("emerald");
-
-const colors = computed(() => {
-  if (selectedColor.value === "amber") return amberColors;
-  if (selectedColor.value === "indigo") return indigoColors;
-  if (selectedColor.value === "emerald") return emeraldColors;
-  return amberColors;
-});
 </script>
 
 <template>
@@ -102,28 +71,7 @@ const colors = computed(() => {
         />
       </ContributionGraphGroup>
     </ContributionGraph>
-    <div class="flex items-center gap-2 py-2">
-      <RadioGroup
-        default-value="comfortable"
-        orientation="horizontal"
-        v-model="selectedColor"
-        class="flex items-center gap-2"
-      >
-        <Label>Select a color :</Label>
-        <div class="flex items-center space-x-2">
-          <RadioGroupItem id="blue" value="amber" />
-          <Label for="blue">Amber</Label>
-        </div>
-        <div class="flex items-center space-x-2">
-          <RadioGroupItem id="indigo" value="indigo" />
-          <Label for="indigo">Indigo</Label>
-        </div>
-        <div class="flex items-center space-x-2">
-          <RadioGroupItem id="emerald" value="emerald" />
-          <Label for="emerald">Emerald</Label>
-        </div>
-      </RadioGroup>
-    </div>
+
     <p
       class="text-muted-foreground mt-2 text-xs"
       role="region"
