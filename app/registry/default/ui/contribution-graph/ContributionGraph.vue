@@ -4,11 +4,7 @@ import type { HTMLAttributes } from "vue";
 
 const props = defineProps<{
   class?: HTMLAttributes["class"];
-  colors?: string[];
 }>();
-
-// Provide colors to child components
-provide("contributionGraphColors", props.colors);
 </script>
 
 <template>

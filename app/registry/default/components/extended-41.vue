@@ -57,11 +57,12 @@ const purpleColors = [
 </script>
 
 <template>
-  <ContributionGraph :colors="purpleColors" class="flex gap-1">
+  <ContributionGraph class="flex gap-1">
     <ContributionGraphGroup v-for="(week, weekIndex) in weeks" :key="weekIndex">
       <ContributionGraphBlock
         v-for="(day, dayIndex) in week"
         :key="dayIndex"
+        :colors="purpleColors"
         :level="getLevel(day.count)"
         :title="`${day.count} contributions on ${day.date}`"
       />
