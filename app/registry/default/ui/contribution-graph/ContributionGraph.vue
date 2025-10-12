@@ -1,11 +1,7 @@
-<script setup lang="ts">
-defineProps<{
-  data?: any;
-}>();
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div data-slot="contribution-graph">
+  <div data-slot="contribution-graph" class="flex flex-col gap-4">
     <slot />
   </div>
 </template>
