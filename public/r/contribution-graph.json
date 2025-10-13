@@ -1,0 +1,38 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "contribution-graph",
+  "type": "registry:ui",
+  "files": [
+    {
+      "path": "ui/contribution-graph/ContributionGraph.vue",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"contribution-graph\"\n    :class=\"cn('flex flex-1 gap-1', props.class)\"\n  >\n    <slot />\n  </div>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "ui/contribution-graph/ContributionGraphGroup.vue",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"contribution-graph-group\"\n    :class=\"cn('flex flex-col gap-1', props.class)\"\n  >\n    <slot />\n  </div>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "ui/contribution-graph/ContributionGraphBlock.vue",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n  level?: number;\n  colors?: string[];\n}>();\n\nconst defaultColors = [\n  \"bg-muted\",\n  \"bg-green-100 dark:bg-green-900/30\",\n  \"bg-green-200 dark:bg-green-900/50\",\n  \"bg-green-300 dark:bg-green-800/60\",\n  \"bg-green-400 dark:bg-green-600/70\",\n  \"bg-green-500 dark:bg-green-500/80\",\n  \"bg-green-600 dark:bg-green-400\",\n];\n\nconst getColor = computed(() => {\n  const level = props.level || 0;\n  const colors = props.colors || defaultColors;\n  return colors[level] || colors[colors.length - 1];\n});\n</script>\n\n<template>\n  <div\n    data-slot=\"contribution-graph-block\"\n    :class=\"\n      cn(\n        'border-border/30 size-3 rounded border-[0.5px]',\n        getColor,\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </div>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "ui/contribution-graph/index.ts",
+      "content": "export { default as ContributionGraph } from \"./ContributionGraph.vue\";\nexport { default as ContributionGraphGroup } from \"./ContributionGraphGroup.vue\";\nexport { default as ContributionGraphBlock } from \"./ContributionGraphBlock.vue\";\n",
+      "type": "registry:ui"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "contribution graph",
+      "extended",
+      "github",
+      "activity"
+    ],
+    "colSpan": 3
+  },
+  "dependencies": [],
+  "registryDependencies": []
+}
