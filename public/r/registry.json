@@ -708,6 +708,20 @@
         "tags": ["contribution-graph", "extended", "graph", "orange"],
         "colSpan": 3
       }
+    },
+    {
+      "name": "extended-43",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-43.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["contribution-graph", "extended", "graph", "tooltip"],
+        "colSpan": 3
+      }
     }
   ]
 }

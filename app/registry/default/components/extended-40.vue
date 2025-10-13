@@ -77,7 +77,7 @@ const colors = [
       role="region"
       aria-live="polite"
     >
-      Custom Color
+      With Custom Color
     </p>
   </div>
 </template>
