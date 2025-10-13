@@ -80,6 +80,32 @@
       }
     },
     {
+      "name": "contribution-graph",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "app/registry/default/ui/contribution-graph/ContributionGraph.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/contribution-graph/ContributionGraphGroup.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/contribution-graph/ContributionGraphBlock.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/contribution-graph/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "meta": {
+        "tags": ["contribution graph", "extended", "github", "activity"],
+        "colSpan": 3
+      }
+    },
+    {
       "name": "extended-01",
       "type": "registry:component",
       "files": [
@@ -625,6 +651,62 @@
       "meta": {
         "tags": ["snippet", "extended", "code", "copy", "tabs", "command"],
         "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-39",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-39.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["contribution-graph", "extended", "graph"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "extended-40",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-40.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["contribution-graph", "extended", "graph", "blue"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "extended-41",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-41.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["contribution-graph", "extended", "graph", "purple"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "extended-42",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-42.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["contribution-graph", "extended", "graph", "orange"],
+        "colSpan": 3
       }
     }
   ]
