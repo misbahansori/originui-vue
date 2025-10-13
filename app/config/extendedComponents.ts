@@ -45,6 +45,18 @@ export const extendedCategories: ExtendedComponentCategory[] = [
     ],
   },
   {
+    slug: "extended/contribution-graph",
+    name: "Contribution Graph",
+    components: [
+      { name: "extended-39" },
+      { name: "extended-40" },
+      { name: "extended-41" },
+      { name: "extended-42" },
+      { name: "extended-43" },
+    ],
+    isNew: true,
+  },
+  {
     slug: "extended/statistic-card",
     name: "Statistic Card",
     components: [
@@ -73,18 +85,6 @@ export const extendedCategories: ExtendedComponentCategory[] = [
       { name: "extended-35" },
       { name: "extended-36" },
       { name: "extended-37" },
-    ],
-    isNew: true,
-  },
-  {
-    slug: "extended/contribution-graph",
-    name: "Contribution Graph",
-    components: [
-      { name: "extended-39" },
-      { name: "extended-40" },
-      { name: "extended-41" },
-      { name: "extended-42" },
-      { name: "extended-43" },
     ],
     isNew: true,
   },
