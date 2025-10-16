@@ -125,7 +125,9 @@ Our UI library fully supports Tailwind CSS v4. Components are built with the lat
 
 ## Contributing
 
-We welcome contributions to OriginUI Vue! Please feel free to submit issues and pull requests.
+We welcome contributions to OriginUI Vue! If you want to contribute a new component, please check our [CONTRIBUTING.md](./CONTRIBUTING.md) guide for detailed instructions.
+
+Feel free to submit issues and pull requests.
 
 ## License
 

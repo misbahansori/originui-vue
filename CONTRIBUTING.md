@@ -9,10 +9,10 @@ Thank you for your interest in contributing to OriginUI Vue! This guide will wal
   - [Regular Components](#regular-components)
   - [Extended Components](#extended-components)
 - [Component Naming Convention](#component-naming-convention)
-- [Registering Your Component](#registering-your-component)
 - [Building the Registry](#building-the-registry)
 - [Testing Your Component](#testing-your-component)
-- [Submitting Your Contribution](#submitting-your-contribution)
+- [Code Style Guidelines](#code-style-guidelines)
+- [Questions or Issues?](#questions-or-issues)
 
 ## Project Structure
 
