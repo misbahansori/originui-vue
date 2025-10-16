@@ -107,6 +107,28 @@ If you're creating a new category:
 },
 ```
 
+#### Step 3: Register in Registry JSON
+
+Add your component entry to `registry.json` in the root directory:
+
+```json
+{
+  "name": "comp-XXX",
+  "type": "registry:component",
+  "files": [
+    {
+      "path": "components/comp-XXX.vue",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": ["input", "form"]
+  }
+}
+```
+
+**Important:** The component entry should be added to the `items` array in `registry.json`. The `files`, `dependencies`, and `registryDependencies` will be automatically generated when you build the registry.
+
 ### Extended Components
 
 Extended components are custom components not included in the OriginUI library. They follow the naming pattern `extended-XX.vue`.
@@ -136,6 +158,29 @@ export const extendedCategories: ExtendedComponentCategory[] = [
   // ... other categories
 ];
 ```
+
+#### Step 3: Register in Registry Extended JSON
+
+Add your component entry to `registry-extended.json` in the root directory:
+
+```json
+{
+  "name": "extended-XX",
+  "type": "registry:component",
+  "files": [
+    {
+      "path": "components/extended-XX.vue",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": ["auth", "form"],
+    "colSpan": 2
+  }
+}
+```
+
+**Important:** The component entry should be added to the `items` array in `registry-extended.json`. The `files`, `dependencies`, and `registryDependencies` will be automatically generated when you build the registry.
 
 ## Component Naming Convention
 
