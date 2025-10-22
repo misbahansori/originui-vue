@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
+import { provideMiniCalendarContext } from "@/registry/default/ui/mini-calendar";
 import type { CalendarDate } from "@internationalized/date";
 import { getLocalTimeZone, today } from "@internationalized/date";
 import { useVModel } from "@vueuse/core";
-import type { HTMLAttributes } from "vue";
-import { computed, provide, ref, watch } from "vue";
+import type { HTMLAttributes, Ref } from "vue";
+import { computed, ref, watch } from "vue";
 
 export interface MiniCalendarProps {
   modelValue?: CalendarDate;
@@ -56,10 +57,10 @@ const handleNavigate = (direction: "prev" | "next") => {
 };
 
 // Provide context to child components
-provide("mini-calendar", {
-  selectedDate: computed(() => selectedDate.value),
+provideMiniCalendarContext({
+  selectedDate: selectedDate as Readonly<Ref<CalendarDate | undefined>>,
   onDateSelect: handleDateSelect,
-  startDate: computed(() => internalStartDate.value),
+  startDate: internalStartDate as Readonly<Ref<CalendarDate>>,
   onNavigate: handleNavigate,
   days: computed(() => props.days),
 });

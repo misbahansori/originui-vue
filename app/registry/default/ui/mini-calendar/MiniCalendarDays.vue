@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
+import { injectMiniCalendarContext } from "@/registry/default/ui/mini-calendar";
 import type { CalendarDate } from "@internationalized/date";
 import type { HTMLAttributes } from "vue";
-import { computed, inject } from "vue";
+import { computed } from "vue";
 
 export interface MiniCalendarDaysProps {
   class?: HTMLAttributes["class"];
@@ -10,16 +11,7 @@ export interface MiniCalendarDaysProps {
 
 const props = defineProps<MiniCalendarDaysProps>();
 
-const context = inject<{
-  startDate: ReturnType<typeof computed<CalendarDate>>;
-  days: ReturnType<typeof computed<number>>;
-}>("mini-calendar");
-
-if (!context) {
-  throw new Error(
-    "MiniCalendarDays must be used within MiniCalendar component",
-  );
-}
+const context = injectMiniCalendarContext();
 
 // Helper function to get array of consecutive dates
 const getDays = (startDate: CalendarDate, count: number): CalendarDate[] => {
