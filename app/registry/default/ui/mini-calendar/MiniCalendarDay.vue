@@ -1,41 +1,29 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
 import { Button } from "@/registry/default/ui/button";
+import type { DateValue } from "@internationalized/date";
+import { getLocalTimeZone, isSameDay, isToday } from "@internationalized/date";
 import type { HTMLAttributes } from "vue";
 import { computed, inject } from "vue";
 
 export interface MiniCalendarDayProps {
-  date: Date;
+  date: DateValue;
   class?: HTMLAttributes["class"];
 }
 
 const props = defineProps<MiniCalendarDayProps>();
 
 const context = inject<{
-  selectedDate: ReturnType<typeof computed<Date | undefined>>;
-  onDateSelect: (date: Date) => void;
+  selectedDate: ReturnType<typeof computed<DateValue | undefined>>;
+  onDateSelect: (date: DateValue) => void;
 }>("mini-calendar");
 
 if (!context) {
   throw new Error("MiniCalendarDay must be used within MiniCalendar component");
 }
 
-// Helper function to check if two dates are the same day
-const isSameDay = (date1: Date, date2: Date): boolean => {
-  return (
-    date1.getFullYear() === date2.getFullYear() &&
-    date1.getMonth() === date2.getMonth() &&
-    date1.getDate() === date2.getDate()
-  );
-};
-
-// Helper function to check if date is today
-const isToday = (date: Date): boolean => {
-  return isSameDay(date, new Date());
-};
-
 // Helper function to format date
-const formatDate = (date: Date) => {
+const formatDate = (date: DateValue) => {
   const months = [
     "Jan",
     "Feb",
@@ -50,8 +38,8 @@ const formatDate = (date: Date) => {
     "Nov",
     "Dec",
   ];
-  const month = months[date.getMonth()];
-  const day = date.getDate().toString();
+  const month = months[date.month - 1];
+  const day = date.day.toString();
 
   return { month, day };
 };
@@ -62,7 +50,7 @@ const isSelected = computed(() =>
     ? isSameDay(props.date, context.selectedDate.value)
     : false,
 );
-const isTodayDate = isToday(props.date);
+const isTodayDate = isToday(props.date, getLocalTimeZone());
 
 const handleClick = () => {
   context.onDateSelect(props.date);

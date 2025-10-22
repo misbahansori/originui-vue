@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/extended-44.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  MiniCalendar,\n  MiniCalendarDay,\n  MiniCalendarDays,\n  MiniCalendarNavigation,\n} from \"@/registry/default/ui/mini-calendar\";\nimport { ref } from \"vue\";\n\nconst selectedDate = ref<Date | undefined>(new Date());\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <MiniCalendar v-model=\"selectedDate\">\n      <MiniCalendarNavigation direction=\"prev\" />\n      <MiniCalendarDays v-slot=\"{ date }\">\n        <MiniCalendarDay :date=\"date\" />\n      </MiniCalendarDays>\n      <MiniCalendarNavigation direction=\"next\" />\n    </MiniCalendar>\n  </div>\n</template>\n\n",
+      "content": "<script setup lang=\"ts\">\nimport {\n  MiniCalendar,\n  MiniCalendarDay,\n  MiniCalendarDays,\n  MiniCalendarNavigation,\n} from \"@/registry/default/ui/mini-calendar\";\nimport { getLocalTimeZone, today } from \"@internationalized/date\";\nimport { ref } from \"vue\";\n\nconst selectedDate = ref(today(getLocalTimeZone()));\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <MiniCalendar v-model=\"selectedDate\">\n      <MiniCalendarNavigation direction=\"prev\" />\n      <MiniCalendarDays v-slot=\"{ date }\">\n        <MiniCalendarDay :date=\"date\" />\n      </MiniCalendarDays>\n      <MiniCalendarNavigation direction=\"next\" />\n    </MiniCalendar>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
@@ -18,7 +18,9 @@
     ],
     "colSpan": 2
   },
-  "dependencies": [],
+  "dependencies": [
+    "@internationalized/date"
+  ],
   "registryDependencies": [
     "https://originui-vue.com/r/mini-calendar.json"
   ]

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
+import type { DateValue } from "@internationalized/date";
 import type { HTMLAttributes } from "vue";
 import { computed, inject } from "vue";
 
@@ -10,7 +11,7 @@ export interface MiniCalendarDaysProps {
 const props = defineProps<MiniCalendarDaysProps>();
 
 const context = inject<{
-  startDate: ReturnType<typeof computed<Date>>;
+  startDate: ReturnType<typeof computed<DateValue>>;
   days: ReturnType<typeof computed<number>>;
 }>("mini-calendar");
 
@@ -20,18 +21,11 @@ if (!context) {
   );
 }
 
-// Helper function to add days to a date
-const addDays = (date: Date, days: number): Date => {
-  const result = new Date(date);
-  result.setDate(result.getDate() + days);
-  return result;
-};
-
 // Helper function to get array of consecutive dates
-const getDays = (startDate: Date, count: number): Date[] => {
-  const days: Date[] = [];
+const getDays = (startDate: DateValue, count: number): DateValue[] => {
+  const days: DateValue[] = [];
   for (let i = 0; i < count; i++) {
-    days.push(addDays(startDate, i));
+    days.push(startDate.add({ days: i }));
   }
   return days;
 };
@@ -43,6 +37,6 @@ const days = computed(() =>
 
 <template>
   <div :class="cn('flex items-center gap-1', props.class)">
-    <slot v-for="date in days" :key="date.getTime()" :date="date" />
+    <slot v-for="date in days" :key="date.toString()" :date="date" />
   </div>
 </template>
