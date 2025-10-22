@@ -19,10 +19,6 @@ const context = injectMiniCalendarContext();
 const Icon = computed(() =>
   props.direction === "prev" ? ChevronLeftIcon : ChevronRightIcon,
 );
-
-const handleClick = () => {
-  context.onNavigate(props.direction);
-};
 </script>
 
 <template>
@@ -32,7 +28,7 @@ const handleClick = () => {
     type="button"
     size="icon"
     variant="ghost"
-    @click="handleClick"
+    @click="context.navigate(props.direction)"
   >
     <slot>
       <component :is="Icon" class="size-4" />

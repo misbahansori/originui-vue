@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils";
 import { provideMiniCalendarContext } from "@/registry/default/ui/mini-calendar";
 import type { CalendarDate } from "@internationalized/date";
 import { getLocalTimeZone, today } from "@internationalized/date";
-import type { HTMLAttributes, Ref } from "vue";
-import { computed, ref, watch } from "vue";
+import type { HTMLAttributes } from "vue";
+import { ref } from "vue";
 
 export interface MiniCalendarProps {
   startDate?: CalendarDate;
@@ -18,44 +18,28 @@ const props = withDefaults(defineProps<MiniCalendarProps>(), {
   days: 5,
 });
 
-const emit = defineEmits<{
-  "update:startDate": [date: CalendarDate | undefined];
-}>();
-
-// Controlled state for selected date using defineModel
-const selectedDate = defineModel<CalendarDate>();
-
-// Controlled state for start date
-const internalStartDate = ref<CalendarDate>(props.defaultStartDate);
-
-watch(
-  () => props.startDate,
-  (newStartDate) => {
-    if (newStartDate) {
-      internalStartDate.value = newStartDate;
-    }
-  },
-  { immediate: true },
+const selectedDate = defineModel<CalendarDate | undefined>("modelValue");
+const startDate = ref<CalendarDate>(
+  props.defaultStartDate ?? today(getLocalTimeZone()),
 );
 
-const handleDateSelect = (date: CalendarDate) => {
+const days = ref<number>(props.days ?? 5);
+
+const selectDate = (date: CalendarDate) => {
   selectedDate.value = date;
 };
 
-const handleNavigate = (direction: "prev" | "next") => {
-  const offset = direction === "next" ? props.days : -props.days;
-  const newStartDate = internalStartDate.value.add({ days: offset });
-  internalStartDate.value = newStartDate;
-  emit("update:startDate", newStartDate);
+const navigate = (direction: "prev" | "next") => {
+  const offset = direction === "next" ? days.value : -days.value;
+  startDate.value = startDate.value.add({ days: offset });
 };
 
-// Provide context to child components
 provideMiniCalendarContext({
-  selectedDate: selectedDate as Readonly<Ref<CalendarDate | undefined>>,
-  onDateSelect: handleDateSelect,
-  startDate: internalStartDate as Readonly<Ref<CalendarDate>>,
-  onNavigate: handleNavigate,
-  days: computed(() => props.days),
+  selectedDate,
+  selectDate,
+  startDate,
+  navigate,
+  days,
 });
 </script>
 

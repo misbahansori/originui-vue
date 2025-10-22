@@ -3,11 +3,11 @@ import { createContext } from "reka-ui";
 import type { Ref } from "vue";
 
 export interface MiniCalendarContext {
-  selectedDate: Readonly<Ref<CalendarDate | undefined>>;
-  onDateSelect: (date: CalendarDate) => void;
-  startDate: Readonly<Ref<CalendarDate>>;
-  onNavigate: (direction: "prev" | "next") => void;
-  days: Readonly<Ref<number>>;
+  startDate: Ref<CalendarDate>;
+  selectedDate: Ref<CalendarDate | undefined>;
+  days: Ref<number>;
+  selectDate: (date: CalendarDate) => void;
+  navigate: (direction: "prev" | "next") => void;
 }
 
 export const [injectMiniCalendarContext, provideMiniCalendarContext] =
