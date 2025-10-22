@@ -63,7 +63,7 @@ provideMiniCalendarContext({
   <div
     :class="
       cn(
-        'bg-background flex items-center gap-2 rounded-lg border p-2',
+        'bg-background flex items-center justify-between gap-2 rounded-lg border p-2',
         props.class,
       )
     "
