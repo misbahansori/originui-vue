@@ -3,13 +3,10 @@ import { cn } from "@/lib/utils";
 import { provideMiniCalendarContext } from "@/registry/default/ui/mini-calendar";
 import type { CalendarDate } from "@internationalized/date";
 import { getLocalTimeZone, today } from "@internationalized/date";
-import { useVModel } from "@vueuse/core";
 import type { HTMLAttributes, Ref } from "vue";
 import { computed, ref, watch } from "vue";
 
 export interface MiniCalendarProps {
-  modelValue?: CalendarDate;
-  defaultValue?: CalendarDate;
   startDate?: CalendarDate;
   defaultStartDate?: CalendarDate;
   days?: number;
@@ -22,15 +19,11 @@ const props = withDefaults(defineProps<MiniCalendarProps>(), {
 });
 
 const emit = defineEmits<{
-  "update:modelValue": [date: CalendarDate | undefined];
   "update:startDate": [date: CalendarDate | undefined];
 }>();
 
-// Controlled state for selected date
-const selectedDate = useVModel(props, "modelValue", emit, {
-  passive: true,
-  defaultValue: props.defaultValue,
-});
+// Controlled state for selected date using defineModel
+const selectedDate = defineModel<CalendarDate>();
 
 // Controlled state for start date
 const internalStartDate = ref<CalendarDate>(props.defaultStartDate);
