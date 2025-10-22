@@ -1,21 +1,21 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
 import { Button } from "@/registry/default/ui/button";
-import type { DateValue } from "@internationalized/date";
+import type { CalendarDate } from "@internationalized/date";
 import { getLocalTimeZone, isSameDay, isToday } from "@internationalized/date";
 import type { HTMLAttributes } from "vue";
 import { computed, inject } from "vue";
 
 export interface MiniCalendarDayProps {
-  date: DateValue;
+  date: CalendarDate;
   class?: HTMLAttributes["class"];
 }
 
 const props = defineProps<MiniCalendarDayProps>();
 
 const context = inject<{
-  selectedDate: ReturnType<typeof computed<DateValue | undefined>>;
-  onDateSelect: (date: DateValue) => void;
+  selectedDate: ReturnType<typeof computed<CalendarDate | undefined>>;
+  onDateSelect: (date: CalendarDate) => void;
 }>("mini-calendar");
 
 if (!context) {
@@ -23,7 +23,7 @@ if (!context) {
 }
 
 // Helper function to format date
-const formatDate = (date: DateValue) => {
+const formatDate = (date: CalendarDate) => {
   const months = [
     "Jan",
     "Feb",

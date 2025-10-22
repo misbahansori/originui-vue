@@ -5,10 +5,10 @@ import {
   MiniCalendarDays,
   MiniCalendarNavigation,
 } from "@/registry/default/ui/mini-calendar";
-import { getLocalTimeZone, today } from "@internationalized/date";
+import { CalendarDate } from "@internationalized/date";
 import { ref } from "vue";
 
-const selectedDate = ref(today(getLocalTimeZone()));
+const selectedDate = ref<CalendarDate>();
 </script>
 
 <template>

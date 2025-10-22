@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import type { DateValue } from "@internationalized/date";
+import type { CalendarDate } from "@internationalized/date";
 import { getLocalTimeZone, today } from "@internationalized/date";
 import { useVModel } from "@vueuse/core";
 import type { HTMLAttributes } from "vue";
 import { computed, provide, ref, watch } from "vue";
 
 export interface MiniCalendarProps {
-  modelValue?: DateValue;
-  defaultValue?: DateValue;
-  startDate?: DateValue;
-  defaultStartDate?: DateValue;
+  modelValue?: CalendarDate;
+  defaultValue?: CalendarDate;
+  startDate?: CalendarDate;
+  defaultStartDate?: CalendarDate;
   days?: number;
   class?: HTMLAttributes["class"];
 }
@@ -21,8 +21,8 @@ const props = withDefaults(defineProps<MiniCalendarProps>(), {
 });
 
 const emit = defineEmits<{
-  "update:modelValue": [date: DateValue | undefined];
-  "update:startDate": [date: DateValue | undefined];
+  "update:modelValue": [date: CalendarDate | undefined];
+  "update:startDate": [date: CalendarDate | undefined];
 }>();
 
 // Controlled state for selected date
@@ -32,7 +32,7 @@ const selectedDate = useVModel(props, "modelValue", emit, {
 });
 
 // Controlled state for start date
-const internalStartDate = ref<DateValue>(props.defaultStartDate);
+const internalStartDate = ref<CalendarDate>(props.defaultStartDate);
 
 watch(
   () => props.startDate,
@@ -44,7 +44,7 @@ watch(
   { immediate: true },
 );
 
-const handleDateSelect = (date: DateValue) => {
+const handleDateSelect = (date: CalendarDate) => {
   selectedDate.value = date;
 };
 

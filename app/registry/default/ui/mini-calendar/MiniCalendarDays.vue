@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import type { DateValue } from "@internationalized/date";
+import type { CalendarDate } from "@internationalized/date";
 import type { HTMLAttributes } from "vue";
 import { computed, inject } from "vue";
 
@@ -11,7 +11,7 @@ export interface MiniCalendarDaysProps {
 const props = defineProps<MiniCalendarDaysProps>();
 
 const context = inject<{
-  startDate: ReturnType<typeof computed<DateValue>>;
+  startDate: ReturnType<typeof computed<CalendarDate>>;
   days: ReturnType<typeof computed<number>>;
 }>("mini-calendar");
 
@@ -22,8 +22,8 @@ if (!context) {
 }
 
 // Helper function to get array of consecutive dates
-const getDays = (startDate: DateValue, count: number): DateValue[] => {
-  const days: DateValue[] = [];
+const getDays = (startDate: CalendarDate, count: number): CalendarDate[] => {
+  const days: CalendarDate[] = [];
   for (let i = 0; i < count; i++) {
     days.push(startDate.add({ days: i }));
   }
