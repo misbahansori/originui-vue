@@ -8,7 +8,6 @@ import { ref } from "vue";
 
 export interface MiniCalendarProps {
   startDate?: CalendarDate;
-  defaultStartDate?: CalendarDate;
   days?: number;
   class?: HTMLAttributes["class"];
 }
@@ -20,7 +19,7 @@ const props = withDefaults(defineProps<MiniCalendarProps>(), {
 
 const selectedDate = defineModel<CalendarDate | undefined>("modelValue");
 const startDate = ref<CalendarDate>(
-  props.defaultStartDate ?? today(getLocalTimeZone()),
+  props.startDate ?? today(getLocalTimeZone()),
 );
 
 const days = ref<number>(props.days ?? 5);
