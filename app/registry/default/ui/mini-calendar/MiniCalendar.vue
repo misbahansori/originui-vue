@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
 import { provideMiniCalendarContext } from "@/registry/default/ui/mini-calendar";
-import type { CalendarDate } from "@internationalized/date";
-import { getLocalTimeZone, today } from "@internationalized/date";
+import {
+  getLocalTimeZone,
+  today,
+  type CalendarDate,
+} from "@internationalized/date";
 import type { HTMLAttributes } from "vue";
 import { ref } from "vue";
 
@@ -13,7 +16,6 @@ export interface MiniCalendarProps {
 }
 
 const props = withDefaults(defineProps<MiniCalendarProps>(), {
-  defaultStartDate: () => today(getLocalTimeZone()),
   days: 5,
 });
 
@@ -30,13 +32,13 @@ const selectDate = (date: CalendarDate) => {
 
 const navigate = (direction: "prev" | "next") => {
   const offset = direction === "next" ? days.value : -days.value;
-  startDate.value = startDate.value.add({ days: offset });
+  startDate.value = startDate.value?.add({ days: offset });
 };
 
 provideMiniCalendarContext({
   selectedDate,
   selectDate,
-  startDate,
+  startDate: startDate as Ref<CalendarDate>,
   navigate,
   days,
 });
