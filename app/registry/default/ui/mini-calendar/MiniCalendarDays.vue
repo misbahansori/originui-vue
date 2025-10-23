@@ -13,18 +13,13 @@ const props = defineProps<MiniCalendarDaysProps>();
 
 const context = injectMiniCalendarContext();
 
-// Helper function to get array of consecutive dates
-const getDays = (startDate: CalendarDate, count: number): CalendarDate[] => {
+const days = computed(() => {
   const days: CalendarDate[] = [];
-  for (let i = 0; i < count; i++) {
-    days.push(startDate.add({ days: i }));
+  for (let i = 0; i < context.days.value; i++) {
+    days.push(context.startDate.value.add({ days: i }));
   }
   return days;
-};
-
-const days = computed(() =>
-  getDays(context.startDate.value, context.days.value),
-);
+});
 </script>
 
 <template>
