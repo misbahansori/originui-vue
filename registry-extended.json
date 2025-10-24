@@ -766,6 +766,146 @@
         "tags": ["mini-calendar", "extended", "calendar", "date"],
         "colSpan": 2
       }
+    },
+    {
+      "name": "extended-45",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-45.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["mini-calendar", "extended", "calendar", "date", "compact"],
+        "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-46",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-46.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["mini-calendar", "extended", "calendar", "date", "week"],
+        "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-47",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-47.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["mini-calendar", "extended", "calendar", "date", "minimal"],
+        "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-48",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-48.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["mini-calendar", "extended", "calendar", "date", "large"],
+        "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-49",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-49.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["mini-calendar", "extended", "calendar", "date", "navigation"],
+        "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-50",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-50.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["mini-calendar", "extended", "calendar", "date", "styled"],
+        "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-51",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-51.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["mini-calendar", "extended", "calendar", "date", "rounded"],
+        "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-52",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-52.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["mini-calendar", "extended", "calendar", "date", "shadow"],
+        "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-53",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-53.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["mini-calendar", "extended", "calendar", "date", "gradient"],
+        "colSpan": 2
+      }
+    },
+    {
+      "name": "extended-54",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "app/registry/default/components/extended-54.vue",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["mini-calendar", "extended", "calendar", "date", "10-day"],
+        "colSpan": 3
+      }
     }
   ]
 }

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "extended-50",
+  "type": "registry:component",
+  "files": [
+    {
+      "path": "components/extended-50.vue",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  MiniCalendar,\n  MiniCalendarDay,\n  MiniCalendarDays,\n  MiniCalendarNavigation,\n} from \"@/registry/default/ui/mini-calendar\";\nimport { CalendarDate } from \"@internationalized/date\";\nimport { ChevronLeft, ChevronRight } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nconst selectedDate = ref<CalendarDate>();\n</script>\n\n<template>\n  <div>\n    <MiniCalendar v-model=\"selectedDate\">\n      <MiniCalendarNavigation\n        direction=\"prev\"\n        :as=\"Button\"\n        variant=\"outline\"\n        size=\"icon\"\n        class=\"shrink-0\"\n      >\n        <ChevronLeft class=\"size-4\" />\n      </MiniCalendarNavigation>\n      <MiniCalendarDays v-slot=\"{ date }\">\n        <MiniCalendarDay :date=\"date\" />\n      </MiniCalendarDays>\n      <MiniCalendarNavigation\n        direction=\"next\"\n        :as=\"Button\"\n        variant=\"outline\"\n        size=\"icon\"\n        class=\"shrink-0\"\n      >\n        <ChevronRight class=\"size-4\" />\n      </MiniCalendarNavigation>\n    </MiniCalendar>\n    <p class=\"text-muted-foreground mt-2 text-xs\">\n      Custom navigation with outline button styling\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "mini-calendar",
+      "extended",
+      "calendar",
+      "date",
+      "styled"
+    ],
+    "colSpan": 2
+  },
+  "dependencies": [
+    "@internationalized/date",
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/button.json",
+    "https://originui-vue.com/r/mini-calendar.json"
+  ]
+}

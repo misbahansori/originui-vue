@@ -91,7 +91,19 @@ export const extendedCategories: ExtendedComponentCategory[] = [
   {
     slug: "extended/mini-calendar",
     name: "Mini Calendar",
-    components: [{ name: "extended-44" }],
+    components: [
+      { name: "extended-44" },
+      { name: "extended-45" },
+      { name: "extended-46" },
+      { name: "extended-47" },
+      { name: "extended-48" },
+      { name: "extended-49" },
+      { name: "extended-50" },
+      { name: "extended-51" },
+      { name: "extended-52" },
+      { name: "extended-53" },
+      { name: "extended-54" },
+    ],
     isNew: true,
   },
 ];

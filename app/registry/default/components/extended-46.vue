@@ -12,8 +12,8 @@ const selectedDate = ref<CalendarDate>();
 </script>
 
 <template>
-  <div class="*:not-first:mt-2">
-    <MiniCalendar v-model="selectedDate">
+  <div>
+    <MiniCalendar v-model="selectedDate" :days="7" class="max-w-2xl">
       <MiniCalendarNavigation direction="prev" />
       <MiniCalendarDays v-slot="{ date }">
         <MiniCalendarDay :date="date" />
@@ -21,7 +21,7 @@ const selectedDate = ref<CalendarDate>();
       <MiniCalendarNavigation direction="next" />
     </MiniCalendar>
     <p class="text-muted-foreground mt-2 text-xs">
-      Default 5-day horizontal calendar view
+      Full week view showing 7 days at once
     </p>
   </div>
 </template>

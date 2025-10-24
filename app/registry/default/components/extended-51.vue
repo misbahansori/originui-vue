@@ -12,16 +12,16 @@ const selectedDate = ref<CalendarDate>();
 </script>
 
 <template>
-  <div class="*:not-first:mt-2">
-    <MiniCalendar v-model="selectedDate">
+  <div>
+    <MiniCalendar v-model="selectedDate" class="rounded-full px-4">
       <MiniCalendarNavigation direction="prev" />
-      <MiniCalendarDays v-slot="{ date }">
-        <MiniCalendarDay :date="date" />
+      <MiniCalendarDays v-slot="{ date }" class="gap-1">
+        <MiniCalendarDay :date="date" class="rounded-full" />
       </MiniCalendarDays>
       <MiniCalendarNavigation direction="next" />
     </MiniCalendar>
     <p class="text-muted-foreground mt-2 text-xs">
-      Default 5-day horizontal calendar view
+      Rounded pill style with circular day buttons
     </p>
   </div>
 </template>
