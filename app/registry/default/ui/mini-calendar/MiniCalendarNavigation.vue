@@ -28,7 +28,7 @@ const Icon = computed(() =>
     type="button"
     size="icon"
     variant="ghost"
-    @click="context.navigate(props.direction)"
+    @click="props.direction === 'prev' ? context.prev() : context.next()"
   >
     <slot>
       <component :is="Icon" class="size-4" />

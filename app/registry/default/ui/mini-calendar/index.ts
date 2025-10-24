@@ -7,7 +7,9 @@ export interface MiniCalendarContext {
   selectedDate: Ref<CalendarDate | undefined>;
   days: Ref<number>;
   selectDate: (date: CalendarDate) => void;
-  navigate: (direction: "prev" | "next") => void;
+  navigate: (offset: number) => void;
+  next: () => void;
+  prev: () => void;
 }
 
 export const [injectMiniCalendarContext, provideMiniCalendarContext] =

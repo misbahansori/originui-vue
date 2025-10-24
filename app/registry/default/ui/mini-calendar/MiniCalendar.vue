@@ -30,16 +30,21 @@ const selectDate = (date: CalendarDate) => {
   selectedDate.value = date;
 };
 
-const navigate = (direction: "prev" | "next") => {
-  const offset = direction === "next" ? days.value : -days.value;
+const navigate = (offset: number) => {
   startDate.value = startDate.value?.add({ days: offset });
 };
+
+const next = () => navigate(days.value);
+
+const prev = () => navigate(-days.value);
 
 provideMiniCalendarContext({
   selectedDate,
   selectDate,
   startDate: startDate as Ref<CalendarDate>,
   navigate,
+  next,
+  prev,
   days,
 });
 </script>
