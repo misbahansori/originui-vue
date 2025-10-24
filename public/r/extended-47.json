@@ -1,0 +1,28 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "extended-47",
+  "type": "registry:component",
+  "files": [
+    {
+      "path": "components/extended-47.vue",
+      "content": "<script setup lang=\"ts\">\nimport {\n  MiniCalendar,\n  MiniCalendarDay,\n  MiniCalendarDays,\n  MiniCalendarNavigation,\n} from \"@/registry/default/ui/mini-calendar\";\nimport { CalendarDate } from \"@internationalized/date\";\nimport { ref } from \"vue\";\n\nconst selectedDate = ref<CalendarDate>();\n</script>\n\n<template>\n  <div>\n    <MiniCalendar v-model=\"selectedDate\" class=\"border-0 bg-transparent p-0\">\n      <MiniCalendarNavigation direction=\"prev\" />\n      <MiniCalendarDays v-slot=\"{ date }\" class=\"gap-2\">\n        <MiniCalendarDay :date=\"date\" class=\"min-w-[3.5rem]\" />\n      </MiniCalendarDays>\n      <MiniCalendarNavigation direction=\"next\" />\n    </MiniCalendar>\n    <p class=\"text-muted-foreground mt-2 text-xs\">\n      Borderless minimal design without background\n    </p>\n  </div>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "mini-calendar",
+      "extended",
+      "calendar",
+      "date",
+      "minimal"
+    ],
+    "colSpan": 2
+  },
+  "dependencies": [
+    "@internationalized/date"
+  ],
+  "registryDependencies": [
+    "https://originui-vue.com/r/mini-calendar.json"
+  ]
+}
