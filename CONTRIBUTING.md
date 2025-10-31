@@ -31,8 +31,10 @@ originui-vue/
 │           └── ui/                # Base UI components
 ├── public/
 │   └── r/                         # Built registry JSON files
-└── scripts/
-    └── update-registry.ts         # Registry build script
+├── scripts/
+│   └── update-registry.ts         # Registry build script
+├── registry.json                  # Regular component registry source
+└── registry-extended.json         # Extended component registry source
 ```
 
 ## Adding a New Component
