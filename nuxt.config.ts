@@ -14,7 +14,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      SITE_URL: import.meta.env.NUXT_SITE_URL,
+      SITE_URL: process.env.NUXT_SITE_URL,
     },
   },
 
