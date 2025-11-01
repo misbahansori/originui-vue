@@ -15,7 +15,7 @@ const toggleTheme = () => {
   <div>
     <Toggle
       variant="outline"
-      size="xs"
+      size="sm"
       class="group data-[state=on]:hover:bg-muted text-muted-foreground data-[state=on]:text-muted-foreground data-[state=on]:hover:text-foreground size-8 rounded-full border-none shadow-none data-[state=on]:bg-transparent"
       :pressed="theme === 'dark'"
       @pressed-change="toggleTheme"
