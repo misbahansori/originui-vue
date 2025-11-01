@@ -31,6 +31,11 @@ onMounted(async () => {
     theme: "github-dark",
   });
 });
+
+const runtimeConfig = useRuntimeConfig();
+const siteUrl = runtimeConfig.public.SITE_URL;
+
+const { copied, copy } = useClipboard();
 </script>
 
 <template>
@@ -66,6 +71,39 @@ onMounted(async () => {
           </Tooltip>
         </TooltipProvider>
       </DevOnly>
+
+      <TooltipProvider :delayDuration="0">
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button
+              :disabled="copied"
+              variant="ghost"
+              size="icon"
+              class="text-muted-foreground/80 hover:text-foreground transition-none hover:bg-transparent disabled:opacity-100 lg:opacity-0 lg:group-focus-within/item:opacity-100 lg:group-hover/item:opacity-100"
+              @click="
+                () =>
+                  copy(component ? `${siteUrl}/r/${component.name}.json` : '')
+              "
+            >
+              <div
+                class="transition-all"
+                :class="!copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0'"
+              >
+                <Icon name="lucide:paperclip" size="16" aria-hidden="true" />
+              </div>
+              <div
+                class="absolute transition-all"
+                :class="copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0'"
+              >
+                <Icon name="lucide:check" size="16" aria-hidden="true" />
+              </div>
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Copy Registry URL</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
 
       <Dialog>
         <TooltipProvider :delayDuration="0">
