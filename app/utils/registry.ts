@@ -1,7 +1,6 @@
-import type { RegistryTag } from "@/registry/registry-tags";
 import registry from "~~/registry.json";
 import registryExtended from "~~/registry-extended.json";
-import type { RegistryItem } from "shadcn-vue/registry";
+import type { RegistryItem } from "@/types/schema";
 
 // Define registry interfaces
 export interface ComponentFile {
@@ -35,9 +34,7 @@ export function getComponentByName(name: string): RegistryItem | undefined {
   return components.find((comp) => comp.name === name);
 }
 
-export const getAvailableTags = (
-  selectedTags: RegistryTag[],
-): RegistryTag[] => {
+export const getAvailableTags = (selectedTags: string[]): string[] => {
   if (!selectedTags.length) return [];
 
   // Get all components that have all the selected tags
@@ -46,9 +43,9 @@ export const getAvailableTags = (
   );
 
   // Get all unique tags from the matching components
-  const availableTags = new Set<RegistryTag>();
+  const availableTags = new Set<string>();
   matchingComponents.forEach((component) => {
-    component.meta?.tags?.forEach((tag: RegistryTag) => {
+    component.meta?.tags?.forEach((tag) => {
       if (!selectedTags.includes(tag)) {
         availableTags.add(tag);
       }

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import type { RegistryItem } from "shadcn-vue/registry";
+import type { RegistryItem } from "@/types/schema";
 import { codeToHtml } from "shiki";
 import { MagicString } from "vue/compiler-sfc";
 import { buttonVariants } from "~/registry/default/ui/button";
