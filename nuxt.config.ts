@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     "nuxt-umami",
     "@nuxtjs/sitemap",
     "vue-sonner/nuxt",
+    "@nuxthub/core",
   ],
 
   future: {
