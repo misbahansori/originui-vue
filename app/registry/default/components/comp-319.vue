@@ -33,7 +33,7 @@ const handleScroll = () => {
       <Button variant="outline">Terms & Conditions</Button>
     </DialogTrigger>
     <DialogContent
-      class="flex flex-col gap-0 p-0 sm:max-h-[min(640px,80vh)] sm:max-w-lg [&>button:last-child]:top-3.5"
+      class="flex max-h-[calc(100%-2rem)] flex-col gap-0 overflow-y-auto p-0 sm:max-h-[min(640px,80vh)] sm:max-w-lg [&>button:last-child]:top-3.5"
     >
       <DialogHeader class="contents space-y-0 text-left">
         <DialogTitle class="border-b px-6 py-4 text-base">
