@@ -18,7 +18,7 @@ import {
       <Button variant="outline">Scrollable (native scrollbar)</Button>
     </DialogTrigger>
     <DialogContent
-      class="flex flex-col gap-0 p-0 sm:max-h-[min(640px,80vh)] sm:max-w-lg [&>button:last-child]:hidden"
+      class="flex max-h-[calc(100%-2rem)] flex-col gap-0 overflow-y-auto p-0 sm:max-h-[min(640px,80vh)] sm:max-w-lg [&>button:last-child]:hidden"
     >
       <div class="overflow-y-auto">
         <DialogHeader class="contents space-y-0 text-left">

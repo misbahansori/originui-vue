@@ -19,7 +19,7 @@ import { ScrollArea } from "@/registry/default/ui/scroll-area";
       <Button variant="outline">Scrollable (custom scrollbar)</Button>
     </DialogTrigger>
     <DialogContent
-      class="flex flex-col gap-0 p-0 sm:max-h-[min(640px,80vh)] sm:max-w-lg [&>button:last-child]:hidden"
+      class="flex max-h-[calc(100%-2rem)] flex-col gap-0 p-0 sm:max-h-[min(640px,80vh)] sm:max-w-lg [&>button:last-child]:hidden"
     >
       <ScrollArea class="flex max-h-full flex-col overflow-hidden">
         <DialogHeader class="contents space-y-0 text-left">
