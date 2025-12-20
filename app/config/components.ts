@@ -2,7 +2,6 @@ export interface ComponentCategory {
   slug: string;
   name: string;
   components: { name: string }[];
-  isNew?: boolean;
 }
 
 export const categories: ComponentCategory[] = [
@@ -301,7 +300,6 @@ export const categories: ComponentCategory[] = [
   {
     slug: "file-upload",
     name: "File upload",
-    isNew: false,
     components: [
       { name: "comp-125" },
       { name: "comp-126" },
@@ -408,7 +406,6 @@ export const categories: ComponentCategory[] = [
       { name: "comp-595" },
       { name: "comp-596" },
     ],
-    isNew: true,
   },
   {
     slug: "notification",
@@ -713,7 +710,6 @@ export const categories: ComponentCategory[] = [
   {
     slug: "timeline",
     name: "Timeline",
-    isNew: false,
     components: [
       { name: "comp-530" },
       { name: "comp-531" },
@@ -750,7 +746,6 @@ export const categories: ComponentCategory[] = [
   {
     slug: "tree",
     name: "Tree",
-    isNew: true,
     components: [
       { name: "comp-565" },
       { name: "comp-566" },

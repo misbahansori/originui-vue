@@ -54,7 +54,6 @@ export const extendedCategories: ExtendedComponentCategory[] = [
       { name: "extended-42" },
       { name: "extended-43" },
     ],
-    isNew: true,
   },
   {
     slug: "extended/statistic-card",
@@ -76,7 +75,6 @@ export const extendedCategories: ExtendedComponentCategory[] = [
       { name: "extended-33" },
       { name: "extended-34" },
     ],
-    isNew: true,
   },
   {
     slug: "extended/snippet",
@@ -86,7 +84,6 @@ export const extendedCategories: ExtendedComponentCategory[] = [
       { name: "extended-36" },
       { name: "extended-37" },
     ],
-    isNew: true,
   },
   {
     slug: "extended/mini-calendar",
@@ -104,6 +101,5 @@ export const extendedCategories: ExtendedComponentCategory[] = [
       { name: "extended-53" },
       { name: "extended-54" },
     ],
-    isNew: true,
   },
 ];
