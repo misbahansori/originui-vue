@@ -30,6 +30,10 @@ export default defineNuxtConfig({
     "@nuxthub/core",
   ],
 
+  hub: {
+    db: "postgresql",
+  },
+
   future: {
     compatibilityVersion: 4,
   },

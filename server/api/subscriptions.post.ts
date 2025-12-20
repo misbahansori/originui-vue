@@ -1,6 +1,7 @@
 import { eq } from "drizzle-orm";
 import { z } from "zod";
 import { readValidatedBody } from "h3";
+import { db, schema } from "hub:db";
 
 const subscriptionSchema = z.object({
   email: z.string().email("Invalid email address"),
@@ -11,10 +12,10 @@ export default defineEventHandler(async (event) => {
 
   const { email } = body;
 
-  const existingSubscription = await useDrizzle()
+  const existingSubscription = await db
     .select()
-    .from(tables.subscriptions)
-    .where(eq(tables.subscriptions.email, email))
+    .from(schema.subscriptions)
+    .where(eq(schema.subscriptions.email, email))
     .limit(1);
 
   if (existingSubscription.length > 0) {
@@ -24,8 +25,8 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  const [newSubscription] = await useDrizzle()
-    .insert(tables.subscriptions)
+  const [newSubscription] = await db
+    .insert(schema.subscriptions)
     .values({
       email,
       createdAt: new Date(),
