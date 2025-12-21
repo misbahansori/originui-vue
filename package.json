@@ -4,9 +4,9 @@
   "type": "module",
   "version": "0.1.4",
   "scripts": {
-    "build": "nuxt build",
+    "build": "NODE_OPTIONS=--max-old-space-size=8192 nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "NODE_OPTIONS=--max-old-space-size=8192 nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "start": "node .output/server/index.mjs",
