@@ -58,7 +58,5 @@ useSeoMeta({
         />
       </div>
     </div>
-
-    <SubscribeBottom />
   </div>
 </template>
