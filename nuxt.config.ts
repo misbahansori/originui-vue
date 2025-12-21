@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-  compatibilityDate: "2024-04-03",
+  compatibilityDate: "2025-12-21",
 
   colorMode: {
     classSuffix: "",
@@ -85,5 +85,13 @@ export default defineNuxtConfig({
     "/": { prerender: true },
     "/easings": { prerender: true },
     "/layouts": { prerender: true },
+  },
+
+  nitro: {
+    preset: "cloudflare_module",
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
+    },
   },
 });
