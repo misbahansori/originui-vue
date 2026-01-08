@@ -8,7 +8,7 @@ type PackageManager = "pnpm" | "npm" | "yarn" | "bun";
 const packageManager = ref<PackageManager>("pnpm");
 
 const runtimeConfig = useRuntimeConfig();
-const siteUrl = runtimeConfig.public.SITE_URL;
+const siteUrl = runtimeConfig.public.SITE_URL ?? "https://originui-vue.com";
 
 const commands = {
   pnpm: `pnpm dlx shadcn-vue@latest add ${siteUrl}/r/${props.name}.json`,
