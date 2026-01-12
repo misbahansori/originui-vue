@@ -10,18 +10,13 @@
     }
   ],
   "meta": {
-    "tags": [
-      "dialog",
-      "modal",
-      "otp",
-      "radix"
-    ],
+    "tags": ["dialog", "modal", "otp", "radix"],
     "style": 1
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/dialog.json",
-    "https://originui-vue.com/r/pin-input.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/dialog.json",
+    "https://www.originui-vue.com/r/pin-input.json"
   ]
 }

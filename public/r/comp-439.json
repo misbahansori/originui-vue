@@ -10,16 +10,13 @@
     }
   ],
   "meta": {
-    "tags": [
-      "tabs",
-      "radix"
-    ],
+    "tags": ["tabs", "radix"],
     "colSpan": 2,
     "style": 2
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/badge.json",
-    "https://originui-vue.com/r/tabs.json"
+    "https://www.originui-vue.com/r/badge.json",
+    "https://www.originui-vue.com/r/tabs.json"
   ]
 }

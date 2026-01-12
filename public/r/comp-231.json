@@ -23,13 +23,11 @@
       "radix"
     ]
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/command.json",
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/popover.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/command.json",
+    "https://www.originui-vue.com/r/label.json",
+    "https://www.originui-vue.com/r/popover.json"
   ]
 }

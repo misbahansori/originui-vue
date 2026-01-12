@@ -10,16 +10,11 @@
     }
   ],
   "meta": {
-    "tags": [
-      "upload",
-      "file"
-    ]
+    "tags": ["upload", "file"]
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/useFileUpload.json",
-    "https://originui-vue.com/r/button.json"
+    "https://www.originui-vue.com/r/useFileUpload.json",
+    "https://www.originui-vue.com/r/button.json"
   ]
 }

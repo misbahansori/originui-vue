@@ -10,18 +10,10 @@
     }
   ],
   "meta": {
-    "tags": [
-      "tabs",
-      "vertical tabs",
-      "radix"
-    ],
+    "tags": ["tabs", "vertical tabs", "radix"],
     "colSpan": 2,
     "style": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://originui-vue.com/r/tabs.json"
-  ]
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": ["https://www.originui-vue.com/r/tabs.json"]
 }

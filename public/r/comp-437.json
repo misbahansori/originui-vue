@@ -10,19 +10,14 @@
     }
   ],
   "meta": {
-    "tags": [
-      "tabs",
-      "radix"
-    ],
+    "tags": ["tabs", "radix"],
     "colSpan": 2,
     "style": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/badge.json",
-    "https://originui-vue.com/r/scroll-area.json",
-    "https://originui-vue.com/r/tabs.json"
+    "https://www.originui-vue.com/r/badge.json",
+    "https://www.originui-vue.com/r/scroll-area.json",
+    "https://www.originui-vue.com/r/tabs.json"
   ]
 }

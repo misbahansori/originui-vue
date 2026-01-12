@@ -10,20 +10,16 @@
     }
   ],
   "meta": {
-    "tags": [
-      "navbar, navigation"
-    ],
+    "tags": ["navbar, navigation"],
     "colSpan": 3
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/badge.json",
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/navigation-menu.json",
-    "https://originui-vue.com/r/popover.json",
-    "https://originui-vue.com/r/switch.json"
+    "https://www.originui-vue.com/r/badge.json",
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/label.json",
+    "https://www.originui-vue.com/r/navigation-menu.json",
+    "https://www.originui-vue.com/r/popover.json",
+    "https://www.originui-vue.com/r/switch.json"
   ]
 }

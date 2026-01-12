@@ -10,13 +10,8 @@
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "textarea"
-    ]
+    "tags": ["label", "textarea"]
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://originui-vue.com/r/textarea.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/textarea.json"]
 }

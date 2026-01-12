@@ -26,12 +26,12 @@ useSeoMeta({
   description: `A collection of beautiful and accessible ${category.name.toLowerCase()} components built with Vue and Tailwind CSS.`,
   ogTitle: `${category.name} components built with Vue and Tailwind CSS - Origin UI`,
   ogDescription: `A collection of beautiful and accessible ${category.name.toLowerCase()} components built with Vue and Tailwind CSS.`,
-  ogImage: "https://originui-vue.com/opengraph-image.webp",
-  ogUrl: "https://originui-vue.com",
+  ogImage: "https://www.originui-vue.com/opengraph-image.webp",
+  ogUrl: "https://www.originui-vue.com",
   twitterTitle: `${category.name} components built with Vue and Tailwind CSS - Origin UI`,
   twitterDescription:
     "An open-source collection of copy-and-paste components for quickly building application UIs.",
-  twitterImage: "https://originui-vue.com/opengraph-image.webp",
+  twitterImage: "https://www.originui-vue.com/opengraph-image.webp",
   twitterCard: "summary_large_image",
 });
 </script>

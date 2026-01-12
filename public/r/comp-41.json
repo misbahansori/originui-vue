@@ -10,20 +10,11 @@
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "date",
-      "calendar",
-      "picker",
-      "react aria"
-    ]
+    "tags": ["input", "label", "date", "calendar", "picker", "react aria"]
   },
-  "dependencies": [
-    "@internationalized/date"
-  ],
+  "dependencies": ["@internationalized/date"],
   "registryDependencies": [
-    "https://originui-vue.com/r/date-picker.json",
-    "https://originui-vue.com/r/label.json"
+    "https://www.originui-vue.com/r/date-picker.json",
+    "https://www.originui-vue.com/r/label.json"
   ]
 }

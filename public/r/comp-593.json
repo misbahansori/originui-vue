@@ -20,9 +20,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "navbar, navigation"
-    ],
+    "tags": ["navbar, navigation"],
     "colSpan": 3
   },
   "dependencies": [
@@ -32,11 +30,11 @@
     "reka-ui"
   ],
   "registryDependencies": [
-    "https://originui-vue.com/r/breadcrumb.json",
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/popover.json",
-    "https://originui-vue.com/r/range-calendar.json",
-    "https://originui-vue.com/r/checkbox.json",
-    "https://originui-vue.com/r/label.json"
+    "https://www.originui-vue.com/r/breadcrumb.json",
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/popover.json",
+    "https://www.originui-vue.com/r/range-calendar.json",
+    "https://www.originui-vue.com/r/checkbox.json",
+    "https://www.originui-vue.com/r/label.json"
   ]
 }

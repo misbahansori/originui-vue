@@ -10,18 +10,11 @@
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "select",
-      "user",
-      "avatar",
-      "profile",
-      "radix"
-    ]
+    "tags": ["label", "select", "user", "avatar", "profile", "radix"]
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/select.json"
+    "https://www.originui-vue.com/r/label.json",
+    "https://www.originui-vue.com/r/select.json"
   ]
 }

@@ -10,19 +10,13 @@
     }
   ],
   "meta": {
-    "tags": [
-      "popover",
-      "notification",
-      "radix"
-    ],
+    "tags": ["popover", "notification", "radix"],
     "style": 1
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/badge.json",
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/popover.json"
+    "https://www.originui-vue.com/r/badge.json",
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/popover.json"
   ]
 }

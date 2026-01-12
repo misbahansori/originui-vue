@@ -10,18 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "dropdown",
-      "counter"
-    ],
+    "tags": ["button", "dropdown", "counter"],
     "style": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/button-group.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/button-group.json"
   ]
 }

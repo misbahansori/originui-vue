@@ -14,11 +14,6 @@
       "type": "registry:ui"
     }
   ],
-  "dependencies": [
-    "lucide-vue-next",
-    "reka-ui"
-  ],
-  "registryDependencies": [
-    "https://originui-vue.com/r/combobox.json"
-  ]
+  "dependencies": ["lucide-vue-next", "reka-ui"],
+  "registryDependencies": ["https://www.originui-vue.com/r/combobox.json"]
 }

@@ -10,17 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "search",
-      "kbd"
-    ]
+    "tags": ["input", "label", "search", "kbd"]
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/input-group.json",
-    "https://originui-vue.com/r/kbd.json",
-    "https://originui-vue.com/r/label.json"
+    "https://www.originui-vue.com/r/input-group.json",
+    "https://www.originui-vue.com/r/kbd.json",
+    "https://www.originui-vue.com/r/label.json"
   ]
 }

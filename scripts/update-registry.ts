@@ -217,7 +217,7 @@ function extractRegistryDependencies(content: string): string[] {
         const path = importPath.replace(prefix, "");
         const transformedPath = transform(path);
         if (transformedPath) {
-          deps.add(`https://originui-vue.com/r/${transformedPath}.json`);
+          deps.add(`https://www.originui-vue.com/r/${transformedPath}.json`);
         }
         break;
       }

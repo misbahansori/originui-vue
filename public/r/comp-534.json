@@ -10,16 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "timeline",
-      "vertical timeline"
-    ],
+    "tags": ["timeline", "vertical timeline"],
     "colSpan": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://originui-vue.com/r/timeline.json"
-  ]
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": ["https://www.originui-vue.com/r/timeline.json"]
 }

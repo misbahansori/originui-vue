@@ -2,7 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   site: {
-    url: "https://originui-vue.com",
+    url: "https://www.originui-vue.com",
     name: "Originui Vue",
     description:
       "An open-source collection of copy-and-paste components for quickly building application UIs.",
@@ -13,7 +13,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      SITE_URL: import.meta.env.NUXT_SITE_URL ?? "https://originui-vue.com",
+      SITE_URL: import.meta.env.NUXT_SITE_URL ?? "https://www.originui-vue.com",
     },
   },
 

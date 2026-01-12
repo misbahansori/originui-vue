@@ -10,15 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "table",
-      "checkbox"
-    ],
+    "tags": ["table", "checkbox"],
     "colSpan": 3
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/checkbox.json",
-    "https://originui-vue.com/r/table.json"
+    "https://www.originui-vue.com/r/checkbox.json",
+    "https://www.originui-vue.com/r/table.json"
   ]
 }

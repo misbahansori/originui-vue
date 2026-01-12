@@ -10,14 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "disabled"
-    ],
+    "tags": ["button", "disabled"],
     "style": 2
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
 }

@@ -10,16 +10,8 @@
     }
   ],
   "meta": {
-    "tags": [
-      "checkbox",
-      "label",
-      "week",
-      "calendar",
-      "radix"
-    ]
+    "tags": ["checkbox", "label", "week", "calendar", "radix"]
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://originui-vue.com/r/checkbox.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/checkbox.json"]
 }

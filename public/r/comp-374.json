@@ -10,20 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "dropdown",
-      "checkbox",
-      "radio",
-      "delete",
-      "radix"
-    ],
+    "tags": ["dropdown", "checkbox", "radio", "delete", "radix"],
     "style": 1
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/dropdown-menu.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/dropdown-menu.json"
   ]
 }

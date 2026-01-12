@@ -10,15 +10,11 @@
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "otp"
-    ]
+    "tags": ["input", "label", "otp"]
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/pin-input.json"
+    "https://www.originui-vue.com/r/label.json",
+    "https://www.originui-vue.com/r/pin-input.json"
   ]
 }

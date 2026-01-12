@@ -10,21 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "snippet",
-      "extended",
-      "code",
-      "copy",
-      "tabs",
-      "command"
-    ],
+    "tags": ["snippet", "extended", "code", "copy", "tabs", "command"],
     "colSpan": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/card.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/card.json"
   ]
 }

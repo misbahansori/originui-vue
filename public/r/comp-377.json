@@ -10,21 +10,13 @@
     }
   ],
   "meta": {
-    "tags": [
-      "dropdown",
-      "user",
-      "avatar",
-      "profile",
-      "radix"
-    ],
+    "tags": ["dropdown", "user", "avatar", "profile", "radix"],
     "style": 1
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/avatar.json",
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/dropdown-menu.json"
+    "https://www.originui-vue.com/r/avatar.json",
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/dropdown-menu.json"
   ]
 }

@@ -10,13 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "tree"
-    ],
+    "tags": ["tree"],
     "colSpan": 1
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://originui-vue.com/r/tree.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/tree.json"]
 }

@@ -10,22 +10,14 @@
     }
   ],
   "meta": {
-    "tags": [
-      "authentication",
-      "extended",
-      "login",
-      "sign in"
-    ],
+    "tags": ["authentication", "extended", "login", "sign in"],
     "colSpan": 3
   },
-  "dependencies": [
-    "@remixicon/vue",
-    "lucide-vue-next"
-  ],
+  "dependencies": ["@remixicon/vue", "lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/checkbox.json",
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/checkbox.json",
+    "https://www.originui-vue.com/r/input.json",
+    "https://www.originui-vue.com/r/label.json"
   ]
 }

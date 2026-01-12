@@ -67,12 +67,12 @@ useSeoMeta({
   ogTitle: "UI Layouts built with Tailwind CSS and Vue - Origin UI",
   ogDescription:
     "Beautiful UI layouts built with Tailwind CSS and Vue to help you get started with your next project.",
-  ogImage: "https://originui-vue.com/opengraph-image.webp",
-  ogUrl: "https://originui-vue.com/layouts",
+  ogImage: "https://www.originui-vue.com/opengraph-image.webp",
+  ogUrl: "https://www.originui-vue.com/layouts",
   twitterTitle: "UI Layouts built with Tailwind CSS and Vue - Origin UI",
   twitterDescription:
     "Beautiful UI layouts built with Tailwind CSS and Vue to help you get started with your next project.",
-  twitterImage: "https://originui-vue.com/opengraph-image.webp",
+  twitterImage: "https://www.originui-vue.com/opengraph-image.webp",
   twitterCard: "summary_large_image",
 });
 </script>

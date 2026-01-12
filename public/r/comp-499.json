@@ -10,19 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "calendar",
-      "date",
-      "week",
-      "react daypicker"
-    ],
+    "tags": ["calendar", "date", "week", "react daypicker"],
     "style": 1
   },
-  "dependencies": [
-    "@internationalized/date",
-    "reka-ui"
-  ],
-  "registryDependencies": [
-    "https://originui-vue.com/r/calendar.json"
-  ]
+  "dependencies": ["@internationalized/date", "reka-ui"],
+  "registryDependencies": ["https://www.originui-vue.com/r/calendar.json"]
 }

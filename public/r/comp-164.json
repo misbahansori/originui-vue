@@ -10,16 +10,8 @@
     }
   ],
   "meta": {
-    "tags": [
-      "radio",
-      "label",
-      "card",
-      "pricing",
-      "radix"
-    ]
+    "tags": ["radio", "label", "card", "pricing", "radix"]
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://originui-vue.com/r/radio-group.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/radio-group.json"]
 }

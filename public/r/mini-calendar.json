@@ -30,12 +30,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "mini-calendar",
-      "extended",
-      "calendar",
-      "date"
-    ],
+    "tags": ["mini-calendar", "extended", "calendar", "date"],
     "colSpan": 2
   },
   "dependencies": [
@@ -45,7 +40,7 @@
     "@vueuse/core"
   ],
   "registryDependencies": [
-    "https://originui-vue.com/r/mini-calendar.json",
-    "https://originui-vue.com/r/button.json"
+    "https://www.originui-vue.com/r/mini-calendar.json",
+    "https://www.originui-vue.com/r/button.json"
   ]
 }

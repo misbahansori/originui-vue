@@ -33,7 +33,7 @@ onMounted(async () => {
 });
 
 const runtimeConfig = useRuntimeConfig();
-const siteUrl = runtimeConfig.public.SITE_URL ?? "https://originui-vue.com";
+const siteUrl = runtimeConfig.public.SITE_URL ?? "https://www.originui-vue.com";
 
 const { copied, copy } = useClipboard();
 </script>

@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "Originui Vue",
-  "homepage": "https://originui-vue.com",
+  "homepage": "https://www.originui-vue.com",
   "items": [
     {
       "name": "snippet",

@@ -10,18 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "dropdown",
-      "notification"
-    ],
+    "tags": ["button", "dropdown", "notification"],
     "style": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/badge.json",
-    "https://originui-vue.com/r/button.json"
+    "https://www.originui-vue.com/r/badge.json",
+    "https://www.originui-vue.com/r/button.json"
   ]
 }

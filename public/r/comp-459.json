@@ -10,14 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "pagination"
-    ],
+    "tags": ["pagination"],
     "colSpan": 2
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/pagination.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/pagination.json"
   ]
 }

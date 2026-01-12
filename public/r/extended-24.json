@@ -10,21 +10,15 @@
     }
   ],
   "meta": {
-    "tags": [
-      "statistic-card",
-      "extended",
-      "card"
-    ],
+    "tags": ["statistic-card", "extended", "card"],
     "colSpan": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/badge.json",
-    "https://originui-vue.com/r/card.json",
-    "https://originui-vue.com/r/select.json",
-    "https://originui-vue.com/r/separator.json",
-    "https://originui-vue.com/r/tooltip.json"
+    "https://www.originui-vue.com/r/badge.json",
+    "https://www.originui-vue.com/r/card.json",
+    "https://www.originui-vue.com/r/select.json",
+    "https://www.originui-vue.com/r/separator.json",
+    "https://www.originui-vue.com/r/tooltip.json"
   ]
 }

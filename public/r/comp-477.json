@@ -10,22 +10,13 @@
     }
   ],
   "meta": {
-    "tags": [
-      "table",
-      "tanstack",
-      "checkbox",
-      "badge",
-      "chip",
-      "flag"
-    ],
+    "tags": ["table", "tanstack", "checkbox", "badge", "chip", "flag"],
     "colSpan": 3
   },
-  "dependencies": [
-    "@tanstack/vue-table"
-  ],
+  "dependencies": ["@tanstack/vue-table"],
   "registryDependencies": [
-    "https://originui-vue.com/r/badge.json",
-    "https://originui-vue.com/r/checkbox.json",
-    "https://originui-vue.com/r/table.json"
+    "https://www.originui-vue.com/r/badge.json",
+    "https://www.originui-vue.com/r/checkbox.json",
+    "https://www.originui-vue.com/r/table.json"
   ]
 }

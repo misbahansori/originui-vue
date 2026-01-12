@@ -10,16 +10,11 @@
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "select",
-      "disabled",
-      "radix"
-    ]
+    "tags": ["label", "select", "disabled", "radix"]
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/select.json"
+    "https://www.originui-vue.com/r/label.json",
+    "https://www.originui-vue.com/r/select.json"
   ]
 }

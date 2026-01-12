@@ -10,15 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "switch",
-      "radix"
-    ],
+    "tags": ["switch", "radix"],
     "style": 1
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/switch.json"
+    "https://www.originui-vue.com/r/label.json",
+    "https://www.originui-vue.com/r/switch.json"
   ]
 }

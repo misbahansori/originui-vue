@@ -10,18 +10,11 @@
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "mask",
-      "time"
-    ]
+    "tags": ["input", "label", "mask", "time"]
   },
-  "dependencies": [
-    "maska/vue"
-  ],
+  "dependencies": ["maska/vue"],
   "registryDependencies": [
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json"
+    "https://www.originui-vue.com/r/input.json",
+    "https://www.originui-vue.com/r/label.json"
   ]
 }

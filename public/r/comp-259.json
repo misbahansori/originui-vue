@@ -10,20 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "slider",
-      "label",
-      "button",
-      "pricing",
-      "radix"
-    ]
+    "tags": ["slider", "label", "button", "pricing", "radix"]
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/slider.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/label.json",
+    "https://www.originui-vue.com/r/slider.json"
   ]
 }

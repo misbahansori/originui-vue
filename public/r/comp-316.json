@@ -10,17 +10,13 @@
     }
   ],
   "meta": {
-    "tags": [
-      "dialog",
-      "modal",
-      "radix"
-    ],
+    "tags": ["dialog", "modal", "radix"],
     "style": 1
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/dialog.json",
-    "https://originui-vue.com/r/scroll-area.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/dialog.json",
+    "https://www.originui-vue.com/r/scroll-area.json"
   ]
 }

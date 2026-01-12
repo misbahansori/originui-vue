@@ -10,15 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label"
-    ]
+    "tags": ["input", "label"]
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/button-group.json",
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json"
+    "https://www.originui-vue.com/r/button-group.json",
+    "https://www.originui-vue.com/r/input.json",
+    "https://www.originui-vue.com/r/label.json"
   ]
 }

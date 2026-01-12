@@ -10,18 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "copy"
-    ],
+    "tags": ["button", "copy"],
     "style": 2
   },
-  "dependencies": [
-    "@vueuse/core",
-    "lucide-vue-next"
-  ],
+  "dependencies": ["@vueuse/core", "lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/tooltip.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/tooltip.json"
   ]
 }

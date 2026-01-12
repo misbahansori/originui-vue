@@ -10,18 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "statistic-card",
-      "extended",
-      "card"
-    ],
+    "tags": ["statistic-card", "extended", "card"],
     "colSpan": 3
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/badge.json",
-    "https://originui-vue.com/r/card.json"
+    "https://www.originui-vue.com/r/badge.json",
+    "https://www.originui-vue.com/r/card.json"
   ]
 }

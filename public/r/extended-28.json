@@ -10,19 +10,13 @@
     }
   ],
   "meta": {
-    "tags": [
-      "statistic-card",
-      "extended",
-      "card",
-      "tasks",
-      "overview"
-    ],
+    "tags": ["statistic-card", "extended", "card", "tasks", "overview"],
     "colSpan": 2
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/card.json",
-    "https://originui-vue.com/r/progress.json",
-    "https://originui-vue.com/r/select.json"
+    "https://www.originui-vue.com/r/card.json",
+    "https://www.originui-vue.com/r/progress.json",
+    "https://www.originui-vue.com/r/select.json"
   ]
 }

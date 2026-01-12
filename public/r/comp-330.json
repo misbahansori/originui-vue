@@ -10,21 +10,14 @@
     }
   ],
   "meta": {
-    "tags": [
-      "dialog",
-      "modal",
-      "user",
-      "radix"
-    ],
+    "tags": ["dialog", "modal", "user", "radix"],
     "style": 1
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/dialog.json",
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/radio-group.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/dialog.json",
+    "https://www.originui-vue.com/r/label.json",
+    "https://www.originui-vue.com/r/radio-group.json"
   ]
 }

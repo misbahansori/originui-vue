@@ -10,16 +10,11 @@
     }
   ],
   "meta": {
-    "tags": [
-      "checkbox",
-      "label",
-      "tree",
-      "radix"
-    ]
+    "tags": ["checkbox", "label", "tree", "radix"]
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/checkbox.json",
-    "https://originui-vue.com/r/label.json"
+    "https://www.originui-vue.com/r/checkbox.json",
+    "https://www.originui-vue.com/r/label.json"
   ]
 }

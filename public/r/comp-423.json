@@ -10,18 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "badge",
-      "chip",
-      "checkbox"
-    ],
+    "tags": ["badge", "chip", "checkbox"],
     "style": 1
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/badge.json",
-    "https://originui-vue.com/r/checkbox.json"
+    "https://www.originui-vue.com/r/badge.json",
+    "https://www.originui-vue.com/r/checkbox.json"
   ]
 }

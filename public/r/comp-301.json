@@ -10,16 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "banner",
-      "cookies",
-      "gdpr",
-      "privacy"
-    ],
+    "tags": ["banner", "cookies", "gdpr", "privacy"],
     "colSpan": 3
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
 }

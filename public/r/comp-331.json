@@ -22,15 +22,12 @@
     ],
     "style": 1
   },
-  "dependencies": [
-    "@vueuse/core",
-    "lucide-vue-next"
-  ],
+  "dependencies": ["@vueuse/core", "lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/dialog.json",
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/textarea.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/dialog.json",
+    "https://www.originui-vue.com/r/input.json",
+    "https://www.originui-vue.com/r/label.json",
+    "https://www.originui-vue.com/r/textarea.json"
   ]
 }

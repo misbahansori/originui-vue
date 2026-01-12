@@ -10,16 +10,13 @@
     }
   ],
   "meta": {
-    "tags": [
-      "breadcrumb",
-      "radix"
-    ],
+    "tags": ["breadcrumb", "radix"],
     "colSpan": 2,
     "style": 1
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/breadcrumb.json",
-    "https://originui-vue.com/r/dropdown-menu.json"
+    "https://www.originui-vue.com/r/breadcrumb.json",
+    "https://www.originui-vue.com/r/dropdown-menu.json"
   ]
 }

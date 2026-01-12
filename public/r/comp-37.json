@@ -10,16 +10,11 @@
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "date",
-      "react aria"
-    ]
+    "tags": ["input", "label", "date", "react aria"]
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/time-field.json"
+    "https://www.originui-vue.com/r/label.json",
+    "https://www.originui-vue.com/r/time-field.json"
   ]
 }

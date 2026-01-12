@@ -10,19 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "statistic-card",
-      "extended",
-      "card",
-      "showcase",
-      "metrics"
-    ],
+    "tags": ["statistic-card", "extended", "card", "showcase", "metrics"],
     "colSpan": 3
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://originui-vue.com/r/card.json"
-  ]
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": ["https://www.originui-vue.com/r/card.json"]
 }

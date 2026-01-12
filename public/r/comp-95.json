@@ -10,20 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "user",
-      "avatar",
-      "profile",
-      "dropdown"
-    ],
+    "tags": ["button", "user", "avatar", "profile", "dropdown"],
     "style": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/avatar.json",
-    "https://originui-vue.com/r/button.json"
+    "https://www.originui-vue.com/r/avatar.json",
+    "https://www.originui-vue.com/r/button.json"
   ]
 }

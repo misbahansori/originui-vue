@@ -10,19 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "copy"
-    ]
+    "tags": ["input", "label", "copy"]
   },
-  "dependencies": [
-    "@vueuse/core",
-    "lucide-vue-next"
-  ],
+  "dependencies": ["@vueuse/core", "lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/input-group.json",
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/tooltip.json"
+    "https://www.originui-vue.com/r/input-group.json",
+    "https://www.originui-vue.com/r/label.json",
+    "https://www.originui-vue.com/r/tooltip.json"
   ]
 }

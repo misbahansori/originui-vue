@@ -10,17 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "like",
-      "counter"
-    ],
+    "tags": ["button", "like", "counter"],
     "style": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ]
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
 }

@@ -23,7 +23,7 @@
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/multi-select.json"
+    "https://www.originui-vue.com/r/label.json",
+    "https://www.originui-vue.com/r/multi-select.json"
   ]
 }

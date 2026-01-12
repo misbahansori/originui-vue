@@ -21,15 +21,12 @@
     ],
     "style": 1
   },
-  "dependencies": [
-    "lucide-vue-next",
-    "maska/vue"
-  ],
+  "dependencies": ["lucide-vue-next", "maska/vue"],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/checkbox.json",
-    "https://originui-vue.com/r/dialog.json",
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/checkbox.json",
+    "https://www.originui-vue.com/r/dialog.json",
+    "https://www.originui-vue.com/r/input.json",
+    "https://www.originui-vue.com/r/label.json"
   ]
 }

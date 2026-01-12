@@ -10,17 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "radio",
-      "label",
-      "collapsible",
-      "radix"
-    ]
+    "tags": ["radio", "label", "collapsible", "radix"]
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/input.json",
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/radio-group.json"
+    "https://www.originui-vue.com/r/input.json",
+    "https://www.originui-vue.com/r/label.json",
+    "https://www.originui-vue.com/r/radio-group.json"
   ]
 }

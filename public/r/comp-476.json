@@ -10,15 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "table"
-    ],
+    "tags": ["table"],
     "colSpan": 3
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://originui-vue.com/r/table.json"
-  ]
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": ["https://www.originui-vue.com/r/table.json"]
 }

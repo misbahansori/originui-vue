@@ -10,14 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "table",
-      "vertical table"
-    ],
+    "tags": ["table", "vertical table"],
     "colSpan": 3
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://originui-vue.com/r/table.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/table.json"]
 }

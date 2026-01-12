@@ -10,15 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "tooltip",
-      "radix"
-    ],
+    "tags": ["tooltip", "radix"],
     "style": 1
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/tooltip.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/tooltip.json"
   ]
 }

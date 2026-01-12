@@ -10,17 +10,8 @@
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "select",
-      "multiselect",
-      "react aria"
-    ]
+    "tags": ["label", "select", "multiselect", "react aria"]
   },
-  "dependencies": [
-    "reka-ui"
-  ],
-  "registryDependencies": [
-    "https://originui-vue.com/r/label.json"
-  ]
+  "dependencies": ["reka-ui"],
+  "registryDependencies": ["https://www.originui-vue.com/r/label.json"]
 }

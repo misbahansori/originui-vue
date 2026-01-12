@@ -10,19 +10,15 @@
     }
   ],
   "meta": {
-    "tags": [
-      "notification",
-      "toast",
-      "radix"
-    ],
+    "tags": ["notification", "toast", "radix"],
     "colSpan": 2,
     "style": 1
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/toast/ToastAction.vue.json",
-    "https://originui-vue.com/r/toast/Toaster.vue.json",
-    "https://originui-vue.com/r/toast/use-toast.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/toast/ToastAction.vue.json",
+    "https://www.originui-vue.com/r/toast/Toaster.vue.json",
+    "https://www.originui-vue.com/r/toast/use-toast.json"
   ]
 }

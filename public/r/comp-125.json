@@ -10,20 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "upload",
-      "user",
-      "avatar",
-      "profile",
-      "image"
-    ],
+    "tags": ["button", "upload", "user", "avatar", "profile", "image"],
     "style": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://originui-vue.com/r/button.json"
-  ]
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
 }

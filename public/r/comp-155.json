@@ -10,15 +10,11 @@
     }
   ],
   "meta": {
-    "tags": [
-      "radio",
-      "label",
-      "radix"
-    ]
+    "tags": ["radio", "label", "radix"]
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/label.json",
-    "https://originui-vue.com/r/radio-group.json"
+    "https://www.originui-vue.com/r/label.json",
+    "https://www.originui-vue.com/r/radio-group.json"
   ]
 }

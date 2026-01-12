@@ -20,17 +20,13 @@
     }
   ],
   "meta": {
-    "tags": [
-      "navbar, navigation"
-    ],
+    "tags": ["navbar, navigation"],
     "colSpan": 3
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/radio-group.json",
-    "https://originui-vue.com/r/dropdown-menu.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/radio-group.json",
+    "https://www.originui-vue.com/r/dropdown-menu.json"
   ]
 }

@@ -10,16 +10,12 @@
     }
   ],
   "meta": {
-    "tags": [
-      "stepper"
-    ],
+    "tags": ["stepper"],
     "colSpan": 3
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/stepper.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/stepper.json"
   ]
 }

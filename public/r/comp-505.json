@@ -10,24 +10,14 @@
     }
   ],
   "meta": {
-    "tags": [
-      "calendar",
-      "date",
-      "time",
-      "button",
-      "react daypicker"
-    ],
+    "tags": ["calendar", "date", "time", "button", "react daypicker"],
     "colSpan": 3,
     "style": 1
   },
-  "dependencies": [
-    "@internationalized/date",
-    "@vueuse/core",
-    "reka-ui"
-  ],
+  "dependencies": ["@internationalized/date", "@vueuse/core", "reka-ui"],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/calendar.json",
-    "https://originui-vue.com/r/scroll-area.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/calendar.json",
+    "https://www.originui-vue.com/r/scroll-area.json"
   ]
 }

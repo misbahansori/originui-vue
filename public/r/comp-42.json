@@ -22,7 +22,7 @@
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/date-range-picker.json",
-    "https://originui-vue.com/r/label.json"
+    "https://www.originui-vue.com/r/date-range-picker.json",
+    "https://www.originui-vue.com/r/label.json"
   ]
 }

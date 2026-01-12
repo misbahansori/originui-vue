@@ -10,19 +10,13 @@
     }
   ],
   "meta": {
-    "tags": [
-      "statistic-card",
-      "extended",
-      "card",
-      "api",
-      "quota"
-    ],
+    "tags": ["statistic-card", "extended", "card", "api", "quota"],
     "colSpan": 2
   },
   "dependencies": [],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/card.json",
-    "https://originui-vue.com/r/progress.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/card.json",
+    "https://www.originui-vue.com/r/progress.json"
   ]
 }

@@ -10,19 +10,13 @@
     }
   ],
   "meta": {
-    "tags": [
-      "card",
-      "extended",
-      "card"
-    ],
+    "tags": ["card", "extended", "card"],
     "colSpan": 1
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
-    "https://originui-vue.com/r/button.json",
-    "https://originui-vue.com/r/card.json",
-    "https://originui-vue.com/r/separator.json"
+    "https://www.originui-vue.com/r/button.json",
+    "https://www.originui-vue.com/r/card.json",
+    "https://www.originui-vue.com/r/separator.json"
   ]
 }
