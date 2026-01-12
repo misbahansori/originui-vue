@@ -10,9 +10,21 @@
     }
   ],
   "meta": {
-    "tags": ["calendar", "date", "input", "time", "react daypicker"],
+    "tags": [
+      "calendar",
+      "date",
+      "input",
+      "time",
+      "react daypicker"
+    ],
     "style": 1
   },
-  "dependencies": ["@internationalized/date", "lucide-vue-next", "reka-ui"],
-  "registryDependencies": ["https://www.originui-vue.com/r/calendar.json"]
+  "dependencies": [
+    "@internationalized/date",
+    "lucide-vue-next",
+    "reka-ui"
+  ],
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/calendar.json"
+  ]
 }

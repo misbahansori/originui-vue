@@ -10,7 +10,10 @@
     }
   ],
   "meta": {
-    "tags": ["stepper", "vertical stepper"],
+    "tags": [
+      "stepper",
+      "vertical stepper"
+    ],
     "colSpan": 2
   },
   "dependencies": [],

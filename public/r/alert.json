@@ -5,17 +5,17 @@
   "files": [
     {
       "path": "ui/alert/Alert.vue",
-      "content": "<script setup lang=\"ts\">\r\nimport { cn } from \"@/lib/utils\";\r\nimport type { HTMLAttributes } from \"vue\";\r\nimport type { AlertVariants } from \".\";\r\nimport { alertVariants } from \".\";\r\n\r\nconst props = defineProps<{\r\n  class?: HTMLAttributes[\"class\"];\r\n  variant?: AlertVariants[\"variant\"];\r\n}>();\r\n</script>\r\n\r\n<template>\r\n  <div\r\n    data-slot=\"alert\"\r\n    :class=\"cn(alertVariants({ variant }), props.class)\"\r\n    role=\"alert\"\r\n  >\r\n    <slot />\r\n  </div>\r\n</template>\r\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\nimport type { AlertVariants } from \".\";\nimport { alertVariants } from \".\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n  variant?: AlertVariants[\"variant\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"alert\"\n    :class=\"cn(alertVariants({ variant }), props.class)\"\n    role=\"alert\"\n  >\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "ui/alert/AlertDescription.vue",
-      "content": "<script setup lang=\"ts\">\r\nimport { cn } from \"@/lib/utils\";\r\nimport type { HTMLAttributes } from \"vue\";\r\n\r\nconst props = defineProps<{\r\n  class?: HTMLAttributes[\"class\"];\r\n}>();\r\n</script>\r\n\r\n<template>\r\n  <div\r\n    data-slot=\"alert-description\"\r\n    :class=\"\r\n      cn(\r\n        'text-muted-foreground col-start-2 grid justify-items-start gap-1 text-sm [&_p]:leading-relaxed',\r\n        props.class,\r\n      )\r\n    \"\r\n  >\r\n    <slot />\r\n  </div>\r\n</template>\r\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"alert-description\"\n    :class=\"\n      cn(\n        'text-muted-foreground col-start-2 grid justify-items-start gap-1 text-sm [&_p]:leading-relaxed',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "ui/alert/AlertTitle.vue",
-      "content": "<script setup lang=\"ts\">\r\nimport { cn } from \"@/lib/utils\";\r\nimport type { HTMLAttributes } from \"vue\";\r\n\r\nconst props = defineProps<{\r\n  class?: HTMLAttributes[\"class\"];\r\n}>();\r\n</script>\r\n\r\n<template>\r\n  <div\r\n    data-slot=\"alert-title\"\r\n    :class=\"\r\n      cn(\r\n        'col-start-2 line-clamp-1 min-h-4 font-medium tracking-tight',\r\n        props.class,\r\n      )\r\n    \"\r\n  >\r\n    <slot />\r\n  </div>\r\n</template>\r\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"alert-title\"\n    :class=\"\n      cn(\n        'col-start-2 line-clamp-1 min-h-4 font-medium tracking-tight',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {

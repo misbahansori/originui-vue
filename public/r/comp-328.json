@@ -21,7 +21,10 @@
     ],
     "style": 1
   },
-  "dependencies": ["lucide-vue-next", "maska/vue"],
+  "dependencies": [
+    "lucide-vue-next",
+    "maska/vue"
+  ],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/checkbox.json",

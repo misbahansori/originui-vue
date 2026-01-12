@@ -10,9 +10,15 @@
     }
   ],
   "meta": {
-    "tags": ["button"],
+    "tags": [
+      "button"
+    ],
     "style": 2
   },
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/button.json"
+  ]
 }

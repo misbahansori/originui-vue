@@ -24,6 +24,11 @@
       "type": "registry:ui"
     }
   ],
-  "dependencies": ["@vueuse/core", "reka-ui"],
-  "registryDependencies": ["https://www.originui-vue.com/r/separator.json"]
+  "dependencies": [
+    "@vueuse/core",
+    "reka-ui"
+  ],
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/separator.json"
+  ]
 }

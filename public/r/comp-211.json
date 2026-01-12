@@ -10,7 +10,12 @@
     }
   ],
   "meta": {
-    "tags": ["label", "select", "required", "radix"]
+    "tags": [
+      "label",
+      "select",
+      "required",
+      "radix"
+    ]
   },
   "dependencies": [],
   "registryDependencies": [

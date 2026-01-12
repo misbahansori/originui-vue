@@ -10,9 +10,17 @@
     }
   ],
   "meta": {
-    "tags": ["button", "toggle", "darkmode"],
+    "tags": [
+      "button",
+      "toggle",
+      "darkmode"
+    ],
     "style": 2
   },
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": ["https://www.originui-vue.com/r/toggle.json"]
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/toggle.json"
+  ]
 }

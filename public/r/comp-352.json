@@ -10,10 +10,16 @@
     }
   ],
   "meta": {
-    "tags": ["accordion", "collapsible", "radix"],
+    "tags": [
+      "accordion",
+      "collapsible",
+      "radix"
+    ],
     "colSpan": 2
   },
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://www.originui-vue.com/r/accordion.json",
     "https://www.originui-vue.com/r/collapsible.json"

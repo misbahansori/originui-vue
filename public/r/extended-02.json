@@ -10,10 +10,17 @@
     }
   ],
   "meta": {
-    "tags": ["authentication", "extended", "login", "sign in"],
+    "tags": [
+      "authentication",
+      "extended",
+      "login",
+      "sign in"
+    ],
     "colSpan": 3
   },
-  "dependencies": ["@remixicon/vue"],
+  "dependencies": [
+    "@remixicon/vue"
+  ],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/input.json",

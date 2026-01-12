@@ -10,10 +10,18 @@
     }
   ],
   "meta": {
-    "tags": ["notification", "button", "success"],
+    "tags": [
+      "notification",
+      "button",
+      "success"
+    ],
     "colSpan": 2,
     "style": 1
   },
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/button.json"
+  ]
 }

@@ -19,6 +19,10 @@
       "type": "registry:ui"
     }
   ],
-  "dependencies": ["reka-ui"],
-  "registryDependencies": ["https://www.originui-vue.com/r/toggle.json"]
+  "dependencies": [
+    "reka-ui"
+  ],
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/toggle.json"
+  ]
 }

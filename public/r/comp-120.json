@@ -10,9 +10,18 @@
     }
   ],
   "meta": {
-    "tags": ["button", "social", "login", "authentication"],
+    "tags": [
+      "button",
+      "social",
+      "login",
+      "authentication"
+    ],
     "style": 2
   },
-  "dependencies": ["@remixicon/vue"],
-  "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
+  "dependencies": [
+    "@remixicon/vue"
+  ],
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/button.json"
+  ]
 }

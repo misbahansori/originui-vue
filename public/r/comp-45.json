@@ -10,9 +10,15 @@
     }
   ],
   "meta": {
-    "tags": ["input", "label", "otp"]
+    "tags": [
+      "input",
+      "label",
+      "otp"
+    ]
   },
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://www.originui-vue.com/r/label.json",
     "https://www.originui-vue.com/r/pin-input.json"

@@ -10,7 +10,12 @@
     }
   ],
   "meta": {
-    "tags": ["dialog", "modal", "otp", "radix"],
+    "tags": [
+      "dialog",
+      "modal",
+      "otp",
+      "radix"
+    ],
     "style": 1
   },
   "dependencies": [],

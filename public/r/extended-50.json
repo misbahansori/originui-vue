@@ -10,10 +10,19 @@
     }
   ],
   "meta": {
-    "tags": ["mini-calendar", "extended", "calendar", "date", "styled"],
+    "tags": [
+      "mini-calendar",
+      "extended",
+      "calendar",
+      "date",
+      "styled"
+    ],
     "colSpan": 2
   },
-  "dependencies": ["@internationalized/date", "lucide-vue-next"],
+  "dependencies": [
+    "@internationalized/date",
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/mini-calendar.json"

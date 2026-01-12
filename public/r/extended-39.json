@@ -10,7 +10,11 @@
     }
   ],
   "meta": {
-    "tags": ["contribution-graph", "extended", "graph"],
+    "tags": [
+      "contribution-graph",
+      "extended",
+      "graph"
+    ],
     "colSpan": 3
   },
   "dependencies": [],

@@ -10,10 +10,15 @@
     }
   ],
   "meta": {
-    "tags": ["tabs", "radix"],
+    "tags": [
+      "tabs",
+      "radix"
+    ],
     "colSpan": 2,
     "style": 2
   },
   "dependencies": [],
-  "registryDependencies": ["https://www.originui-vue.com/r/tabs.json"]
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/tabs.json"
+  ]
 }

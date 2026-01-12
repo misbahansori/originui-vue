@@ -10,7 +10,12 @@
     }
   ],
   "meta": {
-    "tags": ["radio", "label", "collapsible", "radix"]
+    "tags": [
+      "radio",
+      "label",
+      "collapsible",
+      "radix"
+    ]
   },
   "dependencies": [],
   "registryDependencies": [

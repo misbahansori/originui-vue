@@ -10,8 +10,18 @@
     }
   ],
   "meta": {
-    "tags": ["input", "label", "tag", "emblor"]
+    "tags": [
+      "input",
+      "label",
+      "tag",
+      "emblor"
+    ]
   },
-  "dependencies": ["lucide-vue-next", "reka-ui"],
-  "registryDependencies": ["https://www.originui-vue.com/r/label.json"]
+  "dependencies": [
+    "lucide-vue-next",
+    "reka-ui"
+  ],
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/label.json"
+  ]
 }

@@ -10,8 +10,19 @@
     }
   ],
   "meta": {
-    "tags": ["radio", "label", "card", "checkout", "payment", "radix"]
+    "tags": [
+      "radio",
+      "label",
+      "card",
+      "checkout",
+      "payment",
+      "radix"
+    ]
   },
-  "dependencies": ["@remixicon/vue"],
-  "registryDependencies": ["https://www.originui-vue.com/r/radio-group.json"]
+  "dependencies": [
+    "@remixicon/vue"
+  ],
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/radio-group.json"
+  ]
 }

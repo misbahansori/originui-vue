@@ -10,10 +10,15 @@
     }
   ],
   "meta": {
-    "tags": ["button", "toggle"],
+    "tags": [
+      "button",
+      "toggle"
+    ],
     "style": 2
   },
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://www.originui-vue.com/r/toggle.json",
     "https://www.originui-vue.com/r/tooltip.json"

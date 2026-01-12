@@ -30,7 +30,12 @@
     }
   ],
   "meta": {
-    "tags": ["mini-calendar", "extended", "calendar", "date"],
+    "tags": [
+      "mini-calendar",
+      "extended",
+      "calendar",
+      "date"
+    ],
     "colSpan": 2
   },
   "dependencies": [

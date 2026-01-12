@@ -10,10 +10,20 @@
     }
   ],
   "meta": {
-    "tags": ["popover", "share", "social", "copy", "radix"],
+    "tags": [
+      "popover",
+      "share",
+      "social",
+      "copy",
+      "radix"
+    ],
     "style": 1
   },
-  "dependencies": ["@remixicon/vue", "@vueuse/core", "lucide-vue-next"],
+  "dependencies": [
+    "@remixicon/vue",
+    "@vueuse/core",
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/input.json",

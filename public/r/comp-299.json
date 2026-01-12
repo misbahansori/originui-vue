@@ -10,11 +10,18 @@
     }
   ],
   "meta": {
-    "tags": ["notification", "toast", "sonner", "radix"],
+    "tags": [
+      "notification",
+      "toast",
+      "sonner",
+      "radix"
+    ],
     "colSpan": 2,
     "style": 1
   },
-  "dependencies": ["vue-sonner"],
+  "dependencies": [
+    "vue-sonner"
+  ],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/sonner.json"

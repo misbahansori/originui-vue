@@ -10,7 +10,13 @@
     }
   ],
   "meta": {
-    "tags": ["statistic-card", "extended", "card", "api", "quota"],
+    "tags": [
+      "statistic-card",
+      "extended",
+      "card",
+      "api",
+      "quota"
+    ],
     "colSpan": 2
   },
   "dependencies": [],

@@ -10,9 +10,14 @@
     }
   ],
   "meta": {
-    "tags": ["accordion", "radix"],
+    "tags": [
+      "accordion",
+      "radix"
+    ],
     "colSpan": 2
   },
   "dependencies": [],
-  "registryDependencies": ["https://www.originui-vue.com/r/accordion.json"]
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/accordion.json"
+  ]
 }

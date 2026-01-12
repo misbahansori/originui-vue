@@ -10,8 +10,17 @@
     }
   ],
   "meta": {
-    "tags": ["radio", "label", "darkmode", "radix"]
+    "tags": [
+      "radio",
+      "label",
+      "darkmode",
+      "radix"
+    ]
   },
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": ["https://www.originui-vue.com/r/radio-group.json"]
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/radio-group.json"
+  ]
 }

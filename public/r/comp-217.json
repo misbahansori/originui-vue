@@ -10,8 +10,14 @@
     }
   ],
   "meta": {
-    "tags": ["label", "select", "radix"]
+    "tags": [
+      "label",
+      "select",
+      "radix"
+    ]
   },
   "dependencies": [],
-  "registryDependencies": ["https://www.originui-vue.com/r/select.json"]
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/select.json"
+  ]
 }

@@ -10,7 +10,10 @@
     }
   ],
   "meta": {
-    "tags": ["table", "checkbox"],
+    "tags": [
+      "table",
+      "checkbox"
+    ],
     "colSpan": 3
   },
   "dependencies": [],

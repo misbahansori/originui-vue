@@ -15,9 +15,19 @@
     }
   ],
   "meta": {
-    "tags": ["slider", "label", "button", "input", "tooltip", "reset", "radix"]
+    "tags": [
+      "slider",
+      "label",
+      "button",
+      "input",
+      "tooltip",
+      "reset",
+      "radix"
+    ]
   },
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/input.json",

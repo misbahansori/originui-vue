@@ -10,7 +10,12 @@
     }
   ],
   "meta": {
-    "tags": ["checkbox", "label", "collapsible", "radix"]
+    "tags": [
+      "checkbox",
+      "label",
+      "collapsible",
+      "radix"
+    ]
   },
   "dependencies": [],
   "registryDependencies": [

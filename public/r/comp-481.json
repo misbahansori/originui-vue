@@ -10,10 +10,19 @@
     }
   ],
   "meta": {
-    "tags": ["table", "tanstack", "flag", "sort", "drag and drop"],
+    "tags": [
+      "table",
+      "tanstack",
+      "flag",
+      "sort",
+      "drag and drop"
+    ],
     "colSpan": 3
   },
-  "dependencies": ["@tanstack/vue-table", "lucide-vue-next"],
+  "dependencies": [
+    "@tanstack/vue-table",
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/table.json"

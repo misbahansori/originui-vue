@@ -10,7 +10,11 @@
     }
   ],
   "meta": {
-    "tags": ["card", "extended", "card"],
+    "tags": [
+      "card",
+      "extended",
+      "card"
+    ],
     "colSpan": 1
   },
   "dependencies": [],

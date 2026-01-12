@@ -10,10 +10,17 @@
     }
   ],
   "meta": {
-    "tags": ["breadcrumb", "radix"],
+    "tags": [
+      "breadcrumb",
+      "radix"
+    ],
     "colSpan": 2,
     "style": 1
   },
-  "dependencies": ["lucide-vue-next"],
-  "registryDependencies": ["https://www.originui-vue.com/r/breadcrumb.json"]
+  "dependencies": [
+    "lucide-vue-next"
+  ],
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/breadcrumb.json"
+  ]
 }

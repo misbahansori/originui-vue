@@ -10,9 +10,14 @@
     }
   ],
   "meta": {
-    "tags": ["timeline", "vertical timeline"],
+    "tags": [
+      "timeline",
+      "vertical timeline"
+    ],
     "colSpan": 2
   },
   "dependencies": [],
-  "registryDependencies": ["https://www.originui-vue.com/r/timeline.json"]
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/timeline.json"
+  ]
 }

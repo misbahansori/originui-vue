@@ -10,7 +10,11 @@
     }
   ],
   "meta": {
-    "tags": ["input", "label", "read-only"]
+    "tags": [
+      "input",
+      "label",
+      "read-only"
+    ]
   },
   "dependencies": [],
   "registryDependencies": [

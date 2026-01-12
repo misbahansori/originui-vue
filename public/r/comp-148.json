@@ -10,7 +10,12 @@
     }
   ],
   "meta": {
-    "tags": ["checkbox", "label", "tree", "radix"]
+    "tags": [
+      "checkbox",
+      "label",
+      "tree",
+      "radix"
+    ]
   },
   "dependencies": [],
   "registryDependencies": [

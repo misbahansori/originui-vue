@@ -10,9 +10,16 @@
     }
   ],
   "meta": {
-    "tags": ["avatar", "user", "profile", "status"],
+    "tags": [
+      "avatar",
+      "user",
+      "profile",
+      "status"
+    ],
     "style": 1
   },
   "dependencies": [],
-  "registryDependencies": ["https://www.originui-vue.com/r/avatar.json"]
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/avatar.json"
+  ]
 }

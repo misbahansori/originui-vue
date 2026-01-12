@@ -10,7 +10,13 @@
     }
   ],
   "meta": {
-    "tags": ["statistic-card", "extended", "card", "tasks", "overview"],
+    "tags": [
+      "statistic-card",
+      "extended",
+      "card",
+      "tasks",
+      "overview"
+    ],
     "colSpan": 2
   },
   "dependencies": [],

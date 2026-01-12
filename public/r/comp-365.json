@@ -10,9 +10,16 @@
     }
   ],
   "meta": {
-    "tags": ["tooltip", "hover card", "image", "radix"],
+    "tags": [
+      "tooltip",
+      "hover card",
+      "image",
+      "radix"
+    ],
     "style": 1
   },
   "dependencies": [],
-  "registryDependencies": ["https://www.originui-vue.com/r/hover-card.json"]
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/hover-card.json"
+  ]
 }

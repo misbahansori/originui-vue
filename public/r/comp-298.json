@@ -10,11 +10,19 @@
     }
   ],
   "meta": {
-    "tags": ["notification", "toast", "success", "radix"],
+    "tags": [
+      "notification",
+      "toast",
+      "success",
+      "radix"
+    ],
     "colSpan": 2,
     "style": 1
   },
-  "dependencies": ["@vueuse/core", "lucide-vue-next"],
+  "dependencies": [
+    "@vueuse/core",
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/toast.json"

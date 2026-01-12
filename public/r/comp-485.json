@@ -24,7 +24,10 @@
     ],
     "colSpan": 3
   },
-  "dependencies": ["@tanstack/vue-table", "lucide-vue-next"],
+  "dependencies": [
+    "@tanstack/vue-table",
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://www.originui-vue.com/r/alert-dialog.json",
     "https://www.originui-vue.com/r/badge.json",

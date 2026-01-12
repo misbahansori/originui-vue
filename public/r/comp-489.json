@@ -10,9 +10,19 @@
     }
   ],
   "meta": {
-    "tags": ["calendar", "range calendar", "date", "disabled", "react aria"],
+    "tags": [
+      "calendar",
+      "range calendar",
+      "date",
+      "disabled",
+      "react aria"
+    ],
     "style": 1
   },
-  "dependencies": ["@internationalized/date"],
-  "registryDependencies": ["https://www.originui-vue.com/r/range-calendar.json"]
+  "dependencies": [
+    "@internationalized/date"
+  ],
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/range-calendar.json"
+  ]
 }

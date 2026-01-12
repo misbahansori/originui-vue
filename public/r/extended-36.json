@@ -23,5 +23,7 @@
     "colSpan": 2
   },
   "dependencies": [],
-  "registryDependencies": ["https://www.originui-vue.com/r/snippet.json"]
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/snippet.json"
+  ]
 }

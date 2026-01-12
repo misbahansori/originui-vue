@@ -10,9 +10,14 @@
     }
   ],
   "meta": {
-    "tags": ["badge", "chip"],
+    "tags": [
+      "badge",
+      "chip"
+    ],
     "style": 1
   },
   "dependencies": [],
-  "registryDependencies": ["https://www.originui-vue.com/r/badge.json"]
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/badge.json"
+  ]
 }

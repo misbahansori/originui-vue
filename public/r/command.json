@@ -54,6 +54,12 @@
       "type": "registry:ui"
     }
   ],
-  "dependencies": ["reka-ui", "lucide-vue-next", "@vueuse/core"],
-  "registryDependencies": ["https://www.originui-vue.com/r/dialog.json"]
+  "dependencies": [
+    "reka-ui",
+    "lucide-vue-next",
+    "@vueuse/core"
+  ],
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/dialog.json"
+  ]
 }

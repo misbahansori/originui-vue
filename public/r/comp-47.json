@@ -10,9 +10,19 @@
     }
   ],
   "meta": {
-    "tags": ["input", "label", "checkout", "payment", "credit card", "form"]
+    "tags": [
+      "input",
+      "label",
+      "checkout",
+      "payment",
+      "credit card",
+      "form"
+    ]
   },
-  "dependencies": ["lucide-vue-next", "maska/vue"],
+  "dependencies": [
+    "lucide-vue-next",
+    "maska/vue"
+  ],
   "registryDependencies": [
     "https://www.originui-vue.com/r/input-group.json",
     "https://www.originui-vue.com/r/label.json"

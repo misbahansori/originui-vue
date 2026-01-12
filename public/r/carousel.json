@@ -2,7 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "carousel",
   "type": "registry:ui",
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "files": [
     {
       "path": "ui/carousel/Carousel.vue",
@@ -35,5 +37,7 @@
       "type": "registry:ui"
     }
   ],
-  "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
+  "registryDependencies": [
+    "https://www.originui-vue.com/r/button.json"
+  ]
 }

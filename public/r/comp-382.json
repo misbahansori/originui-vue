@@ -10,10 +10,16 @@
     }
   ],
   "meta": {
-    "tags": ["popover", "notification", "radix"],
+    "tags": [
+      "popover",
+      "notification",
+      "radix"
+    ],
     "style": 1
   },
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://www.originui-vue.com/r/badge.json",
     "https://www.originui-vue.com/r/button.json",

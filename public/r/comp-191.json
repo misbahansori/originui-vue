@@ -10,9 +10,16 @@
     }
   ],
   "meta": {
-    "tags": ["label", "select", "native select", "time"]
+    "tags": [
+      "label",
+      "select",
+      "native select",
+      "time"
+    ]
   },
-  "dependencies": ["lucide-vue-next"],
+  "dependencies": [
+    "lucide-vue-next"
+  ],
   "registryDependencies": [
     "https://www.originui-vue.com/r/label.json",
     "https://www.originui-vue.com/r/select-native.json"
