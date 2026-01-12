@@ -79,6 +79,8 @@ export default defineNuxtConfig({
   umami: {
     ignoreLocalhost: true,
     proxy: "cloak",
+    id: "6864e363-4cb2-4801-bee8-91dbd5e974cd",
+    host: "https://cloud.umami.is",
   },
 
   routeRules: {
