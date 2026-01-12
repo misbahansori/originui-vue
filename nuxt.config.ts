@@ -86,12 +86,4 @@ export default defineNuxtConfig({
     "/easings": { prerender: true },
     "/layouts": { prerender: true },
   },
-
-  nitro: {
-    preset: "cloudflare_module",
-    cloudflare: {
-      deployConfig: true,
-      nodeCompat: true,
-    },
-  },
 });
