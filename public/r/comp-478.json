@@ -23,10 +23,7 @@
     ],
     "colSpan": 3
   },
-  "dependencies": [
-    "@tanstack/vue-table",
-    "lucide-vue-next"
-  ],
+  "dependencies": ["@tanstack/vue-table", "lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/checkbox.json",
     "https://www.originui-vue.com/r/table.json",

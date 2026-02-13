@@ -10,16 +10,10 @@
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "menu",
-      "hamburger"
-    ],
+    "tags": ["button", "menu", "hamburger"],
     "style": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/tooltip.json"

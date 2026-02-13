@@ -24,17 +24,8 @@ const { copy, copied } = useClipboard();
           :aria-label="copied ? 'Copied' : 'Copy to clipboard'"
           :disabled="copied"
         >
-          <div
-            :class="[
-              'transition-all',
-              copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0',
-            ]"
-          >
-            <LucideCheck
-              class="stroke-emerald-500"
-              :size="16"
-              aria-hidden="true"
-            />
+          <div :class="['transition-all', copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0']">
+            <LucideCheck class="stroke-emerald-500" :size="16" aria-hidden="true" />
           </div>
           <div
             :class="[

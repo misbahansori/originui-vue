@@ -22,9 +22,7 @@ import { LucideCircleUserRound } from "lucide-vue-next";
     <DropdownMenuContent class="max-w-64">
       <DropdownMenuLabel class="flex flex-col">
         <span>Signed in as</span>
-        <span class="text-foreground text-xs font-normal">
-          k.kennedy@originui.com
-        </span>
+        <span class="text-foreground text-xs font-normal">k.kennedy@originui.com</span>
       </DropdownMenuLabel>
       <DropdownMenuSeparator />
       <DropdownMenuGroup>

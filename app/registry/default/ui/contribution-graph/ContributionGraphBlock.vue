@@ -28,13 +28,7 @@ const getColor = computed(() => {
 <template>
   <div
     data-slot="contribution-graph-block"
-    :class="
-      cn(
-        'border-border/30 size-3 rounded border-[0.5px]',
-        getColor,
-        props.class,
-      )
-    "
+    :class="cn('border-border/30 size-3 rounded border-[0.5px]', getColor, props.class)"
   >
     <slot />
   </div>

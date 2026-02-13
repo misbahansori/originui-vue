@@ -10,17 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "slider",
-      "label",
-      "volume",
-      "controls",
-      "radix"
-    ]
+    "tags": ["slider", "label", "volume", "controls", "radix"]
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/label.json",
     "https://www.originui-vue.com/r/slider.json"

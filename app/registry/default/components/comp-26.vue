@@ -21,11 +21,7 @@ const id = useId();
         <LucideSearch :size="16" />
       </InputGroupAddon>
       <InputGroupAddon align="inline-end">
-        <InputGroupButton
-          size="icon-xs"
-          aria-label="Submit search"
-          type="submit"
-        >
+        <InputGroupButton size="icon-xs" aria-label="Submit search" type="submit">
           <LucideArrowRight :size="16" aria-hidden="true" />
         </InputGroupButton>
       </InputGroupAddon>

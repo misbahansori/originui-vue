@@ -17,13 +17,9 @@ import { LucideX } from "lucide-vue-next";
       <div class="flex grow flex-col gap-3">
         <div class="space-y-1">
           <p class="text-muted-foreground text-sm">
-            <a class="text-foreground font-medium hover:underline" href="#">
-              Mary Palmer
-            </a>
+            <a class="text-foreground font-medium hover:underline" href="#">Mary Palmer</a>
             mentioned you in
-            <a class="text-foreground font-medium hover:underline" href="#">
-              project-campaign-02
-            </a>
+            <a class="text-foreground font-medium hover:underline" href="#">project-campaign-02</a>
             .
           </p>
           <p class="text-muted-foreground text-xs">2 min ago</p>

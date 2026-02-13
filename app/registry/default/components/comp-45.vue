@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
-import {
-  PinInput,
-  PinInputGroup,
-  PinInputInput,
-} from "@/registry/default/ui/pin-input";
+import { PinInput, PinInputGroup, PinInputInput } from "@/registry/default/ui/pin-input";
 import { LucideMinus } from "lucide-vue-next";
 import { ref, useId } from "vue";
 
@@ -15,11 +11,7 @@ const value = ref(["", "", "", "", "", ""]);
 <template>
   <div class="*:not-first:mt-2">
     <Label :for="inputId">OTP input double</Label>
-    <PinInput
-      :id="inputId"
-      v-model="value"
-      class="flex items-center gap-3 has-disabled:opacity-50"
-    >
+    <PinInput :id="inputId" v-model="value" class="flex items-center gap-3 has-disabled:opacity-50">
       <PinInputGroup>
         <template v-for="(id, index) in 6" :key="id">
           <PinInputInput
@@ -36,11 +28,7 @@ const value = ref(["", "", "", "", "", ""]);
         </template>
       </PinInputGroup>
     </PinInput>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Built with shadcn-vue
       <a
         class="hover:text-foreground underline"

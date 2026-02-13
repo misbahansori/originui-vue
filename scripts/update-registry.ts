@@ -21,12 +21,7 @@ interface RegistryItem {
 }
 
 // Configuration
-const EXCLUDED_IMPORTS = new Set([
-  "@",
-  "vue",
-  "utils",
-  "class-variance-authority",
-]);
+const EXCLUDED_IMPORTS = new Set(["@", "vue", "utils", "class-variance-authority"]);
 
 const PATH_MAPPINGS = [
   { from: "app/registry/default/ui/", to: "ui/" },
@@ -143,10 +138,7 @@ async function updateFilePaths(
   }
 
   if (hasChanges) {
-    const formattedJson = await prettier.format(
-      JSON.stringify(data),
-      PRETTIER_CONFIG,
-    );
+    const formattedJson = await prettier.format(JSON.stringify(data), PRETTIER_CONFIG);
     await writeFile(filePath, formattedJson);
   }
 
@@ -164,8 +156,7 @@ function updatePath(path: string): string {
 
 function extractDependencies(content: string): string[] {
   const imports = new Set<string>();
-  const importRegex =
-    /import\s+(?:{[^}]*}|\*\s+as\s+\w+|\w+)\s+from\s+['"]([^'"]+)['"]/g;
+  const importRegex = /import\s+(?:{[^}]*}|\*\s+as\s+\w+|\w+)\s+from\s+['"]([^'"]+)['"]/g;
 
   let match;
 
@@ -191,8 +182,7 @@ function extractDependencies(content: string): string[] {
 
 function extractRegistryDependencies(content: string): string[] {
   const deps = new Set<string>();
-  const importRegex =
-    /import\s+(?:{[^}]*}|\*\s+as\s+\w+|\w+)\s+from\s+['"]([^'"]+)['"]/g;
+  const importRegex = /import\s+(?:{[^}]*}|\*\s+as\s+\w+|\w+)\s+from\s+['"]([^'"]+)['"]/g;
 
   let match;
 

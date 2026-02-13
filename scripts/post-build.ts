@@ -1,7 +1,4 @@
-import {
-  updateRegistryImports,
-  updateRegistryPaths,
-} from "~~/scripts/update-registry.js";
+import { updateRegistryImports, updateRegistryPaths } from "~~/scripts/update-registry.js";
 
 console.log("=".repeat(80));
 console.log("🔄 Starting Post-Build Process");

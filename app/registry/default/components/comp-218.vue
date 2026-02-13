@@ -21,16 +21,13 @@ const formattedTimezones = computed(() => {
         timeZoneName: "shortOffset",
       });
       const parts = formatter.formatToParts(new Date());
-      const offset =
-        parts.find((part) => part.type === "timeZoneName")?.value || "";
+      const offset = parts.find((part) => part.type === "timeZoneName")?.value || "";
       const modifiedOffset = offset === "GMT" ? "GMT+0" : offset;
 
       return {
         value: timezone,
         label: `(${modifiedOffset}) ${timezone.replace(/_/g, " ")}`,
-        numericOffset: parseInt(
-          offset.replace("GMT", "").replace("+", "") || "0",
-        ),
+        numericOffset: parseInt(offset.replace("GMT", "").replace("+", "") || "0"),
       };
     })
     .sort((a, b) => a.numericOffset - b.numericOffset);
@@ -45,11 +42,7 @@ const formattedTimezones = computed(() => {
         <SelectValue placeholder="Select timezone" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem
-          v-for="{ value, label } in formattedTimezones"
-          :key="value"
-          :value="value"
-        >
+        <SelectItem v-for="{ value, label } in formattedTimezones" :key="value" :value="value">
           {{ label }}
         </SelectItem>
       </SelectContent>

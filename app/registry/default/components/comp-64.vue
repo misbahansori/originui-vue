@@ -10,12 +10,7 @@ const id = useId();
 <template>
   <div class="*:not-first:mt-2">
     <Label :for="id">Textarea with error</Label>
-    <Textarea
-      :id="id"
-      v-model="textValue"
-      placeholder="Leave a comment"
-      aria-invalid="true"
-    />
+    <Textarea :id="id" v-model="textValue" placeholder="Leave a comment" aria-invalid="true" />
     <p class="text-destructive mt-2 text-xs" role="alert" aria-live="polite">
       Message should be at least 10 characters
     </p>

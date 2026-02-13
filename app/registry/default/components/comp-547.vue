@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { formatBytes, useFileUpload } from "@/composables/useFileUpload";
 import { Button } from "@/registry/default/ui/button";
-import {
-  LucideAlertCircle,
-  LucideImage,
-  LucideUpload,
-  LucideX,
-} from "lucide-vue-next";
+import { LucideAlertCircle, LucideImage, LucideUpload, LucideX } from "lucide-vue-next";
 
 const initialFiles = [
   {
@@ -63,9 +58,7 @@ const {
       class="border-input data-[dragging=true]:bg-accent/50 has-[input:focus]:border-ring has-[input:focus]:ring-ring/50 relative flex min-h-52 flex-col items-center overflow-hidden rounded-xl border border-dashed p-4 transition-colors not-data-[files]:justify-center has-[input:focus]:ring-[3px]"
     >
       <input ref="inputRef" aria-label="Upload image file" />
-      <div
-        class="flex flex-col items-center justify-center px-4 py-3 text-center"
-      >
+      <div class="flex flex-col items-center justify-center px-4 py-3 text-center">
         <div
           class="bg-background mb-2 flex size-11 shrink-0 items-center justify-center rounded-full border"
           aria-hidden="true"
@@ -73,9 +66,7 @@ const {
           <LucideImage class="size-4 opacity-60" />
         </div>
         <p class="mb-1.5 text-sm font-medium">Drop your images here</p>
-        <p class="text-muted-foreground text-xs">
-          SVG, PNG, JPG or GIF (max. {{ maxSizeMB }}MB)
-        </p>
+        <p class="text-muted-foreground text-xs">SVG, PNG, JPG or GIF (max. {{ maxSizeMB }}MB)</p>
         <Button variant="outline" class="mt-4" @click="openFileDialog">
           <LucideUpload class="-ms-1 size-4 opacity-60" aria-hidden="true" />
           Select images
@@ -130,17 +121,11 @@ const {
 
       <!-- Remove all files button -->
       <div v-if="files.length > 1">
-        <Button size="sm" variant="outline" @click="clearFiles">
-          Remove all files
-        </Button>
+        <Button size="sm" variant="outline" @click="clearFiles">Remove all files</Button>
       </div>
     </div>
 
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-center text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-center text-xs">
       Multiple image uploader w/ image list
     </p>
   </div>

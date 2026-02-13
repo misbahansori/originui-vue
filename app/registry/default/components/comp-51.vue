@@ -96,35 +96,16 @@ function getStrengthText(score: number) {
     </div>
 
     <!-- Password strength description -->
-    <p
-      id="password-description"
-      class="text-foreground mb-2 text-sm font-medium"
-    >
+    <p id="password-description" class="text-foreground mb-2 text-sm font-medium">
       {{ getStrengthText(strengthScore) }}. Must contain:
     </p>
 
     <!-- Password requirements list -->
     <ul class="space-y-1.5" aria-label="Password requirements">
-      <li
-        v-for="(req, index) in strength"
-        :key="index"
-        class="flex items-center gap-2"
-      >
-        <LucideCheck
-          v-if="req.met"
-          :size="16"
-          class="text-emerald-500"
-          aria-hidden="true"
-        />
-        <LucideX
-          v-else
-          :size="16"
-          class="text-muted-foreground/80"
-          aria-hidden="true"
-        />
-        <span
-          :class="`text-xs ${req.met ? 'text-emerald-600' : 'text-muted-foreground'}`"
-        >
+      <li v-for="(req, index) in strength" :key="index" class="flex items-center gap-2">
+        <LucideCheck v-if="req.met" :size="16" class="text-emerald-500" aria-hidden="true" />
+        <LucideX v-else :size="16" class="text-muted-foreground/80" aria-hidden="true" />
+        <span :class="`text-xs ${req.met ? 'text-emerald-600' : 'text-muted-foreground'}`">
           {{ req.text }}
           <span class="sr-only">
             {{ req.met ? " - Requirement met" : " - Requirement not met" }}

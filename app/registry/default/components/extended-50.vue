@@ -38,8 +38,6 @@ const selectedDate = ref<CalendarDate>();
         <ChevronRight class="size-4" />
       </MiniCalendarNavigation>
     </MiniCalendar>
-    <p class="text-muted-foreground mt-2 text-xs">
-      Custom navigation with outline button styling
-    </p>
+    <p class="text-muted-foreground mt-2 text-xs">Custom navigation with outline button styling</p>
   </div>
 </template>

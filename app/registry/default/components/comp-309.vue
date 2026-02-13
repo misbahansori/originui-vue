@@ -20,16 +20,11 @@ const hideBanner = () => {
         >
           <LucideRocket class="size-4 opacity-80" />
         </div>
-        <div
-          class="flex grow flex-col justify-between gap-3 md:flex-row md:items-center"
-        >
+        <div class="flex grow flex-col justify-between gap-3 md:flex-row md:items-center">
           <div class="space-y-0.5">
-            <p class="text-sm font-medium">
-              Boost your experience with Origin UI
-            </p>
+            <p class="text-sm font-medium">Boost your experience with Origin UI</p>
             <p class="text-muted-foreground text-sm">
-              The new feature is live! Try it out and let us know what you
-              think.
+              The new feature is live! Try it out and let us know what you think.
             </p>
           </div>
           <div class="flex gap-2 max-md:flex-wrap">

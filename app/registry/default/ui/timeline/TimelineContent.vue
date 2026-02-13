@@ -7,10 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <div
-    data-slot="timeline-content"
-    :class="cn('text-muted-foreground text-sm', $props.class)"
-  >
+  <div data-slot="timeline-content" :class="cn('text-muted-foreground text-sm', $props.class)">
     <slot />
   </div>
 </template>

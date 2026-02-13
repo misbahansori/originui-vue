@@ -10,19 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "mini-calendar",
-      "extended",
-      "calendar",
-      "date",
-      "gradient"
-    ],
+    "tags": ["mini-calendar", "extended", "calendar", "date", "gradient"],
     "colSpan": 2
   },
-  "dependencies": [
-    "@internationalized/date"
-  ],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/mini-calendar.json"
-  ]
+  "dependencies": ["@internationalized/date"],
+  "registryDependencies": ["https://www.originui-vue.com/r/mini-calendar.json"]
 }

@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { Badge } from "@/registry/default/ui/badge";
 import { Button } from "@/registry/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/registry/default/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/registry/default/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -142,11 +137,7 @@ function formatNumber(n: number) {
         </CardContent>
       </Card>
     </div>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Ported from reui.io statistic cards
       <a
         class="hover:text-foreground underline"

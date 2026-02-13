@@ -53,12 +53,7 @@ const items = [
   <div class="space-y-4">
     <h2 class="text-xl font-bold">W/ icon, sub-header, and plus-minus</h2>
     <Accordion type="single" collapsible class="w-full" :default-value="'3'">
-      <AccordionItem
-        v-for="item in items"
-        :key="item.id"
-        :value="item.id"
-        class="py-2"
-      >
+      <AccordionItem v-for="item in items" :key="item.id" :value="item.id" class="py-2">
         <AccordionTrigger
           class="items-center gap-3 py-2 text-[15px] leading-6 font-semibold transition-all outline-none hover:no-underline [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg]:rotate-180 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0"
         >
@@ -67,11 +62,7 @@ const items = [
               class="flex size-10 shrink-0 items-center justify-center rounded-full border"
               aria-hidden="true"
             >
-              <component
-                :is="item.icon"
-                class="size-4 opacity-60"
-                aria-hidden="true"
-              />
+              <component :is="item.icon" class="size-4 opacity-60" aria-hidden="true" />
             </span>
             <span class="flex flex-col space-y-1">
               <span>{{ item.title }}</span>

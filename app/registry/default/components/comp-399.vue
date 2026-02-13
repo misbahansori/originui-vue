@@ -1,9 +1,5 @@
 <script setup lang="ts">
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/default/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/default/ui/avatar";
 import { Badge } from "@/registry/default/ui/badge";
 </script>
 
@@ -13,10 +9,6 @@ import { Badge } from "@/registry/default/ui/badge";
       <AvatarImage src="./avatar-80-07.jpg" alt="Kelly King" />
       <AvatarFallback>KK</AvatarFallback>
     </Avatar>
-    <Badge
-      class="border-background absolute -top-2 left-full min-w-5 -translate-x-3 px-1"
-    >
-      6
-    </Badge>
+    <Badge class="border-background absolute -top-2 left-full min-w-5 -translate-x-3 px-1">6</Badge>
   </div>
 </template>

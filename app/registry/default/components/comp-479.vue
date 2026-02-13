@@ -39,8 +39,7 @@ const columns: ColumnDef<Item>[] = [
   {
     header: "Name",
     accessorKey: "name",
-    cell: ({ row }) =>
-      h("div", { class: "truncate font-medium" }, row.getValue("name")),
+    cell: ({ row }) => h("div", { class: "truncate font-medium" }, row.getValue("name")),
     sortUndefined: "last",
     sortDescFirst: false,
   },
@@ -53,11 +52,7 @@ const columns: ColumnDef<Item>[] = [
     accessorKey: "location",
     cell: ({ row }) =>
       h("div", { class: "truncate" }, [
-        h(
-          "span",
-          { class: "text-lg leading-none" },
-          row.original.flag as string,
-        ),
+        h("span", { class: "text-lg leading-none" }, row.original.flag as string),
         " ",
         row.getValue("location") as string,
       ]),
@@ -174,10 +169,7 @@ const table = useVueTable({
                 @click="header.column.getToggleSortingHandler()?.($event)"
                 @keydown="
                   (e) => {
-                    if (
-                      header.column.getCanSort() &&
-                      (e.key === 'Enter' || e.key === ' ')
-                    ) {
+                    if (header.column.getCanSort() && (e.key === 'Enter' || e.key === ' ')) {
                       e.preventDefault();
                       header.column.getToggleSortingHandler()?.(e);
                     }
@@ -220,23 +212,14 @@ const table = useVueTable({
             :key="row.id"
             :data-state="row.getIsSelected() && 'selected'"
           >
-            <TableCell
-              v-for="cell in row.getVisibleCells()"
-              :key="cell.id"
-              class="truncate"
-            >
-              <FlexRender
-                :render="cell.column.columnDef.cell"
-                :props="cell.getContext()"
-              />
+            <TableCell v-for="cell in row.getVisibleCells()" :key="cell.id" class="truncate">
+              <FlexRender :render="cell.column.columnDef.cell" :props="cell.getContext()" />
             </TableCell>
           </TableRow>
         </template>
         <template v-else>
           <TableRow>
-            <TableCell :colspan="columns.length" class="h-24 text-center">
-              No results.
-            </TableCell>
+            <TableCell :colspan="columns.length" class="h-24 text-center">No results.</TableCell>
           </TableRow>
         </template>
       </TableBody>

@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/registry/default/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/registry/default/ui/card";
 import { Progress } from "@/registry/default/ui/progress";
 
 const used = 2000;
@@ -20,9 +15,7 @@ const percent = (used / total) * 100;
       <CardHeader class="flex min-h-auto items-center justify-between border-0">
         <CardTitle>API Call Quota</CardTitle>
         <div class="ml-auto">
-          <Button variant="outline" size="sm" class="font-medium">
-            View API usage
-          </Button>
+          <Button variant="outline" size="sm" class="font-medium">View API usage</Button>
         </div>
       </CardHeader>
       <CardContent class="flex flex-col space-y-6">
@@ -38,20 +31,14 @@ const percent = (used / total) * 100;
           </div>
 
           <div>
-            <Progress
-              :modelValue="percent"
-              class="bg-muted"
-              indicatorClassName="bg-indigo-500"
-            />
+            <Progress :modelValue="percent" class="bg-muted" indicatorClassName="bg-indigo-500" />
           </div>
 
           <div class="flex items-center justify-between">
             <span class="text-foreground text-sm font-semibold">
               {{ remaining }} free calls left
             </span>
-            <span class="text-muted-foreground text-xs">
-              of {{ total }} monthly quota
-            </span>
+            <span class="text-muted-foreground text-xs">of {{ total }} monthly quota</span>
           </div>
         </div>
 
@@ -63,11 +50,7 @@ const percent = (used / total) * 100;
         </div>
       </CardContent>
     </Card>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Ported from reui.io API quota card
       <a
         class="hover:text-foreground underline"

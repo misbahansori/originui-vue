@@ -43,13 +43,9 @@ const cards = [
         <Card
           v-for="(card, i) in cards"
           :key="i"
-          :class="
-            cn('overflow-hidden rounded-2xl border-0 p-0 shadow-lg', card.color)
-          "
+          :class="cn('overflow-hidden rounded-2xl border-0 p-0 shadow-lg', card.color)"
         >
-          <CardContent
-            class="relative flex flex-col justify-end overflow-hidden px-0 py-6 pb-0"
-          >
+          <CardContent class="relative flex flex-col justify-end overflow-hidden px-0 py-6 pb-0">
             <div class="mb-3.5 px-6">
               <component :is="card.icon" class="size-8 text-white/60" />
             </div>
@@ -77,11 +73,7 @@ const cards = [
         </Card>
       </div>
     </div>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Ported from reui.io statistic showcase cards
       <a
         class="hover:text-foreground underline"

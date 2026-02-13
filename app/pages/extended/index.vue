@@ -13,14 +13,12 @@ useSeoMeta({
   title: "Origin UI - Beautiful UI components built with Tailwind CSS and Vue",
   description:
     "An open-source collection of copy-and-paste components for quickly building application UIs.",
-  ogTitle:
-    "Origin UI - Beautiful UI components built with Tailwind CSS and Vue",
+  ogTitle: "Origin UI - Beautiful UI components built with Tailwind CSS and Vue",
   ogDescription:
     "An open-source collection of copy-and-paste components for quickly building application UIs.",
   ogImage: "https://www.originui-vue.com/opengraph-image.webp",
   ogUrl: "https://www.originui-vue.com",
-  twitterTitle:
-    "Origin UI - Beautiful UI components built with Tailwind CSS and Vue",
+  twitterTitle: "Origin UI - Beautiful UI components built with Tailwind CSS and Vue",
   twitterDescription:
     "An open-source collection of copy-and-paste components for quickly building application UIs.",
   twitterImage: "https://www.originui-vue.com/opengraph-image.webp",
@@ -35,9 +33,7 @@ useSeoMeta({
     </PageHeader>
 
     <div class="relative my-16">
-      <div
-        class="grid gap-x-6 gap-y-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-      >
+      <div class="grid gap-x-6 gap-y-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <CategoryCard
           v-for="category in sortedCategories"
           :key="category.slug"

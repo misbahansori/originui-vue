@@ -10,16 +10,10 @@
     }
   ],
   "meta": {
-    "tags": [
-      "popover",
-      "tooltip",
-      "radix"
-    ],
+    "tags": ["popover", "tooltip", "radix"],
     "style": 1
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/popover.json"

@@ -12,12 +12,7 @@ import {
   CalendarNextButton,
   CalendarPrevButton,
 } from "@/registry/default/ui/calendar";
-import {
-  CalendarDate,
-  getLocalTimeZone,
-  today,
-  type DateValue,
-} from "@internationalized/date";
+import { CalendarDate, getLocalTimeZone, today, type DateValue } from "@internationalized/date";
 import { LucideCalendar } from "lucide-vue-next";
 import { CalendarRoot } from "reka-ui";
 
@@ -53,9 +48,7 @@ const inputValue = computed({
             <CalendarNextButton class="absolute right-1" />
           </div>
         </CalendarHeader>
-        <div
-          class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0"
-        >
+        <div class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">
           <CalendarGrid v-for="month in grid" :key="month.value.toString()">
             <CalendarGridHead>
               <CalendarGridRow>

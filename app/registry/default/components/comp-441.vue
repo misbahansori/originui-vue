@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { Badge } from "@/registry/default/ui/badge";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/default/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/default/ui/tabs";
 import {
   Tooltip,
   TooltipContent,
@@ -27,9 +22,7 @@ import { LucideBox, LucideHome, LucidePanelsTopLeft } from "lucide-vue-next";
               </TabsTrigger>
             </span>
           </TooltipTrigger>
-          <TooltipContent side="right" class="px-2 py-1 text-xs">
-            Overview
-          </TooltipContent>
+          <TooltipContent side="right" class="px-2 py-1 text-xs">Overview</TooltipContent>
         </Tooltip>
       </TooltipProvider>
       <TooltipProvider :delay-duration="0">
@@ -48,9 +41,7 @@ import { LucideBox, LucideHome, LucidePanelsTopLeft } from "lucide-vue-next";
               </TabsTrigger>
             </span>
           </TooltipTrigger>
-          <TooltipContent side="right" class="px-2 py-1 text-xs">
-            Projects
-          </TooltipContent>
+          <TooltipContent side="right" class="px-2 py-1 text-xs">Projects</TooltipContent>
         </Tooltip>
       </TooltipProvider>
       <TooltipProvider :delay-duration="0">
@@ -62,9 +53,7 @@ import { LucideBox, LucideHome, LucidePanelsTopLeft } from "lucide-vue-next";
               </TabsTrigger>
             </span>
           </TooltipTrigger>
-          <TooltipContent side="right" class="px-2 py-1 text-xs">
-            Packages
-          </TooltipContent>
+          <TooltipContent side="right" class="px-2 py-1 text-xs">Packages</TooltipContent>
         </Tooltip>
       </TooltipProvider>
     </TabsList>

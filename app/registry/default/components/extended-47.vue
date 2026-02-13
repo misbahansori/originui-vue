@@ -20,8 +20,6 @@ const selectedDate = ref<CalendarDate>();
       </MiniCalendarDays>
       <MiniCalendarNavigation direction="next" />
     </MiniCalendar>
-    <p class="text-muted-foreground mt-2 text-xs">
-      Borderless minimal design without background
-    </p>
+    <p class="text-muted-foreground mt-2 text-xs">Borderless minimal design without background</p>
   </div>
 </template>

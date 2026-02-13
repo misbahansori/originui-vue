@@ -72,13 +72,7 @@ const items = [
         <TableRow v-for="item in items" :key="item.id">
           <TableCell>
             <div class="flex items-center gap-3">
-              <img
-                class="rounded-full"
-                :src="item.image"
-                width="40"
-                height="40"
-                :alt="item.name"
-              />
+              <img class="rounded-full" :src="item.image" width="40" height="40" :alt="item.name" />
               <div>
                 <div class="font-medium">{{ item.name }}</div>
                 <span class="text-muted-foreground mt-0.5 text-xs">
@@ -94,8 +88,6 @@ const items = [
         </TableRow>
       </TableBody>
     </Table>
-    <p class="text-muted-foreground mt-4 text-center text-sm">
-      Table with images
-    </p>
+    <p class="text-muted-foreground mt-4 text-center text-sm">Table with images</p>
   </div>
 </template>

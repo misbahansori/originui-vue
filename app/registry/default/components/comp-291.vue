@@ -8,11 +8,7 @@ import { LucideCircleCheck, LucideX } from "lucide-vue-next";
   <div class="bg-background z-50 max-w-[400px] rounded-md border p-4 shadow-lg">
     <div class="flex gap-2">
       <div class="flex grow gap-3">
-        <LucideCircleCheck
-          :size="16"
-          class="mt-0.5 shrink-0 text-emerald-500"
-          aria-hidden="true"
-        />
+        <LucideCircleCheck :size="16" class="mt-0.5 shrink-0 text-emerald-500" aria-hidden="true" />
         <div class="flex grow flex-col gap-3">
           <div class="space-y-1">
             <p class="text-sm font-medium">Your request was completed!</p>

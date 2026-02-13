@@ -19,11 +19,7 @@ import {
         class="rounded-full shadow-none"
         aria-label="Open edit menu"
       >
-        <SettingsIcon
-          class="text-muted-foreground"
-          :size="16"
-          aria-hidden="true"
-        />
+        <SettingsIcon class="text-muted-foreground" :size="16" aria-hidden="true" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent class="max-w-64">

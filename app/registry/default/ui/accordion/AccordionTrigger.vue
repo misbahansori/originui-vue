@@ -6,9 +6,7 @@ import type { AccordionTriggerProps } from "reka-ui";
 import { AccordionHeader, AccordionTrigger } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 
-const props = defineProps<
-  AccordionTriggerProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<AccordionTriggerProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = reactiveOmit(props, "class");
 </script>

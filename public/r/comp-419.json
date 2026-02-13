@@ -10,17 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "badge",
-      "chip",
-      "status"
-    ],
+    "tags": ["badge", "chip", "status"],
     "style": 1
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/badge.json"
-  ]
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": ["https://www.originui-vue.com/r/badge.json"]
 }

@@ -10,13 +10,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "calendar",
-      "date",
-      "button",
-      "picker",
-      "react daypicker"
-    ]
+    "tags": ["calendar", "date", "button", "picker", "react daypicker"]
   },
   "dependencies": [],
   "registryDependencies": []

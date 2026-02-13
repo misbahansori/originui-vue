@@ -50,8 +50,7 @@ const columns: ColumnDef<Item>[] = [
   {
     header: "Name",
     accessorKey: "name",
-    cell: ({ row }) =>
-      h("div", { class: "truncate font-medium" }, row.getValue("name")),
+    cell: ({ row }) => h("div", { class: "truncate font-medium" }, row.getValue("name")),
   },
   {
     header: "Email",
@@ -62,11 +61,7 @@ const columns: ColumnDef<Item>[] = [
     accessorKey: "location",
     cell: ({ row }) =>
       h("div", { class: "truncate" }, [
-        h(
-          "span",
-          { class: "text-lg leading-none" },
-          row.original.flag as string,
-        ),
+        h("span", { class: "text-lg leading-none" }, row.original.flag as string),
         " ",
         row.getValue("location") as string,
       ]),
@@ -163,14 +158,9 @@ const table = useVueTable({
           >
             <div class="flex items-center justify-between gap-2">
               <span class="truncate" v-if="!header.isPlaceholder">
-                <FlexRender
-                  :render="header.column.columnDef.header"
-                  :props="header.getContext()"
-                />
+                <FlexRender :render="header.column.columnDef.header" :props="header.getContext()" />
               </span>
-              <template
-                v-if="!header.isPlaceholder && header.column.getCanPin()"
-              >
+              <template v-if="!header.isPlaceholder && header.column.getCanPin()">
                 <Button
                   v-if="header.column.getIsPinned()"
                   variant="ghost"
@@ -224,22 +214,13 @@ const table = useVueTable({
             :key="row.id"
             :data-state="row.getIsSelected() && 'selected'"
           >
-            <TableCell
-              v-for="cell in row.getVisibleCells()"
-              :key="cell.id"
-              class="truncate"
-            >
-              <FlexRender
-                :render="cell.column.columnDef.cell"
-                :props="cell.getContext()"
-              />
+            <TableCell v-for="cell in row.getVisibleCells()" :key="cell.id" class="truncate">
+              <FlexRender :render="cell.column.columnDef.cell" :props="cell.getContext()" />
             </TableCell>
           </TableRow>
         </template>
         <TableRow v-else>
-          <TableCell :colspan="columns.length" class="h-24 text-center">
-            No results.
-          </TableCell>
+          <TableCell :colspan="columns.length" class="h-24 text-center">No results.</TableCell>
         </TableRow>
       </TableBody>
     </Table>

@@ -21,11 +21,7 @@ const toggleVisibility = () => {
   <div class="*:not-first:mt-2">
     <Label :for="id">Show/hide password input</Label>
     <InputGroup>
-      <InputGroupInput
-        :id="id"
-        placeholder="Password"
-        :type="isVisible ? 'text' : 'password'"
-      />
+      <InputGroupInput :id="id" placeholder="Password" :type="isVisible ? 'text' : 'password'" />
       <InputGroupAddon align="inline-end">
         <InputGroupButton
           size="icon-xs"

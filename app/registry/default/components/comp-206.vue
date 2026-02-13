@@ -26,11 +26,7 @@ const id = useId();
         <SelectItem value="4">Vitesse</SelectItem>
       </SelectContent>
     </Select>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Tell us what's your favorite Select framework
     </p>
   </div>

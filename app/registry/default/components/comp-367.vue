@@ -14,11 +14,7 @@ import { LucideChevronDown } from "lucide-vue-next";
     <DropdownMenuTrigger asChild>
       <Button variant="outline">
         Same width of trigger
-        <LucideChevronDown
-          :size="16"
-          class="-me-1 opacity-60"
-          aria-hidden="true"
-        />
+        <LucideChevronDown :size="16" class="-me-1 opacity-60" aria-hidden="true" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent class="min-w-(--reka-dropdown-menu-trigger-width)">

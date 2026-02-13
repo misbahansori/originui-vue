@@ -15,12 +15,7 @@ if (!component) {
 </script>
 <template>
   <PageGrid>
-    <ComponentCard
-      :key="component.name"
-      :component="component"
-      isSearchPage
-      class="border-none"
-    >
+    <ComponentCard :key="component.name" :component="component" isSearchPage class="border-none">
       <Suspense>
         <template #default>
           <ComponentLoader :component="component" />

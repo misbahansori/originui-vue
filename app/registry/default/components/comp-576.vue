@@ -65,17 +65,9 @@ const items: Item[] = [
         </TreeItemLabel>
       </TreeItem>
     </Tree>
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-xs">
       Menu navigation tree ∙
-      <a
-        class="hover:text-foreground underline"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a class="hover:text-foreground underline" target="_blank" rel="noopener noreferrer">
         Reka UI Tree
       </a>
     </p>

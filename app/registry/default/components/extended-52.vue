@@ -20,8 +20,6 @@ const selectedDate = ref<CalendarDate>();
       </MiniCalendarDays>
       <MiniCalendarNavigation direction="next" />
     </MiniCalendar>
-    <p class="text-muted-foreground mt-2 text-xs">
-      Elevated card with prominent shadow effect
-    </p>
+    <p class="text-muted-foreground mt-2 text-xs">Elevated card with prominent shadow effect</p>
   </div>
 </template>

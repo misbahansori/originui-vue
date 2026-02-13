@@ -53,18 +53,10 @@ const pushNotifications = ref(true);
           <DropdownMenuPortal>
             <DropdownMenuSubContent>
               <DropdownMenuRadioGroup v-model="framework">
-                <DropdownMenuRadioItem value="nextjs">
-                  Next.js
-                </DropdownMenuRadioItem>
-                <DropdownMenuRadioItem value="sveltekit" disabled>
-                  SvelteKit
-                </DropdownMenuRadioItem>
-                <DropdownMenuRadioItem value="remix">
-                  Remix
-                </DropdownMenuRadioItem>
-                <DropdownMenuRadioItem value="astro">
-                  Astro
-                </DropdownMenuRadioItem>
+                <DropdownMenuRadioItem value="nextjs">Next.js</DropdownMenuRadioItem>
+                <DropdownMenuRadioItem value="sveltekit" disabled>SvelteKit</DropdownMenuRadioItem>
+                <DropdownMenuRadioItem value="remix">Remix</DropdownMenuRadioItem>
+                <DropdownMenuRadioItem value="astro">Astro</DropdownMenuRadioItem>
               </DropdownMenuRadioGroup>
             </DropdownMenuSubContent>
           </DropdownMenuPortal>
@@ -76,9 +68,7 @@ const pushNotifications = ref(true);
               <DropdownMenuCheckboxItem v-model="emailNotifications">
                 Email
               </DropdownMenuCheckboxItem>
-              <DropdownMenuCheckboxItem v-model="pushNotifications">
-                Push
-              </DropdownMenuCheckboxItem>
+              <DropdownMenuCheckboxItem v-model="pushNotifications">Push</DropdownMenuCheckboxItem>
             </DropdownMenuSubContent>
           </DropdownMenuPortal>
         </DropdownMenuSub>

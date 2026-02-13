@@ -16,9 +16,7 @@ const items = [
 
 <template>
   <fieldset class="space-y-4">
-    <legend class="text-foreground text-sm leading-none font-medium">
-      How did it go?
-    </legend>
+    <legend class="text-foreground text-sm leading-none font-medium">How did it go?</legend>
     <RadioGroup class="flex gap-1.5" v-model="selectedValue">
       <label
         v-for="item in items"

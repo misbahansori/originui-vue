@@ -11,11 +11,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/registry/default/ui/navigation-menu";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 
 interface NavigationItem {
   href: string;
@@ -126,16 +122,11 @@ const navigationLinks: NavigationLink[] = [
                   class="w-full"
                 >
                   <template v-if="link.submenu">
-                    <div
-                      class="text-muted-foreground px-2 py-1.5 text-xs font-medium"
-                    >
+                    <div class="text-muted-foreground px-2 py-1.5 text-xs font-medium">
                       {{ link.label }}
                     </div>
                     <ul>
-                      <li
-                        v-for="(item, itemIndex) in link.items"
-                        :key="itemIndex"
-                      >
+                      <li v-for="(item, itemIndex) in link.items" :key="itemIndex">
                         <NavigationMenuLink :href="item.href" class="py-1.5">
                           {{ item.label }}
                         </NavigationMenuLink>
@@ -152,8 +143,7 @@ const navigationLinks: NavigationLink[] = [
                     v-if="
                       index < navigationLinks.length - 1 &&
                       ((!link.submenu && navigationLinks[index + 1]?.submenu) ||
-                        (link.submenu &&
-                          !navigationLinks[index + 1]?.submenu) ||
+                        (link.submenu && !navigationLinks[index + 1]?.submenu) ||
                         (link.submenu &&
                           navigationLinks[index + 1]?.submenu &&
                           link.type !== navigationLinks[index + 1]?.type))
@@ -175,10 +165,7 @@ const navigationLinks: NavigationLink[] = [
           <!-- Navigation menu -->
           <NavigationMenu :viewport="false" class="max-md:hidden">
             <NavigationMenuList class="gap-2">
-              <NavigationMenuItem
-                v-for="(link, index) in navigationLinks"
-                :key="index"
-              >
+              <NavigationMenuItem v-for="(link, index) in navigationLinks" :key="index">
                 <template v-if="link.submenu">
                   <NavigationMenuTrigger
                     class="text-muted-foreground hover:text-primary bg-transparent px-2 py-1.5 font-medium *:[svg]:-me-0.5 *:[svg]:size-3.5"
@@ -188,15 +175,8 @@ const navigationLinks: NavigationLink[] = [
                   <NavigationMenuContent
                     class="data-[motion=from-end]:slide-in-from-right-16! data-[motion=from-start]:slide-in-from-left-16! data-[motion=to-end]:slide-out-to-right-16! data-[motion=to-start]:slide-out-to-left-16! z-50 p-1"
                   >
-                    <ul
-                      :class="
-                        link.type === 'description' ? 'min-w-64' : 'min-w-48'
-                      "
-                    >
-                      <li
-                        v-for="(item, itemIndex) in link.items"
-                        :key="itemIndex"
-                      >
+                    <ul :class="link.type === 'description' ? 'min-w-64' : 'min-w-48'">
+                      <li v-for="(item, itemIndex) in link.items" :key="itemIndex">
                         <NavigationMenuLink :href="item.href" class="py-1.5">
                           <!-- Display icon if present -->
                           <template v-if="link.type === 'icon' && item.icon">
@@ -224,18 +204,12 @@ const navigationLinks: NavigationLink[] = [
                           </template>
 
                           <!-- Display label with description if present -->
-                          <template
-                            v-else-if="
-                              link.type === 'description' && item.description
-                            "
-                          >
+                          <template v-else-if="link.type === 'description' && item.description">
                             <div class="space-y-1">
                               <div class="font-medium">
                                 {{ item.label }}
                               </div>
-                              <p
-                                class="text-muted-foreground line-clamp-2 text-xs"
-                              >
+                              <p class="text-muted-foreground line-clamp-2 text-xs">
                                 {{ item.description }}
                               </p>
                             </div>
@@ -244,9 +218,7 @@ const navigationLinks: NavigationLink[] = [
                             <!-- Display simple label if not icon or description type -->
                             <span
                               v-if="
-                                !link.type ||
-                                (link.type !== 'icon' &&
-                                  link.type !== 'description')
+                                !link.type || (link.type !== 'icon' && link.type !== 'description')
                               "
                             >
                               {{ item.label }}

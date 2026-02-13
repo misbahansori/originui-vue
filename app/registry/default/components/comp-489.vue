@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { RangeCalendar } from "@/registry/default/ui/range-calendar";
-import {
-  type DateValue,
-  getLocalTimeZone,
-  isWeekend,
-  today,
-} from "@internationalized/date";
+import { type DateValue, getLocalTimeZone, isWeekend, today } from "@internationalized/date";
 import type { DateRange } from "reka-ui";
 import type { Ref } from "vue";
 import { ref } from "vue";
@@ -27,8 +22,7 @@ const disabledRanges = [
 const isDateUnavailable = (date: DateValue) =>
   isWeekend(date, "en") ||
   disabledRanges.some(
-    (interval) =>
-      date.compare(interval[0]) >= 0 && date.compare(interval[1]) <= 0,
+    (interval) => date.compare(interval[0]) >= 0 && date.compare(interval[1]) <= 0,
   );
 </script>
 

@@ -14,15 +14,11 @@ const { openCommandPalette } = useCommandPalette();
         size="20"
         aria-hidden="true"
       />
-      <span class="font-normal text-zinc-400 dark:text-zinc-500">
-        Quick search...
-      </span>
+      <span class="font-normal text-zinc-400 dark:text-zinc-500">Quick search...</span>
       <div
         class="text-muted-foreground/80 pointer-events-none ml-auto flex items-center justify-center"
       >
-        <kbd
-          class="text-muted-foreground inline-flex font-[inherit] text-xs font-medium"
-        >
+        <kbd class="text-muted-foreground inline-flex font-[inherit] text-xs font-medium">
           <span class="opacity-70">⌘</span>
           K
         </kbd>

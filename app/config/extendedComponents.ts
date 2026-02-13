@@ -79,11 +79,7 @@ export const extendedCategories: ExtendedComponentCategory[] = [
   {
     slug: "extended/snippet",
     name: "Snippet",
-    components: [
-      { name: "extended-35" },
-      { name: "extended-36" },
-      { name: "extended-37" },
-    ],
+    components: [{ name: "extended-35" }, { name: "extended-36" }, { name: "extended-37" }],
   },
   {
     slug: "extended/mini-calendar",

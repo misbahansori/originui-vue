@@ -1,9 +1,5 @@
 <script setup lang="ts">
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/registry/default/ui/input-group";
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@/registry/default/ui/input-group";
 import { Label } from "@/registry/default/ui/label";
 import { LucideAtSign } from "lucide-vue-next";
 import { useId } from "vue";

@@ -15,12 +15,7 @@ const labels = ["Awful", "Poor", "Okay", "Good", "Amazing"];
     </div>
     <div class="flex items-center gap-2">
       <span class="text-2xl">😡</span>
-      <Slider
-        v-model="value"
-        :min="1"
-        :max="5"
-        aria-label="Rate your experience"
-      />
+      <Slider v-model="value" :min="1" :max="5" aria-label="Rate your experience" />
       <span class="text-2xl">😍</span>
     </div>
   </div>

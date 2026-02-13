@@ -10,18 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "calendar",
-      "date",
-      "react aria"
-    ],
+    "tags": ["calendar", "date", "react aria"],
     "style": 1
   },
-  "dependencies": [
-    "@internationalized/date",
-    "reka-ui"
-  ],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/calendar.json"
-  ]
+  "dependencies": ["@internationalized/date", "reka-ui"],
+  "registryDependencies": ["https://www.originui-vue.com/r/calendar.json"]
 }

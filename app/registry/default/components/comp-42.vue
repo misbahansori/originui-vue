@@ -15,9 +15,7 @@ const endId = useId();
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="startId" class="text-foreground text-sm font-medium">
-      Date range picker
-    </Label>
+    <Label :for="startId" class="text-foreground text-sm font-medium">Date range picker</Label>
     <DateRangePicker :id="startId" :end-id="endId">
       <DateRangePickerField v-slot="{ segments }">
         <DateRangePickerInput
@@ -43,11 +41,7 @@ const endId = useId();
       <DateRangePickerCalendar />
     </DateRangePicker>
 
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Built with native date inputs
     </p>
   </div>

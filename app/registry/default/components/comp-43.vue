@@ -7,11 +7,7 @@ import {
   DateRangePickerTrigger,
 } from "@/registry/default/ui/date-range-picker";
 import { Label } from "@/registry/default/ui/label";
-import {
-  getLocalTimeZone,
-  today,
-  type DateValue,
-} from "@internationalized/date";
+import { getLocalTimeZone, today, type DateValue } from "@internationalized/date";
 import { useId } from "vue";
 
 const startId = useId();
@@ -36,11 +32,7 @@ const validate = (value: { start: DateValue; end: DateValue } | null) =>
   disabledRanges.some((interval) => {
     if (!interval[0] || !interval[1]) return false;
 
-    return (
-      value &&
-      value.end.compare(interval[0]) >= 0 &&
-      value.start.compare(interval[1]) <= 0
-    );
+    return value && value.end.compare(interval[0]) >= 0 && value.start.compare(interval[1]) <= 0;
   })
     ? "Selected date range may not include unavailable dates."
     : null;
@@ -79,11 +71,7 @@ const validate = (value: { start: DateValue; end: DateValue } | null) =>
 
       <DateRangePickerCalendar />
     </DateRangePicker>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Built with native date inputs
     </p>
   </div>

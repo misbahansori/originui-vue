@@ -13,12 +13,7 @@ import { LucidePlus } from "lucide-vue-next";
 <template>
   <Empty>
     <EmptyHeader>
-      <svg
-        class="w-48"
-        viewBox="0 0 238 190"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg class="w-48" viewBox="0 0 238 190" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect
           y="61.8035"
           width="200"
@@ -59,11 +54,7 @@ import { LucidePlus } from "lucide-vue-next";
               type="matrix"
               values="0 0 0 0 0.262745 0 0 0 0 0.262745 0 0 0 0 0.286275 0 0 0 0.05 0"
             />
-            <feBlend
-              mode="normal"
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow_10_153"
-            />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_10_153" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -75,8 +66,7 @@ import { LucidePlus } from "lucide-vue-next";
       </svg>
       <EmptyTitle class="font-semibold">You don't have any cards</EmptyTitle>
       <EmptyDescription>
-        It looks like there's no data in this page. You can create a new one or
-        refresh the page.
+        It looks like there's no data in this page. You can create a new one or refresh the page.
       </EmptyDescription>
     </EmptyHeader>
     <EmptyContent>

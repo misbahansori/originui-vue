@@ -31,11 +31,7 @@ const handleClearInput = () => {
         v-model="inputValue"
       />
       <InputGroupAddon v-if="inputValue" align="inline-end">
-        <InputGroupButton
-          size="icon-xs"
-          aria-label="Clear input"
-          @click.prevent="handleClearInput"
-        >
+        <InputGroupButton size="icon-xs" aria-label="Clear input" @click.prevent="handleClearInput">
           <LucideCircleX :size="16" aria-hidden="true" />
         </InputGroupButton>
       </InputGroupAddon>

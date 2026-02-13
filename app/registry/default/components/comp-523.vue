@@ -40,17 +40,10 @@ const steps = [
             <StepperTitle>{{ title }}</StepperTitle>
           </div>
         </StepperTrigger>
-        <StepperSeparator
-          v-if="step < steps.length"
-          class="max-md:mt-3.5 md:mx-4"
-        />
+        <StepperSeparator v-if="step < steps.length" class="max-md:mt-3.5 md:mx-4" />
       </StepperItem>
     </Stepper>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Stepper with inline titles
     </p>
   </div>

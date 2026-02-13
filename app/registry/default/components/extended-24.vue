@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { Badge } from "@/registry/default/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/registry/default/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/registry/default/ui/card";
 import {
   Select,
   SelectContent,
@@ -52,17 +47,13 @@ const alerts = [
         <!-- Stats Row -->
         <div class="mb-4 flex items-center gap-2.5">
           <div class="flex flex-1 flex-col gap-1.5">
-            <div
-              class="text-muted-foreground text-xs font-medium tracking-wide uppercase"
-            >
+            <div class="text-muted-foreground text-xs font-medium tracking-wide uppercase">
               Total Revenue
             </div>
             <div class="text-foreground text-2xl font-bold">$128,400</div>
           </div>
           <div class="flex flex-1 flex-col gap-1.5">
-            <div
-              class="text-muted-foreground text-xs font-medium tracking-wide uppercase"
-            >
+            <div class="text-muted-foreground text-xs font-medium tracking-wide uppercase">
               Subscriptions
             </div>
             <div class="text-foreground text-2xl font-bold">312</div>
@@ -83,9 +74,7 @@ const alerts = [
             Free
           </div>
           <div class="text-destructive flex items-center gap-1 text-xs">
-            <span
-              class="bg-destructive inline-block size-2 rounded-full"
-            ></span>
+            <span class="bg-destructive inline-block size-2 rounded-full"></span>
             Pro
           </div>
           <div class="flex items-center gap-1 text-xs text-amber-600">
@@ -95,15 +84,10 @@ const alerts = [
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger as-child>
-                    <LucideInfo
-                      class="text-muted-foreground size-3.5 cursor-pointer"
-                    />
+                    <LucideInfo class="text-muted-foreground size-3.5 cursor-pointer" />
                   </TooltipTrigger>
                   <TooltipContent>
-                    <span>
-                      Enterprise plans are custom contracts with premium
-                      support.
-                    </span>
+                    <span>Enterprise plans are custom contracts with premium support.</span>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
@@ -112,12 +96,8 @@ const alerts = [
         </div>
         <!-- Expiring Soon List -->
         <div class="mb-2.5 flex items-center justify-between">
-          <div class="text-muted-foreground text-xs tracking-wide uppercase">
-            Expiring Soon
-          </div>
-          <a href="#" class="text-primary text-sm font-medium hover:underline">
-            View all
-          </a>
+          <div class="text-muted-foreground text-xs tracking-wide uppercase">Expiring Soon</div>
+          <a href="#" class="text-primary text-sm font-medium hover:underline">View all</a>
         </div>
         <div
           v-for="item in alerts"
@@ -135,29 +115,17 @@ const alerts = [
           <div class="flex items-center gap-2.5">
             <span class="text-muted-foreground text-xs">
               in
-              <span class="text-foreground font-semibold">
-                {{ item.daysLeft }}d
-              </span>
+              <span class="text-foreground font-semibold">{{ item.daysLeft }}d</span>
             </span>
-            <Separator
-              orientation="vertical"
-              class="bg-accent-foreground/20 h-3"
-            />
-            <a
-              :href="item.renewUrl"
-              class="text-primary text-xs font-medium hover:underline"
-            >
+            <Separator orientation="vertical" class="bg-accent-foreground/20 h-3" />
+            <a :href="item.renewUrl" class="text-primary text-xs font-medium hover:underline">
               Renew
             </a>
           </div>
         </div>
       </CardContent>
     </Card>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Ported from reui.io subscription alerts card
       <a
         class="hover:text-foreground underline"

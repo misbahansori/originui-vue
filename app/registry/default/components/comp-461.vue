@@ -8,11 +8,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/registry/default/ui/pagination";
-import {
-  LucideChevronLeft,
-  LucideChevronRight,
-  LucideEllipsis,
-} from "lucide-vue-next";
+import { LucideChevronLeft, LucideChevronRight, LucideEllipsis } from "lucide-vue-next";
 </script>
 
 <template>

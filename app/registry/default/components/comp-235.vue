@@ -79,11 +79,7 @@ const frameworks: Option[] = [
     <Label>Multiselect with placeholder and clear</Label>
     <MultiSelect :options="frameworks" v-model="value" v-model:query="query" />
 
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Built with reka-ui
       <a
         class="hover:text-foreground underline"

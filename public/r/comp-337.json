@@ -10,16 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "accordion",
-      "radix"
-    ],
+    "tags": ["accordion", "radix"],
     "colSpan": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/accordion.json"
-  ]
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": ["https://www.originui-vue.com/r/accordion.json"]
 }

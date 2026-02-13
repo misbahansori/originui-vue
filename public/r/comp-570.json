@@ -10,14 +10,10 @@
     }
   ],
   "meta": {
-    "tags": [
-      "tree"
-    ],
+    "tags": ["tree"],
     "colSpan": 1
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/input.json",
     "https://www.originui-vue.com/r/tree.json"

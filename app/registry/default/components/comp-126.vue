@@ -65,11 +65,7 @@ function handleFileChange(event: Event) {
       {{ file.name }}
     </p>
     <div class="sr-only" aria-live="polite" role="status">
-      {{
-        previewUrl
-          ? "Image uploaded and preview available"
-          : "No image uploaded"
-      }}
+      {{ previewUrl ? "Image uploaded and preview available" : "No image uploaded" }}
     </div>
   </div>
 </template>

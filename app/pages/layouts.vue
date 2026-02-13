@@ -4,8 +4,7 @@ const cards = [
     id: 7,
     title: "Schema Visualizer",
     demoUrl: "https://crafted.is/exp7",
-    repoUrl:
-      "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-07",
+    repoUrl: "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-07",
     cmd: "npx shadcn init https://ui-experiment-07.vercel.app/r/experiment-07.json",
     imgHeight: 700,
   },
@@ -13,8 +12,7 @@ const cards = [
     id: 6,
     title: "Event Calendar",
     demoUrl: "https://crafted.is/exp6",
-    repoUrl:
-      "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-06",
+    repoUrl: "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-06",
     cmd: "npx shadcn init https://ui-experiment-06.vercel.app/r/experiment-06.json",
     imgHeight: 688,
   },
@@ -22,40 +20,35 @@ const cards = [
     id: 5,
     title: "Candlestick Chart",
     demoUrl: "https://crafted.is/exp5",
-    repoUrl:
-      "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-05",
+    repoUrl: "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-05",
     imgHeight: 770,
   },
   {
     id: 4,
     title: "Crypto Wallet",
     demoUrl: "https://crafted.is/exp4",
-    repoUrl:
-      "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-04",
+    repoUrl: "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-04",
     imgHeight: 894,
   },
   {
     id: 3,
     title: "SaaS Dashboard",
     demoUrl: "https://crafted.is/exp3",
-    repoUrl:
-      "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-03",
+    repoUrl: "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-03",
     imgHeight: 829,
   },
   {
     id: 2,
     title: "AI Chat",
     demoUrl: "https://crafted.is/exp2",
-    repoUrl:
-      "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-02",
+    repoUrl: "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-02",
     imgHeight: 700,
   },
   {
     id: 1,
     title: "Dark Table",
     demoUrl: "https://crafted.is/exp1",
-    repoUrl:
-      "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-01",
+    repoUrl: "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-01",
     imgHeight: 894,
   },
 ];
@@ -80,8 +73,8 @@ useSeoMeta({
 <template>
   <div>
     <PageHeader title="Layouts &amp; Experiments">
-      Beautifully designed open-source layouts and UI experiments built with
-      Origin UI and shadcn/ui.
+      Beautifully designed open-source layouts and UI experiments built with Origin UI and
+      shadcn/ui.
     </PageHeader>
 
     <!-- Cards -->

@@ -10,16 +10,10 @@
     }
   ],
   "meta": {
-    "tags": [
-      "pagination",
-      "select",
-      "radix"
-    ],
+    "tags": ["pagination", "select", "radix"],
     "colSpan": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/pagination.json",
     "https://www.originui-vue.com/r/select.json"

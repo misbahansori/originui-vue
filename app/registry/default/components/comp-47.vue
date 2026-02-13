@@ -1,9 +1,5 @@
 <script setup lang="ts">
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/registry/default/ui/input-group";
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@/registry/default/ui/input-group";
 import { Label } from "@/registry/default/ui/label";
 import { LucideCreditCard } from "lucide-vue-next";
 import { vMaska } from "maska/vue";
@@ -30,11 +26,7 @@ const id = useId();
         <LucideCreditCard :size="16" aria-hidden="true" />
       </InputGroupAddon>
     </InputGroup>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Built with
       <a
         class="hover:text-foreground underline"

@@ -10,17 +10,11 @@ const selectedValue = ref("1");
 <template>
   <RadioGroup class="gap-6" v-model="selectedValue">
     <div class="flex items-start gap-2">
-      <RadioGroupItem
-        value="1"
-        :id="`${id}-1`"
-        :aria-describedby="`${id}-1-description`"
-      />
+      <RadioGroupItem value="1" :id="`${id}-1`" :aria-describedby="`${id}-1-description`" />
       <div class="grid grow gap-2">
         <Label :for="`${id}-1`">
           Small
-          <span
-            class="text-muted-foreground text-xs leading-[inherit] font-normal"
-          >
+          <span class="text-muted-foreground text-xs leading-[inherit] font-normal">
             (Sublabel)
           </span>
         </Label>
@@ -30,17 +24,11 @@ const selectedValue = ref("1");
       </div>
     </div>
     <div class="flex items-start gap-2">
-      <RadioGroupItem
-        value="2"
-        :id="`${id}-2`"
-        :aria-describedby="`${id}-2-description`"
-      />
+      <RadioGroupItem value="2" :id="`${id}-2`" :aria-describedby="`${id}-2-description`" />
       <div class="grid grow gap-2">
         <Label :for="`${id}-2`">
           Large
-          <span
-            class="text-muted-foreground text-xs leading-[inherit] font-normal"
-          >
+          <span class="text-muted-foreground text-xs leading-[inherit] font-normal">
             (Sublabel)
           </span>
         </Label>

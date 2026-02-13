@@ -16,8 +16,7 @@ const items = [
     date: "15 minutes ago",
     title: "Hannah Kandell",
     action: "opened a new issue",
-    description:
-      "I'm having trouble with the new component library. It's not rendering properly.",
+    description: "I'm having trouble with the new component library. It's not rendering properly.",
     image: "/avatar-40-01.jpg",
   },
   {
@@ -34,8 +33,7 @@ const items = [
     date: "5 minutes ago",
     title: "Emma Davis",
     action: "assigned you to",
-    description:
-      "The new component library is not rendering properly. Can you take a look?",
+    description: "The new component library is not rendering properly. Can you take a look?",
     image: "/avatar-40-03.jpg",
   },
   {
@@ -70,11 +68,7 @@ const items = [
         <TimelineIndicator
           class="bg-primary/10 group-data-completed/timeline-item:bg-primary group-data-completed/timeline-item:text-primary-foreground flex size-6 items-center justify-center border-none group-data-[orientation=vertical]/timeline:-left-7"
         >
-          <img
-            :src="item.image"
-            :alt="item.title"
-            class="size-6 rounded-full"
-          />
+          <img :src="item.image" :alt="item.title" class="size-6 rounded-full" />
         </TimelineIndicator>
       </TimelineHeader>
       <TimelineContent class="text-foreground mt-2 rounded-lg border px-4 py-3">

@@ -16,9 +16,7 @@ const props = withDefaults(defineProps<MiniCalendarNavigationProps>(), {
 
 const context = injectMiniCalendarContext();
 
-const Icon = computed(() =>
-  props.direction === "prev" ? ChevronLeftIcon : ChevronRightIcon,
-);
+const Icon = computed(() => (props.direction === "prev" ? ChevronLeftIcon : ChevronRightIcon));
 </script>
 
 <template>

@@ -23,9 +23,7 @@ const month = useDateFormat(nativeDate, "MMM");
 const day = useDateFormat(nativeDate, "DD");
 
 const isSelected = computed(() =>
-  context.selectedDate.value
-    ? isSameDay(props.date, context.selectedDate.value)
-    : false,
+  context.selectedDate.value ? isSameDay(props.date, context.selectedDate.value) : false,
 );
 const isTodayDate = isToday(props.date, getLocalTimeZone());
 </script>

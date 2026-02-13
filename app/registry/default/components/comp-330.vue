@@ -77,9 +77,7 @@ const features = [
         </div>
         <DialogHeader>
           <DialogTitle class="text-left">Change your plan</DialogTitle>
-          <DialogDescription class="text-left">
-            Pick one of the following plans.
-          </DialogDescription>
+          <DialogDescription class="text-left">Pick one of the following plans.</DialogDescription>
         </DialogHeader>
       </div>
 
@@ -98,10 +96,7 @@ const features = [
             />
             <div class="grid grow gap-1">
               <Label :htmlFor="`${id}-${plan.id}`">{{ plan.name }}</Label>
-              <p
-                :id="`${id}-${plan.id}-description`"
-                class="text-muted-foreground text-xs"
-              >
+              <p :id="`${id}-${plan.id}-description`" class="text-muted-foreground text-xs">
                 {{ plan.price }}
               </p>
             </div>
@@ -113,15 +108,8 @@ const features = [
             <strong class="text-sm font-medium">Features include:</strong>
           </p>
           <ul class="text-muted-foreground space-y-2 text-sm">
-            <li
-              v-for="feature in features"
-              :key="feature.id"
-              class="flex gap-2"
-            >
-              <LucideCheck
-                class="text-primary mt-0.5 size-4 shrink-0"
-                aria-hidden="true"
-              />
+            <li v-for="feature in features" :key="feature.id" class="flex gap-2">
+              <LucideCheck class="text-primary mt-0.5 size-4 shrink-0" aria-hidden="true" />
               {{ feature.name }}
             </li>
           </ul>

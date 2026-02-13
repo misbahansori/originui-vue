@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/default/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/default/ui/tabs";
 import { LucideBox, LucideHome, LucidePanelsTopLeft } from "lucide-vue-next";
 </script>
 
@@ -22,10 +17,7 @@ import { LucideBox, LucideHome, LucidePanelsTopLeft } from "lucide-vue-next";
         value="tab-2"
         class="data-[state=active]:after:bg-primary relative flex-col rounded-none px-4 py-2 text-xs after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
       >
-        <LucidePanelsTopLeft
-          class="mb-1.5 size-4 opacity-60"
-          aria-hidden="true"
-        />
+        <LucidePanelsTopLeft class="mb-1.5 size-4 opacity-60" aria-hidden="true" />
         Projects
       </TabsTrigger>
       <TabsTrigger
@@ -37,19 +29,13 @@ import { LucideBox, LucideHome, LucidePanelsTopLeft } from "lucide-vue-next";
       </TabsTrigger>
     </TabsList>
     <TabsContent value="tab-1">
-      <p class="text-muted-foreground p-4 text-center text-xs">
-        Content for Tab 1
-      </p>
+      <p class="text-muted-foreground p-4 text-center text-xs">Content for Tab 1</p>
     </TabsContent>
     <TabsContent value="tab-2">
-      <p class="text-muted-foreground p-4 text-center text-xs">
-        Content for Tab 2
-      </p>
+      <p class="text-muted-foreground p-4 text-center text-xs">Content for Tab 2</p>
     </TabsContent>
     <TabsContent value="tab-3">
-      <p class="text-muted-foreground p-4 text-center text-xs">
-        Content for Tab 3
-      </p>
+      <p class="text-muted-foreground p-4 text-center text-xs">Content for Tab 3</p>
     </TabsContent>
   </Tabs>
 </template>

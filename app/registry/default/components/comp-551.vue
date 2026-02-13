@@ -121,12 +121,7 @@ const handleDownload = (url: string | undefined) => {
         <p class="text-muted-foreground text-xs">
           Max {{ maxFiles }} files ∙ Up to {{ formatBytes(maxSize) }}
         </p>
-        <Button
-          size="sm"
-          variant="outline"
-          @click="openFileDialog"
-          class="mt-4"
-        >
+        <Button size="sm" variant="outline" @click="openFileDialog" class="mt-4">
           <LucideFileUp class="-ms-1 opacity-60" aria-hidden="true" />
           Select files
         </Button>
@@ -139,17 +134,11 @@ const handleDownload = (url: string | undefined) => {
         <h3 class="text-sm font-medium">Files ({{ files.length }})</h3>
         <div class="flex gap-2">
           <Button size="sm" variant="outline" @click="openFileDialog">
-            <LucideFileUp
-              class="-ms-0.5 size-3.5 opacity-60"
-              aria-hidden="true"
-            />
+            <LucideFileUp class="-ms-0.5 size-3.5 opacity-60" aria-hidden="true" />
             Add files
           </Button>
           <Button size="sm" variant="outline" @click="clearFiles">
-            <LucideTrash2
-              class="-ms-0.5 size-3.5 opacity-60"
-              aria-hidden="true"
-            />
+            <LucideTrash2 class="-ms-0.5 size-3.5 opacity-60" aria-hidden="true" />
             Remove all
           </Button>
         </div>
@@ -171,10 +160,7 @@ const handleDownload = (url: string | undefined) => {
               <TableCell class="max-w-48 py-2 font-medium">
                 <span class="flex items-center gap-2">
                   <span class="shrink-0">
-                    <component
-                      :is="getFileIcon(file)"
-                      class="size-4 opacity-60"
-                    />
+                    <component :is="getFileIcon(file)" class="size-4 opacity-60" />
                   </span>
                   <span class="truncate">{{ file.file.name }}</span>
                 </span>
@@ -220,11 +206,7 @@ const handleDownload = (url: string | undefined) => {
       <span>{{ errors[0] }}</span>
     </div>
 
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-center text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-center text-xs">
       Multiple files uploader w/ table
     </p>
   </div>

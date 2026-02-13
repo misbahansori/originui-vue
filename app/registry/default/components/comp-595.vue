@@ -6,11 +6,7 @@ import {
   LucideUserRoundPlus,
 } from "lucide-vue-next";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/default/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/default/ui/avatar";
 import { Button } from "@/registry/default/ui/button";
 </script>
 
@@ -19,13 +15,7 @@ import { Button } from "@/registry/default/ui/button";
     <div class="flex h-16 items-center justify-between gap-4">
       <!-- Left side -->
       <div class="flex items-center gap-2">
-        <Button
-          class="size-8"
-          variant="ghost"
-          size="icon"
-          aria-label="Go back"
-          as-child
-        >
+        <Button class="size-8" variant="ghost" size="icon" aria-label="Go back" as-child>
           <a href="#">
             <LucideChevronLeft :size="16" aria-hidden="true" />
           </a>

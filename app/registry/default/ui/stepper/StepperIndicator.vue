@@ -47,11 +47,7 @@ const forwarded = useForwardProps(delegatedProps);
         v-if="isLoading"
         class="absolute opacity-0 transition-all group-data-[state=active]/step:opacity-100 group-data-[state=active]/step:transition-none"
       >
-        <Icon
-          name="lucide:loader-circle"
-          class="size-3.5 animate-spin"
-          aria-hidden="true"
-        />
+        <Icon name="lucide:loader-circle" class="size-3.5 animate-spin" aria-hidden="true" />
       </span>
     </slot>
   </StepperIndicator>

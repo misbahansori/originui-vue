@@ -9,9 +9,7 @@ import {
 import { computed, type HTMLAttributes } from "vue";
 
 const props = withDefaults(
-  defineProps<
-    RangeCalendarCellTriggerProps & { class?: HTMLAttributes["class"] }
-  >(),
+  defineProps<RangeCalendarCellTriggerProps & { class?: HTMLAttributes["class"] }>(),
   {
     as: "button",
   },

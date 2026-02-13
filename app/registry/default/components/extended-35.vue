@@ -30,9 +30,7 @@ const commands = [
 
 const activeTab = ref(commands[0]?.label);
 
-const activeCommand = computed(() =>
-  commands.find((command) => command.label === activeTab.value),
-);
+const activeCommand = computed(() => commands.find((command) => command.label === activeTab.value));
 </script>
 
 <template>
@@ -50,19 +48,11 @@ const activeCommand = computed(() =>
         </SnippetTabsList>
         <SnippetCopyButton :value="activeCommand?.code || ''" />
       </SnippetHeader>
-      <SnippetTabsContent
-        v-for="command in commands"
-        :key="command.label"
-        :value="command.label"
-      >
+      <SnippetTabsContent v-for="command in commands" :key="command.label" :value="command.label">
         <pre class="truncate p-4">{{ command.code }}</pre>
       </SnippetTabsContent>
     </Snippet>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Based on Kibo Snippet component
       <a
         class="hover:text-foreground underline"

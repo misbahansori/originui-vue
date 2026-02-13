@@ -30,12 +30,7 @@ watchEffect(() => {
   <div class="*:not-first:mt-2">
     <Label :for="id">Search input with loader</Label>
     <InputGroup>
-      <InputGroupInput
-        :id="id"
-        placeholder="Search..."
-        type="search"
-        v-model="inputValue"
-      />
+      <InputGroupInput :id="id" placeholder="Search..." type="search" v-model="inputValue" />
       <InputGroupAddon>
         <LucideLoaderCircle
           v-if="isLoading"
@@ -47,11 +42,7 @@ watchEffect(() => {
         <LucideSearch v-else :size="16" aria-hidden="true" />
       </InputGroupAddon>
       <InputGroupAddon align="inline-end">
-        <InputGroupButton
-          size="icon-xs"
-          aria-label="Press to speak"
-          type="submit"
-        >
+        <InputGroupButton size="icon-xs" aria-label="Press to speak" type="submit">
           <LucideMic :size="16" aria-hidden="true" />
         </InputGroupButton>
       </InputGroupAddon>

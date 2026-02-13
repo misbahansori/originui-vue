@@ -5,9 +5,7 @@ import type { AvatarFallbackProps } from "reka-ui";
 import { AvatarFallback } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 
-const props = defineProps<
-  AvatarFallbackProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<AvatarFallbackProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = reactiveOmit(props, "class");
 </script>
@@ -17,10 +15,7 @@ const delegatedProps = reactiveOmit(props, "class");
     data-slot="avatar-fallback"
     v-bind="delegatedProps"
     :class="
-      cn(
-        'bg-muted flex size-full items-center justify-center rounded-full text-xs',
-        props.class,
-      )
+      cn('bg-muted flex size-full items-center justify-center rounded-full text-xs', props.class)
     "
   >
     <slot />

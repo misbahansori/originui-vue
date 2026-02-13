@@ -77,20 +77,13 @@ const getFileIcon = (file: { file: File | { type: string; name: string } }) => {
 const maxSize = 10 * 1024 * 1024; // 10MB default
 const maxFiles = 10;
 
-const {
-  files,
-  errors,
-  openFileDialog,
-  removeFile,
-  clearFiles,
-  dropzoneRef,
-  inputRef,
-} = useFileUpload({
-  multiple: true,
-  maxFiles,
-  maxSize,
-  initialFiles,
-});
+const { files, errors, openFileDialog, removeFile, clearFiles, dropzoneRef, inputRef } =
+  useFileUpload({
+    multiple: true,
+    maxFiles,
+    maxSize,
+    initialFiles,
+  });
 </script>
 
 <template>
@@ -105,14 +98,9 @@ const {
 
       <div v-if="files.length > 0" class="flex w-full flex-col gap-3">
         <div class="flex items-center justify-between gap-2">
-          <h3 class="truncate text-sm font-medium">
-            Uploaded Files ({{ files.length }})
-          </h3>
+          <h3 class="truncate text-sm font-medium">Uploaded Files ({{ files.length }})</h3>
           <Button size="sm" variant="outline" @click="clearFiles">
-            <LucideTrash2
-              class="-ms-0.5 size-3.5 opacity-60"
-              aria-hidden="true"
-            />
+            <LucideTrash2 class="-ms-0.5 size-3.5 opacity-60" aria-hidden="true" />
             Remove all
           </Button>
         </div>
@@ -172,12 +160,7 @@ const {
         <p class="text-muted-foreground text-xs">
           Max {{ maxFiles }} files ∙ Up to {{ formatBytes(maxSize) }}
         </p>
-        <Button
-          size="sm"
-          variant="outline"
-          @click="openFileDialog"
-          class="mt-4"
-        >
+        <Button size="sm" variant="outline" @click="openFileDialog" class="mt-4">
           <LucideFileUp class="-ms-1 opacity-60" aria-hidden="true" />
           Select files
         </Button>
@@ -193,11 +176,7 @@ const {
       <span>{{ errors[0] }}</span>
     </div>
 
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-center text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-center text-xs">
       Multiple files uploader w/ list inside
     </p>
   </div>

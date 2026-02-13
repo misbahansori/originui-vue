@@ -12,38 +12,24 @@ import {
   CalendarNextButton,
   CalendarPrevButton,
 } from "@/registry/default/ui/calendar";
-import {
-  CalendarDateTime,
-  getLocalTimeZone,
-  today,
-  type DateValue,
-} from "@internationalized/date";
+import { CalendarDateTime, getLocalTimeZone, today, type DateValue } from "@internationalized/date";
 import { LucideClock } from "lucide-vue-next";
 import { CalendarRoot } from "reka-ui";
 
 const todayDate = today(getLocalTimeZone());
 
 const modelValue = ref(
-  new CalendarDateTime(
-    todayDate.year,
-    todayDate.month,
-    todayDate.day,
-    12,
-    0,
-    0,
-  ),
+  new CalendarDateTime(todayDate.year, todayDate.month, todayDate.day, 12, 0, 0),
 ) as Ref<DateValue>;
 
 const inputValue = computed({
   get: () => {
-    return modelValue.value
-      .toDate(getLocalTimeZone())
-      .toLocaleTimeString("en-US", {
-        hour12: false,
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-      });
+    return modelValue.value.toDate(getLocalTimeZone()).toLocaleTimeString("en-US", {
+      hour12: false,
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
   },
   set: (value: string) => {
     const [hours, minutes, seconds] = value.split(":").map(Number);
@@ -75,9 +61,7 @@ const inputValue = computed({
             <CalendarNextButton class="absolute right-1" />
           </div>
         </CalendarHeader>
-        <div
-          class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0"
-        >
+        <div class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">
           <CalendarGrid v-for="month in grid" :key="month.value.toString()">
             <CalendarGridHead>
               <CalendarGridRow>

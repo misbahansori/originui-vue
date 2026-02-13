@@ -10,11 +10,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "textarea",
-      "button"
-    ]
+    "tags": ["label", "textarea", "button"]
   },
   "dependencies": [],
   "registryDependencies": [

@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
-import {
-  ButtonGroup,
-  ButtonGroupSeparator,
-} from "@/registry/default/ui/button-group";
+import { ButtonGroup, ButtonGroupSeparator } from "@/registry/default/ui/button-group";
 import { LucideQrCode } from "lucide-vue-next";
 </script>
 

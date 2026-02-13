@@ -10,16 +10,8 @@
     }
   ],
   "meta": {
-    "tags": [
-      "radio",
-      "label",
-      "color",
-      "picker",
-      "radix"
-    ]
+    "tags": ["radio", "label", "color", "picker", "radix"]
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/radio-group.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/radio-group.json"]
 }

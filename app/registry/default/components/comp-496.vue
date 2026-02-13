@@ -12,11 +12,7 @@ import {
   CalendarNextButton,
   CalendarPrevButton,
 } from "@/registry/default/ui/calendar";
-import {
-  getLocalTimeZone,
-  today,
-  type DateValue,
-} from "@internationalized/date";
+import { getLocalTimeZone, today, type DateValue } from "@internationalized/date";
 import { CalendarRoot } from "reka-ui";
 
 const todayDate = today(getLocalTimeZone());

@@ -10,16 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "button",
-      "password"
-    ]
+    "tags": ["input", "label", "button", "password"]
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/input-group.json",
     "https://www.originui-vue.com/r/label.json"

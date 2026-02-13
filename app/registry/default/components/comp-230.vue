@@ -11,11 +11,7 @@ import {
   CommandSeparator,
 } from "@/registry/default/ui/command";
 import { Label } from "@/registry/default/ui/label";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import { LucideCheck, LucideChevronDown, LucidePlus } from "lucide-vue-next";
 import { computed, ref, useId } from "vue";
 
@@ -35,9 +31,7 @@ const organizations = [
 ];
 
 const selectedOrganization = computed(() => {
-  return organizations.find(
-    (organization) => organization.value === value.value,
-  )?.label;
+  return organizations.find((organization) => organization.value === value.value)?.label;
 });
 
 function handleSelect(currentValue: string) {
@@ -84,21 +78,13 @@ function handleSelect(currentValue: string) {
                 @select="handleSelect(organization.value)"
               >
                 {{ organization.label }}
-                <LucideCheck
-                  v-if="value === organization.value"
-                  :size="16"
-                  class="ml-auto"
-                />
+                <LucideCheck v-if="value === organization.value" :size="16" class="ml-auto" />
               </CommandItem>
             </CommandGroup>
             <CommandSeparator />
             <CommandGroup>
               <Button variant="ghost" class="w-full justify-start font-normal">
-                <LucidePlus
-                  :size="16"
-                  class="-ms-2 opacity-60"
-                  aria-hidden="true"
-                />
+                <LucidePlus :size="16" class="-ms-2 opacity-60" aria-hidden="true" />
                 New organization
               </Button>
             </CommandGroup>

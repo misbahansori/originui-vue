@@ -9,9 +9,7 @@ const checked = ref(true);
 
 <template>
   <div>
-    <div
-      class="relative inline-grid h-9 grid-cols-[1fr_1fr] items-center text-sm font-medium"
-    >
+    <div class="relative inline-grid h-9 grid-cols-[1fr_1fr] items-center text-sm font-medium">
       <Switch
         :id="id"
         v-model="checked"

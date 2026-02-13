@@ -10,11 +10,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "error"
-    ]
+    "tags": ["input", "label", "error"]
   },
   "dependencies": [],
   "registryDependencies": [

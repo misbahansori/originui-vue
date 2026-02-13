@@ -4,12 +4,7 @@ import { Checkbox } from "@/registry/default/ui/checkbox";
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
 import { RiGithubFill, RiGoogleFill } from "@remixicon/vue";
-import {
-  LucideAtSign,
-  LucideEye,
-  LucideEyeOff,
-  LucideLockKeyhole,
-} from "lucide-vue-next";
+import { LucideAtSign, LucideEye, LucideEyeOff, LucideLockKeyhole } from "lucide-vue-next";
 
 const id = useId();
 const isVisible = ref(false);
@@ -21,9 +16,7 @@ const toggleVisibility = () => {
 
 <template>
   <div class="flex items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
-    <div
-      class="flex w-full max-w-md flex-col gap-4 rounded-lg border p-8 shadow-md"
-    >
+    <div class="flex w-full max-w-md flex-col gap-4 rounded-lg border p-8 shadow-md">
       <div class="flex flex-col items-center gap-2 pb-2">
         <div
           class="flex size-11 shrink-0 items-center justify-center rounded-full border"
@@ -41,9 +34,7 @@ const toggleVisibility = () => {
           </svg>
         </div>
         <div class="flex flex-col gap-y-1.5 text-center sm:text-left">
-          <h1
-            class="text-lg leading-none font-semibold tracking-tight sm:text-center"
-          >
+          <h1 class="text-lg leading-none font-semibold tracking-tight sm:text-center">
             Welcome back
           </h1>
           <p class="text-muted-foreground text-center text-sm">
@@ -100,23 +91,16 @@ const toggleVisibility = () => {
         <div class="flex justify-between gap-2">
           <div class="flex items-center gap-2">
             <Checkbox :id="`${id}-remember`" />
-            <Label :for="`${id}-remember`" class="font-normal">
-              Remember me
-            </Label>
+            <Label :for="`${id}-remember`" class="font-normal">Remember me</Label>
           </div>
-          <a
-            class="text-sm font-medium hover:underline"
-            href="/forgot-password"
-          >
+          <a class="text-sm font-medium hover:underline" href="/forgot-password">
             Forgot password?
           </a>
         </div>
         <Button type="submit" class="w-full">Sign in</Button>
         <p class="text-muted-foreground text-sm">
           Don't have an account?
-          <a href="/register" class="text-primary font-medium hover:underline">
-            Register
-          </a>
+          <a href="/register" class="text-primary font-medium hover:underline">Register</a>
         </p>
       </form>
       <div

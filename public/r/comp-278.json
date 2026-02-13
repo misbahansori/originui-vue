@@ -10,16 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "alert",
-      "error",
-      "signup",
-      "authentication"
-    ],
+    "tags": ["alert", "error", "signup", "authentication"],
     "colSpan": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": []
 }

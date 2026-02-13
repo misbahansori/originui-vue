@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
 import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
 } from "@/registry/default/ui/select";
 import { useId } from "vue";
 

@@ -29,9 +29,6 @@
       "type": "registry:ui"
     }
   ],
-  "dependencies": [
-    "@vueuse/core",
-    "reka-ui"
-  ],
+  "dependencies": ["@vueuse/core", "reka-ui"],
   "registryDependencies": []
 }

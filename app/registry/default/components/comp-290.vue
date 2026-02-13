@@ -8,18 +8,12 @@ import { LucideCircleAlert, LucideX } from "lucide-vue-next";
   <div class="bg-background z-50 max-w-[400px] rounded-md border p-4 shadow-lg">
     <div class="flex gap-2">
       <div class="flex grow gap-3">
-        <LucideCircleAlert
-          class="mt-0.5 size-4 shrink-0 text-red-500"
-          aria-hidden="true"
-        />
+        <LucideCircleAlert class="mt-0.5 size-4 shrink-0 text-red-500" aria-hidden="true" />
         <div class="flex grow flex-col gap-3">
           <div class="space-y-1">
-            <p class="text-sm font-medium">
-              We couldn't complete your request!
-            </p>
+            <p class="text-sm font-medium">We couldn't complete your request!</p>
             <p class="text-muted-foreground text-sm">
-              It indicates that an issue has prevented the processing of the
-              request.
+              It indicates that an issue has prevented the processing of the request.
             </p>
           </div>
           <div class="flex gap-2">

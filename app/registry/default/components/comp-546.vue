@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { useFileUpload } from "@/composables/useFileUpload";
 import { Button } from "@/registry/default/ui/button";
-import {
-  LucideAlertCircle,
-  LucideImage,
-  LucideUpload,
-  LucideX,
-} from "lucide-vue-next";
+import { LucideAlertCircle, LucideImage, LucideUpload, LucideX } from "lucide-vue-next";
 
 // Create a dummy image file
 const initialFiles = [
@@ -44,14 +39,13 @@ const maxSizeMB = 5;
 const maxSize = maxSizeMB * 1024 * 1024; // 5MB default
 const maxFiles = 6;
 
-const { files, errors, openFileDialog, removeFile, dropzoneRef, inputRef } =
-  useFileUpload({
-    accept: "image/svg+xml,image/png,image/jpeg,image/jpg,image/gif",
-    maxSize,
-    multiple: true,
-    maxFiles,
-    initialFiles,
-  });
+const { files, errors, openFileDialog, removeFile, dropzoneRef, inputRef } = useFileUpload({
+  accept: "image/svg+xml,image/png,image/jpeg,image/jpg,image/gif",
+  maxSize,
+  multiple: true,
+  maxFiles,
+  initialFiles,
+});
 </script>
 
 <template>
@@ -65,18 +59,9 @@ const { files, errors, openFileDialog, removeFile, dropzoneRef, inputRef } =
       <input ref="inputRef" aria-label="Upload image file" />
       <div v-if="files.length > 0" class="flex w-full flex-col gap-3">
         <div class="flex items-center justify-between gap-2">
-          <h3 class="truncate text-sm font-medium">
-            Uploaded Files ({{ files.length }})
-          </h3>
-          <Button
-            variant="outline"
-            @click="openFileDialog"
-            :disabled="files.length >= maxFiles"
-          >
-            <LucideUpload
-              class="-ms-0.5 size-3.5 opacity-60"
-              aria-hidden="true"
-            />
+          <h3 class="truncate text-sm font-medium">Uploaded Files ({{ files.length }})</h3>
+          <Button variant="outline" @click="openFileDialog" :disabled="files.length >= maxFiles">
+            <LucideUpload class="-ms-0.5 size-3.5 opacity-60" aria-hidden="true" />
             Add more
           </Button>
         </div>
@@ -103,10 +88,7 @@ const { files, errors, openFileDialog, removeFile, dropzoneRef, inputRef } =
           </div>
         </div>
       </div>
-      <div
-        v-else
-        class="flex flex-col items-center justify-center px-4 py-3 text-center"
-      >
+      <div v-else class="flex flex-col items-center justify-center px-4 py-3 text-center">
         <div
           class="bg-background mb-2 flex size-11 shrink-0 items-center justify-center rounded-full border"
           aria-hidden="true"
@@ -114,9 +96,7 @@ const { files, errors, openFileDialog, removeFile, dropzoneRef, inputRef } =
           <LucideImage class="size-4 opacity-60" />
         </div>
         <p class="mb-1.5 text-sm font-medium">Drop your images here</p>
-        <p class="text-muted-foreground text-xs">
-          SVG, PNG, JPG or GIF (max. {{ maxSizeMB }}MB)
-        </p>
+        <p class="text-muted-foreground text-xs">SVG, PNG, JPG or GIF (max. {{ maxSizeMB }}MB)</p>
         <Button variant="outline" class="mt-4" @click="openFileDialog">
           <LucideUpload class="-ms-1 size-4 opacity-60" aria-hidden="true" />
           Select images
@@ -133,11 +113,7 @@ const { files, errors, openFileDialog, removeFile, dropzoneRef, inputRef } =
       <span>{{ errors[0] }}</span>
     </div>
 
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-center text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-center text-xs">
       Multiple image uploader w/ image grid
     </p>
   </div>

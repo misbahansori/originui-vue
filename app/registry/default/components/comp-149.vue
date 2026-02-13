@@ -31,9 +31,7 @@ const checkedDays = ref<Record<string, boolean>>({
 
 <template>
   <fieldset class="space-y-4">
-    <legend class="text-foreground text-sm leading-none font-medium">
-      Days of the week
-    </legend>
+    <legend class="text-foreground text-sm leading-none font-medium">Days of the week</legend>
     <div class="flex gap-1.5">
       <label
         v-for="item in items"

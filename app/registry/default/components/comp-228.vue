@@ -64,11 +64,7 @@ const selectedOption = ref(options[0]);
       <SelectContent
         class="[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2"
       >
-        <SelectItem
-          v-for="option in options"
-          :key="option.value"
-          :value="option"
-        >
+        <SelectItem v-for="option in options" :key="option.value" :value="option">
           <span class="flex items-center gap-2">
             <img
               class="rounded-full"

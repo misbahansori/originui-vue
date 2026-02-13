@@ -8,12 +8,9 @@ import {
 } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
-const props = withDefaults(
-  defineProps<PinInputRootProps & { class?: HTMLAttributes["class"] }>(),
-  {
-    modelValue: () => [],
-  },
-);
+const props = withDefaults(defineProps<PinInputRootProps & { class?: HTMLAttributes["class"] }>(), {
+  modelValue: () => [],
+});
 const emits = defineEmits<PinInputRootEmits>();
 
 const delegatedProps = computed(() => {

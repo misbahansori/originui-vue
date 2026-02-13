@@ -9,9 +9,6 @@
       "type": "registry:lib"
     }
   ],
-  "dependencies": [
-    "clsx",
-    "tailwind-merge"
-  ],
+  "dependencies": ["clsx", "tailwind-merge"],
   "registryDependencies": []
 }

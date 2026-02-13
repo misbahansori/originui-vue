@@ -10,18 +10,10 @@
     }
   ],
   "meta": {
-    "tags": [
-      "dropdown",
-      "user",
-      "profile",
-      "avatar",
-      "radix"
-    ],
+    "tags": ["dropdown", "user", "profile", "avatar", "radix"],
     "style": 1
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/dropdown-menu.json"

@@ -21,8 +21,7 @@ const items = [
     id: 1,
     date: "15 minutes ago",
     title: "Forked Repository",
-    description:
-      "Forked the repository to create a new branch for development.",
+    description: "Forked the repository to create a new branch for development.",
     icon: LucideGitFork,
   },
   {
@@ -44,8 +43,7 @@ const items = [
   {
     id: 4,
     title: "Merged Branch",
-    description:
-      "Merged the feature branch into the main branch. Ready for deployment.",
+    description: "Merged the feature branch into the main branch. Ready for deployment.",
     icon: LucideGitMerge,
   },
 ];

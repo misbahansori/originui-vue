@@ -5,9 +5,7 @@ import type { AccordionContentProps } from "reka-ui";
 import { AccordionContent } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 
-const props = defineProps<
-  AccordionContentProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<AccordionContentProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = reactiveOmit(props, "class");
 </script>

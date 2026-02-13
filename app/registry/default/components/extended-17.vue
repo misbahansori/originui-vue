@@ -7,10 +7,7 @@ import { LucideMail, LucideStar, LucideVerified } from "lucide-vue-next";
 <template>
   <Card class="rounded-4xl py-4">
     <CardContent class="flex flex-col gap-4 px-4">
-      <img
-        src="/img/card-avatar.jpg"
-        class="aspect-square w-full rounded-2xl object-cover"
-      />
+      <img src="/img/card-avatar.jpg" class="aspect-square w-full rounded-2xl object-cover" />
       <div class="flex flex-col gap-2">
         <div class="flex items-center gap-2">
           <p class="text-lg/none font-semibold">Marcus Wilson</p>
@@ -26,24 +23,14 @@ import { LucideMail, LucideStar, LucideVerified } from "lucide-vue-next";
             <LucideStar class="size-5 text-yellow-500" />
             <p class="text-base/none font-semibold">4.8</p>
           </div>
-          <span class="text-foreground/70 text-xs/none font-medium">
-            Rating
-          </span>
+          <span class="text-foreground/70 text-xs/none font-medium">Rating</span>
         </div>
-        <Separator
-          orientation="vertical"
-          class="data-[orientation=vertical]:h-8"
-        />
+        <Separator orientation="vertical" class="data-[orientation=vertical]:h-8" />
         <div class="flex flex-col items-center gap-1 text-center">
           <p class="text-base/none font-semibold">$42K+</p>
-          <span class="text-foreground/70 text-xs/none font-medium">
-            Earned
-          </span>
+          <span class="text-foreground/70 text-xs/none font-medium">Earned</span>
         </div>
-        <Separator
-          orientation="vertical"
-          class="data-[orientation=vertical]:h-8"
-        />
+        <Separator orientation="vertical" class="data-[orientation=vertical]:h-8" />
         <div class="flex flex-col items-center gap-1 text-center">
           <p class="text-base/none font-semibold">$45/hr</p>
           <span class="text-foreground/70 text-xs/none font-medium">Rate</span>

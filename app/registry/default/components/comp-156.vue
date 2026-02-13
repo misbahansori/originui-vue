@@ -31,10 +31,7 @@ watch(selectedValue, (newValue) => {
         <div class="grow">
           <div class="grid grow gap-2">
             <Label :for="`${radioId}-1`">Radio with expansion</Label>
-            <p
-              :id="`${radioId}-1-description`"
-              class="text-muted-foreground text-xs"
-            >
+            <p :id="`${radioId}-1-description`" class="text-muted-foreground text-xs">
               You can use this radio with a label and a description.
             </p>
           </div>
@@ -44,9 +41,7 @@ watch(selectedValue, (newValue) => {
             :id="inputId"
             :aria-labelledby="`${radioId}-1`"
             class="grid transition-all ease-in-out data-[state=collapsed]:grid-rows-[0fr] data-[state=collapsed]:opacity-0 data-[state=expanded]:grid-rows-[1fr] data-[state=expanded]:opacity-100"
-            :data-state="
-              selectedValue === 'with-expansion' ? 'expanded' : 'collapsed'
-            "
+            :data-state="selectedValue === 'with-expansion' ? 'expanded' : 'collapsed'"
           >
             <div class="pointer-events-none -m-2 overflow-hidden p-2">
               <div class="pointer-events-auto mt-3">
@@ -73,10 +68,7 @@ watch(selectedValue, (newValue) => {
       />
       <div class="grid grow gap-2">
         <Label :for="`${radioId}-2`">Radio without expansion</Label>
-        <p
-          :id="`${radioId}-2-description`"
-          class="text-muted-foreground text-xs"
-        >
+        <p :id="`${radioId}-2-description`" class="text-muted-foreground text-xs">
           You can use this checkbox with a label and a description.
         </p>
       </div>

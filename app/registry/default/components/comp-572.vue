@@ -23,11 +23,7 @@ const items: Item[] = [
         children: [
           {
             name: "Design System",
-            children: [
-              { name: "Components" },
-              { name: "Tokens" },
-              { name: "Guidelines" },
-            ],
+            children: [{ name: "Components" }, { name: "Tokens" }, { name: "Guidelines" }],
           },
           { name: "Web Platform" },
         ],
@@ -89,9 +85,7 @@ const filteredItems = computed(() => {
   const filterItems = (items: Item[]): Item[] => {
     return items.reduce((acc: Item[], item) => {
       const matches = matchesSearch(item);
-      const filteredChildren = item.children
-        ? filterItems(item.children)
-        : undefined;
+      const filteredChildren = item.children ? filterItems(item.children) : undefined;
 
       if (matches || (filteredChildren && filteredChildren.length > 0)) {
         acc.push({
@@ -153,15 +147,9 @@ const filteredItems = computed(() => {
                   v-if="isExpanded"
                   class="text-muted-foreground pointer-events-none size-4"
                 />
-                <LucideFolder
-                  v-else
-                  class="text-muted-foreground pointer-events-none size-4"
-                />
+                <LucideFolder v-else class="text-muted-foreground pointer-events-none size-4" />
               </template>
-              <LucideFile
-                v-else
-                class="text-muted-foreground pointer-events-none size-4"
-              />
+              <LucideFile v-else class="text-muted-foreground pointer-events-none size-4" />
               <span>
                 {{ item.value.name }}
               </span>
@@ -170,11 +158,7 @@ const filteredItems = computed(() => {
         </TreeItem>
       </Tree>
     </div>
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-xs">
       Tree with search and filter ∙
       <a
         href="https://reka-ui.com/docs/components/tree"

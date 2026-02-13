@@ -5,9 +5,7 @@ import { LucideTriangleAlert, LucideX } from "lucide-vue-next";
 
 <template>
   <!-- To make the notification fixed, add classes like `fixed bottom-4 right-4` to the container element. -->
-  <div
-    class="bg-background z-50 max-w-[400px] rounded-md border px-4 py-3 shadow-lg"
-  >
+  <div class="bg-background z-50 max-w-[400px] rounded-md border px-4 py-3 shadow-lg">
     <div class="flex gap-2">
       <p class="grow text-sm">
         <LucideTriangleAlert

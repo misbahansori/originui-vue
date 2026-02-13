@@ -9,11 +9,7 @@ import {
   CommandList,
 } from "@/registry/default/ui/command";
 import { Label } from "@/registry/default/ui/label";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import {
   LucideBrain,
   LucideChevronDown,
@@ -123,16 +119,10 @@ function getSelectedItemIcon() {
           class="bg-background hover:bg-background border-input w-full justify-between px-3 font-normal outline-offset-0 outline-none focus-visible:outline-[3px]"
         >
           <span v-if="value" class="flex min-w-0 items-center gap-2">
-            <component
-              :is="getSelectedItemIcon()"
-              :size="16"
-              class="text-muted-foreground"
-            />
+            <component :is="getSelectedItemIcon()" :size="16" class="text-muted-foreground" />
             <span class="truncate">{{ getSelectedItem()?.label }}</span>
           </span>
-          <span v-else class="text-muted-foreground">
-            Select service category
-          </span>
+          <span v-else class="text-muted-foreground">Select service category</span>
           <LucideChevronDown
             :size="16"
             class="text-muted-foreground/80 shrink-0"
@@ -157,11 +147,7 @@ function getSelectedItemIcon() {
                 class="flex items-center justify-between"
               >
                 <div class="flex items-center gap-2">
-                  <component
-                    :is="item.icon"
-                    :size="16"
-                    class="text-muted-foreground"
-                  />
+                  <component :is="item.icon" :size="16" class="text-muted-foreground" />
                   {{ item.label }}
                 </div>
                 <span class="text-muted-foreground text-xs">

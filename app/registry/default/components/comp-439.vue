@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { Badge } from "@/registry/default/ui/badge";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/default/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/default/ui/tabs";
 </script>
 
 <template>
@@ -46,19 +41,13 @@ import {
       </TabsTrigger>
     </TabsList>
     <TabsContent value="tab-1">
-      <p class="text-muted-foreground p-4 text-center text-xs">
-        Content for Tab 1
-      </p>
+      <p class="text-muted-foreground p-4 text-center text-xs">Content for Tab 1</p>
     </TabsContent>
     <TabsContent value="tab-2">
-      <p class="text-muted-foreground p-4 text-center text-xs">
-        Content for Tab 2
-      </p>
+      <p class="text-muted-foreground p-4 text-center text-xs">Content for Tab 2</p>
     </TabsContent>
     <TabsContent value="tab-3">
-      <p class="text-muted-foreground p-4 text-center text-xs">
-        Content for Tab 3
-      </p>
+      <p class="text-muted-foreground p-4 text-center text-xs">Content for Tab 3</p>
     </TabsContent>
   </Tabs>
 </template>

@@ -35,8 +35,7 @@ import {
       </EmptyMedia>
       <EmptyTitle class="font-semibold">No data found</EmptyTitle>
       <EmptyDescription>
-        It looks like there's no data in this page. You can create a new one or
-        refresh the page.
+        It looks like there's no data in this page. You can create a new one or refresh the page.
       </EmptyDescription>
     </EmptyHeader>
     <EmptyContent>

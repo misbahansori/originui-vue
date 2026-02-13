@@ -7,9 +7,7 @@ import { RiGithubFill, RiGoogleFill } from "@remixicon/vue";
 
 <template>
   <div class="flex items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
-    <div
-      class="flex w-full max-w-md flex-col gap-4 rounded-lg border p-8 shadow-md"
-    >
+    <div class="flex w-full max-w-md flex-col gap-4 rounded-lg border p-8 shadow-md">
       <div class="flex flex-col items-center gap-2 pb-2">
         <div
           class="flex size-11 shrink-0 items-center justify-center rounded-full border"
@@ -27,9 +25,7 @@ import { RiGithubFill, RiGoogleFill } from "@remixicon/vue";
           </svg>
         </div>
         <div class="flex flex-col gap-y-1.5 text-center sm:text-left">
-          <h1
-            class="text-lg leading-none font-semibold tracking-tight sm:text-center"
-          >
+          <h1 class="text-lg leading-none font-semibold tracking-tight sm:text-center">
             Create an account
           </h1>
           <p class="text-muted-foreground text-center text-sm">
@@ -44,21 +40,11 @@ import { RiGithubFill, RiGoogleFill } from "@remixicon/vue";
         </div>
         <div class="flex flex-col gap-2">
           <Label for="email">Email</Label>
-          <Input
-            id="email"
-            placeholder="Enter your email"
-            type="email"
-            required
-          />
+          <Input id="email" placeholder="Enter your email" type="email" required />
         </div>
         <div class="flex flex-col gap-2">
           <Label for="password">Password</Label>
-          <Input
-            id="password"
-            placeholder="Enter your password"
-            type="password"
-            required
-          />
+          <Input id="password" placeholder="Enter your password" type="password" required />
         </div>
         <div class="flex flex-col gap-2">
           <Label for="passwordConfirmation">Password Confirmation</Label>
@@ -72,9 +58,7 @@ import { RiGithubFill, RiGoogleFill } from "@remixicon/vue";
         <Button type="submit" class="w-full">Create account</Button>
         <p class="text-muted-foreground text-sm">
           Already have an account?
-          <a href="/login" class="text-primary font-medium hover:underline">
-            Login
-          </a>
+          <a href="/login" class="text-primary font-medium hover:underline">Login</a>
         </p>
       </form>
       <div

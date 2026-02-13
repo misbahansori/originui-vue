@@ -89,11 +89,7 @@ const selectedOption = ref<Country | undefined>(options[0]?.items[0]);
       >
         <SelectGroup v-for="continent in options" :key="continent.continent">
           <SelectLabel class="ps-2">{{ continent.continent }}</SelectLabel>
-          <SelectItem
-            v-for="country in continent.items"
-            :key="country.value"
-            :value="country"
-          >
+          <SelectItem v-for="country in continent.items" :key="country.value" :value="country">
             <span class="text-lg leading-none">{{ country.flag }}</span>
             <span class="truncate">{{ country.label }}</span>
           </SelectItem>

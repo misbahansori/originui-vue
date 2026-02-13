@@ -44,9 +44,6 @@
       "type": "registry:ui"
     }
   ],
-  "dependencies": [
-    "reka-ui",
-    "vaul-vue"
-  ],
+  "dependencies": ["reka-ui", "vaul-vue"],
   "registryDependencies": []
 }

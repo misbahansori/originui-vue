@@ -40,22 +40,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "snippet",
-      "extended",
-      "code",
-      "copy",
-      "tabs",
-      "command"
-    ],
+    "tags": ["snippet", "extended", "code", "copy", "tabs", "command"],
     "colSpan": 2
   },
-  "dependencies": [
-    "@vueuse/core",
-    "reka-ui",
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/button.json"
-  ]
+  "dependencies": ["@vueuse/core", "reka-ui", "lucide-vue-next"],
+  "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
 }

@@ -10,12 +10,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "search",
-      "kbd"
-    ]
+    "tags": ["input", "label", "search", "kbd"]
   },
   "dependencies": [],
   "registryDependencies": [

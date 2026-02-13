@@ -13,11 +13,7 @@ const value = ref({
 
 <template>
   <div>
-    <RangeCalendar
-      v-model="value"
-      class="rounded-md border"
-      :numberOfMonths="2"
-    />
+    <RangeCalendar v-model="value" class="rounded-md border" :numberOfMonths="2" />
     <p class="text-muted-foreground mt-4 text-center text-xs">
       Two months calendar -
       <a

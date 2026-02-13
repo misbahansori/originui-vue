@@ -17,9 +17,7 @@ if (!category) {
   });
 }
 
-const components = getComponentsByNames(
-  category.components.map((item) => item.name),
-);
+const components = getComponentsByNames(category.components.map((item) => item.name));
 
 useSeoMeta({
   title: `${category.name} components built with Vue and Tailwind CSS - Origin UI`,
@@ -39,17 +37,12 @@ useSeoMeta({
 <template>
   <div>
     <PageHeader :title="category.name">
-      A growing collection of {{ components.length }}
-      {{ category.name.toLowerCase() }} components built with Vue and Tailwind
-      CSS.
+      A growing collection of {{ components.length }} {{ category.name.toLowerCase() }} components
+      built with Vue and Tailwind CSS.
     </PageHeader>
 
     <PageGrid>
-      <ComponentCard
-        v-for="component in components"
-        :key="component.name"
-        :component="component"
-      >
+      <ComponentCard v-for="component in components" :key="component.name" :component="component">
         <Suspense>
           <template #default>
             <ComponentLoader :component="component" />

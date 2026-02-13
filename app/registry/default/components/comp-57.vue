@@ -43,11 +43,7 @@ const tags = ref<string[]>(["red", "green"]);
         type="text"
       />
     </TagsInputRoot>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Built with reka-ui
       <a
         class="hover:text-foreground underline"

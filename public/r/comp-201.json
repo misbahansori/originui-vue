@@ -10,14 +10,8 @@
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "select",
-      "native select"
-    ]
+    "tags": ["label", "select", "native select"]
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/select-native.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/select-native.json"]
 }

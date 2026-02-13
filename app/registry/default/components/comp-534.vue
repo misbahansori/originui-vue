@@ -30,8 +30,7 @@ const items = [
     id: 3,
     date: "Apr 5, 2024",
     title: "Development Sprint",
-    description:
-      "Backend API implementation and frontend component development in progress.",
+    description: "Backend API implementation and frontend component development in progress.",
   },
   {
     id: 4,
@@ -60,10 +59,7 @@ const items = [
         <TimelineIndicator
           class="group-data-completed/timeline-item:bg-primary group-data-completed/timeline-item:text-primary-foreground flex size-6 items-center justify-center group-data-completed/timeline-item:border-none group-data-[orientation=vertical]/timeline:-left-7"
         >
-          <LucideCheck
-            :size="16"
-            class="group-not-data-completed/timeline-item:hidden"
-          />
+          <LucideCheck :size="16" class="group-not-data-completed/timeline-item:hidden" />
         </TimelineIndicator>
       </TimelineHeader>
       <TimelineContent>{{ item.description }}</TimelineContent>

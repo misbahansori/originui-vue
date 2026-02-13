@@ -27,12 +27,7 @@ const currentStep = ref(2);
         <LucideChevronLeft :size="16" aria-hidden="true" />
       </Button>
       <Stepper v-model="currentStep" class="gap-1">
-        <StepperItem
-          v-for="step in steps"
-          :key="step"
-          :step="step"
-          class="flex-1"
-        >
+        <StepperItem v-for="step in steps" :key="step" :step="step" class="flex-1">
           <StepperTrigger class="w-full flex-col items-start gap-2" as-child>
             <StepperIndicator class="bg-border h-1 w-full">
               <span class="sr-only">{{ step }}</span>
@@ -51,11 +46,7 @@ const currentStep = ref(2);
         <LucideChevronRight :size="16" aria-hidden="true" />
       </Button>
     </div>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Paginated stepper
     </p>
   </div>

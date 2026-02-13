@@ -17,9 +17,7 @@ const items = [
 
 <template>
   <fieldset class="space-y-4">
-    <legend class="text-foreground text-sm leading-none font-medium">
-      CPU Cores
-    </legend>
+    <legend class="text-foreground text-sm leading-none font-medium">CPU Cores</legend>
     <RadioGroup class="grid grid-cols-3 gap-2" v-model="selectedValue">
       <label
         v-for="item in items"

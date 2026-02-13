@@ -24,20 +24,14 @@ import {
   type ColumnFiltersState,
   type SortingState,
 } from "@tanstack/vue-table";
-import {
-  LucideChevronDown,
-  LucideChevronUp,
-  LucideExternalLink,
-} from "lucide-vue-next";
+import { LucideChevronDown, LucideChevronUp, LucideExternalLink } from "lucide-vue-next";
 import type { VNodeArrayChildren } from "vue";
 import { h, ref } from "vue";
 
 type Item = {
   id: string;
   keyword: string;
-  intents: Array<
-    "Informational" | "Navigational" | "Commercial" | "Transactional"
-  >;
+  intents: Array<"Informational" | "Navigational" | "Commercial" | "Transactional">;
   volume: number;
   cpc: number;
   traffic: number;
@@ -59,16 +53,14 @@ const columns: ColumnDef<Item>[] = [
     cell: ({ row }) =>
       h(Checkbox, {
         modelValue: row.getIsSelected(),
-        "onUpdate:modelValue": (value: boolean | "indeterminate") =>
-          row.toggleSelected(!!value),
+        "onUpdate:modelValue": (value: boolean | "indeterminate") => row.toggleSelected(!!value),
         "aria-label": "Select row",
       }),
   },
   {
     header: "Keyword",
     accessorKey: "keyword",
-    cell: ({ row }) =>
-      h("div", { class: "font-medium" }, row.getValue("keyword")),
+    cell: ({ row }) => h("div", { class: "font-medium" }, row.getValue("keyword")),
     enableSorting: false,
   },
   {
@@ -326,10 +318,7 @@ const table = useVueTable({
                 @click="header.column.getToggleSortingHandler()?.($event)"
                 @keydown="
                   (e) => {
-                    if (
-                      header.column.getCanSort() &&
-                      (e.key === 'Enter' || e.key === ' ')
-                    ) {
+                    if (header.column.getCanSort() && (e.key === 'Enter' || e.key === ' ')) {
                       e.preventDefault();
                       header.column.getToggleSortingHandler()?.(e);
                     }
@@ -337,10 +326,7 @@ const table = useVueTable({
                 "
                 :tabindex="header.column.getCanSort() ? 0 : undefined"
               >
-                <FlexRender
-                  :render="header.column.columnDef.header"
-                  :props="header.getContext()"
-                />
+                <FlexRender :render="header.column.columnDef.header" :props="header.getContext()" />
                 <LucideChevronUp
                   v-if="header.column.getIsSorted() === 'asc'"
                   class="size-4 shrink-0 opacity-60"
@@ -370,18 +356,13 @@ const table = useVueTable({
             :data-state="row.getIsSelected() && 'selected'"
           >
             <TableCell v-for="cell in row.getVisibleCells()" :key="cell.id">
-              <FlexRender
-                :render="cell.column.columnDef.cell"
-                :props="cell.getContext()"
-              />
+              <FlexRender :render="cell.column.columnDef.cell" :props="cell.getContext()" />
             </TableCell>
           </TableRow>
         </template>
         <template v-else>
           <TableRow>
-            <TableCell :colspan="columns.length" class="h-24 text-center">
-              No results.
-            </TableCell>
+            <TableCell :colspan="columns.length" class="h-24 text-center">No results.</TableCell>
           </TableRow>
         </template>
       </TableBody>

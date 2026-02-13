@@ -10,19 +10,10 @@
     }
   ],
   "meta": {
-    "tags": [
-      "table",
-      "tanstack",
-      "checkbox",
-      "badge",
-      "chip",
-      "flag"
-    ],
+    "tags": ["table", "tanstack", "checkbox", "badge", "chip", "flag"],
     "colSpan": 3
   },
-  "dependencies": [
-    "@tanstack/vue-table"
-  ],
+  "dependencies": ["@tanstack/vue-table"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/badge.json",
     "https://www.originui-vue.com/r/checkbox.json",

@@ -9,11 +9,7 @@ import {
   CommandList,
 } from "@/registry/default/ui/command";
 import { Label } from "@/registry/default/ui/label";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import { LucideCheck, LucideChevronDown } from "lucide-vue-next";
 import { ref, useId } from "vue";
 
@@ -121,11 +117,7 @@ function handleSelect(currentValue: string) {
                 >
                   <span class="text-lg leading-none">{{ country.flag }}</span>
                   {{ country.value }}
-                  <LucideCheck
-                    v-if="value === country.value"
-                    :size="16"
-                    class="ml-auto"
-                  />
+                  <LucideCheck v-if="value === country.value" :size="16" class="ml-auto" />
                 </CommandItem>
               </CommandGroup>
             </template>

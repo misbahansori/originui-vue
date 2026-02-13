@@ -12,11 +12,7 @@ import {
   CalendarNextButton,
   CalendarPrevButton,
 } from "@/registry/default/ui/calendar";
-import {
-  getLocalTimeZone,
-  today,
-  type DateValue,
-} from "@internationalized/date";
+import { getLocalTimeZone, today, type DateValue } from "@internationalized/date";
 import { formatDate } from "@vueuse/core";
 import { CalendarRoot } from "reka-ui";
 
@@ -39,15 +35,11 @@ const generateMockPriceData = () => {
 const mockPriceData = ref(generateMockPriceData());
 
 const isDateDisabled = (date: DateValue) => {
-  return !mockPriceData.value[
-    formatDate(date.toDate(getLocalTimeZone()), "YYYY-MM-DD")
-  ];
+  return !mockPriceData.value[formatDate(date.toDate(getLocalTimeZone()), "YYYY-MM-DD")];
 };
 
 const getPriceData = (date: DateValue) =>
-  mockPriceData.value[
-    formatDate(date.toDate(getLocalTimeZone()), "YYYY-MM-DD")
-  ] ?? null;
+  mockPriceData.value[formatDate(date.toDate(getLocalTimeZone()), "YYYY-MM-DD")] ?? null;
 
 const GOOD_PRICE_THRESHOLD = 100;
 

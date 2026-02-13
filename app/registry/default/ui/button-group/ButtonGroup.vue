@@ -15,9 +15,7 @@ const props = defineProps<{
     role="group"
     data-slot="button-group"
     :data-orientation="props.orientation"
-    :class="
-      cn(buttonGroupVariants({ orientation: props.orientation }), props.class)
-    "
+    :class="cn(buttonGroupVariants({ orientation: props.orientation }), props.class)"
   >
     <slot />
   </div>

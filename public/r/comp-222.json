@@ -10,15 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "select",
-      "radix"
-    ]
+    "tags": ["label", "select", "radix"]
   },
-  "dependencies": [
-    "@remixicon/vue"
-  ],
+  "dependencies": ["@remixicon/vue"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/label.json",
     "https://www.originui-vue.com/r/select.json"

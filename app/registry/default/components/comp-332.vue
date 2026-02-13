@@ -28,8 +28,7 @@ const stepContent = [
   },
   {
     title: "Ready to Start?",
-    description:
-      "Begin building amazing interfaces with our comprehensive component library.",
+    description: "Begin building amazing interfaces with our comprehensive component library.",
   },
   {
     title: "Get Support",
@@ -75,9 +74,7 @@ const handleOpenChange = (open: boolean) => {
             {{ stepContent[step - 1]?.description }}
           </DialogDescription>
         </DialogHeader>
-        <div
-          class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center"
-        >
+        <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
           <div class="flex justify-center space-x-1.5 max-sm:order-1">
             <template v-for="index in totalSteps" :key="index">
               <div

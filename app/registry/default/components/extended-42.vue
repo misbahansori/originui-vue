@@ -90,10 +90,7 @@ const totalActivities = computed(() => {
         </div>
       </div>
       <ContributionGraph class="flex gap-1">
-        <ContributionGraphGroup
-          v-for="(week, weekIndex) in weeks"
-          :key="weekIndex"
-        >
+        <ContributionGraphGroup v-for="(week, weekIndex) in weeks" :key="weekIndex">
           <ContributionGraphBlock
             v-for="(day, dayIndex) in week"
             :key="dayIndex"
@@ -124,11 +121,7 @@ const totalActivities = computed(() => {
         </div>
       </div>
     </div>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       With Custom Legend and Rounded Full
     </p>
   </div>

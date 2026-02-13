@@ -10,20 +10,11 @@
     }
   ],
   "meta": {
-    "tags": [
-      "calendar",
-      "range calendar",
-      "date",
-      "button",
-      "react daypicker"
-    ],
+    "tags": ["calendar", "range calendar", "date", "button", "react daypicker"],
     "colSpan": 3,
     "style": 1
   },
-  "dependencies": [
-    "@internationalized/date",
-    "reka-ui"
-  ],
+  "dependencies": ["@internationalized/date", "reka-ui"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/range-calendar.json"

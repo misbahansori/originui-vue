@@ -34,12 +34,7 @@
       "type": "registry:ui"
     }
   ],
-  "dependencies": [
-    "@internationalized/date",
-    "@vueuse/core",
-    "lucide-vue-next",
-    "reka-ui"
-  ],
+  "dependencies": ["@internationalized/date", "@vueuse/core", "lucide-vue-next", "reka-ui"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/popover.json",

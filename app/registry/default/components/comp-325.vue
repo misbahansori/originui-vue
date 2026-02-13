@@ -49,21 +49,11 @@ const id = useId();
         <div class="space-y-4">
           <div class="*:not-first:mt-2">
             <Label :for="`${id}-name`">Full name</Label>
-            <Input
-              :id="`${id}-name`"
-              placeholder="Matt Welsh"
-              type="text"
-              required
-            />
+            <Input :id="`${id}-name`" placeholder="Matt Welsh" type="text" required />
           </div>
           <div class="*:not-first:mt-2">
             <Label :for="`${id}-email`">Email</Label>
-            <Input
-              :id="`${id}-email`"
-              placeholder="hi@yourcompany.com"
-              type="email"
-              required
-            />
+            <Input :id="`${id}-email`" placeholder="hi@yourcompany.com" type="email" required />
           </div>
           <div class="*:not-first:mt-2">
             <Label :for="`${id}-password`">Password</Label>

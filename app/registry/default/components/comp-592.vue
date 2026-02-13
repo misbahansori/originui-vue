@@ -35,9 +35,7 @@ const checked = ref(true);
       <div class="flex items-center gap-4">
         <!-- Test mode -->
         <div class="inline-flex items-center gap-2 max-md:hidden">
-          <Label :for="`switch-${id}`" class="text-sm font-medium">
-            Test mode
-          </Label>
+          <Label :for="`switch-${id}`" class="text-sm font-medium">Test mode</Label>
           <Switch
             :id="`switch-${id}`"
             v-model="checked"
@@ -63,11 +61,7 @@ const checked = ref(true);
           <SettingsMenu />
         </div>
         <!-- Add button -->
-        <Button
-          class="size-8 rounded-full"
-          size="icon"
-          aria-label="Add new item"
-        >
+        <Button class="size-8 rounded-full" size="icon" aria-label="Add new item">
           <LucidePlus :size="16" aria-hidden="true" />
         </Button>
       </div>

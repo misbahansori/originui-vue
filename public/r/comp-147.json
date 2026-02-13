@@ -10,16 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "checkbox",
-      "label",
-      "card",
-      "radix"
-    ]
+    "tags": ["checkbox", "label", "card", "radix"]
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/checkbox.json",
     "https://www.originui-vue.com/r/label.json"

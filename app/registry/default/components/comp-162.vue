@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
-import {
-  LucideBrush,
-  LucideEraser,
-  LucideScissors,
-  LucideSwatchBook,
-} from "lucide-vue-next";
+import { LucideBrush, LucideEraser, LucideScissors, LucideSwatchBook } from "lucide-vue-next";
 import { ref, useId } from "vue";
 
 const id = useId();
@@ -33,12 +28,7 @@ const items = [
           :value="item.value"
           class="order-1 after:absolute after:inset-0"
         />
-        <component
-          :is="item.icon"
-          class="opacity-60"
-          :size="16"
-          aria-hidden="true"
-        />
+        <component :is="item.icon" class="opacity-60" :size="16" aria-hidden="true" />
       </div>
       <Label :for="`${id}-${item.value}`">{{ item.label }}</Label>
     </div>

@@ -19,18 +19,11 @@ const starRatings = [
 
 <template>
   <RadioGroup v-model="selectedValue">
-    <div
-      v-for="(rating, index) in starRatings"
-      :key="rating.value"
-      class="flex items-center gap-2"
-    >
+    <div v-for="(rating, index) in starRatings" :key="rating.value" class="flex items-center gap-2">
       <RadioGroupItem :value="rating.value" :id="`${id}-${index + 1}`" />
       <Label :for="`${id}-${index + 1}`" class="inline-flex items-center gap-1">
         <template v-if="rating.stars > 0">
-          <span
-            class="inline-flex items-center text-amber-500"
-            aria-hidden="true"
-          >
+          <span class="inline-flex items-center text-amber-500" aria-hidden="true">
             <LucideStar
               v-for="star in 5"
               :key="star"
@@ -43,9 +36,7 @@ const starRatings = [
         <template v-else>
           {{ rating.label }}
         </template>
-        <span
-          class="text-muted-foreground text-xs leading-[inherit] font-normal"
-        >
+        <span class="text-muted-foreground text-xs leading-[inherit] font-normal">
           ({{ rating.count.toLocaleString() }})
         </span>
       </Label>

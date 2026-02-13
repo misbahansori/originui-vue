@@ -22,9 +22,7 @@ import {
   CalendarPrevButton,
 } from ".";
 
-const props = defineProps<
-  CalendarRootProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<CalendarRootProps & { class?: HTMLAttributes["class"] }>();
 const emits = defineEmits<CalendarRootEmits>();
 
 const delegatedProps = reactiveOmit(props, "class");
@@ -63,11 +61,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
             :key="`weekDate-${index}`"
             class="mt-2 w-full"
           >
-            <CalendarCell
-              v-for="weekDate in weekDates"
-              :key="weekDate.toString()"
-              :date="weekDate"
-            >
+            <CalendarCell v-for="weekDate in weekDates" :key="weekDate.toString()" :date="weekDate">
               <CalendarCellTrigger :day="weekDate" :month="month.value" />
             </CalendarCell>
           </CalendarGridRow>

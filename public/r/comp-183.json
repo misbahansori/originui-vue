@@ -10,17 +10,10 @@
     }
   ],
   "meta": {
-    "tags": [
-      "switch",
-      "label",
-      "darkmode",
-      "radix"
-    ],
+    "tags": ["switch", "label", "darkmode", "radix"],
     "style": 1
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/label.json",
     "https://www.originui-vue.com/r/switch.json"

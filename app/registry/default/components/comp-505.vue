@@ -14,24 +14,13 @@ import {
   CalendarPrevButton,
 } from "@/registry/default/ui/calendar";
 import { ScrollArea } from "@/registry/default/ui/scroll-area";
-import {
-  CalendarDateTime,
-  getLocalTimeZone,
-  today,
-} from "@internationalized/date";
+import { CalendarDateTime, getLocalTimeZone, today } from "@internationalized/date";
 import { formatDate } from "@vueuse/core";
 import { CalendarRoot } from "reka-ui";
 
 const todayDate = today(getLocalTimeZone());
 const modelValue = ref(
-  new CalendarDateTime(
-    todayDate.year,
-    todayDate.month,
-    todayDate.day,
-    12,
-    30,
-    0,
-  ),
+  new CalendarDateTime(todayDate.year, todayDate.month, todayDate.day, 12, 30, 0),
 );
 
 const timeSlots = [
@@ -76,11 +65,7 @@ const isSelectedTime = (time: string) => {
   <div>
     <div class="rounded-md border p-3">
       <div class="flex gap-4 max-sm:flex-col">
-        <CalendarRoot
-          v-model="modelValue"
-          v-slot="{ grid, weekDays }"
-          data-slot="calendar"
-        >
+        <CalendarRoot v-model="modelValue" v-slot="{ grid, weekDays }" data-slot="calendar">
           <CalendarHeader>
             <CalendarHeading />
             <div class="flex items-center gap-1">
@@ -88,9 +73,7 @@ const isSelectedTime = (time: string) => {
               <CalendarNextButton class="absolute right-1" />
             </div>
           </CalendarHeader>
-          <div
-            class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0"
-          >
+          <div class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">
             <CalendarGrid v-for="month in grid" :key="month.value.toString()">
               <CalendarGridHead>
                 <CalendarGridRow>
@@ -123,12 +106,7 @@ const isSelectedTime = (time: string) => {
               <div class="space-y-3">
                 <div class="flex h-5 shrink-0 items-center px-5">
                   <p class="text-sm font-medium">
-                    {{
-                      formatDate(
-                        modelValue.toDate(getLocalTimeZone()),
-                        "dddd, D",
-                      )
-                    }}
+                    {{ formatDate(modelValue.toDate(getLocalTimeZone()), "dddd, D") }}
                   </p>
                 </div>
                 <div class="grid gap-1.5 px-5 max-sm:grid-cols-2">

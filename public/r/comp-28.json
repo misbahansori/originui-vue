@@ -10,13 +10,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "button",
-      "number",
-      "react aria"
-    ]
+    "tags": ["input", "label", "button", "number", "react aria"]
   },
   "dependencies": [],
   "registryDependencies": [

@@ -13,10 +13,7 @@ const values = ["0", "1", "2", "3", "4", "5"];
       <legend class="text-foreground text-sm leading-none font-medium">
         How likely are you to recommend us?
       </legend>
-      <RadioGroup
-        class="flex gap-0 -space-x-px rounded-md shadow-xs"
-        v-model="selectedValue"
-      >
+      <RadioGroup class="flex gap-0 -space-x-px rounded-md shadow-xs" v-model="selectedValue">
         <label
           v-for="value in values"
           :key="`${id}-${value}`"

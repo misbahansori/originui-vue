@@ -4,10 +4,9 @@ import { Button } from "@/registry/default/ui/button";
 import { LucideCircleUserRound, LucideX } from "lucide-vue-next";
 import { computed } from "vue";
 
-const { files, removeFile, openFileDialog, dropzoneRef, inputRef } =
-  useFileUpload({
-    accept: "image/*",
-  });
+const { files, removeFile, openFileDialog, dropzoneRef, inputRef } = useFileUpload({
+  accept: "image/*",
+});
 
 const currentFile = computed(() => files.value?.[0]);
 </script>
@@ -46,11 +45,7 @@ const currentFile = computed(() => files.value?.[0]);
         <LucideX class="size-3.5" />
       </Button>
     </div>
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-xs">
       Avatar uploader with droppable area
     </p>
   </div>

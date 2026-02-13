@@ -10,21 +10,10 @@
     }
   ],
   "meta": {
-    "tags": [
-      "table",
-      "tanstack",
-      "checkbox",
-      "collapsible",
-      "flag",
-      "badge",
-      "chip"
-    ],
+    "tags": ["table", "tanstack", "checkbox", "collapsible", "flag", "badge", "chip"],
     "colSpan": 3
   },
-  "dependencies": [
-    "@tanstack/vue-table",
-    "lucide-vue-next"
-  ],
+  "dependencies": ["@tanstack/vue-table", "lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/badge.json",
     "https://www.originui-vue.com/r/button.json",

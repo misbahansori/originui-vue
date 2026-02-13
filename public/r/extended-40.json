@@ -10,16 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "contribution-graph",
-      "extended",
-      "graph",
-      "blue"
-    ],
+    "tags": ["contribution-graph", "extended", "graph", "blue"],
     "colSpan": 3
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/contribution-graph.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/contribution-graph.json"]
 }

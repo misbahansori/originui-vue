@@ -9,12 +9,7 @@ import {
   CalendarHeadCell,
   CalendarHeader,
 } from "@/registry/default/ui/calendar";
-import {
-  CalendarDate,
-  getLocalTimeZone,
-  today,
-  type DateValue,
-} from "@internationalized/date";
+import { CalendarDate, getLocalTimeZone, today, type DateValue } from "@internationalized/date";
 import { CalendarRoot } from "reka-ui";
 
 const todayDate = today(getLocalTimeZone());
@@ -27,8 +22,7 @@ const selectedDate = ref({
 });
 
 const placeholder = computed({
-  get: () =>
-    new CalendarDate(selectedDate.value.year, selectedDate.value.month, 1),
+  get: () => new CalendarDate(selectedDate.value.year, selectedDate.value.month, 1),
   set: (newDate: DateValue) => {
     selectedDate.value = {
       year: newDate.year,
@@ -62,11 +56,7 @@ const years = Array.from({ length: 40 }, (_, i) => todayDate.year - 20 + i);
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem
-                v-for="(month, i) in monthNames"
-                :key="i"
-                :value="i + 1"
-              >
+              <SelectItem v-for="(month, i) in monthNames" :key="i" :value="i + 1">
                 {{ month }}
               </SelectItem>
             </SelectContent>

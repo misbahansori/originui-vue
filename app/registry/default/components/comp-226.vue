@@ -32,11 +32,7 @@ const selectedOption = ref(options[0]);
       >
         <SelectValue placeholder="Select framework">
           <template v-if="selectedOption">
-            <img
-              :src="selectedOption.avatar"
-              :alt="selectedOption.label"
-              class="size-5 rounded"
-            />
+            <img :src="selectedOption.avatar" :alt="selectedOption.label" class="size-5 rounded" />
             <span class="truncate">{{ selectedOption.label }}</span>
           </template>
         </SelectValue>
@@ -46,11 +42,7 @@ const selectedOption = ref(options[0]);
       >
         <SelectGroup>
           <SelectLabel class="ps-2">Impersonate user</SelectLabel>
-          <SelectItem
-            v-for="option in options"
-            :key="option.value"
-            :value="option"
-          >
+          <SelectItem v-for="option in options" :key="option.value" :value="option">
             <img
               class="size-5 rounded"
               :src="option.avatar"

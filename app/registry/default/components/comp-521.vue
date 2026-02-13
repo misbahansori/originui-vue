@@ -16,12 +16,7 @@ const currentStep = ref(1);
   <div class="mx-auto max-w-xl space-y-8 text-center">
     <div class="space-y-3">
       <Stepper v-model="currentStep">
-        <StepperItem
-          v-for="step in steps"
-          :key="step"
-          :step="step"
-          class="flex-1"
-        >
+        <StepperItem v-for="step in steps" :key="step" :step="step" class="flex-1">
           <StepperTrigger class="w-full flex-col items-start gap-2" as-child>
             <StepperIndicator class="bg-border h-2 w-full rounded-none">
               <span class="sr-only">{{ step }}</span>
@@ -51,11 +46,7 @@ const currentStep = ref(1);
         Next step
       </Button>
     </div>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Progress stepper
     </p>
   </div>

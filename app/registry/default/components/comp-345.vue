@@ -38,12 +38,7 @@ const items = [
 <template>
   <div class="space-y-4">
     <h2 class="text-xl font-bold">Tabs w/ plus-minus</h2>
-    <Accordion
-      type="single"
-      collapsible
-      class="w-full space-y-2"
-      :default-value="'3'"
-    >
+    <Accordion type="single" collapsible class="w-full space-y-2" :default-value="'3'">
       <AccordionItem
         v-for="item in items"
         :key="item.id"

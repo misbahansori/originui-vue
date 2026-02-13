@@ -10,14 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "toggle group"
-    ],
+    "tags": ["button", "toggle group"],
     "style": 2
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/toggle-group.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/toggle-group.json"]
 }

@@ -10,17 +10,10 @@
     }
   ],
   "meta": {
-    "tags": [
-      "calendar",
-      "range calendar",
-      "date",
-      "react daypicker"
-    ],
+    "tags": ["calendar", "range calendar", "date", "react daypicker"],
     "colSpan": 3,
     "style": 1
   },
-  "dependencies": [
-    "@internationalized/date"
-  ],
+  "dependencies": ["@internationalized/date"],
   "registryDependencies": []
 }

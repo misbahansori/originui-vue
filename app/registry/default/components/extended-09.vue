@@ -22,17 +22,14 @@ import { LucideIdCard, LucideUser } from "lucide-vue-next";
     <EmptyHeader>
       <EmptyTitle class="font-semibold">No data found</EmptyTitle>
       <EmptyDescription>
-        It looks like there's no data in this page. Please create a new one
-        using the buttons below.
+        It looks like there's no data in this page. Please create a new one using the buttons below.
       </EmptyDescription>
     </EmptyHeader>
     <EmptyContent class="w-full max-w-md">
       <Card class="relative w-full overflow-hidden text-left">
         <CardHeader>
           <CardTitle>Create new account</CardTitle>
-          <CardDescription>
-            Create a new account to get started.
-          </CardDescription>
+          <CardDescription>Create a new account to get started.</CardDescription>
         </CardHeader>
         <CardContent>
           <Button>Create account</Button>
@@ -44,9 +41,7 @@ import { LucideIdCard, LucideUser } from "lucide-vue-next";
       <Card class="relative w-full overflow-hidden text-left">
         <CardHeader>
           <CardTitle>Add new card</CardTitle>
-          <CardDescription>
-            Add a new card to your account to get started.
-          </CardDescription>
+          <CardDescription>Add a new card to your account to get started.</CardDescription>
         </CardHeader>
         <CardContent>
           <Button>Add card</Button>

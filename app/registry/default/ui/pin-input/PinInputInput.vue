@@ -1,15 +1,9 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import {
-  PinInputInput,
-  type PinInputInputProps,
-  useForwardProps,
-} from "reka-ui";
+import { PinInputInput, type PinInputInputProps, useForwardProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
-const props = defineProps<
-  PinInputInputProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<PinInputInputProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props;

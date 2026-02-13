@@ -32,8 +32,7 @@ onMounted(() => {
 // Computed properties
 const containerClasses = computed(() => {
   const baseClasses = "pointer-events-none flex w-full items-center";
-  const positionClass =
-    props.animationType === "translate" ? "justify-start" : "justify-center";
+  const positionClass = props.animationType === "translate" ? "justify-start" : "justify-center";
   return `${baseClasses} ${positionClass}`;
 });
 

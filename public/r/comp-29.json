@@ -10,17 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "button",
-      "number",
-      "react aria"
-    ]
+    "tags": ["input", "label", "button", "number", "react aria"]
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/label.json",
     "https://www.originui-vue.com/r/number-field.json"

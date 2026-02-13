@@ -35,11 +35,7 @@ const selectedProject = ref(props.defaultTeam ?? props.teams[0]);
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent align="start">
-      <DropdownMenuItem
-        v-for="project in teams"
-        :key="project"
-        @select="selectedProject = project"
-      >
+      <DropdownMenuItem v-for="project in teams" :key="project" @select="selectedProject = project">
         {{ project }}
       </DropdownMenuItem>
     </DropdownMenuContent>

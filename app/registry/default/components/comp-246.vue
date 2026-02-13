@@ -24,14 +24,7 @@ const ticks = [...Array(max + 1)].map((_, i) => i);
           :key="i"
           class="flex w-0 flex-col items-center justify-center gap-2"
         >
-          <span
-            :class="
-              cn(
-                'bg-muted-foreground/70 h-1 w-px',
-                i % skipInterval !== 0 && 'h-0.5',
-              )
-            "
-          />
+          <span :class="cn('bg-muted-foreground/70 h-1 w-px', i % skipInterval !== 0 && 'h-0.5')" />
           <span :class="cn(i % skipInterval !== 0 && 'opacity-0')">
             {{ i }}
           </span>

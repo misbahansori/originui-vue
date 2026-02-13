@@ -7,13 +7,8 @@ const minValue = 0;
 const maxValue = 100;
 const initialValue = [25];
 
-const {
-  sliderValues,
-  inputValues,
-  validateAndUpdateValue,
-  handleInputChange,
-  handleSliderChange,
-} = useSliderWithInput({ minValue, maxValue, initialValue });
+const { sliderValues, inputValues, validateAndUpdateValue, handleInputChange, handleSliderChange } =
+  useSliderWithInput({ minValue, maxValue, initialValue });
 </script>
 
 <template>

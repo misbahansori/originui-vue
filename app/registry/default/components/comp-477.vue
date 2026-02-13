@@ -11,12 +11,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/registry/default/ui/table";
-import {
-  FlexRender,
-  getCoreRowModel,
-  useVueTable,
-  type ColumnDef,
-} from "@tanstack/vue-table";
+import { FlexRender, getCoreRowModel, useVueTable, type ColumnDef } from "@tanstack/vue-table";
 import { h, onMounted, shallowRef } from "vue";
 
 type Item = {
@@ -46,8 +41,7 @@ const columns: ColumnDef<Item>[] = [
     cell: ({ row }) =>
       h(Checkbox, {
         modelValue: row.getIsSelected(),
-        "onUpdate:modelValue": (value: boolean | "indeterminate") =>
-          row.toggleSelected(!!value),
+        "onUpdate:modelValue": (value: boolean | "indeterminate") => row.toggleSelected(!!value),
         "aria-label": "Select row",
       }),
   },
@@ -65,11 +59,7 @@ const columns: ColumnDef<Item>[] = [
     accessorKey: "location",
     cell: ({ row }) =>
       h("div", {}, [
-        h(
-          "span",
-          { class: "text-lg leading-none" },
-          row.original.flag as string,
-        ),
+        h("span", { class: "text-lg leading-none" }, row.original.flag as string),
         " ",
         row.getValue("location") as string,
       ]),
@@ -130,10 +120,7 @@ const table = useVueTable({
           class="hover:bg-transparent"
         >
           <TableHead v-for="header in headerGroup.headers" :key="header.id">
-            <FlexRender
-              :render="header.column.columnDef.header"
-              :props="header.getContext()"
-            />
+            <FlexRender :render="header.column.columnDef.header" :props="header.getContext()" />
           </TableHead>
         </TableRow>
       </TableHeader>
@@ -145,18 +132,13 @@ const table = useVueTable({
             :data-state="row.getIsSelected() && 'selected'"
           >
             <TableCell v-for="cell in row.getVisibleCells()" :key="cell.id">
-              <FlexRender
-                :render="cell.column.columnDef.cell"
-                :props="cell.getContext()"
-              />
+              <FlexRender :render="cell.column.columnDef.cell" :props="cell.getContext()" />
             </TableCell>
           </TableRow>
         </template>
         <template v-else>
           <TableRow>
-            <TableCell :colspan="columns.length" class="h-24 text-center">
-              No results.
-            </TableCell>
+            <TableCell :colspan="columns.length" class="h-24 text-center">No results.</TableCell>
           </TableRow>
         </template>
       </TableBody>

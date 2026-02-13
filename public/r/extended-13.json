@@ -10,15 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "card",
-      "extended",
-      "card"
-    ],
+    "tags": ["card", "extended", "card"],
     "colSpan": 3
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/card.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/card.json"]
 }

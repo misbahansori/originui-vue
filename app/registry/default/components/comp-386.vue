@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import { LucideArrowLeft, LucideArrowRight } from "lucide-vue-next";
 import { computed, ref } from "vue";
 
@@ -70,9 +66,7 @@ const isLastTip = computed(() => currentTip.value === tips.length - 1);
           </p>
         </div>
         <div class="flex items-center justify-between">
-          <span class="text-muted-foreground text-xs">
-            {{ currentTip + 1 }}/{{ tips.length }}
-          </span>
+          <span class="text-muted-foreground text-xs">{{ currentTip + 1 }}/{{ tips.length }}</span>
           <div class="flex gap-0.5">
             <Button
               size="icon"

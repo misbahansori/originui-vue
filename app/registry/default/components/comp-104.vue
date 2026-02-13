@@ -30,11 +30,7 @@ const VolumeIcon = computed(() => {
 </script>
 
 <template>
-  <div
-    class="inline-flex items-center"
-    role="group"
-    aria-labelledby="volume-control"
-  >
+  <div class="inline-flex items-center" role="group" aria-labelledby="volume-control">
     <span id="volume-control" class="sr-only">Volume Control</span>
     <Button
       class="rounded-full"
@@ -46,16 +42,8 @@ const VolumeIcon = computed(() => {
     >
       <LucideMinus :size="16" aria-hidden="true" />
     </Button>
-    <div
-      class="flex items-center px-3 text-sm font-medium tabular-nums"
-      aria-live="polite"
-    >
-      <component
-        :is="VolumeIcon"
-        class="opacity-60"
-        :size="16"
-        aria-hidden="true"
-      />
+    <div class="flex items-center px-3 text-sm font-medium tabular-nums" aria-live="polite">
+      <component :is="VolumeIcon" class="opacity-60" :size="16" aria-hidden="true" />
       <span class="ms-2" :aria-label="`Current volume is ${volume}`">
         {{ volume }}
       </span>

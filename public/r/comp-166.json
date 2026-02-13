@@ -10,12 +10,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "radio",
-      "label",
-      "pricing",
-      "radix"
-    ]
+    "tags": ["radio", "label", "pricing", "radix"]
   },
   "dependencies": [],
   "registryDependencies": [

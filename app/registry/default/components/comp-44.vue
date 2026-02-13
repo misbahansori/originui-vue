@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
-import {
-  PinInput,
-  PinInputGroup,
-  PinInputInput,
-} from "@/registry/default/ui/pin-input";
+import { PinInput, PinInputGroup, PinInputInput } from "@/registry/default/ui/pin-input";
 import { ref, useId } from "vue";
 
 const inputId = useId();
@@ -13,9 +9,7 @@ const value = ref(["", "", "", "", ""]);
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="inputId" class="text-foreground text-sm font-medium">
-      OTP input single
-    </Label>
+    <Label :for="inputId" class="text-foreground text-sm font-medium">OTP input single</Label>
     <PinInput :id="inputId" v-model="value">
       <PinInputGroup>
         <PinInputInput
@@ -26,11 +20,7 @@ const value = ref(["", "", "", "", ""]);
         />
       </PinInputGroup>
     </PinInput>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Built with shadcn-vue
       <a
         class="hover:text-foreground underline"

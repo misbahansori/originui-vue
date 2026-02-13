@@ -14,17 +14,9 @@ const value = ref([25]);
       <span class="text-sm font-medium tabular-nums">{{ value[0] }}</span>
     </div>
     <div class="flex items-center gap-2">
-      <LucideVolumeX
-        class="shrink-0 opacity-60"
-        :size="16"
-        aria-hidden="true"
-      />
+      <LucideVolumeX class="shrink-0 opacity-60" :size="16" aria-hidden="true" />
       <Slider v-model="value" aria-label="Volume slider" />
-      <LucideVolume2
-        class="shrink-0 opacity-60"
-        :size="16"
-        aria-hidden="true"
-      />
+      <LucideVolume2 class="shrink-0 opacity-60" :size="16" aria-hidden="true" />
     </div>
   </div>
 </template>

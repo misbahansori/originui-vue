@@ -10,12 +10,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "select",
-      "native select",
-      "error"
-    ]
+    "tags": ["label", "select", "native select", "error"]
   },
   "dependencies": [],
   "registryDependencies": [

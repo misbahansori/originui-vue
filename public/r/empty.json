@@ -40,11 +40,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "empty state",
-      "extended",
-      "empty"
-    ],
+    "tags": ["empty state", "extended", "empty"],
     "colSpan": 2
   },
   "dependencies": [],

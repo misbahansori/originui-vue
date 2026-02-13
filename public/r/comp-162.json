@@ -10,16 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "radio",
-      "label",
-      "card",
-      "radix"
-    ]
+    "tags": ["radio", "label", "card", "radix"]
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/label.json",
     "https://www.originui-vue.com/r/radio-group.json"

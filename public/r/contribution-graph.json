@@ -25,12 +25,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "contribution graph",
-      "extended",
-      "github",
-      "activity"
-    ],
+    "tags": ["contribution graph", "extended", "github", "activity"],
     "colSpan": 3
   },
   "dependencies": [],

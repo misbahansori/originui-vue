@@ -25,9 +25,7 @@ function handleFileChange(event: Event) {
     <div class="inline-flex items-center gap-2 align-top">
       <div
         class="border-input relative flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-md border"
-        :aria-label="
-          previewUrl ? 'Preview of uploaded image' : 'Default user avatar'
-        "
+        :aria-label="previewUrl ? 'Preview of uploaded image' : 'Default user avatar'"
       >
         <img
           v-if="previewUrl"
@@ -70,11 +68,7 @@ function handleFileChange(event: Event) {
       </div>
     </div>
     <div class="sr-only" aria-live="polite" role="status">
-      {{
-        previewUrl
-          ? "Image uploaded and preview available"
-          : "No image uploaded"
-      }}
+      {{ previewUrl ? "Image uploaded and preview available" : "No image uploaded" }}
     </div>
   </div>
 </template>

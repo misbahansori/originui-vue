@@ -62,9 +62,7 @@ const getFileIcon = (file: { file: File | { type: string; name: string } }) => {
     excel: {
       icon: LucideFileSpreadsheet,
       conditions: (type: string, name: string) =>
-        type.includes("excel") ||
-        name.endsWith(".xls") ||
-        name.endsWith(".xlsx"),
+        type.includes("excel") || name.endsWith(".xls") || name.endsWith(".xlsx"),
     },
     video: {
       icon: LucideVideo,
@@ -89,9 +87,7 @@ const getFileIcon = (file: { file: File | { type: string; name: string } }) => {
   return LucideFile;
 };
 
-const getFilePreview = (file: {
-  file: File | { type: string; name: string; url?: string };
-}) => {
+const getFilePreview = (file: { file: File | { type: string; name: string; url?: string } }) => {
   if (file.file.type.startsWith("image/")) {
     if (file.file instanceof File) {
       const previewUrl = URL.createObjectURL(file.file);
@@ -211,8 +207,7 @@ const handleFilesAdded = (addedFiles: FileWithPreview[]) => {
 
   // Start simulated upload for each file
   addedFiles.forEach((file) => {
-    const fileSize =
-      file.file instanceof File ? file.file.size : file.file.size;
+    const fileSize = file.file instanceof File ? file.file.size : file.file.size;
 
     // Start the upload simulation and store the cleanup function
     const cleanup = simulateUpload(
@@ -242,26 +237,17 @@ const handleFilesAdded = (addedFiles: FileWithPreview[]) => {
 
 // Remove the progress tracking for the file
 const handleFileRemoved = (fileId: string) => {
-  uploadProgress.value = uploadProgress.value.filter(
-    (item) => item.fileId !== fileId,
-  );
+  uploadProgress.value = uploadProgress.value.filter((item) => item.fileId !== fileId);
 };
 
-const {
-  files,
-  errors,
-  dropzoneRef,
-  openFileDialog,
-  removeFile,
-  clearFiles,
-  inputRef,
-} = useFileUpload({
-  multiple: true,
-  maxFiles,
-  maxSize,
-  initialFiles,
-  onFilesAdded: handleFilesAdded,
-});
+const { files, errors, dropzoneRef, openFileDialog, removeFile, clearFiles, inputRef } =
+  useFileUpload({
+    multiple: true,
+    maxFiles,
+    maxSize,
+    initialFiles,
+    onFilesAdded: handleFilesAdded,
+  });
 </script>
 
 <template>
@@ -277,15 +263,10 @@ const {
       <input ref="inputRef" class="sr-only" aria-label="Upload image file" />
       <div v-if="files.length > 0" class="flex w-full flex-col gap-3">
         <div class="flex items-center justify-between gap-2">
-          <h3 class="truncate text-sm font-medium">
-            Files ({{ files.length }})
-          </h3>
+          <h3 class="truncate text-sm font-medium">Files ({{ files.length }})</h3>
           <div class="flex gap-2">
             <Button variant="outline" size="sm" @click="openFileDialog">
-              <LucideUpload
-                class="-ms-0.5 size-3.5 opacity-60"
-                aria-hidden="true"
-              />
+              <LucideUpload class="-ms-0.5 size-3.5 opacity-60" aria-hidden="true" />
               Add files
             </Button>
             <Button
@@ -299,10 +280,7 @@ const {
                 }
               "
             >
-              <LucideTrash2
-                class="-ms-0.5 size-3.5 opacity-60"
-                aria-hidden="true"
-              />
+              <LucideTrash2 class="-ms-0.5 size-3.5 opacity-60" aria-hidden="true" />
               Remove all
             </Button>
           </div>
@@ -313,8 +291,7 @@ const {
             v-for="file in files"
             :key="file.id"
             :data-uploading="
-              uploadProgress.find((p) => p.fileId === file.id)?.completed ===
-                false || undefined
+              uploadProgress.find((p) => p.fileId === file.id)?.completed === false || undefined
             "
             class="bg-background flex flex-col gap-1 rounded-lg border p-2 pe-3 transition-opacity duration-300"
           >
@@ -325,10 +302,7 @@ const {
                 <div
                   class="flex aspect-square size-10 shrink-0 items-center justify-center overflow-hidden rounded border"
                 >
-                  <component
-                    :is="getFilePreview(file).type"
-                    v-bind="getFilePreview(file).props"
-                  />
+                  <component :is="getFilePreview(file).type" v-bind="getFilePreview(file).props" />
                 </div>
                 <div class="flex min-w-0 flex-col gap-0.5">
                   <p class="truncate text-[13px] font-medium">
@@ -357,15 +331,10 @@ const {
 
             <!-- Upload progress bar -->
             <div
-              v-if="
-                uploadProgress.find((p) => p.fileId === file.id)?.completed ===
-                false
-              "
+              v-if="uploadProgress.find((p) => p.fileId === file.id)?.completed === false"
               class="mt-1 flex items-center gap-2"
             >
-              <div
-                class="h-1.5 w-full overflow-hidden rounded-full bg-gray-100"
-              >
+              <div class="h-1.5 w-full overflow-hidden rounded-full bg-gray-100">
                 <div
                   class="bg-primary h-full transition-all duration-300 ease-out"
                   :style="{
@@ -374,19 +343,13 @@ const {
                 />
               </div>
               <span class="text-muted-foreground w-10 text-xs tabular-nums">
-                {{
-                  uploadProgress.find((p) => p.fileId === file.id)?.progress ||
-                  0
-                }}%
+                {{ uploadProgress.find((p) => p.fileId === file.id)?.progress || 0 }}%
               </span>
             </div>
           </div>
         </div>
       </div>
-      <div
-        v-else
-        class="flex flex-col items-center justify-center px-4 py-3 text-center"
-      >
+      <div v-else class="flex flex-col items-center justify-center px-4 py-3 text-center">
         <div
           class="bg-background mb-2 flex size-11 shrink-0 items-center justify-center rounded-full border"
           aria-hidden="true"
@@ -413,11 +376,7 @@ const {
       <span>{{ errors[0] }}</span>
     </div>
 
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-center text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-center text-xs">
       With simulated progress track ∙
       <a
         href="https://github.com/origin-space/originui/tree/main/docs/use-file-upload.md"

@@ -10,13 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "stepper"
-    ],
+    "tags": ["stepper"],
     "colSpan": 3
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/stepper.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/stepper.json"]
 }

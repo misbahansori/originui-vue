@@ -25,24 +25,14 @@ const id = useId();
     :showEdges="true"
     :siblingCount="0"
   >
-    <PaginationContent
-      class="flex w-full items-center justify-between gap-1"
-      v-slot="{ items }"
-    >
+    <PaginationContent class="flex w-full items-center justify-between gap-1" v-slot="{ items }">
       <div class="flex items-center gap-1">
         <PaginationPrevious>
           <LucideChevronLeft aria-hidden="true" class="size-4" />
         </PaginationPrevious>
         <template v-for="item in items">
-          <PaginationItem
-            v-if="item.type === 'page'"
-            :value="item.value"
-            asChild
-          >
-            <Button
-              :variant="item.value === page ? 'outline' : 'ghost'"
-              class="size-9"
-            >
+          <PaginationItem v-if="item.type === 'page'" :value="item.value" asChild>
+            <Button :variant="item.value === page ? 'outline' : 'ghost'" class="size-9">
               {{ item.value }}
             </Button>
           </PaginationItem>

@@ -5,16 +5,10 @@ import { LucideArrowRight, LucideTriangleAlert } from "lucide-vue-next";
 <template>
   <div class="rounded-md border px-4 py-3">
     <div class="flex items-start gap-3">
-      <LucideTriangleAlert
-        class="mt-0.5 size-4 shrink-0 text-amber-500"
-        aria-hidden="true"
-      />
+      <LucideTriangleAlert class="mt-0.5 size-4 shrink-0 text-amber-500" aria-hidden="true" />
       <div class="flex grow justify-between gap-3">
         <p class="text-sm">Some information is missing!</p>
-        <a
-          href="#"
-          class="group flex items-center text-sm font-medium whitespace-nowrap"
-        >
+        <a href="#" class="group flex items-center text-sm font-medium whitespace-nowrap">
           Link
           <LucideArrowRight
             class="ms-1 inline-flex size-4 shrink-0 opacity-60 transition-transform group-hover:translate-x-0.5"

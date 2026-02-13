@@ -8,9 +8,7 @@ import {
 } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
-const props = defineProps<
-  TagsInputRootProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<TagsInputRootProps & { class?: HTMLAttributes["class"] }>();
 const emits = defineEmits<TagsInputRootEmits>();
 
 const delegatedProps = computed(() => {

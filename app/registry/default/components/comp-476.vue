@@ -7,12 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/registry/default/ui/table";
-import {
-  LucideCheck,
-  LucideMonitor,
-  LucideSmartphone,
-  LucideX,
-} from "lucide-vue-next";
+import { LucideCheck, LucideMonitor, LucideSmartphone, LucideX } from "lucide-vue-next";
 
 const items = [
   {
@@ -87,9 +82,7 @@ const items = [
       </TableRow>
     </TableHeader>
     <TableHeader>
-      <TableRow
-        class="*:border-border hover:bg-transparent [&>:not(:last-child)]:border-r"
-      >
+      <TableRow class="*:border-border hover:bg-transparent [&>:not(:last-child)]:border-r">
         <TableCell></TableCell>
         <TableHead
           v-for="browser in items[0]?.desktop"
@@ -135,12 +128,7 @@ const items = [
             class="inline-flex text-emerald-600"
             aria-hidden="true"
           />
-          <LucideX
-            v-else
-            :size="16"
-            class="inline-flex text-red-600"
-            aria-hidden="true"
-          />
+          <LucideX v-else :size="16" class="inline-flex text-red-600" aria-hidden="true" />
           <span class="sr-only">
             {{ browser.supported ? "Supported" : "Not supported" }}
           </span>

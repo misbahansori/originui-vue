@@ -5,9 +5,9 @@ const props = defineProps<{
   component: RegistryItem;
 }>();
 
-const component = await import(
-  `~/registry/default/components/${props.component.name}.vue`
-).then((res) => res.default);
+const component = await import(`~/registry/default/components/${props.component.name}.vue`).then(
+  (res) => res.default,
+);
 </script>
 <template>
   <component :is="component" />

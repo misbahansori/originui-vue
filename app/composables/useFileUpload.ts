@@ -140,11 +140,7 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
 
   const clearFiles = () => {
     files.value.forEach((file) => {
-      if (
-        file.preview &&
-        file.file instanceof File &&
-        file.file.type.startsWith("image/")
-      ) {
+      if (file.preview && file.file instanceof File && file.file.type.startsWith("image/")) {
         URL.revokeObjectURL(file.preview);
       }
     });
@@ -170,11 +166,7 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
       clearFiles();
     }
 
-    if (
-      multiple &&
-      maxFiles !== Infinity &&
-      files.value.length + newFilesArray.length > maxFiles
-    ) {
+    if (multiple && maxFiles !== Infinity && files.value.length + newFilesArray.length > maxFiles) {
       newErrors.push(`You can only upload a maximum of ${maxFiles} files.`);
       errors.value = newErrors;
       return;
@@ -185,8 +177,7 @@ export const useFileUpload = (options: FileUploadOptions = {}) => {
     newFilesArray.forEach((file) => {
       const isDuplicate = files.value.some(
         (existingFile) =>
-          existingFile.file.name === file.name &&
-          existingFile.file.size === file.size,
+          existingFile.file.name === file.name && existingFile.file.size === file.size,
       );
 
       if (isDuplicate) {
@@ -350,7 +341,5 @@ export const formatBytes = (bytes: number, decimals = 2): string => {
 
   const i = Math.floor(Math.log(bytes) / Math.log(k));
 
-  return (
-    Number.parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + (sizes[i] || "")
-  );
+  return Number.parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + (sizes[i] || "");
 };

@@ -10,13 +10,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "checkbox",
-      "label",
-      "login",
-      "authentication",
-      "radix"
-    ]
+    "tags": ["checkbox", "label", "login", "authentication", "radix"]
   },
   "dependencies": [],
   "registryDependencies": [

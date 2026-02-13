@@ -147,11 +147,7 @@ function getFileIcon(extension: string | undefined) {
         :defaultExpanded="['app', '(dashboard)']"
         class="relative before:absolute before:inset-0 before:-ms-1 before:bg-[repeating-linear-gradient(to_right,transparent_0,transparent_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)))]"
       >
-        <TreeItem
-          v-for="item in flattenItems"
-          v-bind="item"
-          v-slot="{ isExpanded }"
-        >
+        <TreeItem v-for="item in flattenItems" v-bind="item" v-slot="{ isExpanded }">
           <TreeItemLabel
             :hasChildren="item.hasChildren"
             class="before:bg-background relative before:absolute before:inset-x-0 before:-inset-y-0.5 before:-z-10"
@@ -168,11 +164,7 @@ function getFileIcon(extension: string | undefined) {
         </TreeItem>
       </Tree>
     </div>
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-xs">
       File editor ∙
       <a
         href="https://reka-ui.com/docs/components/tree"

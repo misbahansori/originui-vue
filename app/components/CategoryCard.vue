@@ -85,11 +85,7 @@ const isComingSoon = computed(() => props.componentsCount === undefined);
 
     <div class="[&_a]:peer-hover:underline">
       <h2>
-        <NuxtLink
-          v-if="!isComingSoon"
-          :to="href"
-          class="text-sm font-medium hover:underline"
-        >
+        <NuxtLink v-if="!isComingSoon" :to="href" class="text-sm font-medium hover:underline">
           {{ name }}
         </NuxtLink>
         <span v-else class="text-sm font-medium">{{ name }}</span>

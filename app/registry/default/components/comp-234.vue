@@ -84,17 +84,8 @@ const options = [
 <template>
   <div class="*:not-first:mt-2">
     <Label>Multiselect</Label>
-    <MultiSelect
-      :options="options"
-      v-model="values"
-      v-model:query="query"
-      hideClearAllButton
-    />
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <MultiSelect :options="options" v-model="values" v-model:query="query" hideClearAllButton />
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Built with reka-ui
       <a
         class="hover:text-foreground underline"

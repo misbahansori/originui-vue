@@ -10,15 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "table",
-      "user",
-      "avatar"
-    ],
+    "tags": ["table", "user", "avatar"],
     "colSpan": 3
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/table.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/table.json"]
 }

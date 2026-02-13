@@ -10,11 +10,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "slider",
-      "label",
-      "radix"
-    ]
+    "tags": ["slider", "label", "radix"]
   },
   "dependencies": [],
   "registryDependencies": [

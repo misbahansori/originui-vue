@@ -49,11 +49,7 @@ const steps = [
         />
       </StepperItem>
     </Stepper>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Vertical stepper with inline titles
     </p>
   </div>

@@ -10,17 +10,10 @@
     }
   ],
   "meta": {
-    "tags": [
-      "tooltip",
-      "button",
-      "kbd",
-      "radix"
-    ],
+    "tags": ["tooltip", "button", "kbd", "radix"],
     "style": 1
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/kbd.json",

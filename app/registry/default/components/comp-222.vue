@@ -43,11 +43,7 @@ const selectedOption = shallowRef(options[0]);
       >
         <SelectValue placeholder="Select framework">
           <template v-if="selectedOption">
-            <component
-              :is="selectedOption.icon"
-              class="size-4"
-              aria-hidden="true"
-            />
+            <component :is="selectedOption.icon" class="size-4" aria-hidden="true" />
             <span class="truncate">{{ selectedOption.label }}</span>
           </template>
         </SelectValue>
@@ -55,11 +51,7 @@ const selectedOption = shallowRef(options[0]);
       <SelectContent
         class="[&_*[role=option]>span>svg]:text-muted-foreground/80 [&_*[role=option]>span]:flex [&_*[role=option]>span]:gap-2 [&_*[role=option]>span>svg]:shrink-0"
       >
-        <SelectItem
-          v-for="option in options"
-          :key="option.value"
-          :value="option"
-        >
+        <SelectItem v-for="option in options" :key="option.value" :value="option">
           <component :is="option.icon" class="size-4" aria-hidden="true" />
           <span class="truncate">{{ option.label }}</span>
         </SelectItem>

@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/registry/default/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/registry/default/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -100,12 +95,8 @@ function getBarColor(direction: string, j: number, height: number) {
     <Card class="mx-auto w-full max-w-sm">
       <CardHeader class="flex min-h-auto items-center justify-between border-0">
         <CardTitle class="flex flex-col items-start gap-0.5">
-          <div class="text-foreground text-lg leading-none font-semibold">
-            Feature Adoption
-          </div>
-          <div class="text-muted-foreground text-sm font-medium">
-            Best adoption report
-          </div>
+          <div class="text-foreground text-lg leading-none font-semibold">Feature Adoption</div>
+          <div class="text-muted-foreground text-sm font-medium">Best adoption report</div>
         </CardTitle>
         <div class="ml-auto">
           <DropdownMenu>
@@ -163,11 +154,7 @@ function getBarColor(direction: string, j: number, height: number) {
         </div>
       </CardContent>
     </Card>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Ported from reui.io feature adoption card
       <a
         class="hover:text-foreground underline"

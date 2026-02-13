@@ -28,8 +28,7 @@ const items = [
     collapsibles: [
       {
         title: "What about performance?",
-        content:
-          "We optimize every component for maximum performance and minimal bundle size.",
+        content: "We optimize every component for maximum performance and minimal bundle size.",
         icon: LucideGauge,
       },
       {
@@ -53,8 +52,7 @@ const items = [
       },
       {
         title: "What about Tailwind support?",
-        content:
-          "We have first-class support for Tailwind CSS with custom utility classes.",
+        content: "We have first-class support for Tailwind CSS with custom utility classes.",
         icon: LucideCircleDashed,
       },
     ],
@@ -73,8 +71,7 @@ const items = [
       },
       {
         title: "How is code splitting handled?",
-        content:
-          "We support automatic code splitting for optimal loading performance.",
+        content: "We support automatic code splitting for optimal loading performance.",
         icon: LucideCircleDashed,
       },
     ],
@@ -86,8 +83,7 @@ const items = [
     collapsibles: [
       {
         title: "Which screen readers are supported?",
-        content:
-          "We test with NVDA, VoiceOver, and JAWS to ensure broad compatibility.",
+        content: "We test with NVDA, VoiceOver, and JAWS to ensure broad compatibility.",
         icon: LucideGauge,
       },
       {
@@ -115,11 +111,7 @@ const items = [
           class="justify-start gap-3 text-[15px] leading-6 font-semibold outline-none hover:no-underline [&>svg]:-order-1"
         >
           <span class="flex items-center gap-3">
-            <component
-              :is="item.icon"
-              class="size-4 shrink-0 opacity-60"
-              aria-hidden="true"
-            />
+            <component :is="item.icon" class="size-4 shrink-0 opacity-60" aria-hidden="true" />
             <span>{{ item.title }}</span>
           </span>
         </AccordionTrigger>

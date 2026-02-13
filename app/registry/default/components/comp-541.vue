@@ -47,14 +47,10 @@ const items = [
       class="group-data-[orientation=horizontal]/timeline:mt-0"
     >
       <TimelineHeader>
-        <TimelineSeparator
-          class="group-data-[orientation=horizontal]/timeline:top-8"
-        />
+        <TimelineSeparator class="group-data-[orientation=horizontal]/timeline:top-8" />
         <TimelineDate class="mb-10">{{ item.date }}</TimelineDate>
         <TimelineTitle>{{ item.title }}</TimelineTitle>
-        <TimelineIndicator
-          class="group-data-[orientation=horizontal]/timeline:top-8"
-        />
+        <TimelineIndicator class="group-data-[orientation=horizontal]/timeline:top-8" />
       </TimelineHeader>
       <TimelineContent>{{ item.description }}</TimelineContent>
     </TimelineItem>

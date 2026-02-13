@@ -18,11 +18,7 @@ const inputValue = ref("");
       v-maska="'AA99 AAA'"
       maxlength="7"
     />
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Built with
       <a
         class="hover:text-foreground underline"

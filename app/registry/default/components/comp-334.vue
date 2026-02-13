@@ -38,12 +38,7 @@ const items = [
   <div class="space-y-4">
     <h2 class="text-xl font-bold">W/ chevron</h2>
     <Accordion type="single" collapsible class="w-full" :default-value="'3'">
-      <AccordionItem
-        v-for="item in items"
-        :key="item.id"
-        :value="item.id"
-        class="py-2"
-      >
+      <AccordionItem v-for="item in items" :key="item.id" :value="item.id" class="py-2">
         <AccordionTrigger
           class="items-center py-2 text-left text-[15px] leading-6 font-semibold hover:no-underline [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg]:rotate-180 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0"
         >

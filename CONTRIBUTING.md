@@ -71,6 +71,7 @@ const id = useId();
 ```
 
 **Important guidelines:**
+
 - Import UI components from `@/registry/default/ui/`
 - Follow Vue 3 Composition API conventions
 - Use TypeScript for type safety
@@ -204,7 +205,9 @@ pnpm registry:build
 ```
 
 The build script automatically:
+
 1. Scan all component files in `app/registry/default/components/`
+
 - Extracts npm dependencies from imports
 - Detects registry dependencies (UI components used)
 - Generates proper file paths
@@ -215,11 +218,13 @@ The build script automatically:
 Before submitting:
 
 1. **Visual testing**: Run the dev server and verify your component displays correctly
+
    ```bash
    pnpm dev
    ```
 
 2. **Build testing**: Ensure the production build works
+
    ```bash
    pnpm build
    ```
@@ -243,6 +248,7 @@ Before submitting:
 ## Questions or Issues?
 
 If you have questions or run into issues:
+
 - Check existing components for reference
 - Review the [README.md](./README.md) for project setup
 - Open an issue on GitHub for discussion

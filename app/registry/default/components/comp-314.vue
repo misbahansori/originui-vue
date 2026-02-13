@@ -30,8 +30,7 @@ import { LucideCircleAlert } from "lucide-vue-next";
         <AlertDialogHeader>
           <AlertDialogTitle>Are you sure?</AlertDialogTitle>
           <AlertDialogDescription>
-            Are you sure you want to delete your account? All your data will be
-            removed.
+            Are you sure you want to delete your account? All your data will be removed.
           </AlertDialogDescription>
         </AlertDialogHeader>
       </div>

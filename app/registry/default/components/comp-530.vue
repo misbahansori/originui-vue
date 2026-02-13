@@ -27,8 +27,7 @@ const items = [
     id: 3,
     date: "Apr 5, 2024",
     title: "Development Sprint",
-    description:
-      "Backend API implementation and frontend component development in progress.",
+    description: "Backend API implementation and frontend component development in progress.",
   },
   {
     id: 4,

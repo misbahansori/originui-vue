@@ -21,9 +21,7 @@ import {
   RangeCalendarPrevButton,
 } from ".";
 
-const props = defineProps<
-  RangeCalendarRootProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<RangeCalendarRootProps & { class?: HTMLAttributes["class"] }>();
 
 const emits = defineEmits<RangeCalendarRootEmits>();
 
@@ -77,10 +75,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
                 :key="weekDate.toString()"
                 :date="weekDate"
               >
-                <RangeCalendarCellTrigger
-                  :day="weekDate"
-                  :month="month.value"
-                />
+                <RangeCalendarCellTrigger :day="weekDate" :month="month.value" />
               </RangeCalendarCell>
             </RangeCalendarGridRow>
           </RangeCalendarGridBody>

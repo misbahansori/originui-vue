@@ -10,12 +10,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "authentication",
-      "extended",
-      "login",
-      "sign in"
-    ],
+    "tags": ["authentication", "extended", "login", "sign in"],
     "colSpan": 3
   },
   "dependencies": [],

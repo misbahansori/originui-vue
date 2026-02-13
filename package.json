@@ -1,8 +1,8 @@
 {
   "name": "originui-vue",
+  "version": "0.1.4",
   "private": true,
   "type": "module",
-  "version": "0.1.4",
   "scripts": {
     "build": "NODE_OPTIONS=--max-old-space-size=8192 nuxt build",
     "dev": "nuxt dev",

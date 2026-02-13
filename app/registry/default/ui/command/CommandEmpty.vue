@@ -5,9 +5,7 @@ import { Primitive } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 import { useCommand } from ".";
 
-const props = defineProps<
-  PrimitiveProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<PrimitiveProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props;
@@ -16,9 +14,7 @@ const delegatedProps = computed(() => {
 });
 
 const { filterState } = useCommand();
-const isRender = computed(
-  () => !!filterState.search && filterState.filtered.count === 0,
-);
+const isRender = computed(() => !!filterState.search && filterState.filtered.count === 0);
 </script>
 
 <template>

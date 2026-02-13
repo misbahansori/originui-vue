@@ -44,9 +44,6 @@
       "type": "registry:ui"
     }
   ],
-  "dependencies": [
-    "lucide-vue-next",
-    "reka-ui"
-  ],
+  "dependencies": ["lucide-vue-next", "reka-ui"],
   "registryDependencies": []
 }

@@ -10,19 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "date",
-      "calendar",
-      "range calendar",
-      "picker",
-      "react aria"
-    ]
+    "tags": ["input", "label", "date", "calendar", "range calendar", "picker", "react aria"]
   },
-  "dependencies": [
-    "@internationalized/date"
-  ],
+  "dependencies": ["@internationalized/date"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/date-range-picker.json",
     "https://www.originui-vue.com/r/label.json"

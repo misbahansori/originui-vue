@@ -49,10 +49,6 @@
       "type": "registry:ui"
     }
   ],
-  "dependencies": [
-    "@vueuse/core",
-    "reka-ui",
-    "lucide-vue-next"
-  ],
+  "dependencies": ["@vueuse/core", "reka-ui", "lucide-vue-next"],
   "registryDependencies": []
 }

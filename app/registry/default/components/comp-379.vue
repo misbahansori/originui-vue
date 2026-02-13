@@ -40,9 +40,7 @@ import {
         </div>
         <div>
           <div class="text-sm font-medium">Text</div>
-          <div class="text-muted-foreground text-xs">
-            Start writing with plain text
-          </div>
+          <div class="text-muted-foreground text-xs">Start writing with plain text</div>
         </div>
       </DropdownMenuItem>
       <DropdownMenuItem>
@@ -66,9 +64,7 @@ import {
         </div>
         <div>
           <div class="text-sm font-medium">Divider</div>
-          <div class="text-muted-foreground text-xs">
-            Visually divide blocks
-          </div>
+          <div class="text-muted-foreground text-xs">Visually divide blocks</div>
         </div>
       </DropdownMenuItem>
       <DropdownMenuItem>
@@ -92,9 +88,7 @@ import {
         </div>
         <div>
           <div class="text-sm font-medium">Heading 2</div>
-          <div class="text-muted-foreground text-xs">
-            Medium section subheading
-          </div>
+          <div class="text-muted-foreground text-xs">Medium section subheading</div>
         </div>
       </DropdownMenuItem>
     </DropdownMenuContent>

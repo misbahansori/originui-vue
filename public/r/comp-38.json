@@ -10,16 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "date",
-      "react aria"
-    ]
+    "tags": ["input", "label", "date", "react aria"]
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/label.json",
     "https://www.originui-vue.com/r/time-field.json"

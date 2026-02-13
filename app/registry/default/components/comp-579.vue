@@ -7,11 +7,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/registry/default/ui/navigation-menu";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
@@ -67,11 +63,7 @@ const navigationLinks = [
                     :key="index"
                     class="w-full"
                   >
-                    <NavigationMenuLink
-                      :href="link.href"
-                      class="py-1.5"
-                      :active="link.active"
-                    >
+                    <NavigationMenuLink :href="link.href" class="py-1.5" :active="link.active">
                       {{ link.label }}
                     </NavigationMenuLink>
                   </NavigationMenuItem>

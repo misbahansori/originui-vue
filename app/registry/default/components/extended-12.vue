@@ -27,13 +27,9 @@ import { Separator } from "@/registry/default/ui/separator";
             alt="Profile image"
           />
         </div>
-        <div
-          class="flex flex-col items-center justify-center gap-1 text-center"
-        >
+        <div class="flex flex-col items-center justify-center gap-1 text-center">
           <h1 class="text-lg/none font-bold">Jane Doe</h1>
-          <p class="text-muted-foreground text-sm font-medium">
-            Full Stack Developer
-          </p>
+          <p class="text-muted-foreground text-sm font-medium">Full Stack Developer</p>
         </div>
       </div>
     </div>
@@ -43,18 +39,12 @@ import { Separator } from "@/registry/default/ui/separator";
           <p class="text-muted-foreground text-xs font-medium">Followers</p>
           <p class="text-xl font-medium tracking-tighter tabular-nums">124K</p>
         </div>
-        <Separator
-          orientation="vertical"
-          class="data-[orientation=vertical]:h-12"
-        />
+        <Separator orientation="vertical" class="data-[orientation=vertical]:h-12" />
         <div class="flex flex-col items-center gap-1 text-center">
           <p class="text-muted-foreground text-xs font-medium">Following</p>
           <p class="text-xl font-medium tracking-tighter tabular-nums">412</p>
         </div>
-        <Separator
-          orientation="vertical"
-          class="data-[orientation=vertical]:h-12"
-        />
+        <Separator orientation="vertical" class="data-[orientation=vertical]:h-12" />
         <div class="flex flex-col items-center gap-1 text-center">
           <p class="text-muted-foreground text-xs font-medium">Posts</p>
           <p class="text-xl font-medium tracking-tighter tabular-nums">124</p>

@@ -16,8 +16,7 @@ const cards = [
     iconColor: "text-green-600",
     title: "Active Projects",
     badge: {
-      color:
-        "bg-green-100 text-green-600 dark:bg-green-950 dark:text-green-400",
+      color: "bg-green-100 text-green-600 dark:bg-green-950 dark:text-green-400",
       icon: LucideTrendingUp,
       iconColor: "text-green-500",
       text: "+12.8%",
@@ -61,16 +60,10 @@ const cards = [
         <Card v-for="(card, i) in cards" :key="i" class="py-4">
           <CardContent class="flex h-full flex-col">
             <div class="mb-4 flex items-center justify-between">
-              <component
-                :is="card.icon"
-                :class="cn('size-6', card.iconColor)"
-              />
+              <component :is="card.icon" :class="cn('size-6', card.iconColor)" />
 
               <Badge :class="cn('rounded-full px-2 py-1', card.badge.color)">
-                <component
-                  :is="card.badge.icon"
-                  :class="`h-3 w-3 ${card.badge.iconColor}`"
-                />
+                <component :is="card.badge.icon" :class="`h-3 w-3 ${card.badge.iconColor}`" />
                 {{ card.badge.text }}
               </Badge>
             </div>
@@ -84,9 +77,7 @@ const cards = [
                   {{ card.value.toLocaleString() }}
                 </div>
               </div>
-              <div
-                class="border-muted text-muted-foreground border-t pt-3 text-xs font-medium"
-              >
+              <div class="border-muted text-muted-foreground border-t pt-3 text-xs font-medium">
                 {{ card.dateRange }}
               </div>
             </div>
@@ -94,11 +85,7 @@ const cards = [
         </Card>
       </div>
     </div>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Ported from reui.io icon statistic cards
       <a
         class="hover:text-foreground underline"

@@ -14,8 +14,6 @@
       "type": "registry:ui"
     }
   ],
-  "dependencies": [
-    "vue-sonner"
-  ],
+  "dependencies": ["vue-sonner"],
   "registryDependencies": []
 }

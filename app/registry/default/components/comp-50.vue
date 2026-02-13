@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { Input } from "@/registry/default/ui/input";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/registry/default/ui/input-group";
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@/registry/default/ui/input-group";
 import { LucideCreditCard } from "lucide-vue-next";
 import { vMaska } from "maska/vue";
 import { ref } from "vue";
@@ -59,11 +55,7 @@ const id = useId();
         </div>
       </div>
     </div>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Built with
       <a
         class="hover:text-foreground underline"

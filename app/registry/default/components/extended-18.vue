@@ -2,12 +2,7 @@
 import { Button } from "@/registry/default/ui/button";
 import { Card, CardContent } from "@/registry/default/ui/card";
 import { Separator } from "@/registry/default/ui/separator";
-import {
-  LucideBookmark,
-  LucideMail,
-  LucideStar,
-  LucideVerified,
-} from "lucide-vue-next";
+import { LucideBookmark, LucideMail, LucideStar, LucideVerified } from "lucide-vue-next";
 </script>
 
 <template>
@@ -39,18 +34,12 @@ import {
           </div>
           <span class="text-xs/none font-medium text-gray-200">Rating</span>
         </div>
-        <Separator
-          orientation="vertical"
-          class="bg-white/20 data-[orientation=vertical]:h-8"
-        />
+        <Separator orientation="vertical" class="bg-white/20 data-[orientation=vertical]:h-8" />
         <div class="flex flex-col items-center gap-1 text-center">
           <p class="text-base/none font-semibold text-white">$42K+</p>
           <span class="text-xs/none font-medium text-gray-200">Earned</span>
         </div>
-        <Separator
-          orientation="vertical"
-          class="bg-white/20 data-[orientation=vertical]:h-8"
-        />
+        <Separator orientation="vertical" class="bg-white/20 data-[orientation=vertical]:h-8" />
         <div class="flex flex-col items-center gap-1 text-center">
           <p class="text-base/none font-semibold text-white">$45/hr</p>
           <span class="text-xs/none font-medium text-gray-200">Rate</span>

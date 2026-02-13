@@ -17,11 +17,7 @@ import {
   type ColumnDef,
   type SortingState,
 } from "@tanstack/vue-table";
-import {
-  ChevronDownIcon,
-  ChevronUpIcon,
-  GripVerticalIcon,
-} from "lucide-vue-next";
+import { ChevronDownIcon, ChevronUpIcon, GripVerticalIcon } from "lucide-vue-next";
 import { h, onMounted, ref } from "vue";
 
 type Item = {
@@ -38,8 +34,7 @@ const columns: ColumnDef<Item>[] = [
   {
     header: "Name",
     accessorKey: "name",
-    cell: ({ row }) =>
-      h("div", { class: "truncate font-medium" }, row.getValue("name")),
+    cell: ({ row }) => h("div", { class: "truncate font-medium" }, row.getValue("name")),
   },
   {
     header: "Email",
@@ -50,11 +45,7 @@ const columns: ColumnDef<Item>[] = [
     accessorKey: "location",
     cell: ({ row }) =>
       h("div", { class: "truncate" }, [
-        h(
-          "span",
-          { class: "text-lg leading-none" },
-          row.original.flag as string,
-        ),
+        h("span", { class: "text-lg leading-none" }, row.original.flag as string),
         " ",
         row.getValue("location") as string,
       ]),
@@ -135,17 +126,10 @@ const table = useVueTable({
                 class="-ml-2 size-7 shadow-none"
                 aria-label="Drag to reorder"
               >
-                <GripVerticalIcon
-                  class="opacity-60"
-                  :size="16"
-                  aria-hidden="true"
-                />
+                <GripVerticalIcon class="opacity-60" :size="16" aria-hidden="true" />
               </Button>
               <span class="grow truncate" v-if="!header.isPlaceholder">
-                <FlexRender
-                  :render="header.column.columnDef.header"
-                  :props="header.getContext()"
-                />
+                <FlexRender :render="header.column.columnDef.header" :props="header.getContext()" />
               </span>
               <Button
                 v-if="header.column.getCanSort()"
@@ -155,10 +139,7 @@ const table = useVueTable({
                 @click="header.column.getToggleSortingHandler()?.($event)"
                 @keydown="
                   (e: KeyboardEvent) => {
-                    if (
-                      header.column.getCanSort() &&
-                      (e.key === 'Enter' || e.key === ' ')
-                    ) {
+                    if (header.column.getCanSort() && (e.key === 'Enter' || e.key === ' ')) {
                       e.preventDefault();
                       header.column.getToggleSortingHandler()?.(e);
                     }
@@ -195,22 +176,13 @@ const table = useVueTable({
             :key="row.id"
             :data-state="row.getIsSelected() && 'selected'"
           >
-            <TableCell
-              v-for="cell in row.getVisibleCells()"
-              :key="cell.id"
-              class="truncate"
-            >
-              <FlexRender
-                :render="cell.column.columnDef.cell"
-                :props="cell.getContext()"
-              />
+            <TableCell v-for="cell in row.getVisibleCells()" :key="cell.id" class="truncate">
+              <FlexRender :render="cell.column.columnDef.cell" :props="cell.getContext()" />
             </TableCell>
           </TableRow>
         </template>
         <TableRow v-else>
-          <TableCell :colspan="columns.length" class="h-24 text-center">
-            No results.
-          </TableCell>
+          <TableCell :colspan="columns.length" class="h-24 text-center">No results.</TableCell>
         </TableRow>
       </TableBody>
     </Table>

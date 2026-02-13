@@ -2,11 +2,7 @@
 import { Button } from "@/registry/default/ui/button";
 import { Checkbox } from "@/registry/default/ui/checkbox";
 import { Label } from "@/registry/default/ui/label";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import { LucideListFilter } from "lucide-vue-next";
 import { useId } from "vue";
 
@@ -49,9 +45,7 @@ const id = useId();
               class="bg-border -mx-3 my-3 h-px"
             ></div>
             <div class="flex justify-between gap-2">
-              <Button size="sm" variant="outline" class="h-7 px-2">
-                Clear
-              </Button>
+              <Button size="sm" variant="outline" class="h-7 px-2">Clear</Button>
               <Button size="sm" class="h-7 px-2">Apply</Button>
             </div>
           </form>
