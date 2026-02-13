@@ -20,7 +20,7 @@
     },
     {
       "path": "ui/empty/EmptyHeader.vue",
-      "content": "<script setup lang=\"ts\">\nimport type { HTMLAttributes } from \"vue\";\nimport { cn } from \"@/lib/utils\";\n\ndefineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"empty-header\"\n    :class=\"\n      cn(\n        'flex max-w-sm flex-col items-center gap-2 text-center',\n        $attrs.class ?? '',\n      )\n    \"\n  >\n    <slot />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport type { HTMLAttributes } from \"vue\";\nimport { cn } from \"@/lib/utils\";\n\ndefineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"empty-header\"\n    :class=\"cn('flex max-w-sm flex-col items-center gap-2 text-center', $attrs.class ?? '')\"\n  >\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {

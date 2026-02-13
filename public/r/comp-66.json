@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-66.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Textarea } from \"@/registry/default/ui/textarea\";\nimport { ref, useId } from \"vue\";\n\nconst textValue = ref(\"\");\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Shorter textarea</Label>\n    <Textarea\n      :id=\"id\"\n      class=\"min-h-0\"\n      v-model=\"textValue\"\n      placeholder=\"Leave a comment\"\n      rows=\"2\"\n    />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Textarea } from \"@/registry/default/ui/textarea\";\nimport { ref, useId } from \"vue\";\n\nconst textValue = ref(\"\");\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Shorter textarea</Label>\n    <Textarea :id=\"id\" class=\"min-h-0\" v-model=\"textValue\" placeholder=\"Leave a comment\" rows=\"2\" />\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

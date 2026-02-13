@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-261.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport { ref } from \"vue\";\n\nconst value = ref([5]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Vertical slider</Label>\n    <div class=\"flex h-40 justify-center\">\n      <Slider\n        v-model=\"value\"\n        :max=\"10\"\n        orientation=\"vertical\"\n        aria-label=\"Vertical slider\"\n      />\n    </div>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport { ref } from \"vue\";\n\nconst value = ref([5]);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-4\">\n    <Label>Vertical slider</Label>\n    <div class=\"flex h-40 justify-center\">\n      <Slider v-model=\"value\" :max=\"10\" orientation=\"vertical\" aria-label=\"Vertical slider\" />\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

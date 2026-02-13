@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "ui/alert/Alert.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\nimport type { AlertVariants } from \".\";\nimport { alertVariants } from \".\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n  variant?: AlertVariants[\"variant\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"alert\"\n    :class=\"cn(alertVariants({ variant }), props.class)\"\n    role=\"alert\"\n  >\n    <slot />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\nimport type { AlertVariants } from \".\";\nimport { alertVariants } from \".\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n  variant?: AlertVariants[\"variant\"];\n}>();\n</script>\n\n<template>\n  <div data-slot=\"alert\" :class=\"cn(alertVariants({ variant }), props.class)\" role=\"alert\">\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {
@@ -15,7 +15,7 @@
     },
     {
       "path": "ui/alert/AlertTitle.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"alert-title\"\n    :class=\"\n      cn(\n        'col-start-2 line-clamp-1 min-h-4 font-medium tracking-tight',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"alert-title\"\n    :class=\"cn('col-start-2 line-clamp-1 min-h-4 font-medium tracking-tight', props.class)\"\n  >\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {

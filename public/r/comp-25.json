@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-25.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@/registry/default/ui/input-group\";\nimport { Kbd } from \"@/registry/default/ui/kbd\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Search input with &lt;kbd&gt;</Label>\n    <InputGroup>\n      <InputGroupInput :id=\"id\" placeholder=\"Search...\" type=\"search\" />\n      <InputGroupAddon align=\"inline-end\">\n        <Kbd\n          class=\"text-muted-foreground/70 bg-background border text-[0.625rem]\"\n        >\n          ⌘K\n        </Kbd>\n      </InputGroupAddon>\n    </InputGroup>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { InputGroup, InputGroupAddon, InputGroupInput } from \"@/registry/default/ui/input-group\";\nimport { Kbd } from \"@/registry/default/ui/kbd\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Search input with &lt;kbd&gt;</Label>\n    <InputGroup>\n      <InputGroupInput :id=\"id\" placeholder=\"Search...\" type=\"search\" />\n      <InputGroupAddon align=\"inline-end\">\n        <Kbd class=\"text-muted-foreground/70 bg-background border text-[0.625rem]\">⌘K</Kbd>\n      </InputGroupAddon>\n    </InputGroup>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

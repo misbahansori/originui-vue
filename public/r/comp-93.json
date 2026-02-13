@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-93.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Kbd } from \"@/registry/default/ui/kbd\";\nimport { LucidePrinter } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Button variant=\"outline\">\n    <LucidePrinter class=\"-ms-1 opacity-60\" :size=\"16\" aria-hidden=\"true\" />\n    Print\n    <Kbd\n      class=\"text-muted-foreground/70 bg-background ms-1 -me-1 border text-[0.625rem]\"\n    >\n      ⌘P\n    </Kbd>\n  </Button>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Kbd } from \"@/registry/default/ui/kbd\";\nimport { LucidePrinter } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Button variant=\"outline\">\n    <LucidePrinter class=\"-ms-1 opacity-60\" :size=\"16\" aria-hidden=\"true\" />\n    Print\n    <Kbd class=\"text-muted-foreground/70 bg-background ms-1 -me-1 border text-[0.625rem]\">⌘P</Kbd>\n  </Button>\n</template>\n",
       "type": "registry:component"
     }
   ],

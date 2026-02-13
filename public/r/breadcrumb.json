@@ -15,12 +15,12 @@
     },
     {
       "path": "ui/breadcrumb/BreadcrumbItem.vue",
-      "content": "<script lang=\"ts\" setup>\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <li\n    data-slot=\"breadcrumb-item\"\n    :class=\"cn('inline-flex items-center gap-1.5', props.class)\"\n  >\n    <slot />\n  </li>\n</template>\n",
+      "content": "<script lang=\"ts\" setup>\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <li data-slot=\"breadcrumb-item\" :class=\"cn('inline-flex items-center gap-1.5', props.class)\">\n    <slot />\n  </li>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "ui/breadcrumb/BreadcrumbLink.vue",
-      "content": "<script lang=\"ts\" setup>\nimport { cn } from \"@/lib/utils\";\nimport type { PrimitiveProps } from \"reka-ui\";\nimport { Primitive } from \"reka-ui\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = withDefaults(\n  defineProps<PrimitiveProps & { class?: HTMLAttributes[\"class\"] }>(),\n  {\n    as: \"a\",\n  },\n);\n</script>\n\n<template>\n  <Primitive\n    data-slot=\"breadcrumb-link\"\n    :as=\"as\"\n    :as-child=\"asChild\"\n    :class=\"cn('hover:text-foreground transition-colors', props.class)\"\n  >\n    <slot />\n  </Primitive>\n</template>\n",
+      "content": "<script lang=\"ts\" setup>\nimport { cn } from \"@/lib/utils\";\nimport type { PrimitiveProps } from \"reka-ui\";\nimport { Primitive } from \"reka-ui\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = withDefaults(defineProps<PrimitiveProps & { class?: HTMLAttributes[\"class\"] }>(), {\n  as: \"a\",\n});\n</script>\n\n<template>\n  <Primitive\n    data-slot=\"breadcrumb-link\"\n    :as=\"as\"\n    :as-child=\"asChild\"\n    :class=\"cn('hover:text-foreground transition-colors', props.class)\"\n  >\n    <slot />\n  </Primitive>\n</template>\n",
       "type": "registry:ui"
     },
     {

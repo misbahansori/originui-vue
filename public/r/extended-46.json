@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/extended-46.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  MiniCalendar,\n  MiniCalendarDay,\n  MiniCalendarDays,\n  MiniCalendarNavigation,\n} from \"@/registry/default/ui/mini-calendar\";\nimport { CalendarDate } from \"@internationalized/date\";\nimport { ref } from \"vue\";\n\nconst selectedDate = ref<CalendarDate>();\n</script>\n\n<template>\n  <div>\n    <MiniCalendar v-model=\"selectedDate\" :days=\"7\" class=\"max-w-2xl\">\n      <MiniCalendarNavigation direction=\"prev\" />\n      <MiniCalendarDays v-slot=\"{ date }\">\n        <MiniCalendarDay :date=\"date\" />\n      </MiniCalendarDays>\n      <MiniCalendarNavigation direction=\"next\" />\n    </MiniCalendar>\n    <p class=\"text-muted-foreground mt-2 text-xs\">\n      Full week view showing 7 days at once\n    </p>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport {\n  MiniCalendar,\n  MiniCalendarDay,\n  MiniCalendarDays,\n  MiniCalendarNavigation,\n} from \"@/registry/default/ui/mini-calendar\";\nimport { CalendarDate } from \"@internationalized/date\";\nimport { ref } from \"vue\";\n\nconst selectedDate = ref<CalendarDate>();\n</script>\n\n<template>\n  <div>\n    <MiniCalendar v-model=\"selectedDate\" :days=\"7\" class=\"max-w-2xl\">\n      <MiniCalendarNavigation direction=\"prev\" />\n      <MiniCalendarDays v-slot=\"{ date }\">\n        <MiniCalendarDay :date=\"date\" />\n      </MiniCalendarDays>\n      <MiniCalendarNavigation direction=\"next\" />\n    </MiniCalendar>\n    <p class=\"text-muted-foreground mt-2 text-xs\">Full week view showing 7 days at once</p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

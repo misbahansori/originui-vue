@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-111.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  ButtonGroup,\n  ButtonGroupSeparator,\n} from \"@/registry/default/ui/button-group\";\nimport { LucideQrCode } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <div class=\"flex items-center justify-center\">\n    <ButtonGroup>\n      <Button size=\"icon\" aria-label=\"QR code\">\n        <LucideQrCode :size=\"16\" aria-hidden=\"true\" />\n      </Button>\n      <ButtonGroupSeparator class=\"bg-primary/70\" />\n      <Button>Sign in</Button>\n    </ButtonGroup>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { ButtonGroup, ButtonGroupSeparator } from \"@/registry/default/ui/button-group\";\nimport { LucideQrCode } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <div class=\"flex items-center justify-center\">\n    <ButtonGroup>\n      <Button size=\"icon\" aria-label=\"QR code\">\n        <LucideQrCode :size=\"16\" aria-hidden=\"true\" />\n      </Button>\n      <ButtonGroupSeparator class=\"bg-primary/70\" />\n      <Button>Sign in</Button>\n    </ButtonGroup>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

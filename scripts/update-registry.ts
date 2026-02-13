@@ -1,7 +1,7 @@
 import { readdir, readFile, writeFile } from "fs/promises";
 import { join } from "path";
 import { glob } from "glob";
-import prettier from "prettier";
+import { format, type FormatOptions } from "oxfmt";
 
 // Types
 interface RegistryFile {
@@ -29,12 +29,6 @@ const PATH_MAPPINGS = [
   { from: "registry/default/ui/", to: "ui/" },
   { from: "registry/default/components/", to: "components/" },
 ] as const;
-
-const PRETTIER_CONFIG = {
-  parser: "json",
-  printWidth: 60,
-  htmlWhitespaceSensitivity: "ignore",
-} satisfies prettier.Options;
 
 // Main functions
 export async function updateRegistryImports(): Promise<void> {
@@ -124,8 +118,6 @@ async function updateFilePaths(
     return { updates };
   }
 
-  let hasChanges = false;
-
   for (const file of data.files) {
     if (!file.path) continue;
 
@@ -133,14 +125,17 @@ async function updateFilePaths(
     if (newPath !== file.path) {
       updates.push({ from: file.path, to: newPath });
       file.path = newPath;
-      hasChanges = true;
     }
   }
 
-  if (hasChanges) {
-    const formattedJson = await prettier.format(JSON.stringify(data), PRETTIER_CONFIG);
-    await writeFile(filePath, formattedJson);
-  }
+  const PRETTIER_CONFIG = {
+    parser: "json",
+    printWidth: 100,
+    htmlWhitespaceSensitivity: "ignore",
+  } satisfies FormatOptions;
+
+  const { code } = await format(filePath, JSON.stringify(data), PRETTIER_CONFIG);
+  await writeFile(filePath, code);
 
   return { updates };
 }

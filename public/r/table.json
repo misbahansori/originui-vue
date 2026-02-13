@@ -5,17 +5,17 @@
   "files": [
     {
       "path": "ui/table/Table.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div data-slot=\"table-container\" class=\"relative w-full overflow-auto\">\n    <table\n      data-slot=\"table\"\n      :class=\"cn('w-full caption-bottom text-sm', props.class)\"\n    >\n      <slot />\n    </table>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div data-slot=\"table-container\" class=\"relative w-full overflow-auto\">\n    <table data-slot=\"table\" :class=\"cn('w-full caption-bottom text-sm', props.class)\">\n      <slot />\n    </table>\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "ui/table/TableBody.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <tbody\n    data-slot=\"table-body\"\n    :class=\"cn('[&_tr:last-child]:border-0', props.class)\"\n  >\n    <slot />\n  </tbody>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <tbody data-slot=\"table-body\" :class=\"cn('[&_tr:last-child]:border-0', props.class)\">\n    <slot />\n  </tbody>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "ui/table/TableCaption.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <caption\n    data-slot=\"table-caption\"\n    :class=\"cn('text-muted-foreground mt-4 text-sm', props.class)\"\n  >\n    <slot />\n  </caption>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <caption data-slot=\"table-caption\" :class=\"cn('text-muted-foreground mt-4 text-sm', props.class)\">\n    <slot />\n  </caption>\n</template>\n",
       "type": "registry:ui"
     },
     {
@@ -25,12 +25,12 @@
     },
     {
       "path": "ui/table/TableEmpty.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport TableCell from \"./TableCell.vue\";\nimport TableRow from \"./TableRow.vue\";\n\nconst props = withDefaults(\n  defineProps<{\n    class?: HTMLAttributes[\"class\"];\n    colspan?: number;\n  }>(),\n  {\n    colspan: 1,\n  },\n);\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <TableRow>\n    <TableCell\n      :class=\"\n        cn(\n          'text-foreground p-4 align-middle text-sm whitespace-nowrap',\n          props.class,\n        )\n      \"\n      v-bind=\"delegatedProps\"\n    >\n      <div class=\"flex items-center justify-center py-10\">\n        <slot />\n      </div>\n    </TableCell>\n  </TableRow>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { computed, type HTMLAttributes } from \"vue\";\nimport TableCell from \"./TableCell.vue\";\nimport TableRow from \"./TableRow.vue\";\n\nconst props = withDefaults(\n  defineProps<{\n    class?: HTMLAttributes[\"class\"];\n    colspan?: number;\n  }>(),\n  {\n    colspan: 1,\n  },\n);\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n\n  return delegated;\n});\n</script>\n\n<template>\n  <TableRow>\n    <TableCell\n      :class=\"cn('text-foreground p-4 align-middle text-sm whitespace-nowrap', props.class)\"\n      v-bind=\"delegatedProps\"\n    >\n      <div class=\"flex items-center justify-center py-10\">\n        <slot />\n      </div>\n    </TableCell>\n  </TableRow>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "ui/table/TableFooter.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <tfoot\n    data-slot=\"table-footer\"\n    :class=\"\n      cn('bg-muted/50 border-t font-medium [&>tr]:last:border-b-0', props.class)\n    \"\n  >\n    <slot />\n  </tfoot>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <tfoot\n    data-slot=\"table-footer\"\n    :class=\"cn('bg-muted/50 border-t font-medium [&>tr]:last:border-b-0', props.class)\"\n  >\n    <slot />\n  </tfoot>\n</template>\n",
       "type": "registry:ui"
     },
     {
@@ -45,7 +45,7 @@
     },
     {
       "path": "ui/table/TableRow.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <tr\n    data-slot=\"table-row\"\n    :class=\"\n      cn(\n        'hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </tr>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <tr\n    data-slot=\"table-row\"\n    :class=\"\n      cn('hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors', props.class)\n    \"\n  >\n    <slot />\n  </tr>\n</template>\n",
       "type": "registry:ui"
     },
     {

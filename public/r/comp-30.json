@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-30.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">File input</Label>\n    <Input\n      :id=\"id\"\n      class=\"p-0 pe-3 file:me-3 file:border-0 file:border-e\"\n      type=\"file\"\n    />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">File input</Label>\n    <Input :id=\"id\" class=\"p-0 pe-3 file:me-3 file:border-0 file:border-e\" type=\"file\" />\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

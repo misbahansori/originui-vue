@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-396.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n} from \"@/registry/default/ui/avatar\";\n</script>\n\n<template>\n  <div class=\"relative\">\n    <Avatar class=\"rounded-md\">\n      <AvatarImage src=\"./avatar-80-07.jpg\" alt=\"Kelly King\" />\n      <AvatarFallback>KK</AvatarFallback>\n    </Avatar>\n    <span\n      class=\"border-background absolute -end-1 -top-1 size-3 rounded-full border-2 bg-emerald-500\"\n    >\n      <span class=\"sr-only\">Online</span>\n    </span>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/registry/default/ui/avatar\";\n</script>\n\n<template>\n  <div class=\"relative\">\n    <Avatar class=\"rounded-md\">\n      <AvatarImage src=\"./avatar-80-07.jpg\" alt=\"Kelly King\" />\n      <AvatarFallback>KK</AvatarFallback>\n    </Avatar>\n    <span\n      class=\"border-background absolute -end-1 -top-1 size-3 rounded-full border-2 bg-emerald-500\"\n    >\n      <span class=\"sr-only\">Online</span>\n    </span>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

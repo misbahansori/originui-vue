@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-10.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@/registry/default/ui/input-group\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { LucideMail } from \"lucide-vue-next\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with end icon</Label>\n    <InputGroup>\n      <InputGroupInput :id=\"id\" placeholder=\"Email\" type=\"email\" />\n      <InputGroupAddon align=\"inline-end\">\n        <LucideMail :size=\"16\" aria-hidden=\"true\" />\n      </InputGroupAddon>\n    </InputGroup>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { InputGroup, InputGroupAddon, InputGroupInput } from \"@/registry/default/ui/input-group\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { LucideMail } from \"lucide-vue-next\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with end icon</Label>\n    <InputGroup>\n      <InputGroupInput :id=\"id\" placeholder=\"Email\" type=\"email\" />\n      <InputGroupAddon align=\"inline-end\">\n        <LucideMail :size=\"16\" aria-hidden=\"true\" />\n      </InputGroupAddon>\n    </InputGroup>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
