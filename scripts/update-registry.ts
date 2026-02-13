@@ -1,7 +1,6 @@
 import { readdir, readFile, writeFile } from "fs/promises";
 import { join } from "path";
 import { glob } from "glob";
-import { format, type FormatOptions } from "oxfmt";
 
 // Types
 interface RegistryFile {
@@ -128,14 +127,7 @@ async function updateFilePaths(
     }
   }
 
-  const PRETTIER_CONFIG = {
-    parser: "json",
-    printWidth: 100,
-    htmlWhitespaceSensitivity: "ignore",
-  } satisfies FormatOptions;
-
-  const { code } = await format(filePath, JSON.stringify(data), PRETTIER_CONFIG);
-  await writeFile(filePath, code);
+  await writeFile(filePath, JSON.stringify(data, null, 2));
 
   return { updates };
 }

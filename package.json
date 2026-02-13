@@ -10,7 +10,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "start": "node .output/server/index.mjs",
-    "registry:build": "npx shadcn-vue@latest build registry.json && npx shadcn-vue@latest build registry-extended.json && npx tsx scripts/post-build.ts",
+    "registry:build": "npx shadcn-vue@latest build registry.json && npx shadcn-vue@latest build registry-extended.json && npx tsx scripts/post-build.ts && oxfmt",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check"
   },
