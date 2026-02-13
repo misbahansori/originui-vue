@@ -15,10 +15,7 @@ const options = [
 <template>
   <div class="*:not-first:mt-2">
     <Label>Listbox with single option</Label>
-    <ListboxRoot
-      class="border-input overflow-hidden rounded-md border"
-      v-model="selectedKeys"
-    >
+    <ListboxRoot class="border-input overflow-hidden rounded-md border" v-model="selectedKeys">
       <ListboxContent
         class="bg-background space-y-1 p-1 text-sm shadow-xs transition-[color,box-shadow]"
         aria-label="Select framework"
@@ -34,11 +31,7 @@ const options = [
         </ListboxItem>
       </ListboxContent>
     </ListboxRoot>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Built with reka-ui
       <a
         class="hover:text-foreground underline"

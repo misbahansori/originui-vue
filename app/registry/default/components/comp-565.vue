@@ -15,11 +15,7 @@ const items: Item[] = [
         children: [
           {
             name: "Design System",
-            children: [
-              { name: "Components" },
-              { name: "Tokens" },
-              { name: "Guidelines" },
-            ],
+            children: [{ name: "Components" }, { name: "Tokens" }, { name: "Guidelines" }],
           },
           { name: "Web Platform" },
         ],
@@ -56,11 +52,7 @@ const items: Item[] = [
         </TreeItemLabel>
       </TreeItem>
     </Tree>
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-xs">
       Basic tree with no extra features ∙
       <a
         href="https://reka-ui.com/docs/components/tree"

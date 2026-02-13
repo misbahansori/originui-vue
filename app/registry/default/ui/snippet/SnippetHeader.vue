@@ -19,10 +19,7 @@ const props = withDefaults(defineProps<Props>(), {
     :as="as"
     :as-child="asChild"
     :class="
-      cn(
-        'bg-secondary flex flex-row items-center justify-between border-b p-1.5',
-        props.class,
-      )
+      cn('bg-secondary flex flex-row items-center justify-between border-b p-1.5', props.class)
     "
   >
     <slot />

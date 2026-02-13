@@ -5,15 +5,12 @@
   "files": [
     {
       "path": "components/comp-14.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  ButtonGroup,\n  ButtonGroupText,\n} from \"@/registry/default/ui/button-group\";\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with start add-on</Label>\n    <ButtonGroup class=\"w-full\">\n      <ButtonGroupText\n        class=\"text-muted-foreground bg-background border-input px-3\"\n      >\n        https://\n      </ButtonGroupText>\n      <Input :id=\"id\" class=\"-ms-px\" placeholder=\"google.com\" type=\"text\" />\n    </ButtonGroup>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { ButtonGroup, ButtonGroupText } from \"@/registry/default/ui/button-group\";\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with start add-on</Label>\n    <ButtonGroup class=\"w-full\">\n      <ButtonGroupText class=\"text-muted-foreground bg-background border-input px-3\">\n        https://\n      </ButtonGroupText>\n      <Input :id=\"id\" class=\"-ms-px\" placeholder=\"google.com\" type=\"text\" />\n    </ButtonGroup>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label"
-    ]
+    "tags": ["input", "label"]
   },
   "dependencies": [],
   "registryDependencies": [

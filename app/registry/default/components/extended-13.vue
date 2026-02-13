@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/default/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/registry/default/ui/card";
 
 const cards = [
   {
@@ -48,19 +43,11 @@ const cards = [
 
 <template>
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
-    <Card
-      v-for="card in cards"
-      :key="card.title"
-      :class="cn('gap-2 p-2', card.class)"
-    >
+    <Card v-for="card in cards" :key="card.title" :class="cn('gap-2 p-2', card.class)">
       <div
         class="flex h-56 w-full items-center justify-center overflow-hidden rounded-md border bg-stone-900"
       >
-        <img
-          :src="card.img"
-          alt="card image"
-          class="h-auto w-auto object-cover"
-        />
+        <img :src="card.img" alt="card image" class="h-auto w-auto object-cover" />
       </div>
       <CardHeader class="p-2">
         <CardTitle class="text-lg font-semibold">{{ card.title }}</CardTitle>

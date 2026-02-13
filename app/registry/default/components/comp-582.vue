@@ -18,11 +18,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/registry/default/ui/navigation-menu";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import {
   Select,
   SelectContent,
@@ -128,21 +124,14 @@ const id = useId();
           <NavigationMenu class="hidden md:flex">
             <NavigationMenuList class="gap-2">
               <TooltipProvider>
-                <NavigationMenuItem
-                  v-for="link in navigationLinks"
-                  :key="link.label"
-                >
+                <NavigationMenuItem v-for="link in navigationLinks" :key="link.label">
                   <Tooltip>
                     <TooltipTrigger as-child>
                       <NavigationMenuLink
                         :href="link.href"
                         class="flex size-8 items-center justify-center p-1.5"
                       >
-                        <component
-                          :is="link.icon"
-                          :size="20"
-                          aria-hidden="true"
-                        />
+                        <component :is="link.icon" :size="20" aria-hidden="true" />
                         <span class="sr-only">{{ link.label }}</span>
                       </NavigationMenuLink>
                     </TooltipTrigger>
@@ -173,11 +162,7 @@ const id = useId();
           <SelectContent
             class="[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2 [&_*[role=option]>span]:flex [&_*[role=option]>span]:items-center [&_*[role=option]>span]:gap-2"
           >
-            <SelectItem
-              v-for="lang in languages"
-              :key="lang.value"
-              :value="lang.value"
-            >
+            <SelectItem v-for="lang in languages" :key="lang.value" :value="lang.value">
               <span class="flex items-center gap-2">
                 <span class="truncate">{{ lang.label }}</span>
               </span>

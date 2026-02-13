@@ -132,17 +132,12 @@ const minValue = Math.min(...items.map((item) => item.price));
 const maxValue = Math.max(...items.map((item) => item.price));
 const priceStep = computed(() => (maxValue - minValue) / tickCount);
 
-const {
-  sliderValues,
-  inputValues,
-  validateAndUpdateValue,
-  handleSliderChange,
-  handleInputChange,
-} = useSliderWithInput({
-  minValue,
-  maxValue,
-  initialValue: [200, 780],
-});
+const { sliderValues, inputValues, validateAndUpdateValue, handleSliderChange, handleInputChange } =
+  useSliderWithInput({
+    minValue,
+    maxValue,
+    initialValue: [200, 780],
+  });
 
 const itemCounts = computed(() => {
   return Array(tickCount)
@@ -150,9 +145,7 @@ const itemCounts = computed(() => {
     .map((_, tick) => {
       const rangeMin = minValue + tick * priceStep.value;
       const rangeMax = minValue + (tick + 1) * priceStep.value;
-      return items.filter(
-        (item) => item.price >= rangeMin && item.price < rangeMax,
-      ).length;
+      return items.filter((item) => item.price >= rangeMin && item.price < rangeMax).length;
     });
 });
 
@@ -191,10 +184,7 @@ function countItemsInRange(min: number, max: number) {
             height: `${(count / maxCount) * 100}%`,
           }"
         >
-          <span
-            :data-selected="isBarInSelectedRange(i)"
-            class="bg-primary/20 h-full w-full"
-          ></span>
+          <span :data-selected="isBarInSelectedRange(i)" class="bg-primary/20 h-full w-full"></span>
         </div>
       </div>
       <Slider

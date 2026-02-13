@@ -25,10 +25,7 @@ const now = today(getLocalTimeZone());
     :side-offset="4"
     class="bg-background text-popover-foreground data-entering:animate-in data-exiting:animate-out data-[entering]:fade-in-0 data-[exiting]:fade-out-0 data-[entering]:zoom-in-95 data-[exiting]:zoom-out-95 data-[placement=bottom]:slide-in-from-top-2 data-[placement=left]:slide-in-from-right-2 data-[placement=right]:slide-in-from-left-2 data-[placement=top]:slide-in-from-bottom-2 z-50 rounded-lg border shadow-lg outline-hidden"
   >
-    <DatePickerCalendar
-      v-slot="{ weekDays, grid }"
-      class="max-h-[inherit] overflow-auto p-2"
-    >
+    <DatePickerCalendar v-slot="{ weekDays, grid }" class="max-h-[inherit] overflow-auto p-2">
       <DatePickerHeader class="flex w-full items-center gap-1 pb-1">
         <DatePickerPrev
           class="text-muted-foreground/80 hover:bg-accent hover:text-foreground focus-visible:ring-ring/50 flex size-9 items-center justify-center rounded-md transition-[color,box-shadow] outline-none focus-visible:ring-[3px]"

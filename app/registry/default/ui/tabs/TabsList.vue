@@ -3,9 +3,7 @@ import { cn } from "@/lib/utils";
 import { TabsList, type TabsListProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
-const props = defineProps<
-  TabsListProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<TabsListProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props;

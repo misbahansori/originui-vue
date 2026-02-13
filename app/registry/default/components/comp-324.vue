@@ -9,11 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/registry/default/ui/dialog";
-import {
-  PinInput,
-  PinInputGroup,
-  PinInputInput,
-} from "@/registry/default/ui/pin-input";
+import { PinInput, PinInputGroup, PinInputInput } from "@/registry/default/ui/pin-input";
 import { ref, watch } from "vue";
 
 const CORRECT_CODE = "6548";
@@ -85,11 +81,7 @@ async function onSubmit() {
       <template v-else>
         <div class="space-y-4">
           <div class="flex justify-center">
-            <PinInput
-              v-model="otpValues"
-              @complete="onSubmit"
-              class="flex items-center gap-3"
-            >
+            <PinInput v-model="otpValues" @complete="onSubmit" class="flex items-center gap-3">
               <PinInputGroup class="flex items-center gap-3">
                 <PinInputInput
                   v-for="(id, index) in 4"

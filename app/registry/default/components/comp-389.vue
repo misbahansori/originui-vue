@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import { computed, ref } from "vue";
 
 interface TourStep {
@@ -99,10 +95,7 @@ const currentStep = computed(() => {
             <span class="text-muted-foreground text-xs">
               {{ currentTip + 1 }}/{{ tourSteps.length }}
             </span>
-            <button
-              class="text-xs font-medium hover:underline"
-              @click="handleNavigation"
-            >
+            <button class="text-xs font-medium hover:underline" @click="handleNavigation">
               {{ currentTip === tourSteps.length - 1 ? "Start over" : "Next" }}
             </button>
           </div>

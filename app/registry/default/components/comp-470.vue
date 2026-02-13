@@ -66,9 +66,7 @@ const items = [
         </TableRow>
       </TableHeader>
       <tbody aria-hidden="true" class="table-row h-2"></tbody>
-      <TableBody
-        class="[&_td:first-child]:rounded-l-lg [&_td:last-child]:rounded-r-lg"
-      >
+      <TableBody class="[&_td:first-child]:rounded-l-lg [&_td:last-child]:rounded-r-lg">
         <TableRow
           v-for="item in items"
           :key="item.id"

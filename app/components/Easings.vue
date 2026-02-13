@@ -66,18 +66,11 @@ const filteredEasings = computed(() => {
     const name = easing.name.toLowerCase();
     switch (easingFilter.value) {
       case "in":
-        return (
-          (name.startsWith("ease-in") && !name.includes("in-out")) ||
-          name === "ease-in"
-        );
+        return (name.startsWith("ease-in") && !name.includes("in-out")) || name === "ease-in";
       case "out":
         return name.startsWith("ease-out") || name === "ease-out";
       case "in-out":
-        return (
-          name.startsWith("ease-in-out") ||
-          name === "ease-in-out" ||
-          name === "ease"
-        );
+        return name.startsWith("ease-in-out") || name === "ease-in-out" || name === "ease";
       default:
         return true;
     }
@@ -88,9 +81,7 @@ const filteredEasings = computed(() => {
 <template>
   <div class="mb-12 space-y-6">
     <div class="py-4">
-      <div
-        class="flex flex-col justify-between gap-4 md:flex-row md:items-center"
-      >
+      <div class="flex flex-col justify-between gap-4 md:flex-row md:items-center">
         <div class="flex flex-col gap-2">
           <Label>Duration</Label>
           <div class="flex items-center gap-4">
@@ -178,9 +169,7 @@ const filteredEasings = computed(() => {
         </div>
 
         <div class="flex items-center justify-center gap-2 pb-5">
-          <CopyClass
-            :value="`ease-[cubic-bezier(${easing.points.join(',')})]`"
-          />
+          <CopyClass :value="`ease-[cubic-bezier(${easing.points.join(',')})]`" />
         </div>
       </div>
     </div>

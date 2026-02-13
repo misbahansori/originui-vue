@@ -10,11 +10,6 @@ const id = useId();
 <template>
   <div class="*:not-first:mt-2">
     <Label :for="id">Textarea with no resize</Label>
-    <Textarea
-      :id="id"
-      class="[resize:none]"
-      v-model="textValue"
-      placeholder="Leave a comment"
-    />
+    <Textarea :id="id" class="[resize:none]" v-model="textValue" placeholder="Leave a comment" />
   </div>
 </template>

@@ -130,8 +130,7 @@ const easings = [
 <template>
   <div>
     <PageHeader title="Tailwind CSS easing classes">
-      A set of easing functions ready to copy and paste into your Tailwind CSS
-      project.
+      A set of easing functions ready to copy and paste into your Tailwind CSS project.
     </PageHeader>
 
     <div class="flex flex-col gap-6">

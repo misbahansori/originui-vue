@@ -5,9 +5,7 @@ import { buttonVariants } from "@/registry/default/ui/button";
 
 <template>
   <div class="mt-16 text-center md:mt-20">
-    <h2
-      class="font-heading text-foreground mb-6 text-3xl/[1.1] font-bold tracking-tight"
-    >
+    <h2 class="font-heading text-foreground mb-6 text-3xl/[1.1] font-bold tracking-tight">
       Didn't find what you were looking for?
     </h2>
     <NuxtLink

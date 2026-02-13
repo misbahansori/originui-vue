@@ -27,10 +27,7 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
     :showEdges="true"
     :siblingCount="0"
   >
-    <PaginationContent
-      class="flex w-full items-center justify-center gap-1"
-      v-slot="{ items }"
-    >
+    <PaginationContent class="flex w-full items-center justify-center gap-1" v-slot="{ items }">
       <p class="text-muted-foreground text-sm" aria-live="polite">
         Page
         <span class="text-foreground">{{ page }}</span>
@@ -42,15 +39,8 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
           <LucideChevronLeft aria-hidden="true" class="size-4" />
         </PaginationPrevious>
         <template v-for="item in items">
-          <PaginationItem
-            v-if="item.type === 'page'"
-            :value="item.value"
-            asChild
-          >
-            <Button
-              :variant="item.value === page ? 'outline' : 'ghost'"
-              class="size-9"
-            >
+          <PaginationItem v-if="item.type === 'page'" :value="item.value" asChild>
+            <Button :variant="item.value === page ? 'outline' : 'ghost'" class="size-9">
               {{ item.value }}
             </Button>
           </PaginationItem>
@@ -62,10 +52,7 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
       </div>
       <div className="flex flex-1 justify-end">
         <Select defaultValue="10" aria-label="Results per page">
-          <SelectTrigger
-            id="results-per-page"
-            class="w-fit whitespace-break-spaces"
-          >
+          <SelectTrigger id="results-per-page" class="w-fit whitespace-break-spaces">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>

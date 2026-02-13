@@ -9,9 +9,7 @@ const max_price = 1240;
 const value = ref([min_price, max_price]);
 
 const formatPrice = (price: number) => {
-  return price === max_price
-    ? `$${price.toLocaleString()}+`
-    : `$${price.toLocaleString()}`;
+  return price === max_price ? `$${price.toLocaleString()}+` : `$${price.toLocaleString()}`;
 };
 </script>
 
@@ -22,12 +20,7 @@ const formatPrice = (price: number) => {
       {{ formatPrice(value[1] || max_price) }}
     </Label>
     <div class="flex items-center gap-4">
-      <Slider
-        v-model="value"
-        :min="min_price"
-        :max="max_price"
-        aria-label="Price range slider"
-      />
+      <Slider v-model="value" :min="min_price" :max="max_price" aria-label="Price range slider" />
       <Button variant="outline">Go</Button>
     </div>
   </div>

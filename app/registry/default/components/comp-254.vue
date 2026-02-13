@@ -39,21 +39,14 @@ const {
               <Button
                 size="icon"
                 variant="ghost"
-                :class="
-                  cn(
-                    'size-7 transition-opacity',
-                    showReset ? 'opacity-100' : 'opacity-0',
-                  )
-                "
+                :class="cn('size-7 transition-opacity', showReset ? 'opacity-100' : 'opacity-0')"
                 aria-label="Reset"
                 @click="resetToDefault"
               >
                 <LucideRotateCcw :size="16" aria-hidden="true" />
               </Button>
             </TooltipTrigger>
-            <TooltipContent class="px-2 py-1 text-xs">
-              Reset to default
-            </TooltipContent>
+            <TooltipContent class="px-2 py-1 text-xs">Reset to default</TooltipContent>
           </Tooltip>
         </TooltipProvider>
         <Input

@@ -52,11 +52,7 @@ const steps = [
         />
       </StepperItem>
     </Stepper>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Stepper with titles and descriptions
     </p>
   </div>

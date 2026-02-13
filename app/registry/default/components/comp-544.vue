@@ -6,11 +6,10 @@ import { computed } from "vue";
 const maxSizeMB = 5;
 const maxSize = maxSizeMB * 1024 * 1024; // 5MB default
 
-const { files, errors, openFileDialog, removeFile, dropzoneRef, inputRef } =
-  useFileUpload({
-    accept: "image/*",
-    maxSize,
-  });
+const { files, errors, openFileDialog, removeFile, dropzoneRef, inputRef } = useFileUpload({
+  accept: "image/*",
+  maxSize,
+});
 
 const currentFile = computed(() => files.value?.[0]);
 </script>
@@ -33,22 +32,15 @@ const currentFile = computed(() => files.value?.[0]);
             class="size-full object-cover"
           />
         </div>
-        <div
-          v-else
-          class="flex flex-col items-center justify-center px-4 py-3 text-center"
-        >
+        <div v-else class="flex flex-col items-center justify-center px-4 py-3 text-center">
           <div
             class="bg-background mb-2 flex size-11 shrink-0 items-center justify-center rounded-full border"
             aria-hidden="true"
           >
             <LucideImageUp class="size-4 opacity-60" />
           </div>
-          <p class="mb-1.5 text-sm font-medium">
-            Drop your image here or click to browse
-          </p>
-          <p class="text-muted-foreground text-xs">
-            Max size: {{ maxSizeMB }}MB
-          </p>
+          <p class="mb-1.5 text-sm font-medium">Drop your image here or click to browse</p>
+          <p class="text-muted-foreground text-xs">Max size: {{ maxSizeMB }}MB</p>
         </div>
       </div>
       <div v-if="currentFile" class="absolute top-3 right-3">
@@ -72,11 +64,7 @@ const currentFile = computed(() => files.value?.[0]);
       <span>{{ errors[0] }}</span>
     </div>
 
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-center text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-center text-xs">
       Single image uploader w/ max size
     </p>
   </div>

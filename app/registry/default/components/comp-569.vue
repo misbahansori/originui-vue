@@ -16,11 +16,7 @@ const items: Item[] = [
         children: [
           {
             name: "Design System",
-            children: [
-              { name: "Components" },
-              { name: "Tokens" },
-              { name: "Guidelines" },
-            ],
+            children: [{ name: "Components" }, { name: "Tokens" }, { name: "Guidelines" }],
           },
           { name: "Web Platform" },
         ],
@@ -54,11 +50,7 @@ const items: Item[] = [
         class="relative before:absolute before:inset-0 before:-ms-1 before:bg-[repeating-linear-gradient(to_right,transparent_0,transparent_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)-1px),var(--border)_calc(var(--tree-indent)))]"
         multiple
       >
-        <TreeItem
-          v-for="item in flattenItems"
-          v-bind="item"
-          v-slot="{ isExpanded }"
-        >
+        <TreeItem v-for="item in flattenItems" v-bind="item" v-slot="{ isExpanded }">
           <TreeItemLabel
             :hasChildren="item.hasChildren"
             class="before:bg-background relative before:absolute before:inset-x-0 before:-inset-y-0.5 before:-z-10"
@@ -69,10 +61,7 @@ const items: Item[] = [
                   v-if="isExpanded"
                   class="text-muted-foreground pointer-events-none size-4"
                 />
-                <LucideFolder
-                  v-else
-                  class="text-muted-foreground pointer-events-none size-4"
-                />
+                <LucideFolder v-else class="text-muted-foreground pointer-events-none size-4" />
               </template>
               {{ item.value.name }}
             </span>
@@ -80,11 +69,7 @@ const items: Item[] = [
         </TreeItem>
       </Tree>
     </div>
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-xs">
       Tree with multi-select∙
       <a
         href="https://reka-ui.com/docs/components/tree"

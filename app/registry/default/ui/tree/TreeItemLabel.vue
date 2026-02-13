@@ -20,9 +20,7 @@ const props = defineProps<{
     "
   >
     <template v-if="hasChildren">
-      <LucideChevronDown
-        class="text-muted-foreground size-4 in-aria-[expanded=false]:-rotate-90"
-      />
+      <LucideChevronDown class="text-muted-foreground size-4 in-aria-[expanded=false]:-rotate-90" />
     </template>
     <slot />
   </span>

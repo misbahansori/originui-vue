@@ -5,25 +5,14 @@
   "files": [
     {
       "path": "components/comp-125.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideCircleUserRound } from \"lucide-vue-next\";\n\nconst file = shallowRef<File | null>(null);\nconst previewUrl = useObjectUrl(file);\nconst inputRef = useTemplateRef(\"fileInput\");\n\nfunction handleButtonClick() {\n  if (inputRef.value) {\n    inputRef.value.click();\n  }\n}\n\nfunction handleFileChange(event: Event) {\n  const input = event.target as HTMLInputElement;\n  if (input.files?.[0]) {\n    file.value = input.files[0];\n  }\n}\n</script>\n\n<template>\n  <div>\n    <div class=\"inline-flex items-center gap-2 align-top\">\n      <div\n        class=\"border-input relative flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-md border\"\n        :aria-label=\"\n          previewUrl ? 'Preview of uploaded image' : 'Default user avatar'\n        \"\n      >\n        <img\n          v-if=\"previewUrl\"\n          class=\"h-full w-full object-cover\"\n          :src=\"previewUrl\"\n          alt=\"Preview of uploaded image\"\n          width=\"32\"\n          height=\"32\"\n        />\n        <div v-else aria-hidden=\"true\" class=\"flex items-center justify-center\">\n          <LucideCircleUserRound class=\"opacity-60\" :size=\"16\" />\n        </div>\n      </div>\n      <div class=\"relative inline-block\">\n        <Button @click=\"handleButtonClick\" aria-haspopup=\"dialog\">\n          {{ file ? \"Change image\" : \"Upload image\" }}\n        </Button>\n        <input\n          type=\"file\"\n          ref=\"fileInput\"\n          @change=\"handleFileChange\"\n          class=\"hidden\"\n          accept=\"image/*\"\n          aria-label=\"Upload image file\"\n        />\n      </div>\n    </div>\n    <div v-if=\"file\" class=\"mt-2\">\n      <div class=\"inline-flex gap-2 text-xs\">\n        <p class=\"text-muted-foreground truncate\" aria-live=\"polite\">\n          {{ file.name }}\n        </p>\n        <button\n          @click=\"() => (file = null)\"\n          class=\"font-medium text-red-500 hover:underline\"\n          :aria-label=\"`Remove ${file.name}`\"\n        >\n          Remove\n        </button>\n      </div>\n    </div>\n    <div class=\"sr-only\" aria-live=\"polite\" role=\"status\">\n      {{\n        previewUrl\n          ? \"Image uploaded and preview available\"\n          : \"No image uploaded\"\n      }}\n    </div>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideCircleUserRound } from \"lucide-vue-next\";\n\nconst file = shallowRef<File | null>(null);\nconst previewUrl = useObjectUrl(file);\nconst inputRef = useTemplateRef(\"fileInput\");\n\nfunction handleButtonClick() {\n  if (inputRef.value) {\n    inputRef.value.click();\n  }\n}\n\nfunction handleFileChange(event: Event) {\n  const input = event.target as HTMLInputElement;\n  if (input.files?.[0]) {\n    file.value = input.files[0];\n  }\n}\n</script>\n\n<template>\n  <div>\n    <div class=\"inline-flex items-center gap-2 align-top\">\n      <div\n        class=\"border-input relative flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-md border\"\n        :aria-label=\"previewUrl ? 'Preview of uploaded image' : 'Default user avatar'\"\n      >\n        <img\n          v-if=\"previewUrl\"\n          class=\"h-full w-full object-cover\"\n          :src=\"previewUrl\"\n          alt=\"Preview of uploaded image\"\n          width=\"32\"\n          height=\"32\"\n        />\n        <div v-else aria-hidden=\"true\" class=\"flex items-center justify-center\">\n          <LucideCircleUserRound class=\"opacity-60\" :size=\"16\" />\n        </div>\n      </div>\n      <div class=\"relative inline-block\">\n        <Button @click=\"handleButtonClick\" aria-haspopup=\"dialog\">\n          {{ file ? \"Change image\" : \"Upload image\" }}\n        </Button>\n        <input\n          type=\"file\"\n          ref=\"fileInput\"\n          @change=\"handleFileChange\"\n          class=\"hidden\"\n          accept=\"image/*\"\n          aria-label=\"Upload image file\"\n        />\n      </div>\n    </div>\n    <div v-if=\"file\" class=\"mt-2\">\n      <div class=\"inline-flex gap-2 text-xs\">\n        <p class=\"text-muted-foreground truncate\" aria-live=\"polite\">\n          {{ file.name }}\n        </p>\n        <button\n          @click=\"() => (file = null)\"\n          class=\"font-medium text-red-500 hover:underline\"\n          :aria-label=\"`Remove ${file.name}`\"\n        >\n          Remove\n        </button>\n      </div>\n    </div>\n    <div class=\"sr-only\" aria-live=\"polite\" role=\"status\">\n      {{ previewUrl ? \"Image uploaded and preview available\" : \"No image uploaded\" }}\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "upload",
-      "user",
-      "avatar",
-      "profile",
-      "image"
-    ],
+    "tags": ["button", "upload", "user", "avatar", "profile", "image"],
     "style": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/button.json"
-  ]
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
 }

@@ -5,12 +5,9 @@ import { ListboxRoot, useFilter, useForwardPropsEmits } from "reka-ui";
 import { computed, type HTMLAttributes, reactive, ref, watch } from "vue";
 import { provideCommandContext } from ".";
 
-const props = withDefaults(
-  defineProps<ListboxRootProps & { class?: HTMLAttributes["class"] }>(),
-  {
-    modelValue: "",
-  },
-);
+const props = withDefaults(defineProps<ListboxRootProps & { class?: HTMLAttributes["class"] }>(), {
+  modelValue: "",
+});
 
 const emits = defineEmits<ListboxRootEmits>();
 

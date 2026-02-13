@@ -5,20 +5,15 @@
   "files": [
     {
       "path": "components/comp-358.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/registry/default/ui/tooltip\";\nimport { LucideGlobe } from \"lucide-vue-next\";\n</script>\n<template>\n  <TooltipProvider :delay-duration=\"0\">\n    <Tooltip>\n      <TooltipTrigger as-child>\n        <Button variant=\"outline\" size=\"sm\">W/ icon</Button>\n      </TooltipTrigger>\n      <TooltipContent class=\"dark py-3\">\n        <div class=\"flex gap-3\">\n          <LucideGlobe\n            class=\"mt-0.5 size-4 shrink-0 opacity-60\"\n            aria-hidden=\"true\"\n          />\n          <div class=\"space-y-1\">\n            <p class=\"text-[13px] font-medium\">Tooltip with title and icon</p>\n            <p class=\"text-muted-foreground text-xs\">\n              Tooltips are made to be highly customizable, with features like\n              dynamic placement, rich content, and a robust API.\n            </p>\n          </div>\n        </div>\n      </TooltipContent>\n    </Tooltip>\n  </TooltipProvider>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/registry/default/ui/tooltip\";\nimport { LucideGlobe } from \"lucide-vue-next\";\n</script>\n<template>\n  <TooltipProvider :delay-duration=\"0\">\n    <Tooltip>\n      <TooltipTrigger as-child>\n        <Button variant=\"outline\" size=\"sm\">W/ icon</Button>\n      </TooltipTrigger>\n      <TooltipContent class=\"dark py-3\">\n        <div class=\"flex gap-3\">\n          <LucideGlobe class=\"mt-0.5 size-4 shrink-0 opacity-60\" aria-hidden=\"true\" />\n          <div class=\"space-y-1\">\n            <p class=\"text-[13px] font-medium\">Tooltip with title and icon</p>\n            <p class=\"text-muted-foreground text-xs\">\n              Tooltips are made to be highly customizable, with features like dynamic placement,\n              rich content, and a robust API.\n            </p>\n          </div>\n        </div>\n      </TooltipContent>\n    </Tooltip>\n  </TooltipProvider>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "tooltip",
-      "radix"
-    ],
+    "tags": ["tooltip", "radix"],
     "style": 1
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/tooltip.json"

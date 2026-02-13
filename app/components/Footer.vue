@@ -7,9 +7,7 @@
       aria-hidden="true"
     ></div>
     <div class="flex justify-between gap-2 max-sm:flex-col max-sm:text-center">
-      <p class="text-muted-foreground text-sm">
-        &copy; {{ new Date().getFullYear() }} Origin UI
-      </p>
+      <p class="text-muted-foreground text-sm">&copy; {{ new Date().getFullYear() }} Origin UI</p>
       <p class="text-muted-foreground text-sm">
         Ported to Vue by
         <NuxtLink

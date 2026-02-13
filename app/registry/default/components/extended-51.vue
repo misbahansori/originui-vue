@@ -20,8 +20,6 @@ const selectedDate = ref<CalendarDate>();
       </MiniCalendarDays>
       <MiniCalendarNavigation direction="next" />
     </MiniCalendar>
-    <p class="text-muted-foreground mt-2 text-xs">
-      Rounded pill style with circular day buttons
-    </p>
+    <p class="text-muted-foreground mt-2 text-xs">Rounded pill style with circular day buttons</p>
   </div>
 </template>

@@ -15,9 +15,7 @@ const items = [
 
 <template>
   <fieldset class="space-y-4">
-    <legend class="text-foreground text-sm leading-none font-medium">
-      Server location
-    </legend>
+    <legend class="text-foreground text-sm leading-none font-medium">Server location</legend>
     <RadioGroup class="flex flex-wrap gap-2" v-model="selectedValue">
       <div
         v-for="item in items"

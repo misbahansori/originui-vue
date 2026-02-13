@@ -5,20 +5,14 @@
   "files": [
     {
       "path": "components/comp-420.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Badge } from \"@/registry/default/ui/badge\";\n</script>\n<template>\n  <Badge variant=\"outline\" class=\"gap-1.5\">\n    <span\n      class=\"size-1.5 rounded-full bg-emerald-500\"\n      aria-hidden=\"true\"\n    ></span>\n    Badge\n  </Badge>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Badge } from \"@/registry/default/ui/badge\";\n</script>\n<template>\n  <Badge variant=\"outline\" class=\"gap-1.5\">\n    <span class=\"size-1.5 rounded-full bg-emerald-500\" aria-hidden=\"true\"></span>\n    Badge\n  </Badge>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "badge",
-      "chip",
-      "status"
-    ],
+    "tags": ["badge", "chip", "status"],
     "style": 1
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/badge.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/badge.json"]
 }

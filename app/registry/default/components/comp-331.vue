@@ -67,13 +67,10 @@ const handleAvatarThumbnailClick = () => {
       class="flex flex-col gap-0 overflow-y-visible p-0 sm:max-w-lg [&>button:last-child]:top-3.5"
     >
       <DialogHeader class="contents space-y-0 text-left">
-        <DialogTitle class="border-b px-6 py-4 text-base">
-          Edit profile
-        </DialogTitle>
+        <DialogTitle class="border-b px-6 py-4 text-base">Edit profile</DialogTitle>
       </DialogHeader>
       <DialogDescription class="sr-only">
-        Make changes to your profile here. You can change your photo and set a
-        username.
+        Make changes to your profile here. You can change your photo and set a username.
       </DialogDescription>
       <div class="overflow-y-auto">
         <!-- Profile Background -->
@@ -85,26 +82,16 @@ const handleAvatarThumbnailClick = () => {
               v-if="coverPreviewUrl || (!hideDefault && '/profile-bg.jpg')"
               class="h-full w-full object-cover"
               :src="coverPreviewUrl || '/profile-bg.jpg'"
-              :alt="
-                coverPreviewUrl
-                  ? 'Preview of uploaded image'
-                  : 'Default profile background'
-              "
+              :alt="coverPreviewUrl ? 'Preview of uploaded image' : 'Default profile background'"
               width="512"
               height="96"
             />
-            <div
-              class="absolute inset-0 flex items-center justify-center gap-2"
-            >
+            <div class="absolute inset-0 flex items-center justify-center gap-2">
               <button
                 type="button"
                 class="focus-visible:border-ring focus-visible:ring-ring/50 z-50 flex size-10 cursor-pointer items-center justify-center rounded-full bg-black/60 text-white transition-[color,box-shadow] outline-none hover:bg-black/80 focus-visible:ring-[3px]"
                 @click="() => coverInputRef?.click()"
-                :aria-label="
-                  coverPreviewUrl || !hideDefault
-                    ? 'Change image'
-                    : 'Upload image'
-                "
+                :aria-label="coverPreviewUrl || !hideDefault ? 'Change image' : 'Upload image'"
               >
                 <LucideImagePlus class="size-4" aria-hidden="true" />
               </button>
@@ -199,10 +186,7 @@ const handleAvatarThumbnailClick = () => {
                 <div
                   class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 peer-disabled:opacity-50"
                 >
-                  <LucideCheck
-                    class="size-4 text-emerald-500"
-                    aria-hidden="true"
-                  />
+                  <LucideCheck class="size-4 text-emerald-500" aria-hidden="true" />
                 </div>
               </div>
             </div>

@@ -15,11 +15,7 @@ const items: Item[] = [
         children: [
           {
             name: "Design System",
-            children: [
-              { name: "Components" },
-              { name: "Tokens" },
-              { name: "Guidelines" },
-            ],
+            children: [{ name: "Components" }, { name: "Tokens" }, { name: "Guidelines" }],
           },
           { name: "Web Platform" },
         ],
@@ -59,11 +55,7 @@ const items: Item[] = [
         </TreeItem>
       </Tree>
     </div>
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-xs">
       Basic tree with vertical lines ∙
       <a
         href="https://reka-ui.com/docs/components/tree"

@@ -10,9 +10,7 @@ const time = ref("");
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id" class="text-foreground text-sm font-medium">
-      Time input with end icon
-    </Label>
+    <Label :for="id" class="text-foreground text-sm font-medium">Time input with end icon</Label>
     <div class="relative">
       <div
         class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 end-0 z-10 flex items-center justify-center pe-3"
@@ -25,11 +23,7 @@ const time = ref("");
         </TimeFieldInput>
       </TimeField>
     </div>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Built with reka-ui
       <a
         class="hover:text-foreground underline"

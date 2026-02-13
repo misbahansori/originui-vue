@@ -17,12 +17,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/registry/default/ui/collapsible";
-import {
-  CalendarDate,
-  getLocalTimeZone,
-  today,
-  type DateValue,
-} from "@internationalized/date";
+import { CalendarDate, getLocalTimeZone, today, type DateValue } from "@internationalized/date";
 import { useTimeoutFn } from "@vueuse/core";
 import { LucideChevronDown } from "lucide-vue-next";
 import { CalendarRoot } from "reka-ui";
@@ -46,9 +41,7 @@ const isCurrentYear = (year: number) => {
 const collapsibleOpen = ref(false);
 
 const scrollToCurrentYear = () => {
-  const currentYearElement = document.querySelector(
-    `[data-year="${modelValue.value.year}"]`,
-  );
+  const currentYearElement = document.querySelector(`[data-year="${modelValue.value.year}"]`);
 
   if (currentYearElement) {
     currentYearElement.scrollIntoView({
@@ -95,9 +88,7 @@ const selectMonth = (year: number, month: number) => {
               />
             </Button>
           </CollapsibleTrigger>
-          <CollapsibleContent
-            class="bg-background absolute inset-x-0 top-15 bottom-0 z-20"
-          >
+          <CollapsibleContent class="bg-background absolute inset-x-0 top-15 bottom-0 z-20">
             <ScrollArea class="h-full">
               <Collapsible
                 v-for="year in years"

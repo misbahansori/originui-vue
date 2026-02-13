@@ -5,15 +5,12 @@
   "files": [
     {
       "path": "components/comp-412.vue",
-      "content": "<template>\n  <div\n    class=\"bg-background flex items-center rounded-full border p-1 shadow-sm\"\n  >\n    <div class=\"flex -space-x-1.5\">\n      <img\n        class=\"ring-background rounded-full ring-1\"\n        src=\"/avatar-80-03.jpg\"\n        width=\"20\"\n        height=\"20\"\n        alt=\"Avatar 01\"\n      />\n      <img\n        class=\"ring-background rounded-full ring-1\"\n        src=\"/avatar-80-04.jpg\"\n        width=\"20\"\n        height=\"20\"\n        alt=\"Avatar 02\"\n      />\n      <img\n        class=\"ring-background rounded-full ring-1\"\n        src=\"/avatar-80-05.jpg\"\n        width=\"20\"\n        height=\"20\"\n        alt=\"Avatar 03\"\n      />\n      <img\n        class=\"ring-background rounded-full ring-1\"\n        src=\"/avatar-80-06.jpg\"\n        width=\"20\"\n        height=\"20\"\n        alt=\"Avatar 04\"\n      />\n    </div>\n    <p class=\"text-muted-foreground px-2 text-xs\">\n      Trusted by\n      <strong class=\"text-foreground font-medium\">60K+</strong>\n      developers.\n    </p>\n  </div>\n</template>\n",
+      "content": "<template>\n  <div class=\"bg-background flex items-center rounded-full border p-1 shadow-sm\">\n    <div class=\"flex -space-x-1.5\">\n      <img\n        class=\"ring-background rounded-full ring-1\"\n        src=\"/avatar-80-03.jpg\"\n        width=\"20\"\n        height=\"20\"\n        alt=\"Avatar 01\"\n      />\n      <img\n        class=\"ring-background rounded-full ring-1\"\n        src=\"/avatar-80-04.jpg\"\n        width=\"20\"\n        height=\"20\"\n        alt=\"Avatar 02\"\n      />\n      <img\n        class=\"ring-background rounded-full ring-1\"\n        src=\"/avatar-80-05.jpg\"\n        width=\"20\"\n        height=\"20\"\n        alt=\"Avatar 03\"\n      />\n      <img\n        class=\"ring-background rounded-full ring-1\"\n        src=\"/avatar-80-06.jpg\"\n        width=\"20\"\n        height=\"20\"\n        alt=\"Avatar 04\"\n      />\n    </div>\n    <p class=\"text-muted-foreground px-2 text-xs\">\n      Trusted by\n      <strong class=\"text-foreground font-medium\">60K+</strong>\n      developers.\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "avatar",
-      "avatar group"
-    ],
+    "tags": ["avatar", "avatar group"],
     "style": 1
   },
   "dependencies": [],

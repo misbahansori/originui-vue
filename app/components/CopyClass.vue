@@ -25,12 +25,7 @@ const { copy, copied } = useClipboard({
         <span v-else class="transition-colors">Copy class</span>
       </div>
       <div class="relative">
-        <div
-          :class="[
-            'transition-all',
-            copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0',
-          ]"
-        >
+        <div :class="['transition-all', copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0']">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

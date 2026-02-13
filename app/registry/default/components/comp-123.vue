@@ -19,12 +19,7 @@ function toggleExpand() {
     aria-controls="expandable-content"
   >
     {{ isExpanded ? "Show less" : "Show more" }}
-    <LucideChevronUp
-      v-if="isExpanded"
-      class="-me-1"
-      :size="16"
-      aria-hidden="true"
-    />
+    <LucideChevronUp v-if="isExpanded" class="-me-1" :size="16" aria-hidden="true" />
     <LucideChevronDown v-else class="-me-1" :size="16" aria-hidden="true" />
   </Button>
 </template>

@@ -1,22 +1,27 @@
 <script setup lang="ts">
-import type { PaginationFirstProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
-import type { ButtonVariants } from '@/registry/default/ui/button'
-import { reactiveOmit } from "@vueuse/core"
-import { ChevronLeftIcon } from "lucide-vue-next"
-import { PaginationFirst, useForwardProps } from "reka-ui"
-import { cn } from "@/lib/utils"
-import { buttonVariants } from '@/registry/default/ui/button'
+import type { PaginationFirstProps } from "reka-ui";
+import type { HTMLAttributes } from "vue";
+import type { ButtonVariants } from "@/registry/default/ui/button";
+import { reactiveOmit } from "@vueuse/core";
+import { ChevronLeftIcon } from "lucide-vue-next";
+import { PaginationFirst, useForwardProps } from "reka-ui";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/registry/default/ui/button";
 
-const props = withDefaults(defineProps<PaginationFirstProps & {
-  size?: ButtonVariants["size"]
-  class?: HTMLAttributes["class"]
-}>(), {
-  size: "default",
-})
+const props = withDefaults(
+  defineProps<
+    PaginationFirstProps & {
+      size?: ButtonVariants["size"];
+      class?: HTMLAttributes["class"];
+    }
+  >(),
+  {
+    size: "default",
+  },
+);
 
-const delegatedProps = reactiveOmit(props, "class", "size")
-const forwarded = useForwardProps(delegatedProps)
+const delegatedProps = reactiveOmit(props, "class", "size");
+const forwarded = useForwardProps(delegatedProps);
 </script>
 
 <template>

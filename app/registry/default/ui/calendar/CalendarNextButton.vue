@@ -6,9 +6,7 @@ import { ChevronRight } from "lucide-vue-next";
 import { CalendarNext, type CalendarNextProps, useForwardProps } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 
-const props = defineProps<
-  CalendarNextProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<CalendarNextProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = reactiveOmit(props, "class");
 

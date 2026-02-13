@@ -64,9 +64,7 @@ const getFileIcon = (file: { file: File | { type: string; name: string } }) => {
     excel: {
       icon: LucideFileSpreadsheet,
       conditions: (type: string, name: string) =>
-        type.includes("excel") ||
-        name.endsWith(".xls") ||
-        name.endsWith(".xlsx"),
+        type.includes("excel") || name.endsWith(".xls") || name.endsWith(".xlsx"),
     },
     video: {
       icon: LucideVideo,
@@ -91,9 +89,7 @@ const getFileIcon = (file: { file: File | { type: string; name: string } }) => {
   return LucideFile;
 };
 
-const getFilePreview = (file: {
-  file: File | { type: string; name: string; url?: string };
-}) => {
+const getFilePreview = (file: { file: File | { type: string; name: string; url?: string } }) => {
   const fileType = file.file instanceof File ? file.file.type : file.file.type;
   const fileName = file.file instanceof File ? file.file.name : file.file.name;
 
@@ -122,20 +118,13 @@ const maxSizeMB = 5;
 const maxSize = maxSizeMB * 1024 * 1024; // 5MB default
 const maxFiles = 6;
 
-const {
-  files,
-  errors,
-  dropzoneRef,
-  openFileDialog,
-  removeFile,
-  clearFiles,
-  inputRef,
-} = useFileUpload({
-  multiple: true,
-  maxFiles,
-  maxSize,
-  initialFiles,
-});
+const { files, errors, dropzoneRef, openFileDialog, removeFile, clearFiles, inputRef } =
+  useFileUpload({
+    multiple: true,
+    maxFiles,
+    maxSize,
+    initialFiles,
+  });
 </script>
 
 <template>
@@ -149,22 +138,14 @@ const {
       <input ref="inputRef" aria-label="Upload image file" />
       <div v-if="files.length > 0" class="flex w-full flex-col gap-3">
         <div class="flex items-center justify-between gap-2">
-          <h3 class="truncate text-sm font-medium">
-            Files ({{ files.length }})
-          </h3>
+          <h3 class="truncate text-sm font-medium">Files ({{ files.length }})</h3>
           <div class="flex gap-2">
             <Button size="sm" variant="outline" @click="openFileDialog">
-              <LucideFileUp
-                class="-ms-0.5 size-3.5 opacity-60"
-                aria-hidden="true"
-              />
+              <LucideFileUp class="-ms-0.5 size-3.5 opacity-60" aria-hidden="true" />
               Add files
             </Button>
             <Button size="sm" variant="outline" @click="clearFiles">
-              <LucideTrash2
-                class="-ms-0.5 size-3.5 opacity-60"
-                aria-hidden="true"
-              />
+              <LucideTrash2 class="-ms-0.5 size-3.5 opacity-60" aria-hidden="true" />
               Remove all
             </Button>
           </div>
@@ -172,23 +153,15 @@ const {
 
         <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
           <div v-for="file in files" :key="file.id" class="relative">
-            <div
-              class="bg-background relative flex flex-col overflow-hidden rounded-md border"
-            >
-              <div
-                class="bg-accent flex aspect-square items-center justify-center overflow-hidden"
-              >
+            <div class="bg-background relative flex flex-col overflow-hidden rounded-md border">
+              <div class="bg-accent flex aspect-square items-center justify-center overflow-hidden">
                 <img
                   v-if="getFilePreview(file).type === 'image'"
                   :src="getFilePreview(file).url"
                   :alt="getFilePreview(file).alt"
                   class="size-full object-cover"
                 />
-                <component
-                  v-else
-                  :is="getFilePreview(file).component"
-                  class="size-5 opacity-60"
-                />
+                <component v-else :is="getFilePreview(file).component" class="size-5 opacity-60" />
               </div>
               <div class="flex min-w-0 flex-col gap-0.5 border-t p-3">
                 <p class="truncate text-[13px] font-medium">
@@ -211,10 +184,7 @@ const {
         </div>
       </div>
 
-      <div
-        v-else
-        class="flex flex-col items-center justify-center px-4 py-3 text-center"
-      >
+      <div v-else class="flex flex-col items-center justify-center px-4 py-3 text-center">
         <div
           class="bg-background mb-2 flex size-11 shrink-0 items-center justify-center rounded-full border"
           aria-hidden="true"
@@ -225,12 +195,7 @@ const {
         <p class="text-muted-foreground text-xs">
           Max {{ maxFiles }} files ∙ Up to {{ maxSizeMB }}MB
         </p>
-        <Button
-          size="sm"
-          variant="outline"
-          class="mt-4"
-          @click="openFileDialog"
-        >
+        <Button size="sm" variant="outline" class="mt-4" @click="openFileDialog">
           <LucideFileUp class="-ms-1 opacity-60" aria-hidden="true" />
           Select images
         </Button>
@@ -246,11 +211,7 @@ const {
       <span>{{ errors[0] }}</span>
     </div>
 
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-center text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-center text-xs">
       Mixed content w/ card
     </p>
   </div>

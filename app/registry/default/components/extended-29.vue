@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { Badge } from "@/registry/default/ui/badge";
 import { Button } from "@/registry/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/registry/default/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/registry/default/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -45,25 +40,13 @@ import { LucideBarChart2, LucideMoreHorizontal } from "lucide-vue-next";
       <CardContent class="flex flex-col justify-between gap-3.5">
         <div class="space-y-3.5">
           <div class="mb-2.5 flex items-center gap-2.5">
-            <span class="text-foreground text-3xl font-bold tracking-tight">
-              $ 1,120,500
-            </span>
-            <span
-              class="text-muted-foreground text-xs leading-none font-medium"
-            >
-              USD
-            </span>
+            <span class="text-foreground text-3xl font-bold tracking-tight">$ 1,120,500</span>
+            <span class="text-muted-foreground text-xs leading-none font-medium">USD</span>
           </div>
 
           <div class="mb-4 flex items-center gap-2">
             <Badge variant="destructive">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 14 14"
-                fill="none"
-                class="inline-block"
-              >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="inline-block">
                 <path
                   d="M3 5.5L7 9.5L11 5.5"
                   stroke="currentColor"
@@ -74,37 +57,23 @@ import { LucideBarChart2, LucideMoreHorizontal } from "lucide-vue-next";
               </svg>
               -12.7%
             </Badge>
-            <span class="text-muted-foreground text-sm">
-              decreased from last quarter
-            </span>
+            <span class="text-muted-foreground text-sm">decreased from last quarter</span>
           </div>
         </div>
 
         <div class="space-y-1">
-          <div
-            class="bg-muted/60 flex items-center justify-between rounded-lg p-2.5"
-          >
-            <span class="text-accent-foreground text-sm">
-              Avg. Subscription Value:
-            </span>
+          <div class="bg-muted/60 flex items-center justify-between rounded-lg p-2.5">
+            <span class="text-accent-foreground text-sm">Avg. Subscription Value:</span>
             <span class="text-foreground text-base font-semibold">$320</span>
           </div>
-          <div
-            class="bg-muted/60 flex items-center justify-between rounded-lg p-2.5"
-          >
-            <span class="text-accent-foreground text-sm">
-              Enterprise Clients:
-            </span>
+          <div class="bg-muted/60 flex items-center justify-between rounded-lg p-2.5">
+            <span class="text-accent-foreground text-sm">Enterprise Clients:</span>
             <span class="text-foreground text-base font-semibold">42</span>
           </div>
         </div>
       </CardContent>
     </Card>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Ported from reui.io total revenue card
       <a
         class="hover:text-foreground underline"

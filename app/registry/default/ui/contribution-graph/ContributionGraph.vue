@@ -8,10 +8,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div
-    data-slot="contribution-graph"
-    :class="cn('flex flex-1 gap-1', props.class)"
-  >
+  <div data-slot="contribution-graph" :class="cn('flex flex-1 gap-1', props.class)">
     <slot />
   </div>
 </template>

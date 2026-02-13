@@ -5,18 +5,12 @@
   "files": [
     {
       "path": "components/comp-492.vue",
-      "content": "<template>\n  <div class=\"flex items-center justify-center py-12\">\n    <span class=\"text-muted-foreground text-sm italic\">\n      Component not yet implemented.\n    </span>\n  </div>\n</template>\n",
+      "content": "<template>\n  <div class=\"flex items-center justify-center py-12\">\n    <span class=\"text-muted-foreground text-sm italic\">Component not yet implemented.</span>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "calendar",
-      "range calendar",
-      "date",
-      "disabled",
-      "react daypicker"
-    ],
+    "tags": ["calendar", "range calendar", "date", "disabled", "react daypicker"],
     "style": 1
   },
   "dependencies": [],

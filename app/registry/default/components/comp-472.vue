@@ -73,11 +73,7 @@ const id = useId();
         </TableRow>
       </TableHeader>
       <TableBody>
-        <TableRow
-          v-for="item in items"
-          :key="item.id"
-          class="has-data-[state=checked]:bg-muted/50"
-        >
+        <TableRow v-for="item in items" :key="item.id" class="has-data-[state=checked]:bg-muted/50">
           <TableCell>
             <Checkbox :id="`table-checkbox-${item.id}`" />
           </TableCell>
@@ -95,8 +91,6 @@ const id = useId();
         </TableRow>
       </TableFooter>
     </Table>
-    <p class="text-muted-foreground mt-4 text-center text-sm">
-      Table with row selection
-    </p>
+    <p class="text-muted-foreground mt-4 text-center text-sm">Table with row selection</p>
   </div>
 </template>

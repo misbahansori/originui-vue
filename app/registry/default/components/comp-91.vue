@@ -22,10 +22,7 @@ function handleClick() {
     class="group relative disabled:opacity-100"
   >
     <span class="group-data-loading:text-transparent">Click me</span>
-    <div
-      v-if="isLoading"
-      class="absolute inset-0 flex items-center justify-center"
-    >
+    <div v-if="isLoading" class="absolute inset-0 flex items-center justify-center">
       <LucideLoaderCircle class="animate-spin" :size="16" aria-hidden="true" />
     </div>
   </Button>

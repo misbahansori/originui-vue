@@ -2,16 +2,10 @@
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/registry/default/ui/button";
 import { ChevronLeft } from "lucide-vue-next";
-import {
-  RangeCalendarPrev,
-  type RangeCalendarPrevProps,
-  useForwardProps,
-} from "reka-ui";
+import { RangeCalendarPrev, type RangeCalendarPrevProps, useForwardProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
-const props = defineProps<
-  RangeCalendarPrevProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<RangeCalendarPrevProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props;

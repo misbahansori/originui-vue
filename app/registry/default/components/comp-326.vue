@@ -50,12 +50,7 @@ const id = useId();
         <div class="space-y-4">
           <div class="*:not-first:mt-2">
             <Label :for="`${id}-email`">Email</Label>
-            <Input
-              :id="`${id}-email`"
-              placeholder="hi@yourcompany.com"
-              type="email"
-              required
-            />
+            <Input :id="`${id}-email`" placeholder="hi@yourcompany.com" type="email" required />
           </div>
           <div class="*:not-first:mt-2">
             <Label :for="`${id}-password`">Password</Label>
@@ -70,16 +65,11 @@ const id = useId();
         <div class="flex justify-between gap-2">
           <div class="flex items-center gap-2">
             <Checkbox :id="`${id}-remember`" />
-            <Label
-              :for="`${id}-remember`"
-              class="text-muted-foreground font-normal"
-            >
+            <Label :for="`${id}-remember`" class="text-muted-foreground font-normal">
               Remember me
             </Label>
           </div>
-          <a class="text-sm underline hover:no-underline" href="#">
-            Forgot password?
-          </a>
+          <a class="text-sm underline hover:no-underline" href="#">Forgot password?</a>
         </div>
         <Button type="button" class="w-full">Sign in</Button>
       </form>

@@ -1,11 +1,7 @@
 <script setup lang="ts">
 import { Badge } from "@/registry/default/ui/badge";
 import { Card, CardContent } from "@/registry/default/ui/card";
-import {
-  LucideArrowUpRight,
-  LucideTrendingDown,
-  LucideUserPlus,
-} from "lucide-vue-next";
+import { LucideArrowUpRight, LucideTrendingDown, LucideUserPlus } from "lucide-vue-next";
 
 const cards = [
   {
@@ -14,8 +10,7 @@ const cards = [
     value: "$956.82k",
     valueColor: "text-green-600",
     badge: {
-      color:
-        "bg-green-100 text-green-600 dark:bg-green-950 dark:text-green-400",
+      color: "bg-green-100 text-green-600 dark:bg-green-950 dark:text-green-400",
       icon: LucideArrowUpRight,
       iconColor: "text-green-500",
       text: "+5.4%",
@@ -86,18 +81,13 @@ const cards = [
 
             <div class="flex flex-1 grow flex-col justify-between gap-1.5">
               <div class="flex items-center gap-2">
-                <span
-                  :class="`text-2xl font-bold tracking-tight ${card.valueColor}`"
-                >
+                <span :class="`text-2xl font-bold tracking-tight ${card.valueColor}`">
                   {{ card.value }}
                 </span>
                 <Badge
                   :class="`${card.badge.color} flex items-center gap-1 rounded-full py-0.5 text-xs font-medium shadow-none`"
                 >
-                  <component
-                    :is="card.badge.icon"
-                    :class="`h-3 w-3 ${card.badge.iconColor}`"
-                  />
+                  <component :is="card.badge.icon" :class="`h-3 w-3 ${card.badge.iconColor}`" />
                   {{ card.badge.text }}
                 </Badge>
               </div>
@@ -114,11 +104,7 @@ const cards = [
         </Card>
       </div>
     </div>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Ported from reui.io connected statistic cards
       <a
         class="hover:text-foreground underline"

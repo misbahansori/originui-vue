@@ -5,25 +5,14 @@
   "files": [
     {
       "path": "components/comp-126.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideCircleUserRound, LucideX } from \"lucide-vue-next\";\n\nconst file = shallowRef<File | null>(null);\nconst previewUrl = useObjectUrl(file);\nconst inputRef = useTemplateRef(\"fileInput\");\n\nfunction handleButtonClick() {\n  if (inputRef.value) {\n    inputRef.value.click();\n  }\n}\n\nfunction handleFileChange(event: Event) {\n  const input = event.target as HTMLInputElement;\n  if (input.files?.[0]) {\n    file.value = input.files[0];\n  }\n}\n</script>\n\n<template>\n  <div>\n    <div class=\"relative inline-flex\">\n      <Button\n        variant=\"outline\"\n        class=\"relative size-16 overflow-hidden\"\n        @click=\"handleButtonClick\"\n        :aria-label=\"previewUrl ? 'Change image' : 'Upload image'\"\n      >\n        <img\n          v-if=\"previewUrl\"\n          class=\"h-full w-full object-cover\"\n          :src=\"previewUrl\"\n          alt=\"Preview of uploaded image\"\n          width=\"40\"\n          height=\"40\"\n          style=\"object-fit: cover\"\n        />\n        <div v-else aria-hidden=\"true\" class=\"flex items-center justify-center\">\n          <LucideCircleUserRound class=\"opacity-60\" :size=\"16\" />\n        </div>\n      </Button>\n      <Button\n        v-if=\"previewUrl\"\n        @click=\"() => (file = null)\"\n        size=\"icon\"\n        variant=\"destructive\"\n        class=\"border-background absolute -top-2 -right-2 size-6 rounded-full border-2\"\n        aria-label=\"Remove image\"\n      >\n        <LucideX :size=\"16\" />\n      </Button>\n      <input\n        type=\"file\"\n        ref=\"fileInput\"\n        @change=\"handleFileChange\"\n        class=\"hidden\"\n        accept=\"image/*\"\n        aria-label=\"Upload image file\"\n      />\n    </div>\n    <p v-if=\"file\" class=\"text-muted-foreground mt-2 text-xs\">\n      {{ file.name }}\n    </p>\n    <div class=\"sr-only\" aria-live=\"polite\" role=\"status\">\n      {{\n        previewUrl\n          ? \"Image uploaded and preview available\"\n          : \"No image uploaded\"\n      }}\n    </div>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { LucideCircleUserRound, LucideX } from \"lucide-vue-next\";\n\nconst file = shallowRef<File | null>(null);\nconst previewUrl = useObjectUrl(file);\nconst inputRef = useTemplateRef(\"fileInput\");\n\nfunction handleButtonClick() {\n  if (inputRef.value) {\n    inputRef.value.click();\n  }\n}\n\nfunction handleFileChange(event: Event) {\n  const input = event.target as HTMLInputElement;\n  if (input.files?.[0]) {\n    file.value = input.files[0];\n  }\n}\n</script>\n\n<template>\n  <div>\n    <div class=\"relative inline-flex\">\n      <Button\n        variant=\"outline\"\n        class=\"relative size-16 overflow-hidden\"\n        @click=\"handleButtonClick\"\n        :aria-label=\"previewUrl ? 'Change image' : 'Upload image'\"\n      >\n        <img\n          v-if=\"previewUrl\"\n          class=\"h-full w-full object-cover\"\n          :src=\"previewUrl\"\n          alt=\"Preview of uploaded image\"\n          width=\"40\"\n          height=\"40\"\n          style=\"object-fit: cover\"\n        />\n        <div v-else aria-hidden=\"true\" class=\"flex items-center justify-center\">\n          <LucideCircleUserRound class=\"opacity-60\" :size=\"16\" />\n        </div>\n      </Button>\n      <Button\n        v-if=\"previewUrl\"\n        @click=\"() => (file = null)\"\n        size=\"icon\"\n        variant=\"destructive\"\n        class=\"border-background absolute -top-2 -right-2 size-6 rounded-full border-2\"\n        aria-label=\"Remove image\"\n      >\n        <LucideX :size=\"16\" />\n      </Button>\n      <input\n        type=\"file\"\n        ref=\"fileInput\"\n        @change=\"handleFileChange\"\n        class=\"hidden\"\n        accept=\"image/*\"\n        aria-label=\"Upload image file\"\n      />\n    </div>\n    <p v-if=\"file\" class=\"text-muted-foreground mt-2 text-xs\">\n      {{ file.name }}\n    </p>\n    <div class=\"sr-only\" aria-live=\"polite\" role=\"status\">\n      {{ previewUrl ? \"Image uploaded and preview available\" : \"No image uploaded\" }}\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "upload",
-      "user",
-      "avatar",
-      "profile",
-      "image"
-    ],
+    "tags": ["button", "upload", "user", "avatar", "profile", "image"],
     "style": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/button.json"
-  ]
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
 }

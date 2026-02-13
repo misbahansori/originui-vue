@@ -64,11 +64,7 @@ const selectedOption = ref(options[0]);
       >
         <SelectGroup>
           <SelectLabel class="ps-2">Impersonate user</SelectLabel>
-          <SelectItem
-            v-for="option in options"
-            :key="option.value"
-            :value="option"
-          >
+          <SelectItem v-for="option in options" :key="option.value" :value="option">
             <span
               data-square
               class="flex size-5 items-center justify-center rounded text-xs font-medium"

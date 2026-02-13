@@ -23,11 +23,7 @@ const value = ref(2048);
       </NumberField>
     </div>
 
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Built with reka-ui
       <a
         class="hover:text-foreground underline"

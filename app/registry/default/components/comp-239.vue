@@ -1,12 +1,6 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
-import {
-  ListboxContent,
-  ListboxGroup,
-  ListboxGroupLabel,
-  ListboxItem,
-  ListboxRoot,
-} from "reka-ui";
+import { ListboxContent, ListboxGroup, ListboxGroupLabel, ListboxItem, ListboxRoot } from "reka-ui";
 import { ref } from "vue";
 
 const selectedKeys = ref(["lettuce", "tuna"]);
@@ -55,9 +49,7 @@ const options = [
       >
         <template v-for="(group, index) in options" :key="group.id">
           <ListboxGroup>
-            <ListboxGroupLabel
-              class="text-muted-foreground px-2 py-1.5 text-xs font-medium"
-            >
+            <ListboxGroupLabel class="text-muted-foreground px-2 py-1.5 text-xs font-medium">
               {{ group.name }}
             </ListboxGroupLabel>
             <ListboxItem
@@ -70,18 +62,11 @@ const options = [
               {{ item.name }}
             </ListboxItem>
           </ListboxGroup>
-          <Separator
-            v-if="index !== options.length - 1"
-            class="bg-border -mx-1 my-2 h-px"
-          />
+          <Separator v-if="index !== options.length - 1" class="bg-border -mx-1 my-2 h-px" />
         </template>
       </ListboxContent>
     </ListboxRoot>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Built with reka-ui
       <a
         class="hover:text-foreground underline"

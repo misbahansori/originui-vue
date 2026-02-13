@@ -5,15 +5,10 @@ import { LucideArrowRight, LucideCircleAlert, LucideX } from "lucide-vue-next";
 
 <template>
   <!-- To make the notification fixed, add classes like `fixed bottom-4 right-4` to the container element. -->
-  <div
-    class="bg-background z-50 max-w-[400px] rounded-md border px-4 py-3 shadow-lg"
-  >
+  <div class="bg-background z-50 max-w-[400px] rounded-md border px-4 py-3 shadow-lg">
     <div class="flex gap-2">
       <div class="flex grow gap-3">
-        <LucideCircleAlert
-          class="mt-0.5 size-4 shrink-0 text-red-500"
-          aria-hidden="true"
-        />
+        <LucideCircleAlert class="mt-0.5 size-4 shrink-0 text-red-500" aria-hidden="true" />
         <div class="flex grow justify-between gap-12">
           <p class="text-sm">An error occurred!</p>
           <a href="#" class="group text-sm font-medium whitespace-nowrap">

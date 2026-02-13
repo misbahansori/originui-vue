@@ -5,24 +5,14 @@
   "files": [
     {
       "path": "components/comp-50.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@/registry/default/ui/input-group\";\nimport { LucideCreditCard } from \"lucide-vue-next\";\nimport { vMaska } from \"maska/vue\";\nimport { ref } from \"vue\";\n\nconst cardNumber = ref(\"\");\nconst expiryDate = ref(\"\");\nconst cvcCode = ref(\"\");\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <legend class=\"text-foreground text-sm font-medium\">Card Details</legend>\n    <div class=\"rounded-md shadow-xs\">\n      <div class=\"relative focus-within:z-10\">\n        <InputGroup class=\"rounded-b-none shadow-none\">\n          <InputGroupInput\n            class=\"[direction:inherit]\"\n            :id=\"`card-number-${id}`\"\n            v-model=\"cardNumber\"\n            v-maska=\"'#### #### #### ####'\"\n            placeholder=\"0000 0000 0000 0000\"\n            maxlength=\"19\"\n          />\n          <InputGroupAddon align=\"inline-end\">\n            <LucideCreditCard :size=\"16\" aria-hidden=\"true\" />\n          </InputGroupAddon>\n        </InputGroup>\n      </div>\n      <div class=\"-mt-px flex\">\n        <div class=\"min-w-0 flex-1 focus-within:z-10\">\n          <Input\n            class=\"rounded-e-none rounded-t-none shadow-none [direction:inherit]\"\n            :id=\"`expiry-date-${id}`\"\n            v-model=\"expiryDate\"\n            v-maska=\"'##/##'\"\n            placeholder=\"MM/YY\"\n            maxlength=\"5\"\n          />\n        </div>\n        <div class=\"-ms-px min-w-0 flex-1 focus-within:z-10\">\n          <Input\n            class=\"rounded-s-none rounded-t-none shadow-none [direction:inherit]\"\n            :id=\"`cvc-code-${id}`\"\n            v-model=\"cvcCode\"\n            v-maska=\"'###'\"\n            placeholder=\"CVC\"\n            maxlength=\"4\"\n            type=\"password\"\n          />\n        </div>\n      </div>\n    </div>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://beholdr.github.io/maska/v3/#/vue\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        maska\n      </a>\n    </p>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { InputGroup, InputGroupAddon, InputGroupInput } from \"@/registry/default/ui/input-group\";\nimport { LucideCreditCard } from \"lucide-vue-next\";\nimport { vMaska } from \"maska/vue\";\nimport { ref } from \"vue\";\n\nconst cardNumber = ref(\"\");\nconst expiryDate = ref(\"\");\nconst cvcCode = ref(\"\");\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <legend class=\"text-foreground text-sm font-medium\">Card Details</legend>\n    <div class=\"rounded-md shadow-xs\">\n      <div class=\"relative focus-within:z-10\">\n        <InputGroup class=\"rounded-b-none shadow-none\">\n          <InputGroupInput\n            class=\"[direction:inherit]\"\n            :id=\"`card-number-${id}`\"\n            v-model=\"cardNumber\"\n            v-maska=\"'#### #### #### ####'\"\n            placeholder=\"0000 0000 0000 0000\"\n            maxlength=\"19\"\n          />\n          <InputGroupAddon align=\"inline-end\">\n            <LucideCreditCard :size=\"16\" aria-hidden=\"true\" />\n          </InputGroupAddon>\n        </InputGroup>\n      </div>\n      <div class=\"-mt-px flex\">\n        <div class=\"min-w-0 flex-1 focus-within:z-10\">\n          <Input\n            class=\"rounded-e-none rounded-t-none shadow-none [direction:inherit]\"\n            :id=\"`expiry-date-${id}`\"\n            v-model=\"expiryDate\"\n            v-maska=\"'##/##'\"\n            placeholder=\"MM/YY\"\n            maxlength=\"5\"\n          />\n        </div>\n        <div class=\"-ms-px min-w-0 flex-1 focus-within:z-10\">\n          <Input\n            class=\"rounded-s-none rounded-t-none shadow-none [direction:inherit]\"\n            :id=\"`cvc-code-${id}`\"\n            v-model=\"cvcCode\"\n            v-maska=\"'###'\"\n            placeholder=\"CVC\"\n            maxlength=\"4\"\n            type=\"password\"\n          />\n        </div>\n      </div>\n    </div>\n    <p class=\"text-muted-foreground mt-2 text-xs\" role=\"region\" aria-live=\"polite\">\n      Built with\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://beholdr.github.io/maska/v3/#/vue\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        maska\n      </a>\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "checkout",
-      "payment",
-      "credit card",
-      "form"
-    ]
+    "tags": ["input", "label", "checkout", "payment", "credit card", "form"]
   },
-  "dependencies": [
-    "lucide-vue-next",
-    "maska/vue"
-  ],
+  "dependencies": ["lucide-vue-next", "maska/vue"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/input.json",
     "https://www.originui-vue.com/r/input-group.json"

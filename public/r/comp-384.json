@@ -5,16 +5,12 @@
   "files": [
     {
       "path": "components/comp-384.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@/registry/default/ui/popover\";\n</script>\n\n<template>\n  <Popover>\n    <PopoverTrigger asChild>\n      <Button variant=\"outline\">Tooltip-like popover</Button>\n    </PopoverTrigger>\n    <PopoverContent class=\"max-w-[280px] py-3 shadow-none\" side=\"top\">\n      <div class=\"space-y-3\">\n        <div class=\"space-y-1\">\n          <p class=\"text-[13px] font-medium\">Popover with button</p>\n          <p class=\"text-muted-foreground text-xs\">\n            I am a popover that would like to look like a tooltip. I can't be a\n            tooltip because of the interactive element inside me.\n          </p>\n        </div>\n        <Button size=\"sm\" class=\"h-7 px-2\">Know more</Button>\n      </div>\n    </PopoverContent>\n  </Popover>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Popover, PopoverContent, PopoverTrigger } from \"@/registry/default/ui/popover\";\n</script>\n\n<template>\n  <Popover>\n    <PopoverTrigger asChild>\n      <Button variant=\"outline\">Tooltip-like popover</Button>\n    </PopoverTrigger>\n    <PopoverContent class=\"max-w-[280px] py-3 shadow-none\" side=\"top\">\n      <div class=\"space-y-3\">\n        <div class=\"space-y-1\">\n          <p class=\"text-[13px] font-medium\">Popover with button</p>\n          <p class=\"text-muted-foreground text-xs\">\n            I am a popover that would like to look like a tooltip. I can't be a tooltip because of\n            the interactive element inside me.\n          </p>\n        </div>\n        <Button size=\"sm\" class=\"h-7 px-2\">Know more</Button>\n      </div>\n    </PopoverContent>\n  </Popover>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "popover",
-      "tooltip",
-      "radix"
-    ],
+    "tags": ["popover", "tooltip", "radix"],
     "style": 1
   },
   "dependencies": [],

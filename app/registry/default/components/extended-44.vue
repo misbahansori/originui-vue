@@ -20,8 +20,6 @@ const selectedDate = ref<CalendarDate>();
       </MiniCalendarDays>
       <MiniCalendarNavigation direction="next" />
     </MiniCalendar>
-    <p class="text-muted-foreground mt-2 text-xs">
-      Default 5-day horizontal calendar view
-    </p>
+    <p class="text-muted-foreground mt-2 text-xs">Default 5-day horizontal calendar view</p>
   </div>
 </template>

@@ -9,12 +9,7 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
 </script>
 
 <template>
-  <Pagination
-    :defaultPage="1"
-    :itemsPerPage="10"
-    :total="100"
-    v-slot="{ page, pageCount }"
-  >
+  <Pagination :defaultPage="1" :itemsPerPage="10" :total="100" v-slot="{ page, pageCount }">
     <PaginationContent class="flex w-full items-center justify-center gap-3">
       <PaginationPrevious>
         <LucideChevronLeft aria-hidden="true" class="size-4" />

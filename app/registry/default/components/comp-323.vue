@@ -17,22 +17,16 @@ import { Textarea } from "@/registry/default/ui/textarea";
     <DialogTrigger asChild>
       <Button variant="outline">Rating</Button>
     </DialogTrigger>
-    <DialogContent
-      class="flex flex-col gap-0 p-0 [&>button:last-child]:top-3.5"
-    >
+    <DialogContent class="flex flex-col gap-0 p-0 [&>button:last-child]:top-3.5">
       <DialogHeader class="contents space-y-0 text-left">
-        <DialogTitle class="border-b px-6 py-4 text-base">
-          Help us improve
-        </DialogTitle>
+        <DialogTitle class="border-b px-6 py-4 text-base">Help us improve</DialogTitle>
       </DialogHeader>
       <div class="px-6 py-4">
         <form class="space-y-5">
           <div class="space-y-4">
             <div>
               <fieldset class="space-y-4">
-                <legend
-                  class="text-foreground text-lg leading-none font-semibold"
-                >
+                <legend class="text-foreground text-lg leading-none font-semibold">
                   How hard was it to set up your account?
                 </legend>
                 <RadioGroup class="flex gap-0 -space-x-px rounded-md shadow-xs">
@@ -50,9 +44,7 @@ import { Textarea } from "@/registry/default/ui/textarea";
                   </label>
                 </RadioGroup>
               </fieldset>
-              <div
-                class="text-muted-foreground mt-2 flex justify-between text-xs"
-              >
+              <div class="text-muted-foreground mt-2 flex justify-between text-xs">
                 <p>Very easy</p>
                 <p>Very difficult</p>
               </div>

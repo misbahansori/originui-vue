@@ -82,8 +82,7 @@ const columns: ColumnDef<Item>[] = [
     cell: ({ row }) =>
       h(Checkbox, {
         modelValue: row.getIsSelected(),
-        "onUpdate:modelValue": (value: boolean | "indeterminate") =>
-          row.toggleSelected(!!value),
+        "onUpdate:modelValue": (value: boolean | "indeterminate") => row.toggleSelected(!!value),
         "aria-label": "Select row",
       }),
     size: 28,
@@ -104,11 +103,7 @@ const columns: ColumnDef<Item>[] = [
     accessorKey: "location",
     cell: ({ row }) =>
       h("div", {}, [
-        h(
-          "span",
-          { class: "text-lg leading-none" },
-          row.original.flag as string,
-        ),
+        h("span", { class: "text-lg leading-none" }, row.original.flag as string),
         " ",
         row.getValue("location") as string,
       ]),
@@ -213,10 +208,7 @@ const table = useVueTable({
                   @click="header.column.getToggleSortingHandler()?.($event)"
                   @keydown="
                     (e) => {
-                      if (
-                        header.column.getCanSort() &&
-                        (e.key === 'Enter' || e.key === ' ')
-                      ) {
+                      if (header.column.getCanSort() && (e.key === 'Enter' || e.key === ' ')) {
                         e.preventDefault();
                         header.column.getToggleSortingHandler()?.(e);
                       }
@@ -258,17 +250,12 @@ const table = useVueTable({
               :data-state="row.getIsSelected() && 'selected'"
             >
               <TableCell v-for="cell in row.getVisibleCells()" :key="cell.id">
-                <FlexRender
-                  :render="cell.column.columnDef.cell"
-                  :props="cell.getContext()"
-                />
+                <FlexRender :render="cell.column.columnDef.cell" :props="cell.getContext()" />
               </TableCell>
             </TableRow>
           </template>
           <TableRow v-else>
-            <TableCell :colspan="columns.length" class="h-24 text-center">
-              No results.
-            </TableCell>
+            <TableCell :colspan="columns.length" class="h-24 text-center">No results.</TableCell>
           </TableRow>
         </TableBody>
       </Table>
@@ -282,10 +269,7 @@ const table = useVueTable({
       :showEdges="true"
       :siblingCount="0"
     >
-      <PaginationContent
-        class="flex w-full items-center justify-between gap-1"
-        v-slot="{ items }"
-      >
+      <PaginationContent class="flex w-full items-center justify-between gap-1" v-slot="{ items }">
         <p class="text-muted-foreground text-sm" aria-live="polite">
           Page
           <span class="text-foreground">{{ page }}</span>
@@ -330,10 +314,7 @@ const table = useVueTable({
             :model-value="table.getState().pagination.pageSize.toString()"
             @update:model-value="(value) => table.setPageSize(Number(value))"
           >
-            <SelectTrigger
-              id="results-per-page"
-              class="w-fit whitespace-break-spaces"
-            >
+            <SelectTrigger id="results-per-page" class="w-fit whitespace-break-spaces">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>

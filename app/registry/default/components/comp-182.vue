@@ -8,10 +8,7 @@ const checked = ref(false);
 </script>
 
 <template>
-  <div
-    class="group inline-flex items-center gap-2"
-    :data-state="checked ? 'checked' : 'unchecked'"
-  >
+  <div class="group inline-flex items-center gap-2" :data-state="checked ? 'checked' : 'unchecked'">
     <span
       :id="`${id}-off`"
       class="group-data-[state=checked]:text-muted-foreground/70 flex-1 cursor-pointer text-right text-sm font-medium"

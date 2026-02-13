@@ -20,11 +20,7 @@ import {
     <DropdownMenuTrigger asChild>
       <Button variant="outline">
         Menu with icons
-        <LucideChevronDown
-          :size="16"
-          class="-me-1 opacity-60"
-          aria-hidden="true"
-        />
+        <LucideChevronDown :size="16" class="-me-1 opacity-60" aria-hidden="true" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent>

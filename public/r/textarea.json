@@ -14,8 +14,6 @@
       "type": "registry:ui"
     }
   ],
-  "dependencies": [
-    "@vueuse/core"
-  ],
+  "dependencies": ["@vueuse/core"],
   "registryDependencies": []
 }

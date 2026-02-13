@@ -139,9 +139,7 @@ const items = [
       <Table
         class="[&_td]:border-border [&_th]:border-border border-separate border-spacing-0 [&_tfoot_td]:border-t [&_th]:border-b [&_tr]:border-none [&_tr:not(:last-child)_td]:border-b"
       >
-        <TableHeader
-          class="bg-background/90 sticky top-0 z-10 backdrop-blur-xs"
-        >
+        <TableHeader class="bg-background/90 sticky top-0 z-10 backdrop-blur-xs">
           <TableRow class="hover:bg-transparent">
             <TableHead>Name</TableHead>
             <TableHead>Email</TableHead>
@@ -167,8 +165,6 @@ const items = [
         </TableFooter>
       </Table>
     </div>
-    <p class="text-muted-foreground mt-8 text-center text-sm">
-      Table with sticky header
-    </p>
+    <p class="text-muted-foreground mt-8 text-center text-sm">Table with sticky header</p>
   </div>
 </template>

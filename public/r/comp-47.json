@@ -5,24 +5,14 @@
   "files": [
     {
       "path": "components/comp-47.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@/registry/default/ui/input-group\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { LucideCreditCard } from \"lucide-vue-next\";\nimport { vMaska } from \"maska/vue\";\nimport { ref, useId } from \"vue\";\n\nconst cardNumber = ref(\"\");\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"`card-number-${id}`\">Card Number</Label>\n    <InputGroup>\n      <InputGroupInput\n        :id=\"`card-number-${id}`\"\n        v-model=\"cardNumber\"\n        class=\"[direction:inherit]\"\n        placeholder=\"0000 0000 0000 0000\"\n        maxlength=\"19\"\n        v-maska=\"'#### #### #### ####'\"\n      />\n      <InputGroupAddon>\n        <LucideCreditCard :size=\"16\" aria-hidden=\"true\" />\n      </InputGroupAddon>\n    </InputGroup>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://beholdr.github.io/maska/v3/#/vue\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        maska\n      </a>\n    </p>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { InputGroup, InputGroupAddon, InputGroupInput } from \"@/registry/default/ui/input-group\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { LucideCreditCard } from \"lucide-vue-next\";\nimport { vMaska } from \"maska/vue\";\nimport { ref, useId } from \"vue\";\n\nconst cardNumber = ref(\"\");\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"`card-number-${id}`\">Card Number</Label>\n    <InputGroup>\n      <InputGroupInput\n        :id=\"`card-number-${id}`\"\n        v-model=\"cardNumber\"\n        class=\"[direction:inherit]\"\n        placeholder=\"0000 0000 0000 0000\"\n        maxlength=\"19\"\n        v-maska=\"'#### #### #### ####'\"\n      />\n      <InputGroupAddon>\n        <LucideCreditCard :size=\"16\" aria-hidden=\"true\" />\n      </InputGroupAddon>\n    </InputGroup>\n    <p class=\"text-muted-foreground mt-2 text-xs\" role=\"region\" aria-live=\"polite\">\n      Built with\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://beholdr.github.io/maska/v3/#/vue\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        maska\n      </a>\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "checkout",
-      "payment",
-      "credit card",
-      "form"
-    ]
+    "tags": ["input", "label", "checkout", "payment", "credit card", "form"]
   },
-  "dependencies": [
-    "lucide-vue-next",
-    "maska/vue"
-  ],
+  "dependencies": ["lucide-vue-next", "maska/vue"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/input-group.json",
     "https://www.originui-vue.com/r/label.json"

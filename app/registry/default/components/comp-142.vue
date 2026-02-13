@@ -30,10 +30,7 @@ watch(checked, (newValue) => {
       <div class="grow">
         <div class="grid gap-2">
           <Label :for="checkboxId">Checkbox with expansion</Label>
-          <p
-            :id="`${checkboxId}-description`"
-            class="text-muted-foreground text-xs"
-          >
+          <p :id="`${checkboxId}-description`" class="text-muted-foreground text-xs">
             You can use this checkbox with a label and a description.
           </p>
         </div>

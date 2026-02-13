@@ -20,10 +20,7 @@ const commands = {
 
 <template>
   <div class="relative">
-    <Tabs
-      v-model="packageManager"
-      class="rounded-md bg-zinc-950 dark:bg-zinc-900"
-    >
+    <Tabs v-model="packageManager" class="rounded-md bg-zinc-950 dark:bg-zinc-900">
       <TabsList
         class="dark h-auto w-full justify-start rounded-none border-b bg-transparent px-4 py-0"
       >
@@ -36,20 +33,10 @@ const commands = {
           {{ pkg }}
         </TabsTrigger>
       </TabsList>
-      <TabsContent
-        v-for="(command, pkg) in commands"
-        :key="pkg"
-        :value="pkg"
-        class="m-0"
-      >
-        <pre class="overflow-auto p-4 font-mono text-[12.8px] text-zinc-100">{{
-          command
-        }}</pre>
+      <TabsContent v-for="(command, pkg) in commands" :key="pkg" :value="pkg" class="m-0">
+        <pre class="overflow-auto p-4 font-mono text-[12.8px] text-zinc-100">{{ command }}</pre>
       </TabsContent>
     </Tabs>
-    <CopyButton
-      :text="commands[packageManager as keyof typeof commands]"
-      class="top-1"
-    />
+    <CopyButton :text="commands[packageManager as keyof typeof commands]" class="top-1" />
   </div>
 </template>

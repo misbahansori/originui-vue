@@ -5,12 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/registry/default/ui/accordion";
-import {
-  LucideBell,
-  LucideLifeBuoy,
-  LucideLink2,
-  LucideShieldCheck,
-} from "lucide-vue-next";
+import { LucideBell, LucideLifeBuoy, LucideLink2, LucideShieldCheck } from "lucide-vue-next";
 
 const items = [
   {
@@ -52,12 +47,7 @@ const items = [
   <div class="space-y-4">
     <h2 class="text-xl font-bold">W/ icon, sub-header, and chevron</h2>
     <Accordion type="single" collapsible class="w-full" :default-value="'3'">
-      <AccordionItem
-        v-for="item in items"
-        :key="item.id"
-        :value="item.id"
-        class="py-2"
-      >
+      <AccordionItem v-for="item in items" :key="item.id" :value="item.id" class="py-2">
         <AccordionTrigger
           class="items-center py-2 text-left text-[15px] leading-6 font-semibold transition-all hover:no-underline [&[data-state=open]>svg]:rotate-180"
         >
@@ -66,12 +56,7 @@ const items = [
               class="flex size-10 shrink-0 items-center justify-center rounded-full border"
               aria-hidden="true"
             >
-              <component
-                :is="item.icon"
-                :size="16"
-                class="opacity-60"
-                aria-hidden="true"
-              />
+              <component :is="item.icon" :size="16" class="opacity-60" aria-hidden="true" />
             </span>
             <span class="flex flex-col space-y-1">
               <span>{{ item.title }}</span>

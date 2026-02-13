@@ -24,9 +24,7 @@ const stars = ["1", "2", "3", "4", "5"];
 
 <template>
   <fieldset class="space-y-4">
-    <legend class="text-foreground text-sm leading-none font-medium">
-      Rate your experience
-    </legend>
+    <legend class="text-foreground text-sm leading-none font-medium">Rate your experience</legend>
     <RadioGroup
       class="inline-flex gap-0"
       :modelValue="currentRating"
@@ -43,14 +41,10 @@ const stars = ["1", "2", "3", "4", "5"];
         <Star
           :size="24"
           :class="`transition-all ${
-            (hoverRating || currentRating) >= value
-              ? 'text-amber-500'
-              : 'text-input'
+            (hoverRating || currentRating) >= value ? 'text-amber-500' : 'text-input'
           } group-hover:scale-110`"
         />
-        <span class="sr-only">
-          {{ value }} star{{ value === "1" ? "" : "s" }}
-        </span>
+        <span class="sr-only">{{ value }} star{{ value === "1" ? "" : "s" }}</span>
       </label>
     </RadioGroup>
   </fieldset>

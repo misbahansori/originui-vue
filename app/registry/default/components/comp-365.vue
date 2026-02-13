@@ -1,9 +1,5 @@
 <script setup lang="ts">
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/registry/default/ui/hover-card";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/registry/default/ui/hover-card";
 </script>
 
 <template>
@@ -23,12 +19,10 @@ import {
       <HoverCardContent class="w-[320px]" show-arrow>
         <div class="space-y-3">
           <div class="space-y-1">
-            <h2 class="font-semibold">
-              Building a Design System with Next.js and Tailwind CSS
-            </h2>
+            <h2 class="font-semibold">Building a Design System with Next.js and Tailwind CSS</h2>
             <p class="text-muted-foreground text-sm">
-              Learn how to build a comprehensive design system using Tailwind
-              CSS, including component architecture, and theme customization.
+              Learn how to build a comprehensive design system using Tailwind CSS, including
+              component architecture, and theme customization.
             </p>
           </div>
           <div class="text-muted-foreground flex items-center gap-2 text-xs">

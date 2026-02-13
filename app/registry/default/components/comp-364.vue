@@ -1,9 +1,5 @@
 <script setup lang="ts">
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/registry/default/ui/hover-card";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/registry/default/ui/hover-card";
 </script>
 
 <template>
@@ -19,9 +15,7 @@ import {
       <div class="space-y-0.5">
         <HoverCardTrigger as-child>
           <p>
-            <a class="text-sm font-medium hover:underline" href="#">
-              Keith Kennedy
-            </a>
+            <a class="text-sm font-medium hover:underline" href="#">Keith Kennedy</a>
           </p>
         </HoverCardTrigger>
         <p class="text-muted-foreground text-xs">@k.kennedy</p>

@@ -66,11 +66,7 @@ const { copy, copied } = useClipboard();
               />
             </div>
           </div>
-          <button
-            type="button"
-            @click="addEmail"
-            class="text-sm underline hover:no-underline"
-          >
+          <button type="button" @click="addEmail" class="text-sm underline hover:no-underline">
             + Add another
           </button>
         </div>
@@ -101,28 +97,19 @@ const { copy, copied } = useClipboard();
                 >
                   <div
                     class="transition-all"
-                    :class="
-                      copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
-                    "
+                    :class="copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0'"
                   >
-                    <LucideCheck
-                      class="size-4 stroke-emerald-500"
-                      aria-hidden="true"
-                    />
+                    <LucideCheck class="size-4 stroke-emerald-500" aria-hidden="true" />
                   </div>
                   <div
                     class="absolute transition-all"
-                    :class="
-                      copied ? 'scale-0 opacity-0' : 'scale-100 opacity-100'
-                    "
+                    :class="copied ? 'scale-0 opacity-0' : 'scale-100 opacity-100'"
                   >
                     <LucideCopy class="size-4" aria-hidden="true" />
                   </div>
                 </button>
               </TooltipTrigger>
-              <TooltipContent class="px-2 py-1 text-xs">
-                Copy to clipboard
-              </TooltipContent>
+              <TooltipContent class="px-2 py-1 text-xs">Copy to clipboard</TooltipContent>
             </Tooltip>
           </TooltipProvider>
         </div>

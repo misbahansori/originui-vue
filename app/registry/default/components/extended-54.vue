@@ -22,8 +22,6 @@ const selectedDate = ref<CalendarDate>();
         <MiniCalendarNavigation direction="next" />
       </MiniCalendar>
     </div>
-    <p class="text-muted-foreground mt-2 text-xs">
-      Extended 10-day view for planning ahead
-    </p>
+    <p class="text-muted-foreground mt-2 text-xs">Extended 10-day view for planning ahead</p>
   </div>
 </template>

@@ -19,8 +19,7 @@ const items = [
     collapsibles: [
       {
         title: "What about performance?",
-        content:
-          "We optimize every component for maximum performance and minimal bundle size.",
+        content: "We optimize every component for maximum performance and minimal bundle size.",
       },
       {
         title: "How is the documentation?",
@@ -40,8 +39,7 @@ const items = [
       },
       {
         title: "What about Tailwind support?",
-        content:
-          "We have first-class support for Tailwind CSS with custom utility classes.",
+        content: "We have first-class support for Tailwind CSS with custom utility classes.",
       },
     ],
   },
@@ -57,8 +55,7 @@ const items = [
       },
       {
         title: "How is code splitting handled?",
-        content:
-          "We support automatic code splitting for optimal loading performance.",
+        content: "We support automatic code splitting for optimal loading performance.",
       },
     ],
   },
@@ -68,8 +65,7 @@ const items = [
     collapsibles: [
       {
         title: "Which screen readers are supported?",
-        content:
-          "We test with NVDA, VoiceOver, and JAWS to ensure broad compatibility.",
+        content: "We test with NVDA, VoiceOver, and JAWS to ensure broad compatibility.",
       },
       {
         title: "What about keyboard navigation?",
@@ -84,12 +80,7 @@ const items = [
 <template>
   <div class="space-y-4">
     <h2 class="text-xl font-bold">Multi-level</h2>
-    <Accordion
-      type="single"
-      collapsible
-      class="w-full -space-y-px"
-      :default-value="'3'"
-    >
+    <Accordion type="single" collapsible class="w-full -space-y-px" :default-value="'3'">
       <AccordionItem
         v-for="item in items"
         :key="item.id"

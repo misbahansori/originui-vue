@@ -10,11 +10,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/registry/default/ui/navigation-menu";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
@@ -85,10 +81,7 @@ const navigationLinks = [
           <!-- Navigation menu -->
           <NavigationMenu class="max-md:hidden">
             <NavigationMenuList class="gap-2">
-              <NavigationMenuItem
-                v-for="(link, index) in navigationLinks"
-                :key="index"
-              >
+              <NavigationMenuItem v-for="(link, index) in navigationLinks" :key="index">
                 <NavigationMenuLink
                   :href="link.href"
                   class="text-muted-foreground hover:text-primary py-1.5 font-medium"

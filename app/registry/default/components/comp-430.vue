@@ -1,17 +1,10 @@
 <script setup lang="ts">
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/default/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/default/ui/tabs";
 </script>
 
 <template>
   <Tabs defaultValue="tab-1" class="items-center">
-    <TabsList
-      class="text-foreground h-auto gap-2 rounded-none border-b bg-transparent px-0 py-1"
-    >
+    <TabsList class="text-foreground h-auto gap-2 rounded-none border-b bg-transparent px-0 py-1">
       <TabsTrigger
         value="tab-1"
         class="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
@@ -32,19 +25,13 @@ import {
       </TabsTrigger>
     </TabsList>
     <TabsContent value="tab-1">
-      <p class="text-muted-foreground p-4 text-center text-xs">
-        Content for Tab 1
-      </p>
+      <p class="text-muted-foreground p-4 text-center text-xs">Content for Tab 1</p>
     </TabsContent>
     <TabsContent value="tab-2">
-      <p class="text-muted-foreground p-4 text-center text-xs">
-        Content for Tab 2
-      </p>
+      <p class="text-muted-foreground p-4 text-center text-xs">Content for Tab 2</p>
     </TabsContent>
     <TabsContent value="tab-3">
-      <p class="text-muted-foreground p-4 text-center text-xs">
-        Content for Tab 3
-      </p>
+      <p class="text-muted-foreground p-4 text-center text-xs">Content for Tab 3</p>
     </TabsContent>
   </Tabs>
 </template>

@@ -13,11 +13,6 @@ const id = useId();
       Required textarea
       <span class="text-destructive">*</span>
     </Label>
-    <Textarea
-      :id="id"
-      v-model="textValue"
-      placeholder="Leave a message"
-      required
-    />
+    <Textarea :id="id" v-model="textValue" placeholder="Leave a message" required />
   </div>
 </template>

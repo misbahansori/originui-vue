@@ -35,8 +35,7 @@ const inputValue = ref("");
         <DialogHeader>
           <DialogTitle class="sm:text-center">Final confirmation</DialogTitle>
           <DialogDescription class="sm:text-center">
-            This action cannot be undone. To confirm, please enter the project
-            name
+            This action cannot be undone. To confirm, please enter the project name
             <span class="text-foreground">Origin UI</span>
             .
           </DialogDescription>
@@ -55,15 +54,9 @@ const inputValue = ref("");
         </div>
         <DialogFooter>
           <DialogClose asChild>
-            <Button type="button" variant="outline" class="flex-1">
-              Cancel
-            </Button>
+            <Button type="button" variant="outline" class="flex-1">Cancel</Button>
           </DialogClose>
-          <Button
-            type="button"
-            class="flex-1"
-            :disabled="inputValue !== PROJECT_NAME"
-          >
+          <Button type="button" class="flex-1" :disabled="inputValue !== PROJECT_NAME">
             Delete
           </Button>
         </DialogFooter>

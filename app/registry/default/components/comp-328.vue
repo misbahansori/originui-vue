@@ -48,12 +48,7 @@ const cvc = ref("");
         <div class="space-y-4">
           <div class="*:not-first:mt-2">
             <Label :for="`name-${formId}`">Name on card</Label>
-            <Input
-              :id="`name-${formId}`"
-              v-model="cardName"
-              type="text"
-              required
-            />
+            <Input :id="`name-${formId}`" v-model="cardName" type="text" required />
           </div>
           <div class="*:not-first:mt-2">
             <Label :for="`number-${formId}`">Card Number</Label>
@@ -100,10 +95,7 @@ const cvc = ref("");
         </div>
         <div class="flex items-center gap-2">
           <Checkbox :id="`primary-${formId}`" v-model="isDefaultPayment" />
-          <Label
-            :for="`primary-${formId}`"
-            class="text-muted-foreground font-normal"
-          >
+          <Label :for="`primary-${formId}`" class="text-muted-foreground font-normal">
             Set as default payment method
           </Label>
         </div>

@@ -35,8 +35,7 @@ const modelValue = defineModel<Option[]>("modelValue", {
   default: () => [],
 });
 
-const { defaultOptions, options, placeholder } =
-  defineProps<MultySelectProps>();
+const { defaultOptions, options, placeholder } = defineProps<MultySelectProps>();
 
 const emits = defineEmits<{
   (e: "update:modelValue", payload: Option[]): void;

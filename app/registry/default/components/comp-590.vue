@@ -17,11 +17,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/registry/default/ui/navigation-menu";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 
 const teams = ["Acme Inc.", "Origin UI", "Junon"];
 
@@ -78,10 +74,7 @@ const navigationLinks = [
                   :key="index"
                   class="w-full"
                 >
-                  <NavigationMenuLink
-                    :href="link.href"
-                    class="flex-row items-center gap-2 py-1.5"
-                  >
+                  <NavigationMenuLink :href="link.href" class="flex-row items-center gap-2 py-1.5">
                     <component
                       :is="link.icon"
                       :size="16"
@@ -100,10 +93,7 @@ const navigationLinks = [
       <!-- Middle area -->
       <NavigationMenu class="max-md:hidden">
         <NavigationMenuList class="gap-2">
-          <NavigationMenuItem
-            v-for="(link, index) in navigationLinks"
-            :key="index"
-          >
+          <NavigationMenuItem v-for="(link, index) in navigationLinks" :key="index">
             <NavigationMenuLink
               :href="link.href"
               class="flex size-8 items-center justify-center p-1.5"
@@ -118,11 +108,7 @@ const navigationLinks = [
       <!-- Right side -->
       <div class="flex flex-1 items-center justify-end gap-4">
         <Button size="sm" class="aspect-square text-sm max-sm:p-0">
-          <LucidePlus
-            class="opacity-60 sm:-ms-1"
-            :size="16"
-            aria-hidden="true"
-          />
+          <LucidePlus class="opacity-60 sm:-ms-1" :size="16" aria-hidden="true" />
           <span class="max-sm:sr-only">Post</span>
         </Button>
         <NotificationMenu />

@@ -1,15 +1,6 @@
 <script setup lang="ts">
-import {
-  Timeline,
-  TimelineContent,
-  TimelineItem,
-} from "@/registry/default/ui/timeline";
-import {
-  LucideBookOpen,
-  LucideMessageCircle,
-  LucidePencil,
-  LucidePlus,
-} from "lucide-vue-next";
+import { Timeline, TimelineContent, TimelineItem } from "@/registry/default/ui/timeline";
+import { LucideBookOpen, LucideMessageCircle, LucidePencil, LucidePlus } from "lucide-vue-next";
 
 type ActionType = "post" | "reply" | "edit" | "create";
 
@@ -99,11 +90,7 @@ const getRelativeTimeString = (date: Date): string => {
         :step="item.id"
         class="m-0! flex-row items-center gap-3 py-2.5!"
       >
-        <component
-          :is="getActionIcon(item.action)"
-          :size="16"
-          class="text-muted-foreground/80"
-        />
+        <component :is="getActionIcon(item.action)" :size="16" class="text-muted-foreground/80" />
         <img :src="item.image" :alt="item.user" class="size-6 rounded-full" />
         <TimelineContent class="text-foreground">
           <a class="font-medium hover:underline" href="#">{{ item.user }}</a>

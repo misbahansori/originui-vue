@@ -1,15 +1,9 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import {
-  DateRangePickerInput,
-  type DateRangePickerInputProps,
-  useForwardProps,
-} from "reka-ui";
+import { DateRangePickerInput, type DateRangePickerInputProps, useForwardProps } from "reka-ui";
 import { type HTMLAttributes, computed } from "vue";
 
-const props = defineProps<
-  DateRangePickerInputProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<DateRangePickerInputProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props;

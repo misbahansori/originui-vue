@@ -3,11 +3,7 @@ import { LucideBell } from "lucide-vue-next";
 import { ref } from "vue";
 
 import { Button } from "@/registry/default/ui/button";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 
 interface Notification {
   id: number;
@@ -70,9 +66,7 @@ const initialNotifications: Notification[] = [
 ];
 
 const notifications = ref<Notification[]>(initialNotifications);
-const unreadCount = computed(
-  () => notifications.value.filter((n) => n.unread).length,
-);
+const unreadCount = computed(() => notifications.value.filter((n) => n.unread).length);
 
 const handleMarkAllAsRead = () => {
   notifications.value = notifications.value.map((notification) => ({
@@ -116,11 +110,7 @@ const handleNotificationClick = (id: number) => {
           Mark all as read
         </button>
       </div>
-      <div
-        role="separator"
-        aria-orientation="horizontal"
-        class="bg-border -mx-1 my-1 h-px"
-      />
+      <div role="separator" aria-orientation="horizontal" class="bg-border -mx-1 my-1 h-px" />
       <div
         v-for="notification in notifications"
         :key="notification.id"

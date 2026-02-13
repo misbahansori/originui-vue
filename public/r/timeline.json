@@ -10,7 +10,7 @@
     },
     {
       "path": "ui/timeline/TimelineContent.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\n\ndefineProps<{\n  class?: string;\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"timeline-content\"\n    :class=\"cn('text-muted-foreground text-sm', $props.class)\"\n  >\n    <slot />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\n\ndefineProps<{\n  class?: string;\n}>();\n</script>\n\n<template>\n  <div data-slot=\"timeline-content\" :class=\"cn('text-muted-foreground text-sm', $props.class)\">\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {
@@ -40,7 +40,7 @@
     },
     {
       "path": "ui/timeline/TimelineTitle.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\n\ndefineProps<{\n  class?: string;\n}>();\n</script>\n\n<template>\n  <h3\n    data-slot=\"timeline-title\"\n    :class=\"cn('text-sm font-medium', $props.class)\"\n  >\n    <slot />\n  </h3>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\n\ndefineProps<{\n  class?: string;\n}>();\n</script>\n\n<template>\n  <h3 data-slot=\"timeline-title\" :class=\"cn('text-sm font-medium', $props.class)\">\n    <slot />\n  </h3>\n</template>\n",
       "type": "registry:ui"
     },
     {

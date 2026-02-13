@@ -44,16 +44,10 @@ onUnmounted(() => {
       @click="open = true"
     >
       <span class="flex grow items-center">
-        <LucideSearch
-          :size="16"
-          class="text-muted-foreground/80 -ms-1 me-3"
-          aria-hidden="true"
-        />
+        <LucideSearch :size="16" class="text-muted-foreground/80 -ms-1 me-3" aria-hidden="true" />
         <span class="text-muted-foreground/70 font-normal">Search</span>
       </span>
-      <Kbd
-        class="text-muted-foreground/70 bg-background ms-12 -me-1 border text-[0.625rem]"
-      >
+      <Kbd class="text-muted-foreground/70 bg-background ms-12 -me-1 border text-[0.625rem]">
         ⌘K
       </Kbd>
     </button>
@@ -63,11 +57,7 @@ onUnmounted(() => {
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Quick start">
           <CommandItem value="new-folder">
-            <LucideFolderPlus
-              :size="16"
-              class="opacity-60"
-              aria-hidden="true"
-            />
+            <LucideFolderPlus :size="16" class="opacity-60" aria-hidden="true" />
             <span>New folder</span>
             <CommandShortcut class="justify-center">⌘N</CommandShortcut>
           </CommandItem>
@@ -77,11 +67,7 @@ onUnmounted(() => {
             <CommandShortcut class="justify-center">⌘I</CommandShortcut>
           </CommandItem>
           <CommandItem value="add-block">
-            <LucideCircleFadingPlus
-              :size="16"
-              class="opacity-60"
-              aria-hidden="true"
-            />
+            <LucideCircleFadingPlus :size="16" class="opacity-60" aria-hidden="true" />
             <span>Add block</span>
             <CommandShortcut class="justify-center">⌘B</CommandShortcut>
           </CommandItem>
@@ -89,27 +75,15 @@ onUnmounted(() => {
         <CommandSeparator />
         <CommandGroup heading="Navigation">
           <CommandItem value="dashboard">
-            <LucideArrowUpRight
-              :size="16"
-              class="opacity-60"
-              aria-hidden="true"
-            />
+            <LucideArrowUpRight :size="16" class="opacity-60" aria-hidden="true" />
             <span>Go to dashboard</span>
           </CommandItem>
           <CommandItem value="apps">
-            <LucideArrowUpRight
-              :size="16"
-              class="opacity-60"
-              aria-hidden="true"
-            />
+            <LucideArrowUpRight :size="16" class="opacity-60" aria-hidden="true" />
             <span>Go to apps</span>
           </CommandItem>
           <CommandItem value="connections">
-            <LucideArrowUpRight
-              :size="16"
-              class="opacity-60"
-              aria-hidden="true"
-            />
+            <LucideArrowUpRight :size="16" class="opacity-60" aria-hidden="true" />
             <span>Go to connections</span>
           </CommandItem>
         </CommandGroup>

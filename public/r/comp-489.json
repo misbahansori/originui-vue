@@ -5,24 +5,14 @@
   "files": [
     {
       "path": "components/comp-489.vue",
-      "content": "<script setup lang=\"ts\">\nimport { RangeCalendar } from \"@/registry/default/ui/range-calendar\";\nimport {\n  type DateValue,\n  getLocalTimeZone,\n  isWeekend,\n  today,\n} from \"@internationalized/date\";\nimport type { DateRange } from \"reka-ui\";\nimport type { Ref } from \"vue\";\nimport { ref } from \"vue\";\n\nconst start = today(getLocalTimeZone());\nconst end = start.add({ days: 7 });\n\nconst value = ref({\n  start,\n  end,\n}) as Ref<DateRange>;\n\nconst disabledRanges = [\n  [start, start],\n  [start.add({ days: 14 }), start.add({ days: 14 })],\n  [start.add({ days: 23 }), start.add({ days: 23 })],\n] as const;\n\nconst isDateUnavailable = (date: DateValue) =>\n  isWeekend(date, \"en\") ||\n  disabledRanges.some(\n    (interval) =>\n      date.compare(interval[0]) >= 0 && date.compare(interval[1]) <= 0,\n  );\n</script>\n\n<template>\n  <div>\n    <RangeCalendar\n      v-model=\"value\"\n      :isDateUnavailable=\"isDateUnavailable\"\n      :weekday-format=\"'short'\"\n      :minValue=\"today(getLocalTimeZone())\"\n      class=\"rounded-md border\"\n    />\n    <p class=\"text-muted-foreground mt-4 text-center text-xs\">\n      Disabled dates -\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/docs/components/calendar#calendar\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        Reka UI\n      </a>\n    </p>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { RangeCalendar } from \"@/registry/default/ui/range-calendar\";\nimport { type DateValue, getLocalTimeZone, isWeekend, today } from \"@internationalized/date\";\nimport type { DateRange } from \"reka-ui\";\nimport type { Ref } from \"vue\";\nimport { ref } from \"vue\";\n\nconst start = today(getLocalTimeZone());\nconst end = start.add({ days: 7 });\n\nconst value = ref({\n  start,\n  end,\n}) as Ref<DateRange>;\n\nconst disabledRanges = [\n  [start, start],\n  [start.add({ days: 14 }), start.add({ days: 14 })],\n  [start.add({ days: 23 }), start.add({ days: 23 })],\n] as const;\n\nconst isDateUnavailable = (date: DateValue) =>\n  isWeekend(date, \"en\") ||\n  disabledRanges.some(\n    (interval) => date.compare(interval[0]) >= 0 && date.compare(interval[1]) <= 0,\n  );\n</script>\n\n<template>\n  <div>\n    <RangeCalendar\n      v-model=\"value\"\n      :isDateUnavailable=\"isDateUnavailable\"\n      :weekday-format=\"'short'\"\n      :minValue=\"today(getLocalTimeZone())\"\n      class=\"rounded-md border\"\n    />\n    <p class=\"text-muted-foreground mt-4 text-center text-xs\">\n      Disabled dates -\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/docs/components/calendar#calendar\"\n        target=\"_blank\"\n        rel=\"noopener nofollow\"\n      >\n        Reka UI\n      </a>\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "calendar",
-      "range calendar",
-      "date",
-      "disabled",
-      "react aria"
-    ],
+    "tags": ["calendar", "range calendar", "date", "disabled", "react aria"],
     "style": 1
   },
-  "dependencies": [
-    "@internationalized/date"
-  ],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/range-calendar.json"
-  ]
+  "dependencies": ["@internationalized/date"],
+  "registryDependencies": ["https://www.originui-vue.com/r/range-calendar.json"]
 }

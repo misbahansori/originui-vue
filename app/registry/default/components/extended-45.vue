@@ -21,7 +21,5 @@ const selectedDate = ref<CalendarDate>();
       <MiniCalendarNavigation direction="next" />
     </MiniCalendar>
   </div>
-  <p class="text-muted-foreground mt-2 text-xs">
-    Compact 3-day view for mobile or tight spaces
-  </p>
+  <p class="text-muted-foreground mt-2 text-xs">Compact 3-day view for mobile or tight spaces</p>
 </template>

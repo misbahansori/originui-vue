@@ -9,12 +9,7 @@ import {
 </script>
 
 <template>
-  <Pagination
-    :defaultPage="1"
-    :itemsPerPage="10"
-    :total="100"
-    v-slot="{ page, pageCount }"
-  >
+  <Pagination :defaultPage="1" :itemsPerPage="10" :total="100" v-slot="{ page, pageCount }">
     <PaginationContent class="flex w-full items-center justify-between gap-3">
       <p class="text-muted-foreground text-sm" aria-live="polite">
         Page

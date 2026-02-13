@@ -14,16 +14,10 @@ const hideBanner = () => {
   <div v-if="isVisible" class="dark bg-muted text-foreground px-4 py-3 md:py-2">
     <div class="flex gap-2 md:items-center">
       <div class="flex grow gap-3 md:items-center md:justify-center">
-        <LucideEclipse
-          class="size-4 shrink-0 opacity-60 max-md:mt-0.5"
-          aria-hidden="true"
-        />
-        <div
-          class="flex flex-col justify-between gap-3 md:flex-row md:items-center"
-        >
+        <LucideEclipse class="size-4 shrink-0 opacity-60 max-md:mt-0.5" aria-hidden="true" />
+        <div class="flex flex-col justify-between gap-3 md:flex-row md:items-center">
           <p class="text-sm">
-            It's live and ready to use! Start exploring the latest addition to
-            your toolkit.
+            It's live and ready to use! Start exploring the latest addition to your toolkit.
           </p>
           <div class="flex gap-2 max-md:flex-wrap">
             <Button size="sm" class="rounded-full">Learn more</Button>

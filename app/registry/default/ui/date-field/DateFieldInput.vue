@@ -1,15 +1,9 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import {
-  DateFieldInput,
-  useForwardProps,
-  type DateFieldInputProps,
-} from "reka-ui";
+import { DateFieldInput, useForwardProps, type DateFieldInputProps } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 
-const props = defineProps<
-  DateFieldInputProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<DateFieldInputProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props;

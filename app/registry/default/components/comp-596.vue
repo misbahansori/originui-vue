@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import {
-  LucideClock,
-  LucidePower,
-  LucidePowerOff,
-  LucideZap,
-} from "lucide-vue-next";
+import { LucideClock, LucidePower, LucidePowerOff, LucideZap } from "lucide-vue-next";
 import { ref, useId } from "vue";
 
 import { Badge } from "@/registry/default/ui/badge";
@@ -16,11 +11,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/registry/default/ui/navigation-menu";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import { Switch } from "@/registry/default/ui/switch";
 
 // Navigation links array to be used in both desktop and mobile menus
@@ -114,26 +105,15 @@ const checked = ref(true);
       <div class="flex items-center gap-4">
         <div class="flex items-center gap-2">
           <Badge variant="outline" class="gap-1.5 text-emerald-600">
-            <span
-              class="size-1.5 rounded-full bg-emerald-500"
-              aria-hidden="true"
-            ></span>
+            <span class="size-1.5 rounded-full bg-emerald-500" aria-hidden="true"></span>
             Online
           </Badge>
           <Badge variant="outline" class="gap-1.5">
-            <LucideZap
-              class="-ms-0.5 opacity-60"
-              :size="12"
-              aria-hidden="true"
-            />
+            <LucideZap class="-ms-0.5 opacity-60" :size="12" aria-hidden="true" />
             99.9%
           </Badge>
           <Badge variant="outline" class="gap-1.5">
-            <LucideClock
-              class="-ms-0.5 opacity-60"
-              :size="12"
-              aria-hidden="true"
-            />
+            <LucideClock class="-ms-0.5 opacity-60" :size="12" aria-hidden="true" />
             45ms
           </Badge>
         </div>

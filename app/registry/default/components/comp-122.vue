@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
-import {
-  RiFacebookFill,
-  RiGithubFill,
-  RiGoogleFill,
-  RiTwitterXFill,
-} from "@remixicon/vue";
+import { RiFacebookFill, RiGithubFill, RiGoogleFill, RiTwitterXFill } from "@remixicon/vue";
 </script>
 
 <template>

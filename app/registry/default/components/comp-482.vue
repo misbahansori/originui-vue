@@ -86,8 +86,7 @@ const columns: ColumnDef<Item>[] = [
     cell: ({ row }) =>
       h(Checkbox, {
         modelValue: row.getIsSelected(),
-        "onUpdate:modelValue": (value: boolean | "indeterminate") =>
-          row.toggleSelected(!!value),
+        "onUpdate:modelValue": (value: boolean | "indeterminate") => row.toggleSelected(!!value),
         "aria-label": "Select row",
       }),
   },
@@ -105,11 +104,7 @@ const columns: ColumnDef<Item>[] = [
     accessorKey: "location",
     cell: ({ row }) =>
       h("div", {}, [
-        h(
-          "span",
-          { class: "text-lg leading-none" },
-          row.original.flag as string,
-        ),
+        h("span", { class: "text-lg leading-none" }, row.original.flag as string),
         " ",
         row.getValue("location") as string,
       ]),
@@ -170,15 +165,11 @@ const table = useVueTable({
   },
   onRowSelectionChange: (updaterOrValue) => {
     rowSelection.value =
-      typeof updaterOrValue === "function"
-        ? updaterOrValue(rowSelection.value)
-        : updaterOrValue;
+      typeof updaterOrValue === "function" ? updaterOrValue(rowSelection.value) : updaterOrValue;
   },
   onExpandedChange: (updaterOrValue) => {
     expanded.value =
-      typeof updaterOrValue === "function"
-        ? updaterOrValue(expanded.value)
-        : updaterOrValue;
+      typeof updaterOrValue === "function" ? updaterOrValue(expanded.value) : updaterOrValue;
   },
 });
 </script>
@@ -210,19 +201,13 @@ const table = useVueTable({
                 :key="cell.id"
                 class="whitespace-nowrap [&:has([aria-expanded])]:w-px [&:has([aria-expanded])]:py-0 [&:has([aria-expanded])]:pr-0"
               >
-                <FlexRender
-                  :render="cell.column.columnDef.cell"
-                  :props="cell.getContext()"
-                />
+                <FlexRender :render="cell.column.columnDef.cell" :props="cell.getContext()" />
               </TableCell>
             </TableRow>
             <TableRow v-if="row.getIsExpanded()">
               <TableCell :colspan="row.getVisibleCells().length">
                 <div class="text-primary/80 flex items-start py-2">
-                  <span
-                    class="me-3 mt-0.5 flex w-7 shrink-0 justify-center"
-                    aria-hidden="true"
-                  >
+                  <span class="me-3 mt-0.5 flex w-7 shrink-0 justify-center" aria-hidden="true">
                     <InfoIcon class="opacity-60" :size="16" />
                   </span>
                   <p class="text-sm whitespace-pre-wrap">
@@ -234,9 +219,7 @@ const table = useVueTable({
           </template>
         </template>
         <TableRow v-else>
-          <TableCell :colspan="columns.length" class="h-24 text-center">
-            No results.
-          </TableCell>
+          <TableCell :colspan="columns.length" class="h-24 text-center">No results.</TableCell>
         </TableRow>
       </TableBody>
     </Table>

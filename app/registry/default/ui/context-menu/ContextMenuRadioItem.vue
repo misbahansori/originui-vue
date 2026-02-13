@@ -10,9 +10,7 @@ import {
 } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
-const props = defineProps<
-  ContextMenuRadioItemProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<ContextMenuRadioItemProps & { class?: HTMLAttributes["class"] }>();
 const emits = defineEmits<ContextMenuRadioItemEmits>();
 
 const delegatedProps = computed(() => {
@@ -35,9 +33,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
       )
     "
   >
-    <span
-      class="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center"
-    >
+    <span class="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
       <ContextMenuItemIndicator>
         <Circle class="size-2 fill-current" />
       </ContextMenuItemIndicator>

@@ -5,17 +5,12 @@
   "files": [
     {
       "path": "components/comp-37.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { TimeField, TimeFieldInput } from \"@/registry/default/ui/time-field\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst time = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\" class=\"text-foreground text-sm font-medium\">\n      Time input\n    </Label>\n    <TimeField :id=\"id\" v-slot=\"{ segments }\">\n      <TimeFieldInput v-for=\"item in segments\" :part=\"item.part\">\n        {{ item.value }}\n      </TimeFieldInput>\n    </TimeField>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with reka-ui\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/docs/components/time-field\"\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n      >\n        TimeField\n      </a>\n    </p>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { TimeField, TimeFieldInput } from \"@/registry/default/ui/time-field\";\nimport { ref, useId } from \"vue\";\n\nconst id = useId();\nconst time = ref(\"\");\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\" class=\"text-foreground text-sm font-medium\">Time input</Label>\n    <TimeField :id=\"id\" v-slot=\"{ segments }\">\n      <TimeFieldInput v-for=\"item in segments\" :part=\"item.part\">\n        {{ item.value }}\n      </TimeFieldInput>\n    </TimeField>\n    <p class=\"text-muted-foreground mt-2 text-xs\" role=\"region\" aria-live=\"polite\">\n      Built with reka-ui\n      <a\n        class=\"hover:text-foreground underline\"\n        href=\"https://reka-ui.com/docs/components/time-field\"\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n      >\n        TimeField\n      </a>\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "date",
-      "react aria"
-    ]
+    "tags": ["input", "label", "date", "react aria"]
   },
   "dependencies": [],
   "registryDependencies": [

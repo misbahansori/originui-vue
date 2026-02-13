@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
-import {
-  ButtonGroup,
-  ButtonGroupSeparator,
-} from "@/registry/default/ui/button-group";
+import { ButtonGroup, ButtonGroupSeparator } from "@/registry/default/ui/button-group";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,8 +24,7 @@ const options = [
   },
   {
     label: "Rebase and merge",
-    description:
-      "The 6 commits from this branch will be rebased and added to the base branch.",
+    description: "The 6 commits from this branch will be rebased and added to the base branch.",
   },
 ];
 

@@ -5,9 +5,7 @@ import type { AlertDialogTitleProps } from "reka-ui";
 import { AlertDialogTitle } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 
-const props = defineProps<
-  AlertDialogTitleProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<AlertDialogTitleProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = reactiveOmit(props, "class");
 </script>

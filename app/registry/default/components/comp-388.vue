@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import { Textarea } from "@/registry/default/ui/textarea";
 </script>
 

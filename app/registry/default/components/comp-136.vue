@@ -10,8 +10,6 @@ const checked = ref(true);
 <template>
   <div class="flex items-center gap-2">
     <Checkbox :id="id" v-model="checked" />
-    <Label :for="id" class="peer-data-[state=checked]:line-through">
-      Simple todo item
-    </Label>
+    <Label :for="id" class="peer-data-[state=checked]:line-through">Simple todo item</Label>
   </div>
 </template>

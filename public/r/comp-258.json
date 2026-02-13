@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-258.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\n\nconst minValue = 0;\nconst maxValue = 200;\nconst initialValue = [50, 150];\n\nconst {\n  sliderValues,\n  inputValues,\n  validateAndUpdateValue,\n  handleInputChange,\n  handleSliderChange,\n} = useSliderWithInput({ minValue, maxValue, initialValue });\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-3\">\n    <Label>Dual range slider with input</Label>\n    <div class=\"flex items-center gap-4\">\n      <Input\n        class=\"h-8 w-16 px-2 py-1 text-center\"\n        type=\"text\"\n        inputmode=\"decimal\"\n        :model-value=\"inputValues[0]\"\n        @update:model-value=\"(newValue) => handleInputChange(0, newValue)\"\n        @blur=\"() => validateAndUpdateValue(inputValues[0] ?? '', 0)\"\n        @keydown.enter=\"validateAndUpdateValue(inputValues[0] ?? '', 0)\"\n      />\n      <Slider\n        class=\"grow\"\n        :model-value=\"sliderValues\"\n        @update:model-value=\"handleSliderChange\"\n        :min=\"minValue\"\n        :max=\"maxValue\"\n        aria-label=\"Dual range slider with input\"\n      />\n      <Input\n        class=\"h-8 w-16 px-2 py-1 text-center\"\n        type=\"text\"\n        inputmode=\"decimal\"\n        :model-value=\"inputValues[1]\"\n        @update:model-value=\"(newValue) => handleInputChange(1, newValue)\"\n        @blur=\"() => validateAndUpdateValue(inputValues[1] ?? '', 1)\"\n        @keydown.enter=\"validateAndUpdateValue(inputValues[1] ?? '', 1)\"\n      />\n    </div>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\n\nconst minValue = 0;\nconst maxValue = 200;\nconst initialValue = [50, 150];\n\nconst { sliderValues, inputValues, validateAndUpdateValue, handleInputChange, handleSliderChange } =\n  useSliderWithInput({ minValue, maxValue, initialValue });\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-3\">\n    <Label>Dual range slider with input</Label>\n    <div class=\"flex items-center gap-4\">\n      <Input\n        class=\"h-8 w-16 px-2 py-1 text-center\"\n        type=\"text\"\n        inputmode=\"decimal\"\n        :model-value=\"inputValues[0]\"\n        @update:model-value=\"(newValue) => handleInputChange(0, newValue)\"\n        @blur=\"() => validateAndUpdateValue(inputValues[0] ?? '', 0)\"\n        @keydown.enter=\"validateAndUpdateValue(inputValues[0] ?? '', 0)\"\n      />\n      <Slider\n        class=\"grow\"\n        :model-value=\"sliderValues\"\n        @update:model-value=\"handleSliderChange\"\n        :min=\"minValue\"\n        :max=\"maxValue\"\n        aria-label=\"Dual range slider with input\"\n      />\n      <Input\n        class=\"h-8 w-16 px-2 py-1 text-center\"\n        type=\"text\"\n        inputmode=\"decimal\"\n        :model-value=\"inputValues[1]\"\n        @update:model-value=\"(newValue) => handleInputChange(1, newValue)\"\n        @blur=\"() => validateAndUpdateValue(inputValues[1] ?? '', 1)\"\n        @keydown.enter=\"validateAndUpdateValue(inputValues[1] ?? '', 1)\"\n      />\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component"
     },
     {
@@ -15,14 +15,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "slider",
-      "range slider",
-      "label",
-      "input",
-      "range",
-      "radix"
-    ]
+    "tags": ["slider", "range slider", "label", "input", "range", "radix"]
   },
   "dependencies": [],
   "registryDependencies": [

@@ -76,20 +76,13 @@ const getFileIcon = (file: { file: File | { type: string; name: string } }) => {
 const maxSize = 100 * 1024 * 1024; // 100MB default
 const maxFiles = 10;
 
-const {
-  files,
-  errors,
-  openFileDialog,
-  removeFile,
-  clearFiles,
-  dropzoneRef,
-  inputRef,
-} = useFileUpload({
-  multiple: true,
-  maxFiles,
-  maxSize,
-  initialFiles,
-});
+const { files, errors, openFileDialog, removeFile, clearFiles, dropzoneRef, inputRef } =
+  useFileUpload({
+    multiple: true,
+    maxFiles,
+    maxSize,
+    initialFiles,
+  });
 </script>
 
 <template>
@@ -111,12 +104,8 @@ const {
           <LucideFileUp class="size-4 opacity-60" />
         </div>
         <p class="mb-1.5 text-sm font-medium">Upload files</p>
-        <p class="text-muted-foreground mb-2 text-xs">
-          Drag & drop or click to browse
-        </p>
-        <div
-          class="text-muted-foreground/70 flex flex-wrap justify-center gap-1 text-xs"
-        >
+        <p class="text-muted-foreground mb-2 text-xs">Drag & drop or click to browse</p>
+        <div class="text-muted-foreground/70 flex flex-wrap justify-center gap-1 text-xs">
           <span>All files</span>
           <span>∙</span>
           <span>Max {{ maxFiles }} files</span>
@@ -171,17 +160,11 @@ const {
 
       <!-- Remove all files button -->
       <div v-if="files.length > 1">
-        <Button size="sm" variant="outline" @click="clearFiles">
-          Remove all files
-        </Button>
+        <Button size="sm" variant="outline" @click="clearFiles">Remove all files</Button>
       </div>
     </div>
 
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-center text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-center text-xs">
       Multiple files uploader w/ list
     </p>
   </div>

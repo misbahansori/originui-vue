@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-254.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/registry/default/ui/tooltip\";\nimport { LucideRotateCcw } from \"lucide-vue-next\";\n\nconst minValue = 0;\nconst maxValue = 2;\nconst initialValue = [1.25];\nconst defaultValue = [1];\n\nconst {\n  sliderValues,\n  inputValues,\n  validateAndUpdateValue,\n  handleInputChange,\n  handleSliderChange,\n  resetToDefault,\n  showReset,\n} = useSliderWithInput({ minValue, maxValue, initialValue, defaultValue });\n</script>\n\n<template>\n  <div class=\"space-y-3\">\n    <div class=\"flex items-center justify-between gap-2\">\n      <Label>Temperature</Label>\n      <div class=\"flex items-center gap-1\">\n        <TooltipProvider :delay-duration=\"0\">\n          <Tooltip>\n            <TooltipTrigger as-child>\n              <Button\n                size=\"icon\"\n                variant=\"ghost\"\n                :class=\"\n                  cn(\n                    'size-7 transition-opacity',\n                    showReset ? 'opacity-100' : 'opacity-0',\n                  )\n                \"\n                aria-label=\"Reset\"\n                @click=\"resetToDefault\"\n              >\n                <LucideRotateCcw :size=\"16\" aria-hidden=\"true\" />\n              </Button>\n            </TooltipTrigger>\n            <TooltipContent class=\"px-2 py-1 text-xs\">\n              Reset to default\n            </TooltipContent>\n          </Tooltip>\n        </TooltipProvider>\n        <Input\n          class=\"h-7 w-12 px-2 py-0\"\n          type=\"text\"\n          inputmode=\"decimal\"\n          :model-value=\"inputValues[0]\"\n          @update:model-value=\"(newValue) => handleInputChange(0, newValue)\"\n          @blur=\"() => validateAndUpdateValue(inputValues[0] ?? '', 0)\"\n          @keydown.enter=\"validateAndUpdateValue(inputValues[0] ?? '', 0)\"\n          aria-label=\"Enter value\"\n        />\n      </div>\n    </div>\n    <div class=\"flex items-center gap-4\">\n      <Slider\n        class=\"grow\"\n        :model-value=\"sliderValues\"\n        @update:model-value=\"handleSliderChange\"\n        :min=\"minValue\"\n        :max=\"maxValue\"\n        :step=\"0.01\"\n        aria-label=\"Temperature\"\n      />\n    </div>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Slider } from \"@/registry/default/ui/slider\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/registry/default/ui/tooltip\";\nimport { LucideRotateCcw } from \"lucide-vue-next\";\n\nconst minValue = 0;\nconst maxValue = 2;\nconst initialValue = [1.25];\nconst defaultValue = [1];\n\nconst {\n  sliderValues,\n  inputValues,\n  validateAndUpdateValue,\n  handleInputChange,\n  handleSliderChange,\n  resetToDefault,\n  showReset,\n} = useSliderWithInput({ minValue, maxValue, initialValue, defaultValue });\n</script>\n\n<template>\n  <div class=\"space-y-3\">\n    <div class=\"flex items-center justify-between gap-2\">\n      <Label>Temperature</Label>\n      <div class=\"flex items-center gap-1\">\n        <TooltipProvider :delay-duration=\"0\">\n          <Tooltip>\n            <TooltipTrigger as-child>\n              <Button\n                size=\"icon\"\n                variant=\"ghost\"\n                :class=\"cn('size-7 transition-opacity', showReset ? 'opacity-100' : 'opacity-0')\"\n                aria-label=\"Reset\"\n                @click=\"resetToDefault\"\n              >\n                <LucideRotateCcw :size=\"16\" aria-hidden=\"true\" />\n              </Button>\n            </TooltipTrigger>\n            <TooltipContent class=\"px-2 py-1 text-xs\">Reset to default</TooltipContent>\n          </Tooltip>\n        </TooltipProvider>\n        <Input\n          class=\"h-7 w-12 px-2 py-0\"\n          type=\"text\"\n          inputmode=\"decimal\"\n          :model-value=\"inputValues[0]\"\n          @update:model-value=\"(newValue) => handleInputChange(0, newValue)\"\n          @blur=\"() => validateAndUpdateValue(inputValues[0] ?? '', 0)\"\n          @keydown.enter=\"validateAndUpdateValue(inputValues[0] ?? '', 0)\"\n          aria-label=\"Enter value\"\n        />\n      </div>\n    </div>\n    <div class=\"flex items-center gap-4\">\n      <Slider\n        class=\"grow\"\n        :model-value=\"sliderValues\"\n        @update:model-value=\"handleSliderChange\"\n        :min=\"minValue\"\n        :max=\"maxValue\"\n        :step=\"0.01\"\n        aria-label=\"Temperature\"\n      />\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component"
     },
     {
@@ -15,19 +15,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "slider",
-      "label",
-      "button",
-      "input",
-      "tooltip",
-      "reset",
-      "radix"
-    ]
+    "tags": ["slider", "label", "button", "input", "tooltip", "reset", "radix"]
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/input.json",

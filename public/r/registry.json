@@ -563,14 +563,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "statistic-card",
-          "extended",
-          "card",
-          "feature",
-          "adoption",
-          "chart"
-        ],
+        "tags": ["statistic-card", "extended", "card", "feature", "adoption", "chart"],
         "colSpan": 2
       }
     },
@@ -612,16 +605,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "snippet",
-          "extended",
-          "code",
-          "copy",
-          "tabs",
-          "command",
-          "cli",
-          "dark"
-        ],
+        "tags": ["snippet", "extended", "code", "copy", "tabs", "command", "cli", "dark"],
         "colSpan": 2
       }
     },

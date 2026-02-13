@@ -12,9 +12,7 @@ interface TimeLeft {
   isExpired: boolean;
 }
 
-const saleEndDate = new Date(
-  Date.now() + 9 * 60 * 60 * 1000 + 45 * 60 * 1000 + 24 * 1000,
-); // Setting 9h 45m 24s from now for demo purposes
+const saleEndDate = new Date(Date.now() + 9 * 60 * 60 * 1000 + 45 * 60 * 1000 + 24 * 1000); // Setting 9h 45m 24s from now for demo purposes
 
 const isVisible = ref(true);
 const timeLeft = ref<TimeLeft>({
@@ -25,10 +23,7 @@ const timeLeft = ref<TimeLeft>({
   isExpired: false,
 });
 
-const totalSeconds = Math.max(
-  0,
-  Math.floor((saleEndDate.getTime() - Date.now()) / 1000),
-);
+const totalSeconds = Math.max(0, Math.floor((saleEndDate.getTime() - Date.now()) / 1000));
 
 const { remaining } = useCountdown(totalSeconds, {
   onTick() {
@@ -61,10 +56,7 @@ const hideBanner = () => {
 </script>
 
 <template>
-  <div
-    v-if="isVisible && !timeLeft.isExpired"
-    class="dark bg-muted text-foreground px-4 py-3"
-  >
+  <div v-if="isVisible && !timeLeft.isExpired" class="dark bg-muted text-foreground px-4 py-3">
     <div class="flex gap-2 md:items-center">
       <div class="flex grow gap-3 md:items-center">
         <div
@@ -73,24 +65,18 @@ const hideBanner = () => {
         >
           <LucideTicketPercent class="size-4 opacity-80" />
         </div>
-        <div
-          class="flex grow flex-col justify-between gap-3 md:flex-row md:items-center"
-        >
+        <div class="flex grow flex-col justify-between gap-3 md:flex-row md:items-center">
           <div class="space-y-0.5">
             <p class="text-sm font-medium">Black Friday Sale!</p>
             <p class="text-muted-foreground text-sm">
-              It kicks off today and is available for just 24 hours—don't miss
-              out!
+              It kicks off today and is available for just 24 hours—don't miss out!
             </p>
           </div>
           <div class="flex gap-3 max-md:flex-wrap">
             <div
               class="divide-primary-foreground bg-primary/15 flex items-center divide-x rounded-md text-sm tabular-nums"
             >
-              <span
-                v-if="timeLeft.days > 0"
-                class="flex h-8 items-center justify-center p-2"
-              >
+              <span v-if="timeLeft.days > 0" class="flex h-8 items-center justify-center p-2">
                 {{ timeLeft.days }}
                 <span class="text-muted-foreground">d</span>
               </span>

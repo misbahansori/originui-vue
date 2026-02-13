@@ -2,13 +2,7 @@
 import { cn } from "@/lib/utils";
 import { Badge } from "@/registry/default/ui/badge";
 import { Button } from "@/registry/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/default/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/registry/default/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -81,9 +75,7 @@ const activity = [
       <CardHeader class="flex items-center justify-between">
         <CardTitle class="flex flex-col gap-1">
           <span>Staff Performance</span>
-          <span class="text-muted-foreground text-xs font-normal">
-            Sales Manager
-          </span>
+          <span class="text-muted-foreground text-xs font-normal">Sales Manager</span>
         </CardTitle>
         <div class="ml-auto">
           <DropdownMenu>
@@ -120,9 +112,7 @@ const activity = [
       </CardHeader>
       <CardContent class="space-y-5">
         <div>
-          <div class="text-accent-foreground mb-2.5 text-sm font-medium">
-            Q3 Performance
-          </div>
+          <div class="text-accent-foreground mb-2.5 text-sm font-medium">Q3 Performance</div>
           <div class="grid grid-cols-3 gap-2">
             <div
               v-for="item in performance"
@@ -140,16 +130,11 @@ const activity = [
                 :class="
                   cn(
                     'flex items-center gap-0.5 text-xs font-semibold',
-                    item.trendDir === 'up'
-                      ? 'text-green-500'
-                      : 'text-destructive',
+                    item.trendDir === 'up' ? 'text-green-500' : 'text-destructive',
                   )
                 "
               >
-                <LucideTrendingUp
-                  v-if="item.trendDir === 'up'"
-                  class="h-3 w-3"
-                />
+                <LucideTrendingUp v-if="item.trendDir === 'up'" class="h-3 w-3" />
                 <LucideTrendingDown v-else class="h-3 w-3" />
                 {{ item.trendDir === "up" ? "+" : "-" }}{{ item.trend }}%
               </span>
@@ -161,12 +146,8 @@ const activity = [
 
         <div>
           <div class="mb-2.5 flex items-center justify-between">
-            <span class="text-foreground text-sm font-medium">
-              Pipeline Progress
-            </span>
-            <span class="text-foreground text-xs font-semibold">
-              {{ pipelineProgress }}%
-            </span>
+            <span class="text-foreground text-sm font-medium">Pipeline Progress</span>
+            <span class="text-foreground text-xs font-semibold">{{ pipelineProgress }}%</span>
           </div>
           <Progress :modelValue="pipelineProgress" class="bg-muted" />
         </div>
@@ -174,9 +155,7 @@ const activity = [
         <Separator />
 
         <div>
-          <div class="text-foreground mb-2.5 text-sm font-medium">
-            Recent Activity
-          </div>
+          <div class="text-foreground mb-2.5 text-sm font-medium">Recent Activity</div>
           <ul class="space-y-2">
             <li
               v-for="(a, i) in activity"
@@ -189,10 +168,7 @@ const activity = [
                   {{ a.text }}
                 </span>
               </span>
-              <Badge
-                :variant="a.state === 'secondary' ? 'secondary' : 'destructive'"
-                size="sm"
-              >
+              <Badge :variant="a.state === 'secondary' ? 'secondary' : 'destructive'" size="sm">
                 {{ a.date }}
               </Badge>
             </li>
@@ -204,11 +180,7 @@ const activity = [
         <Button variant="default" class="flex-1">Full Report</Button>
       </CardFooter>
     </Card>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Ported from reui.io staff performance card
       <a
         class="hover:text-foreground underline"

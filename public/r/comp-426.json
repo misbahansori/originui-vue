@@ -5,20 +5,15 @@
   "files": [
     {
       "path": "components/comp-426.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@/registry/default/ui/tabs\";\n</script>\n\n<template>\n  <Tabs defaultValue=\"tab-1\" class=\"items-center\">\n    <TabsList>\n      <TabsTrigger value=\"tab-1\">Tab 1</TabsTrigger>\n      <TabsTrigger value=\"tab-2\">Tab 2</TabsTrigger>\n      <TabsTrigger value=\"tab-3\">Tab 3</TabsTrigger>\n    </TabsList>\n    <TabsContent value=\"tab-1\">\n      <p class=\"text-muted-foreground p-4 text-center text-xs\">\n        Content for Tab 1\n      </p>\n    </TabsContent>\n    <TabsContent value=\"tab-2\">\n      <p class=\"text-muted-foreground p-4 text-center text-xs\">\n        Content for Tab 2\n      </p>\n    </TabsContent>\n    <TabsContent value=\"tab-3\">\n      <p class=\"text-muted-foreground p-4 text-center text-xs\">\n        Content for Tab 3\n      </p>\n    </TabsContent>\n  </Tabs>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/registry/default/ui/tabs\";\n</script>\n\n<template>\n  <Tabs defaultValue=\"tab-1\" class=\"items-center\">\n    <TabsList>\n      <TabsTrigger value=\"tab-1\">Tab 1</TabsTrigger>\n      <TabsTrigger value=\"tab-2\">Tab 2</TabsTrigger>\n      <TabsTrigger value=\"tab-3\">Tab 3</TabsTrigger>\n    </TabsList>\n    <TabsContent value=\"tab-1\">\n      <p class=\"text-muted-foreground p-4 text-center text-xs\">Content for Tab 1</p>\n    </TabsContent>\n    <TabsContent value=\"tab-2\">\n      <p class=\"text-muted-foreground p-4 text-center text-xs\">Content for Tab 2</p>\n    </TabsContent>\n    <TabsContent value=\"tab-3\">\n      <p class=\"text-muted-foreground p-4 text-center text-xs\">Content for Tab 3</p>\n    </TabsContent>\n  </Tabs>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "tabs",
-      "radix"
-    ],
+    "tags": ["tabs", "radix"],
     "colSpan": 2,
     "style": 2
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/tabs.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/tabs.json"]
 }

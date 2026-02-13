@@ -5,24 +5,14 @@
   "files": [
     {
       "path": "components/extended-54.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  MiniCalendar,\n  MiniCalendarDay,\n  MiniCalendarDays,\n  MiniCalendarNavigation,\n} from \"@/registry/default/ui/mini-calendar\";\nimport { CalendarDate } from \"@internationalized/date\";\nimport { ref } from \"vue\";\n\nconst selectedDate = ref<CalendarDate>();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <div class=\"flex items-center justify-center\">\n      <MiniCalendar v-model=\"selectedDate\" :days=\"10\" class=\"max-w-4xl\">\n        <MiniCalendarNavigation direction=\"prev\" />\n        <MiniCalendarDays v-slot=\"{ date }\" class=\"overflow-x-auto\">\n          <MiniCalendarDay :date=\"date\" class=\"shrink-0\" />\n        </MiniCalendarDays>\n        <MiniCalendarNavigation direction=\"next\" />\n      </MiniCalendar>\n    </div>\n    <p class=\"text-muted-foreground mt-2 text-xs\">\n      Extended 10-day view for planning ahead\n    </p>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport {\n  MiniCalendar,\n  MiniCalendarDay,\n  MiniCalendarDays,\n  MiniCalendarNavigation,\n} from \"@/registry/default/ui/mini-calendar\";\nimport { CalendarDate } from \"@internationalized/date\";\nimport { ref } from \"vue\";\n\nconst selectedDate = ref<CalendarDate>();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <div class=\"flex items-center justify-center\">\n      <MiniCalendar v-model=\"selectedDate\" :days=\"10\" class=\"max-w-4xl\">\n        <MiniCalendarNavigation direction=\"prev\" />\n        <MiniCalendarDays v-slot=\"{ date }\" class=\"overflow-x-auto\">\n          <MiniCalendarDay :date=\"date\" class=\"shrink-0\" />\n        </MiniCalendarDays>\n        <MiniCalendarNavigation direction=\"next\" />\n      </MiniCalendar>\n    </div>\n    <p class=\"text-muted-foreground mt-2 text-xs\">Extended 10-day view for planning ahead</p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "mini-calendar",
-      "extended",
-      "calendar",
-      "date",
-      "10-day"
-    ],
+    "tags": ["mini-calendar", "extended", "calendar", "date", "10-day"],
     "colSpan": 3
   },
-  "dependencies": [
-    "@internationalized/date"
-  ],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/mini-calendar.json"
-  ]
+  "dependencies": ["@internationalized/date"],
+  "registryDependencies": ["https://www.originui-vue.com/r/mini-calendar.json"]
 }

@@ -5,20 +5,12 @@
   "files": [
     {
       "path": "components/comp-42.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  DateRangePicker,\n  DateRangePickerCalendar,\n  DateRangePickerField,\n  DateRangePickerInput,\n  DateRangePickerTrigger,\n} from \"@/registry/default/ui/date-range-picker\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst startId = useId();\nconst endId = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"startId\" class=\"text-foreground text-sm font-medium\">\n      Date range picker\n    </Label>\n    <DateRangePicker :id=\"startId\" :end-id=\"endId\">\n      <DateRangePickerField v-slot=\"{ segments }\">\n        <DateRangePickerInput\n          v-for=\"item in segments.start\"\n          type=\"start\"\n          :key=\"item.part\"\n          :part=\"item.part\"\n        >\n          {{ item.value }}\n        </DateRangePickerInput>\n        <span aria-hidden=\"true\" class=\"text-muted-foreground/70 px-2\">-</span>\n        <DateRangePickerInput\n          v-for=\"item in segments.end\"\n          type=\"end\"\n          :key=\"item.part\"\n          :part=\"item.part\"\n        >\n          {{ item.value }}\n        </DateRangePickerInput>\n        <DateRangePickerTrigger />\n      </DateRangePickerField>\n\n      <DateRangePickerCalendar />\n    </DateRangePicker>\n\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Built with native date inputs\n    </p>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport {\n  DateRangePicker,\n  DateRangePickerCalendar,\n  DateRangePickerField,\n  DateRangePickerInput,\n  DateRangePickerTrigger,\n} from \"@/registry/default/ui/date-range-picker\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { useId } from \"vue\";\n\nconst startId = useId();\nconst endId = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"startId\" class=\"text-foreground text-sm font-medium\">Date range picker</Label>\n    <DateRangePicker :id=\"startId\" :end-id=\"endId\">\n      <DateRangePickerField v-slot=\"{ segments }\">\n        <DateRangePickerInput\n          v-for=\"item in segments.start\"\n          type=\"start\"\n          :key=\"item.part\"\n          :part=\"item.part\"\n        >\n          {{ item.value }}\n        </DateRangePickerInput>\n        <span aria-hidden=\"true\" class=\"text-muted-foreground/70 px-2\">-</span>\n        <DateRangePickerInput\n          v-for=\"item in segments.end\"\n          type=\"end\"\n          :key=\"item.part\"\n          :part=\"item.part\"\n        >\n          {{ item.value }}\n        </DateRangePickerInput>\n        <DateRangePickerTrigger />\n      </DateRangePickerField>\n\n      <DateRangePickerCalendar />\n    </DateRangePicker>\n\n    <p class=\"text-muted-foreground mt-2 text-xs\" role=\"region\" aria-live=\"polite\">\n      Built with native date inputs\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "date",
-      "calendar",
-      "range calendar",
-      "picker",
-      "react aria"
-    ]
+    "tags": ["input", "label", "date", "calendar", "range calendar", "picker", "react aria"]
   },
   "dependencies": [],
   "registryDependencies": [

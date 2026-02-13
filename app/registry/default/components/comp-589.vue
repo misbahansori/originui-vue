@@ -16,17 +16,8 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/registry/default/ui/navigation-menu";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectValue,
-} from "@/registry/default/ui/select";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
+import { Select, SelectContent, SelectItem, SelectValue } from "@/registry/default/ui/select";
 import { SelectTrigger } from "reka-ui";
 
 // Navigation links array to be used in both desktop and mobile menus
@@ -100,10 +91,7 @@ const navigationLinks = [
                     class="focus-visible:bg-accent text-foreground h-8 p-1.5 focus-visible:ring-0"
                   >
                     <SelectValue placeholder="Select account type" />
-                    <LucideChevronsUpDown
-                      :size="14"
-                      class="text-muted-foreground/80"
-                    />
+                    <LucideChevronsUpDown :size="14" class="text-muted-foreground/80" />
                   </Button>
                 </SelectTrigger>
                 <SelectContent
@@ -124,10 +112,7 @@ const navigationLinks = [
                     class="focus-visible:bg-accent text-foreground h-8 p-1.5 focus-visible:ring-0"
                   >
                     <SelectValue placeholder="Select project" />
-                    <LucideChevronsUpDown
-                      :size="14"
-                      class="text-muted-foreground/80"
-                    />
+                    <LucideChevronsUpDown :size="14" class="text-muted-foreground/80" />
                   </Button>
                 </SelectTrigger>
                 <SelectContent
@@ -147,10 +132,7 @@ const navigationLinks = [
           <!-- Nav menu -->
           <NavigationMenu class="max-md:hidden">
             <NavigationMenuList class="gap-2">
-              <NavigationMenuItem
-                v-for="(link, index) in navigationLinks"
-                :key="index"
-              >
+              <NavigationMenuItem v-for="(link, index) in navigationLinks" :key="index">
                 <NavigationMenuLink
                   :href="link.href"
                   class="text-muted-foreground hover:text-primary py-1.5 font-medium"

@@ -66,9 +66,7 @@ const items = [
         </TableRow>
       </TableHeader>
       <tbody aria-hidden="true" class="table-row h-2"></tbody>
-      <TableBody
-        class="[&_td:first-child]:rounded-l-lg [&_td:last-child]:rounded-r-lg"
-      >
+      <TableBody class="[&_td:first-child]:rounded-l-lg [&_td:last-child]:rounded-r-lg">
         <TableRow v-for="item in items" :key="item.id" class="border-none">
           <TableCell class="py-2.5 font-medium">{{ item.name }}</TableCell>
           <TableCell class="py-2.5">{{ item.email }}</TableCell>
@@ -87,8 +85,6 @@ const items = [
         </TableRow>
       </TableFooter>
     </Table>
-    <p class="text-muted-foreground mt-4 text-center text-sm">
-      Table without horizontal dividers
-    </p>
+    <p class="text-muted-foreground mt-4 text-center text-sm">Table without horizontal dividers</p>
   </div>
 </template>

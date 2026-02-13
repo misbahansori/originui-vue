@@ -20,8 +20,6 @@ const selectedDate = ref<CalendarDate>();
       </MiniCalendarDays>
       <MiniCalendarNavigation direction="next" />
     </MiniCalendar>
-    <p class="text-muted-foreground mt-2 text-xs">
-      Large display with increased spacing and size
-    </p>
+    <p class="text-muted-foreground mt-2 text-xs">Large display with increased spacing and size</p>
   </div>
 </template>

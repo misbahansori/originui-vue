@@ -13,11 +13,7 @@ import {
   CalendarNextButton,
   CalendarPrevButton,
 } from "@/registry/default/ui/calendar";
-import {
-  getLocalTimeZone,
-  today,
-  type DateValue,
-} from "@internationalized/date";
+import { getLocalTimeZone, today, type DateValue } from "@internationalized/date";
 import { CalendarRoot } from "reka-ui";
 
 const todayDate = today(getLocalTimeZone());
@@ -74,11 +70,7 @@ const presets = [
             </Button>
           </div>
         </div>
-        <CalendarRoot
-          v-model="modelValue"
-          v-slot="{ grid, weekDays }"
-          data-slot="calendar"
-        >
+        <CalendarRoot v-model="modelValue" v-slot="{ grid, weekDays }" data-slot="calendar">
           <CalendarHeader>
             <CalendarHeading />
             <div class="flex items-center gap-1">
@@ -86,9 +78,7 @@ const presets = [
               <CalendarNextButton class="absolute right-1" />
             </div>
           </CalendarHeader>
-          <div
-            class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0"
-          >
+          <div class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">
             <CalendarGrid v-for="month in grid" :key="month.value.toString()">
               <CalendarGridHead>
                 <CalendarGridRow>

@@ -5,9 +5,7 @@ import type { NumberFieldDecrementProps } from "reka-ui";
 import { NumberFieldDecrement, useForwardProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
-const props = defineProps<
-  NumberFieldDecrementProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<NumberFieldDecrementProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props;

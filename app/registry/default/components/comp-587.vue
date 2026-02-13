@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import {
-  LucideHome,
-  LucideInbox,
-  LucideSearch,
-  LucideZap,
-} from "lucide-vue-next";
+import { LucideHome, LucideInbox, LucideSearch, LucideZap } from "lucide-vue-next";
 import { useId } from "vue";
 
 import Logo from "@/registry/default/components/navbar-components/Logo.vue";
@@ -16,11 +11,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/registry/default/ui/navigation-menu";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
@@ -104,10 +95,7 @@ const id = useId();
       <!-- Middle area -->
       <NavigationMenu class="max-md:hidden">
         <NavigationMenuList class="gap-2">
-          <NavigationMenuItem
-            v-for="(link, index) in navigationLinks"
-            :key="index"
-          >
+          <NavigationMenuItem v-for="(link, index) in navigationLinks" :key="index">
             <NavigationMenuLink
               :active="link.active"
               :href="link.href"
@@ -127,12 +115,7 @@ const id = useId();
       <!-- Right side -->
       <div class="flex flex-1 items-center justify-end gap-2">
         <div class="relative">
-          <Input
-            :id="id"
-            class="peer h-8 ps-8 pe-2"
-            placeholder="Search..."
-            type="search"
-          />
+          <Input :id="id" class="peer h-8 ps-8 pe-2" placeholder="Search..." type="search" />
           <div
             class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-2 peer-disabled:opacity-50"
           >

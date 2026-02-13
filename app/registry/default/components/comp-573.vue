@@ -16,11 +16,7 @@ const items: Item[] = [
         children: [
           {
             name: "Design System",
-            children: [
-              { name: "Components" },
-              { name: "Tokens" },
-              { name: "Guidelines" },
-            ],
+            children: [{ name: "Components" }, { name: "Tokens" }, { name: "Guidelines" }],
           },
           { name: "Web Platform" },
         ],
@@ -69,26 +65,16 @@ const items: Item[] = [
                   v-if="isExpanded"
                   class="text-muted-foreground pointer-events-none size-4"
                 />
-                <LucideFolder
-                  v-else
-                  class="text-muted-foreground pointer-events-none size-4"
-                />
+                <LucideFolder v-else class="text-muted-foreground pointer-events-none size-4" />
               </template>
-              <LucideFile
-                v-else
-                class="text-muted-foreground pointer-events-none size-4"
-              />
+              <LucideFile v-else class="text-muted-foreground pointer-events-none size-4" />
               {{ item.value.name }}
             </span>
           </TreeItemLabel>
         </TreeItem>
       </Tree>
     </div>
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-xs">
       Tree with items expandable on double click ∙
       <a
         href="https://reka-ui.com/docs/components/tree"

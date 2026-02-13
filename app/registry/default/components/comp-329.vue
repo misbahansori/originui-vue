@@ -47,9 +47,7 @@ onMounted(() => {
         </div>
         <DialogHeader>
           <DialogTitle class="text-left">Confirm and pay</DialogTitle>
-          <DialogDescription class="text-left">
-            Pay securely and cancel any time.
-          </DialogDescription>
+          <DialogDescription class="text-left">Pay securely and cancel any time.</DialogDescription>
         </DialogHeader>
       </div>
 
@@ -89,9 +87,7 @@ onMounted(() => {
             <Input :id="`name-${id}`" type="text" required />
           </div>
           <div class="*:not-first:mt-2">
-            <legend class="text-foreground text-sm font-medium">
-              Card Details
-            </legend>
+            <legend class="text-foreground text-sm font-medium">Card Details</legend>
             <div class="rounded-md shadow-xs">
               <div class="relative focus-within:z-10">
                 <Input

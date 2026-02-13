@@ -16,9 +16,7 @@ const filterVariant = computed(
   () => (props.column.columnDef.meta as ColumnMeta | undefined)?.filterVariant,
 );
 const columnHeader = computed(() =>
-  typeof props.column.columnDef.header === "string"
-    ? props.column.columnDef.header
-    : "",
+  typeof props.column.columnDef.header === "string" ? props.column.columnDef.header : "",
 );
 
 const sortedUniqueValues = computed(() => {
@@ -109,9 +107,7 @@ const sortedUniqueValues = computed(() => {
           :id="`${id}-input`"
           class="peer ps-9"
           :model-value="(columnFilterValue as string) ?? ''"
-          @update:model-value="
-            (value: string | number) => column.setFilterValue(value)
-          "
+          @update:model-value="(value: string | number) => column.setFilterValue(value)"
           :placeholder="`Search ${columnHeader.toLowerCase()}`"
           type="text"
         />

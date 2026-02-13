@@ -4,9 +4,7 @@ import { reactiveOmit } from "@vueuse/core";
 import { TabsTrigger, type TabsTriggerProps, useForwardProps } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 
-const props = defineProps<
-  TabsTriggerProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<TabsTriggerProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = reactiveOmit(props, "class");
 const forwardedProps = useForwardProps(delegatedProps);

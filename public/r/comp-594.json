@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-594.vue",
-      "content": "<script setup lang=\"ts\">\nimport AppToggle from \"@/registry/default/components/navbar-components/AppToggle.vue\";\nimport TeamSwitcher from \"@/registry/default/components/navbar-components/TeamSwitcher.vue\";\nimport { Button } from \"@/registry/default/ui/button\";\nimport { SparklesIcon, UploadIcon } from \"lucide-vue-next\";\n\nconst teams = [\"Acme Inc.\", \"Origin UI\", \"Junon\"];\n</script>\n\n<template>\n  <header class=\"border-b px-4 md:px-6\">\n    <div class=\"flex h-16 items-center justify-between gap-4\">\n      <!-- Left side -->\n      <div class=\"flex flex-1 items-center gap-2\">\n        <TeamSwitcher :teams=\"teams\" :default-team=\"teams[0]\" />\n      </div>\n      <!-- Middle area -->\n      <AppToggle />\n      <!-- Right side -->\n      <div class=\"flex flex-1 items-center justify-end gap-2\">\n        <Button\n          size=\"sm\"\n          variant=\"ghost\"\n          class=\"aspect-square text-sm max-sm:p-0\"\n        >\n          <UploadIcon\n            class=\"opacity-60 sm:-ms-1\"\n            :size=\"16\"\n            aria-hidden=\"true\"\n          />\n          <span class=\"max-sm:sr-only\">Export</span>\n        </Button>\n        <Button size=\"sm\" class=\"aspect-square text-sm max-sm:p-0\">\n          <SparklesIcon\n            class=\"opacity-60 sm:-ms-1\"\n            :size=\"16\"\n            aria-hidden=\"true\"\n          />\n          <span class=\"max-sm:sr-only\">Upgrade</span>\n        </Button>\n      </div>\n    </div>\n  </header>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport AppToggle from \"@/registry/default/components/navbar-components/AppToggle.vue\";\nimport TeamSwitcher from \"@/registry/default/components/navbar-components/TeamSwitcher.vue\";\nimport { Button } from \"@/registry/default/ui/button\";\nimport { SparklesIcon, UploadIcon } from \"lucide-vue-next\";\n\nconst teams = [\"Acme Inc.\", \"Origin UI\", \"Junon\"];\n</script>\n\n<template>\n  <header class=\"border-b px-4 md:px-6\">\n    <div class=\"flex h-16 items-center justify-between gap-4\">\n      <!-- Left side -->\n      <div class=\"flex flex-1 items-center gap-2\">\n        <TeamSwitcher :teams=\"teams\" :default-team=\"teams[0]\" />\n      </div>\n      <!-- Middle area -->\n      <AppToggle />\n      <!-- Right side -->\n      <div class=\"flex flex-1 items-center justify-end gap-2\">\n        <Button size=\"sm\" variant=\"ghost\" class=\"aspect-square text-sm max-sm:p-0\">\n          <UploadIcon class=\"opacity-60 sm:-ms-1\" :size=\"16\" aria-hidden=\"true\" />\n          <span class=\"max-sm:sr-only\">Export</span>\n        </Button>\n        <Button size=\"sm\" class=\"aspect-square text-sm max-sm:p-0\">\n          <SparklesIcon class=\"opacity-60 sm:-ms-1\" :size=\"16\" aria-hidden=\"true\" />\n          <span class=\"max-sm:sr-only\">Upgrade</span>\n        </Button>\n      </div>\n    </div>\n  </header>\n</template>\n",
       "type": "registry:component"
     },
     {
@@ -15,19 +15,15 @@
     },
     {
       "path": "components/navbar-components/TeamSwitcher.vue",
-      "content": "<script setup lang=\"ts\">\nimport { LucideChevronsUpDown } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger,\n} from \"@/registry/default/ui/dropdown-menu\";\n\ninterface Props {\n  teams: string[];\n  defaultTeam?: string;\n}\n\nconst props = defineProps<Props>();\nconst selectedProject = ref(props.defaultTeam ?? props.teams[0]);\n</script>\n\n<template>\n  <DropdownMenu>\n    <DropdownMenuTrigger as-child>\n      <Button variant=\"ghost\" class=\"p-0 hover:bg-transparent\">\n        <span\n          class=\"bg-primary text-primary-foreground flex size-8 items-center justify-center rounded-full\"\n        >\n          {{ selectedProject?.charAt(0).toUpperCase() }}\n        </span>\n        <div class=\"flex flex-col gap-0.5 leading-none\">\n          <span>{{ selectedProject }}</span>\n        </div>\n        <LucideChevronsUpDown :size=\"14\" class=\"text-muted-foreground/80\" />\n      </Button>\n    </DropdownMenuTrigger>\n    <DropdownMenuContent align=\"start\">\n      <DropdownMenuItem\n        v-for=\"project in teams\"\n        :key=\"project\"\n        @select=\"selectedProject = project\"\n      >\n        {{ project }}\n      </DropdownMenuItem>\n    </DropdownMenuContent>\n  </DropdownMenu>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { LucideChevronsUpDown } from \"lucide-vue-next\";\nimport { ref } from \"vue\";\n\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger,\n} from \"@/registry/default/ui/dropdown-menu\";\n\ninterface Props {\n  teams: string[];\n  defaultTeam?: string;\n}\n\nconst props = defineProps<Props>();\nconst selectedProject = ref(props.defaultTeam ?? props.teams[0]);\n</script>\n\n<template>\n  <DropdownMenu>\n    <DropdownMenuTrigger as-child>\n      <Button variant=\"ghost\" class=\"p-0 hover:bg-transparent\">\n        <span\n          class=\"bg-primary text-primary-foreground flex size-8 items-center justify-center rounded-full\"\n        >\n          {{ selectedProject?.charAt(0).toUpperCase() }}\n        </span>\n        <div class=\"flex flex-col gap-0.5 leading-none\">\n          <span>{{ selectedProject }}</span>\n        </div>\n        <LucideChevronsUpDown :size=\"14\" class=\"text-muted-foreground/80\" />\n      </Button>\n    </DropdownMenuTrigger>\n    <DropdownMenuContent align=\"start\">\n      <DropdownMenuItem v-for=\"project in teams\" :key=\"project\" @select=\"selectedProject = project\">\n        {{ project }}\n      </DropdownMenuItem>\n    </DropdownMenuContent>\n  </DropdownMenu>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "navbar, navigation"
-    ],
+    "tags": ["navbar, navigation"],
     "colSpan": 3
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/radio-group.json",

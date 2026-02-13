@@ -12,12 +12,7 @@ import {
   CalendarNextButton,
   CalendarPrevButton,
 } from "@/registry/default/ui/calendar";
-import {
-  CalendarDate,
-  getLocalTimeZone,
-  today,
-  type DateValue,
-} from "@internationalized/date";
+import { CalendarDate, getLocalTimeZone, today, type DateValue } from "@internationalized/date";
 import { CalendarRoot } from "reka-ui";
 
 const todayDate = today(getLocalTimeZone());
@@ -30,8 +25,7 @@ const selectedDate = ref({
 });
 
 const placeholder = computed({
-  get: () =>
-    new CalendarDate(selectedDate.value.year, selectedDate.value.month, 1),
+  get: () => new CalendarDate(selectedDate.value.year, selectedDate.value.month, 1),
   set: (newDate: DateValue) => {
     selectedDate.value = {
       year: newDate.year,
@@ -88,12 +82,7 @@ const setCurrentMonth = () => {
               </CalendarCell>
             </CalendarGridRow>
           </CalendarGridBody>
-          <Button
-            variant="outline"
-            size="sm"
-            class="mt-2 mb-1"
-            @click="setCurrentMonth"
-          >
+          <Button variant="outline" size="sm" class="mt-2 mb-1" @click="setCurrentMonth">
             Current month
           </Button>
         </CalendarGrid>

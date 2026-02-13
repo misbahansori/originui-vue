@@ -5,18 +5,14 @@
   "files": [
     {
       "path": "components/comp-576.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Tree, TreeItem, TreeItemLabel } from \"@/registry/default/ui/tree\";\n\ninterface Item {\n  name: string;\n  children?: Item[];\n}\n\nconst items: Item[] = [\n  {\n    name: \"User Guides\",\n    children: [\n      {\n        name: \"Getting Started\",\n        children: [\n          {\n            name: \"Installation\",\n          },\n          {\n            name: \"Configuration\",\n          },\n        ],\n      },\n      {\n        name: \"Advanced Usage\",\n      },\n    ],\n  },\n  {\n    name: \"API Reference\",\n    children: [\n      {\n        name: \"Endpoints\",\n      },\n      {\n        name: \"Data Models\",\n      },\n    ],\n  },\n  {\n    name: \"Resources\",\n    children: [\n      {\n        name: \"Code Examples\",\n      },\n      {\n        name: \"FAQ\",\n      },\n    ],\n  },\n];\n</script>\n\n<template>\n  <div class=\"flex h-full flex-col gap-2 *:first:grow\">\n    <Tree\n      :items=\"items\"\n      :getKey=\"(item) => item.name\"\n      v-slot=\"{ flattenItems }\"\n      :defaultExpanded=\"['User Guides', 'Getting Started']\"\n    >\n      <TreeItem v-for=\"item in flattenItems\" v-bind=\"item\">\n        <TreeItemLabel :hasChildren=\"item.hasChildren\">\n          {{ item.value.name }}\n        </TreeItemLabel>\n      </TreeItem>\n    </Tree>\n    <p\n      aria-live=\"polite\"\n      role=\"region\"\n      class=\"text-muted-foreground mt-2 text-xs\"\n    >\n      Menu navigation tree ∙\n      <a\n        class=\"hover:text-foreground underline\"\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n      >\n        Reka UI Tree\n      </a>\n    </p>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Tree, TreeItem, TreeItemLabel } from \"@/registry/default/ui/tree\";\n\ninterface Item {\n  name: string;\n  children?: Item[];\n}\n\nconst items: Item[] = [\n  {\n    name: \"User Guides\",\n    children: [\n      {\n        name: \"Getting Started\",\n        children: [\n          {\n            name: \"Installation\",\n          },\n          {\n            name: \"Configuration\",\n          },\n        ],\n      },\n      {\n        name: \"Advanced Usage\",\n      },\n    ],\n  },\n  {\n    name: \"API Reference\",\n    children: [\n      {\n        name: \"Endpoints\",\n      },\n      {\n        name: \"Data Models\",\n      },\n    ],\n  },\n  {\n    name: \"Resources\",\n    children: [\n      {\n        name: \"Code Examples\",\n      },\n      {\n        name: \"FAQ\",\n      },\n    ],\n  },\n];\n</script>\n\n<template>\n  <div class=\"flex h-full flex-col gap-2 *:first:grow\">\n    <Tree\n      :items=\"items\"\n      :getKey=\"(item) => item.name\"\n      v-slot=\"{ flattenItems }\"\n      :defaultExpanded=\"['User Guides', 'Getting Started']\"\n    >\n      <TreeItem v-for=\"item in flattenItems\" v-bind=\"item\">\n        <TreeItemLabel :hasChildren=\"item.hasChildren\">\n          {{ item.value.name }}\n        </TreeItemLabel>\n      </TreeItem>\n    </Tree>\n    <p aria-live=\"polite\" role=\"region\" class=\"text-muted-foreground mt-2 text-xs\">\n      Menu navigation tree ∙\n      <a class=\"hover:text-foreground underline\" target=\"_blank\" rel=\"noopener noreferrer\">\n        Reka UI Tree\n      </a>\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "tree"
-    ],
+    "tags": ["tree"],
     "colSpan": 1
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/tree.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/tree.json"]
 }

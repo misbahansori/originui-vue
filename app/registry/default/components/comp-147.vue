@@ -35,12 +35,7 @@ const items = [
           class="order-1 after:absolute after:inset-0"
           v-model="checkedStates[item.value]"
         />
-        <component
-          :is="item.icon"
-          class="opacity-60"
-          :size="16"
-          aria-hidden="true"
-        />
+        <component :is="item.icon" class="opacity-60" :size="16" aria-hidden="true" />
       </div>
       <Label :for="`${id}-${item.value}`">{{ item.label }}</Label>
     </div>

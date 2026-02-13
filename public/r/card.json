@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "ui/card/Card.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"card\"\n    :class=\"\n      cn(\n        'bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"card\"\n    :class=\"\n      cn('bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6', props.class)\n    \"\n  >\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {
@@ -15,17 +15,17 @@
     },
     {
       "path": "ui/card/CardAction.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"card-action\"\n    :class=\"\n      cn(\n        'col-start-2 row-span-2 row-start-1 self-start justify-self-end',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"card-action\"\n    :class=\"cn('col-start-2 row-span-2 row-start-1 self-start justify-self-end', props.class)\"\n  >\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "ui/card/CardDescription.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <p\n    data-slot=\"card-description\"\n    :class=\"cn('text-muted-foreground text-sm', props.class)\"\n  >\n    <slot />\n  </p>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <p data-slot=\"card-description\" :class=\"cn('text-muted-foreground text-sm', props.class)\">\n    <slot />\n  </p>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "ui/card/CardFooter.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"card-footer\"\n    :class=\"cn('flex items-center px-6 [.border-t]:pt-6', props.class)\"\n  >\n    <slot />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div data-slot=\"card-footer\" :class=\"cn('flex items-center px-6 [.border-t]:pt-6', props.class)\">\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {
@@ -35,7 +35,7 @@
     },
     {
       "path": "ui/card/CardTitle.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <h3\n    data-slot=\"card-title\"\n    :class=\"cn('leading-none font-semibold', props.class)\"\n  >\n    <slot />\n  </h3>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <h3 data-slot=\"card-title\" :class=\"cn('leading-none font-semibold', props.class)\">\n    <slot />\n  </h3>\n</template>\n",
       "type": "registry:ui"
     },
     {

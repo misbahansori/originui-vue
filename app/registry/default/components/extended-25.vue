@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
 import { Badge } from "@/registry/default/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/registry/default/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/registry/default/ui/card";
 import {
   Select,
   SelectContent,
@@ -59,13 +54,9 @@ const leadsData = {
               <span class="text-foreground text-2xl font-bold">
                 {{ leadsData.newLeads }}
               </span>
-              <Badge size="sm" variant="default">
-                {{ leadsData.newPercent }}%
-              </Badge>
+              <Badge size="sm" variant="default">{{ leadsData.newPercent }}%</Badge>
             </div>
-            <span class="text-muted-foreground text-sm font-medium">
-              New leads
-            </span>
+            <span class="text-muted-foreground text-sm font-medium">New leads</span>
             <!-- Solid Progress Bar -->
             <div class="mt-1 w-full">
               <div class="bg-muted h-2.5 overflow-hidden rounded-xs">
@@ -85,9 +76,7 @@ const leadsData = {
                 {{ leadsData.returningLeads }}
               </span>
             </div>
-            <span class="text-muted-foreground text-sm font-medium">
-              Returning leads
-            </span>
+            <span class="text-muted-foreground text-sm font-medium">Returning leads</span>
             <!-- Dotted Bar -->
             <div class="mt-1 flex w-full gap-0.5">
               <div
@@ -120,9 +109,7 @@ const leadsData = {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger as-child>
-                    <LucideInfo
-                      class="text-muted-foreground size-3.5 cursor-pointer"
-                    />
+                    <LucideInfo class="text-muted-foreground size-3.5 cursor-pointer" />
                   </TooltipTrigger>
                   <TooltipContent>
                     <span>Percentage of leads converted to customers.</span>
@@ -130,18 +117,12 @@ const leadsData = {
                 </Tooltip>
               </TooltipProvider>
             </span>
-            <span class="text-foreground text-sm font-medium">
-              {{ leadsData.conversionRate }}%
-            </span>
+            <span class="text-foreground text-sm font-medium">{{ leadsData.conversionRate }}%</span>
           </div>
         </div>
       </CardContent>
     </Card>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Ported from reui.io leads overview card
       <a
         class="hover:text-foreground underline"

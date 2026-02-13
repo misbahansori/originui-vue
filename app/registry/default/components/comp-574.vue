@@ -22,11 +22,7 @@ const items: Item[] = [
         children: [
           {
             name: "Design System",
-            children: [
-              { name: "Components" },
-              { name: "Tokens" },
-              { name: "Guidelines" },
-            ],
+            children: [{ name: "Components" }, { name: "Tokens" }, { name: "Guidelines" }],
           },
           { name: "Web Platform" },
         ],
@@ -52,10 +48,7 @@ const expandedItems = ref(initialExpanded);
 
 const expandAll = () => {
   const getAllItemNames = (items: Item[]): string[] =>
-    items.flatMap((item) => [
-      item.name,
-      ...getAllItemNames(item.children ?? []),
-    ]);
+    items.flatMap((item) => [item.name, ...getAllItemNames(item.children ?? [])]);
 
   expandedItems.value = getAllItemNames(items);
 };
@@ -74,10 +67,7 @@ const collapseAll = () => {
           Expand all
         </Button>
         <Button size="sm" variant="outline" @click="collapseAll">
-          <LucideListCollapse
-            class="-ms-1 size-4 opacity-60"
-            aria-hidden="true"
-          />
+          <LucideListCollapse class="-ms-1 size-4 opacity-60" aria-hidden="true" />
           Collapse all
         </Button>
       </div>
@@ -88,11 +78,7 @@ const collapseAll = () => {
         v-slot="{ flattenItems }"
         v-model:expanded="expandedItems"
       >
-        <TreeItem
-          v-for="item in flattenItems"
-          v-bind="item"
-          v-slot="{ isExpanded }"
-        >
+        <TreeItem v-for="item in flattenItems" v-bind="item" v-slot="{ isExpanded }">
           <TreeItemLabel
             :hasChildren="item.hasChildren"
             class="before:bg-background relative before:absolute before:inset-x-0 before:-inset-y-0.5 before:-z-10"
@@ -103,15 +89,9 @@ const collapseAll = () => {
                   v-if="isExpanded"
                   class="text-muted-foreground pointer-events-none size-4"
                 />
-                <LucideFolder
-                  v-else
-                  class="text-muted-foreground pointer-events-none size-4"
-                />
+                <LucideFolder v-else class="text-muted-foreground pointer-events-none size-4" />
               </template>
-              <LucideFile
-                v-else
-                class="text-muted-foreground pointer-events-none size-4"
-              />
+              <LucideFile v-else class="text-muted-foreground pointer-events-none size-4" />
               {{ item.value.name }}
               <span v-if="item.hasChildren" class="text-muted-foreground -ms-1">
                 {{ `(${item.value.children?.length ?? 0})` }}
@@ -121,11 +101,7 @@ const collapseAll = () => {
         </TreeItem>
       </Tree>
     </div>
-    <p
-      aria-live="polite"
-      role="region"
-      class="text-muted-foreground mt-2 text-xs"
-    >
+    <p aria-live="polite" role="region" class="text-muted-foreground mt-2 text-xs">
       Tree with expand/collapse all buttons ∙
       <a
         href="https://reka-ui.com/docs/components/tree"

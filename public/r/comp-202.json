@@ -5,19 +5,13 @@
   "files": [
     {
       "path": "components/comp-202.vue",
-      "content": "<script setup lang=\"ts\">\nimport { SelectNative } from \"@/registry/default/ui/select-native\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div\n    class=\"border-input bg-background focus-within:border-ring focus-within:ring-ring/50 has-aria-invalid:ring-destructive/20 dark:has-aria-invalid:ring-destructive/40 has-aria-invalid:border-destructive relative rounded-md border shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px] has-[select:disabled]:cursor-not-allowed has-[select:disabled]:opacity-50 has-[select:is(:disabled)_*]:pointer-events-none\"\n  >\n    <label\n      :for=\"id\"\n      class=\"text-foreground block px-3 pt-2 text-xs font-medium\"\n    >\n      Select with inset label (native)\n    </label>\n    <SelectNative\n      :id=\"id\"\n      default-value=\"\"\n      class=\"border-none bg-transparent shadow-none focus-visible:ring-0 focus-visible:ring-offset-0\"\n    >\n      <option value=\"\" disabled>Select framework</option>\n      <option value=\"1\">Vue</option>\n      <option value=\"2\">Nuxt</option>\n      <option value=\"3\">Astro</option>\n      <option value=\"4\">Vitesse</option>\n    </SelectNative>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { SelectNative } from \"@/registry/default/ui/select-native\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div\n    class=\"border-input bg-background focus-within:border-ring focus-within:ring-ring/50 has-aria-invalid:ring-destructive/20 dark:has-aria-invalid:ring-destructive/40 has-aria-invalid:border-destructive relative rounded-md border shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px] has-[select:disabled]:cursor-not-allowed has-[select:disabled]:opacity-50 has-[select:is(:disabled)_*]:pointer-events-none\"\n  >\n    <label :for=\"id\" class=\"text-foreground block px-3 pt-2 text-xs font-medium\">\n      Select with inset label (native)\n    </label>\n    <SelectNative\n      :id=\"id\"\n      default-value=\"\"\n      class=\"border-none bg-transparent shadow-none focus-visible:ring-0 focus-visible:ring-offset-0\"\n    >\n      <option value=\"\" disabled>Select framework</option>\n      <option value=\"1\">Vue</option>\n      <option value=\"2\">Nuxt</option>\n      <option value=\"3\">Astro</option>\n      <option value=\"4\">Vitesse</option>\n    </SelectNative>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "select",
-      "native select"
-    ]
+    "tags": ["label", "select", "native select"]
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/select-native.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/select-native.json"]
 }

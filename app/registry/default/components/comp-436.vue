@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { ScrollArea, ScrollBar } from "@/registry/default/ui/scroll-area";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/default/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/default/ui/tabs";
 import { LucideBox, LucideHome, LucidePanelsTopLeft } from "lucide-vue-next";
 </script>
 
@@ -19,49 +14,34 @@ import { LucideBox, LucideHome, LucidePanelsTopLeft } from "lucide-vue-next";
           value="tab-1"
           class="bg-muted overflow-hidden rounded-b-none border-x border-t py-2 data-[state=active]:z-10 data-[state=active]:shadow-none"
         >
-          <LucideHome
-            class="-ms-0.5 me-1.5 size-4 opacity-60"
-            aria-hidden="true"
-          />
+          <LucideHome class="-ms-0.5 me-1.5 size-4 opacity-60" aria-hidden="true" />
           Overview
         </TabsTrigger>
         <TabsTrigger
           value="tab-2"
           class="bg-muted overflow-hidden rounded-b-none border-x border-t py-2 data-[state=active]:z-10 data-[state=active]:shadow-none"
         >
-          <LucidePanelsTopLeft
-            class="-ms-0.5 me-1.5 size-4 opacity-60"
-            aria-hidden="true"
-          />
+          <LucidePanelsTopLeft class="-ms-0.5 me-1.5 size-4 opacity-60" aria-hidden="true" />
           Projects
         </TabsTrigger>
         <TabsTrigger
           value="tab-3"
           class="bg-muted overflow-hidden rounded-b-none border-x border-t py-2 data-[state=active]:z-10 data-[state=active]:shadow-none"
         >
-          <LucideBox
-            class="-ms-0.5 me-1.5 size-4 opacity-60"
-            aria-hidden="true"
-          />
+          <LucideBox class="-ms-0.5 me-1.5 size-4 opacity-60" aria-hidden="true" />
           Packages
         </TabsTrigger>
       </TabsList>
       <ScrollBar orientation="horizontal" />
     </ScrollArea>
     <TabsContent value="tab-1">
-      <p class="text-muted-foreground p-4 pt-1 text-center text-xs">
-        Content for Tab 1
-      </p>
+      <p class="text-muted-foreground p-4 pt-1 text-center text-xs">Content for Tab 1</p>
     </TabsContent>
     <TabsContent value="tab-2">
-      <p class="text-muted-foreground p-4 pt-1 text-center text-xs">
-        Content for Tab 2
-      </p>
+      <p class="text-muted-foreground p-4 pt-1 text-center text-xs">Content for Tab 2</p>
     </TabsContent>
     <TabsContent value="tab-3">
-      <p class="text-muted-foreground p-4 pt-1 text-center text-xs">
-        Content for Tab 3
-      </p>
+      <p class="text-muted-foreground p-4 pt-1 text-center text-xs">Content for Tab 3</p>
     </TabsContent>
   </Tabs>
 </template>

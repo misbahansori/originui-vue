@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/registry/default/ui/input-group";
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@/registry/default/ui/input-group";
 import { Label } from "@/registry/default/ui/label";
 import {
   Tooltip,
@@ -25,12 +21,7 @@ const { copy, copied } = useClipboard();
   <div class="*:not-first:mt-2">
     <Label for="copy-input">Copy to clipboard</Label>
     <InputGroup>
-      <InputGroupInput
-        id="copy-input"
-        type="text"
-        v-model="inputValue"
-        readonly
-      />
+      <InputGroupInput id="copy-input" type="text" v-model="inputValue" readonly />
       <InputGroupAddon align="inline-end">
         <TooltipProvider>
           <Tooltip :delay-duration="0">
@@ -43,17 +34,10 @@ const { copy, copied } = useClipboard();
               >
                 <div
                   :class="
-                    cn(
-                      'transition-all',
-                      copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0',
-                    )
+                    cn('transition-all', copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0')
                   "
                 >
-                  <LucideCheck
-                    class="stroke-emerald-700"
-                    :size="16"
-                    aria-hidden="true"
-                  />
+                  <LucideCheck class="stroke-emerald-700" :size="16" aria-hidden="true" />
                 </div>
                 <div
                   :class="
@@ -67,9 +51,7 @@ const { copy, copied } = useClipboard();
                 </div>
               </InputGroupButton>
             </TooltipTrigger>
-            <TooltipContent class="px-2 py-1 text-xs">
-              Copy to clipboard
-            </TooltipContent>
+            <TooltipContent class="px-2 py-1 text-xs">Copy to clipboard</TooltipContent>
           </Tooltip>
         </TooltipProvider>
       </InputGroupAddon>

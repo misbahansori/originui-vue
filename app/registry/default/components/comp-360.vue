@@ -21,20 +21,13 @@ import {
     <TooltipProvider :delay-duration="0">
       <Tooltip>
         <TooltipTrigger as-child>
-          <Button
-            class="col-start-2"
-            variant="outline"
-            size="icon"
-            aria-label="Pan camera up"
-          >
+          <Button class="col-start-2" variant="outline" size="icon" aria-label="Pan camera up">
             <LucideChevronUp class="size-4" aria-hidden="true" />
           </Button>
         </TooltipTrigger>
         <TooltipContent side="top" class="px-2 py-1 text-xs">
           Pan top
-          <Kbd
-            class="text-muted-foreground/70 bg-background ms-2 -me-1 border text-[0.625rem]"
-          >
+          <Kbd class="text-muted-foreground/70 bg-background ms-2 -me-1 border text-[0.625rem]">
             ⌘T
           </Kbd>
         </TooltipContent>
@@ -43,20 +36,13 @@ import {
     <TooltipProvider :delay-duration="0">
       <Tooltip>
         <TooltipTrigger as-child>
-          <Button
-            class="col-start-1"
-            variant="outline"
-            size="icon"
-            aria-label="Pan camera left"
-          >
+          <Button class="col-start-1" variant="outline" size="icon" aria-label="Pan camera left">
             <LucideChevronLeft class="size-4" aria-hidden="true" />
           </Button>
         </TooltipTrigger>
         <TooltipContent side="left" class="px-2 py-1 text-xs">
           Pan left
-          <Kbd
-            class="text-muted-foreground/70 bg-background ms-2 -me-1 border text-[0.625rem]"
-          >
+          <Kbd class="text-muted-foreground/70 bg-background ms-2 -me-1 border text-[0.625rem]">
             ⌘L
           </Kbd>
         </TooltipContent>
@@ -74,9 +60,7 @@ import {
         </TooltipTrigger>
         <TooltipContent side="right" class="px-2 py-1 text-xs">
           Pan right
-          <Kbd
-            class="text-muted-foreground/70 bg-background ms-2 -me-1 border text-[0.625rem]"
-          >
+          <Kbd class="text-muted-foreground/70 bg-background ms-2 -me-1 border text-[0.625rem]">
             ⌘R
           </Kbd>
         </TooltipContent>
@@ -85,20 +69,13 @@ import {
     <TooltipProvider :delay-duration="0">
       <Tooltip>
         <TooltipTrigger as-child>
-          <Button
-            class="col-start-2"
-            variant="outline"
-            size="icon"
-            aria-label="Pan camera down"
-          >
+          <Button class="col-start-2" variant="outline" size="icon" aria-label="Pan camera down">
             <LucideChevronDown class="size-4" aria-hidden="true" />
           </Button>
         </TooltipTrigger>
         <TooltipContent side="bottom" class="px-2 py-1 text-xs">
           Pan bottom
-          <Kbd
-            class="text-muted-foreground/70 bg-background ms-2 -me-1 border text-[0.625rem]"
-          >
+          <Kbd class="text-muted-foreground/70 bg-background ms-2 -me-1 border text-[0.625rem]">
             ⌘B
           </Kbd>
         </TooltipContent>

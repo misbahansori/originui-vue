@@ -20,23 +20,13 @@ const remix = ref<boolean | "indeterminate">(false);
     <DropdownMenuTrigger asChild>
       <Button variant="outline">
         Checkbox items
-        <LucideChevronDown
-          :size="16"
-          class="-me-1 opacity-60"
-          aria-hidden="true"
-        />
+        <LucideChevronDown :size="16" class="-me-1 opacity-60" aria-hidden="true" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent>
-      <DropdownMenuCheckboxItem v-model="nextjs">
-        Next.js
-      </DropdownMenuCheckboxItem>
-      <DropdownMenuCheckboxItem v-model="sveltekit">
-        SvelteKit
-      </DropdownMenuCheckboxItem>
-      <DropdownMenuCheckboxItem v-model="remix" disabled>
-        Remix
-      </DropdownMenuCheckboxItem>
+      <DropdownMenuCheckboxItem v-model="nextjs">Next.js</DropdownMenuCheckboxItem>
+      <DropdownMenuCheckboxItem v-model="sveltekit">SvelteKit</DropdownMenuCheckboxItem>
+      <DropdownMenuCheckboxItem v-model="remix" disabled>Remix</DropdownMenuCheckboxItem>
       <DropdownMenuCheckboxItem v-model="astro">Astro</DropdownMenuCheckboxItem>
     </DropdownMenuContent>
   </DropdownMenu>

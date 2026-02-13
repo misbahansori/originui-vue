@@ -41,11 +41,7 @@ const options = [
       <SelectContent
         class="[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2"
       >
-        <SelectItem
-          v-for="option in options"
-          :key="option.value"
-          :value="option"
-        >
+        <SelectItem v-for="option in options" :key="option.value" :value="option">
           <SelectItemText>{{ option.label }}</SelectItemText>
           <span class="text-muted-foreground mt-1 block text-xs" data-desc>
             {{ option.description }}

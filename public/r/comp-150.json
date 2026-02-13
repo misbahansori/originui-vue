@@ -10,17 +10,8 @@
     }
   ],
   "meta": {
-    "tags": [
-      "checkbox",
-      "label",
-      "toggle",
-      "darkmode",
-      "radix"
-    ]
+    "tags": ["checkbox", "label", "toggle", "darkmode", "radix"]
   },
-  "dependencies": [
-    "@vueuse/core",
-    "lucide-vue-next"
-  ],
+  "dependencies": ["@vueuse/core", "lucide-vue-next"],
   "registryDependencies": []
 }

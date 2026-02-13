@@ -16,12 +16,7 @@ const currentStep = ref(1);
 <template>
   <div class="space-y-8 text-center">
     <Stepper v-model="currentStep" orientation="vertical">
-      <StepperItem
-        v-for="step in steps"
-        :key="step"
-        :step="step"
-        class="not-last:flex-1"
-      >
+      <StepperItem v-for="step in steps" :key="step" :step="step" class="not-last:flex-1">
         <StepperTrigger as-child>
           <StepperIndicator />
         </StepperTrigger>
@@ -46,11 +41,7 @@ const currentStep = ref(1);
         Next step
       </Button>
     </div>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Controlled vertical stepper with checkmarks
     </p>
   </div>

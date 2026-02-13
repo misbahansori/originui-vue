@@ -22,9 +22,7 @@ const selectedValue = ref("1");
       <div class="grid grow gap-2">
         <Label :for="`${id}-1`">
           Label
-          <span
-            class="text-muted-foreground text-xs leading-[inherit] font-normal"
-          >
+          <span class="text-muted-foreground text-xs leading-[inherit] font-normal">
             (Sublabel)
           </span>
         </Label>
@@ -46,9 +44,7 @@ const selectedValue = ref("1");
       <div class="grid grow gap-2">
         <Label :for="`${id}-2`">
           Label
-          <span
-            class="text-muted-foreground text-xs leading-[inherit] font-normal"
-          >
+          <span class="text-muted-foreground text-xs leading-[inherit] font-normal">
             (Sublabel)
           </span>
         </Label>

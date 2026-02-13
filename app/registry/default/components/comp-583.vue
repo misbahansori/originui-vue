@@ -19,12 +19,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/registry/default/ui/dropdown-menu";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectValue,
-} from "@/registry/default/ui/select";
+import { Select, SelectContent, SelectItem, SelectValue } from "@/registry/default/ui/select";
 import { SelectTrigger } from "reka-ui";
 </script>
 
@@ -60,9 +55,7 @@ import { SelectTrigger } from "reka-ui";
             <BreadcrumbItem class="max-md:hidden">
               <BreadcrumbLink href="#">Personal Account</BreadcrumbLink>
             </BreadcrumbItem>
-            <BreadcrumbSeparator class="max-md:hidden">
-              {{ " " }}/{{ " " }}
-            </BreadcrumbSeparator>
+            <BreadcrumbSeparator class="max-md:hidden">{{ " " }}/{{ " " }}</BreadcrumbSeparator>
             <BreadcrumbItem class="max-md:hidden">
               <BreadcrumbLink href="#">Projects</BreadcrumbLink>
             </BreadcrumbItem>
@@ -75,10 +68,7 @@ import { SelectTrigger } from "reka-ui";
                     class="focus-visible:bg-accent text-foreground h-8 px-1.5 focus-visible:ring-0"
                   >
                     <SelectValue placeholder="Select project" />
-                    <LucideChevronsUpDown
-                      :size="14"
-                      class="text-muted-foreground/80"
-                    />
+                    <LucideChevronsUpDown :size="14" class="text-muted-foreground/80" />
                   </Button>
                 </SelectTrigger>
                 <SelectContent

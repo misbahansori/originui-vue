@@ -39,14 +39,8 @@ function checkIfMobile() {
       class="before:bg-ring/50 after:bg-ring/50 before:absolute before:-bottom-px before:-left-12 before:z-10 before:-ml-px before:size-[3px] after:absolute after:-right-12 after:-bottom-px after:z-10 after:-mr-px after:size-[3px]"
       aria-hidden="true"
     ></div>
-    <div
-      class="mx-auto flex h-[72px] w-full max-w-6xl items-center justify-between gap-3"
-    >
-      <NuxtLink
-        to="/"
-        aria-label="Home"
-        class="flex shrink-0 items-center gap-2"
-      >
+    <div class="mx-auto flex h-[72px] w-full max-w-6xl items-center justify-between gap-3">
+      <NuxtLink to="/" aria-label="Home" class="flex shrink-0 items-center gap-2">
         <img
           src="/logo.svg"
           alt="Origin UI logo"
@@ -86,10 +80,7 @@ function checkIfMobile() {
               </span>
             </NuxtLink>
           </div>
-          <div
-            class="bg-input ms-4 me-4 h-5 w-px md:ms-10"
-            aria-hidden="true"
-          ></div>
+          <div class="bg-input ms-4 me-4 h-5 w-px md:ms-10" aria-hidden="true"></div>
         </template>
         <div class="flex items-center gap-1">
           <a
@@ -167,16 +158,8 @@ function checkIfMobile() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem
-                v-for="link in links"
-                :key="link.href"
-                :to="link.href"
-                as-child
-              >
-                <NuxtLink
-                  :to="link.href"
-                  class="flex w-full cursor-pointer items-center"
-                >
+              <DropdownMenuItem v-for="link in links" :key="link.href" :to="link.href" as-child>
+                <NuxtLink :to="link.href" class="flex w-full cursor-pointer items-center">
                   {{ link.text }}
                   <span
                     v-if="link.isNew"

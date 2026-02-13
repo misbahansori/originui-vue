@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
-import {
-  ButtonGroup,
-  ButtonGroupText,
-} from "@/registry/default/ui/button-group";
+import { ButtonGroup, ButtonGroupText } from "@/registry/default/ui/button-group";
 import { LucideChevronDown, LucideChevronUp } from "lucide-vue-next";
 </script>
 

@@ -1,9 +1,5 @@
 <script setup lang="ts">
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/default/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/default/ui/avatar";
 import { Button } from "@/registry/default/ui/button";
 import { LucideChevronDown } from "lucide-vue-next";
 </script>

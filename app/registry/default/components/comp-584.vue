@@ -14,11 +14,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/registry/default/ui/navigation-menu";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
@@ -75,11 +71,7 @@ const id = useId();
                   :key="index"
                   class="w-full"
                 >
-                  <NavigationMenuLink
-                    :href="link.href"
-                    class="py-1.5"
-                    :active="link.active"
-                  >
+                  <NavigationMenuLink :href="link.href" class="py-1.5" :active="link.active">
                     {{ link.label }}
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -98,12 +90,7 @@ const id = useId();
       <div class="grow">
         <!-- Search form -->
         <div class="relative mx-auto w-full max-w-xs">
-          <Input
-            :id="id"
-            class="peer h-8 ps-8 pe-10"
-            placeholder="Search..."
-            type="search"
-          />
+          <Input :id="id" class="peer h-8 ps-8 pe-10" placeholder="Search..." type="search" />
           <div
             class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-2 peer-disabled:opacity-50"
           >
@@ -112,11 +99,7 @@ const id = useId();
           <div
             class="text-muted-foreground pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-2"
           >
-            <Kbd
-              class="text-muted-foreground/70 bg-background border text-[0.625rem]"
-            >
-              ⌘K
-            </Kbd>
+            <Kbd class="text-muted-foreground/70 bg-background border text-[0.625rem]">⌘K</Kbd>
           </div>
         </div>
       </div>
@@ -133,10 +116,7 @@ const id = useId();
       <!-- Navigation menu -->
       <NavigationMenu>
         <NavigationMenuList class="gap-2">
-          <NavigationMenuItem
-            v-for="(link, index) in navigationLinks"
-            :key="index"
-          >
+          <NavigationMenuItem v-for="(link, index) in navigationLinks" :key="index">
             <NavigationMenuLink
               :active="link.active"
               :href="link.href"

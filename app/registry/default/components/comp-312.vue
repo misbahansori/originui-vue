@@ -30,10 +30,7 @@ const handleDownload = () => {
         class="min-w-24"
       >
         <template v-if="isDownloading">
-          <LucideLoaderCircle
-            class="-ms-0.5 me-2 size-4 animate-spin"
-            aria-hidden="true"
-          />
+          <LucideLoaderCircle class="-ms-0.5 me-2 size-4 animate-spin" aria-hidden="true" />
           Updating...
         </template>
         <template v-else>

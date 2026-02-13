@@ -16,10 +16,7 @@ export interface TailwindConfig {
   extend?: any;
 }
 
-const components = [
-  ...registry.items,
-  ...registryExtended.items,
-] as unknown as RegistryItem[];
+const components = [...registry.items, ...registryExtended.items] as unknown as RegistryItem[];
 
 // Get components by an array of names
 export function getComponentsByNames(names: string[]): RegistryItem[] {

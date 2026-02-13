@@ -27,11 +27,7 @@ const steps = [1, 2, 3, 4];
         <StepperSeparator v-if="step < steps.length" />
       </StepperItem>
     </Stepper>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Stepper with tiny buttons and checkmarks
     </p>
   </div>

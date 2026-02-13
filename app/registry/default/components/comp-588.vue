@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import {
-  LucideHome,
-  LucideInbox,
-  LucideSparkles,
-  LucideZap,
-} from "lucide-vue-next";
+import { LucideHome, LucideInbox, LucideSparkles, LucideZap } from "lucide-vue-next";
 
 import Logo from "@/registry/default/components/navbar-components/Logo.vue";
 import UserMenu from "@/registry/default/components/navbar-components/UserMenu.vue";
@@ -15,11 +10,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/registry/default/ui/navigation-menu";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 
 // Navigation links array
 const navigationLinks = [
@@ -94,10 +85,7 @@ const navigationLinks = [
 
         <NavigationMenu class="max-md:hidden">
           <NavigationMenuList class="gap-2">
-            <NavigationMenuItem
-              v-for="(link, index) in navigationLinks"
-              :key="index"
-            >
+            <NavigationMenuItem v-for="(link, index) in navigationLinks" :key="index">
               <NavigationMenuLink
                 :active="link.active"
                 :href="link.href"
@@ -129,11 +117,7 @@ const navigationLinks = [
         <UserMenu />
         <!-- Upgrade button -->
         <Button size="sm" class="aspect-square text-sm">
-          <LucideSparkles
-            class="opacity-60 max-sm:hidden sm:-ms-1"
-            :size="16"
-            aria-hidden="true"
-          />
+          <LucideSparkles class="opacity-60 max-sm:hidden sm:-ms-1" :size="16" aria-hidden="true" />
           Upgrade
         </Button>
       </div>

@@ -51,11 +51,9 @@ const donwloadUrls = computed(() => {
         :value="item.componentName"
         class="m-0"
       >
-        <pre
-          class="overflow-auto p-4 font-mono text-[12.8px] text-zinc-100"
-          dir="rtl"
-          >{{ item.url }}</pre
-        >
+        <pre class="overflow-auto p-4 font-mono text-[12.8px] text-zinc-100" dir="rtl">{{
+          item.url
+        }}</pre>
         <CopyButton :text="item.url" class="top-1" />
       </TabsContent>
     </Tabs>

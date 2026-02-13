@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/registry/default/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/registry/default/ui/card";
 import { Progress } from "@/registry/default/ui/progress";
 import {
   Select,
@@ -93,11 +88,7 @@ onUnmounted(() => {
         </div>
       </CardContent>
     </Card>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Ported from reui.io tasks overview card
       <a
         class="hover:text-foreground underline"

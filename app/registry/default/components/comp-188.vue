@@ -70,9 +70,7 @@ const id = useId();
       <div class="grid grow gap-2">
         <Label :for="id">
           Label
-          <span
-            class="text-muted-foreground text-xs leading-[inherit] font-normal"
-          >
+          <span class="text-muted-foreground text-xs leading-[inherit] font-normal">
             (Sublabel)
           </span>
         </Label>

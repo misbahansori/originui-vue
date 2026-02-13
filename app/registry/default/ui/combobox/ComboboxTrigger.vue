@@ -4,9 +4,7 @@ import { cn } from "@/lib/utils";
 import { ComboboxTrigger, useForwardProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
-const props = defineProps<
-  ComboboxTriggerProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<ComboboxTriggerProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props;

@@ -18,24 +18,12 @@ const teams = ["Acme Inc.", "Origin UI", "Junon"];
       <AppToggle />
       <!-- Right side -->
       <div class="flex flex-1 items-center justify-end gap-2">
-        <Button
-          size="sm"
-          variant="ghost"
-          class="aspect-square text-sm max-sm:p-0"
-        >
-          <UploadIcon
-            class="opacity-60 sm:-ms-1"
-            :size="16"
-            aria-hidden="true"
-          />
+        <Button size="sm" variant="ghost" class="aspect-square text-sm max-sm:p-0">
+          <UploadIcon class="opacity-60 sm:-ms-1" :size="16" aria-hidden="true" />
           <span class="max-sm:sr-only">Export</span>
         </Button>
         <Button size="sm" class="aspect-square text-sm max-sm:p-0">
-          <SparklesIcon
-            class="opacity-60 sm:-ms-1"
-            :size="16"
-            aria-hidden="true"
-          />
+          <SparklesIcon class="opacity-60 sm:-ms-1" :size="16" aria-hidden="true" />
           <span class="max-sm:sr-only">Upgrade</span>
         </Button>
       </div>

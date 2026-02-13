@@ -2,11 +2,7 @@
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/registry/default/ui/button";
 import { reactiveOmit } from "@vueuse/core";
-import {
-  CalendarCellTrigger,
-  type CalendarCellTriggerProps,
-  useForwardProps,
-} from "reka-ui";
+import { CalendarCellTrigger, type CalendarCellTriggerProps, useForwardProps } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 
 const props = withDefaults(

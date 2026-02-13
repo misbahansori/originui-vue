@@ -30,15 +30,8 @@ import {
 } from "@/registry/default/ui/dropdown-menu";
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
-import {
-  Pagination,
-  PaginationContent,
-} from "@/registry/default/ui/pagination";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Pagination, PaginationContent } from "@/registry/default/ui/pagination";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import {
   Select,
   SelectContent,
@@ -101,17 +94,12 @@ type Item = {
 
 // Custom filter function for multi-column searching
 const multiColumnFilterFn: FilterFn<Item> = (row, columnId, filterValue) => {
-  const searchableRowContent =
-    `${row.original.name} ${row.original.email}`.toLowerCase();
+  const searchableRowContent = `${row.original.name} ${row.original.email}`.toLowerCase();
   const searchTerm = (filterValue ?? "").toLowerCase();
   return searchableRowContent.includes(searchTerm);
 };
 
-const statusFilterFn: FilterFn<Item> = (
-  row,
-  columnId,
-  filterValue: string[],
-) => {
+const statusFilterFn: FilterFn<Item> = (row, columnId, filterValue: string[]) => {
   if (!filterValue?.length) return true;
   const status = row.getValue(columnId) as string;
   return filterValue.includes(status);
@@ -147,8 +135,7 @@ const columns: ColumnDef<Item>[] = [
     cell: ({ row }) =>
       h(Checkbox, {
         modelValue: row.getIsSelected(),
-        "onUpdate:modelValue": (value: boolean | "indeterminate") =>
-          row.toggleSelected(!!value),
+        "onUpdate:modelValue": (value: boolean | "indeterminate") => row.toggleSelected(!!value),
         "aria-label": "Select row",
       }),
     size: 28,
@@ -177,11 +164,7 @@ const columns: ColumnDef<Item>[] = [
     accessorKey: "location",
     cell: ({ row }) =>
       h("div", {}, [
-        h(
-          "span",
-          { class: "text-lg leading-none" },
-          row.original.flag as string,
-        ),
+        h("span", { class: "text-lg leading-none" }, row.original.flag as string),
         " ",
         row.getValue("location") as string,
       ]),
@@ -279,8 +262,7 @@ const table = useVueTable({
   onSortingChange: (updater) => valueUpdater(updater, sorting),
   onPaginationChange: (updater) => valueUpdater(updater, pagination),
   onColumnFiltersChange: (updater) => valueUpdater(updater, columnFilters),
-  onColumnVisibilityChange: (updater) =>
-    valueUpdater(updater, columnVisibility),
+  onColumnVisibilityChange: (updater) => valueUpdater(updater, columnVisibility),
   onRowSelectionChange: (updater) => valueUpdater(updater, rowSelection),
   enableSortingRemoval: false,
 });
@@ -318,9 +300,7 @@ const handleStatusChange = (checked: boolean, value: string) => {
     }
   }
 
-  table
-    .getColumn("status")
-    ?.setFilterValue(newFilterValue.length ? newFilterValue : undefined);
+  table.getColumn("status")?.setFilterValue(newFilterValue.length ? newFilterValue : undefined);
 };
 
 const handleDeleteRows = () => {
@@ -356,10 +336,7 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
       default: () =>
         h(DropdownMenuContent, { align: "end" }, [
           h(DropdownMenuGroup, {}, [
-            h(DropdownMenuItem, {}, [
-              h("span", {}, "Edit"),
-              h(DropdownMenuShortcut, {}, "⌘E"),
-            ]),
+            h(DropdownMenuItem, {}, [h("span", {}, "Edit"), h(DropdownMenuShortcut, {}, "⌘E")]),
             h(DropdownMenuItem, {}, [
               h("span", {}, "Duplicate"),
               h(DropdownMenuShortcut, {}, "⌘D"),
@@ -367,10 +344,7 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
           ]),
           h(DropdownMenuSeparator),
           h(DropdownMenuGroup, {}, [
-            h(DropdownMenuItem, {}, [
-              h("span", {}, "Archive"),
-              h(DropdownMenuShortcut, {}, "⌘A"),
-            ]),
+            h(DropdownMenuItem, {}, [h("span", {}, "Archive"), h(DropdownMenuShortcut, {}, "⌘A")]),
             h(
               DropdownMenuSub,
               {},
@@ -394,11 +368,10 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
             h(DropdownMenuItem, {}, "Add to favorites"),
           ]),
           h(DropdownMenuSeparator),
-          h(
-            DropdownMenuItem,
-            { class: "text-destructive focus:text-destructive" },
-            [h("span", {}, "Delete"), h(DropdownMenuShortcut, {}, "⌘⌫")],
-          ),
+          h(DropdownMenuItem, { class: "text-destructive focus:text-destructive" }, [
+            h("span", {}, "Delete"),
+            h(DropdownMenuShortcut, {}, "⌘⌫"),
+          ]),
         ]),
     },
   );
@@ -412,15 +385,9 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
         <div class="relative">
           <Input
             class="peer min-w-60 ps-9"
-            :class="
-              Boolean(table.getColumn('name')?.getFilterValue()) && 'pe-9'
-            "
-            :model-value="
-              (table.getColumn('name')?.getFilterValue() ?? '') as string
-            "
-            @update:model-value="
-              (value) => table.getColumn('name')?.setFilterValue(value)
-            "
+            :class="Boolean(table.getColumn('name')?.getFilterValue()) && 'pe-9'"
+            :model-value="(table.getColumn('name')?.getFilterValue() ?? '') as string"
+            @update:model-value="(value) => table.getColumn('name')?.setFilterValue(value)"
             placeholder="Filter by name or email..."
             type="text"
             aria-label="Filter by name or email"
@@ -446,11 +413,7 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
         <Popover>
           <PopoverTrigger asChild>
             <Button variant="outline">
-              <LucideFilter
-                class="-ms-1 opacity-60"
-                :size="16"
-                aria-hidden="true"
-              />
+              <LucideFilter class="-ms-1 opacity-60" :size="16" aria-hidden="true" />
               Status
               <span
                 v-if="selectedStatuses.length > 0"
@@ -462,9 +425,7 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
           </PopoverTrigger>
           <PopoverContent class="w-auto min-w-36 p-3" align="start">
             <div class="space-y-3">
-              <div class="text-muted-foreground text-xs font-medium">
-                Filters
-              </div>
+              <div class="text-muted-foreground text-xs font-medium">Filters</div>
               <div class="space-y-3">
                 <div
                   v-for="(value, i) in uniqueStatusValues"
@@ -475,14 +436,10 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
                     :id="`status-${i}`"
                     :model-value="selectedStatuses.includes(value)"
                     @update:model-value="
-                      (checked: boolean | 'indeterminate') =>
-                        handleStatusChange(!!checked, value)
+                      (checked: boolean | 'indeterminate') => handleStatusChange(!!checked, value)
                     "
                   />
-                  <Label
-                    :for="`status-${i}`"
-                    class="flex grow justify-between gap-2 font-normal"
-                  >
+                  <Label :for="`status-${i}`" class="flex grow justify-between gap-2 font-normal">
                     {{ value }}
                     <span class="text-muted-foreground ms-2 text-xs">
                       {{ statusCounts.get(value) }}
@@ -496,11 +453,7 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline">
-              <LucideColumns3
-                class="-ms-1 opacity-60"
-                :size="16"
-                aria-hidden="true"
-              />
+              <LucideColumns3 class="-ms-1 opacity-60" :size="16" aria-hidden="true" />
               View
             </Button>
           </DropdownMenuTrigger>
@@ -509,9 +462,7 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
               Toggle columns
             </DropdownMenuLabel>
             <DropdownMenuCheckboxItem
-              v-for="column in table
-                .getAllColumns()
-                .filter((column) => column.getCanHide())"
+              v-for="column in table.getAllColumns().filter((column) => column.getCanHide())"
               :key="column.id"
               class="capitalize"
               :model-value="column.getIsVisible()"
@@ -527,11 +478,7 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
         <AlertDialog v-if="table.getSelectedRowModel().rows.length > 0">
           <AlertDialogTrigger asChild>
             <Button class="ml-auto" variant="outline">
-              <LucideTrash
-                class="-ms-1 opacity-60"
-                :size="16"
-                aria-hidden="true"
-              />
+              <LucideTrash class="-ms-1 opacity-60" :size="16" aria-hidden="true" />
               Delete
               <span
                 class="bg-background text-muted-foreground/70 -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium"
@@ -541,9 +488,7 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
             </Button>
           </AlertDialogTrigger>
           <AlertDialogContent>
-            <div
-              class="flex flex-col gap-2 max-sm:items-center sm:flex-row sm:gap-4"
-            >
+            <div class="flex flex-col gap-2 max-sm:items-center sm:flex-row sm:gap-4">
               <div
                 class="flex size-9 shrink-0 items-center justify-center rounded-full border"
                 aria-hidden="true"
@@ -555,19 +500,13 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
                 <AlertDialogDescription>
                   This action cannot be undone. This will permanently delete
                   {{ table.getSelectedRowModel().rows.length }} selected
-                  {{
-                    table.getSelectedRowModel().rows.length === 1
-                      ? "row"
-                      : "rows"
-                  }}.
+                  {{ table.getSelectedRowModel().rows.length === 1 ? "row" : "rows" }}.
                 </AlertDialogDescription>
               </AlertDialogHeader>
             </div>
             <AlertDialogFooter>
               <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction @click="handleDeleteRows">
-                Delete
-              </AlertDialogAction>
+              <AlertDialogAction @click="handleDeleteRows">Delete</AlertDialogAction>
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
@@ -599,10 +538,7 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
                   @click="header.column.getToggleSortingHandler()?.($event)"
                   @keydown="
                     (e) => {
-                      if (
-                        header.column.getCanSort() &&
-                        (e.key === 'Enter' || e.key === ' ')
-                      ) {
+                      if (header.column.getCanSort() && (e.key === 'Enter' || e.key === ' ')) {
                         e.preventDefault();
                         header.column.getToggleSortingHandler()?.(e);
                       }
@@ -643,22 +579,13 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
               :key="row.id"
               :data-state="row.getIsSelected() && 'selected'"
             >
-              <TableCell
-                v-for="cell in row.getVisibleCells()"
-                :key="cell.id"
-                class="last:py-0"
-              >
-                <FlexRender
-                  :render="cell.column.columnDef.cell"
-                  :props="cell.getContext()"
-                />
+              <TableCell v-for="cell in row.getVisibleCells()" :key="cell.id" class="last:py-0">
+                <FlexRender :render="cell.column.columnDef.cell" :props="cell.getContext()" />
               </TableCell>
             </TableRow>
           </template>
           <TableRow v-else>
-            <TableCell :colspan="columns.length" class="h-24 text-center">
-              No results.
-            </TableCell>
+            <TableCell :colspan="columns.length" class="h-24 text-center">No results.</TableCell>
           </TableRow>
         </TableBody>
       </Table>
@@ -687,23 +614,15 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
           </SelectContent>
         </Select>
       </div>
-      <div
-        class="text-muted-foreground flex grow justify-end text-sm whitespace-nowrap"
-      >
-        <p
-          class="text-muted-foreground text-sm whitespace-nowrap"
-          aria-live="polite"
-        >
+      <div class="text-muted-foreground flex grow justify-end text-sm whitespace-nowrap">
+        <p class="text-muted-foreground text-sm whitespace-nowrap" aria-live="polite">
           <span class="text-foreground">
             {{
-              table.getState().pagination.pageIndex *
-                table.getState().pagination.pageSize +
-              1
+              table.getState().pagination.pageIndex * table.getState().pagination.pageSize + 1
             }}-{{
               Math.min(
                 Math.max(
-                  table.getState().pagination.pageIndex *
-                    table.getState().pagination.pageSize +
+                  table.getState().pagination.pageIndex * table.getState().pagination.pageSize +
                     table.getState().pagination.pageSize,
                   0,
                 ),

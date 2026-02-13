@@ -5,24 +5,14 @@
   "files": [
     {
       "path": "components/extended-48.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  MiniCalendar,\n  MiniCalendarDay,\n  MiniCalendarDays,\n  MiniCalendarNavigation,\n} from \"@/registry/default/ui/mini-calendar\";\nimport { CalendarDate } from \"@internationalized/date\";\nimport { ref } from \"vue\";\n\nconst selectedDate = ref<CalendarDate>();\n</script>\n\n<template>\n  <div>\n    <MiniCalendar v-model=\"selectedDate\" class=\"p-4\">\n      <MiniCalendarNavigation direction=\"prev\" />\n      <MiniCalendarDays v-slot=\"{ date }\" class=\"gap-3\">\n        <MiniCalendarDay :date=\"date\" class=\"min-w-[4rem] p-3 text-base\" />\n      </MiniCalendarDays>\n      <MiniCalendarNavigation direction=\"next\" />\n    </MiniCalendar>\n    <p class=\"text-muted-foreground mt-2 text-xs\">\n      Large display with increased spacing and size\n    </p>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport {\n  MiniCalendar,\n  MiniCalendarDay,\n  MiniCalendarDays,\n  MiniCalendarNavigation,\n} from \"@/registry/default/ui/mini-calendar\";\nimport { CalendarDate } from \"@internationalized/date\";\nimport { ref } from \"vue\";\n\nconst selectedDate = ref<CalendarDate>();\n</script>\n\n<template>\n  <div>\n    <MiniCalendar v-model=\"selectedDate\" class=\"p-4\">\n      <MiniCalendarNavigation direction=\"prev\" />\n      <MiniCalendarDays v-slot=\"{ date }\" class=\"gap-3\">\n        <MiniCalendarDay :date=\"date\" class=\"min-w-[4rem] p-3 text-base\" />\n      </MiniCalendarDays>\n      <MiniCalendarNavigation direction=\"next\" />\n    </MiniCalendar>\n    <p class=\"text-muted-foreground mt-2 text-xs\">Large display with increased spacing and size</p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "mini-calendar",
-      "extended",
-      "calendar",
-      "date",
-      "large"
-    ],
+    "tags": ["mini-calendar", "extended", "calendar", "date", "large"],
     "colSpan": 2
   },
-  "dependencies": [
-    "@internationalized/date"
-  ],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/mini-calendar.json"
-  ]
+  "dependencies": ["@internationalized/date"],
+  "registryDependencies": ["https://www.originui-vue.com/r/mini-calendar.json"]
 }

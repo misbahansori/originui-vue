@@ -14,10 +14,7 @@ const hideBanner = () => {
   <div v-if="isVisible" class="dark bg-muted text-foreground px-4 py-3">
     <div class="flex gap-2">
       <div class="flex grow gap-3">
-        <LucideEclipse
-          class="mt-0.5 size-4 shrink-0 opacity-60"
-          aria-hidden="true"
-        />
+        <LucideEclipse class="mt-0.5 size-4 shrink-0 opacity-60" aria-hidden="true" />
         <div class="flex grow flex-col justify-between gap-2 md:flex-row">
           <p class="text-sm">
             We just added something awesome to make your experience even better.

@@ -10,17 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "avatar",
-      "user",
-      "profile"
-    ],
+    "tags": ["avatar", "user", "profile"],
     "style": 1
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/avatar.json"
-  ]
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": ["https://www.originui-vue.com/r/avatar.json"]
 }

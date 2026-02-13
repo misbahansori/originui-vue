@@ -5,23 +5,14 @@
   "files": [
     {
       "path": "components/comp-119.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  RiFacebookFill,\n  RiGithubFill,\n  RiGoogleFill,\n  RiTwitterXFill,\n} from \"@remixicon/vue\";\n</script>\n\n<template>\n  <div class=\"inline-flex flex-wrap gap-2\">\n    <Button variant=\"outline\" aria-label=\"Login with Google\" size=\"icon\">\n      <RiGoogleFill size=\"16\" aria-hidden=\"true\" />\n    </Button>\n    <Button variant=\"outline\" aria-label=\"Login with Facebook\" size=\"icon\">\n      <RiFacebookFill size=\"16\" aria-hidden=\"true\" />\n    </Button>\n    <Button variant=\"outline\" aria-label=\"Login with X\" size=\"icon\">\n      <RiTwitterXFill size=\"16\" aria-hidden=\"true\" />\n    </Button>\n    <Button variant=\"outline\" aria-label=\"Login with GitHub\" size=\"icon\">\n      <RiGithubFill size=\"16\" aria-hidden=\"true\" />\n    </Button>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { RiFacebookFill, RiGithubFill, RiGoogleFill, RiTwitterXFill } from \"@remixicon/vue\";\n</script>\n\n<template>\n  <div class=\"inline-flex flex-wrap gap-2\">\n    <Button variant=\"outline\" aria-label=\"Login with Google\" size=\"icon\">\n      <RiGoogleFill size=\"16\" aria-hidden=\"true\" />\n    </Button>\n    <Button variant=\"outline\" aria-label=\"Login with Facebook\" size=\"icon\">\n      <RiFacebookFill size=\"16\" aria-hidden=\"true\" />\n    </Button>\n    <Button variant=\"outline\" aria-label=\"Login with X\" size=\"icon\">\n      <RiTwitterXFill size=\"16\" aria-hidden=\"true\" />\n    </Button>\n    <Button variant=\"outline\" aria-label=\"Login with GitHub\" size=\"icon\">\n      <RiGithubFill size=\"16\" aria-hidden=\"true\" />\n    </Button>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "button",
-      "social",
-      "login",
-      "authentication"
-    ],
+    "tags": ["button", "social", "login", "authentication"],
     "style": 2
   },
-  "dependencies": [
-    "@remixicon/vue"
-  ],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/button.json"
-  ]
+  "dependencies": ["@remixicon/vue"],
+  "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
 }

@@ -35,9 +35,7 @@ const { copied, copy } = useClipboard();
             </div>
           </Button>
         </TooltipTrigger>
-        <TooltipContent className="text-muted-foreground px-2 py-1 text-xs">
-          Copy
-        </TooltipContent>
+        <TooltipContent className="text-muted-foreground px-2 py-1 text-xs">Copy</TooltipContent>
       </Tooltip>
     </TooltipProvider>
   </div>

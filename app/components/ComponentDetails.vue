@@ -80,10 +80,7 @@ const { copied, copy } = useClipboard();
               variant="ghost"
               size="icon"
               class="text-muted-foreground/80 hover:text-foreground transition-none hover:bg-transparent disabled:opacity-100 lg:opacity-0 lg:group-focus-within/item:opacity-100 lg:group-hover/item:opacity-100"
-              @click="
-                () =>
-                  copy(component ? `${siteUrl}/r/${component.name}.json` : '')
-              "
+              @click="() => copy(component ? `${siteUrl}/r/${component.name}.json` : '')"
             >
               <div
                 class="transition-all"

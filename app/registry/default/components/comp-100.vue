@@ -19,12 +19,7 @@ function toggleOpen() {
   <TooltipProvider>
     <Tooltip>
       <TooltipTrigger as-child>
-        <Button
-          class="rounded-full"
-          variant="outline"
-          size="icon"
-          aria-label="Add new item"
-        >
+        <Button class="rounded-full" variant="outline" size="icon" aria-label="Add new item">
           <LucidePlus :size="16" aria-hidden="true" />
         </Button>
       </TooltipTrigger>

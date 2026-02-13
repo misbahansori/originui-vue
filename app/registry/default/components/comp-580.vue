@@ -11,11 +11,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/registry/default/ui/navigation-menu";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
@@ -75,11 +71,7 @@ const id = useId();
                     {{ link.label }}
                   </NavigationMenuLink>
                 </NavigationMenuItem>
-                <NavigationMenuItem
-                  class="w-full"
-                  role="presentation"
-                  aria-hidden="true"
-                >
+                <NavigationMenuItem class="w-full" role="presentation" aria-hidden="true">
                   <div
                     role="separator"
                     aria-orientation="horizontal"
@@ -87,16 +79,10 @@ const id = useId();
                   ></div>
                 </NavigationMenuItem>
                 <NavigationMenuItem class="w-full">
-                  <NavigationMenuLink href="#" class="py-1.5">
-                    Sign In
-                  </NavigationMenuLink>
+                  <NavigationMenuLink href="#" class="py-1.5">Sign In</NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem class="w-full">
-                  <Button
-                    as-child
-                    size="sm"
-                    class="mt-0.5 w-full text-left text-sm"
-                  >
+                  <Button as-child size="sm" class="mt-0.5 w-full text-left text-sm">
                     <span class="flex items-baseline gap-2">
                       Cart
                       <span class="text-primary-foreground/60 text-xs">2</span>
@@ -115,10 +101,7 @@ const id = useId();
           <!-- Navigation menu -->
           <NavigationMenu class="max-md:hidden">
             <NavigationMenuList class="gap-2">
-              <NavigationMenuItem
-                v-for="(link, index) in navigationLinks"
-                :key="index"
-              >
+              <NavigationMenuItem v-for="(link, index) in navigationLinks" :key="index">
                 <NavigationMenuLink
                   :href="link.href"
                   class="text-muted-foreground hover:text-primary py-1.5 font-medium"
@@ -130,12 +113,7 @@ const id = useId();
           </NavigationMenu>
           <!-- Search form -->
           <div class="relative">
-            <Input
-              :id="id"
-              class="peer h-8 ps-8 pe-2"
-              placeholder="Search..."
-              type="search"
-            />
+            <Input :id="id" class="peer h-8 ps-8 pe-2" placeholder="Search..." type="search" />
             <div
               class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-2 peer-disabled:opacity-50"
             >

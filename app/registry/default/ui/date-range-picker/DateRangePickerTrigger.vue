@@ -1,16 +1,10 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
 import { LucideCalendar } from "lucide-vue-next";
-import {
-  DateRangePickerTrigger,
-  type DateRangePickerTriggerProps,
-  useForwardProps,
-} from "reka-ui";
+import { DateRangePickerTrigger, type DateRangePickerTriggerProps, useForwardProps } from "reka-ui";
 import { type HTMLAttributes, computed } from "vue";
 
-const props = defineProps<
-  DateRangePickerTriggerProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<DateRangePickerTriggerProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props;

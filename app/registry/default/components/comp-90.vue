@@ -5,11 +5,7 @@ import { LucideLoaderCircle } from "lucide-vue-next";
 
 <template>
   <Button disabled>
-    <LucideLoaderCircle
-      class="-ms-1 animate-spin"
-      :size="16"
-      aria-hidden="true"
-    />
+    <LucideLoaderCircle class="-ms-1 animate-spin" :size="16" aria-hidden="true" />
     Button
   </Button>
 </template>

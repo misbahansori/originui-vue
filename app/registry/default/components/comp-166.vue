@@ -17,13 +17,8 @@ const items = [
 
 <template>
   <fieldset class="space-y-4">
-    <legend class="text-foreground text-sm leading-none font-medium">
-      Choose plan
-    </legend>
-    <RadioGroup
-      class="gap-0 -space-y-px rounded-md shadow-xs"
-      v-model="selectedValue"
-    >
+    <legend class="text-foreground text-sm leading-none font-medium">Choose plan</legend>
+    <RadioGroup class="gap-0 -space-y-px rounded-md shadow-xs" v-model="selectedValue">
       <div
         v-for="item in items"
         :key="`${id}-${item.value}`"
@@ -39,9 +34,7 @@ const items = [
             />
             <Label class="inline-flex items-start" :for="`${id}-${item.value}`">
               {{ item.label }}
-              <Badge v-if="item.value === '2'" class="ms-2 -mt-1">
-                Popular
-              </Badge>
+              <Badge v-if="item.value === '2'" class="ms-2 -mt-1">Popular</Badge>
             </Label>
           </div>
           <div

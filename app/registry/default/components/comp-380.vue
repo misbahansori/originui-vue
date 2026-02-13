@@ -12,9 +12,7 @@ import { computed } from "vue";
 
 const { system, store } = useColorMode();
 
-const colorMode = computed(() =>
-  store.value === "auto" ? system.value : store.value,
-);
+const colorMode = computed(() => (store.value === "auto" ? system.value : store.value));
 </script>
 
 <template>
@@ -22,16 +20,8 @@ const colorMode = computed(() =>
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button size="icon" variant="outline" aria-label="Select theme">
-          <LucideSun
-            v-if="colorMode === 'light'"
-            class="size-4"
-            aria-hidden="true"
-          />
-          <LucideMoon
-            v-if="colorMode === 'dark'"
-            class="size-4"
-            aria-hidden="true"
-          />
+          <LucideSun v-if="colorMode === 'light'" class="size-4" aria-hidden="true" />
+          <LucideMoon v-if="colorMode === 'dark'" class="size-4" aria-hidden="true" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent class="min-w-32">

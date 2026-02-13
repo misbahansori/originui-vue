@@ -15,11 +15,7 @@ const id = useId();
       <option value="3">Astro</option>
       <option value="4">Vitesse</option>
     </SelectNative>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Tell us what's your favorite Select framework
     </p>
   </div>

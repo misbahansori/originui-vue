@@ -5,9 +5,7 @@ import type { RadioGroupItemProps } from "reka-ui";
 import { RadioGroupIndicator, RadioGroupItem, useForwardProps } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 
-const props = defineProps<
-  RadioGroupItemProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<RadioGroupItemProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = reactiveOmit(props, "class");
 

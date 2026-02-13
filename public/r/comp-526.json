@@ -5,19 +5,14 @@
   "files": [
     {
       "path": "components/comp-526.vue",
-      "content": "<script lang=\"ts\" setup>\nimport {\n  Stepper,\n  StepperIndicator,\n  StepperItem,\n  StepperSeparator,\n  StepperTrigger,\n} from \"@/registry/default/ui/stepper\";\n\nconst steps = [1, 2, 3, 4];\n</script>\n\n<template>\n  <div class=\"space-y-8 text-center\">\n    <Stepper :default-value=\"2\" orientation=\"vertical\">\n      <StepperItem\n        v-for=\"step in steps\"\n        :key=\"step\"\n        :step=\"step\"\n        class=\"not-last:flex-1\"\n      >\n        <StepperTrigger>\n          <StepperIndicator />\n        </StepperTrigger>\n        <StepperSeparator v-if=\"step < steps.length\" />\n      </StepperItem>\n    </Stepper>\n    <p\n      class=\"text-muted-foreground mt-2 text-xs\"\n      role=\"region\"\n      aria-live=\"polite\"\n    >\n      Vertical stepper with numbers and checkmarks\n    </p>\n  </div>\n</template>\n",
+      "content": "<script lang=\"ts\" setup>\nimport {\n  Stepper,\n  StepperIndicator,\n  StepperItem,\n  StepperSeparator,\n  StepperTrigger,\n} from \"@/registry/default/ui/stepper\";\n\nconst steps = [1, 2, 3, 4];\n</script>\n\n<template>\n  <div class=\"space-y-8 text-center\">\n    <Stepper :default-value=\"2\" orientation=\"vertical\">\n      <StepperItem v-for=\"step in steps\" :key=\"step\" :step=\"step\" class=\"not-last:flex-1\">\n        <StepperTrigger>\n          <StepperIndicator />\n        </StepperTrigger>\n        <StepperSeparator v-if=\"step < steps.length\" />\n      </StepperItem>\n    </Stepper>\n    <p class=\"text-muted-foreground mt-2 text-xs\" role=\"region\" aria-live=\"polite\">\n      Vertical stepper with numbers and checkmarks\n    </p>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "stepper",
-      "vertical stepper"
-    ],
+    "tags": ["stepper", "vertical stepper"],
     "colSpan": 2
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/stepper.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/stepper.json"]
 }

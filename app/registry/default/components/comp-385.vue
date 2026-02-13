@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import { ref } from "vue";
 
 const tips = [
@@ -52,13 +48,8 @@ const handleNavigation = () => {
           </p>
         </div>
         <div class="flex items-center justify-between gap-2">
-          <span class="text-muted-foreground text-xs">
-            {{ currentTip + 1 }}/{{ tips.length }}
-          </span>
-          <button
-            class="text-xs font-medium hover:underline"
-            @click="handleNavigation"
-          >
+          <span class="text-muted-foreground text-xs">{{ currentTip + 1 }}/{{ tips.length }}</span>
+          <button class="text-xs font-medium hover:underline" @click="handleNavigation">
             {{ currentTip === tips.length - 1 ? "Start over" : "Next" }}
           </button>
         </div>

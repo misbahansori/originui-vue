@@ -5,20 +5,15 @@
   "files": [
     {
       "path": "components/comp-465.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationEllipsis,\n  PaginationItem,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/registry/default/ui/pagination\";\nimport { LucideChevronLeft, LucideChevronRight } from \"lucide-vue-next\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <Pagination\n    :defaultPage=\"1\"\n    :itemsPerPage=\"10\"\n    :total=\"100\"\n    v-slot=\"{ page }\"\n    :showEdges=\"true\"\n    :siblingCount=\"0\"\n  >\n    <PaginationContent\n      class=\"flex w-full items-center justify-between gap-1\"\n      v-slot=\"{ items }\"\n    >\n      <div class=\"flex items-center gap-1\">\n        <PaginationPrevious>\n          <LucideChevronLeft aria-hidden=\"true\" class=\"size-4\" />\n        </PaginationPrevious>\n        <template v-for=\"item in items\">\n          <PaginationItem\n            v-if=\"item.type === 'page'\"\n            :value=\"item.value\"\n            asChild\n          >\n            <Button\n              :variant=\"item.value === page ? 'outline' : 'ghost'\"\n              class=\"size-9\"\n            >\n              {{ item.value }}\n            </Button>\n          </PaginationItem>\n          <PaginationEllipsis v-if=\"item.type === 'ellipsis'\" />\n        </template>\n        <PaginationNext>\n          <LucideChevronRight aria-hidden=\"true\" class=\"size-4\" />\n        </PaginationNext>\n      </div>\n      <div class=\"flex items-center gap-3\">\n        <Label :for=\"id\" class=\"whitespace-nowrap\">Go to page</Label>\n        <Input :id=\"id\" type=\"text\" class=\"w-14\" :defaultValue=\"page\" />\n      </div>\n    </PaginationContent>\n  </Pagination>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationEllipsis,\n  PaginationItem,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/registry/default/ui/pagination\";\nimport { LucideChevronLeft, LucideChevronRight } from \"lucide-vue-next\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <Pagination\n    :defaultPage=\"1\"\n    :itemsPerPage=\"10\"\n    :total=\"100\"\n    v-slot=\"{ page }\"\n    :showEdges=\"true\"\n    :siblingCount=\"0\"\n  >\n    <PaginationContent class=\"flex w-full items-center justify-between gap-1\" v-slot=\"{ items }\">\n      <div class=\"flex items-center gap-1\">\n        <PaginationPrevious>\n          <LucideChevronLeft aria-hidden=\"true\" class=\"size-4\" />\n        </PaginationPrevious>\n        <template v-for=\"item in items\">\n          <PaginationItem v-if=\"item.type === 'page'\" :value=\"item.value\" asChild>\n            <Button :variant=\"item.value === page ? 'outline' : 'ghost'\" class=\"size-9\">\n              {{ item.value }}\n            </Button>\n          </PaginationItem>\n          <PaginationEllipsis v-if=\"item.type === 'ellipsis'\" />\n        </template>\n        <PaginationNext>\n          <LucideChevronRight aria-hidden=\"true\" class=\"size-4\" />\n        </PaginationNext>\n      </div>\n      <div class=\"flex items-center gap-3\">\n        <Label :for=\"id\" class=\"whitespace-nowrap\">Go to page</Label>\n        <Input :id=\"id\" type=\"text\" class=\"w-14\" :defaultValue=\"page\" />\n      </div>\n    </PaginationContent>\n  </Pagination>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "pagination",
-      "input"
-    ],
+    "tags": ["pagination", "input"],
     "colSpan": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/input.json",

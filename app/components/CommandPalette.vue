@@ -22,9 +22,7 @@ const filteredComponents = computed(() => {
   if (!searchQuery.value) return availableComponents;
 
   return availableComponents.filter((component) => {
-    return component.name
-      .toLowerCase()
-      .includes(searchQuery.value.toLowerCase());
+    return component.name.toLowerCase().includes(searchQuery.value.toLowerCase());
   });
 });
 

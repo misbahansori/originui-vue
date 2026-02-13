@@ -10,13 +10,8 @@
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label"
-    ]
+    "tags": ["input", "label"]
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/input.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/input.json"]
 }

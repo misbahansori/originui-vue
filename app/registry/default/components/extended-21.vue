@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { Badge } from "@/registry/default/ui/badge";
 import { Button } from "@/registry/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/registry/default/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/registry/default/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -90,9 +85,7 @@ function formatNumber(n: number) {
         :class="`relative overflow-hidden ${stat.bg} text-white`"
       >
         <!-- SVG Background Decorations -->
-        <div
-          class="pointer-events-none absolute top-0 right-0 h-full w-2/3 opacity-40"
-        >
+        <div class="pointer-events-none absolute top-0 right-0 h-full w-2/3 opacity-40">
           <!-- Total Sales SVG -->
           <svg
             v-if="stat.svg === 'total-sales'"
@@ -127,20 +120,8 @@ function formatNumber(n: number) {
               fill-opacity="0.13"
               filter="url(#blur2)"
             />
-            <rect
-              x="120"
-              y="20"
-              width="60"
-              height="20"
-              rx="8"
-              fill="#fff"
-              fill-opacity="0.10"
-            />
-            <polygon
-              points="150,0 200,0 200,50"
-              fill="#fff"
-              fill-opacity="0.07"
-            />
+            <rect x="120" y="20" width="60" height="20" rx="8" fill="#fff" fill-opacity="0.10" />
+            <polygon points="150,0 200,0 200,50" fill="#fff" fill-opacity="0.07" />
             <circle cx="180" cy="100" r="14" fill="#fff" fill-opacity="0.16" />
           </svg>
 
@@ -166,19 +147,8 @@ function formatNumber(n: number) {
               fill-opacity="0.09"
               filter="url(#blur3)"
             />
-            <ellipse
-              cx="170"
-              cy="80"
-              rx="28"
-              ry="12"
-              fill="#fff"
-              fill-opacity="0.12"
-            />
-            <polygon
-              points="200,0 200,60 140,0"
-              fill="#fff"
-              fill-opacity="0.07"
-            />
+            <ellipse cx="170" cy="80" rx="28" ry="12" fill="#fff" fill-opacity="0.12" />
+            <polygon points="200,0 200,60 140,0" fill="#fff" fill-opacity="0.07" />
             <circle cx="150" cy="30" r="10" fill="#fff" fill-opacity="0.15" />
           </svg>
 
@@ -194,11 +164,7 @@ function formatNumber(n: number) {
                 <feGaussianBlur stdDeviation="16" />
               </filter>
             </defs>
-            <polygon
-              points="200,0 200,100 100,0"
-              fill="#fff"
-              fill-opacity="0.09"
-            />
+            <polygon points="200,0 200,100 100,0" fill="#fff" fill-opacity="0.09" />
             <ellipse
               cx="170"
               cy="40"
@@ -208,15 +174,7 @@ function formatNumber(n: number) {
               fill-opacity="0.13"
               filter="url(#blur4)"
             />
-            <rect
-              x="140"
-              y="60"
-              width="40"
-              height="18"
-              rx="8"
-              fill="#fff"
-              fill-opacity="0.10"
-            />
+            <rect x="140" y="60" width="40" height="18" rx="8" fill="#fff" fill-opacity="0.10" />
             <circle cx="150" cy="30" r="14" fill="#fff" fill-opacity="0.18" />
             <line
               x1="120"
@@ -230,9 +188,7 @@ function formatNumber(n: number) {
           </svg>
         </div>
 
-        <CardHeader
-          class="relative z-10 flex items-center justify-between border-0"
-        >
+        <CardHeader class="relative z-10 flex items-center justify-between border-0">
           <CardTitle class="text-sm font-medium text-white/90">
             {{ stat.title }}
           </CardTitle>
@@ -289,9 +245,7 @@ function formatNumber(n: number) {
               {{ stat.delta }}%
             </Badge>
           </div>
-          <div
-            class="mt-2 border-t border-white/20 pt-2.5 text-xs text-white/80"
-          >
+          <div class="mt-2 border-t border-white/20 pt-2.5 text-xs text-white/80">
             Vs last month:
             <span class="font-medium text-white">
               {{
@@ -304,11 +258,7 @@ function formatNumber(n: number) {
         </CardContent>
       </Card>
     </div>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Ported from reui.io colored statistic cards
       <a
         class="hover:text-foreground underline"

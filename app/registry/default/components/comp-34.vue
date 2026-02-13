@@ -19,18 +19,9 @@ const characterCount = computed(() => inputValue.value.length);
   <div class="*:not-first:mt-2">
     <Label :for="id">Input with character limit</Label>
     <InputGroup>
-      <InputGroupInput
-        :id="id"
-        v-model="inputValue"
-        type="text"
-        :maxlength="maxLength"
-      />
+      <InputGroupInput :id="id" v-model="inputValue" type="text" :maxlength="maxLength" />
       <InputGroupAddon align="inline-end">
-        <InputGroupText
-          class="text-xs tabular-nums"
-          aria-live="polite"
-          role="status"
-        >
+        <InputGroupText class="text-xs tabular-nums" aria-live="polite" role="status">
           {{ characterCount }}/{{ maxLength }}
         </InputGroupText>
       </InputGroupAddon>

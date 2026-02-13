@@ -15,8 +15,7 @@ const items = [
   {
     id: 2,
     date: new Date("2024-01-09T10:50:00"),
-    description:
-      "User authentication service restarted due to configuration update.",
+    description: "User authentication service restarted due to configuration update.",
   },
   {
     id: 3,
@@ -33,12 +32,7 @@ const items = [
 
 <template>
   <Timeline class="divide-y rounded-lg border">
-    <TimelineItem
-      v-for="item in items"
-      :key="item.id"
-      :step="item.id"
-      class="m-0! px-4! py-3!"
-    >
+    <TimelineItem v-for="item in items" :key="item.id" :step="item.id" class="m-0! px-4! py-3!">
       <TimelineContent class="text-foreground">
         {{ item.description }}
         <TimelineDate class="mt-1">

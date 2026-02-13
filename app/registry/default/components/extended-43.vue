@@ -67,25 +67,15 @@ const formatDate = (dateString?: string) => {
     <div>
       <TooltipProvider>
         <ContributionGraph class="flex gap-1">
-          <ContributionGraphGroup
-            v-for="(week, weekIndex) in weeks"
-            :key="weekIndex"
-          >
-            <Tooltip
-              v-for="(day, dayIndex) in week"
-              :key="dayIndex"
-              :delay-duration="0"
-            >
+          <ContributionGraphGroup v-for="(week, weekIndex) in weeks" :key="weekIndex">
+            <Tooltip v-for="(day, dayIndex) in week" :key="dayIndex" :delay-duration="0">
               <TooltipTrigger as-child>
                 <ContributionGraphBlock
                   :level="getLevel(day.count)"
                   :title="`${day.count} contributions on ${day.date}`"
                 />
               </TooltipTrigger>
-              <TooltipContent
-                side="top"
-                class="bg-foreground text-background border-foreground"
-              >
+              <TooltipContent side="top" class="bg-foreground text-background border-foreground">
                 <div class="text-xs">
                   <p class="font-medium">
                     {{ day.count }}
@@ -101,12 +91,6 @@ const formatDate = (dateString?: string) => {
         </ContributionGraph>
       </TooltipProvider>
     </div>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
-      With Tooltip
-    </p>
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">With Tooltip</p>
   </div>
 </template>

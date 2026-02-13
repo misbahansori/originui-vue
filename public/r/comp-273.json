@@ -10,14 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "alert",
-      "info"
-    ],
+    "tags": ["alert", "info"],
     "colSpan": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": []
 }

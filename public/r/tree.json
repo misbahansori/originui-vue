@@ -15,7 +15,7 @@
     },
     {
       "path": "ui/tree/TreeItemLabel.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { LucideChevronDown } from \"lucide-vue-next\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  hasChildren?: boolean;\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <span\n    data-slot=\"tree-item-label\"\n    :class=\"\n      cn(\n        'in-focus-visible:ring-ring/50 bg-background hover:bg-accent in-data-[selected]:bg-accent in-data-[selected]:text-accent-foreground in-data-[drag-target=true]:bg-accent flex items-center gap-1 rounded-sm px-2 py-1.5 text-sm transition-colors not-in-data-[folder=true]:ps-7 in-focus-visible:ring-[3px] in-data-[search-match=true]:bg-blue-50! [&_svg]:pointer-events-none [&_svg]:shrink-0',\n        props.class,\n      )\n    \"\n  >\n    <template v-if=\"hasChildren\">\n      <LucideChevronDown\n        class=\"text-muted-foreground size-4 in-aria-[expanded=false]:-rotate-90\"\n      />\n    </template>\n    <slot />\n  </span>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { LucideChevronDown } from \"lucide-vue-next\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  hasChildren?: boolean;\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <span\n    data-slot=\"tree-item-label\"\n    :class=\"\n      cn(\n        'in-focus-visible:ring-ring/50 bg-background hover:bg-accent in-data-[selected]:bg-accent in-data-[selected]:text-accent-foreground in-data-[drag-target=true]:bg-accent flex items-center gap-1 rounded-sm px-2 py-1.5 text-sm transition-colors not-in-data-[folder=true]:ps-7 in-focus-visible:ring-[3px] in-data-[search-match=true]:bg-blue-50! [&_svg]:pointer-events-none [&_svg]:shrink-0',\n        props.class,\n      )\n    \"\n  >\n    <template v-if=\"hasChildren\">\n      <LucideChevronDown class=\"text-muted-foreground size-4 in-aria-[expanded=false]:-rotate-90\" />\n    </template>\n    <slot />\n  </span>\n</template>\n",
       "type": "registry:ui"
     },
     {
@@ -24,9 +24,6 @@
       "type": "registry:ui"
     }
   ],
-  "dependencies": [
-    "reka-ui",
-    "lucide-vue-next"
-  ],
+  "dependencies": ["reka-ui", "lucide-vue-next"],
   "registryDependencies": []
 }

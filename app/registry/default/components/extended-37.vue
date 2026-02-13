@@ -32,9 +32,7 @@ const commands = [
 
 const activeTab = ref(commands[0]?.label);
 
-const activeCommand = computed(() =>
-  commands.find((command) => command.label === activeTab.value),
-);
+const activeCommand = computed(() => commands.find((command) => command.label === activeTab.value));
 </script>
 
 <template>

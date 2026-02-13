@@ -20,10 +20,7 @@ function handleClick() {
     aria-label="Notifications"
   >
     <LucideBell :size="16" aria-hidden="true" />
-    <Badge
-      v-if="count > 0"
-      class="absolute -top-2 left-full min-w-5 -translate-x-1/2 px-1"
-    >
+    <Badge v-if="count > 0" class="absolute -top-2 left-full min-w-5 -translate-x-1/2 px-1">
       {{ count > 99 ? "99+" : count }}
     </Badge>
   </Button>

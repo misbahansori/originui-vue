@@ -10,9 +10,7 @@ import {
 } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 
-const props = defineProps<
-  AlertDialogContentProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<AlertDialogContentProps & { class?: HTMLAttributes["class"] }>();
 const emits = defineEmits<AlertDialogContentEmits>();
 
 const delegatedProps = reactiveOmit(props, "class");

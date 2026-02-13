@@ -5,19 +5,15 @@
   "files": [
     {
       "path": "components/comp-460.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationEllipsis,\n  PaginationFirst,\n  PaginationItem,\n  PaginationLast,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/registry/default/ui/pagination\";\nimport {\n  LucideChevronFirst,\n  LucideChevronLast,\n  LucideChevronLeft,\n  LucideChevronRight,\n} from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Pagination\n    :defaultPage=\"1\"\n    :itemsPerPage=\"10\"\n    :total=\"100\"\n    v-slot=\"{ page }\"\n    :showEdges=\"true\"\n    :siblingCount=\"0\"\n  >\n    <PaginationContent\n      class=\"flex w-full items-center justify-center gap-1\"\n      v-slot=\"{ items }\"\n    >\n      <PaginationFirst>\n        <LucideChevronFirst aria-hidden=\"true\" class=\"size-4\" />\n      </PaginationFirst>\n      <PaginationPrevious>\n        <LucideChevronLeft aria-hidden=\"true\" class=\"size-4\" />\n      </PaginationPrevious>\n      <template v-for=\"item in items\">\n        <PaginationItem v-if=\"item.type === 'page'\" :value=\"item.value\" asChild>\n          <Button\n            :variant=\"item.value === page ? 'outline' : 'ghost'\"\n            class=\"size-9\"\n          >\n            {{ item.value }}\n          </Button>\n        </PaginationItem>\n        <PaginationEllipsis v-if=\"item.type === 'ellipsis'\" />\n      </template>\n      <PaginationNext>\n        <LucideChevronRight aria-hidden=\"true\" class=\"size-4\" />\n      </PaginationNext>\n      <PaginationLast>\n        <LucideChevronLast aria-hidden=\"true\" class=\"size-4\" />\n      </PaginationLast>\n    </PaginationContent>\n  </Pagination>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationEllipsis,\n  PaginationFirst,\n  PaginationItem,\n  PaginationLast,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/registry/default/ui/pagination\";\nimport {\n  LucideChevronFirst,\n  LucideChevronLast,\n  LucideChevronLeft,\n  LucideChevronRight,\n} from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Pagination\n    :defaultPage=\"1\"\n    :itemsPerPage=\"10\"\n    :total=\"100\"\n    v-slot=\"{ page }\"\n    :showEdges=\"true\"\n    :siblingCount=\"0\"\n  >\n    <PaginationContent class=\"flex w-full items-center justify-center gap-1\" v-slot=\"{ items }\">\n      <PaginationFirst>\n        <LucideChevronFirst aria-hidden=\"true\" class=\"size-4\" />\n      </PaginationFirst>\n      <PaginationPrevious>\n        <LucideChevronLeft aria-hidden=\"true\" class=\"size-4\" />\n      </PaginationPrevious>\n      <template v-for=\"item in items\">\n        <PaginationItem v-if=\"item.type === 'page'\" :value=\"item.value\" asChild>\n          <Button :variant=\"item.value === page ? 'outline' : 'ghost'\" class=\"size-9\">\n            {{ item.value }}\n          </Button>\n        </PaginationItem>\n        <PaginationEllipsis v-if=\"item.type === 'ellipsis'\" />\n      </template>\n      <PaginationNext>\n        <LucideChevronRight aria-hidden=\"true\" class=\"size-4\" />\n      </PaginationNext>\n      <PaginationLast>\n        <LucideChevronLast aria-hidden=\"true\" class=\"size-4\" />\n      </PaginationLast>\n    </PaginationContent>\n  </Pagination>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "pagination"
-    ],
+    "tags": ["pagination"],
     "colSpan": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",
     "https://www.originui-vue.com/r/pagination.json"

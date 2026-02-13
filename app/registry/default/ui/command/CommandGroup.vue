@@ -21,9 +21,7 @@ const delegatedProps = computed(() => {
 const { allGroups, filterState } = useCommand();
 const id = useId();
 
-const isRender = computed(() =>
-  !filterState.search ? true : filterState.filtered.groups.has(id),
-);
+const isRender = computed(() => (!filterState.search ? true : filterState.filtered.groups.has(id)));
 
 provideCommandGroupContext({ id });
 onMounted(() => {
@@ -47,10 +45,7 @@ onUnmounted(() => {
     "
     :hidden="isRender ? undefined : true"
   >
-    <ListboxGroupLabel
-      v-if="heading"
-      class="text-muted-foreground px-2 py-1.5 text-xs font-medium"
-    >
+    <ListboxGroupLabel v-if="heading" class="text-muted-foreground px-2 py-1.5 text-xs font-medium">
       {{ heading }}
     </ListboxGroupLabel>
     <slot />

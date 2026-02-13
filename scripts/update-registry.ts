@@ -1,7 +1,6 @@
 import { readdir, readFile, writeFile } from "fs/promises";
 import { join } from "path";
 import { glob } from "glob";
-import prettier from "prettier";
 
 // Types
 interface RegistryFile {
@@ -21,12 +20,7 @@ interface RegistryItem {
 }
 
 // Configuration
-const EXCLUDED_IMPORTS = new Set([
-  "@",
-  "vue",
-  "utils",
-  "class-variance-authority",
-]);
+const EXCLUDED_IMPORTS = new Set(["@", "vue", "utils", "class-variance-authority"]);
 
 const PATH_MAPPINGS = [
   { from: "app/registry/default/ui/", to: "ui/" },
@@ -34,12 +28,6 @@ const PATH_MAPPINGS = [
   { from: "registry/default/ui/", to: "ui/" },
   { from: "registry/default/components/", to: "components/" },
 ] as const;
-
-const PRETTIER_CONFIG = {
-  parser: "json",
-  printWidth: 60,
-  htmlWhitespaceSensitivity: "ignore",
-} satisfies prettier.Options;
 
 // Main functions
 export async function updateRegistryImports(): Promise<void> {
@@ -129,8 +117,6 @@ async function updateFilePaths(
     return { updates };
   }
 
-  let hasChanges = false;
-
   for (const file of data.files) {
     if (!file.path) continue;
 
@@ -138,17 +124,10 @@ async function updateFilePaths(
     if (newPath !== file.path) {
       updates.push({ from: file.path, to: newPath });
       file.path = newPath;
-      hasChanges = true;
     }
   }
 
-  if (hasChanges) {
-    const formattedJson = await prettier.format(
-      JSON.stringify(data),
-      PRETTIER_CONFIG,
-    );
-    await writeFile(filePath, formattedJson);
-  }
+  await writeFile(filePath, JSON.stringify(data, null, 2));
 
   return { updates };
 }
@@ -164,8 +143,7 @@ function updatePath(path: string): string {
 
 function extractDependencies(content: string): string[] {
   const imports = new Set<string>();
-  const importRegex =
-    /import\s+(?:{[^}]*}|\*\s+as\s+\w+|\w+)\s+from\s+['"]([^'"]+)['"]/g;
+  const importRegex = /import\s+(?:{[^}]*}|\*\s+as\s+\w+|\w+)\s+from\s+['"]([^'"]+)['"]/g;
 
   let match;
 
@@ -191,8 +169,7 @@ function extractDependencies(content: string): string[] {
 
 function extractRegistryDependencies(content: string): string[] {
   const deps = new Set<string>();
-  const importRegex =
-    /import\s+(?:{[^}]*}|\*\s+as\s+\w+|\w+)\s+from\s+['"]([^'"]+)['"]/g;
+  const importRegex = /import\s+(?:{[^}]*}|\*\s+as\s+\w+|\w+)\s+from\s+['"]([^'"]+)['"]/g;
 
   let match;
 

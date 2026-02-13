@@ -5,22 +5,14 @@
   "files": [
     {
       "path": "components/extended-10.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  Card,\n  CardContent,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/default/ui/card\";\nimport { LucideChartNoAxesColumn, LucideInfo } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Card class=\"gap-4\">\n    <CardHeader class=\"gap-4 px-4\">\n      <div class=\"flex items-center gap-3\">\n        <div class=\"flex size-7 items-center justify-center rounded-md border\">\n          <LucideChartNoAxesColumn class=\"text-foreground size-4\" />\n        </div>\n        <CardTitle class=\"text-lg/none\">Financing overview</CardTitle>\n      </div>\n      <CardDescription class=\"text-sm/relaxed\">\n        Preview of the financing options available to the user and the total\n        amount of financing available.\n      </CardDescription>\n    </CardHeader>\n    <CardContent class=\"grid grid-cols-2 gap-4 px-4\">\n      <div class=\"flex flex-col gap-1\">\n        <div class=\"text-muted-foreground flex items-center gap-2\">\n          <p class=\"text-xs font-medium\">Total amount</p>\n          <LucideInfo class=\"size-4\" />\n        </div>\n        <p class=\"text-xl font-semibold tracking-tight tabular-nums\">\n          $100,000\n        </p>\n      </div>\n      <div class=\"flex flex-col gap-1\">\n        <div class=\"text-muted-foreground flex items-center gap-2\">\n          <p class=\"text-xs font-medium\">Total Customer</p>\n          <LucideInfo class=\"size-4\" />\n        </div>\n        <p class=\"text-xl font-semibold tracking-tight tabular-nums\">27,320</p>\n      </div>\n    </CardContent>\n  </Card>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Card, CardContent, CardHeader, CardTitle } from \"@/registry/default/ui/card\";\nimport { LucideChartNoAxesColumn, LucideInfo } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <Card class=\"gap-4\">\n    <CardHeader class=\"gap-4 px-4\">\n      <div class=\"flex items-center gap-3\">\n        <div class=\"flex size-7 items-center justify-center rounded-md border\">\n          <LucideChartNoAxesColumn class=\"text-foreground size-4\" />\n        </div>\n        <CardTitle class=\"text-lg/none\">Financing overview</CardTitle>\n      </div>\n      <CardDescription class=\"text-sm/relaxed\">\n        Preview of the financing options available to the user and the total amount of financing\n        available.\n      </CardDescription>\n    </CardHeader>\n    <CardContent class=\"grid grid-cols-2 gap-4 px-4\">\n      <div class=\"flex flex-col gap-1\">\n        <div class=\"text-muted-foreground flex items-center gap-2\">\n          <p class=\"text-xs font-medium\">Total amount</p>\n          <LucideInfo class=\"size-4\" />\n        </div>\n        <p class=\"text-xl font-semibold tracking-tight tabular-nums\">$100,000</p>\n      </div>\n      <div class=\"flex flex-col gap-1\">\n        <div class=\"text-muted-foreground flex items-center gap-2\">\n          <p class=\"text-xs font-medium\">Total Customer</p>\n          <LucideInfo class=\"size-4\" />\n        </div>\n        <p class=\"text-xl font-semibold tracking-tight tabular-nums\">27,320</p>\n      </div>\n    </CardContent>\n  </Card>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "card",
-      "extended",
-      "card"
-    ],
+    "tags": ["card", "extended", "card"],
     "colSpan": 1
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/card.json"
-  ]
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": ["https://www.originui-vue.com/r/card.json"]
 }

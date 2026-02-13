@@ -1,11 +1,7 @@
 <script setup lang="ts">
 import { Badge } from "@/registry/default/ui/badge";
 import { Button } from "@/registry/default/ui/button";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import { LucideBell } from "lucide-vue-next";
 import { computed, ref } from "vue";
 
@@ -77,9 +73,7 @@ const initialNotifications: Notification[] = [
 ];
 
 const notifications = ref<Notification[]>(initialNotifications);
-const unreadCount = computed(
-  () => notifications.value.filter((n) => n.unread).length,
-);
+const unreadCount = computed(() => notifications.value.filter((n) => n.unread).length);
 
 const handleMarkAllAsRead = () => {
   notifications.value = notifications.value.map((notification) => ({
@@ -98,12 +92,7 @@ const handleNotificationClick = (id: number) => {
 <template>
   <Popover>
     <PopoverTrigger asChild>
-      <Button
-        size="icon"
-        variant="outline"
-        class="relative"
-        aria-label="Open notifications"
-      >
+      <Button size="icon" variant="outline" class="relative" aria-label="Open notifications">
         <LucideBell class="size-4" aria-hidden="true" />
         <Badge
           v-if="unreadCount > 0"
@@ -124,11 +113,7 @@ const handleNotificationClick = (id: number) => {
           Mark all as read
         </button>
       </div>
-      <div
-        role="separator"
-        aria-orientation="horizontal"
-        class="bg-border -mx-1 my-1 h-px"
-      ></div>
+      <div role="separator" aria-orientation="horizontal" class="bg-border -mx-1 my-1 h-px"></div>
       <div
         v-for="notification in notifications"
         :key="notification.id"

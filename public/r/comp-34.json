@@ -5,15 +5,12 @@
   "files": [
     {
       "path": "components/comp-34.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@/registry/default/ui/input-group\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { computed, ref, useId } from \"vue\";\n\nconst id = useId();\nconst inputValue = ref(\"\");\nconst maxLength = 50;\n\nconst characterCount = computed(() => inputValue.value.length);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with character limit</Label>\n    <InputGroup>\n      <InputGroupInput\n        :id=\"id\"\n        v-model=\"inputValue\"\n        type=\"text\"\n        :maxlength=\"maxLength\"\n      />\n      <InputGroupAddon align=\"inline-end\">\n        <InputGroupText\n          class=\"text-xs tabular-nums\"\n          aria-live=\"polite\"\n          role=\"status\"\n        >\n          {{ characterCount }}/{{ maxLength }}\n        </InputGroupText>\n      </InputGroupAddon>\n    </InputGroup>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@/registry/default/ui/input-group\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { computed, ref, useId } from \"vue\";\n\nconst id = useId();\nconst inputValue = ref(\"\");\nconst maxLength = 50;\n\nconst characterCount = computed(() => inputValue.value.length);\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with character limit</Label>\n    <InputGroup>\n      <InputGroupInput :id=\"id\" v-model=\"inputValue\" type=\"text\" :maxlength=\"maxLength\" />\n      <InputGroupAddon align=\"inline-end\">\n        <InputGroupText class=\"text-xs tabular-nums\" aria-live=\"polite\" role=\"status\">\n          {{ characterCount }}/{{ maxLength }}\n        </InputGroupText>\n      </InputGroupAddon>\n    </InputGroup>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label"
-    ]
+    "tags": ["input", "label"]
   },
   "dependencies": [],
   "registryDependencies": [

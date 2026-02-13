@@ -9,9 +9,7 @@ import {
 } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 
-const props = defineProps<
-  NavigationMenuLinkProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<NavigationMenuLinkProps & { class?: HTMLAttributes["class"] }>();
 const emits = defineEmits<NavigationMenuLinkEmits>();
 
 const delegatedProps = reactiveOmit(props, "class");

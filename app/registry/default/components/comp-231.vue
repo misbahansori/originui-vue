@@ -10,11 +10,7 @@ import {
   CommandList,
 } from "@/registry/default/ui/command";
 import { Label } from "@/registry/default/ui/label";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import { LucideCheck, LucideChevronDown } from "lucide-vue-next";
 import { computed, ref, useId } from "vue";
 
@@ -32,25 +28,20 @@ const formattedTimezones = computed(() => {
         timeZoneName: "shortOffset",
       });
       const parts = formatter.formatToParts(new Date());
-      const offset =
-        parts.find((part) => part.type === "timeZoneName")?.value || "";
+      const offset = parts.find((part) => part.type === "timeZoneName")?.value || "";
       const modifiedOffset = offset === "GMT" ? "GMT+0" : offset;
 
       return {
         value: timezone,
         label: `(${modifiedOffset}) ${timezone.replace(/_/g, " ")}`,
-        numericOffset: parseInt(
-          offset.replace("GMT", "").replace("+", "") || "0",
-        ),
+        numericOffset: parseInt(offset.replace("GMT", "").replace("+", "") || "0"),
       };
     })
     .sort((a, b) => a.numericOffset - b.numericOffset);
 });
 
 const selectedTimezone = computed(() => {
-  return formattedTimezones.value.find(
-    (timezone) => timezone.value === value.value,
-  )?.label;
+  return formattedTimezones.value.find((timezone) => timezone.value === value.value)?.label;
 });
 
 function handleSelect(currentValue: string) {
@@ -103,11 +94,7 @@ function customFilter(value: string, search: string) {
                 @select="handleSelect(timezone.value)"
               >
                 {{ timezone.label }}
-                <LucideCheck
-                  v-if="value === timezone.value"
-                  :size="16"
-                  class="ml-auto"
-                />
+                <LucideCheck v-if="value === timezone.value" :size="16" class="ml-auto" />
               </CommandItem>
             </CommandGroup>
           </CommandList>

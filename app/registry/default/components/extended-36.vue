@@ -32,17 +32,12 @@ const commands = [
 
 const activeTab = ref(commands[0]?.label);
 
-const activeCommand = computed(() =>
-  commands.find((command) => command.label === activeTab.value),
-);
+const activeCommand = computed(() => commands.find((command) => command.label === activeTab.value));
 </script>
 
 <template>
   <div class="dark relative">
-    <Snippet
-      v-model="activeTab"
-      class="rounded-md border-0 bg-zinc-950 dark:bg-zinc-900"
-    >
+    <Snippet v-model="activeTab" class="rounded-md border-0 bg-zinc-950 dark:bg-zinc-900">
       <SnippetHeader class="border-0 bg-transparent p-0">
         <SnippetTabsList
           class="h-auto w-full justify-start rounded-none border-b bg-transparent px-4 py-0"
@@ -62,15 +57,10 @@ const activeCommand = computed(() =>
           class="text-muted-foreground absolute top-1 right-1 opacity-100"
         />
       </SnippetHeader>
-      <SnippetTabsContent
-        v-for="command in commands"
-        :key="command.label"
-        :value="command.label"
-      >
-        <pre
-          class="overflow-x-auto p-4 font-mono text-[12.8px] text-zinc-100"
-          >{{ command.code }}</pre
-        >
+      <SnippetTabsContent v-for="command in commands" :key="command.label" :value="command.label">
+        <pre class="overflow-x-auto p-4 font-mono text-[12.8px] text-zinc-100">{{
+          command.code
+        }}</pre>
       </SnippetTabsContent>
     </Snippet>
   </div>

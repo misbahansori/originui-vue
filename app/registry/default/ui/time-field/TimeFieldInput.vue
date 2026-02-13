@@ -1,15 +1,9 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import {
-  TimeFieldInput,
-  useForwardProps,
-  type TimeFieldInputProps,
-} from "reka-ui";
+import { TimeFieldInput, useForwardProps, type TimeFieldInputProps } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 
-const props = defineProps<
-  TimeFieldInputProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<TimeFieldInputProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props;

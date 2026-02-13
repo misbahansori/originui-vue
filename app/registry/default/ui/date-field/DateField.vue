@@ -8,9 +8,7 @@ import {
 } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 
-const props = defineProps<
-  DateFieldRootProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<DateFieldRootProps & { class?: HTMLAttributes["class"] }>();
 
 const emits = defineEmits<DateFieldRootEmits>();
 

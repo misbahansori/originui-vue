@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
 import { Button } from "@/registry/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/registry/default/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/registry/default/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -33,9 +28,7 @@ const passing = 20;
       <CardHeader class="flex min-h-auto items-center justify-between border-0">
         <CardTitle class="flex items-center gap-2.5">
           <LucideShieldCheck class="text-primary h-5 w-5" />
-          <span class="text-foreground text-sm font-semibold">
-            Compliance Checks
-          </span>
+          <span class="text-foreground text-sm font-semibold">Compliance Checks</span>
         </CardTitle>
         <div class="ml-auto">
           <DropdownMenu>
@@ -79,17 +72,13 @@ const passing = 20;
             :class="
               cn(
                 'inline-block h-4 w-3 rounded-sm border transition-colors',
-                i - 1 < passing
-                  ? 'border-primary bg-primary'
-                  : 'border-muted bg-muted',
+                i - 1 < passing ? 'border-primary bg-primary' : 'border-muted bg-muted',
               )
             "
           />
         </div>
 
-        <div
-          class="text-muted-foreground mt-1 flex items-center justify-between text-xs"
-        >
+        <div class="text-muted-foreground mt-1 flex items-center justify-between text-xs">
           <span>{{ passing }}/16 checks passing</span>
           <span class="text-foreground font-semibold">
             {{ Math.round((passing / total) * 100) }}% assigned
@@ -97,11 +86,7 @@ const passing = 20;
         </div>
       </CardContent>
     </Card>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Ported from reui.io compliance checks card
       <a
         class="hover:text-foreground underline"

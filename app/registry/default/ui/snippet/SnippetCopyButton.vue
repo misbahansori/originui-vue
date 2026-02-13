@@ -43,10 +43,7 @@ const { copy, copied } = useClipboard({
     @click="copy(props.value)"
   >
     <slot>
-      <div
-        class="transition-all"
-        :class="!copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0'"
-      >
+      <div class="transition-all" :class="!copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0'">
         <CopyIcon class="size-4" aria-hidden="true" />
       </div>
       <div

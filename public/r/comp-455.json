@@ -10,15 +10,9 @@
     }
   ],
   "meta": {
-    "tags": [
-      "pagination"
-    ],
+    "tags": ["pagination"],
     "colSpan": 2
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/pagination.json"
-  ]
+  "dependencies": ["lucide-vue-next"],
+  "registryDependencies": ["https://www.originui-vue.com/r/pagination.json"]
 }

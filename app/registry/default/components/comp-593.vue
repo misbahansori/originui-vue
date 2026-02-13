@@ -38,16 +38,8 @@ import { BookmarkIcon, HomeIcon } from "lucide-vue-next";
         <!-- Filters -->
         <Filters />
         <!-- Saved button -->
-        <Button
-          size="sm"
-          variant="outline"
-          class="aspect-square text-sm max-sm:p-0"
-        >
-          <BookmarkIcon
-            class="text-muted-foreground/80 sm:-ms-1"
-            :size="16"
-            aria-hidden="true"
-          />
+        <Button size="sm" variant="outline" class="aspect-square text-sm max-sm:p-0">
+          <BookmarkIcon class="text-muted-foreground/80 sm:-ms-1" :size="16" aria-hidden="true" />
           <span class="max-sm:sr-only">Saved</span>
         </Button>
       </div>

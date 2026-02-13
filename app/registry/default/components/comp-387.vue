@@ -1,23 +1,14 @@
 <script setup lang="ts">
 import { Button } from "@/registry/default/ui/button";
 import { Input } from "@/registry/default/ui/input";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/default/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/registry/default/ui/tooltip";
-import {
-  RiCodeFill,
-  RiFacebookFill,
-  RiMailLine,
-  RiTwitterXFill,
-} from "@remixicon/vue";
+import { RiCodeFill, RiFacebookFill, RiMailLine, RiTwitterXFill } from "@remixicon/vue";
 import { useClipboard } from "@vueuse/core";
 import { LucideCheck, LucideCopy } from "lucide-vue-next";
 import { useId } from "vue";
@@ -44,11 +35,7 @@ const { copy, copied } = useClipboard();
             <Button size="icon" variant="outline" aria-label="Share on Twitter">
               <RiTwitterXFill size="16" aria-hidden="true" />
             </Button>
-            <Button
-              size="icon"
-              variant="outline"
-              aria-label="Share on Facebook"
-            >
+            <Button size="icon" variant="outline" aria-label="Share on Facebook">
               <RiFacebookFill size="16" aria-hidden="true" />
             </Button>
             <Button size="icon" variant="outline" aria-label="Share via email">
@@ -77,31 +64,22 @@ const { copy, copied } = useClipboard();
                       <div
                         :class="[
                           'transition-all',
-                          copied
-                            ? 'scale-100 opacity-100'
-                            : 'scale-0 opacity-0',
+                          copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0',
                         ]"
                       >
-                        <LucideCheck
-                          class="size-4 stroke-emerald-500"
-                          aria-hidden="true"
-                        />
+                        <LucideCheck class="size-4 stroke-emerald-500" aria-hidden="true" />
                       </div>
                       <div
                         :class="[
                           'absolute transition-all',
-                          copied
-                            ? 'scale-0 opacity-0'
-                            : 'scale-100 opacity-100',
+                          copied ? 'scale-0 opacity-0' : 'scale-100 opacity-100',
                         ]"
                       >
                         <LucideCopy class="size-4" aria-hidden="true" />
                       </div>
                     </button>
                   </TooltipTrigger>
-                  <TooltipContent class="px-2 py-1 text-xs">
-                    Copy to clipboard
-                  </TooltipContent>
+                  <TooltipContent class="px-2 py-1 text-xs">Copy to clipboard</TooltipContent>
                 </Tooltip>
               </TooltipProvider>
             </div>

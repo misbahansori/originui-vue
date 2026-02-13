@@ -23,16 +23,11 @@ import {
               <p class="text-base font-medium">SpaceX</p>
               <LucideVerified class="size-4 shrink-0" />
             </div>
-            <Badge
-              variant="outline"
-              class="text-[0.625rem] font-medium tracking-wide uppercase"
-            >
+            <Badge variant="outline" class="text-[0.625rem] font-medium tracking-wide uppercase">
               Aerospace
             </Badge>
           </div>
-          <span class="text-muted-foreground text-sm/none font-medium">
-            Space Exploration
-          </span>
+          <span class="text-muted-foreground text-sm/none font-medium">Space Exploration</span>
           <div class="text-muted-foreground text-sm/none">
             <span class="font-semibold">12,000+</span>
             Employees
@@ -40,8 +35,8 @@ import {
         </div>
       </div>
       <p class="text-muted-foreground text-sm/relaxed">
-        SpaceX is revolutionizing space technology with reusable rockets and
-        ambitious missions to make humanity a multi-planetary species.
+        SpaceX is revolutionizing space technology with reusable rockets and ambitious missions to
+        make humanity a multi-planetary species.
       </p>
       <div class="flex flex-wrap gap-2">
         <Badge variant="outline">#spacex</Badge>

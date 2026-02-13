@@ -2,17 +2,12 @@
 import { cn } from "@/lib/utils";
 import { Badge } from "@/registry/default/ui/badge";
 import { Card, CardContent } from "@/registry/default/ui/card";
-import {
-  LucideCheckCircle2,
-  LucideLifeBuoy,
-  LucideSmile,
-} from "lucide-vue-next";
+import { LucideCheckCircle2, LucideLifeBuoy, LucideSmile } from "lucide-vue-next";
 
 const cards = [
   {
     icon: LucideLifeBuoy,
-    iconBg:
-      "border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400",
+    iconBg: "border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400",
     value: 320,
     label: "Support Tickets",
     info: {
@@ -22,8 +17,7 @@ const cards = [
   },
   {
     icon: LucideCheckCircle2,
-    iconBg:
-      "border-green-200 dark:border-green-800 text-green-600 dark:text-green-400",
+    iconBg: "border-green-200 dark:border-green-800 text-green-600 dark:text-green-400",
     value: "98%",
     label: "Resolved",
     info: {
@@ -33,8 +27,7 @@ const cards = [
   },
   {
     icon: LucideSmile,
-    iconBg:
-      "border-yellow-200 dark:border-yellow-800 text-yellow-600 dark:text-yellow-400",
+    iconBg: "border-yellow-200 dark:border-yellow-800 text-yellow-600 dark:text-yellow-400",
     value: "4.8",
     label: "Satisfaction Rate",
     info: {
@@ -52,12 +45,7 @@ const cards = [
         <Card v-for="(card, i) in cards" :key="i" class="py-4">
           <CardContent class="flex flex-col items-start gap-4 px-4">
             <div
-              :class="
-                cn(
-                  'flex size-12 items-center justify-center rounded-xl border',
-                  card.iconBg,
-                )
-              "
+              :class="cn('flex size-12 items-center justify-center rounded-xl border', card.iconBg)"
             >
               <component :is="card.icon" class="size-6" />
             </div>
@@ -75,11 +63,7 @@ const cards = [
         </Card>
       </div>
     </div>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Ported from reui.io support metrics cards
       <a
         class="hover:text-foreground underline"

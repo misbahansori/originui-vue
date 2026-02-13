@@ -6,9 +6,7 @@ import { Label } from "@/registry/default/ui/label";
 
 <template>
   <div class="flex items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
-    <div
-      class="flex w-full max-w-md flex-col gap-4 rounded-lg border p-8 shadow-md"
-    >
+    <div class="flex w-full max-w-md flex-col gap-4 rounded-lg border p-8 shadow-md">
       <div class="flex flex-col items-center gap-2 pb-2">
         <div
           class="flex size-11 shrink-0 items-center justify-center rounded-full border"
@@ -26,9 +24,7 @@ import { Label } from "@/registry/default/ui/label";
           </svg>
         </div>
         <div class="flex flex-col gap-y-1.5 text-center sm:text-left">
-          <h1
-            class="text-lg leading-none font-semibold tracking-tight sm:text-center"
-          >
+          <h1 class="text-lg leading-none font-semibold tracking-tight sm:text-center">
             Reset your password
           </h1>
           <p class="text-muted-foreground text-center text-sm">
@@ -39,12 +35,7 @@ import { Label } from "@/registry/default/ui/label";
       <form class="flex flex-col gap-4">
         <div class="flex flex-col gap-2">
           <Label for="password">Password</Label>
-          <Input
-            id="password"
-            placeholder="Enter your password"
-            type="password"
-            required
-          />
+          <Input id="password" placeholder="Enter your password" type="password" required />
         </div>
         <div class="flex flex-col gap-2">
           <Label for="passwordConfirmation">Password Confirmation</Label>

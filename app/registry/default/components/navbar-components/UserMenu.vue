@@ -8,11 +8,7 @@ import {
   LucideUserPen,
 } from "lucide-vue-next";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/default/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/default/ui/avatar";
 import { Button } from "@/registry/default/ui/button";
 import {
   DropdownMenu,
@@ -37,9 +33,7 @@ import {
     </DropdownMenuTrigger>
     <DropdownMenuContent class="max-w-64" align="end">
       <DropdownMenuLabel class="flex min-w-0 flex-col">
-        <span class="text-foreground truncate text-sm font-medium">
-          Keith Kennedy
-        </span>
+        <span class="text-foreground truncate text-sm font-medium">Keith Kennedy</span>
         <span class="text-muted-foreground truncate text-xs font-normal">
           k.kennedy@originui.com
         </span>

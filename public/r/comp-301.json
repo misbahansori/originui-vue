@@ -5,21 +5,14 @@
   "files": [
     {
       "path": "components/comp-301.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\n</script>\n\n<template>\n  <!-- To make the notification fixed, add classes like `fixed bottom-4 inset-x-4` to the container element. -->\n  <div class=\"bg-background z-50 rounded-md border px-4 py-3 shadow-lg\">\n    <div\n      class=\"flex flex-col justify-between gap-3 md:flex-row md:items-center\"\n    >\n      <p class=\"text-sm\">\n        We use cookies to improve your experience, analyze site usage, and show\n        personalized content.\n      </p>\n      <div class=\"flex gap-2 max-md:flex-wrap\">\n        <Button size=\"sm\">Accept</Button>\n        <Button variant=\"outline\" size=\"sm\">Decline</Button>\n      </div>\n    </div>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Button } from \"@/registry/default/ui/button\";\n</script>\n\n<template>\n  <!-- To make the notification fixed, add classes like `fixed bottom-4 inset-x-4` to the container element. -->\n  <div class=\"bg-background z-50 rounded-md border px-4 py-3 shadow-lg\">\n    <div class=\"flex flex-col justify-between gap-3 md:flex-row md:items-center\">\n      <p class=\"text-sm\">\n        We use cookies to improve your experience, analyze site usage, and show personalized\n        content.\n      </p>\n      <div class=\"flex gap-2 max-md:flex-wrap\">\n        <Button size=\"sm\">Accept</Button>\n        <Button variant=\"outline\" size=\"sm\">Decline</Button>\n      </div>\n    </div>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "banner",
-      "cookies",
-      "gdpr",
-      "privacy"
-    ],
+    "tags": ["banner", "cookies", "gdpr", "privacy"],
     "colSpan": 3
   },
   "dependencies": [],
-  "registryDependencies": [
-    "https://www.originui-vue.com/r/button.json"
-  ]
+  "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
 }

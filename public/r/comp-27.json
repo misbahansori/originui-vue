@@ -5,21 +5,14 @@
   "files": [
     {
       "path": "components/comp-27.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n} from \"@/registry/default/ui/input-group\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { LucideLoaderCircle, LucideMic, LucideSearch } from \"lucide-vue-next\";\nimport { ref, useId, watchEffect } from \"vue\";\n\nconst id = useId();\nconst inputValue = ref(\"\");\nconst isLoading = ref(false);\nlet timer: ReturnType<typeof setTimeout> | null = null;\n\nwatchEffect(() => {\n  if (inputValue.value) {\n    isLoading.value = true;\n    timer = setTimeout(() => {\n      isLoading.value = false;\n    }, 500);\n  }\n\n  return () => timer && clearTimeout(timer);\n});\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Search input with loader</Label>\n    <InputGroup>\n      <InputGroupInput\n        :id=\"id\"\n        placeholder=\"Search...\"\n        type=\"search\"\n        v-model=\"inputValue\"\n      />\n      <InputGroupAddon>\n        <LucideLoaderCircle\n          v-if=\"isLoading\"\n          class=\"animate-spin\"\n          :size=\"16\"\n          role=\"status\"\n          aria-label=\"Loading...\"\n        />\n        <LucideSearch v-else :size=\"16\" aria-hidden=\"true\" />\n      </InputGroupAddon>\n      <InputGroupAddon align=\"inline-end\">\n        <InputGroupButton\n          size=\"icon-xs\"\n          aria-label=\"Press to speak\"\n          type=\"submit\"\n        >\n          <LucideMic :size=\"16\" aria-hidden=\"true\" />\n        </InputGroupButton>\n      </InputGroupAddon>\n    </InputGroup>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n} from \"@/registry/default/ui/input-group\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { LucideLoaderCircle, LucideMic, LucideSearch } from \"lucide-vue-next\";\nimport { ref, useId, watchEffect } from \"vue\";\n\nconst id = useId();\nconst inputValue = ref(\"\");\nconst isLoading = ref(false);\nlet timer: ReturnType<typeof setTimeout> | null = null;\n\nwatchEffect(() => {\n  if (inputValue.value) {\n    isLoading.value = true;\n    timer = setTimeout(() => {\n      isLoading.value = false;\n    }, 500);\n  }\n\n  return () => timer && clearTimeout(timer);\n});\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Search input with loader</Label>\n    <InputGroup>\n      <InputGroupInput :id=\"id\" placeholder=\"Search...\" type=\"search\" v-model=\"inputValue\" />\n      <InputGroupAddon>\n        <LucideLoaderCircle\n          v-if=\"isLoading\"\n          class=\"animate-spin\"\n          :size=\"16\"\n          role=\"status\"\n          aria-label=\"Loading...\"\n        />\n        <LucideSearch v-else :size=\"16\" aria-hidden=\"true\" />\n      </InputGroupAddon>\n      <InputGroupAddon align=\"inline-end\">\n        <InputGroupButton size=\"icon-xs\" aria-label=\"Press to speak\" type=\"submit\">\n          <LucideMic :size=\"16\" aria-hidden=\"true\" />\n        </InputGroupButton>\n      </InputGroupAddon>\n    </InputGroup>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "input",
-      "label",
-      "button",
-      "search"
-    ]
+    "tags": ["input", "label", "button", "search"]
   },
-  "dependencies": [
-    "lucide-vue-next"
-  ],
+  "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/input-group.json",
     "https://www.originui-vue.com/r/label.json"

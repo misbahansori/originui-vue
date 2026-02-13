@@ -5,18 +5,12 @@
   "files": [
     {
       "path": "components/comp-218.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/default/ui/select\";\nimport { computed, useId } from \"vue\";\n\nconst id = useId();\n\nconst timezones = Intl.supportedValuesOf(\"timeZone\");\n\nconst formattedTimezones = computed(() => {\n  return timezones\n    .map((timezone) => {\n      const formatter = new Intl.DateTimeFormat(\"en\", {\n        timeZone: timezone,\n        timeZoneName: \"shortOffset\",\n      });\n      const parts = formatter.formatToParts(new Date());\n      const offset =\n        parts.find((part) => part.type === \"timeZoneName\")?.value || \"\";\n      const modifiedOffset = offset === \"GMT\" ? \"GMT+0\" : offset;\n\n      return {\n        value: timezone,\n        label: `(${modifiedOffset}) ${timezone.replace(/_/g, \" \")}`,\n        numericOffset: parseInt(\n          offset.replace(\"GMT\", \"\").replace(\"+\", \"\") || \"0\",\n        ),\n      };\n    })\n    .sort((a, b) => a.numericOffset - b.numericOffset);\n});\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Timezone select</Label>\n    <Select default-value=\"Europe/London\">\n      <SelectTrigger :id=\"id\">\n        <SelectValue placeholder=\"Select timezone\" />\n      </SelectTrigger>\n      <SelectContent>\n        <SelectItem\n          v-for=\"{ value, label } in formattedTimezones\"\n          :key=\"value\"\n          :value=\"value\"\n        >\n          {{ label }}\n        </SelectItem>\n      </SelectContent>\n    </Select>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/default/ui/select\";\nimport { computed, useId } from \"vue\";\n\nconst id = useId();\n\nconst timezones = Intl.supportedValuesOf(\"timeZone\");\n\nconst formattedTimezones = computed(() => {\n  return timezones\n    .map((timezone) => {\n      const formatter = new Intl.DateTimeFormat(\"en\", {\n        timeZone: timezone,\n        timeZoneName: \"shortOffset\",\n      });\n      const parts = formatter.formatToParts(new Date());\n      const offset = parts.find((part) => part.type === \"timeZoneName\")?.value || \"\";\n      const modifiedOffset = offset === \"GMT\" ? \"GMT+0\" : offset;\n\n      return {\n        value: timezone,\n        label: `(${modifiedOffset}) ${timezone.replace(/_/g, \" \")}`,\n        numericOffset: parseInt(offset.replace(\"GMT\", \"\").replace(\"+\", \"\") || \"0\"),\n      };\n    })\n    .sort((a, b) => a.numericOffset - b.numericOffset);\n});\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Timezone select</Label>\n    <Select default-value=\"Europe/London\">\n      <SelectTrigger :id=\"id\">\n        <SelectValue placeholder=\"Select timezone\" />\n      </SelectTrigger>\n      <SelectContent>\n        <SelectItem v-for=\"{ value, label } in formattedTimezones\" :key=\"value\" :value=\"value\">\n          {{ label }}\n        </SelectItem>\n      </SelectContent>\n    </Select>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
   "meta": {
-    "tags": [
-      "label",
-      "select",
-      "timezone",
-      "time",
-      "radix"
-    ]
+    "tags": ["label", "select", "timezone", "time", "radix"]
   },
   "dependencies": [],
   "registryDependencies": [

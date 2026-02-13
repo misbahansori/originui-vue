@@ -18,19 +18,13 @@ const framework = ref("nextjs");
     <DropdownMenuTrigger asChild>
       <Button variant="outline">
         Radio items
-        <LucideChevronDown
-          :size="16"
-          class="-me-1 opacity-60"
-          aria-hidden="true"
-        />
+        <LucideChevronDown :size="16" class="-me-1 opacity-60" aria-hidden="true" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent>
       <DropdownMenuRadioGroup v-model="framework">
         <DropdownMenuRadioItem value="nextjs">Next.js</DropdownMenuRadioItem>
-        <DropdownMenuRadioItem value="sveltekit" disabled>
-          SvelteKit
-        </DropdownMenuRadioItem>
+        <DropdownMenuRadioItem value="sveltekit" disabled>SvelteKit</DropdownMenuRadioItem>
         <DropdownMenuRadioItem value="remix">Remix</DropdownMenuRadioItem>
         <DropdownMenuRadioItem value="astro">Astro</DropdownMenuRadioItem>
       </DropdownMenuRadioGroup>

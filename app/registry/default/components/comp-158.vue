@@ -8,9 +8,7 @@ const selectedColor = ref("blue");
 
 <template>
   <fieldset class="space-y-4">
-    <legend class="text-foreground text-sm leading-none font-medium">
-      Choose a color
-    </legend>
+    <legend class="text-foreground text-sm leading-none font-medium">Choose a color</legend>
     <RadioGroup class="flex gap-1.5" v-model="selectedColor">
       <RadioGroupItem
         value="blue"

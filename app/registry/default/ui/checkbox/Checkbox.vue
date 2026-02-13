@@ -5,9 +5,7 @@ import type { CheckboxRootEmits, CheckboxRootProps } from "reka-ui";
 import { CheckboxIndicator, CheckboxRoot, useForwardPropsEmits } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 
-const props = defineProps<
-  CheckboxRootProps & { class?: HTMLAttributes["class"] }
->();
+const props = defineProps<CheckboxRootProps & { class?: HTMLAttributes["class"] }>();
 const emits = defineEmits<CheckboxRootEmits>();
 
 const delegatedProps = reactiveOmit(props, "class");

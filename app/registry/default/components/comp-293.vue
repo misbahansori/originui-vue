@@ -11,8 +11,7 @@ import { LucideX } from "lucide-vue-next";
         <div class="space-y-1">
           <p class="text-sm font-medium">We Value Your Privacy 🍪</p>
           <p class="text-muted-foreground text-sm">
-            We use cookies to improve your experience, and show personalized
-            content.
+            We use cookies to improve your experience, and show personalized content.
           </p>
         </div>
         <div class="flex gap-2">

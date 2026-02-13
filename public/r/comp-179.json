@@ -10,11 +10,7 @@
     }
   ],
   "meta": {
-    "tags": [
-      "switch",
-      "label",
-      "radix"
-    ],
+    "tags": ["switch", "label", "radix"],
     "style": 1
   },
   "dependencies": [],

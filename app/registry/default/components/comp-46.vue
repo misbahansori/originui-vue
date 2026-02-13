@@ -27,11 +27,7 @@ const countries = [
         v-model="selectedCountry"
         class="text-muted-foreground hover:text-foreground w-fit rounded-e-none shadow-none"
       >
-        <option
-          v-for="country in countries"
-          :key="country.value"
-          :value="country.value"
-        >
+        <option v-for="country in countries" :key="country.value" :value="country.value">
           {{ country.value }}
         </option>
       </SelectNative>
@@ -42,11 +38,7 @@ const countries = [
         type="tel"
       />
     </ButtonGroup>
-    <p
-      class="text-muted-foreground mt-2 text-xs"
-      role="region"
-      aria-live="polite"
-    >
+    <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
       Todo : Implement a phone number input component
     </p>
   </div>

@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import {
-  LucideBotMessageSquare,
-  LucideMessageCircleDashed,
-} from "lucide-vue-next";
+import { LucideBotMessageSquare, LucideMessageCircleDashed } from "lucide-vue-next";
 
 import UserMenu from "@/registry/default/components/navbar-components/UserMenu.vue";
 import { Button } from "@/registry/default/ui/button";
@@ -64,22 +61,13 @@ const selectedModel = computed(() => {
             class="[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2"
           >
             <SelectGroup>
-              <SelectLabel
-                class="text-muted-foreground ps-2 text-xs font-medium"
-              >
+              <SelectLabel class="text-muted-foreground ps-2 text-xs font-medium">
                 Models
               </SelectLabel>
-              <SelectItem
-                v-for="model in models"
-                :key="model.value"
-                :value="model.value"
-              >
+              <SelectItem v-for="model in models" :key="model.value" :value="model.value">
                 <div class="flex flex-col">
                   <span>{{ model.label }}</span>
-                  <span
-                    class="text-muted-foreground mt-1 block text-xs"
-                    data-desc
-                  >
+                  <span class="text-muted-foreground mt-1 block text-xs" data-desc>
                     {{ model.description }}
                   </span>
                 </div>

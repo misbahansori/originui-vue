@@ -20,8 +20,6 @@ const selectedDate = ref<CalendarDate>();
       </MiniCalendarDays>
       <MiniCalendarNavigation direction="next" />
     </MiniCalendar>
-    <p class="text-muted-foreground mt-2 text-xs">
-      Full week view showing 7 days at once
-    </p>
+    <p class="text-muted-foreground mt-2 text-xs">Full week view showing 7 days at once</p>
   </div>
 </template>

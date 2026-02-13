@@ -7,10 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <h3
-    data-slot="timeline-title"
-    :class="cn('text-sm font-medium', $props.class)"
-  >
+  <h3 data-slot="timeline-title" :class="cn('text-sm font-medium', $props.class)">
     <slot />
   </h3>
 </template>

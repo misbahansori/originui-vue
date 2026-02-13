@@ -17,16 +17,13 @@ const durationInSeconds = 5;
 const interval = 100;
 const initialCountdown = (durationInSeconds * 1000) / interval;
 
-const { pause, resume, start, remaining, reset } = useCountdown(
-  initialCountdown,
-  {
-    interval,
-    onComplete: () => {
-      open.value = false;
-    },
-    immediate: false,
+const { pause, resume, start, remaining, reset } = useCountdown(initialCountdown, {
+  interval,
+  onComplete: () => {
+    open.value = false;
   },
-);
+  immediate: false,
+});
 
 const handleOpenChange = (value: boolean) => {
   open.value = value;
@@ -53,17 +50,9 @@ const open = ref(false);
 <template>
   <ToastProvider>
     <Button variant="outline" @click="handleButtonClick">Show toast</Button>
-    <Toast
-      :open="open"
-      @openChange="handleOpenChange"
-      @pause="pause"
-      @resume="resume"
-    >
+    <Toast :open="open" @openChange="handleOpenChange" @pause="pause" @resume="resume">
       <div class="flex w-full justify-between gap-3">
-        <LucideCircleCheck
-          class="mt-0.5 size-4 shrink-0 text-emerald-500"
-          aria-hidden="true"
-        />
+        <LucideCircleCheck class="mt-0.5 size-4 shrink-0 text-emerald-500" aria-hidden="true" />
         <div class="flex grow flex-col gap-3">
           <div class="space-y-1">
             <ToastTitle>Your request was completed!</ToastTitle>
