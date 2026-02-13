@@ -1,19 +1,14 @@
 <script setup lang="ts">
-import { Input } from '@/registry/default/ui/input';
-import { Label } from '@/registry/default/ui/label';
-import { Slider } from '@/registry/default/ui/slider';
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { Slider } from "@/registry/default/ui/slider";
 
 const minValue = 0;
 const maxValue = 100;
 const initialValue = [25];
 
-const {
-  sliderValues,
-  inputValues,
-  validateAndUpdateValue,
-  handleInputChange,
-  handleSliderChange,
-} = useSliderWithInput({ minValue, maxValue, initialValue });
+const { sliderValues, inputValues, validateAndUpdateValue, handleInputChange, handleSliderChange } =
+  useSliderWithInput({ minValue, maxValue, initialValue });
 </script>
 
 <template>
@@ -36,7 +31,6 @@ const {
         @update:model-value="(newValue) => handleInputChange(0, newValue)"
         @blur="() => validateAndUpdateValue(inputValues[0] ?? '', 0)"
         @keydown.enter="validateAndUpdateValue(inputValues[0] ?? '', 0)"
-        "
       />
     </div>
   </div>
