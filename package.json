@@ -10,7 +10,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "start": "node .output/server/index.mjs",
-    "registry:build": "npx shadcn-vue@latest build registry.json && npx shadcn-vue@latest build registry-extended.json && npx tsx scripts/post-build.ts"
+    "registry:build": "npx shadcn-vue@latest build registry.json && npx shadcn-vue@latest build registry-extended.json && npx tsx scripts/post-build.ts",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
   },
   "dependencies": {
     "@internationalized/date": "^3.11.0",
@@ -52,6 +54,7 @@
     "@types/vue-the-mask": "^0.11.5",
     "glob": "^11.1.0",
     "nuxt-umami": "^3.2.1",
+    "oxfmt": "^0.32.0",
     "tailwindcss": "^4.1.18",
     "wrangler": "^4.65.0"
   },
