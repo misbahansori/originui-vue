@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "components/comp-18.vue",
-      "content": "<script setup lang=\"ts\">\nimport { ButtonGroup } from \"@/registry/default/ui/button-group\";\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { SelectNative } from \"@/registry/default/ui/select-native\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with end select</Label>\n    <ButtonGroup class=\"w-full\">\n      <Input :id=\"id\" class=\"-me-px\" placeholder=\"google\" type=\"text\" />\n      <SelectNative\n        class=\"text-muted-foreground hover:text-foreground w-fit rounded-s-none shadow-none\"\n      >\n        <option>.com</option>\n        <option>.org</option>\n        <option>.net</option>\n      </SelectNative>\n    </ButtonGroup>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { ButtonGroup } from \"@/registry/default/ui/button-group\";\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { NativeSelect } from \"@/registry/default/ui/native-select\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Input with end select</Label>\n    <ButtonGroup class=\"w-full\">\n      <Input :id=\"id\" class=\"-me-px\" placeholder=\"google\" type=\"text\" />\n      <NativeSelect\n        modelValue=\".com\"\n        class=\"text-muted-foreground hover:text-foreground w-fit rounded-s-none shadow-none\"\n      >\n        <option value=\".com\">.com</option>\n        <option value=\".org\">.org</option>\n        <option value=\".net\">.net</option>\n      </NativeSelect>\n    </ButtonGroup>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
@@ -17,6 +17,6 @@
     "https://www.originui-vue.com/r/button-group.json",
     "https://www.originui-vue.com/r/input.json",
     "https://www.originui-vue.com/r/label.json",
-    "https://www.originui-vue.com/r/select-native.json"
+    "https://www.originui-vue.com/r/native-select.json"
   ]
 }
