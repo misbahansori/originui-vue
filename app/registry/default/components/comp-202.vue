@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SelectNative } from "@/registry/default/ui/select-native";
+import { NativeSelect } from "@/registry/default/ui/native-select";
 import { useId } from "vue";
 
 const id = useId();
@@ -12,9 +12,9 @@ const id = useId();
     <label :for="id" class="text-foreground block px-3 pt-2 text-xs font-medium">
       Select with inset label (native)
     </label>
-    <SelectNative
+    <NativeSelect
       :id="id"
-      default-value=""
+      modelValue=""
       class="border-none bg-transparent shadow-none focus-visible:ring-0 focus-visible:ring-offset-0"
     >
       <option value="" disabled>Select framework</option>
@@ -22,6 +22,6 @@ const id = useId();
       <option value="2">Nuxt</option>
       <option value="3">Astro</option>
       <option value="4">Vitesse</option>
-    </SelectNative>
+    </NativeSelect>
   </div>
 </template>

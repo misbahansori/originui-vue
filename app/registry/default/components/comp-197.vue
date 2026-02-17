@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
-import { SelectNative } from "@/registry/default/ui/select-native";
+import { NativeSelect } from "@/registry/default/ui/native-select";
 import { useId } from "vue";
 
 const id = useId();
@@ -12,11 +12,11 @@ const id = useId();
       Required select (native)
       <span class="text-destructive">*</span>
     </Label>
-    <SelectNative :id="id">
+    <NativeSelect :id="id" modelValue="1">
       <option value="1">Vue</option>
       <option value="2">Nuxt</option>
       <option value="3">Astro</option>
       <option value="4">Vitesse</option>
-    </SelectNative>
+    </NativeSelect>
   </div>
 </template>

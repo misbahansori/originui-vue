@@ -2,6 +2,7 @@
 import { Label } from "@/registry/default/ui/label";
 import { ListboxContent, ListboxGroup, ListboxGroupLabel, ListboxItem, ListboxRoot } from "reka-ui";
 import { ref } from "vue";
+import { Separator } from "@/registry/default/ui/separator";
 
 const selectedKeys = ref(["lettuce", "tuna"]);
 const options = [
@@ -39,7 +40,7 @@ const options = [
   <div class="*:not-first:mt-2">
     <Label>Listbox with option groups</Label>
     <ListboxRoot
-      class="border-input overflow-hidden rounded-md border"
+      class="border-input focus-within:border-ring focus-within:ring-ring/50 overflow-hidden rounded-md border focus-within:ring-[3px]"
       multiple
       v-model="selectedKeys"
     >
@@ -57,7 +58,7 @@ const options = [
               :key="item.id"
               :id="item.id"
               :value="item.id"
-              class="data-[state=checked]:bg-accent data-[state=checked]:text-accent-foreground data-[highlighted]:bg-accent/50 data-[highlighted]:text-accent-foreground data-focus-visible:border-ring data-focus-visible:ring-ring/50 relative rounded px-2 py-1.5 outline-none data-disabled:cursor-not-allowed data-disabled:opacity-50 data-focus-visible:ring-[3px]"
+              class="data-[state=checked]:bg-accent data-[state=checked]:text-accent-foreground data-highlighted:bg-accent/50 data-highlighted:text-accent-foreground data-focus-visible:border-ring data-focus-visible:ring-ring/50 relative rounded px-2 py-1.5 outline-none data-disabled:cursor-not-allowed data-disabled:opacity-50 data-focus-visible:ring-[3px]"
             >
               {{ item.name }}
             </ListboxItem>

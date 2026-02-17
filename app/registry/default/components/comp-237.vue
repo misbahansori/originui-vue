@@ -15,7 +15,10 @@ const options = [
 <template>
   <div class="*:not-first:mt-2">
     <Label>Listbox with single option</Label>
-    <ListboxRoot class="border-input overflow-hidden rounded-md border" v-model="selectedKeys">
+    <ListboxRoot
+      class="border-input focus-within:border-ring focus-within:ring-ring/50 overflow-hidden rounded-md border focus-within:ring-[3px]"
+      v-model="selectedKeys"
+    >
       <ListboxContent
         class="bg-background space-y-1 p-1 text-sm shadow-xs transition-[color,box-shadow]"
         aria-label="Select framework"
@@ -25,7 +28,7 @@ const options = [
           :key="option.id"
           :id="option.id"
           :value="option.id"
-          class="data-[state=checked]:bg-accent data-[state=checked]:text-accent-foreground data-[highlighted]:bg-accent/50 data-[highlighted]:text-accent-foreground data-focus-visible:border-ring data-focus-visible:ring-ring/50 relative rounded px-2 py-1.5 outline-none data-disabled:cursor-not-allowed data-disabled:opacity-50 data-focus-visible:ring-[3px]"
+          class="data-[state=checked]:bg-accent data-[state=checked]:text-accent-foreground data-highlighted:bg-accent/50 data-highlighted:text-accent-foreground data-focus-visible:border-ring data-focus-visible:ring-ring/50 relative rounded px-2 py-1.5 outline-none data-disabled:cursor-not-allowed data-disabled:opacity-50 data-focus-visible:ring-[3px]"
         >
           {{ option.name }}
         </ListboxItem>

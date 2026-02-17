@@ -1100,15 +1100,23 @@
       ]
     },
     {
-      "name": "select-native",
+      "name": "native-select",
       "type": "registry:ui",
       "files": [
         {
-          "path": "app/registry/default/ui/select-native/SelectNative.vue",
+          "path": "app/registry/default/ui/native-select/NativeSelect.vue",
           "type": "registry:ui"
         },
         {
-          "path": "app/registry/default/ui/select-native/index.ts",
+          "path": "app/registry/default/ui/native-select/NativeSelectOption.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/native-select/NativeSelectOptGroup.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "app/registry/default/ui/native-select/index.ts",
           "type": "registry:ui"
         }
       ]

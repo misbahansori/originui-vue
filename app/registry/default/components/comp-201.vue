@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SelectNative } from "@/registry/default/ui/select-native";
+import { NativeSelect } from "@/registry/default/ui/native-select";
 import { useId } from "vue";
 
 const id = useId();
@@ -13,12 +13,12 @@ const id = useId();
     >
       Select with overlapping label (native)
     </label>
-    <SelectNative :id="id" default-value="">
+    <NativeSelect :id="id" modelValue="">
       <option value="" disabled>Select framework</option>
       <option value="1">Vue</option>
       <option value="2">Nuxt</option>
       <option value="3">Astro</option>
       <option value="4">Vitesse</option>
-    </SelectNative>
+    </NativeSelect>
   </div>
 </template>

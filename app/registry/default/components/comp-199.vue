@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
-import { SelectNative } from "@/registry/default/ui/select-native";
+import { NativeSelect } from "@/registry/default/ui/native-select";
 import { useId } from "vue";
 
 const id = useId();
@@ -9,7 +9,7 @@ const id = useId();
 <template>
   <div class="*:not-first:mt-2">
     <Label :for="id">Select with option groups (native)</Label>
-    <SelectNative :id="id">
+    <NativeSelect :id="id" modelValue="1">
       <optgroup label="Frontend">
         <option value="1">Vue</option>
         <option value="2">Nuxt</option>
@@ -20,6 +20,6 @@ const id = useId();
         <option value="5">Python</option>
         <option value="6">PHP</option>
       </optgroup>
-    </SelectNative>
+    </NativeSelect>
   </div>
 </template>

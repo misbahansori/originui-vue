@@ -2,7 +2,7 @@
 import { ButtonGroup } from "@/registry/default/ui/button-group";
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
-import { SelectNative } from "@/registry/default/ui/select-native";
+import { NativeSelect } from "@/registry/default/ui/native-select";
 import { ref } from "vue";
 
 // TODO: This component uses a third-party library (react-phone-number-input)
@@ -23,14 +23,14 @@ const countries = [
   <div class="*:not-first:mt-2" dir="ltr">
     <Label>Phone number input</Label>
     <ButtonGroup>
-      <SelectNative
+      <NativeSelect
         v-model="selectedCountry"
         class="text-muted-foreground hover:text-foreground w-fit rounded-e-none shadow-none"
       >
         <option v-for="country in countries" :key="country.value" :value="country.value">
           {{ country.value }}
         </option>
-      </SelectNative>
+      </NativeSelect>
       <Input
         v-model="phoneValue"
         class="-ms-px rounded-s-none shadow-none focus-visible:z-10"

@@ -2,7 +2,7 @@
 import { ButtonGroup } from "@/registry/default/ui/button-group";
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
-import { SelectNative } from "@/registry/default/ui/select-native";
+import { NativeSelect } from "@/registry/default/ui/native-select";
 import { useId } from "vue";
 
 const id = useId();
@@ -13,13 +13,14 @@ const id = useId();
     <Label :for="id">Input with end select</Label>
     <ButtonGroup class="w-full">
       <Input :id="id" class="-me-px" placeholder="google" type="text" />
-      <SelectNative
+      <NativeSelect
+        modelValue=".com"
         class="text-muted-foreground hover:text-foreground w-fit rounded-s-none shadow-none"
       >
-        <option>.com</option>
-        <option>.org</option>
-        <option>.net</option>
-      </SelectNative>
+        <option value=".com">.com</option>
+        <option value=".org">.org</option>
+        <option value=".net">.net</option>
+      </NativeSelect>
     </ButtonGroup>
   </div>
 </template>
