@@ -2,6 +2,7 @@
 import { Label } from "@/registry/default/ui/label";
 import { ListboxContent, ListboxGroup, ListboxGroupLabel, ListboxItem, ListboxRoot } from "reka-ui";
 import { ref } from "vue";
+import { Separator } from "@/registry/default/ui/separator";
 
 const selectedKeys = ref(["lettuce", "tuna"]);
 const options = [

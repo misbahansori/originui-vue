@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
-import { NativeSelect, NativeSelectOption } from "@/registry/default/ui/native-select";
+import { NativeSelect } from "@/registry/default/ui/native-select";
 import { useId } from "vue";
 
 const id = useId();
