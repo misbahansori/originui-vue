@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
-import { SelectNative } from "@/registry/default/ui/select-native";
+import { NativeSelect } from "@/registry/default/ui/native-select";
 import { computed, useId } from "vue";
 
 const id = useId();
@@ -31,12 +31,12 @@ const formattedTimezones = computed(() => {
 <template>
   <div class="*:not-first:mt-2">
     <Label :for="id">Timezone select (native)</Label>
-    <SelectNative :id="id" default-value="Europe/London">
+    <NativeSelect :id="id" modelValue="Europe/London">
       <ClientOnly>
         <option v-for="{ value, label } in formattedTimezones" :key="value" :value="value">
           {{ label }}
         </option>
       </ClientOnly>
-    </SelectNative>
+    </NativeSelect>
   </div>
 </template>

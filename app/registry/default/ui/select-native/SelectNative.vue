@@ -2,12 +2,12 @@
 import { cn } from "@/lib/utils";
 import type { HTMLAttributes } from "vue";
 
-interface SelectNativeProps {
+interface NativeSelectProps {
   class?: HTMLAttributes["class"];
   multiple?: boolean;
 }
 
-const props = defineProps<SelectNativeProps>();
+const props = defineProps<NativeSelectProps>();
 </script>
 
 <template>

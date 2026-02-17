@@ -2,7 +2,7 @@
 import { ButtonGroup } from "@/registry/default/ui/button-group";
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
-import { SelectNative } from "@/registry/default/ui/select-native";
+import { NativeSelect } from "@/registry/default/ui/native-select";
 import { useId } from "vue";
 
 const id = useId();
@@ -12,7 +12,8 @@ const id = useId();
   <div class="*:not-first:mt-2">
     <Label :for="id">Input with start select</Label>
     <ButtonGroup>
-      <SelectNative
+      <NativeSelect
+        modelValue="https://"
         class="text-muted-foreground hover:text-foreground w-fit rounded-e-none shadow-none"
       >
         <option value="https://">https://</option>
@@ -21,7 +22,7 @@ const id = useId();
         <option value="sftp://">sftp://</option>
         <option value="ws://">ws://</option>
         <option value="wss://">wss://</option>
-      </SelectNative>
+      </NativeSelect>
       <Input
         :id="id"
         class="-ms-px rounded-s-none shadow-none focus-visible:z-10"
