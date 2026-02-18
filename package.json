@@ -1,6 +1,6 @@
 {
   "name": "originui-vue",
-  "version": "0.1.6",
+  "version": "0.3.1",
   "private": true,
   "type": "module",
   "scripts": {
