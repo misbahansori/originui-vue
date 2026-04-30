@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-169",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-169.vue",
@@ -12,6 +11,7 @@
   "meta": {
     "tags": ["radio", "label", "darkmode", "radix"]
   },
+  "type": "registry:component",
   "dependencies": ["lucide-vue-next"],
   "registryDependencies": ["https://www.originui-vue.com/r/radio-group.json"]
 }

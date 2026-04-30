@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "multi-select",
-  "type": "registry:ui",
   "files": [
     {
       "path": "ui/multi-select/MultiSelect.vue",
@@ -14,6 +13,7 @@
       "type": "registry:ui"
     }
   ],
+  "type": "registry:ui",
   "dependencies": ["lucide-vue-next", "reka-ui"],
   "registryDependencies": ["https://www.originui-vue.com/r/combobox.json"]
 }

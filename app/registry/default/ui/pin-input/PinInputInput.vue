@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import { PinInputInput, type PinInputInputProps, useForwardProps } from "reka-ui";
+import { PinInputSlot, type PinInputSlotProps, useForwardProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
-const props = defineProps<PinInputInputProps & { class?: HTMLAttributes["class"] }>();
+const props = defineProps<PinInputSlotProps & { class?: HTMLAttributes["class"] }>();
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props;
@@ -14,7 +14,7 @@ const forwardedProps = useForwardProps(delegatedProps);
 </script>
 
 <template>
-  <PinInputInput
+  <PinInputSlot
     data-slot="pin-input-slot"
     v-bind="forwardedProps"
     :class="

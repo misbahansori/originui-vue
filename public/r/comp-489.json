@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-489",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-489.vue",
@@ -13,6 +12,7 @@
     "tags": ["calendar", "range calendar", "date", "disabled", "react aria"],
     "style": 1
   },
+  "type": "registry:component",
   "dependencies": ["@internationalized/date"],
   "registryDependencies": ["https://www.originui-vue.com/r/range-calendar.json"]
 }

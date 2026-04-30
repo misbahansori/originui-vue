@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "extended-18",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/extended-18.vue",
@@ -13,6 +12,7 @@
     "tags": ["card", "extended", "card"],
     "colSpan": 1
   },
+  "type": "registry:component",
   "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",

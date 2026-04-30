@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-53",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-53.vue",
@@ -12,6 +11,7 @@
   "meta": {
     "tags": ["input", "label", "copy"]
   },
+  "type": "registry:component",
   "dependencies": ["@vueuse/core", "lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/input-group.json",

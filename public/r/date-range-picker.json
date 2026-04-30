@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "date-range-picker",
-  "type": "registry:ui",
   "files": [
     {
       "path": "ui/date-range-picker/DateRangePickerField.vue",
@@ -29,6 +28,7 @@
       "type": "registry:ui"
     }
   ],
+  "type": "registry:ui",
   "dependencies": ["reka-ui", "lucide-vue-next", "@internationalized/date"],
   "registryDependencies": []
 }

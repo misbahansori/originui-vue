@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-478",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-478.vue",
@@ -23,6 +22,7 @@
     ],
     "colSpan": 3
   },
+  "type": "registry:component",
   "dependencies": ["@tanstack/vue-table", "lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/checkbox.json",

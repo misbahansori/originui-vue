@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-463",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-463.vue",
@@ -13,6 +12,7 @@
     "tags": ["pagination", "select", "radix"],
     "colSpan": 2
   },
+  "type": "registry:component",
   "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/label.json",

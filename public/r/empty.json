@@ -1,16 +1,15 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "empty",
-  "type": "registry:ui",
   "files": [
     {
       "path": "ui/empty/Empty.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"empty\"\n    :class=\"\n      cn(\n        'flex min-w-0 flex-1 flex-col items-center justify-center gap-6 rounded-lg border-dashed p-6 text-center text-balance md:p-12',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport type { HTMLAttributes } from \"vue\";\nimport { cn } from \"@/lib/utils\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"empty\"\n    :class=\"\n      cn(\n        'flex min-w-0 flex-1 flex-col items-center justify-center gap-6 rounded-lg border-dashed p-6 text-center text-balance md:p-12',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {
       "path": "ui/empty/EmptyContent.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport type { HTMLAttributes } from \"vue\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"empty-content\"\n    :class=\"\n      cn(\n        'flex w-full max-w-sm min-w-0 flex-col items-center gap-4 text-sm text-balance',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport type { HTMLAttributes } from \"vue\";\nimport { cn } from \"@/lib/utils\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"empty-content\"\n    :class=\"\n      cn(\n        'flex w-full max-w-sm min-w-0 flex-col items-center gap-4 text-sm text-balance',\n        props.class,\n      )\n    \"\n  >\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {
@@ -20,7 +19,7 @@
     },
     {
       "path": "ui/empty/EmptyHeader.vue",
-      "content": "<script setup lang=\"ts\">\nimport type { HTMLAttributes } from \"vue\";\nimport { cn } from \"@/lib/utils\";\n\ndefineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"empty-header\"\n    :class=\"cn('flex max-w-sm flex-col items-center gap-2 text-center', $attrs.class ?? '')\"\n  >\n    <slot />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport type { HTMLAttributes } from \"vue\";\nimport { cn } from \"@/lib/utils\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"empty-header\"\n    :class=\"cn('flex max-w-sm flex-col items-center gap-2 text-center', props.class)\"\n  >\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {
@@ -30,7 +29,7 @@
     },
     {
       "path": "ui/empty/EmptyTitle.vue",
-      "content": "<script setup lang=\"ts\">\nimport type { HTMLAttributes } from \"vue\";\nimport type { EmptyMediaVariants } from \".\";\nimport { cn } from \"@/lib/utils\";\nimport { emptyMediaVariants } from \".\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n  variant?: EmptyMediaVariants[\"variant\"];\n}>();\n</script>\n\n<template>\n  <div\n    data-slot=\"empty-icon\"\n    :data-variant=\"variant\"\n    :class=\"cn(emptyMediaVariants({ variant }), props.class)\"\n  >\n    <slot />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport type { HTMLAttributes } from \"vue\";\nimport { cn } from \"@/lib/utils\";\n\nconst props = defineProps<{\n  class?: HTMLAttributes[\"class\"];\n}>();\n</script>\n\n<template>\n  <div data-slot=\"empty-title\" :class=\"cn('text-lg font-medium tracking-tight', props.class)\">\n    <slot />\n  </div>\n</template>\n",
       "type": "registry:ui"
     },
     {
@@ -43,6 +42,7 @@
     "tags": ["empty state", "extended", "empty"],
     "colSpan": 2
   },
+  "type": "registry:ui",
   "dependencies": [],
   "registryDependencies": []
 }

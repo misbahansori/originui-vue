@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "toast",
-  "type": "registry:ui",
   "files": [
     {
       "path": "ui/toast/Toast.vue",
@@ -49,6 +48,7 @@
       "type": "registry:ui"
     }
   ],
+  "type": "registry:ui",
   "dependencies": ["reka-ui", "lucide-vue-next"],
   "registryDependencies": []
 }

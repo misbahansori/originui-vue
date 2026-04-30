@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-62",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-63.vue",
@@ -12,6 +11,7 @@
   "meta": {
     "tags": ["label", "textarea", "hint"]
   },
+  "type": "registry:component",
   "dependencies": [],
   "registryDependencies": [
     "https://www.originui-vue.com/r/label.json",

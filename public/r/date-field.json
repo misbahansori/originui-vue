@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "date-field",
-  "type": "registry:ui",
   "files": [
     {
       "path": "ui/date-field/DateField.vue",
@@ -19,6 +18,7 @@
       "type": "registry:ui"
     }
   ],
+  "type": "registry:ui",
   "dependencies": ["reka-ui"],
   "registryDependencies": []
 }

@@ -1,6 +1,4 @@
 import type { VariantProps } from "class-variance-authority";
-import type { HTMLAttributes } from "vue";
-import type { ButtonVariants } from "@/registry/default/ui/button";
 import { cva } from "class-variance-authority";
 
 export { default as InputGroup } from "./InputGroup.vue";
@@ -46,9 +44,3 @@ export const inputGroupButtonVariants = cva("text-sm shadow-none flex gap-2 item
 });
 
 export type InputGroupButtonVariants = VariantProps<typeof inputGroupButtonVariants>;
-
-export interface InputGroupButtonProps {
-  variant?: ButtonVariants["variant"];
-  size?: InputGroupButtonVariants["size"];
-  class?: HTMLAttributes["class"];
-}

@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-174",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-174.vue",
@@ -13,6 +12,7 @@
     "tags": ["switch", "radix"],
     "style": 1
   },
+  "type": "registry:component",
   "dependencies": [],
   "registryDependencies": [
     "https://www.originui-vue.com/r/label.json",

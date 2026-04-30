@@ -1,15 +1,13 @@
 <script setup lang="ts">
+import type { TagsInputInputProps } from "reka-ui";
+import type { HTMLAttributes } from "vue";
+import { reactiveOmit } from "@vueuse/core";
+import { TagsInputInput, useForwardProps } from "reka-ui";
 import { cn } from "@/lib/utils";
-import { TagsInputInput, type TagsInputInputProps, useForwardProps } from "reka-ui";
-import { computed, type HTMLAttributes } from "vue";
 
 const props = defineProps<TagsInputInputProps & { class?: HTMLAttributes["class"] }>();
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
-
-  return delegated;
-});
+const delegatedProps = reactiveOmit(props, "class");
 
 const forwardedProps = useForwardProps(delegatedProps);
 </script>
@@ -17,6 +15,6 @@ const forwardedProps = useForwardProps(delegatedProps);
 <template>
   <TagsInputInput
     v-bind="forwardedProps"
-    :class="cn('min-h-6 flex-1 bg-transparent px-1 text-sm focus:outline-none', props.class)"
+    :class="cn('min-h-5 flex-1 bg-transparent px-1 text-sm focus:outline-none', props.class)"
   />
 </template>

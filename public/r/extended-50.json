@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "extended-50",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/extended-50.vue",
@@ -13,6 +12,7 @@
     "tags": ["mini-calendar", "extended", "calendar", "date", "styled"],
     "colSpan": 2
   },
+  "type": "registry:component",
   "dependencies": ["@internationalized/date", "lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",

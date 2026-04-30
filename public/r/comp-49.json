@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-49",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-49.vue",
@@ -12,6 +11,7 @@
   "meta": {
     "tags": ["input", "label", "checkout", "payment", "credit card", "form"]
   },
+  "type": "registry:component",
   "dependencies": ["maska/vue"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/input.json",

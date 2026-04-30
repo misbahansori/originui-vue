@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-167",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-167.vue",
@@ -12,6 +11,7 @@
   "meta": {
     "tags": ["radio", "label", "rating", "vote", "radix"]
   },
+  "type": "registry:component",
   "dependencies": [],
   "registryDependencies": ["https://www.originui-vue.com/r/radio-group.json"]
 }

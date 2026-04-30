@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "mini-calendar",
-  "type": "registry:ui",
   "files": [
     {
       "path": "ui/mini-calendar/MiniCalendar.vue",
@@ -33,6 +32,7 @@
     "tags": ["mini-calendar", "extended", "calendar", "date"],
     "colSpan": 2
   },
+  "type": "registry:ui",
   "dependencies": ["@internationalized/date", "lucide-vue-next", "reka-ui", "@vueuse/core"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/mini-calendar.json",

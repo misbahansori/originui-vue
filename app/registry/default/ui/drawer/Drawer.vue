@@ -13,7 +13,7 @@ const forwarded = useForwardPropsEmits(props, emits);
 </script>
 
 <template>
-  <DrawerRoot data-slot="drawer" v-bind="forwarded">
-    <slot />
+  <DrawerRoot v-slot="slotProps" data-slot="drawer" v-bind="forwarded">
+    <slot v-bind="slotProps" />
   </DrawerRoot>
 </template>

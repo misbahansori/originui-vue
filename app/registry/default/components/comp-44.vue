@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
-import { PinInput, PinInputGroup, PinInputInput } from "@/registry/default/ui/pin-input";
+import { PinInput, PinInputGroup, PinInputSlot } from "@/registry/default/ui/pin-input";
 import { ref, useId } from "vue";
 
 const inputId = useId();
@@ -12,7 +12,7 @@ const value = ref(["", "", "", "", ""]);
     <Label :for="inputId" class="text-foreground text-sm font-medium">OTP input single</Label>
     <PinInput :id="inputId" v-model="value">
       <PinInputGroup>
-        <PinInputInput
+        <PinInputSlot
           v-for="(id, index) in 5"
           :key="id"
           :index="index"

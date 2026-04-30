@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-91",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-91.vue",
@@ -13,6 +12,7 @@
     "tags": ["button", "loading"],
     "style": 2
   },
+  "type": "registry:component",
   "dependencies": ["lucide-vue-next"],
   "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
 }

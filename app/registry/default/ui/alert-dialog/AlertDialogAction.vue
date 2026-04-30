@@ -1,10 +1,10 @@
 <script setup lang="ts">
+import type { AlertDialogActionProps } from "reka-ui";
+import type { HTMLAttributes } from "vue";
+import { reactiveOmit } from "@vueuse/core";
+import { AlertDialogAction } from "reka-ui";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/registry/default/ui/button";
-import { reactiveOmit } from "@vueuse/core";
-import type { AlertDialogActionProps } from "reka-ui";
-import { AlertDialogAction } from "reka-ui";
-import type { HTMLAttributes } from "vue";
 
 const props = defineProps<AlertDialogActionProps & { class?: HTMLAttributes["class"] }>();
 

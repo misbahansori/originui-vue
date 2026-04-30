@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-120",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-120.vue",
@@ -13,6 +12,7 @@
     "tags": ["button", "social", "login", "authentication"],
     "style": 2
   },
+  "type": "registry:component",
   "dependencies": ["@remixicon/vue"],
   "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
 }

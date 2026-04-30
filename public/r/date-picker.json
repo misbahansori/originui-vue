@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "date-picker",
-  "type": "registry:ui",
   "files": [
     {
       "path": "ui/date-picker/DatePicker.vue",
@@ -34,6 +33,7 @@
       "type": "registry:ui"
     }
   ],
+  "type": "registry:ui",
   "dependencies": ["@internationalized/date", "@vueuse/core", "lucide-vue-next", "reka-ui"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",

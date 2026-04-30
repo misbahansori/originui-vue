@@ -956,7 +956,7 @@
           "type": "registry:ui"
         },
         {
-          "path": "app/registry/default/ui/pin-input/PinInputInput.vue",
+          "path": "app/registry/default/ui/pin-input/PinInputSlot.vue",
           "type": "registry:ui"
         },
         {
