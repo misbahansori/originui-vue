@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-482",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-482.vue",
@@ -13,6 +12,7 @@
     "tags": ["table", "tanstack", "checkbox", "collapsible", "flag", "badge", "chip"],
     "colSpan": 3
   },
+  "type": "registry:component",
   "dependencies": ["@tanstack/vue-table", "lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/badge.json",

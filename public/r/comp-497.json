@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-497",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-497.vue",
@@ -13,6 +12,7 @@
     "tags": ["calendar", "date", "react daypicker"],
     "style": 1
   },
+  "type": "registry:component",
   "dependencies": ["@internationalized/date", "reka-ui"],
   "registryDependencies": ["https://www.originui-vue.com/r/calendar.json"]
 }

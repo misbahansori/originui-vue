@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-160",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-160.vue",
@@ -12,6 +11,7 @@
   "meta": {
     "tags": ["radio", "label", "card", "radix"]
   },
+  "type": "registry:component",
   "dependencies": [],
   "registryDependencies": [
     "https://www.originui-vue.com/r/label.json",

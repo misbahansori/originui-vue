@@ -2190,15 +2190,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "date",
-          "calendar",
-          "range calendar",
-          "picker",
-          "react aria"
-        ]
+        "tags": ["input", "label", "date", "calendar", "range calendar", "picker", "react aria"]
       }
     },
     {
@@ -2211,15 +2203,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "input",
-          "label",
-          "date",
-          "calendar",
-          "range calendar",
-          "picker",
-          "react aria"
-        ]
+        "tags": ["input", "label", "date", "calendar", "range calendar", "picker", "react aria"]
       }
     },
     {
@@ -5105,15 +5089,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "slider",
-          "label",
-          "button",
-          "input",
-          "tooltip",
-          "reset",
-          "radix"
-        ]
+        "tags": ["slider", "label", "button", "input", "tooltip", "reset", "radix"]
       }
     },
     {
@@ -6136,14 +6112,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "signup",
-          "authentication",
-          "form",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "signup", "authentication", "form", "radix"],
         "style": 1
       }
     },
@@ -6185,15 +6154,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "checkout",
-          "payment",
-          "credit card",
-          "form",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "checkout", "payment", "credit card", "form", "radix"],
         "style": 1
       }
     },
@@ -6207,15 +6168,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "checkout",
-          "payment",
-          "credit card",
-          "form",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "checkout", "payment", "credit card", "form", "radix"],
         "style": 1
       }
     },
@@ -6243,16 +6196,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "dialog",
-          "modal",
-          "user",
-          "profile",
-          "image",
-          "avatar",
-          "form",
-          "radix"
-        ],
+        "tags": ["dialog", "modal", "user", "profile", "image", "avatar", "form", "radix"],
         "style": 1
       }
     },
@@ -8414,15 +8358,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table",
-          "tanstack",
-          "checkbox",
-          "collapsible",
-          "flag",
-          "badge",
-          "chip"
-        ],
+        "tags": ["table", "tanstack", "checkbox", "collapsible", "flag", "badge", "chip"],
         "colSpan": 3
       }
     },
@@ -8436,16 +8372,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table",
-          "tanstack",
-          "checkbox",
-          "sort",
-          "flag",
-          "badge",
-          "chip",
-          "pagination"
-        ],
+        "tags": ["table", "tanstack", "checkbox", "sort", "flag", "badge", "chip", "pagination"],
         "colSpan": 3
       }
     },
@@ -8459,16 +8386,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "table",
-          "tanstack",
-          "checkbox",
-          "sort",
-          "flag",
-          "badge",
-          "chip",
-          "pagination"
-        ],
+        "tags": ["table", "tanstack", "checkbox", "sort", "flag", "badge", "chip", "pagination"],
         "colSpan": 3
       }
     },
@@ -8548,13 +8466,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "range calendar",
-          "date",
-          "disabled",
-          "react aria"
-        ],
+        "tags": ["calendar", "range calendar", "date", "disabled", "react aria"],
         "style": 1
       }
     },
@@ -8596,13 +8508,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "range calendar",
-          "date",
-          "disabled",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "range calendar", "date", "disabled", "react daypicker"],
         "style": 1
       }
     },
@@ -8814,13 +8720,7 @@
         }
       ],
       "meta": {
-        "tags": [
-          "calendar",
-          "range calendar",
-          "date",
-          "button",
-          "react daypicker"
-        ],
+        "tags": ["calendar", "range calendar", "date", "button", "react daypicker"],
         "colSpan": 3,
         "style": 1
       }

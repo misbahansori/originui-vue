@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-543",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-543.vue",
@@ -12,6 +11,7 @@
   "meta": {
     "tags": ["upload", "file"]
   },
+  "type": "registry:component",
   "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/useFileUpload.json",

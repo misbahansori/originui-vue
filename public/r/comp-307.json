@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-307",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-307.vue",
@@ -13,6 +12,7 @@
     "tags": ["banner"],
     "colSpan": 3
   },
+  "type": "registry:component",
   "dependencies": ["lucide-vue-next"],
   "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
 }

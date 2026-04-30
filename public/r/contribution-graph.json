@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "contribution-graph",
-  "type": "registry:ui",
   "files": [
     {
       "path": "ui/contribution-graph/ContributionGraph.vue",
@@ -28,6 +27,7 @@
     "tags": ["contribution graph", "extended", "github", "activity"],
     "colSpan": 3
   },
+  "type": "registry:ui",
   "dependencies": [],
   "registryDependencies": []
 }

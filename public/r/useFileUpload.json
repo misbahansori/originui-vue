@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "useFileUpload",
-  "type": "registry:hook",
   "files": [
     {
       "path": "app/composables/useFileUpload.ts",
@@ -9,6 +8,7 @@
       "type": "registry:hook"
     }
   ],
+  "type": "registry:hook",
   "dependencies": [],
   "registryDependencies": []
 }

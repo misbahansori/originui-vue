@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "timeline",
-  "type": "registry:ui",
   "files": [
     {
       "path": "ui/timeline/Timeline.vue",
@@ -49,6 +48,7 @@
       "type": "registry:ui"
     }
   ],
+  "type": "registry:ui",
   "dependencies": [],
   "registryDependencies": []
 }

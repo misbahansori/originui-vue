@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-326",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-326.vue",
@@ -13,6 +12,7 @@
     "tags": ["dialog", "modal", "login", "authentication", "form", "radix"],
     "style": 1
   },
+  "type": "registry:component",
   "dependencies": [],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",

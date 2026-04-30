@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-230",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-230.vue",
@@ -12,6 +11,7 @@
   "meta": {
     "tags": ["label", "select", "command", "combobox", "popover", "search", "autocomplete", "radix"]
   },
+  "type": "registry:component",
   "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",

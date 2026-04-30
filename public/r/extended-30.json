@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "extended-30",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/extended-30.vue",
@@ -13,6 +12,7 @@
     "tags": ["statistic-card", "extended", "card", "api", "quota"],
     "colSpan": 2
   },
+  "type": "registry:component",
   "dependencies": [],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",

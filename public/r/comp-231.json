@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-231",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-231.vue",
@@ -23,6 +22,7 @@
       "radix"
     ]
   },
+  "type": "registry:component",
   "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",

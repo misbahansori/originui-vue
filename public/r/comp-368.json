@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-368",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-368.vue",
@@ -13,6 +12,7 @@
     "tags": ["dropdown", "radix"],
     "style": 1
   },
+  "type": "registry:component",
   "dependencies": ["lucide-vue-next"],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",

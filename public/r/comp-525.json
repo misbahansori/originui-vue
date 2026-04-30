@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-525",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-525.vue",
@@ -13,6 +12,7 @@
     "tags": ["stepper"],
     "colSpan": 3
   },
+  "type": "registry:component",
   "dependencies": [],
   "registryDependencies": ["https://www.originui-vue.com/r/stepper.json"]
 }

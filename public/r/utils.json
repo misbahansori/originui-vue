@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "utils",
-  "type": "registry:lib",
   "files": [
     {
       "path": "app/lib/utils.ts",
@@ -9,6 +8,7 @@
       "type": "registry:lib"
     }
   ],
+  "type": "registry:lib",
   "dependencies": ["clsx", "tailwind-merge"],
   "registryDependencies": []
 }

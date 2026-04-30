@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-493",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-493.vue",
@@ -13,6 +12,7 @@
     "tags": ["calendar", "date", "react daypicker"],
     "style": 1
   },
+  "type": "registry:component",
   "dependencies": [],
   "registryDependencies": []
 }

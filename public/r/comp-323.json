@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "comp-323",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/comp-323.vue",
@@ -13,6 +12,7 @@
     "tags": ["dialog", "modal", "rating", "feedback", "form", "radix"],
     "style": 1
   },
+  "type": "registry:component",
   "dependencies": [],
   "registryDependencies": [
     "https://www.originui-vue.com/r/button.json",

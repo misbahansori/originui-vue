@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "snippet",
-  "type": "registry:ui",
   "files": [
     {
       "path": "ui/snippet/Snippet.vue",
@@ -43,6 +42,7 @@
     "tags": ["snippet", "extended", "code", "copy", "tabs", "command"],
     "colSpan": 2
   },
+  "type": "registry:ui",
   "dependencies": ["@vueuse/core", "reka-ui", "lucide-vue-next"],
   "registryDependencies": ["https://www.originui-vue.com/r/button.json"]
 }

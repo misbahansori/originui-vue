@@ -1,7 +1,6 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "extended-53",
-  "type": "registry:component",
   "files": [
     {
       "path": "components/extended-53.vue",
@@ -13,6 +12,7 @@
     "tags": ["mini-calendar", "extended", "calendar", "date", "gradient"],
     "colSpan": 2
   },
+  "type": "registry:component",
   "dependencies": ["@internationalized/date"],
   "registryDependencies": ["https://www.originui-vue.com/r/mini-calendar.json"]
 }
