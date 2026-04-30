@@ -14,8 +14,8 @@
       "type": "registry:ui"
     },
     {
-      "path": "ui/pin-input/PinInputInput.vue",
-      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { PinInputInput, type PinInputInputProps, useForwardProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<PinInputInputProps & { class?: HTMLAttributes[\"class\"] }>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n  return delegated;\n});\n\nconst forwardedProps = useForwardProps(delegatedProps);\n</script>\n\n<template>\n  <PinInputInput\n    data-slot=\"pin-input-slot\"\n    v-bind=\"forwardedProps\"\n    :class=\"\n      cn(\n        'focus:ring-ring border-input relative flex h-10 w-10 items-center justify-center border-y border-r text-center text-sm transition-all first:rounded-l-md first:border-l last:rounded-r-md focus:relative focus:z-10 focus:ring-2 focus:outline-none',\n        props.class,\n      )\n    \"\n  />\n</template>\n",
+      "path": "ui/pin-input/PinInputSlot.vue",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from \"@/lib/utils\";\nimport { PinInputSlot, type PinInputSlotProps, useForwardProps } from \"reka-ui\";\nimport { computed, type HTMLAttributes } from \"vue\";\n\nconst props = defineProps<PinInputSlotProps & { class?: HTMLAttributes[\"class\"] }>();\n\nconst delegatedProps = computed(() => {\n  const { class: _, ...delegated } = props;\n  return delegated;\n});\n\nconst forwardedProps = useForwardProps(delegatedProps);\n</script>\n\n<template>\n  <PinInputSlot\n    data-slot=\"pin-input-slot\"\n    v-bind=\"forwardedProps\"\n    :class=\"\n      cn(\n        'focus:ring-ring border-input relative flex h-10 w-10 items-center justify-center border-y border-r text-center text-sm transition-all first:rounded-l-md first:border-l last:rounded-r-md focus:relative focus:z-10 focus:ring-2 focus:outline-none',\n        props.class,\n      )\n    \"\n  />\n</template>\n",
       "type": "registry:ui"
     },
     {
@@ -25,7 +25,7 @@
     },
     {
       "path": "ui/pin-input/index.ts",
-      "content": "export { default as PinInput } from \"./PinInput.vue\";\nexport { default as PinInputGroup } from \"./PinInputGroup.vue\";\nexport { default as PinInputSeparator } from \"./PinInputSeparator.vue\";\nexport { default as PinInputInput } from \"./PinInputInput.vue\";\n",
+      "content": "export { default as PinInput } from \"./PinInput.vue\";\nexport { default as PinInputGroup } from \"./PinInputGroup.vue\";\nexport { default as PinInputSeparator } from \"./PinInputSeparator.vue\";\nexport { default as PinInputSlot } from \"./PinInputSlot.vue\";\n",
       "type": "registry:ui"
     }
   ],

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { cn } from "@/lib/utils";
-import { reactiveOmit } from "@vueuse/core";
 import type { DialogDescriptionProps } from "reka-ui";
-import { DialogDescription, useForwardProps } from "reka-ui";
 import type { HTMLAttributes } from "vue";
+import { reactiveOmit } from "@vueuse/core";
+import { DialogDescription, useForwardProps } from "reka-ui";
+import { cn } from "@/lib/utils";
 
 const props = defineProps<DialogDescriptionProps & { class?: HTMLAttributes["class"] }>();
 

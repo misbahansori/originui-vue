@@ -1,33 +1,20 @@
 <script lang="ts" setup>
-import { cn } from "@/lib/utils";
 import type { StepperRootEmits, StepperRootProps } from "reka-ui";
+import type { HTMLAttributes } from "vue";
+import { reactiveOmit } from "@vueuse/core";
 import { StepperRoot, useForwardPropsEmits } from "reka-ui";
-
-import { computed, type HTMLAttributes } from "vue";
+import { cn } from "@/lib/utils";
 
 const props = defineProps<StepperRootProps & { class?: HTMLAttributes["class"] }>();
 const emits = defineEmits<StepperRootEmits>();
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
-
-  return delegated;
-});
+const delegatedProps = reactiveOmit(props, "class");
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
-  <StepperRoot
-    v-slot="slotProps"
-    :class="
-      cn(
-        'group/stepper inline-flex data-[orientation=horizontal]:w-full data-[orientation=horizontal]:flex-row data-[orientation=vertical]:flex-col',
-        props.class,
-      )
-    "
-    v-bind="forwarded"
-  >
+  <StepperRoot v-slot="slotProps" :class="cn('flex gap-2', props.class)" v-bind="forwarded">
     <slot v-bind="slotProps" />
   </StepperRoot>
 </template>

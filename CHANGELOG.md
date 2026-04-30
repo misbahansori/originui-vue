@@ -1,6 +1,5 @@
 # Changelog
 
-
 ## v0.3.1
 
 [compare changes](https://github.com/misbahansori/originui-vue/compare/v0.3.0...v0.3.1)
@@ -177,4 +176,3 @@
 
 - Misbah Ansori ([@misbahansori](https://github.com/misbahansori))
 - Achmad Rivaldi ([@mrtampan](https://github.com/mrtampan))
-

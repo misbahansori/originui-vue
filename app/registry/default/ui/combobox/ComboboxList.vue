@@ -1,17 +1,16 @@
 <script setup lang="ts">
 import type { ComboboxContentEmits, ComboboxContentProps } from "reka-ui";
 import type { HTMLAttributes } from "vue";
-import { cn } from "@/lib/utils";
 import { reactiveOmit } from "@vueuse/core";
 import { ComboboxContent, ComboboxPortal, useForwardPropsEmits } from "reka-ui";
+import { cn } from "@/lib/utils";
+
+defineOptions({
+  inheritAttrs: false,
+});
 
 const props = withDefaults(
-  defineProps<
-    ComboboxContentProps & {
-      class?: HTMLAttributes["class"];
-      viewportClass?: HTMLAttributes["class"];
-    }
-  >(),
+  defineProps<ComboboxContentProps & { class?: HTMLAttributes["class"] }>(),
   {
     position: "popper",
     align: "center",
@@ -20,7 +19,7 @@ const props = withDefaults(
 );
 const emits = defineEmits<ComboboxContentEmits>();
 
-const delegatedProps = reactiveOmit(props, "class", "viewportClass");
+const delegatedProps = reactiveOmit(props, "class");
 const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
@@ -28,7 +27,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
   <ComboboxPortal>
     <ComboboxContent
       data-slot="combobox-list"
-      v-bind="forwarded"
+      v-bind="{ ...$attrs, ...forwarded }"
       :class="
         cn(
           'bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-[200px] origin-(--reka-combobox-content-transform-origin) overflow-hidden rounded-md border shadow-md outline-none',

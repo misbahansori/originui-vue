@@ -16,11 +16,7 @@ export const [useCommand, provideCommandContext] = createContext<{
   allGroups: Ref<Map<string, Set<string>>>;
   filterState: {
     search: string;
-    filtered: {
-      count: number;
-      items: Map<string, number>;
-      groups: Set<string>;
-    };
+    filtered: { count: number; items: Map<string, number>; groups: Set<string> };
   };
 }>("Command");
 
