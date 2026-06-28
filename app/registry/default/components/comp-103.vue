@@ -6,7 +6,7 @@ import { LucideChevronDown, LucideChevronUp } from "lucide-vue-next";
 
 <template>
   <div class="flex items-center justify-center">
-    <ButtonGroup>
+    <ButtonGroup class="gap-0!">
       <Button
         class="rounded-none shadow-none first:rounded-s-full last:rounded-e-full focus-visible:z-10"
         size="icon"

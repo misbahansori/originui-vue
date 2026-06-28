@@ -12,7 +12,7 @@ const value = ref("center");
 </script>
 
 <template>
-  <ToggleGroup class="divide-background inline-flex divide-x" type="single" v-model="value">
+  <ToggleGroup class="inline-flex" type="single" v-model="value">
     <ToggleGroupItem
       class="bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
       aria-label="Align Left"
