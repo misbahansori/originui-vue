@@ -8,17 +8,18 @@ import {
 } from "@/registry/default/ui/number-field";
 import { ref, useId } from "vue";
 
-const id = useId();
 const value = ref(2048);
 </script>
 
 <template>
   <div>
     <div class="*:not-first:mt-2">
-      <Label :for="id">Number input with plus/minus buttons</Label>
-      <NumberField :id="id" :min="0" v-model="value">
+      <Label>Number input with plus/minus buttons</Label>
+      <NumberField :min="0" v-model="value" class="relative">
         <NumberFieldDecrement />
-        <NumberFieldInput class="text-center" />
+        <NumberFieldInput
+          class="focus-visible:border-ring focus-visible:ring-ring/50 text-center focus-visible:ring-[3px]"
+        />
         <NumberFieldIncrement />
       </NumberField>
     </div>
