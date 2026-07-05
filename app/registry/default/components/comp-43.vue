@@ -72,7 +72,15 @@ const validate = (value: { start: DateValue; end: DateValue } | null) =>
       <DateRangePickerCalendar />
     </DateRangePicker>
     <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
-      Built with native date inputs
+      Built with reka-ui
+      <a
+        class="hover:text-foreground underline"
+        href="https://reka-ui.com/docs/components/date-range-picker"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Date range picker
+      </a>
     </p>
   </div>
 </template>

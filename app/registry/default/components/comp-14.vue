@@ -10,7 +10,7 @@ const id = useId();
 <template>
   <div class="*:not-first:mt-2">
     <Label :for="id">Input with start add-on</Label>
-    <ButtonGroup class="w-full">
+    <ButtonGroup class="w-full gap-0!">
       <ButtonGroupText class="text-muted-foreground bg-background border-input px-3">
         https://
       </ButtonGroupText>

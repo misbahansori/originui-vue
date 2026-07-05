@@ -16,11 +16,11 @@ const value = ref(2048);
     <div class="*:not-first:mt-2">
       <Label>Number input with plus/minus buttons</Label>
       <NumberField :min="0" v-model="value" class="relative">
-        <NumberFieldDecrement />
+        <NumberFieldDecrement class="text-muted-foreground/80 hover:text-foreground" />
         <NumberFieldInput
           class="focus-visible:border-ring focus-visible:ring-ring/50 text-center focus-visible:ring-[3px]"
         />
-        <NumberFieldIncrement />
+        <NumberFieldIncrement class="text-muted-foreground/80 hover:text-foreground" />
       </NumberField>
     </div>
 

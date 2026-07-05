@@ -30,7 +30,15 @@ const id = useId();
       <DatePickerCalendar />
     </DatePicker>
     <p class="text-muted-foreground mt-2 text-xs" role="region" aria-live="polite">
-      Built with native date input
+      Built with reka-ui
+      <a
+        class="hover:text-foreground underline"
+        href="https://reka-ui.com/docs/components/date-field"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        DateField
+      </a>
     </p>
   </div>
 </template>
