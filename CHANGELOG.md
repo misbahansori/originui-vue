@@ -1,5 +1,34 @@
 # Changelog
 
+## v0.3.2
+
+[compare changes](https://github.com/misbahansori/originui-vue/compare/v0.3.1...v0.3.2)
+
+### 🩹 Fixes
+
+- Build registry ([a19d1f23](https://github.com/misbahansori/originui-vue/commit/a19d1f23))
+- Remove useId implementation ([b44b1c03](https://github.com/misbahansori/originui-vue/commit/b44b1c03))
+- Run build registry ([4d5da513](https://github.com/misbahansori/originui-vue/commit/4d5da513))
+- Remove useId ([ecbd38a6](https://github.com/misbahansori/originui-vue/commit/ecbd38a6))
+- Build registry ([f5352d8f](https://github.com/misbahansori/originui-vue/commit/f5352d8f))
+
+### 💅 Refactors
+
+- **ui:** Update ButtonGroup and ToggleGroup components for improved styling ([27fbb259](https://github.com/misbahansori/originui-vue/commit/27fbb259))
+- **ui:** Enhance component styling and update imports for consistency ([77437bac](https://github.com/misbahansori/originui-vue/commit/77437bac))
+- **ui:** Update component styles for consistency and improved layout ([846966ce](https://github.com/misbahansori/originui-vue/commit/846966ce))
+
+### 🏡 Chore
+
+- Update pnpm-lock.yaml to include changelogen ([33dcd80e](https://github.com/misbahansori/originui-vue/commit/33dcd80e))
+- **ui:** Sync registry primitives with updated reka-ui patterns ([77d286b7](https://github.com/misbahansori/originui-vue/commit/77d286b7))
+- Build registry ([07da8f34](https://github.com/misbahansori/originui-vue/commit/07da8f34))
+- Update registry ([9c3e1659](https://github.com/misbahansori/originui-vue/commit/9c3e1659))
+
+### ❤️ Contributors
+
+- Misbah Ansori ([@misbahansori](https://github.com/misbahansori))
+
 ## v0.3.1
 
 [compare changes](https://github.com/misbahansori/originui-vue/compare/v0.3.0...v0.3.1)
