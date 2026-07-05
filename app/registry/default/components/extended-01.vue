@@ -45,12 +45,7 @@ const toggleVisibility = () => {
         <div class="flex flex-col gap-2">
           <Label>Email</Label>
           <div class="relative">
-            <Input
-              placeholder="hi@yourcompany.com"
-              type="email"
-              required
-              class="peer ps-9"
-            />
+            <Input placeholder="hi@yourcompany.com" type="email" required class="peer ps-9" />
             <div
               class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50"
             >

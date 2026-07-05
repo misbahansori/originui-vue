@@ -2,7 +2,6 @@
 import { Badge } from "@/registry/default/ui/badge";
 import { Checkbox } from "@/registry/default/ui/checkbox";
 import { LucideCheck } from "lucide-vue-next";
-
 </script>
 
 <template>
@@ -11,8 +10,6 @@ import { LucideCheck } from "lucide-vue-next";
   >
     <Checkbox class="peer sr-only after:absolute after:inset-0" :default-checked="true" />
     <LucideCheck class="hidden size-4 peer-data-[state=checked]:block" aria-hidden="true" />
-    <label class="cursor-pointer select-none after:absolute after:inset-0">
-      Selectable
-    </label>
+    <label class="cursor-pointer select-none after:absolute after:inset-0">Selectable</label>
   </Badge>
 </template>

@@ -28,10 +28,7 @@ const selectedValue = ref("1");
       <BreadcrumbSeparator />
       <BreadcrumbItem>
         <Select v-model="selectedValue">
-          <SelectTrigger
-            class="relative gap-2 ps-9"
-            aria-label="Select database"
-          >
+          <SelectTrigger class="relative gap-2 ps-9" aria-label="Select database">
             <div
               class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 group-has-[select[disabled]]:opacity-50"
             >

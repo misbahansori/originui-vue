@@ -30,10 +30,7 @@ import { Textarea } from "@/registry/default/ui/textarea";
         </DialogDescription>
       </DialogHeader>
       <form class="space-y-5">
-        <Textarea
-          placeholder="How can we improve Origin UI?"
-          aria-label="Send feedback"
-        />
+        <Textarea placeholder="How can we improve Origin UI?" aria-label="Send feedback" />
         <div class="flex flex-col sm:flex-row sm:justify-end">
           <Button type="button">Send feedback</Button>
         </div>

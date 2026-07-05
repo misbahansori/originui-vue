@@ -11,9 +11,7 @@ import { Label } from "@/registry/default/ui/label";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label class="text-foreground text-sm font-medium">
-      Date range picker
-    </Label>
+    <Label class="text-foreground text-sm font-medium">Date range picker</Label>
     <DateRangePicker>
       <DateRangePickerField v-slot="{ segments }">
         <DateRangePickerInput

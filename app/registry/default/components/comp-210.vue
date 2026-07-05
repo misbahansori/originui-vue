@@ -7,7 +7,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
-
 </script>
 
 <template>

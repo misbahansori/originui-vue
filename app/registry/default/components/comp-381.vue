@@ -4,7 +4,6 @@ import { Checkbox } from "@/registry/default/ui/checkbox";
 import { Label } from "@/registry/default/ui/label";
 import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import { LucideListFilter } from "lucide-vue-next";
-
 </script>
 
 <template>

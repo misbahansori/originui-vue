@@ -21,7 +21,6 @@ import {
   LucideChevronLeft,
   LucideChevronRight,
 } from "lucide-vue-next";
-
 </script>
 
 <template>

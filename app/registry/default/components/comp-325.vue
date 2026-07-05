@@ -10,7 +10,6 @@ import {
 } from "@/registry/default/ui/dialog";
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
-
 </script>
 
 <template>
@@ -55,11 +54,7 @@ import { Label } from "@/registry/default/ui/label";
           </div>
           <div class="*:not-first:mt-2">
             <Label>Password</Label>
-            <Input
-              placeholder="Enter your password"
-              type="password"
-              required
-            />
+            <Input placeholder="Enter your password" type="password" required />
           </div>
         </div>
         <Button type="button" class="w-full">Sign up</Button>

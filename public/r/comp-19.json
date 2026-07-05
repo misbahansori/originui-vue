@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "components/comp-19.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n} from \"@/registry/default/ui/input-group\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { LucideSend } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"input\">Input with end inline button</Label>\n    <InputGroup>\n      <InputGroupInput id=\"input\" placeholder=\"Email\" type=\"email\" />\n      <InputGroupAddon align=\"inline-end\">\n        <InputGroupButton size=\"icon-sm\" aria-label=\"Subscribe\">\n          <LucideSend :size=\"16\" aria-hidden=\"true\" />\n        </InputGroupButton>\n      </InputGroupAddon>\n    </InputGroup>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n} from \"@/registry/default/ui/input-group\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { LucideSend } from \"lucide-vue-next\";\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label>Input with end inline button</Label>\n    <InputGroup>\n      <InputGroupInput placeholder=\"Email\" type=\"email\" />\n      <InputGroupAddon align=\"inline-end\">\n        <InputGroupButton size=\"icon-sm\" aria-label=\"Subscribe\">\n          <LucideSend :size=\"16\" aria-hidden=\"true\" />\n        </InputGroupButton>\n      </InputGroupAddon>\n    </InputGroup>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

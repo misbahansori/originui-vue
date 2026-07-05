@@ -57,10 +57,7 @@ watch(selectedValue, (newValue) => {
     </div>
 
     <div class="flex items-start gap-2">
-      <RadioGroupItem
-        value="without-expansion"
-        :aria-describedby="`${radioId}-2-description`"
-      />
+      <RadioGroupItem value="without-expansion" :aria-describedby="`${radioId}-2-description`" />
       <div class="grid grow gap-2">
         <Label>Radio without expansion</Label>
         <p :id="`${radioId}-2-description`" class="text-muted-foreground text-xs">

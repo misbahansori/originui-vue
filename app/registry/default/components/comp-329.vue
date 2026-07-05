@@ -57,10 +57,7 @@ onMounted(() => {
             <label
               class="border-input has-data-[state=checked]:border-primary/50 focus-within:border-ring focus-within:ring-ring/50 relative flex cursor-pointer flex-col gap-1 rounded-md border px-4 py-3 shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px]"
             >
-              <RadioGroupItem
-                value="monthly"
-                class="sr-only after:absolute after:inset-0"
-              />
+              <RadioGroupItem value="monthly" class="sr-only after:absolute after:inset-0" />
               <p class="text-foreground text-sm font-medium">Monthly</p>
               <p class="text-muted-foreground text-sm">$32/month</p>
             </label>
@@ -68,10 +65,7 @@ onMounted(() => {
             <label
               class="border-input has-data-[state=checked]:border-primary/50 focus-within:border-ring focus-within:ring-ring/50 relative flex cursor-pointer flex-col gap-1 rounded-md border px-4 py-3 shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px]"
             >
-              <RadioGroupItem
-                value="yearly"
-                class="sr-only after:absolute after:inset-0"
-              />
+              <RadioGroupItem value="yearly" class="sr-only after:absolute after:inset-0" />
               <div class="inline-flex items-start justify-between gap-2">
                 <p class="text-foreground text-sm font-medium">Yearly</p>
                 <Badge>Popular</Badge>
@@ -135,11 +129,7 @@ onMounted(() => {
           <template v-else>
             <div class="*:not-first:mt-2">
               <Label :htmlFor="`coupon-${id}`">Coupon code</Label>
-              <Input
-                ref="couponInputRef"
-                placeholder="Enter your code"
-                v-model="couponCode"
-              />
+              <Input ref="couponInputRef" placeholder="Enter your code" v-model="couponCode" />
             </div>
           </template>
         </div>

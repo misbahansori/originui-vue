@@ -17,10 +17,7 @@ const items = [
     <legend class="text-foreground text-sm leading-none font-medium">Choose a theme</legend>
     <RadioGroup class="flex gap-3" v-model="selectedValue">
       <label v-for="item in items" :key="`${id}-${item.value}`">
-        <RadioGroupItem
-          :value="item.value"
-          class="peer sr-only after:absolute after:inset-0"
-        />
+        <RadioGroupItem :value="item.value" class="peer sr-only after:absolute after:inset-0" />
         <img
           :src="item.image"
           :alt="item.label"

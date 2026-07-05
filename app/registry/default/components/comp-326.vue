@@ -11,7 +11,6 @@ import {
 } from "@/registry/default/ui/dialog";
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
-
 </script>
 
 <template>
@@ -52,19 +51,13 @@ import { Label } from "@/registry/default/ui/label";
           </div>
           <div class="*:not-first:mt-2">
             <Label>Password</Label>
-            <Input
-              placeholder="Enter your password"
-              type="password"
-              required
-            />
+            <Input placeholder="Enter your password" type="password" required />
           </div>
         </div>
         <div class="flex justify-between gap-2">
           <div class="flex items-center gap-2">
             <Checkbox />
-            <Label class="text-muted-foreground font-normal">
-              Remember me
-            </Label>
+            <Label class="text-muted-foreground font-normal">Remember me</Label>
           </div>
           <a class="text-sm underline hover:no-underline" href="#">Forgot password?</a>
         </div>

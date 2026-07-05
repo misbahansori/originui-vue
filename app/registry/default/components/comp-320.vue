@@ -45,11 +45,7 @@ const inputValue = ref("");
       <form class="space-y-5">
         <div class="*:not-first:mt-2">
           <Label>Project name</Label>
-          <Input
-            type="text"
-            placeholder="Type Origin UI to confirm"
-            v-model="inputValue"
-          />
+          <Input type="text" placeholder="Type Origin UI to confirm" v-model="inputValue" />
         </div>
         <DialogFooter>
           <DialogClose asChild>

@@ -35,14 +35,8 @@ const validate = (value: { start: DateValue; end: DateValue } | null) =>
 </script>
 <template>
   <div class="*:not-first:mt-2">
-    <Label class="text-foreground text-sm font-medium">
-      Date range picker (unavailable dates)
-    </Label>
-    <DateRangePicker
-     
-      :isDateUnavailable="isDateUnavailable"
-      :validate="validate"
-    >
+    <Label class="text-foreground text-sm font-medium">Date range picker (unavailable dates)</Label>
+    <DateRangePicker :isDateUnavailable="isDateUnavailable" :validate="validate">
       <DateRangePickerField v-slot="{ segments }">
         <DateRangePickerInput
           v-for="item in segments.start"

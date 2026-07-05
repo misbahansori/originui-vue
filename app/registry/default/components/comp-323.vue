@@ -51,10 +51,7 @@ import { Textarea } from "@/registry/default/ui/textarea";
 
             <div class="*:not-first:mt-2">
               <Label>Why did you give this rating?</Label>
-              <Textarea
-                placeholder="How can we improve Origin UI?"
-                aria-label="Send feedback"
-              />
+              <Textarea placeholder="How can we improve Origin UI?" aria-label="Send feedback" />
             </div>
           </div>
           <Button type="button" class="w-full">Send feedback</Button>

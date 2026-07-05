@@ -18,7 +18,6 @@ const navigationLinks = [
   { href: "#", label: "Categories" },
   { href: "#", label: "Deals" },
 ];
-
 </script>
 
 <template>

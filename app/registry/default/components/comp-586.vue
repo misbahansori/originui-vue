@@ -5,7 +5,6 @@ import Logo from "@/registry/default/components/navbar-components/Logo.vue";
 import ThemeToggle from "@/registry/default/components/navbar-components/ThemeToggle.vue";
 import { Button } from "@/registry/default/ui/button";
 import { Input } from "@/registry/default/ui/input";
-
 </script>
 
 <template>

@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "components/comp-12.vue",
-      "content": "<script setup lang=\"ts\">\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@/registry/default/ui/input-group\";\nimport { Label } from \"@/registry/default/ui/label\";\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"input\">Input with end inline add-on</Label>\n    <InputGroup>\n      <InputGroupInput id=\"input\" placeholder=\"google\" type=\"text\" />\n      <InputGroupAddon align=\"inline-end\">\n        <InputGroupText class=\"font-normal\">.com</InputGroupText>\n      </InputGroupAddon>\n    </InputGroup>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@/registry/default/ui/input-group\";\nimport { Label } from \"@/registry/default/ui/label\";\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label>Input with end inline add-on</Label>\n    <InputGroup>\n      <InputGroupInput placeholder=\"google\" type=\"text\" />\n      <InputGroupAddon align=\"inline-end\">\n        <InputGroupText class=\"font-normal\">.com</InputGroupText>\n      </InputGroupAddon>\n    </InputGroup>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

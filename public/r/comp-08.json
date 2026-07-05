@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "components/comp-08.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"input\">Disabled input</Label>\n    <Input id=\"input\" placeholder=\"Email\" type=\"email\" disabled />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label>Disabled input</Label>\n    <Input placeholder=\"Email\" type=\"email\" disabled />\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "components/comp-201.vue",
-      "content": "<script setup lang=\"ts\">\nimport { NativeSelect } from \"@/registry/default/ui/native-select\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"group relative\">\n    <label\n      :for=\"id\"\n      class=\"bg-background text-foreground absolute start-1 top-0 z-10 block -translate-y-1/2 px-2 text-xs font-medium group-has-[select:disabled]:opacity-50\"\n    >\n      Select with overlapping label (native)\n    </label>\n    <NativeSelect :id=\"id\" modelValue=\"\">\n      <option value=\"\" disabled>Select framework</option>\n      <option value=\"1\">Vue</option>\n      <option value=\"2\">Nuxt</option>\n      <option value=\"3\">Astro</option>\n      <option value=\"4\">Vitesse</option>\n    </NativeSelect>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { NativeSelect } from \"@/registry/default/ui/native-select\";\n\n</script>\n\n<template>\n  <div class=\"group relative\">\n    <label\n      class=\"bg-background text-foreground absolute start-1 top-0 z-10 block -translate-y-1/2 px-2 text-xs font-medium group-has-[select:disabled]:opacity-50\"\n    >\n      Select with overlapping label (native)\n    </label>\n    <NativeSelect id=\"input\" modelValue=\"\">\n      <option value=\"\" disabled>Select framework</option>\n      <option value=\"1\">Vue</option>\n      <option value=\"2\">Nuxt</option>\n      <option value=\"3\">Astro</option>\n      <option value=\"4\">Vitesse</option>\n    </NativeSelect>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

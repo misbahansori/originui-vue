@@ -48,7 +48,6 @@ const languages = [
   { value: "de", label: "De" },
   { value: "ja", label: "Ja" },
 ];
-
 </script>
 
 <template>

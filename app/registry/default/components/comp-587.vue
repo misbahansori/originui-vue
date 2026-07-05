@@ -18,7 +18,6 @@ const navigationLinks = [
   { href: "#", label: "Inbox", icon: LucideInbox },
   { href: "#", label: "Insights", icon: LucideZap },
 ];
-
 </script>
 
 <template>

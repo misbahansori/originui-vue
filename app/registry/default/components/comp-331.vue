@@ -152,21 +152,11 @@ const handleAvatarThumbnailClick = () => {
             <div class="flex flex-col gap-4 sm:flex-row">
               <div class="flex-1 space-y-2">
                 <Label :htmlFor="`${id}-first-name`">First name</Label>
-                <Input
-                  placeholder="Matt"
-                  defaultValue="Margaret"
-                  type="text"
-                  required
-                />
+                <Input placeholder="Matt" defaultValue="Margaret" type="text" required />
               </div>
               <div class="flex-1 space-y-2">
                 <Label :htmlFor="`${id}-last-name`">Last name</Label>
-                <Input
-                  placeholder="Welsh"
-                  defaultValue="Villard"
-                  type="text"
-                  required
-                />
+                <Input placeholder="Welsh" defaultValue="Villard" type="text" required />
               </div>
             </div>
             <div class="*:not-first:mt-2">

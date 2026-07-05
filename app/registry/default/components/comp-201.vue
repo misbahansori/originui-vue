@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { NativeSelect } from "@/registry/default/ui/native-select";
-
 </script>
 
 <template>

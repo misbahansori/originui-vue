@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "components/comp-05.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\n</script>\n\n<template>\n  <div\n    class=\"[--ring:var(--color-indigo-300)] *:not-first:mt-2 in-[.dark]:[--ring:var(--color-indigo-900)]\"\n  >\n    <Label for=\"input\">Input with colored border and ring</Label>\n    <Input id=\"input\" placeholder=\"Email\" type=\"email\" />\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\n</script>\n\n<template>\n  <div\n    class=\"[--ring:var(--color-indigo-300)] *:not-first:mt-2 in-[.dark]:[--ring:var(--color-indigo-900)]\"\n  >\n    <Label>Input with colored border and ring</Label>\n    <Input placeholder=\"Email\" type=\"email\" />\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

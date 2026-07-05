@@ -42,13 +42,7 @@ const { copy, copied } = useClipboard();
           </div>
           <div class="space-y-2">
             <div class="relative">
-              <Input
-                class="pe-9"
-                type="text"
-                v-model="code"
-                aria-label="Share link"
-                readonly
-              />
+              <Input class="pe-9" type="text" v-model="code" aria-label="Share link" readonly />
               <TooltipProvider :delay-duration="0">
                 <Tooltip>
                   <TooltipTrigger asChild>

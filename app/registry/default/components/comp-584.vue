@@ -22,7 +22,6 @@ const navigationLinks = [
   { href: "#", label: "Pricing" },
   { href: "#", label: "About" },
 ];
-
 </script>
 
 <template>

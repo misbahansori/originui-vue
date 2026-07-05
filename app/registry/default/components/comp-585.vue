@@ -22,7 +22,6 @@ const navigationLinks = [
   { href: "#", label: "Hash", icon: LucideHash },
   { href: "#", label: "Groups", icon: LucideUsers },
 ];
-
 </script>
 
 <template>

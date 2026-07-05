@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
 import { NativeSelect } from "@/registry/default/ui/native-select";
-
 </script>
 
 <template>

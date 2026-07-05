@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "components/comp-196.vue",
-      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { NativeSelect } from \"@/registry/default/ui/native-select\";\nimport { useId } from \"vue\";\n\nconst id = useId();\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label :for=\"id\">Disabled select (native)</Label>\n    <NativeSelect :id=\"id\" modelValue=\"1\" disabled>\n      <option value=\"1\">Vue</option>\n      <option value=\"2\">Nuxt</option>\n      <option value=\"3\">Astro</option>\n      <option value=\"4\">Vitesse</option>\n    </NativeSelect>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { Label } from \"@/registry/default/ui/label\";\nimport { NativeSelect } from \"@/registry/default/ui/native-select\";\n\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label>Disabled select (native)</Label>\n    <NativeSelect id=\"input\" modelValue=\"1\" disabled>\n      <option value=\"1\">Vue</option>\n      <option value=\"2\">Nuxt</option>\n      <option value=\"3\">Astro</option>\n      <option value=\"4\">Vitesse</option>\n    </NativeSelect>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],

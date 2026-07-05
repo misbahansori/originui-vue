@@ -2,7 +2,6 @@
 import { Label } from "@/registry/default/ui/label";
 import { NativeSelect } from "@/registry/default/ui/native-select";
 import { LucideClock } from "lucide-vue-next";
-
 </script>
 
 <template>

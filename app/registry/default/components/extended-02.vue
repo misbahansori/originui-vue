@@ -48,11 +48,7 @@ import { RiGithubFill, RiGoogleFill } from "@remixicon/vue";
         </div>
         <div class="flex flex-col gap-2">
           <Label>Password Confirmation</Label>
-          <Input
-            placeholder="Confirm your password"
-            type="password"
-            required
-          />
+          <Input placeholder="Confirm your password" type="password" required />
         </div>
         <Button type="submit" class="w-full">Create account</Button>
         <p class="text-muted-foreground text-sm">

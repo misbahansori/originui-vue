@@ -8,7 +8,6 @@ import {
   SelectValue,
 } from "@/registry/default/ui/select";
 import { LucideClock } from "lucide-vue-next";
-
 </script>
 
 <template>

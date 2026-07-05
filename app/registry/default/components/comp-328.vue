@@ -91,9 +91,7 @@ const cvc = ref("");
         </div>
         <div class="flex items-center gap-2">
           <Checkbox v-model="isDefaultPayment" />
-          <Label class="text-muted-foreground font-normal">
-            Set as default payment method
-          </Label>
+          <Label class="text-muted-foreground font-normal">Set as default payment method</Label>
         </div>
         <Button type="button" class="w-full">Update card</Button>
       </form>

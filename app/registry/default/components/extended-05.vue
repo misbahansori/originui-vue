@@ -39,11 +39,7 @@ import { Label } from "@/registry/default/ui/label";
         </div>
         <div class="flex flex-col gap-2">
           <Label>Password Confirmation</Label>
-          <Input
-            placeholder="Confirm your password"
-            type="password"
-            required
-          />
+          <Input placeholder="Confirm your password" type="password" required />
         </div>
         <Button type="submit" class="w-full">Reset password</Button>
       </form>

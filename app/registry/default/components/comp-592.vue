@@ -18,11 +18,7 @@ const checked = ref(true);
     <div class="flex h-16 items-center justify-between gap-4">
       <!-- Left side -->
       <div class="relative flex-1">
-        <Input
-          class="peer h-8 w-full max-w-xs ps-8 pe-2"
-          placeholder="Search..."
-          type="search"
-        />
+        <Input class="peer h-8 w-full max-w-xs ps-8 pe-2" placeholder="Search..." type="search" />
         <div
           class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-2 peer-disabled:opacity-50"
         >

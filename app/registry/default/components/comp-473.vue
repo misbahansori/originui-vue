@@ -52,7 +52,6 @@ const items = [
     balance: "-$1,000.00",
   },
 ];
-
 </script>
 
 <template>

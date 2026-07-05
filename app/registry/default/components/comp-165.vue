@@ -22,10 +22,7 @@ const items = [
         class="border-input has-data-[state=checked]:border-primary/50 relative flex flex-col items-start gap-4 rounded-md border p-3 shadow-xs outline-none"
       >
         <div class="flex items-center gap-2">
-          <RadioGroupItem
-            :value="item.value"
-            class="after:absolute after:inset-0"
-          />
+          <RadioGroupItem :value="item.value" class="after:absolute after:inset-0" />
           <Label>{{ item.label }}</Label>
         </div>
       </div>

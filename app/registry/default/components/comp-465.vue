@@ -11,7 +11,6 @@ import {
   PaginationPrevious,
 } from "@/registry/default/ui/pagination";
 import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
-
 </script>
 
 <template>
