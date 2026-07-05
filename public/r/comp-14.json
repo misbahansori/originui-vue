@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "components/comp-14.vue",
-      "content": "<script setup lang=\"ts\">\nimport { ButtonGroup, ButtonGroupText } from \"@/registry/default/ui/button-group\";\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\n\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"input\">Input with start add-on</Label>\n    <ButtonGroup class=\"w-full gap-0!\">\n      <ButtonGroupText class=\"text-muted-foreground bg-background border-input px-3\">\n        https://\n      </ButtonGroupText>\n      <Input id=\"input\" class=\"-ms-px\" placeholder=\"google.com\" type=\"text\" />\n    </ButtonGroup>\n  </div>\n</template>\n",
+      "content": "<script setup lang=\"ts\">\nimport { ButtonGroup, ButtonGroupText } from \"@/registry/default/ui/button-group\";\nimport { Input } from \"@/registry/default/ui/input\";\nimport { Label } from \"@/registry/default/ui/label\";\n</script>\n\n<template>\n  <div class=\"*:not-first:mt-2\">\n    <Label for=\"input\">Input with start add-on</Label>\n    <ButtonGroup class=\"w-full gap-0!\">\n      <ButtonGroupText class=\"text-muted-foreground bg-background border-input px-3\">\n        https://\n      </ButtonGroupText>\n      <Input id=\"input\" class=\"-ms-px\" placeholder=\"google.com\" type=\"text\" />\n    </ButtonGroup>\n  </div>\n</template>\n",
       "type": "registry:component"
     }
   ],
