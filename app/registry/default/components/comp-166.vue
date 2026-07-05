@@ -25,19 +25,13 @@ const items = [
       >
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-2">
-            <RadioGroupItem
-              :value="item.value"
-              class="after:absolute after:inset-0"
-            />
+            <RadioGroupItem :value="item.value" class="after:absolute after:inset-0" />
             <Label class="inline-flex items-start">
               {{ item.label }}
               <Badge v-if="item.value === '2'" class="ms-2 -mt-1">Popular</Badge>
             </Label>
           </div>
-          <div
-           
-            class="text-muted-foreground text-xs leading-[inherit]"
-          >
+          <div class="text-muted-foreground text-xs leading-[inherit]">
             {{ item.price }}
           </div>
         </div>

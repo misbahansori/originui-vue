@@ -8,7 +8,6 @@ import { Switch } from "@/registry/default/ui/switch";
     class="border-input has-data-[state=checked]:border-primary/50 relative flex w-full items-start gap-2 rounded-md border p-4 shadow-xs outline-none"
   >
     <Switch
-     
       class="order-1 h-4 w-6 after:absolute after:inset-0 [&_span]:size-3 data-[state=checked]:[&_span]:translate-x-2 data-[state=checked]:[&_span]:rtl:-translate-x-2"
     />
     <div class="flex grow items-center gap-3">
@@ -68,9 +67,7 @@ import { Switch } from "@/registry/default/ui/switch";
             (Sublabel)
           </span>
         </Label>
-        <p class="text-muted-foreground text-xs">
-          A short description goes here.
-        </p>
+        <p class="text-muted-foreground text-xs">A short description goes here.</p>
       </div>
     </div>
   </div>

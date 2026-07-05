@@ -18,15 +18,8 @@ const charactersLeft = computed(() => {
 <template>
   <div class="*:not-first:mt-2">
     <Label>Textarea with characters left</Label>
-    <Textarea
-      v-model="textValue"
-      :maxlength="maxLength"
-    />
-    <p
-      class="text-muted-foreground mt-2 text-right text-xs"
-      role="status"
-      aria-live="polite"
-    >
+    <Textarea v-model="textValue" :maxlength="maxLength" />
+    <p class="text-muted-foreground mt-2 text-right text-xs" role="status" aria-live="polite">
       <span class="tabular-nums">{{ charactersLeft }}</span>
       characters left
     </p>

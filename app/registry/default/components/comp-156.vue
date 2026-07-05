@@ -20,10 +20,7 @@ watch(selectedValue, (newValue) => {
   <RadioGroup class="gap-6" v-model="selectedValue">
     <div>
       <div class="flex items-start gap-2">
-        <RadioGroupItem
-          value="with-expansion"
-          :aria-controls="inputId"
-        />
+        <RadioGroupItem value="with-expansion" :aria-controls="inputId" />
         <div class="grow">
           <div class="grid grow gap-2">
             <Label>Radio with expansion</Label>

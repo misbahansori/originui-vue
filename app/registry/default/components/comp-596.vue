@@ -122,7 +122,6 @@ const checked = ref(true);
             class="relative inline-grid h-7 grid-cols-[1fr_1fr] items-center text-sm font-medium"
           >
             <Switch
-             
               v-model="checked"
               class="peer data-[state=unchecked]:bg-input/50 absolute inset-0 h-[inherit] w-auto [&_span]:z-10 [&_span]:h-full [&_span]:w-1/2 [&_span]:transition-transform [&_span]:duration-300 [&_span]:ease-[cubic-bezier(0.16,1,0.3,1)] [&_span]:data-[state=checked]:translate-x-full [&_span]:data-[state=checked]:rtl:-translate-x-full"
             />

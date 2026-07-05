@@ -36,7 +36,6 @@ const tags = ref<string[]>(["red", "green"]);
       </TagsInputItem>
 
       <TagsInputInput
-       
         placeholder="Add a tag"
         class="h-6 w-full min-w-[80px] border-0 bg-transparent px-2 text-sm shadow-none outline-none focus:ring-0"
         type="text"

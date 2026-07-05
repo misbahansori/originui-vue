@@ -19,10 +19,7 @@ watch(checked, (newValue) => {
 <template>
   <div>
     <div class="flex items-start gap-2">
-      <Checkbox
-        v-model="checked"
-        :aria-controls="inputId"
-      />
+      <Checkbox v-model="checked" :aria-controls="inputId" />
       <div class="grow">
         <div class="grid gap-2">
           <Label>Checkbox with expansion</Label>

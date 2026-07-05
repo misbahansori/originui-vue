@@ -15,11 +15,7 @@ const checked = ref(false);
     >
       <LucideMoon :size="16" aria-hidden="true" />
     </span>
-    <Switch
-     
-      v-model="checked"
-      aria-label="Toggle between dark and light mode"
-    />
+    <Switch v-model="checked" aria-label="Toggle between dark and light mode" />
     <span
       class="group-data-[state=unchecked]:text-muted-foreground/70 flex-1 cursor-pointer text-left text-sm font-medium"
       :aria-controls="id"

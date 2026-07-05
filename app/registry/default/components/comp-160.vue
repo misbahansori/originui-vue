@@ -12,10 +12,7 @@ const selectedValue = ref("1");
     <div
       class="border-input has-data-[state=checked]:border-primary/50 relative flex w-full items-start gap-2 rounded-md border p-4 shadow-xs outline-none"
     >
-      <RadioGroupItem
-        value="1"
-        class="order-1 after:absolute after:inset-0"
-      />
+      <RadioGroupItem value="1" class="order-1 after:absolute after:inset-0" />
       <div class="flex grow items-start gap-3">
         <svg
           class="shrink-0"
@@ -53,10 +50,7 @@ const selectedValue = ref("1");
     <div
       class="border-input has-data-[state=checked]:border-primary/50 relative flex w-full items-start gap-2 rounded-md border p-4 shadow-xs outline-none"
     >
-      <RadioGroupItem
-        value="2"
-        class="order-1 after:absolute after:inset-0"
-      />
+      <RadioGroupItem value="2" class="order-1 after:absolute after:inset-0" />
       <div class="flex grow items-start gap-3">
         <svg
           class="shrink-0"

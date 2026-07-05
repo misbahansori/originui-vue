@@ -6,7 +6,6 @@ import { Switch } from "@/registry/default/ui/switch";
 <template>
   <div class="inline-flex items-center gap-2">
     <Switch
-     
       class="h-5 w-8 [&_span]:size-4 data-[state=checked]:[&_span]:translate-x-3 data-[state=checked]:[&_span]:rtl:-translate-x-3"
     />
     <Label class="sr-only">Small switch</Label>

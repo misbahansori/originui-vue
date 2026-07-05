@@ -87,10 +87,7 @@ const features = [
             :key="plan.id"
             class="border-input has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-accent relative flex w-full items-center gap-2 rounded-md border px-4 py-3 shadow-xs outline-none"
           >
-            <RadioGroupItem
-              :value="plan.id"
-              class="order-1 after:absolute after:inset-0"
-            />
+            <RadioGroupItem :value="plan.id" class="order-1 after:absolute after:inset-0" />
             <div class="grid grow gap-1">
               <Label :htmlFor="`${id}-${plan.id}`">{{ plan.name }}</Label>
               <p :id="`${id}-${plan.id}-description`" class="text-muted-foreground text-xs">
