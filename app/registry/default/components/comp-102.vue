@@ -5,7 +5,7 @@ import { LucideChevronDown, LucideChevronUp } from "lucide-vue-next";
 </script>
 
 <template>
-  <ButtonGroup>
+  <ButtonGroup class="gap-0!">
     <Button variant="outline" size="icon" aria-label="Upvote">
       <LucideChevronUp :size="16" aria-hidden="true" />
     </Button>

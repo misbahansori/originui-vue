@@ -14,28 +14,28 @@ const value = ref("center");
 <template>
   <ToggleGroup class="inline-flex" type="single" v-model="value">
     <ToggleGroupItem
-      class="bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
+      class="bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
       aria-label="Align Left"
       value="left"
     >
       <LucideAlignLeft :size="16" aria-hidden="true" />
     </ToggleGroupItem>
     <ToggleGroupItem
-      class="bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
+      class="bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
       aria-label="Align Center"
       value="center"
     >
       <LucideAlignCenter :size="16" aria-hidden="true" />
     </ToggleGroupItem>
     <ToggleGroupItem
-      class="bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
+      class="bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
       aria-label="Align Right"
       value="right"
     >
       <LucideAlignRight :size="16" aria-hidden="true" />
     </ToggleGroupItem>
     <ToggleGroupItem
-      class="bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
+      class="bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
       aria-label="Align Justify"
       value="justify"
     >

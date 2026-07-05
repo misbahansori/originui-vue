@@ -4,7 +4,7 @@ import { LucideThumbsUp } from "lucide-vue-next";
 </script>
 
 <template>
-  <Button class="py-0 pe-0" variant="outline">
+  <Button class="py-0 pe-0!" variant="outline">
     <LucideThumbsUp class="opacity-60" :size="16" aria-hidden="true" />
     Like
     <span
