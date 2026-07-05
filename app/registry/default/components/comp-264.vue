@@ -2,6 +2,7 @@
 import { Button } from "@/registry/default/ui/button";
 import { LucideRotateCcw } from "lucide-vue-next";
 import { useTemplateRef } from "vue";
+import { SliderWithInput } from "@/registry/default/ui/slider";
 
 const sliders = [
   {
