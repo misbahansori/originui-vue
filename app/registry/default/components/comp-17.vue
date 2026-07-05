@@ -11,7 +11,7 @@ import { NativeSelect } from "@/registry/default/ui/native-select";
     <ButtonGroup>
       <NativeSelect
         modelValue="https://"
-        class="text-muted-foreground hover:text-foreground w-fit rounded-e-none shadow-none field-sizing-content"
+        class="text-muted-foreground hover:text-foreground field-sizing-content w-fit rounded-e-none shadow-none"
       >
         <option value="https://">https://</option>
         <option value="http://">http://</option>

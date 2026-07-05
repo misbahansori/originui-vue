@@ -6,7 +6,6 @@ import {
   InputGroupText,
 } from "@/registry/default/ui/input-group";
 import { Label } from "@/registry/default/ui/label";
-
 </script>
 
 <template>

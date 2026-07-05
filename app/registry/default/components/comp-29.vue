@@ -26,15 +26,15 @@ const value = ref(99);
             class="focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
           />
           <div
-            class="absolute inset-y-0 right-0 flex h-[calc(100%)] flex-col border-l border-input gap-0"
+            class="border-input absolute inset-y-0 right-0 flex h-[calc(100%)] flex-col gap-0 border-l"
           >
             <NumberFieldIncrement
-              class="w-5 h-1/2 flex items-center justify-center text-muted-foreground/80 hover:text-foreground"
+              class="text-muted-foreground/80 hover:text-foreground flex h-1/2 w-5 items-center justify-center"
             >
               <LucideChevronUp aria-hidden="true" class="size-3 shrink-0" />
             </NumberFieldIncrement>
             <NumberFieldDecrement
-              class="w-5 h-1/2 border-t border-input flex items-center justify-center text-muted-foreground/80 hover:text-foreground"
+              class="border-input text-muted-foreground/80 hover:text-foreground flex h-1/2 w-5 items-center justify-center border-t"
             >
               <LucideChevronDown aria-hidden="true" class="size-3 shrink-0" />
             </NumberFieldDecrement>

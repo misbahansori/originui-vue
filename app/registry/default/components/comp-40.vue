@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { DateField, DateFieldInput } from "@/registry/default/ui/date-field";
 import { Label } from "@/registry/default/ui/label";
-
 </script>
 
 <template>

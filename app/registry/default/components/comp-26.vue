@@ -7,7 +7,6 @@ import {
 } from "@/registry/default/ui/input-group";
 import { Label } from "@/registry/default/ui/label";
 import { LucideArrowRight, LucideSearch } from "lucide-vue-next";
-
 </script>
 
 <template>

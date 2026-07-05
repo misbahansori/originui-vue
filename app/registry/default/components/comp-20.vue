@@ -4,7 +4,6 @@ import { ButtonGroup } from "@/registry/default/ui/button-group";
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
 import { LucideDownload } from "lucide-vue-next";
-
 </script>
 
 <template>

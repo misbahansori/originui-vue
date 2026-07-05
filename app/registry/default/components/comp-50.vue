@@ -8,7 +8,6 @@ import { ref } from "vue";
 const cardNumber = ref("");
 const expiryDate = ref("");
 const cvcCode = ref("");
-
 </script>
 
 <template>

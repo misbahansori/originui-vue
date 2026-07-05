@@ -10,7 +10,6 @@ import { Label } from "@/registry/default/ui/label";
 import { getLocalTimeZone, today } from "@internationalized/date";
 
 const now = today(getLocalTimeZone());
-
 </script>
 
 <template>

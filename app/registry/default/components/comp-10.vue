@@ -2,7 +2,6 @@
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/registry/default/ui/input-group";
 import { Label } from "@/registry/default/ui/label";
 import { LucideMail } from "lucide-vue-next";
-
 </script>
 
 <template>

@@ -2,7 +2,6 @@
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/registry/default/ui/input-group";
 import { Kbd } from "@/registry/default/ui/kbd";
 import { Label } from "@/registry/default/ui/label";
-
 </script>
 
 <template>

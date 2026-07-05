@@ -9,7 +9,9 @@ const time = ref("");
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input" class="text-foreground text-sm font-medium">Time input with start icon</Label>
+    <Label for="input" class="text-foreground text-sm font-medium">
+      Time input with start icon
+    </Label>
     <div class="relative">
       <div
         class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 z-10 flex items-center justify-center ps-3"

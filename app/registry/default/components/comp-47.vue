@@ -6,7 +6,6 @@ import { vMaska } from "maska/vue";
 import { ref } from "vue";
 
 const cardNumber = ref("");
-
 </script>
 
 <template>
