@@ -22,21 +22,18 @@ watch(selectedValue, (newValue) => {
       <div class="flex items-start gap-2">
         <RadioGroupItem
           value="with-expansion"
-          :aria-describedby="`${radioId}-1-description`"
           :aria-controls="inputId"
         />
         <div class="grow">
           <div class="grid grow gap-2">
             <Label>Radio with expansion</Label>
-            <p :id="`${radioId}-1-description`" class="text-muted-foreground text-xs">
+            <p class="text-muted-foreground text-xs">
               You can use this radio with a label and a description.
             </p>
           </div>
           <!-- Expandable field -->
           <div
             role="region"
-            id="input"
-            :aria-labelledby="`${radioId}-1`"
             class="grid transition-all ease-in-out data-[state=collapsed]:grid-rows-[0fr] data-[state=collapsed]:opacity-0 data-[state=expanded]:grid-rows-[1fr] data-[state=expanded]:opacity-100"
             :data-state="selectedValue === 'with-expansion' ? 'expanded' : 'collapsed'"
           >
@@ -57,10 +54,10 @@ watch(selectedValue, (newValue) => {
     </div>
 
     <div class="flex items-start gap-2">
-      <RadioGroupItem value="without-expansion" :aria-describedby="`${radioId}-2-description`" />
+      <RadioGroupItem value="without-expansion" />
       <div class="grid grow gap-2">
         <Label>Radio without expansion</Label>
-        <p :id="`${radioId}-2-description`" class="text-muted-foreground text-xs">
+        <p class="text-muted-foreground text-xs">
           You can use this checkbox with a label and a description.
         </p>
       </div>

@@ -5,7 +5,7 @@ import { Switch } from "@/registry/default/ui/switch";
 
 <template>
   <div class="inline-flex items-center gap-2">
-    <Switch id="input" />
+    <Switch />
     <Label class="sr-only">Simple switch</Label>
   </div>
 </template>

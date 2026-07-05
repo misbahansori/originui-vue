@@ -21,10 +21,8 @@ const charactersLeft = computed(() => {
     <Textarea
       v-model="textValue"
       :maxlength="maxLength"
-      aria-describedby="character-count-description"
     />
     <p
-      id="character-count-description"
       class="text-muted-foreground mt-2 text-right text-xs"
       role="status"
       aria-live="polite"

@@ -12,7 +12,6 @@ const checked = ref(false);
   >
     <Checkbox
       class="order-1 after:absolute after:inset-0"
-      :aria-describedby="`${id}-description`"
       v-model="checked"
     />
     <div class="flex grow items-start gap-3">
@@ -42,7 +41,7 @@ const checked = ref(false);
             (Sublabel)
           </span>
         </Label>
-        <p id="input-description" class="text-muted-foreground text-xs">
+        <p class="text-muted-foreground text-xs">
           A short description goes here.
         </p>
       </div>

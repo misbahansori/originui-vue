@@ -16,7 +16,7 @@ const now = today(getLocalTimeZone());
   <div class="*:not-first:mt-2">
     <Label class="text-foreground text-sm font-medium">Date picker</Label>
 
-    <DatePicker id="birthday" :is-date-unavailable="(date) => date.day === 19">
+    <DatePicker :is-date-unavailable="(date) => date.day === 19">
       <DatePickerField v-slot="{ segments }">
         <DatePickerInput v-for="item in segments" :key="item.part" :part="item.part">
           {{ item.value }}

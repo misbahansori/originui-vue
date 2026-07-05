@@ -89,7 +89,6 @@ const features = [
           >
             <RadioGroupItem
               :value="plan.id"
-              :aria-describedby="`${id}-${plan.id}-description`"
               class="order-1 after:absolute after:inset-0"
             />
             <div class="grid grow gap-1">

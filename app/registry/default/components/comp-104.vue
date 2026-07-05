@@ -30,8 +30,8 @@ const VolumeIcon = computed(() => {
 </script>
 
 <template>
-  <div class="inline-flex items-center" role="group" aria-labelledby="volume-control">
-    <span id="volume-control" class="sr-only">Volume Control</span>
+  <div class="inline-flex items-center" role="group">
+    <span class="sr-only">Volume Control</span>
     <Button
       class="rounded-full"
       variant="outline"

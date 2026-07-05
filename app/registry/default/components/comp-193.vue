@@ -8,7 +8,7 @@ import { NativeSelect } from "@/registry/default/ui/native-select";
     class="[--ring:var(--color-indigo-300)] *:not-first:mt-2 in-[.dark]:[--ring:var(--color-indigo-900)]"
   >
     <Label>Select with colored border (native)</Label>
-    <NativeSelect id="input" modelValue="1">
+    <NativeSelect modelValue="1">
       <option value="1">Vue</option>
       <option value="2">Nuxt</option>
       <option value="3">Astro</option>

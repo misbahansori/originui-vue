@@ -10,7 +10,7 @@ import { NativeSelect } from "@/registry/default/ui/native-select";
       Select with inset label (native)
     </label>
     <NativeSelect
-      id="input"
+     
       modelValue=""
       class="border-none bg-transparent shadow-none focus-visible:ring-0 focus-visible:ring-offset-0"
     >

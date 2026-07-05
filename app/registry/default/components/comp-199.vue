@@ -6,7 +6,7 @@ import { NativeSelect } from "@/registry/default/ui/native-select";
 <template>
   <div class="*:not-first:mt-2">
     <Label>Select with option groups (native)</Label>
-    <NativeSelect id="input" modelValue="1">
+    <NativeSelect modelValue="1">
       <optgroup label="Frontend">
         <option value="1">Vue</option>
         <option value="2">Nuxt</option>

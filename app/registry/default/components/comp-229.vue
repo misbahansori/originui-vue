@@ -100,7 +100,6 @@ function handleSelect(currentValue: string) {
     <Popover v-model:open="open">
       <PopoverTrigger as-child>
         <Button
-          id="input"
           variant="outline"
           role="combobox"
           :aria-expanded="open"

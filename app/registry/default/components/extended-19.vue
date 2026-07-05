@@ -40,7 +40,6 @@ const paymentMethods = [
           >
             <RadioGroupItem
               :value="paymentMethod.name"
-              :aria-describedby="`${id}-${paymentMethod.name}-description`"
               class="order-1 after:absolute after:inset-0"
             />
             <div class="bg-primary/10 flex size-9 items-center justify-center rounded-full">

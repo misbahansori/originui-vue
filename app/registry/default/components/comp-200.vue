@@ -29,7 +29,7 @@ const formattedTimezones = computed(() => {
 <template>
   <div class="*:not-first:mt-2">
     <Label>Timezone select (native)</Label>
-    <NativeSelect id="input" modelValue="Europe/London">
+    <NativeSelect modelValue="Europe/London">
       <ClientOnly>
         <option v-for="{ value, label } in formattedTimezones" :key="value" :value="value">
           {{ label }}

@@ -28,7 +28,6 @@ const items = [
             <RadioGroupItem
               :value="item.value"
               class="after:absolute after:inset-0"
-              :aria-describedby="`${id}-${item.value}-price`"
             />
             <Label class="inline-flex items-start">
               {{ item.label }}
@@ -36,7 +35,7 @@ const items = [
             </Label>
           </div>
           <div
-            :id="`${id}-${item.value}-price`"
+           
             class="text-muted-foreground text-xs leading-[inherit]"
           >
             {{ item.price }}

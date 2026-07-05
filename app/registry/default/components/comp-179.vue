@@ -8,7 +8,7 @@ const checked = ref(true);
 
 <template>
   <div class="inline-flex items-center gap-2">
-    <Switch id="input" v-model="checked" aria-label="Toggle switch" />
+    <Switch v-model="checked" aria-label="Toggle switch" />
     <Label class="text-sm font-medium">
       {{ checked ? "On" : "Off" }}
     </Label>

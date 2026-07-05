@@ -12,7 +12,6 @@ const checked = ref(false);
   >
     <Checkbox
       class="order-1 after:absolute after:inset-0"
-      :aria-describedby="`${id}-description`"
       v-model="checked"
     />
     <div class="flex grow items-center gap-3">
@@ -41,7 +40,6 @@ const checked = ref(false);
         </g>
         <defs>
           <linearGradient
-            id="sb-b"
             x1="15.907"
             x2="23.02"
             y1="15.73"
@@ -52,7 +50,6 @@ const checked = ref(false);
             <stop offset="1" stop-color="#3ECF8E" />
           </linearGradient>
           <linearGradient
-            id="sb-c"
             x1="12.753"
             x2="15.997"
             y1="11.412"
@@ -74,7 +71,7 @@ const checked = ref(false);
             (Sublabel)
           </span>
         </Label>
-        <p id="input-description" class="text-muted-foreground text-xs">
+        <p class="text-muted-foreground text-xs">
           A short description goes here.
         </p>
       </div>

@@ -198,10 +198,8 @@ const handleAvatarThumbnailClick = () => {
                 placeholder="Write a few sentences about yourself"
                 v-model="bio"
                 :maxLength="maxLength"
-                :aria-describedby="`${id}-description`"
               />
               <p
-                id="input-description"
                 class="text-muted-foreground mt-2 text-right text-xs"
                 role="status"
                 aria-live="polite"

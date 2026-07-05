@@ -8,16 +8,14 @@ const checked = ref(false);
 <template>
   <div class="group inline-flex items-center gap-2" :data-state="checked ? 'checked' : 'unchecked'">
     <span
-      id="input-off"
       class="group-data-[state=checked]:text-muted-foreground/70 flex-1 cursor-pointer text-right text-sm font-medium"
       :aria-controls="id"
       @click="checked = false"
     >
       Off
     </span>
-    <Switch id="input" v-model="checked" :aria-labelledby="`${id}-off ${id}-on`" />
+    <Switch v-model="checked" />
     <span
-      id="input-on"
       class="group-data-[state=unchecked]:text-muted-foreground/70 flex-1 cursor-pointer text-left text-sm font-medium"
       :aria-controls="id"
       @click="checked = true"

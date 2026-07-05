@@ -6,7 +6,7 @@ import { NativeSelect } from "@/registry/default/ui/native-select";
 <template>
   <div class="*:not-first:mt-2">
     <Label>Select with error (native)</Label>
-    <NativeSelect id="input" modelValue="1" aria-invalid="true">
+    <NativeSelect modelValue="1" aria-invalid="true">
       <option value="1">Vue</option>
       <option value="2">Nuxt</option>
       <option value="3">Astro</option>

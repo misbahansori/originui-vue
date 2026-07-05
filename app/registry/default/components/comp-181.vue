@@ -9,7 +9,7 @@ const checked = ref(true);
 
 <template>
   <div class="inline-flex items-center gap-2">
-    <Switch id="input" v-model="checked" aria-label="Toggle switch" />
+    <Switch v-model="checked" aria-label="Toggle switch" />
     <Label>
       <span class="sr-only">Toggle switch</span>
       <LucideSun v-if="checked" :size="16" aria-hidden="true" />

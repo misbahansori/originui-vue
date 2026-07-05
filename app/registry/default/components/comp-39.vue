@@ -16,7 +16,7 @@ const time = ref("");
       >
         <LucideClock :size="16" aria-hidden="true" />
       </div>
-      <TimeField id="input" v-slot="{ segments }" class="pe-9">
+      <TimeField v-slot="{ segments }" class="pe-9">
         <TimeFieldInput v-for="item in segments" :part="item.part">
           {{ item.value }}
         </TimeFieldInput>

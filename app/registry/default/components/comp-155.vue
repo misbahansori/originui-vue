@@ -9,7 +9,7 @@ const selectedValue = ref("1");
 <template>
   <RadioGroup class="gap-6" v-model="selectedValue">
     <div class="flex items-start gap-2">
-      <RadioGroupItem value="1" :aria-describedby="`${id}-1-description`" />
+      <RadioGroupItem value="1" />
       <div class="grid grow gap-2">
         <Label>
           Small
@@ -17,13 +17,13 @@ const selectedValue = ref("1");
             (Sublabel)
           </span>
         </Label>
-        <p :id="`${id}-1-description`" class="text-muted-foreground text-xs">
+        <p class="text-muted-foreground text-xs">
           You can use this card with a label and a description.
         </p>
       </div>
     </div>
     <div class="flex items-start gap-2">
-      <RadioGroupItem value="2" :aria-describedby="`${id}-2-description`" />
+      <RadioGroupItem value="2" />
       <div class="grid grow gap-2">
         <Label>
           Large
@@ -31,7 +31,7 @@ const selectedValue = ref("1");
             (Sublabel)
           </span>
         </Label>
-        <p :id="`${id}-2-description`" class="text-muted-foreground text-xs">
+        <p class="text-muted-foreground text-xs">
           You can use this card with a label and a description.
         </p>
       </div>

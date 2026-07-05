@@ -31,7 +31,7 @@ const checked = ref(true);
         <div class="inline-flex items-center gap-2 max-md:hidden">
           <Label class="text-sm font-medium">Test mode</Label>
           <Switch
-            id="switch"
+           
             v-model="checked"
             class="h-5 w-8 [&_span]:size-4 data-[state=checked]:[&_span]:translate-x-3 data-[state=checked]:[&_span]:rtl:-translate-x-3"
             aria-label="Toggle switch"

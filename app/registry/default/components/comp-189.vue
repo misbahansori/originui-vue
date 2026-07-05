@@ -6,7 +6,7 @@ import { NativeSelect } from "@/registry/default/ui/native-select";
 <template>
   <div class="*:not-first:mt-2">
     <Label>Simple select (native)</Label>
-    <NativeSelect id="input" modelValue="1">
+    <NativeSelect modelValue="1">
       <option value="1">Vue</option>
       <option value="2">Nuxt</option>
       <option value="3">Astro</option>

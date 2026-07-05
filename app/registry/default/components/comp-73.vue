@@ -12,7 +12,6 @@ const textValue = ref("");
       Textarea with inset label
     </label>
     <textarea
-      id="input"
       v-model="textValue"
       class="text-foreground placeholder:text-muted-foreground/70 flex min-h-[70px] w-full bg-transparent px-3 pb-2 text-sm focus-visible:outline-none"
     />

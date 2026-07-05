@@ -9,7 +9,7 @@ import { NativeSelect } from "@/registry/default/ui/native-select";
     >
       Select with overlapping label (native)
     </label>
-    <NativeSelect id="input" modelValue="">
+    <NativeSelect modelValue="">
       <option value="" disabled>Select framework</option>
       <option value="1">Vue</option>
       <option value="2">Nuxt</option>

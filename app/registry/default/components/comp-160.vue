@@ -14,7 +14,6 @@ const selectedValue = ref("1");
     >
       <RadioGroupItem
         value="1"
-        :aria-describedby="`${id}-1-description`"
         class="order-1 after:absolute after:inset-0"
       />
       <div class="flex grow items-start gap-3">
@@ -44,7 +43,7 @@ const selectedValue = ref("1");
               (Sublabel)
             </span>
           </Label>
-          <p :id="`${id}-1-description`" class="text-muted-foreground text-xs">
+          <p class="text-muted-foreground text-xs">
             You can use this card with a label and a description.
           </p>
         </div>
@@ -56,7 +55,6 @@ const selectedValue = ref("1");
     >
       <RadioGroupItem
         value="2"
-        :aria-describedby="`${id}-2-description`"
         class="order-1 after:absolute after:inset-0"
       />
       <div class="flex grow items-start gap-3">
@@ -98,7 +96,7 @@ const selectedValue = ref("1");
               (Sublabel)
             </span>
           </Label>
-          <p :id="`${id}-2-description`" class="text-muted-foreground text-xs">
+          <p class="text-muted-foreground text-xs">
             You can use this card with a label and a description.
           </p>
         </div>

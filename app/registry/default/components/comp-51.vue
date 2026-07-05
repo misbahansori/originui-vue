@@ -62,7 +62,6 @@ function getStrengthText(score: number) {
           placeholder="Password"
           :type="isVisible ? 'text' : 'password'"
           v-model="password"
-          aria-describedby="password-description"
         />
         <InputGroupAddon align="inline-end">
           <InputGroupButton
@@ -95,7 +94,7 @@ function getStrengthText(score: number) {
     </div>
 
     <!-- Password strength description -->
-    <p id="password-description" class="text-foreground mb-2 text-sm font-medium">
+    <p class="text-foreground mb-2 text-sm font-medium">
       {{ getStrengthText(strengthScore) }}. Must contain:
     </p>
 

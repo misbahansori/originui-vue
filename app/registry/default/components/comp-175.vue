@@ -5,7 +5,7 @@ import { Switch } from "@/registry/default/ui/switch";
 
 <template>
   <div class="inline-flex items-center gap-2">
-    <Switch id="input" disabled />
+    <Switch disabled />
     <Label class="sr-only">Disabled</Label>
   </div>
 </template>

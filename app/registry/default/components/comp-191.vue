@@ -8,7 +8,7 @@ import { LucideClock } from "lucide-vue-next";
   <div class="*:not-first:mt-2">
     <Label>Select with icon (native)</Label>
     <div class="group relative">
-      <NativeSelect id="input" modelValue="1" class="ps-9">
+      <NativeSelect modelValue="1" class="ps-9">
         <option value="1">00:00 AM - 11:59 PM</option>
         <option value="2">01:00 AM - 12:59 PM</option>
         <option value="3">02:00 AM - 01:59 PM</option>

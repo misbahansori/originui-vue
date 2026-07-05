@@ -8,9 +8,8 @@ import { Switch } from "@/registry/default/ui/switch";
     class="border-input has-data-[state=checked]:border-primary/50 relative flex w-full items-start gap-2 rounded-md border p-4 shadow-xs outline-none"
   >
     <Switch
-      id="input"
+     
       class="order-1 h-4 w-6 after:absolute after:inset-0 [&_span]:size-3 data-[state=checked]:[&_span]:translate-x-2 data-[state=checked]:[&_span]:rtl:-translate-x-2"
-      :aria-describedby="`${id}-description`"
     />
     <div class="flex grow items-center gap-3">
       <svg
@@ -38,7 +37,6 @@ import { Switch } from "@/registry/default/ui/switch";
         </g>
         <defs>
           <linearGradient
-            id="sb-b"
             x1="15.907"
             x2="23.02"
             y1="15.73"
@@ -49,7 +47,6 @@ import { Switch } from "@/registry/default/ui/switch";
             <stop offset="1" stop-color="#3ECF8E" />
           </linearGradient>
           <linearGradient
-            id="sb-c"
             x1="12.753"
             x2="15.997"
             y1="11.412"
@@ -71,7 +68,7 @@ import { Switch } from "@/registry/default/ui/switch";
             (Sublabel)
           </span>
         </Label>
-        <p id="input-description" class="text-muted-foreground text-xs">
+        <p class="text-muted-foreground text-xs">
           A short description goes here.
         </p>
       </div>
