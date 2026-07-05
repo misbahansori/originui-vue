@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { LucideClock, LucidePower, LucidePowerOff, LucideZap } from "lucide-vue-next";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
 import { Badge } from "@/registry/default/ui/badge";
 import { Button } from "@/registry/default/ui/button";
@@ -21,7 +21,6 @@ const navigationLinks = [
   { href: "#", label: "Backups" },
 ];
 
-const id = useId();
 const checked = ref(true);
 </script>
 
@@ -123,7 +122,7 @@ const checked = ref(true);
             class="relative inline-grid h-7 grid-cols-[1fr_1fr] items-center text-sm font-medium"
           >
             <Switch
-              :id="id"
+              id="input"
               v-model="checked"
               class="peer data-[state=unchecked]:bg-input/50 absolute inset-0 h-[inherit] w-auto [&_span]:z-10 [&_span]:h-full [&_span]:w-1/2 [&_span]:transition-transform [&_span]:duration-300 [&_span]:ease-[cubic-bezier(0.16,1,0.3,1)] [&_span]:data-[state=checked]:translate-x-full [&_span]:data-[state=checked]:rtl:-translate-x-full"
             />
@@ -138,7 +137,7 @@ const checked = ref(true);
               <LucidePower :size="12" aria-hidden="true" />
             </span>
           </div>
-          <Label :for="id" class="sr-only">Power</Label>
+          <Label class="sr-only">Power</Label>
         </div>
       </div>
     </div>

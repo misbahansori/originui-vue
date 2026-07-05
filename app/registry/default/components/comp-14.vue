@@ -6,12 +6,12 @@ import { Label } from "@/registry/default/ui/label";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Input with start add-on</Label>
+    <Label>Input with start add-on</Label>
     <ButtonGroup class="w-full gap-0!">
       <ButtonGroupText class="text-muted-foreground bg-background border-input px-3">
         https://
       </ButtonGroupText>
-      <Input id="input" class="-ms-px" placeholder="google.com" type="text" />
+      <Input class="-ms-px" placeholder="google.com" type="text" />
     </ButtonGroup>
   </div>
 </template>

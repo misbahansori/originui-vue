@@ -2,9 +2,8 @@
 import { Badge } from "@/registry/default/ui/badge";
 import { Label } from "@/registry/default/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const selectedValue = ref("2");
 
 const items = [
@@ -27,12 +26,11 @@ const items = [
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-2">
             <RadioGroupItem
-              :id="`${id}-${item.value}`"
               :value="item.value"
               class="after:absolute after:inset-0"
               :aria-describedby="`${id}-${item.value}-price`"
             />
-            <Label class="inline-flex items-start" :for="`${id}-${item.value}`">
+            <Label class="inline-flex items-start">
               {{ item.label }}
               <Badge v-if="item.value === '2'" class="ms-2 -mt-1">Popular</Badge>
             </Label>

@@ -7,9 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
-import { ref, useId } from "vue";
-
-const id = useId();
+import { ref } from "vue";
 
 const options = [
   {
@@ -37,10 +35,9 @@ const selectedOption = ref(options[0]);
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Options with portrait</Label>
+    <Label>Options with portrait</Label>
     <Select v-model="selectedOption">
       <SelectTrigger
-        :id="id"
         class="ps-2 text-left data-[size=default]:h-auto [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_img]:shrink-0"
       >
         <SelectValue placeholder="Select user">

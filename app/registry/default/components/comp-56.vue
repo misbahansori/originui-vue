@@ -16,7 +16,7 @@ const tags = ref<string[]>(["sport", "coding", "travel"]);
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Input with tags</Label>
+    <Label>Input with tags</Label>
     <TagsInputRoot v-model="tags" class="flex flex-col gap-2">
       <TagsInputInput id="input" placeholder="Add a tag" asChild type="text">
         <Input />

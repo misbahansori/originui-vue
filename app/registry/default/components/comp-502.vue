@@ -77,10 +77,9 @@ const inputValue = computed({
       </CalendarRoot>
       <div class="border-t p-3">
         <div class="flex items-center gap-3">
-          <Label for="date-input" className="text-xs">Enter date</Label>
+          <Label className="text-xs">Enter date</Label>
           <div class="relative grow">
             <Input
-              id="date-input"
               v-model="inputValue"
               type="date"
               class="peer appearance-none ps-9 [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"

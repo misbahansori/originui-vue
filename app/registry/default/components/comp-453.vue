@@ -29,7 +29,6 @@ const selectedValue = ref("1");
       <BreadcrumbItem>
         <Select v-model="selectedValue">
           <SelectTrigger
-            id="select-database"
             class="relative gap-2 ps-9"
             aria-label="Select database"
           >

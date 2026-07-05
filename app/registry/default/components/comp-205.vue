@@ -8,16 +8,14 @@ import {
   SelectValue,
 } from "@/registry/default/ui/select";
 import { LucideClock } from "lucide-vue-next";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Select with icon</Label>
+    <Label>Select with icon</Label>
     <Select default-value="1">
-      <SelectTrigger :id="id" class="relative ps-9">
+      <SelectTrigger class="relative ps-9">
         <div
           class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 group-has-[select[disabled]]:opacity-50"
         >

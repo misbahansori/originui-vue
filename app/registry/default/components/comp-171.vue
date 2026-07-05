@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
 import { Star } from "lucide-vue-next";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const hoverRating = ref("");
 const currentRating = ref("");
 
@@ -37,7 +36,7 @@ const stars = ["1", "2", "3", "4", "5"];
         @mouseenter="setHoverRating(value)"
         @mouseleave="clearHoverRating"
       >
-        <RadioGroupItem :id="`${id}-${value}`" :value="value" class="sr-only" />
+        <RadioGroupItem :value="value" class="sr-only" />
         <Star
           :size="24"
           :class="`transition-all ${

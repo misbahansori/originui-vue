@@ -16,7 +16,6 @@ import { LucideCreditCard, LucideStore } from "lucide-vue-next";
 import { vMaska } from "maska/vue";
 import { onMounted, ref, useTemplateRef } from "vue";
 
-const id = useId();
 const couponInputRef = useTemplateRef("couponInputRef");
 const showCouponInput = ref(false);
 const couponCode = ref("");
@@ -59,7 +58,6 @@ onMounted(() => {
               class="border-input has-data-[state=checked]:border-primary/50 focus-within:border-ring focus-within:ring-ring/50 relative flex cursor-pointer flex-col gap-1 rounded-md border px-4 py-3 shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px]"
             >
               <RadioGroupItem
-                id="radio-monthly"
                 value="monthly"
                 class="sr-only after:absolute after:inset-0"
               />
@@ -71,7 +69,6 @@ onMounted(() => {
               class="border-input has-data-[state=checked]:border-primary/50 focus-within:border-ring focus-within:ring-ring/50 relative flex cursor-pointer flex-col gap-1 rounded-md border px-4 py-3 shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px]"
             >
               <RadioGroupItem
-                id="radio-yearly"
                 value="yearly"
                 class="sr-only after:absolute after:inset-0"
               />
@@ -84,7 +81,7 @@ onMounted(() => {
           </RadioGroup>
           <div class="*:not-first:mt-2">
             <Label :htmlFor="`name-${id}`">Name on card</Label>
-            <Input :id="`name-${id}`" type="text" required />
+            <Input type="text" required />
           </div>
           <div class="*:not-first:mt-2">
             <legend class="text-foreground text-sm font-medium">Card Details</legend>
@@ -92,7 +89,6 @@ onMounted(() => {
               <div class="relative focus-within:z-10">
                 <Input
                   class="peer rounded-b-none pe-9 shadow-none [direction:inherit]"
-                  :id="`card-number-${id}`"
                   v-model="cardNumber"
                   v-maska="'#### #### #### ####'"
                   placeholder="0000 0000 0000 0000"
@@ -108,7 +104,6 @@ onMounted(() => {
                 <div class="min-w-0 flex-1 focus-within:z-10">
                   <Input
                     class="rounded-e-none rounded-t-none shadow-none [direction:inherit]"
-                    :id="`expiry-date-${id}`"
                     v-model="expiryDate"
                     v-maska="'##/##'"
                     placeholder="MM/YY"
@@ -118,7 +113,6 @@ onMounted(() => {
                 <div class="-ms-px min-w-0 flex-1 focus-within:z-10">
                   <Input
                     class="rounded-s-none rounded-t-none shadow-none [direction:inherit]"
-                    :id="`cvc-code-${id}`"
                     v-model="cvcCode"
                     v-maska="'###'"
                     placeholder="CVC"
@@ -142,7 +136,6 @@ onMounted(() => {
             <div class="*:not-first:mt-2">
               <Label :htmlFor="`coupon-${id}`">Coupon code</Label>
               <Input
-                :id="`coupon-${id}`"
                 ref="couponInputRef"
                 placeholder="Enter your code"
                 v-model="couponCode"

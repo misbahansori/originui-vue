@@ -8,9 +8,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
-import { useId } from "vue";
-
-const id = useId();
 
 const options = [
   {
@@ -33,9 +30,9 @@ const options = [
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Select with description and right indicator</Label>
+    <Label>Select with description and right indicator</Label>
     <Select default-value="2">
-      <SelectTrigger :id="id" class="**:data-desc:hidden">
+      <SelectTrigger class="**:data-desc:hidden">
         <SelectValue placeholder="Choose a plan" />
       </SelectTrigger>
       <SelectContent

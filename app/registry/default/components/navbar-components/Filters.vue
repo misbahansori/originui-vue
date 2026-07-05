@@ -4,9 +4,7 @@ import { Checkbox } from "@/registry/default/ui/checkbox";
 import { Label } from "@/registry/default/ui/label";
 import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import { ListFilterIcon } from "lucide-vue-next";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
@@ -24,20 +22,20 @@ const id = useId();
           <form>
             <div class="space-y-3">
               <div class="flex items-center gap-2">
-                <Checkbox :id="`${id}-1`" />
-                <Label :for="`${id}-1`" class="font-normal">Real Time</Label>
+                <Checkbox />
+                <Label class="font-normal">Real Time</Label>
               </div>
               <div class="flex items-center gap-2">
-                <Checkbox :id="`${id}-2`" />
-                <Label :for="`${id}-2`" class="font-normal">Top Channels</Label>
+                <Checkbox />
+                <Label class="font-normal">Top Channels</Label>
               </div>
               <div class="flex items-center gap-2">
-                <Checkbox :id="`${id}-3`" />
-                <Label :for="`${id}-3`" class="font-normal">Last Orders</Label>
+                <Checkbox />
+                <Label class="font-normal">Last Orders</Label>
               </div>
               <div class="flex items-center gap-2">
-                <Checkbox :id="`${id}-4`" />
-                <Label :for="`${id}-4`" class="font-normal">Total Spent</Label>
+                <Checkbox />
+                <Label class="font-normal">Total Spent</Label>
               </div>
             </div>
             <div

@@ -8,9 +8,7 @@ import {
   SelectValue,
 } from "@/registry/default/ui/select";
 import { RiReactjsLine, RiSvelteLine, RiVuejsLine } from "@remixicon/vue";
-import { shallowRef, useId } from "vue";
-
-const id = useId();
+import { shallowRef } from "vue";
 
 const options = [
   {
@@ -35,10 +33,9 @@ const selectedOption = shallowRef(options[0]);
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Options with icon</Label>
+    <Label>Options with icon</Label>
     <Select v-model="selectedOption">
       <SelectTrigger
-        :id="id"
         class="[&>span_svg]:text-muted-foreground/80 [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_svg]:shrink-0"
       >
         <SelectValue placeholder="Select framework">

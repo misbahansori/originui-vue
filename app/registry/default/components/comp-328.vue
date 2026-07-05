@@ -15,7 +15,6 @@ import { LucideWallet } from "lucide-vue-next";
 import { vMaska } from "maska/vue";
 import { ref } from "vue";
 
-const formId = useId();
 const isDefaultPayment = ref(false);
 const cardName = ref("");
 const cardNumber = ref("");
@@ -47,14 +46,13 @@ const cvc = ref("");
       <form class="space-y-5">
         <div class="space-y-4">
           <div class="*:not-first:mt-2">
-            <Label :for="`name-${formId}`">Name on card</Label>
-            <Input :id="`name-${formId}`" v-model="cardName" type="text" required />
+            <Label>Name on card</Label>
+            <Input v-model="cardName" type="text" required />
           </div>
           <div class="*:not-first:mt-2">
-            <Label :for="`number-${formId}`">Card Number</Label>
+            <Label>Card Number</Label>
             <div class="relative">
               <Input
-                :id="`number-${formId}`"
                 v-model="cardNumber"
                 type="text"
                 class="peer pe-9 [direction:inherit]"
@@ -70,9 +68,8 @@ const cvc = ref("");
           </div>
           <div class="flex gap-4">
             <div class="flex-1 space-y-2">
-              <Label :for="`expiry-${formId}`">Expiry date</Label>
+              <Label>Expiry date</Label>
               <Input
-                :id="`expiry-${formId}`"
                 v-model="expiryDate"
                 type="text"
                 class="[direction:inherit]"
@@ -81,9 +78,8 @@ const cvc = ref("");
               />
             </div>
             <div class="flex-1 space-y-2">
-              <Label :for="`cvc-${formId}`">CVC</Label>
+              <Label>CVC</Label>
               <Input
-                :id="`cvc-${formId}`"
                 v-model="cvc"
                 type="text"
                 class="[direction:inherit]"
@@ -94,8 +90,8 @@ const cvc = ref("");
           </div>
         </div>
         <div class="flex items-center gap-2">
-          <Checkbox :id="`primary-${formId}`" v-model="isDefaultPayment" />
-          <Label :for="`primary-${formId}`" class="text-muted-foreground font-normal">
+          <Checkbox v-model="isDefaultPayment" />
+          <Label class="text-muted-foreground font-normal">
             Set as default payment method
           </Label>
         </div>

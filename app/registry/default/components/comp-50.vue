@@ -18,7 +18,6 @@ const cvcCode = ref("");
         <InputGroup class="rounded-b-none shadow-none">
           <InputGroupInput
             class="[direction:inherit]"
-            id="card-number"
             v-model="cardNumber"
             v-maska="'#### #### #### ####'"
             placeholder="0000 0000 0000 0000"
@@ -33,7 +32,6 @@ const cvcCode = ref("");
         <div class="min-w-0 flex-1 focus-within:z-10">
           <Input
             class="rounded-e-none rounded-t-none shadow-none [direction:inherit]"
-            id="expiry-date"
             v-model="expiryDate"
             v-maska="'##/##'"
             placeholder="MM/YY"
@@ -43,7 +41,6 @@ const cvcCode = ref("");
         <div class="-ms-px min-w-0 flex-1 focus-within:z-10">
           <Input
             class="rounded-s-none rounded-t-none shadow-none [direction:inherit]"
-            id="cvc-code"
             v-model="cvcCode"
             v-maska="'###'"
             placeholder="CVC"

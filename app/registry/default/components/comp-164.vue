@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const selectedValue = ref("1");
 
 const items = [
@@ -26,7 +25,6 @@ const items = [
         :data-disabled="item.disabled"
       >
         <RadioGroupItem
-          :id="`${id}-${item.value}`"
           :value="item.value"
           class="sr-only after:absolute after:inset-0"
           :disabled="item.disabled"

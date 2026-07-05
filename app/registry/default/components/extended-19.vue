@@ -3,7 +3,6 @@ import { Button } from "@/registry/default/ui/button";
 import { Card, CardContent } from "@/registry/default/ui/card";
 import { RiBankLine, RiNoCreditCardLine, RiPaypalLine } from "@remixicon/vue";
 
-const id = useId();
 const paymentMethods = [
   {
     name: "Credit Card",
@@ -41,7 +40,6 @@ const paymentMethods = [
           >
             <RadioGroupItem
               :value="paymentMethod.name"
-              :id="`${id}-${paymentMethod.name}`"
               :aria-describedby="`${id}-${paymentMethod.name}-description`"
               class="order-1 after:absolute after:inset-0"
             />

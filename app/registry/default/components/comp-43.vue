@@ -35,12 +35,11 @@ const validate = (value: { start: DateValue; end: DateValue } | null) =>
 </script>
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="date-range-start" class="text-foreground text-sm font-medium">
+    <Label class="text-foreground text-sm font-medium">
       Date range picker (unavailable dates)
     </Label>
     <DateRangePicker
-      id="date-range-start"
-      end-id="date-range-end"
+     
       :isDateUnavailable="isDateUnavailable"
       :validate="validate"
     >

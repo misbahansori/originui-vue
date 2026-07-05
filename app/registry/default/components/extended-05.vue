@@ -34,13 +34,12 @@ import { Label } from "@/registry/default/ui/label";
       </div>
       <form class="flex flex-col gap-4">
         <div class="flex flex-col gap-2">
-          <Label for="password">Password</Label>
-          <Input id="password" placeholder="Enter your password" type="password" required />
+          <Label>Password</Label>
+          <Input placeholder="Enter your password" type="password" required />
         </div>
         <div class="flex flex-col gap-2">
-          <Label for="passwordConfirmation">Password Confirmation</Label>
+          <Label>Password Confirmation</Label>
           <Input
-            id="passwordConfirmation"
             placeholder="Confirm your password"
             type="password"
             required

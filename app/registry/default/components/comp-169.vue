@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
 import { LucideCheck, LucideMinus } from "lucide-vue-next";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const selectedValue = ref("1");
 
 const items = [
@@ -19,7 +18,6 @@ const items = [
     <RadioGroup class="flex gap-3" v-model="selectedValue">
       <label v-for="item in items" :key="`${id}-${item.value}`">
         <RadioGroupItem
-          :id="`${id}-${item.value}`"
           :value="item.value"
           class="peer sr-only after:absolute after:inset-0"
         />

@@ -11,9 +11,9 @@ import { LucideArrowRight, LucideSearch } from "lucide-vue-next";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Search input with icon and button</Label>
+    <Label>Search input with icon and button</Label>
     <InputGroup>
-      <InputGroupInput id="input" placeholder="Search..." type="search" />
+      <InputGroupInput placeholder="Search..." type="search" />
       <InputGroupAddon>
         <LucideSearch :size="16" />
       </InputGroupAddon>

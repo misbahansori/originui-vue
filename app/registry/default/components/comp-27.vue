@@ -27,9 +27,9 @@ watchEffect(() => {
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Search input with loader</Label>
+    <Label>Search input with loader</Label>
     <InputGroup>
-      <InputGroupInput id="input" placeholder="Search..." type="search" v-model="inputValue" />
+      <InputGroupInput placeholder="Search..." type="search" v-model="inputValue" />
       <InputGroupAddon>
         <LucideLoaderCircle
           v-if="isLoading"

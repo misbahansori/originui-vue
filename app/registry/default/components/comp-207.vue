@@ -7,18 +7,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
   <div
     class="[--ring:var(--color-indigo-300)] *:not-first:mt-2 in-[.dark]:[--ring:var(--color-indigo-900)]"
   >
-    <Label :for="id">Select with colored border and ring</Label>
+    <Label>Select with colored border and ring</Label>
     <Select default-value="1">
-      <SelectTrigger :id="id">
+      <SelectTrigger>
         <SelectValue placeholder="Select framework" />
       </SelectTrigger>
       <SelectContent>

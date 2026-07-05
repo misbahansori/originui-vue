@@ -14,7 +14,6 @@ import { Textarea } from "@/registry/default/ui/textarea";
         <h2 class="mb-2 text-sm font-semibold">Send us feedback</h2>
         <form class="space-y-3">
           <Textarea
-            id="feedback"
             placeholder="How can we improve Origin UI?"
             aria-label="Send feedback"
           />

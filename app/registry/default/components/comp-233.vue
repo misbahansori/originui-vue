@@ -23,9 +23,8 @@ import {
   LucideSearch,
   LucideServer,
 } from "lucide-vue-next";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const open = ref(false);
 const value = ref("");
 
@@ -108,11 +107,11 @@ function getSelectedItemIcon() {
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Options with icon and number</Label>
+    <Label>Options with icon and number</Label>
     <Popover v-model:open="open">
       <PopoverTrigger as-child>
         <Button
-          :id="id"
+          id="input"
           variant="outline"
           role="combobox"
           :aria-expanded="open"

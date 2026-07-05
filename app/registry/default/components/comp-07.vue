@@ -5,9 +5,8 @@ import { Label } from "@/registry/default/ui/label";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Input with gray background</Label>
+    <Label>Input with gray background</Label>
     <Input
-      id="input"
       class="bg-muted border-transparent shadow-none"
       placeholder="Email"
       type="email"

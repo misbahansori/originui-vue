@@ -11,8 +11,8 @@ const charactersLeft = computed(() => maxLength - inputValue.value.length);
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Input with characters left</Label>
-    <Input id="input" v-model="inputValue" type="text" :maxlength="maxLength" />
+    <Label>Input with characters left</Label>
+    <Input v-model="inputValue" type="text" :maxlength="maxLength" />
     <p class="text-muted-foreground mt-2 text-xs" role="status" aria-live="polite">
       <span class="tabular-nums">{{ charactersLeft }}</span>
       characters left

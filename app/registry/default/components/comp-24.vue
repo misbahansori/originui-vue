@@ -20,10 +20,9 @@ const handleClearInput = () => {
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Input with clear button</Label>
+    <Label>Input with clear button</Label>
     <InputGroup>
       <InputGroupInput
-        id="input"
         ref="inputRef"
         placeholder="Type something..."
         type="text"

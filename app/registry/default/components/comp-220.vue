@@ -7,9 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
-import { ref, useId } from "vue";
-
-const id = useId();
+import { ref } from "vue";
 
 const options = [
   {
@@ -44,10 +42,9 @@ const selectedOption = ref(options[0]);
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Status select</Label>
+    <Label>Status select</Label>
     <Select v-model="selectedOption">
       <SelectTrigger
-        :id="id"
         class="[&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_svg]:shrink-0"
       >
         <SelectValue placeholder="Select status">

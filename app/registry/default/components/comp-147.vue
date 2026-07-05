@@ -2,11 +2,10 @@
 import { Checkbox } from "@/registry/default/ui/checkbox";
 import { Label } from "@/registry/default/ui/label";
 import { Brush, Eraser, Scissors, SwatchBook } from "lucide-vue-next";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
 type CheckedStates = Record<string, boolean>;
 
-const id = useId();
 const checkedStates = ref<CheckedStates>({
   "1": true,
   "2": false,
@@ -31,13 +30,12 @@ const items = [
     >
       <div class="flex justify-between gap-2">
         <Checkbox
-          :id="`${id}-${item.value}`"
           class="order-1 after:absolute after:inset-0"
           v-model="checkedStates[item.value]"
         />
         <component :is="item.icon" class="opacity-60" :size="16" aria-hidden="true" />
       </div>
-      <Label :for="`${id}-${item.value}`">{{ item.label }}</Label>
+      <Label>{{ item.label }}</Label>
     </div>
   </div>
 </template>

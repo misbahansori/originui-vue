@@ -2,9 +2,8 @@
 import { Label } from "@/registry/default/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
 import { LucideBrush, LucideEraser, LucideScissors, LucideSwatchBook } from "lucide-vue-next";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const selectedValue = ref("1");
 
 const items = [
@@ -24,13 +23,12 @@ const items = [
     >
       <div class="flex justify-between gap-2">
         <RadioGroupItem
-          :id="`${id}-${item.value}`"
           :value="item.value"
           class="order-1 after:absolute after:inset-0"
         />
         <component :is="item.icon" class="opacity-60" :size="16" aria-hidden="true" />
       </div>
-      <Label :for="`${id}-${item.value}`">{{ item.label }}</Label>
+      <Label>{{ item.label }}</Label>
     </div>
   </RadioGroup>
 </template>

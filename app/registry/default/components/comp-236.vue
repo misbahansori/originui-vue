@@ -1,19 +1,17 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
 import { NativeSelect } from "@/registry/default/ui/native-select";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Multiple select (native)</Label>
+    <Label>Multiple select (native)</Label>
     <div
       class="border-input focus-within:border-ring focus-within:ring-ring/50 overflow-hidden rounded-md border focus-within:ring-[3px]"
     >
       <NativeSelect
-        :id="id"
+        id="input"
         :modelValue="['1', '5']"
         multiple
         class="[&_option:checked]:bg-accent h-auto rounded-none border-none px-0 py-0.5 focus-visible:ring-0 [&>option]:px-3 [&>option]:py-1"

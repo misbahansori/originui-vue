@@ -199,10 +199,9 @@ function countItemsInRange(min: number, max: number) {
     <!-- Inputs -->
     <div class="flex items-center justify-between gap-4">
       <div class="*:not-first:mt-1">
-        <Label for="min-price">Min price</Label>
+        <Label>Min price</Label>
         <div class="relative">
           <Input
-            id="min-price"
             class="peer w-full ps-6"
             type="text"
             inputmode="decimal"
@@ -220,10 +219,9 @@ function countItemsInRange(min: number, max: number) {
         </div>
       </div>
       <div class="*:not-first:mt-1">
-        <Label for="max-price">Max price</Label>
+        <Label>Max price</Label>
         <div class="relative">
           <Input
-            id="max-price"
             class="peer w-full ps-6"
             type="text"
             inputmode="decimal"

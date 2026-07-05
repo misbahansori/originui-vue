@@ -15,9 +15,8 @@ import { Label } from "@/registry/default/ui/label";
 import { Textarea } from "@/registry/default/ui/textarea";
 import { useObjectUrl } from "@vueuse/core";
 import { LucideCheck, LucideImagePlus, LucideX } from "lucide-vue-next";
-import { computed, ref, useId } from "vue";
+import { computed, ref } from "vue";
 
-const id = useId();
 const maxLength = 180;
 const bio = ref(
   "Hey, I am Margaret, a web developer who loves turning ideas into amazing websites!",
@@ -154,7 +153,6 @@ const handleAvatarThumbnailClick = () => {
               <div class="flex-1 space-y-2">
                 <Label :htmlFor="`${id}-first-name`">First name</Label>
                 <Input
-                  :id="`${id}-first-name`"
                   placeholder="Matt"
                   defaultValue="Margaret"
                   type="text"
@@ -164,7 +162,6 @@ const handleAvatarThumbnailClick = () => {
               <div class="flex-1 space-y-2">
                 <Label :htmlFor="`${id}-last-name`">Last name</Label>
                 <Input
-                  :id="`${id}-last-name`"
                   placeholder="Welsh"
                   defaultValue="Villard"
                   type="text"
@@ -176,7 +173,6 @@ const handleAvatarThumbnailClick = () => {
               <Label :htmlFor="`${id}-username`">Username</Label>
               <div class="relative">
                 <Input
-                  :id="`${id}-username`"
                   class="peer pe-9"
                   placeholder="Username"
                   defaultValue="margaret-villard-69"
@@ -199,7 +195,6 @@ const handleAvatarThumbnailClick = () => {
                   https://
                 </span>
                 <Input
-                  :id="`${id}-website`"
                   class="-ms-px rounded-s-none shadow-none"
                   placeholder="yourwebsite.com"
                   defaultValue="www.margaret.com"
@@ -210,14 +205,13 @@ const handleAvatarThumbnailClick = () => {
             <div class="*:not-first:mt-2">
               <Label :htmlFor="`${id}-bio`">Biography</Label>
               <Textarea
-                :id="`${id}-bio`"
                 placeholder="Write a few sentences about yourself"
                 v-model="bio"
                 :maxLength="maxLength"
                 :aria-describedby="`${id}-description`"
               />
               <p
-                :id="`${id}-description`"
+                id="input-description"
                 class="text-muted-foreground mt-2 text-right text-xs"
                 role="status"
                 aria-live="polite"

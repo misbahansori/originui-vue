@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const selectedValue = ref("1");
 </script>
 
@@ -13,16 +12,16 @@ const selectedValue = ref("1");
     class="[--primary:var(--color-indigo-500)] [--ring:var(--color-indigo-300)] in-[.dark]:[--primary:var(--color-indigo-500)] in-[.dark]:[--ring:var(--color-indigo-900)]"
   >
     <div class="flex items-center gap-2">
-      <RadioGroupItem value="1" :id="`${id}-1`" />
-      <Label :for="`${id}-1`">Option 1</Label>
+      <RadioGroupItem value="1" />
+      <Label>Option 1</Label>
     </div>
     <div class="flex items-center gap-2">
-      <RadioGroupItem value="2" :id="`${id}-2`" />
-      <Label :for="`${id}-2`">Option 2</Label>
+      <RadioGroupItem value="2" />
+      <Label>Option 2</Label>
     </div>
     <div class="flex items-center gap-2">
-      <RadioGroupItem value="3" :id="`${id}-3`" />
-      <Label :for="`${id}-3`">Option 3</Label>
+      <RadioGroupItem value="3" />
+      <Label>Option 3</Label>
     </div>
   </RadioGroup>
 </template>

@@ -7,9 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
-import { computed, useId } from "vue";
-
-const id = useId();
+import { computed } from "vue";
 
 const timezones = Intl.supportedValuesOf("timeZone");
 
@@ -36,9 +34,9 @@ const formattedTimezones = computed(() => {
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Timezone select</Label>
+    <Label>Timezone select</Label>
     <Select default-value="Europe/London">
-      <SelectTrigger :id="id">
+      <SelectTrigger>
         <SelectValue placeholder="Select timezone" />
       </SelectTrigger>
       <SelectContent>

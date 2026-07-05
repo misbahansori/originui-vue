@@ -18,9 +18,8 @@ import {
 } from "@/registry/default/ui/tooltip";
 import { useClipboard } from "@vueuse/core";
 import { LucideCheck, LucideCopy, LucideUserRoundPlus } from "lucide-vue-next";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const emails = ref(["mark@yourcompany.com", "jane@yourcompany.com", ""]);
 
 const addEmail = () => {
@@ -59,7 +58,6 @@ const { copy, copied } = useClipboard();
               <Input
                 v-for="(email, index) in emails"
                 :key="index"
-                :id="`team-email-${index + 1}`"
                 placeholder="hi@yourcompany.com"
                 type="email"
                 v-model="emails[index]"
@@ -76,11 +74,10 @@ const { copy, copied } = useClipboard();
       <hr class="my-1 border-t" />
 
       <div class="*:not-first:mt-2">
-        <Label :for="`${id}-magic-link`">Invite via magic link</Label>
+        <Label>Invite via magic link</Label>
         <div class="relative">
           <Input
             ref="inputRef"
-            :id="`${id}-magic-link`"
             class="pe-9"
             type="text"
             defaultValue="https://originui.com/refer/87689"

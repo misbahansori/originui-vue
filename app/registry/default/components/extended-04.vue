@@ -34,8 +34,8 @@ import { Label } from "@/registry/default/ui/label";
       </div>
       <form class="flex flex-col gap-4">
         <div class="flex flex-col gap-2">
-          <Label for="email">Email</Label>
-          <Input id="email" placeholder="Enter your email" type="email" required />
+          <Label>Email</Label>
+          <Input placeholder="Enter your email" type="email" required />
         </div>
         <Button type="submit" class="w-full">Send reset link</Button>
         <p class="text-muted-foreground text-sm">

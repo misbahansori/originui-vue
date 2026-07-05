@@ -44,9 +44,8 @@ const inputValue = ref("");
 
       <form class="space-y-5">
         <div class="*:not-first:mt-2">
-          <Label for="project-name">Project name</Label>
+          <Label>Project name</Label>
           <Input
-            id="project-name"
             type="text"
             placeholder="Type Origin UI to confirm"
             v-model="inputValue"

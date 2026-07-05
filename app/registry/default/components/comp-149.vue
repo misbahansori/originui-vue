@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { Checkbox } from "@/registry/default/ui/checkbox";
-import { ref, useId } from "vue";
-
-const id = useId();
+import { ref } from "vue";
 
 interface DayItem {
   value: string;
@@ -41,7 +39,6 @@ const checkedDays = ref<Record<string, boolean>>({
         :data-state="checkedDays[item.value] ? 'checked' : undefined"
       >
         <Checkbox
-          :id="`${id}-${item.value}`"
           :value="item.value"
           class="sr-only after:absolute after:inset-0"
           v-model="checkedDays[item.value]"

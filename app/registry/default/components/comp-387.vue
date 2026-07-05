@@ -11,9 +11,7 @@ import {
 import { RiCodeFill, RiFacebookFill, RiMailLine, RiTwitterXFill } from "@remixicon/vue";
 import { useClipboard } from "@vueuse/core";
 import { LucideCheck, LucideCopy } from "lucide-vue-next";
-import { useId } from "vue";
 
-const id = useId();
 const code = ref("https://originui.com/Avx8HD");
 
 const { copy, copied } = useClipboard();
@@ -45,7 +43,6 @@ const { copy, copied } = useClipboard();
           <div class="space-y-2">
             <div class="relative">
               <Input
-                :id="id"
                 class="pe-9"
                 type="text"
                 v-model="code"

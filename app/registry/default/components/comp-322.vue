@@ -31,7 +31,6 @@ import { Textarea } from "@/registry/default/ui/textarea";
       </DialogHeader>
       <form class="space-y-5">
         <Textarea
-          id="feedback"
           placeholder="How can we improve Origin UI?"
           aria-label="Send feedback"
         />

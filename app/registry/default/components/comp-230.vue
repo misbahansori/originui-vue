@@ -13,9 +13,8 @@ import {
 import { Label } from "@/registry/default/ui/label";
 import { Popover, PopoverContent, PopoverTrigger } from "@/registry/default/ui/popover";
 import { LucideCheck, LucideChevronDown, LucidePlus } from "lucide-vue-next";
-import { computed, ref, useId } from "vue";
+import { computed, ref } from "vue";
 
-const id = useId();
 const open = ref(false);
 const value = ref("originui");
 
@@ -42,11 +41,11 @@ function handleSelect(currentValue: string) {
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Select with search and button</Label>
+    <Label>Select with search and button</Label>
     <Popover v-model:open="open">
       <PopoverTrigger as-child>
         <Button
-          :id="id"
+          id="input"
           variant="outline"
           role="combobox"
           :aria-expanded="open"

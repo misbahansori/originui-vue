@@ -9,9 +9,8 @@ const inputValue = ref("");
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="masked-input">Input with mask</Label>
+    <Label>Input with mask</Label>
     <Input
-      id="masked-input"
       placeholder="AB12 CDE"
       type="text"
       v-model="inputValue"

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { LucideLayoutGrid, LucidePlus, LucideSearch } from "lucide-vue-next";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
 import InfoMenu from "@/registry/default/components/navbar-components/InfoMenu.vue";
 import NotificationMenu from "@/registry/default/components/navbar-components/NotificationMenu.vue";
@@ -10,7 +10,6 @@ import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
 import { Switch } from "@/registry/default/ui/switch";
 
-const id = useId();
 const checked = ref(true);
 </script>
 
@@ -20,7 +19,6 @@ const checked = ref(true);
       <!-- Left side -->
       <div class="relative flex-1">
         <Input
-          :id="`input-${id}`"
           class="peer h-8 w-full max-w-xs ps-8 pe-2"
           placeholder="Search..."
           type="search"
@@ -35,9 +33,9 @@ const checked = ref(true);
       <div class="flex items-center gap-4">
         <!-- Test mode -->
         <div class="inline-flex items-center gap-2 max-md:hidden">
-          <Label :for="`switch-${id}`" class="text-sm font-medium">Test mode</Label>
+          <Label class="text-sm font-medium">Test mode</Label>
           <Switch
-            :id="`switch-${id}`"
+            id="switch"
             v-model="checked"
             class="h-5 w-8 [&_span]:size-4 data-[state=checked]:[&_span]:translate-x-3 data-[state=checked]:[&_span]:rtl:-translate-x-3"
             aria-label="Toggle switch"

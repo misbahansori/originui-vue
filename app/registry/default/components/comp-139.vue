@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { Checkbox } from "@/registry/default/ui/checkbox";
 import { Label } from "@/registry/default/ui/label";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const checked1 = ref(false);
 const checked2 = ref(false);
 const checked3 = ref(false);
@@ -12,16 +11,16 @@ const checked3 = ref(false);
 <template>
   <div class="flex gap-6">
     <div class="flex items-center gap-2">
-      <Checkbox :id="`${id}-a`" v-model="checked1" />
-      <Label :for="`${id}-a`">Vue</Label>
+      <Checkbox v-model="checked1" />
+      <Label>Vue</Label>
     </div>
     <div class="flex items-center gap-2">
-      <Checkbox :id="`${id}-b`" v-model="checked2" />
-      <Label :for="`${id}-b`">Nuxt</Label>
+      <Checkbox v-model="checked2" />
+      <Label>Nuxt</Label>
     </div>
     <div class="flex items-center gap-2">
-      <Checkbox :id="`${id}-c`" v-model="checked3" />
-      <Label :for="`${id}-c`">Astro</Label>
+      <Checkbox v-model="checked3" />
+      <Label>Astro</Label>
     </div>
   </div>
 </template>

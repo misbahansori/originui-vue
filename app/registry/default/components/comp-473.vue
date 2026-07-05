@@ -9,7 +9,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/registry/default/ui/table";
-import { useId } from "vue";
 
 const items = [
   {
@@ -54,7 +53,6 @@ const items = [
   },
 ];
 
-const id = useId();
 </script>
 
 <template>
@@ -64,7 +62,7 @@ const id = useId();
         <TableHeader>
           <TableRow class="hover:bg-transparent">
             <TableHead class="h-11">
-              <Checkbox :id="id" />
+              <Checkbox />
             </TableHead>
             <TableHead class="h-11">Name</TableHead>
             <TableHead class="h-11">Email</TableHead>
@@ -76,7 +74,7 @@ const id = useId();
         <TableBody>
           <TableRow v-for="item in items" :key="item.id">
             <TableCell>
-              <Checkbox :id="`table-checkbox-${item.id}`" />
+              <Checkbox />
             </TableCell>
             <TableCell class="font-medium">{{ item.name }}</TableCell>
             <TableCell>{{ item.email }}</TableCell>

@@ -56,10 +56,9 @@ function getStrengthText(score: number) {
   <div>
     <!-- Password input field with toggle visibility button -->
     <div class="*:not-first:mt-2">
-      <Label for="password-input">Input with password strength indicator</Label>
+      <Label>Input with password strength indicator</Label>
       <InputGroup>
         <InputGroupInput
-          id="password-input"
           placeholder="Password"
           :type="isVisible ? 'text' : 'password'"
           v-model="password"

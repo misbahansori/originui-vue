@@ -90,10 +90,9 @@ const inputValue = computed({
       </CalendarRoot>
       <div class="border-t p-3">
         <div class="flex items-center gap-3">
-          <Label for="time-input" className="text-xs">Enter time</Label>
+          <Label className="text-xs">Enter time</Label>
           <div class="relative grow">
             <Input
-              id="time-input"
               v-model="inputValue"
               type="time"
               step="1"

@@ -6,9 +6,9 @@ import { Label } from "@/registry/default/ui/label";
 <template>
   <div class="*:not-first:mt-2">
     <div class="flex items-center justify-between gap-1">
-      <Label for="input">Input with hint</Label>
+      <Label>Input with hint</Label>
       <span class="text-muted-foreground text-sm">Optional</span>
     </div>
-    <Input id="input" placeholder="Email" type="email" />
+    <Input placeholder="Email" type="email" />
   </div>
 </template>

@@ -7,16 +7,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Select with error</Label>
+    <Label>Select with error</Label>
     <Select default-value="1">
-      <SelectTrigger :id="id" aria-invalid="true">
+      <SelectTrigger aria-invalid="true">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>

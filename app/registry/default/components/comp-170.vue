@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const selectedValue = ref("on");
 </script>
 
@@ -17,7 +16,7 @@ const selectedValue = ref("on");
         class="group-data-[state=on]:text-muted-foreground/70 relative z-10 inline-flex h-full min-w-8 cursor-pointer items-center justify-center px-4 whitespace-nowrap transition-colors select-none"
       >
         Bill Monthly
-        <RadioGroupItem :id="`${id}-1`" value="off" class="sr-only" />
+        <RadioGroupItem value="off" class="sr-only" />
       </label>
       <label
         class="group-data-[state=off]:text-muted-foreground/70 relative z-10 inline-flex h-full min-w-8 cursor-pointer items-center justify-center px-4 whitespace-nowrap transition-colors select-none"
@@ -30,7 +29,7 @@ const selectedValue = ref("on");
             -20%
           </span>
         </span>
-        <RadioGroupItem :id="`${id}-2`" value="on" class="sr-only" />
+        <RadioGroupItem value="on" class="sr-only" />
       </label>
     </RadioGroup>
   </div>

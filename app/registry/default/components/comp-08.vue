@@ -5,7 +5,7 @@ import { Label } from "@/registry/default/ui/label";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Disabled input</Label>
-    <Input id="input" placeholder="Email" type="email" disabled />
+    <Label>Disabled input</Label>
+    <Input placeholder="Email" type="email" disabled />
   </div>
 </template>

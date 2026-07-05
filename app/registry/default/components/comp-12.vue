@@ -10,9 +10,9 @@ import { Label } from "@/registry/default/ui/label";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Input with end inline add-on</Label>
+    <Label>Input with end inline add-on</Label>
     <InputGroup>
-      <InputGroupInput id="input" placeholder="google" type="text" />
+      <InputGroupInput placeholder="google" type="text" />
       <InputGroupAddon align="inline-end">
         <InputGroupText class="font-normal">.com</InputGroupText>
       </InputGroupAddon>

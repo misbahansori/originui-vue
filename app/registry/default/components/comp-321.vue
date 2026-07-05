@@ -46,7 +46,6 @@ import { LucideMail } from "lucide-vue-next";
         <div class="*:not-first:mt-2">
           <div class="relative">
             <Input
-              id="dialog-subscribe"
               class="peer ps-9"
               placeholder="hi@yourcompany.com"
               type="email"

@@ -11,9 +11,8 @@ import {
 import { Label } from "@/registry/default/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
 import { LucideCheck, LucideRefreshCcw } from "lucide-vue-next";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const selectedPlan = ref("2");
 
 const plans = [
@@ -90,7 +89,6 @@ const features = [
           >
             <RadioGroupItem
               :value="plan.id"
-              :id="`${id}-${plan.id}`"
               :aria-describedby="`${id}-${plan.id}-description`"
               class="order-1 after:absolute after:inset-0"
             />

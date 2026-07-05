@@ -35,21 +35,20 @@ import { RiGithubFill, RiGoogleFill } from "@remixicon/vue";
       </div>
       <form class="flex flex-col gap-4">
         <div class="flex flex-col gap-2">
-          <Label for="name">Name</Label>
-          <Input id="name" placeholder="Enter your name" required />
+          <Label>Name</Label>
+          <Input placeholder="Enter your name" required />
         </div>
         <div class="flex flex-col gap-2">
-          <Label for="email">Email</Label>
-          <Input id="email" placeholder="Enter your email" type="email" required />
+          <Label>Email</Label>
+          <Input placeholder="Enter your email" type="email" required />
         </div>
         <div class="flex flex-col gap-2">
-          <Label for="password">Password</Label>
-          <Input id="password" placeholder="Enter your password" type="password" required />
+          <Label>Password</Label>
+          <Input placeholder="Enter your password" type="password" required />
         </div>
         <div class="flex flex-col gap-2">
-          <Label for="passwordConfirmation">Password Confirmation</Label>
+          <Label>Password Confirmation</Label>
           <Input
-            id="passwordConfirmation"
             placeholder="Confirm your password"
             type="password"
             required

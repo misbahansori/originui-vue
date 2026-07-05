@@ -5,8 +5,8 @@ import { Label } from "@/registry/default/ui/label";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input" class="text-foreground text-sm font-medium">Date and time input</Label>
-    <DateField id="input" granularity="minute" :hourCycle="24" v-slot="{ segments }">
+    <Label class="text-foreground text-sm font-medium">Date and time input</Label>
+    <DateField granularity="minute" :hourCycle="24" v-slot="{ segments }">
       <template v-for="item in segments" :key="item.part">
         <DateFieldInput :part="item.part">
           {{ item.value }}

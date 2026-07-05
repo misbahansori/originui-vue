@@ -5,10 +5,10 @@ import { Label } from "@/registry/default/ui/label";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">
+    <Label>
       Required input
       <span class="text-destructive">*</span>
     </Label>
-    <Input id="input" placeholder="Email" type="email" required />
+    <Input placeholder="Email" type="email" required />
   </div>
 </template>

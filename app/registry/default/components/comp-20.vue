@@ -8,9 +8,9 @@ import { LucideDownload } from "lucide-vue-next";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Input with end icon button</Label>
+    <Label>Input with end icon button</Label>
     <ButtonGroup class="w-full">
-      <Input id="input" placeholder="Email" type="email" />
+      <Input placeholder="Email" type="email" />
       <Button
         class="border-input bg-background text-muted-foreground/80 hover:bg-accent hover:text-accent-foreground focus-visible:border-ring focus-visible:ring-ring/50 inline-flex w-9 items-center justify-center rounded-e-md border text-sm transition-[color,box-shadow] outline-none focus:z-10 focus-visible:ring-[3px] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
         aria-label="Subscribe"

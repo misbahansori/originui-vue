@@ -5,9 +5,8 @@ import { Label } from "@/registry/default/ui/label";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Input with error</Label>
+    <Label>Input with error</Label>
     <Input
-      id="input"
       class="peer"
       placeholder="Email"
       type="email"

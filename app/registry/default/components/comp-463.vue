@@ -21,9 +21,7 @@ import {
   LucideChevronLeft,
   LucideChevronRight,
 } from "lucide-vue-next";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
@@ -37,9 +35,9 @@ const id = useId();
   >
     <PaginationContent class="flex w-full items-center justify-between gap-1">
       <div class="flex items-center gap-3">
-        <Label :for="id">Rows per page</Label>
+        <Label>Rows per page</Label>
         <Select defaultValue="10">
-          <SelectTrigger :id="id" class="w-fit whitespace-nowrap">
+          <SelectTrigger class="w-fit whitespace-nowrap">
             <SelectValue />
           </SelectTrigger>
           <SelectContent

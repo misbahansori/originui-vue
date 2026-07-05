@@ -6,7 +6,6 @@ import {
   LucideLayers,
   LucideUsers,
 } from "lucide-vue-next";
-import { useId } from "vue";
 
 import Logo from "@/registry/default/components/navbar-components/Logo.vue";
 import ThemeToggle from "@/registry/default/components/navbar-components/ThemeToggle.vue";
@@ -50,7 +49,6 @@ const languages = [
   { value: "ja", label: "Ja" },
 ];
 
-const id = useId();
 </script>
 
 <template>
@@ -152,7 +150,6 @@ const id = useId();
         <!-- Language selector -->
         <Select default-value="en">
           <SelectTrigger
-            :id="`language-${id}`"
             class="[&>svg]:text-muted-foreground/80 hover:bg-accent hover:text-accent-foreground h-8 border-none px-2 shadow-none [&>svg]:shrink-0"
             aria-label="Select language"
           >

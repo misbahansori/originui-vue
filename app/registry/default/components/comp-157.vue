@@ -2,9 +2,8 @@
 import { Label } from "@/registry/default/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
 import { LucideStar } from "lucide-vue-next";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const selectedValue = ref("all");
 
 const starRatings = [
@@ -20,8 +19,8 @@ const starRatings = [
 <template>
   <RadioGroup v-model="selectedValue">
     <div v-for="(rating, index) in starRatings" :key="rating.value" class="flex items-center gap-2">
-      <RadioGroupItem :value="rating.value" :id="`${id}-${index + 1}`" />
-      <Label :for="`${id}-${index + 1}`" class="inline-flex items-center gap-1">
+      <RadioGroupItem :value="rating.value" />
+      <Label class="inline-flex items-center gap-1">
         <template v-if="rating.stars > 0">
           <span class="inline-flex items-center text-amber-500" aria-hidden="true">
             <LucideStar

@@ -6,9 +6,9 @@ import { Label } from "@/registry/default/ui/label";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Search input with &lt;kbd&gt;</Label>
+    <Label>Search input with &lt;kbd&gt;</Label>
     <InputGroup>
-      <InputGroupInput id="input" placeholder="Search..." type="search" />
+      <InputGroupInput placeholder="Search..." type="search" />
       <InputGroupAddon align="inline-end">
         <Kbd class="text-muted-foreground/70 bg-background border text-[0.625rem]">⌘K</Kbd>
       </InputGroupAddon>

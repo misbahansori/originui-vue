@@ -9,9 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
-import { ref, useId } from "vue";
-
-const id = useId();
+import { ref } from "vue";
 
 interface Option {
   continent: string;
@@ -71,10 +69,9 @@ const selectedOption = ref<Country | undefined>(options[0]?.items[0]);
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Options with flag</Label>
+    <Label>Options with flag</Label>
     <Select v-model="selectedOption">
       <SelectTrigger
-        :id="id"
         class="[&>span_svg]:text-muted-foreground/80 [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_svg]:shrink-0"
       >
         <SelectValue placeholder="Select country">

@@ -5,8 +5,8 @@ import { Label } from "@/registry/default/ui/label";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input" class="text-foreground text-sm font-medium">Date input</Label>
-    <DateField id="input" v-slot="{ segments }">
+    <Label class="text-foreground text-sm font-medium">Date input</Label>
+    <DateField v-slot="{ segments }">
       <template v-for="item in segments" :key="item.part">
         <DateFieldInput :part="item.part">
           {{ item.value }}

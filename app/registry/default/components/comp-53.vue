@@ -19,9 +19,9 @@ const { copy, copied } = useClipboard();
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="copy-input">Copy to clipboard</Label>
+    <Label>Copy to clipboard</Label>
     <InputGroup>
-      <InputGroupInput id="copy-input" type="text" v-model="inputValue" readonly />
+      <InputGroupInput type="text" v-model="inputValue" readonly />
       <InputGroupAddon align="inline-end">
         <TooltipProvider>
           <Tooltip :delay-duration="0">

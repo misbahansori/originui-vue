@@ -7,7 +7,7 @@ import { Label } from "@/registry/default/ui/label";
   <div
     class="[--ring:var(--color-indigo-300)] *:not-first:mt-2 in-[.dark]:[--ring:var(--color-indigo-900)]"
   >
-    <Label for="input">Input with colored border and ring</Label>
-    <Input id="input" placeholder="Email" type="email" />
+    <Label>Input with colored border and ring</Label>
+    <Input placeholder="Email" type="email" />
   </div>
 </template>

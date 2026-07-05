@@ -15,7 +15,7 @@ const tags = ref<string[]>(["red", "green"]);
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Input with inner tags</Label>
+    <Label>Input with inner tags</Label>
     <TagsInputRoot
       v-model="tags"
       class="border-input bg-background focus-within:border-ring focus-within:ring-ring/50 flex flex-wrap items-center gap-1 rounded-md border p-1 shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px]"

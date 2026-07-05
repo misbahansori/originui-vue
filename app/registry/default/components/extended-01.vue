@@ -6,7 +6,6 @@ import { Label } from "@/registry/default/ui/label";
 import { RiGithubFill, RiGoogleFill } from "@remixicon/vue";
 import { LucideAtSign, LucideEye, LucideEyeOff, LucideLockKeyhole } from "lucide-vue-next";
 
-const id = useId();
 const isVisible = ref(false);
 
 const toggleVisibility = () => {
@@ -44,10 +43,9 @@ const toggleVisibility = () => {
       </div>
       <form class="flex flex-col gap-4">
         <div class="flex flex-col gap-2">
-          <Label :for="`${id}-email`">Email</Label>
+          <Label>Email</Label>
           <div class="relative">
             <Input
-              :id="`${id}-email`"
               placeholder="hi@yourcompany.com"
               type="email"
               required
@@ -61,10 +59,9 @@ const toggleVisibility = () => {
           </div>
         </div>
         <div class="flex flex-col gap-2">
-          <Label :for="`${id}-password`">Password</Label>
+          <Label>Password</Label>
           <div class="relative">
             <Input
-              :id="`${id}-password`"
               placeholder="Enter your password"
               :type="isVisible ? 'text' : 'password'"
               required
@@ -90,8 +87,8 @@ const toggleVisibility = () => {
         </div>
         <div class="flex justify-between gap-2">
           <div class="flex items-center gap-2">
-            <Checkbox :id="`${id}-remember`" />
-            <Label :for="`${id}-remember`" class="font-normal">Remember me</Label>
+            <Checkbox />
+            <Label class="font-normal">Remember me</Label>
           </div>
           <a class="text-sm font-medium hover:underline" href="/forgot-password">
             Forgot password?

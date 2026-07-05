@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { Checkbox } from "@/registry/default/ui/checkbox";
 import { Label } from "@/registry/default/ui/label";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const checked = ref(false);
 </script>
 
@@ -12,7 +11,6 @@ const checked = ref(false);
     class="border-input has-data-[state=checked]:border-primary/50 relative flex w-full items-start gap-2 rounded-md border p-4 shadow-xs outline-none"
   >
     <Checkbox
-      :id="id"
       class="order-1 after:absolute after:inset-0"
       :aria-describedby="`${id}-description`"
       v-model="checked"
@@ -38,13 +36,13 @@ const checked = ref(false);
         />
       </svg>
       <div class="grid gap-2">
-        <Label :for="id">
+        <Label>
           Label
           <span class="text-muted-foreground text-xs leading-[inherit] font-normal">
             (Sublabel)
           </span>
         </Label>
-        <p :id="`${id}-description`" class="text-muted-foreground text-xs">
+        <p id="input-description" class="text-muted-foreground text-xs">
           A short description goes here.
         </p>
       </div>

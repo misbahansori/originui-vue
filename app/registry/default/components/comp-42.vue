@@ -11,10 +11,10 @@ import { Label } from "@/registry/default/ui/label";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="date-range-start" class="text-foreground text-sm font-medium">
+    <Label class="text-foreground text-sm font-medium">
       Date range picker
     </Label>
-    <DateRangePicker id="date-range-start" end-id="date-range-end">
+    <DateRangePicker>
       <DateRangePickerField v-slot="{ segments }">
         <DateRangePickerInput
           v-for="item in segments.start"

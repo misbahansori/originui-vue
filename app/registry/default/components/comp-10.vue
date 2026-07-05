@@ -6,9 +6,9 @@ import { LucideMail } from "lucide-vue-next";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Input with end icon</Label>
+    <Label>Input with end icon</Label>
     <InputGroup>
-      <InputGroupInput id="input" placeholder="Email" type="email" />
+      <InputGroupInput placeholder="Email" type="email" />
       <InputGroupAddon align="inline-end">
         <LucideMail :size="16" aria-hidden="true" />
       </InputGroupAddon>

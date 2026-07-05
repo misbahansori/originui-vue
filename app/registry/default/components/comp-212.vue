@@ -7,17 +7,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Select with auto-width</Label>
+    <Label>Select with auto-width</Label>
     <Select default-value="1">
       <!-- Adjust the min-width to fit the longest option -->
-      <SelectTrigger :id="id" class="w-auto max-w-full min-w-48">
+      <SelectTrigger class="w-auto max-w-full min-w-48">
         <SelectValue placeholder="Select framework" />
       </SelectTrigger>
       <SelectContent>

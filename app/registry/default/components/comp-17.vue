@@ -7,7 +7,7 @@ import { NativeSelect } from "@/registry/default/ui/native-select";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Input with start select</Label>
+    <Label>Input with start select</Label>
     <ButtonGroup>
       <NativeSelect
         modelValue="https://"
@@ -21,7 +21,6 @@ import { NativeSelect } from "@/registry/default/ui/native-select";
         <option value="wss://">wss://</option>
       </NativeSelect>
       <Input
-        id="input"
         class="-ms-px rounded-s-none shadow-none focus-visible:z-10"
         placeholder="192.168.1.1"
         type="text"

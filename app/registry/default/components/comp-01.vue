@@ -5,7 +5,7 @@ import { Label } from "@/registry/default/ui/label";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Simple input</Label>
-    <Input id="input" placeholder="Email" type="email" />
+    <Label>Simple input</Label>
+    <Input placeholder="Email" type="email" />
   </div>
 </template>

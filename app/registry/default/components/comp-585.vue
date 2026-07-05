@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { LucideHash, LucideHome, LucideMail, LucideSearch, LucideUsers } from "lucide-vue-next";
-import { useId } from "vue";
 
 import Logo from "@/registry/default/components/navbar-components/Logo.vue";
 import NotificationMenu from "@/registry/default/components/navbar-components/NotificationMenu.vue";
@@ -24,7 +23,6 @@ const navigationLinks = [
   { href: "#", label: "Groups", icon: LucideUsers },
 ];
 
-const id = useId();
 </script>
 
 <template>
@@ -91,7 +89,7 @@ const id = useId();
           </a>
           <!-- Search form -->
           <div class="relative">
-            <Input :id="id" class="peer h-8 ps-8 pe-2" placeholder="Search..." type="search" />
+            <Input class="peer h-8 ps-8 pe-2" placeholder="Search..." type="search" />
             <div
               class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-2 peer-disabled:opacity-50"
             >

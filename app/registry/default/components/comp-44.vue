@@ -8,8 +8,8 @@ const value = ref(["", "", "", "", ""]);
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="pin-input" class="text-foreground text-sm font-medium">OTP input single</Label>
-    <PinInput id="pin-input" v-model="value">
+    <Label class="text-foreground text-sm font-medium">OTP input single</Label>
+    <PinInput v-model="value">
       <PinInputGroup>
         <PinInputSlot
           v-for="(id, index) in 5"

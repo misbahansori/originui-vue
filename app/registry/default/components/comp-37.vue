@@ -8,7 +8,7 @@ const time = ref("");
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input" class="text-foreground text-sm font-medium">Time input</Label>
+    <Label class="text-foreground text-sm font-medium">Time input</Label>
     <TimeField id="input" v-slot="{ segments }">
       <TimeFieldInput v-for="item in segments" :part="item.part">
         {{ item.value }}

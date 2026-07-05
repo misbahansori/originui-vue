@@ -39,7 +39,7 @@ import {
         <LucideChevronLeft aria-hidden="true" class="size-4" />
       </PaginationPrevious>
       <Select defaultValue="10" aria-label="Results per page">
-        <SelectTrigger id="results-per-page" class="w-fit whitespace-break-spaces">
+        <SelectTrigger class="w-fit whitespace-break-spaces">
           <SelectValue />
         </SelectTrigger>
         <SelectContent>

@@ -11,9 +11,7 @@ import {
   PaginationPrevious,
 } from "@/registry/default/ui/pagination";
 import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
@@ -43,8 +41,8 @@ const id = useId();
         </PaginationNext>
       </div>
       <div class="flex items-center gap-3">
-        <Label :for="id" class="whitespace-nowrap">Go to page</Label>
-        <Input :id="id" type="text" class="w-14" :defaultValue="page" />
+        <Label class="whitespace-nowrap">Go to page</Label>
+        <Input type="text" class="w-14" :defaultValue="page" />
       </div>
     </PaginationContent>
   </Pagination>

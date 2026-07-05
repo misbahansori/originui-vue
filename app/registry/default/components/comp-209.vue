@@ -7,16 +7,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Select with gray background</Label>
+    <Label>Select with gray background</Label>
     <Select default-value="2">
-      <SelectTrigger :id="id" class="bg-muted border-transparent shadow-none">
+      <SelectTrigger class="bg-muted border-transparent shadow-none">
         <SelectValue placeholder="Select framework" />
       </SelectTrigger>
       <SelectContent>

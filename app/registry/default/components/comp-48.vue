@@ -9,9 +9,8 @@ const expiryDate = ref("");
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="expiry-date">Expiry date</Label>
+    <Label>Expiry date</Label>
     <Input
-      id="expiry-date"
       v-model="expiryDate"
       class="[direction:inherit]"
       placeholder="MM/YY"

@@ -8,8 +8,8 @@ const otpValues = ref(["", "", "", ""]);
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="pin-input">OTP input (spaced)</Label>
-    <PinInput id="pin-input" class="flex items-center gap-3">
+    <Label>OTP input (spaced)</Label>
+    <PinInput class="flex items-center gap-3">
       <PinInputGroup class="flex items-center gap-3">
         <PinInputSlot
           v-for="(id, index) in otpValues"

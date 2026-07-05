@@ -7,19 +7,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">
+    <Label>
       Required select
       <span class="text-destructive">*</span>
     </Label>
     <Select default-value="4" required>
-      <SelectTrigger :id="id">
+      <SelectTrigger>
         <SelectValue placeholder="Select framework" />
       </SelectTrigger>
       <SelectContent>

@@ -7,16 +7,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Select with placeholder</Label>
+    <Label>Select with placeholder</Label>
     <Select>
-      <SelectTrigger :id="id">
+      <SelectTrigger>
         <SelectValue placeholder="Select framework" />
       </SelectTrigger>
       <SelectContent>

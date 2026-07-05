@@ -9,16 +9,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Select with options groups</Label>
+    <Label>Select with options groups</Label>
     <Select default-value="1">
-      <SelectTrigger :id="id">
+      <SelectTrigger>
         <SelectValue placeholder="Select framework" />
       </SelectTrigger>
       <SelectContent>

@@ -6,9 +6,9 @@ import { Label } from "@/registry/default/ui/label";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Input with button</Label>
+    <Label>Input with button</Label>
     <div class="flex gap-2">
-      <Input id="input" class="flex-1" placeholder="Email" type="email" />
+      <Input class="flex-1" placeholder="Email" type="email" />
       <Button variant="outline">Send</Button>
     </div>
   </div>

@@ -9,9 +9,8 @@ const inputValue = ref("");
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="timestamp-input">Timestamp</Label>
+    <Label>Timestamp</Label>
     <Input
-      id="timestamp-input"
       placeholder="00:00:00"
       type="text"
       v-model="inputValue"

@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const selectedValue = ref("1");
 
 const items = [
@@ -24,11 +23,10 @@ const items = [
       >
         <div class="flex items-center gap-2">
           <RadioGroupItem
-            :id="`${id}-${item.value}`"
             :value="item.value"
             class="after:absolute after:inset-0"
           />
-          <Label :for="`${id}-${item.value}`">{{ item.label }}</Label>
+          <Label>{{ item.label }}</Label>
         </div>
       </div>
     </RadioGroup>

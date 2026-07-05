@@ -10,9 +10,7 @@ import {
 } from "@/registry/default/ui/dialog";
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
@@ -48,17 +46,16 @@ const id = useId();
       <form class="space-y-5">
         <div class="space-y-4">
           <div class="*:not-first:mt-2">
-            <Label :for="`${id}-name`">Full name</Label>
-            <Input :id="`${id}-name`" placeholder="Matt Welsh" type="text" required />
+            <Label>Full name</Label>
+            <Input placeholder="Matt Welsh" type="text" required />
           </div>
           <div class="*:not-first:mt-2">
-            <Label :for="`${id}-email`">Email</Label>
-            <Input :id="`${id}-email`" placeholder="hi@yourcompany.com" type="email" required />
+            <Label>Email</Label>
+            <Input placeholder="hi@yourcompany.com" type="email" required />
           </div>
           <div class="*:not-first:mt-2">
-            <Label :for="`${id}-password`">Password</Label>
+            <Label>Password</Label>
             <Input
-              :id="`${id}-password`"
               placeholder="Enter your password"
               type="password"
               required

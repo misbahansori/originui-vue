@@ -11,9 +11,9 @@ import { LucideSend } from "lucide-vue-next";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Input with end inline button</Label>
+    <Label>Input with end inline button</Label>
     <InputGroup>
-      <InputGroupInput id="input" placeholder="Email" type="email" />
+      <InputGroupInput placeholder="Email" type="email" />
       <InputGroupAddon align="inline-end">
         <InputGroupButton size="icon-sm" aria-label="Subscribe">
           <LucideSend :size="16" aria-hidden="true" />

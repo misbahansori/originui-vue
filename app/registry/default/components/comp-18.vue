@@ -7,9 +7,9 @@ import { NativeSelect } from "@/registry/default/ui/native-select";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Input with end select</Label>
+    <Label>Input with end select</Label>
     <ButtonGroup class="w-full">
-      <Input id="input" class="-me-px" placeholder="google" type="text" />
+      <Input class="-me-px" placeholder="google" type="text" />
       <NativeSelect
         modelValue=".com"
         class="text-muted-foreground hover:text-foreground field-sizing-content w-fit rounded-s-none shadow-none"

@@ -10,7 +10,6 @@ const props = defineProps<{
   column: Column<any, unknown>;
 }>();
 
-const id = useId();
 const columnFilterValue = computed(() => props.column.getFilterValue());
 const filterVariant = computed(
   () => (props.column.columnDef.meta as ColumnMeta | undefined)?.filterVariant,
@@ -40,7 +39,6 @@ const sortedUniqueValues = computed(() => {
       <Label>{{ columnHeader }}</Label>
       <div class="flex">
         <Input
-          :id="`${id}-range-1`"
           class="flex-1 rounded-e-none [-moz-appearance:_textfield] focus:z-10 [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
           :model-value="(columnFilterValue as [number, number])?.[0] ?? ''"
           @update:model-value="
@@ -55,7 +53,6 @@ const sortedUniqueValues = computed(() => {
           :aria-label="`${columnHeader} min`"
         />
         <Input
-          :id="`${id}-range-2`"
           class="-ms-px flex-1 rounded-s-none [-moz-appearance:_textfield] focus:z-10 [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
           :model-value="(columnFilterValue as [number, number])?.[1] ?? ''"
           @update:model-value="
@@ -73,7 +70,7 @@ const sortedUniqueValues = computed(() => {
     </template>
 
     <template v-else-if="filterVariant === 'select'">
-      <Label :for="`${id}-select`">{{ columnHeader }}</Label>
+      <Label>{{ columnHeader }}</Label>
       <Select
         :model-value="columnFilterValue?.toString() ?? 'all'"
         @update:model-value="
@@ -82,7 +79,7 @@ const sortedUniqueValues = computed(() => {
           }
         "
       >
-        <SelectTrigger :id="`${id}-select`">
+        <SelectTrigger>
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
@@ -101,10 +98,9 @@ const sortedUniqueValues = computed(() => {
     </template>
 
     <template v-else>
-      <Label :for="`${id}-input`">{{ columnHeader }}</Label>
+      <Label>{{ columnHeader }}</Label>
       <div class="relative">
         <Input
-          :id="`${id}-input`"
           class="peer ps-9"
           :model-value="(columnFilterValue as string) ?? ''"
           @update:model-value="(value: string | number) => column.setFilterValue(value)"

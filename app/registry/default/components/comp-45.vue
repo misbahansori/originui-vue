@@ -9,9 +9,8 @@ const value = ref(["", "", "", "", "", ""]);
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="pin-input">OTP input double</Label>
+    <Label>OTP input double</Label>
     <PinInput
-      id="pin-input"
       v-model="value"
       class="flex items-center gap-3 has-disabled:opacity-50"
     >

@@ -10,9 +10,9 @@ import { Label } from "@/registry/default/ui/label";
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="input">Input with inline add-ons</Label>
+    <Label>Input with inline add-ons</Label>
     <InputGroup>
-      <InputGroupInput id="input" placeholder="0.00" type="text" />
+      <InputGroupInput placeholder="0.00" type="text" />
       <InputGroupAddon>
         <InputGroupText class="font-normal">€</InputGroupText>
       </InputGroupAddon>

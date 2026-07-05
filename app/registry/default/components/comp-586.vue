@@ -1,13 +1,11 @@
 <script setup lang="ts">
 import { LucideMic, LucideSearch } from "lucide-vue-next";
-import { useId } from "vue";
 
 import Logo from "@/registry/default/components/navbar-components/Logo.vue";
 import ThemeToggle from "@/registry/default/components/navbar-components/ThemeToggle.vue";
 import { Button } from "@/registry/default/ui/button";
 import { Input } from "@/registry/default/ui/input";
 
-const id = useId();
 </script>
 
 <template>
@@ -23,7 +21,7 @@ const id = useId();
       <div class="grow max-sm:hidden">
         <!-- Search form -->
         <div class="relative mx-auto w-full max-w-xs">
-          <Input :id="id" class="peer h-8 px-8" placeholder="Search..." type="search" />
+          <Input class="peer h-8 px-8" placeholder="Search..." type="search" />
           <div
             class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-2 peer-disabled:opacity-50"
           >

@@ -10,10 +10,9 @@ const cardNumber = ref("");
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="card-number">Card Number</Label>
+    <Label>Card Number</Label>
     <InputGroup>
       <InputGroupInput
-        id="card-number"
         v-model="cardNumber"
         class="[direction:inherit]"
         placeholder="0000 0000 0000 0000"

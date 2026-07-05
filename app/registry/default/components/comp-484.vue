@@ -314,7 +314,7 @@ const table = useVueTable({
             :model-value="table.getState().pagination.pageSize.toString()"
             @update:model-value="(value) => table.setPageSize(Number(value))"
           >
-            <SelectTrigger id="results-per-page" class="w-fit whitespace-break-spaces">
+            <SelectTrigger class="w-fit whitespace-break-spaces">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>

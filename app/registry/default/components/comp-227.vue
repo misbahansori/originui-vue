@@ -9,9 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/default/ui/select";
-import { ref, useId } from "vue";
-
-const id = useId();
+import { ref } from "vue";
 
 const options = [
   {
@@ -39,10 +37,9 @@ const selectedOption = ref(options[0]);
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Options with placeholder avatar</Label>
+    <Label>Options with placeholder avatar</Label>
     <Select v-model="selectedOption">
       <SelectTrigger
-        :id="id"
         class="ps-2 [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_[data-square]]:shrink-0"
       >
         <SelectValue placeholder="Select framework">

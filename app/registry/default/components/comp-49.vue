@@ -9,9 +9,8 @@ const cvcCode = ref("");
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="cvc-code">Code</Label>
+    <Label>Code</Label>
     <Input
-      id="cvc-code"
       v-model="cvcCode"
       class="[direction:inherit]"
       placeholder="CVC"

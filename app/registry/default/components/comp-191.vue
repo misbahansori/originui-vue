@@ -2,16 +2,14 @@
 import { Label } from "@/registry/default/ui/label";
 import { NativeSelect } from "@/registry/default/ui/native-select";
 import { LucideClock } from "lucide-vue-next";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Select with icon (native)</Label>
+    <Label>Select with icon (native)</Label>
     <div class="group relative">
-      <NativeSelect :id="id" modelValue="1" class="ps-9">
+      <NativeSelect id="input" modelValue="1" class="ps-9">
         <option value="1">00:00 AM - 11:59 PM</option>
         <option value="2">01:00 AM - 12:59 PM</option>
         <option value="3">02:00 AM - 01:59 PM</option>

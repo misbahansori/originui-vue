@@ -52,7 +52,7 @@ import { LucideChevronLeft, LucideChevronRight } from "lucide-vue-next";
       </div>
       <div className="flex flex-1 justify-end">
         <Select defaultValue="10" aria-label="Results per page">
-          <SelectTrigger id="results-per-page" class="w-fit whitespace-break-spaces">
+          <SelectTrigger class="w-fit whitespace-break-spaces">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>

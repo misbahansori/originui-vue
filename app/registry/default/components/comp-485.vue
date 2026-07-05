@@ -433,13 +433,12 @@ const RowActions = ({ row }: { row: Row<Item> }) => {
                   class="flex items-center gap-2"
                 >
                   <Checkbox
-                    :id="`status-${i}`"
                     :model-value="selectedStatuses.includes(value)"
                     @update:model-value="
                       (checked: boolean | 'indeterminate') => handleStatusChange(!!checked, value)
                     "
                   />
-                  <Label :for="`status-${i}`" class="flex grow justify-between gap-2 font-normal">
+                  <Label class="flex grow justify-between gap-2 font-normal">
                     {{ value }}
                     <span class="text-muted-foreground ms-2 text-xs">
                       {{ statusCounts.get(value) }}

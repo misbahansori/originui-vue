@@ -8,9 +8,8 @@ const inputValue = ref("This is a read-only input");
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label for="readonly-input">Read-only input</Label>
+    <Label>Read-only input</Label>
     <Input
-      id="readonly-input"
       class="read-only:bg-muted"
       v-model="inputValue"
       readonly
