@@ -14,7 +14,7 @@
     },
     {
       "path": "ui/slider/index.ts",
-      "content": "export { default as Slider } from \"./Slider.vue\";\n",
+      "content": "export { default as Slider } from \"./Slider.vue\";\nexport { default as SliderWithInput } from \"./SliderWithInput.vue\";\n",
       "type": "registry:ui"
     }
   ],
