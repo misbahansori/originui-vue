@@ -29,7 +29,7 @@ const value = ref(99);
         <NumberFieldInput
           class="focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
         />
-        <div class="flex h-[calc(100%+2px)] flex-col absolute right-0 inset-y-0">
+        <div class="absolute inset-y-0 right-0 flex h-[calc(100%+2px)] flex-col">
           <NumberFieldIncrement class="m-0 -me-px h-1/2 w-6 flex-1 rounded-none p-0">
             <LucideChevronUp :size="12" aria-hidden="true" />
           </NumberFieldIncrement>
