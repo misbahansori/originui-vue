@@ -1,16 +1,15 @@
 <script setup lang="ts">
 import { Label } from "@/registry/default/ui/label";
 import { PinInput, PinInputGroup, PinInputSlot } from "@/registry/default/ui/pin-input";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const inputId = useId();
 const otpValues = ref(["", "", "", ""]);
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="inputId">OTP input (spaced)</Label>
-    <PinInput :id="inputId" class="flex items-center gap-3">
+    <Label for="pin-input">OTP input (spaced)</Label>
+    <PinInput id="pin-input" class="flex items-center gap-3">
       <PinInputGroup class="flex items-center gap-3">
         <PinInputSlot
           v-for="(id, index) in otpValues"

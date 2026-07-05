@@ -8,10 +8,6 @@ import {
 } from "@/registry/default/ui/date-range-picker";
 import { Label } from "@/registry/default/ui/label";
 import { getLocalTimeZone, today, type DateValue } from "@internationalized/date";
-import { useId } from "vue";
-
-const startId = useId();
-const endId = useId();
 
 const now = today(getLocalTimeZone());
 
@@ -39,12 +35,12 @@ const validate = (value: { start: DateValue; end: DateValue } | null) =>
 </script>
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="startId" class="text-foreground text-sm font-medium">
+    <Label for="date-range-start" class="text-foreground text-sm font-medium">
       Date range picker (unavailable dates)
     </Label>
     <DateRangePicker
-      :id="startId"
-      :end-id="endId"
+      id="date-range-start"
+      end-id="date-range-end"
       :isDateUnavailable="isDateUnavailable"
       :validate="validate"
     >

@@ -6,7 +6,7 @@ import {
   NumberFieldIncrement,
   NumberFieldInput,
 } from "@/registry/default/ui/number-field";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
 const value = ref(2048);
 </script>

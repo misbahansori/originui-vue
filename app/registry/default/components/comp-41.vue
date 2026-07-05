@@ -8,16 +8,14 @@ import {
 } from "@/registry/default/ui/date-picker";
 import { Label } from "@/registry/default/ui/label";
 import { getLocalTimeZone, today } from "@internationalized/date";
-import { useId } from "vue";
 
 const now = today(getLocalTimeZone());
 
-const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id" class="text-foreground text-sm font-medium">Date picker</Label>
+    <Label for="input" class="text-foreground text-sm font-medium">Date picker</Label>
 
     <DatePicker id="birthday" :is-date-unavailable="(date) => date.day === 19">
       <DatePickerField v-slot="{ segments }">

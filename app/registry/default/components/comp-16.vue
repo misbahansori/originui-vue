@@ -6,16 +6,14 @@ import {
   InputGroupText,
 } from "@/registry/default/ui/input-group";
 import { Label } from "@/registry/default/ui/label";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Input with inline start and end add-on</Label>
+    <Label for="input">Input with inline start and end add-on</Label>
     <InputGroup>
-      <InputGroupInput :id="id" placeholder="0.00" type="text" />
+      <InputGroupInput id="input" placeholder="0.00" type="text" />
       <InputGroupAddon>
         <InputGroupText class="font-normal">€</InputGroupText>
       </InputGroupAddon>

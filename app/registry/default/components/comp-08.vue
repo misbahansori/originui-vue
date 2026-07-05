@@ -2,12 +2,11 @@
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
 
-const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Disabled input</Label>
-    <Input :id="id" placeholder="Email" type="email" disabled />
+    <Label for="input">Disabled input</Label>
+    <Input id="input" placeholder="Email" type="email" disabled />
   </div>
 </template>

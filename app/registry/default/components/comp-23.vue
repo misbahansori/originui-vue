@@ -7,9 +7,8 @@ import {
 } from "@/registry/default/ui/input-group";
 import { Label } from "@/registry/default/ui/label";
 import { LucideEye, LucideEyeOff } from "lucide-vue-next";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const isVisible = ref(false);
 
 const toggleVisibility = () => {
@@ -19,9 +18,9 @@ const toggleVisibility = () => {
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Show/hide password input</Label>
+    <Label for="input">Show/hide password input</Label>
     <InputGroup>
-      <InputGroupInput :id="id" placeholder="Password" :type="isVisible ? 'text' : 'password'" />
+      <InputGroupInput id="input" placeholder="Password" :type="isVisible ? 'text' : 'password'" />
       <InputGroupAddon align="inline-end">
         <InputGroupButton
           size="icon-xs"

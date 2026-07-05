@@ -3,19 +3,18 @@ import { InputGroup, InputGroupAddon, InputGroupInput } from "@/registry/default
 import { Label } from "@/registry/default/ui/label";
 import { LucideCreditCard } from "lucide-vue-next";
 import { vMaska } from "maska/vue";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
 const cardNumber = ref("");
 
-const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="`card-number-${id}`">Card Number</Label>
+    <Label for="card-number">Card Number</Label>
     <InputGroup>
       <InputGroupInput
-        :id="`card-number-${id}`"
+        id="card-number"
         v-model="cardNumber"
         class="[direction:inherit]"
         placeholder="0000 0000 0000 0000"

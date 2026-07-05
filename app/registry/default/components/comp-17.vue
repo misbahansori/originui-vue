@@ -3,18 +3,15 @@ import { ButtonGroup } from "@/registry/default/ui/button-group";
 import { Input } from "@/registry/default/ui/input";
 import { Label } from "@/registry/default/ui/label";
 import { NativeSelect } from "@/registry/default/ui/native-select";
-import { useId } from "vue";
-
-const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Input with start select</Label>
+    <Label for="input">Input with start select</Label>
     <ButtonGroup>
       <NativeSelect
         modelValue="https://"
-        class="text-muted-foreground hover:text-foreground w-fit rounded-e-none shadow-none"
+        class="text-muted-foreground hover:text-foreground w-fit rounded-e-none shadow-none field-sizing-content"
       >
         <option value="https://">https://</option>
         <option value="http://">http://</option>
@@ -24,7 +21,7 @@ const id = useId();
         <option value="wss://">wss://</option>
       </NativeSelect>
       <Input
-        :id="id"
+        id="input"
         class="-ms-px rounded-s-none shadow-none focus-visible:z-10"
         placeholder="192.168.1.1"
         type="text"

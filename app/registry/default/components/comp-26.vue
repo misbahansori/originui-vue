@@ -7,16 +7,14 @@ import {
 } from "@/registry/default/ui/input-group";
 import { Label } from "@/registry/default/ui/label";
 import { LucideArrowRight, LucideSearch } from "lucide-vue-next";
-import { useId } from "vue";
 
-const id = useId();
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Search input with icon and button</Label>
+    <Label for="input">Search input with icon and button</Label>
     <InputGroup>
-      <InputGroupInput :id="id" placeholder="Search..." type="search" />
+      <InputGroupInput id="input" placeholder="Search..." type="search" />
       <InputGroupAddon>
         <LucideSearch :size="16" />
       </InputGroupAddon>

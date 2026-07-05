@@ -9,17 +9,16 @@ import {
   TagsInputItemText,
   TagsInputRoot,
 } from "reka-ui";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const tags = ref<string[]>(["sport", "coding", "travel"]);
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Input with tags</Label>
+    <Label for="input">Input with tags</Label>
     <TagsInputRoot v-model="tags" class="flex flex-col gap-2">
-      <TagsInputInput :id="id" placeholder="Add a tag" asChild type="text">
+      <TagsInputInput id="input" placeholder="Add a tag" asChild type="text">
         <Input />
       </TagsInputInput>
 

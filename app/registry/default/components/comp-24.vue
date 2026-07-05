@@ -7,9 +7,8 @@ import {
 } from "@/registry/default/ui/input-group";
 import { Label } from "@/registry/default/ui/label";
 import { LucideCircleX } from "lucide-vue-next";
-import { ref, useId, useTemplateRef } from "vue";
+import { ref, useTemplateRef } from "vue";
 
-const id = useId();
 const inputValue = ref("Click to clear");
 const inputRef = useTemplateRef("inputRef");
 
@@ -21,10 +20,10 @@ const handleClearInput = () => {
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id">Input with clear button</Label>
+    <Label for="input">Input with clear button</Label>
     <InputGroup>
       <InputGroupInput
-        :id="id"
+        id="input"
         ref="inputRef"
         placeholder="Type something..."
         type="text"

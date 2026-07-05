@@ -2,22 +2,21 @@
 import { Label } from "@/registry/default/ui/label";
 import { TimeField, TimeFieldInput } from "@/registry/default/ui/time-field";
 import { LucideClock } from "lucide-vue-next";
-import { ref, useId } from "vue";
+import { ref } from "vue";
 
-const id = useId();
 const time = ref("");
 </script>
 
 <template>
   <div class="*:not-first:mt-2">
-    <Label :for="id" class="text-foreground text-sm font-medium">Time input with end icon</Label>
+    <Label for="input" class="text-foreground text-sm font-medium">Time input with end icon</Label>
     <div class="relative">
       <div
         class="text-muted-foreground/80 pointer-events-none absolute inset-y-0 end-0 z-10 flex items-center justify-center pe-3"
       >
         <LucideClock :size="16" aria-hidden="true" />
       </div>
-      <TimeField :id="id" v-slot="{ segments }" class="pe-9">
+      <TimeField id="input" v-slot="{ segments }" class="pe-9">
         <TimeFieldInput v-for="item in segments" :part="item.part">
           {{ item.value }}
         </TimeFieldInput>
