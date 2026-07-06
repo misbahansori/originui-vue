@@ -30,7 +30,6 @@ watch(checked, (newValue) => {
         <!-- Expandable field -->
         <div
           role="region"
-          :
           class="grid transition-all ease-in-out data-[state=collapsed]:grid-rows-[0fr] data-[state=collapsed]:opacity-0 data-[state=expanded]:grid-rows-[1fr] data-[state=expanded]:opacity-100"
           :data-state="checked ? 'expanded' : 'collapsed'"
         >
